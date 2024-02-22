@@ -29,6 +29,15 @@ int main(int argc, char *argv[]) {
   return 0;
 }
 
+/**
+ * @brief Tests display of timer config.
+ * @brief calls timer_get_conf() followed by timer_display_conf()
+ * 
+ * @param timer	Timer whose config to read (Ranges from 0 to 2)
+ * @param field	Configuration field to display
+ * 
+ * @return Return 0 upon success and non-zero otherwise.
+**/
 int(timer_test_read_config)(uint8_t timer, enum timer_status_field field) {
   /* To be implemented by the students */
   printf("%s is not yet implemented!\n", __func__);
@@ -36,6 +45,16 @@ int(timer_test_read_config)(uint8_t timer, enum timer_status_field field) {
   return 1;
 }
 
+
+/**
+ * @brief Tests change of Timer O interrupt frequency.
+ * @brief Programs Timer 0 to generate interrupts with input frequency
+ * 
+ * @param timer	Timer whose config to read (Ranges from 0 to 2)
+ * @param freq	Frequency of interrupts to generate
+ * 
+ * @return Return 0 upon success and non-zero otherwise.
+**/
 int(timer_test_time_base)(uint8_t timer, uint32_t freq) {
   /* To be implemented by the students */
   printf("%s is not yet implemented!\n", __func__);
@@ -43,6 +62,14 @@ int(timer_test_time_base)(uint8_t timer, uint32_t freq) {
   return 1;
 }
 
+/**
+ * @brief Tests Timer 0 interrupt handling.
+ * @brief Subscribes Timer 0 interrupts and prints a message once per second for the specified time interval in seconds.
+ * 
+ * @param time	Length of time interval while interrupts are subscribed, in seconds
+ * 
+ * @return Return 0 upon success and non-zero otherwise.
+**/
 int(timer_test_int)(uint8_t time) {
   /* To be implemented by the students */
   printf("%s is not yet implemented!\n", __func__);
