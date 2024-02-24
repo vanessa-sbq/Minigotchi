@@ -48,9 +48,9 @@
 
 /* READ-BACK COMMAND FORMAT */
 
-#define TIMER_RB_COUNT_  BIT(5)
-#define TIMER_RB_STATUS_ BIT(4)
-#define TIMER_RB_SEL(n)  BIT((n) + 1)
+#define TIMER_RB_COUNT_  BIT(5) /**< @brief get count */
+#define TIMER_RB_STATUS_ BIT(4) /**< @brief get status */
+#define TIMER_RB_SEL(n)  BIT((n) + 1) /**< @brief timer select */
 
 /**@}*/
 
