@@ -11,6 +11,12 @@
  * @return Return 0 upon success and non-zero otherwise
 */
 int(util_get_LSB)(uint16_t val, uint8_t *lsb) {
+
+   if (lsb == NULL){
+    printf("\nError while executing func %s, error in util_get_LSB, found a NULL pointer.\n", __func__);
+    return 1; 
+  }
+
   (*lsb) = val & ((uint16_t)0x00FF);
   return 0;
 }
@@ -24,6 +30,11 @@ int(util_get_LSB)(uint16_t val, uint8_t *lsb) {
  * @return Return 0 upon success and non-zero otherwise
 */
 int(util_get_MSB)(uint16_t val, uint8_t *msb) {
+  if (msb == NULL){
+    printf("\nError while executing func %s, error in util_get_MSB, found a NULL pointer.\n", __func__);
+    return 1; 
+  }
+
   (*msb) = (val & ((uint16_t)0xFF00)) >> 8;
   return 0;
 }
@@ -38,13 +49,18 @@ int(util_get_MSB)(uint16_t val, uint8_t *msb) {
 */
 int (util_sys_inb)(int port, uint8_t *value) {
 
-  uint32_t* dword = (uint32_t*)(malloc(sizeof(uint32_t)));
+  if (value == NULL){
+    printf("\nError while executing func %s, error in util_sys_inb, found a NULL pointer.\n", __func__);
+    return 1; 
+  }
 
-  if (sys_inb(port, dword) != 0){
+  uint32_t dword;
+
+  if (sys_inb(port, &dword) != 0){
     printf("\nError while executing func %s, error while calling sys_inb.\n", __func__);
     return 1;
   }
   
-  *value = (uint8_t)(*dword);
+  *value = (uint8_t)(dword);
   return 0;
 }

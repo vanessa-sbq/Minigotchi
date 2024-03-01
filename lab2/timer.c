@@ -5,6 +5,9 @@
 
 #include "i8254.h"
 
+int hook_id;
+extern int timer_counter; // This helps us acess the variable that was defined inside lab2.c
+
 /**
  * @brief Changes the operating frequency of a timer.
  * @brief Must use the read-back command so that it does not change the 4 LSBs (mode and BCD/binary) of the timer's control word.
@@ -53,10 +56,10 @@ int (timer_set_frequency)(uint8_t timer, uint32_t freq) {
   uint8_t counter_value_MSB;
   util_get_MSB(counter_value, &counter_value_MSB);
 
-  uint8_t* st = (uint8_t*)(malloc(sizeof(uint8_t))); // Allocate space for timer's configuration.
+  uint8_t st;
 
   // Fetch timer's configuration
-  if (timer_get_conf(timer, st) != 0){
+  if (timer_get_conf(timer, &st) != 0){
     printf("\nError while executing func %s, error in timer_set_frequency.\n", __func__);
     return 1;
   }
@@ -85,7 +88,7 @@ int (timer_set_frequency)(uint8_t timer, uint32_t freq) {
       return 1;
   }
 
-  byte = byte | ((*st) & 0x0F); // Restore the timer's base and couting mode.
+  byte = byte | ((st) & 0x0F); // Restore the timer's base and couting mode.
 
   byte = byte | (0x30); // Let's use MSB after LSB mode.
 
@@ -111,16 +114,27 @@ int (timer_set_frequency)(uint8_t timer, uint32_t freq) {
 /**
  * @brief Subscribes and enables Timer 0 interrupts.
  * 
- * @param timer	Timer whose configuration to read (Ranges from 0 to 2)
- * @param st	Address of memory position to be filled with the timer config
+ * @param bit_no address of memory to be initialized with the bit number to be set in the mask returned upon an interrupt
  * 
  * @return Return 0 upon success and non-zero otherwise.
 */
 int (timer_subscribe_int)(uint8_t *bit_no) {
-    /* To be implemented by the students */
-  printf("%s is not yet implemented!\n", __func__);
 
-  return 1;
+  //printf("Hook_ID before irqsetpolicy: %d \n", hook_id);
+
+  if (bit_no == NULL){
+    printf("\nError while executing func %s, error in timer_subscribe_int, found a NULL pointer.\n", __func__);
+    return 1; 
+  }
+
+  if ((*bit_no = sys_irqsetpolicy(TIMER0_IRQ, IRQ_REENABLE, &hook_id))){
+    printf("\nError while executing func %s, error while calling sys_irqsetpolicy.\n", __func__);
+    return 1;
+  }
+
+  //printf("Hook_ID after irqsetpolicy: %d \n", hook_id);
+
+  return 0;
 }
 
 /**
@@ -129,10 +143,11 @@ int (timer_subscribe_int)(uint8_t *bit_no) {
  * @return Return 0 upon success and non-zero otherwise.
 */
 int (timer_unsubscribe_int)() {
-  /* To be implemented by the students */
-  printf("%s is not yet implemented!\n", __func__);
-
-  return 1;
+  if (sys_irqrmpolicy(&hook_id) != 0){
+    printf("\nError while executing func %s, error while calling sys_irqrmpolicy.\n", __func__);
+    return 1;
+  }
+  return 0;
 }
 
 /**
@@ -140,8 +155,7 @@ int (timer_unsubscribe_int)() {
  * @brief Increments counter.
 */
 void (timer_int_handler)() {
-  /* To be implemented by the students */
-  printf("%s is not yet implemented!\n", __func__);
+  timer_counter++;
 }
 
 /**
@@ -153,6 +167,11 @@ void (timer_int_handler)() {
  * @return Return 0 upon success and non-zero otherwise
 */
 int (timer_get_conf)(uint8_t timer, uint8_t *st) {
+
+  if (st == NULL){
+    printf("\nError while executing func %s, error in timer_get_conf, found a NULL pointer.\n", __func__);
+    return 1; 
+  }
 
   int port; // This will be the hex value of the timer's port.
 
