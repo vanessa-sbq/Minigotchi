@@ -1,10 +1,16 @@
+#ifndef __UTILS_H
+#define __UTILS_H
+
 #include <lcom/lcf.h>
 
-#include <stdint.h>
+// Setters and Getters
 
+#ifdef LAB3
+int getSysCallCounter();
+void setSysCallCounter(int sscc);
+#endif
 
-int(util_get_LSB)(uint16_t val, uint8_t *lsb);
+// Wrapper Function
+int util_sys_inb(int port, uint8_t* read);
 
-int(util_get_MSB)(uint16_t val, uint8_t *msb);
-
-int (util_sys_inb)(int port, uint8_t *value);
+#endif /* __UTILS_H */
