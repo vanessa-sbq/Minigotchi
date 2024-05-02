@@ -2,7 +2,11 @@
 
 static int kbc_hook_id = KBC_IRQ;
 
-// Keyboard IRQ Subscriptions
+/**
+ * @brief Subscribes and enables KBC interrupts.
+ * @param bit_no address of memory to be initialized with the bit number to be set in the mask returned upon an interrupt
+ * @return Return 0 upon success and non-zero otherwise.
+ */
 int subscribe_interrupts_kbd(uint8_t* bit_no){
     if (bit_no == NULL) return 1;
     *bit_no = kbc_hook_id;
@@ -11,6 +15,11 @@ int subscribe_interrupts_kbd(uint8_t* bit_no){
     }
     return 0;
 }
+
+/**
+ * @brief Unsubscribes KBC interrupts.
+ * @return Return 0 upon success and non-zero otherwise.
+ */
 int unsubscribe_interrupts_kbd(){
     if (sys_irqrmpolicy(&kbc_hook_id) != 0){
         return 1;
@@ -18,7 +27,10 @@ int unsubscribe_interrupts_kbd(){
     return 0;
 }
 
-// Enable Keyboard Interrupts
+/**
+ * @brief Enables Keyboard interrupts.
+ * @return Return 0 upon success and non-zero otherwise.
+ */
 int kbc_enable_interrupts(){
     uint8_t commandByte;
     if (writeToKBCPort(CMDS_PORT, READ_COMMAND_BYTE) != 0){
@@ -40,7 +52,10 @@ int kbc_enable_interrupts(){
     return 0;
 }
 
-// Functions to read and write to KBC
+/**
+ * @brief Reads KBC status.
+ * @return Return 0 upon success and non-zero otherwise.
+ */
 int readFromStatusKBC(uint8_t* status){
     if (util_sys_inb(STATUS_REG_PORT, status) != 0){
         return 1;
@@ -48,7 +63,10 @@ int readFromStatusKBC(uint8_t* status){
     return 0;
 }
 
-// Read KBC output buffer
+/**
+ * @brief Reads KBC output buffer.
+ * @return Return 0 upon success and non-zero otherwise.
+ */
 int readFromOutputBuffer(uint8_t* byte){
     uint8_t status;
     uint8_t temp;
@@ -72,7 +90,10 @@ int readFromOutputBuffer(uint8_t* byte){
     return 1;
 }
 
-// Write to a KBC port
+/**
+ * @brief Writes to a KBC port.
+ * @return Return 0 upon success and non-zero otherwise.
+ */
 int writeToKBCPort(uint8_t port, uint8_t data){
     uint8_t stat;
     while(1) {
