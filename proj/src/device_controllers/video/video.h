@@ -13,3 +13,5 @@ int (vg_draw_rectangle)(uint16_t x, uint16_t y, uint16_t width, uint16_t height,
 int vg_draw_pattern(uint8_t no_rectangles, uint32_t first, uint8_t step);
 int vg_draw_pixmap(uint16_t x, uint16_t y, uint8_t* map, xpm_image_t pixmap_and_metadata);
 void vg_clear_screen();
+int vg_page_flip();
+int vg_draw_page(int i); // TODO: Remove
