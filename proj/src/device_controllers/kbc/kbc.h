@@ -1,7 +1,7 @@
 #ifndef __KBC_H
 #define __KBC_H
 
-#include "utils.h"
+#include "../utils.h"
 #include "i8042.h"
 
 #include <lcom/lcf.h>

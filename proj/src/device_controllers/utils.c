@@ -13,7 +13,6 @@ int(util_get_LSB)(uint16_t val, uint8_t *lsb) {
         panic("\nError while executing func %s, error in util_get_LSB, found a NULL pointer.\n", __func__);
         return 1; 
     }
-
     (*lsb) = val & ((uint16_t)0x00FF);
     return 0;
 }
@@ -29,7 +28,6 @@ int(util_get_MSB)(uint16_t val, uint8_t *msb) {
         panic("\nError while executing func %s, error in util_get_MSB, found a NULL pointer.\n", __func__);
         return 1; 
     }
-
     (*msb) = (val & ((uint16_t)0xFF00)) >> 8;
     return 0;
 }

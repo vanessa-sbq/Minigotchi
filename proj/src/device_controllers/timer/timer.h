@@ -1,7 +1,6 @@
 #include <lcom/lcf.h>
 
 /* Setters and getters */
-
 int getTimerCounter();
 void setTimerCounter(int cnt);
 
