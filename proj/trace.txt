@@ -3,11 +3,11 @@
 > proj_main_loop(0, [NULL])
   @/home/lcom/labs/proj/src/device_controllers/video/video.c:27, video_get_mode_information
     vbe_get_mode_info(mode, &vbe_mem_info)
-  > vbe_get_mode_info(0x14c, addr: 0x827e9a4)
-  < vbe_get_mode_info(0x14c, addr: 0x827e9a4 [0xe0000000, 1152x864, 8:8:8 (32) <3.79688 MiB>]) -> (ret: 0)
+  > vbe_get_mode_info(0x14c, addr: 0x822ef64)
+  < vbe_get_mode_info(0x14c, addr: 0x822ef64 [0xe0000000, 1152x864, 8:8:8 (32) <3.79688 MiB>]) -> (ret: 0)
   @/home/lcom/labs/proj/src/device_controllers/video/video.c:48, video_map_vram
     sys_privctl(SELF, SYS_PRIV_ADD_MEM, &mr)
-  > sys_privctl(SELF, SYS_PRIV_ADD_MEM, addr: 0xeffff790 [0xe0000000 - 0xe0798000 <7.59376 MiB>])
+  > sys_privctl(SELF, SYS_PRIV_ADD_MEM, addr: 0xeffff780 [0xe0000000 - 0xe0798000 <7.59376 MiB>])
   < sys_privctl(SELF, SYS_PRIV_ADD_MEM, &mr) -> (ret: 0)
   @/home/lcom/labs/proj/src/device_controllers/video/video.c:53, video_map_vram
     vm_map_phys(SELF, (void *)mr.mr_base, vram_size)
@@ -17,9 +17,192 @@
   < vm_map_phys(SELF, addr: 0xe03cc000, 3.79688 MiB) -> (ret: 0xef262000)
   @/home/lcom/labs/proj/src/device_controllers/video/video.c:80, video_set_graphics_mode
     sys_int86(&r86)
-  > sys_int86(addr: 0xeffff768 [AX: 4f02, BX: 414c, CX: 0000, DX: 0000, ES: 0000, DI: 0000])
-  < sys_int86(addr: 0xeffff768 [AX: 004f, BX: 414c, CX: 0000, DX: 0000, ES: 0000, DI: 0000]) -> (ret: 0)
-  @/home/lcom/labs/proj/src/viewer/guiDrawer.c:31, create_sprite_xpm
+  > sys_int86(addr: 0xeffff758 [AX: 4f02, BX: 414c, CX: 0000, DX: 0000, ES: 0000, DI: 0000])
+  < sys_int86(addr: 0xeffff758 [AX: 004f, BX: 414c, CX: 0000, DX: 0000, ES: 0000, DI: 0000]) -> (ret: 0)
+  @proj.c:48, proj_main_loop
+    vg_draw_rectangle(10, 100, 100, 50, 0xFF123)
+  > vg_draw_rectangle(10, 100, 100, 50, 0x000ff123 [1044771])
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 100, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 101, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 102, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 103, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 104, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 105, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 106, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 107, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 108, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 109, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 110, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 111, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 112, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 113, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 114, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 115, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 116, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 117, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 118, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 119, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 120, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 121, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 122, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 123, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 124, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 125, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 126, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 127, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 128, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 129, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 130, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 131, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 132, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 133, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 134, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 135, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 136, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 137, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 138, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 139, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 140, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 141, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 142, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 143, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 144, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 145, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 146, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 147, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 148, 100, 0x000ff123 [1044771]) -> (ret: 0)
+    @/home/lcom/labs/proj/src/device_controllers/video/video.c:159, vg_draw_rectangle
+      vg_draw_hline(x, y + i, width, color)
+    < vg_draw_hline(10, 149, 100, 0x000ff123 [1044771]) -> (ret: 0)
+  < vg_draw_rectangle(10, 100, 100, 50, 0x000ff123 [1044771]) -> (ret: 0)
+  @proj.c:49, proj_main_loop
+    sleep(1)
+  > sleep(1)
+  @/home/lcom/labs/proj/src/device_controllers/video/video.c:262, vg_page_flip
+    sys_int86(&r86)
+  > sys_int86(addr: 0xeffff758 [AX: 4f07, BX: 0080, CX: 0000, DX: 0360, ES: 0000, DI: 0000])
+  < sys_int86(addr: 0xeffff758 [AX: 004f, BX: 0080, CX: 0000, DX: 0360, ES: 0000, DI: 0000]) -> (ret: 0)
+  @proj.c:52, proj_main_loop
+    sleep(1)
+  > sleep(1)
+  @/home/lcom/labs/proj/src/viewer/guiDrawer.c:36, create_sprite_xpm
     xpm_load(sprite, XPM_8_8_8_8, &img)
-  > xpm_load(addr: 0x827d1f8, XPM_8_8_8_8, addr: 0xeffff780)
-  < xpm_load(addr: 0x827d1f8, XPM_8_8_8_8, addr: 0xeffff780 [305x528 : 644160 bytes]) -> (ret: 0x82b0000)
+  > xpm_load(addr: 0x822e1d8, XPM_8_8_8_8, addr: 0xeffff770)
+  < xpm_load(addr: 0x822e1d8, XPM_8_8_8_8, addr: 0xeffff770 [64x64 : 16384 bytes]) -> (ret: 0x8251000)
+  @/home/lcom/labs/proj/src/device_controllers/video/video.c:262, vg_page_flip
+    sys_int86(&r86)
+  > sys_int86(addr: 0xeffff758 [AX: 4f07, BX: 0080, CX: 0000, DX: 0000, ES: 0000, DI: 0000])
+  < sys_int86(addr: 0xeffff758 [AX: 004f, BX: 0080, CX: 0000, DX: 0000, ES: 0000, DI: 0000]) -> (ret: 0)
+  @/home/lcom/labs/proj/src/device_controllers/kbc/keyboard.c:13, subscribe_interrupts_kbd
+    sys_irqsetpolicy(KBD_IRQ, (IRQ_REENABLE | IRQ_EXCLUSIVE), &kbd_hook_id)
+  > sys_irqsetpolicy(1, 3, addr: 0x822e1cc [1])
+  < sys_irqsetpolicy(1, 3, addr: 0x822e1cc [9]) -> (ret: 0)
+  @proj.c:68, proj_main_loop
+    sleep(10)
+  > sleep(10)
+  @/home/lcom/labs/proj/src/device_controllers/kbc/keyboard.c:24, unsubscribe_interrupts_kbd
+    sys_irqrmpolicy(&kbd_hook_id)
+  > sys_irqrmpolicy(addr: 0x822e1cc [9])
+  < sys_irqrmpolicy(addr: 0x822e1cc [9]) -> (ret: 0)
+  @proj.c:75, proj_main_loop
+    vg_exit()
+  < vg_exit() -> (ret: 0)
+< proj_main_loop(0, [NULL]) -> (ret: 0)

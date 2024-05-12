@@ -13,7 +13,8 @@ typedef struct {
 Sprite* getSprite();
 /* int (draw_xpm)(xpm_map_t xpm, uint16_t x, uint16_t y);*/
 Sprite *create_sprite_xpm(xpm_map_t sprite);
-void setup_sprites(char** sprite);
+void setup_sprites();
+//void setup_sprites(char** sprite);
 int drawSprite(Sprite *sprite, int x, int y);
 
 #endif /* __GUIDRAWER_H */

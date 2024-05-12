@@ -1,5 +1,10 @@
 #include "guiDrawer.h"
 
+#include "../sprites/xpms/bonecos_lcom.xpm"
+#include "../sprites/xpms/braco_direito.xpm"
+#include "../sprites/xpms/braco_esquerdo.xpm"
+#include "../sprites/xpms/Untitled.xpm"
+
 static Sprite* _sprite;
 
 Sprite* getSprite() {
@@ -40,16 +45,19 @@ Sprite *create_sprite_xpm(xpm_map_t sprite){
 	return sp;
 }
 
-void setup_sprites(char* sprite[]){
-	_sprite = create_sprite_xpm((xpm_map_t) sprite);
+//void setup_sprites(char* sprite[]){
+void setup_sprites(){
+	_sprite = create_sprite_xpm((xpm_map_t) Untitled_xpm);
+
+    
 }
 
 int drawSprite(Sprite *sprite, int x, int y){
-	uint16_t height = sprite->height;
-	uint16_t width = sprite->width;
+	uint16_t height = _sprite->height;
+	uint16_t width = _sprite->width;
 	for(int i = 0; i < height; i++){
 		for(int j = 0; j < width; j++){
-			if(drawPixel(j + x, i + y, sprite->colors[j + i * width]) != 0){
+			if(drawPixel(j + x, i + y, _sprite->colors[j + i * width]) != 0){
 				return 1;
 			}
 		}

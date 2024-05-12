@@ -10,12 +10,6 @@
 #include "device_controllers/kbc/keyboard.h"
 #include "device_controllers/kbc/kbc.h"
 
-
-// TODO: fix
-#include "sprites/xpms/bonecos_lcom.xpm"
-#include "sprites/xpms/braco_direito.xpm"
-#include "sprites/xpms/braco_esquerdo.xpm"
-
 int main(int argc, char *argv[]) {
 	lcf_set_language("EN-US");
 	lcf_trace_calls("/home/lcom/labs/proj/trace.txt");  
@@ -27,11 +21,8 @@ int main(int argc, char *argv[]) {
 
 
 int (proj_main_loop)(int argc, char **argv) {
-    /* your main loop code here */
-
 	int x = 0;
 	int y = 0;
-
 
 	if (video_get_mode_information(0x14C) != 0){
 		printf("Error in video_get_mode_information()\n");
@@ -53,11 +44,21 @@ int (proj_main_loop)(int argc, char **argv) {
 		return 1;
 	}
 
-    setup_sprites(braco_esquerdo);
+	vg_clear_screen();
+	vg_draw_rectangle(10, 100, 100, 50, 0xFF123);
+	sleep(1);
+	vg_page_flip();
+
+	sleep(1);
+
+    //setup_sprites(braco_esquerdo);
+	vg_clear_screen();
+	setup_sprites();
     if(drawSprite(getSprite(), x, y) != 0){
         printf("Error in drawSprite()\n");
         return 1;
     }
+	vg_page_flip();
 
     uint8_t bit_no = 0;
     if (subscribe_interrupts_kbd(&bit_no) != 0){
