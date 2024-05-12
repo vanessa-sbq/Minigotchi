@@ -3,10 +3,11 @@ PROG=proj
 
 .PATH: ${.CURDIR}/device_controllers
 .PATH: ${.CURDIR}/device_controllers/timer
+.PATH: ${.CURDIR}/device_controllers/video
 .PATH: ${.CURDIR}/device_controllers/kbc
 
 # source code files to be compiled
-SRCS = proj.c timer.c kbc.c utils.c
+SRCS = proj.c timer.c kbc.c utils.c keyboard.c mouse.c video.c
 
 # additional compilation flags
 # "-Wall -Wextra -Werror -I . -std=c11 -Wno-unused-parameter" are already set
