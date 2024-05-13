@@ -10,6 +10,10 @@
 #include "device_controllers/kbc/keyboard.h"
 #include "device_controllers/kbc/kbc.h"
 
+// TODO: Might need to add/remove some states
+typedef enum {MAIN_MENU, MAIN_ROOM, MINIGAME_1, MINIGAME_2, EXIT} state_t;
+//static state_t game_state = MAIN_MENU; // Game's current state
+
 int main(int argc, char *argv[]) {
 	lcf_set_language("EN-US");
 	lcf_trace_calls("/home/lcom/labs/proj/trace.txt");  
@@ -24,6 +28,7 @@ int (proj_main_loop)(int argc, char **argv) {
 	int x = 0;
 	int y = 0;
 
+	// Get mode information
 	if (video_get_mode_information(0x14C) != 0){
 		printf("Error in video_get_mode_information()\n");
 		if (vg_exit() != 0) printf("Error in vg_exit()\n");
@@ -45,7 +50,12 @@ int (proj_main_loop)(int argc, char **argv) {
 	}
 
 	vg_clear_screen();
-	vg_draw_rectangle(10, 100, 100, 50, 0xFF123);
+	vg_draw_rectangle(0, 0, 1000, 1000, 0xFF123);
+	setup_sprites();
+    if(drawSprite(getSprite(), 100, 100) != 0){
+        printf("Error in drawSprite()\n");
+        return 1;
+    }
 	sleep(1);
 	vg_page_flip();
 
@@ -79,4 +89,5 @@ int (proj_main_loop)(int argc, char **argv) {
 
     return 0;
 }
+
 

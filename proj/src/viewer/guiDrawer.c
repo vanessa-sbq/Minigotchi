@@ -1,9 +1,14 @@
 #include "guiDrawer.h"
 
+/*** Sprites ***/
+// Minigotchi
 #include "../sprites/xpms/bonecos_lcom.xpm"
 #include "../sprites/xpms/braco_direito.xpm"
 #include "../sprites/xpms/braco_esquerdo.xpm"
 #include "../sprites/xpms/Untitled.xpm"
+// Font
+#include "../sprites/fonts/A.xpm"
+
 
 static Sprite* _sprite;
 
@@ -47,9 +52,7 @@ Sprite *create_sprite_xpm(xpm_map_t sprite){
 
 //void setup_sprites(char* sprite[]){
 void setup_sprites(){
-	_sprite = create_sprite_xpm((xpm_map_t) Untitled_xpm);
-
-    
+	_sprite = create_sprite_xpm((xpm_map_t) A_xpm);
 }
 
 int drawSprite(Sprite *sprite, int x, int y){

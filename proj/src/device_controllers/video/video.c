@@ -109,6 +109,10 @@ unsigned int video_get_vram_size(){
  * @param color Color of the pixel 
  */
 int drawPixel(uint16_t x, uint16_t y, uint32_t color){
+    if (color == TRANSPARENT){ 
+        return 0;
+    } 
+
     unsigned bytes_per_pixel = (vbe_mem_info.BitsPerPixel + 7) / 8;
     uint32_t bytes_pp_mask = 0;
     for (uint32_t i = 0; i < vbe_mem_info.BitsPerPixel; i++){
