@@ -7,3 +7,9 @@
 
 # Private Files
 key
+
+# Object Files
+*.o
+
+# Others
+.gdbinit
