@@ -11,11 +11,15 @@
 
 
 static Sprite* _sprite;
+static Sprite* _cursor_sprite;
 
 Sprite* getSprite() {
     return _sprite;
 }
 
+Sprite* get_cursor_sprite() { // TODO: temp
+    return _cursor_sprite;
+}
 
 /* int (draw_xpm)(xpm_map_t xpm, uint16_t x, uint16_t y){
 	xpm_image_t img;
@@ -52,18 +56,20 @@ Sprite *create_sprite_xpm(xpm_map_t sprite){
 
 //void setup_sprites(char* sprite[]){
 void setup_sprites(){
-	_sprite = create_sprite_xpm((xpm_map_t) A_xpm);
+	_sprite = create_sprite_xpm((xpm_map_t) braco_direito_xpm);
+	_cursor_sprite = create_sprite_xpm((xpm_map_t) A_xpm);
 }
 
 int drawSprite(Sprite *sprite, int x, int y){
-	uint16_t height = _sprite->height;
-	uint16_t width = _sprite->width;
+	uint16_t height = sprite->height;
+	uint16_t width = sprite->width;
 	for(int i = 0; i < height; i++){
 		for(int j = 0; j < width; j++){
-			if(drawPixel(j + x, i + y, _sprite->colors[j + i * width]) != 0){
+			if(drawPixel(j + x, i + y, sprite->colors[j + i * width]) != 0){
 				return 1;
 			}
 		}
 	}
 	return 0;
 }
+

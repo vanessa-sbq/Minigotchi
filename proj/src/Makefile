@@ -8,9 +8,10 @@ PROG=proj
 
 .PATH: ${.CURDIR}/sprites/xpms
 .PATH: ${.CURDIR}/viewer
+.PATH: ${.CURDIR}/model
 
 # source code files to be compiled
-SRCS = proj.c timer.c kbc.c utils.c keyboard.c mouse.c video.c guiDrawer.c
+SRCS = proj.c timer.c kbc.c utils.c keyboard.c mouse.c video.c guiDrawer.c cursor.c
 
 # additional compilation flags
 # "-Wall -Wextra -Werror -I . -std=c11 -Wno-unused-parameter" are already set

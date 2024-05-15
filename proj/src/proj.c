@@ -9,10 +9,13 @@
 #include "device_controllers/video/video.h"
 #include "device_controllers/kbc/keyboard.h"
 #include "device_controllers/kbc/kbc.h"
+#include "model/cursor.h"
 
 // TODO: Might need to add/remove some states
 typedef enum {MAIN_MENU, MAIN_ROOM, MINIGAME_1, MINIGAME_2, EXIT} state_t;
 //static state_t game_state = MAIN_MENU; // Game's current state
+
+int frames = 60; // TODO: Make value not hard coded
 
 int main(int argc, char *argv[]) {
 	lcf_set_language("EN-US");
@@ -25,9 +28,6 @@ int main(int argc, char *argv[]) {
 
 
 int (proj_main_loop)(int argc, char **argv) {
-	int x = 0;
-	int y = 0;
-
 	// Get mode information
 	if (video_get_mode_information(0x14C) != 0){
 		printf("Error in video_get_mode_information()\n");
@@ -49,33 +49,34 @@ int (proj_main_loop)(int argc, char **argv) {
 		return 1;
 	}
 
-	vg_clear_screen();
-	vg_draw_rectangle(0, 0, 1000, 1000, 0xFF123);
 	setup_sprites();
-    if(drawSprite(getSprite(), 100, 100) != 0){
-        printf("Error in drawSprite()\n");
-        return 1;
-    }
-	sleep(1);
-	vg_page_flip();
+	Cursor *cursor = new_cursor(10, 10);
 
-	sleep(1);
 
-    //setup_sprites(braco_esquerdo);
-	vg_clear_screen();
-	setup_sprites();
-    if(drawSprite(getSprite(), x, y) != 0){
-        printf("Error in drawSprite()\n");
-        return 1;
-    }
+	// TODO: Temp (to clear memory)
+	/* vg_clear_screen();
 	vg_page_flip();
+	vg_clear_screen(); */
+
+	// Game Loop
+	while (true){ // TODO: Change condition
+		tickdelay(micros_to_ticks(50000)); // Needed in order to prevent flickering (FIXME:)
+		vg_clear_screen();
+		vg_draw_rectangle(0, 0, 1000, 1000, 0xFF123);
+		if(drawSprite(cursor->sprite, cursor->x, cursor->y) != 0){
+			printf("Error in drawSprite()\n");
+			return 1;
+		}
+		vg_page_flip();
+	}
+	
+
+	delete_cursor(cursor);
 
     uint8_t bit_no = 0;
     if (subscribe_interrupts_kbd(&bit_no) != 0){
         return 1;
     }
-
-	sleep(10);
 
 	if (unsubscribe_interrupts_kbd() != 0){
         return 1;
