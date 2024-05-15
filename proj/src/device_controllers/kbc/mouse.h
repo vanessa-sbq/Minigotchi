@@ -4,9 +4,9 @@
 #include <lcom/lcf.h>
 
 // "Getter" functions
-uint8_t get_readByte();
-bool get_error();
-void set_error(bool er);
+uint8_t mouse_get_readByte();
+bool mouse_get_error();
+void mouse_set_error(bool er);
 
 // Functions that speak with the KBC.
 int read_status_from_kbc(uint8_t* statusByte);

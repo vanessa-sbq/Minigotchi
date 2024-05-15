@@ -1,6 +1,6 @@
 #include "mouse.h"
 
-int hook_id = 12;
+int hook_id = 3; // Cannot be IRQ's real line number
 
 static uint8_t readByte;
 static bool error;
@@ -10,15 +10,15 @@ static bool error;
   Functions that help get the static values.
 
 */
-uint8_t get_readByte(){
+uint8_t mouse_get_readByte(){
   return readByte;
 }
 
-bool get_error(){
+bool mouse_get_error(){
   return error;
 }
 
-void set_error(bool er){
+void mouse_set_error(bool er){
   error = er;
 }
 

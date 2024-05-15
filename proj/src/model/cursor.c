@@ -3,7 +3,7 @@
 /**
  * @brief Constructs a cursor in the specified x and y positions 
  */
-Cursor *new_cursor(uint32_t x, uint32_t y){
+Cursor *new_cursor(int x, int y){
     // Allocate Cursor object
     Cursor *cursor = malloc(sizeof(*cursor));
     if (cursor == NULL) return NULL;
@@ -24,4 +24,17 @@ void delete_cursor(Cursor *cursor){
 
 void draw(Cursor *cursor){
     // TODO:
+}
+
+
+Sprite* cursor_get_sprite(Cursor *cursor){
+    return cursor->sprite;
+}
+
+int cursor_get_x(Cursor *cursor){
+    return cursor->x;
+}
+
+int cursor_get_y(Cursor *cursor){
+    return cursor->x;
 }

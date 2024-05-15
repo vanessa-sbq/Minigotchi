@@ -9,8 +9,15 @@ typedef struct{
     int y;
 } Cursor;
 
-Cursor *new_cursor(uint32_t x, uint32_t y); // "Constructor"
+Cursor *new_cursor(int x, int y); // "Constructor"
 
 void delete_cursor(Cursor *cursor); // "Destructor"
+
+void draw(Cursor *cursor);
+
+// Getters and setters
+Sprite* cursor_get_sprite(Cursor *cursos);
+int cursor_get_x(Cursor *cursor);
+int cursor_get_y(Cursor *cursor);
 
 #endif /* _CURSOR_H */
