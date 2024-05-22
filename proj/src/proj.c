@@ -28,7 +28,7 @@
 typedef enum {MAIN_MENU, MAIN_ROOM, MINIGAME_1, MINIGAME_2, EXIT} state_t;
 static state_t game_state = MAIN_MENU; // Game's current state
 
-int frames = 30; // TODO: Make value not hard coded
+int frames = 60; // TODO: Make value not hard coded
 
 int main(int argc, char *argv[]) {
 	lcf_set_language("EN-US");

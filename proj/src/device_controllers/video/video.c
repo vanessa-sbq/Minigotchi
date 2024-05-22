@@ -4,10 +4,13 @@
 static vbe_mode_info_t vbe_mem_info; // VBE mode info struct
 static char *video_mem; // Frame buffer
 static char *second_buffer; // Second frame buffer (for double buffering)
-static int draw_on = 1; // Start drawing on back buffer
+static char *triple_buffer; // Triple frame buffer (for triple buffering)
+//static int draw_on = 1; // Start drawing on back buffer
 static unsigned int vram_size; // VRAM's size
 static unsigned int vram_base; // VRAM's physical address
 
+typedef enum {FIRST, SECOND, THIRD} buffer_num_t;
+buffer_num_t currentBuffer = THIRD;
 
 /**
  * @brief Function that helps go back to text mode
@@ -42,7 +45,8 @@ int video_map_vram(){
 
     struct minix_mem_range mr;
     mr.mr_base = (phys_bytes) vram_base;
-    mr.mr_limit = mr.mr_base + 2*vram_size;
+    //mr.mr_limit = mr.mr_base + 2*vram_size;
+    mr.mr_limit = mr.mr_base + 3*vram_size;
     int r;
 
     if( OK != (r = sys_privctl(SELF, SYS_PRIV_ADD_MEM, &mr))){ // Allow memory mapping.
@@ -52,8 +56,9 @@ int video_map_vram(){
 
     video_mem = vm_map_phys(SELF, (void *)mr.mr_base, vram_size); // Map memory (first buffer)
     second_buffer = vm_map_phys(SELF, (void*) (mr.mr_base + vram_size), vram_size); // Map memory (second buffer)
+    triple_buffer = vm_map_phys(SELF, (void*) (mr.mr_base + (vram_size * 2)), vram_size); // Map memory (third buffer)
 
-    if(video_mem == MAP_FAILED || second_buffer == MAP_FAILED) {
+    if(video_mem == MAP_FAILED || second_buffer == MAP_FAILED || triple_buffer == MAP_FAILED) {
         panic("Error in video_map_vram, vm_map_phys() failed\n");
         return 1;
     }
@@ -124,12 +129,28 @@ int drawPixel(uint16_t x, uint16_t y, uint32_t color){
 
     unsigned index = (vbe_mem_info.XResolution * y + x) * bytes_per_pixel;
 
-    if (draw_on){
+    /* if (draw_on){
         if (memcpy(&second_buffer[index], &color, bytes_per_pixel) == NULL) return 1;
     }
     else {
         if (memcpy(&video_mem[index], &color, bytes_per_pixel) == NULL) return 1;
+    } */
+
+    switch (currentBuffer) {
+    case FIRST:
+        if (memcpy(&video_mem[index], &color, bytes_per_pixel) == NULL) return 1;
+        break;
+    case SECOND:
+        if (memcpy(&second_buffer[index], &color, bytes_per_pixel) == NULL) return 1;
+        break;
+    case THIRD:
+        if (memcpy(&triple_buffer[index], &color, bytes_per_pixel) == NULL) return 1;
+        break;
+    default:
+        break;
     }
+
+    
 
     return 0;
 }
@@ -161,8 +182,23 @@ int vg_draw_pixmap(uint16_t x, uint16_t y, uint8_t* map, xpm_image_t pixmap_and_
  * @brief Clears the screen on the current back buffer
  */
 void vg_clear_screen(){
-    if (draw_on) memset(second_buffer,0,vbe_mem_info.XResolution * vbe_mem_info.YResolution * ((vbe_mem_info.BitsPerPixel + 7) / 8));
-    else memset(video_mem,0,vbe_mem_info.XResolution * vbe_mem_info.YResolution * ((vbe_mem_info.BitsPerPixel + 7) / 8));
+
+    switch (currentBuffer) {
+    case FIRST:
+        memset(video_mem,0,vbe_mem_info.XResolution * vbe_mem_info.YResolution * ((vbe_mem_info.BitsPerPixel + 7) / 8));
+        break;
+    case SECOND:
+        memset(second_buffer,0,vbe_mem_info.XResolution * vbe_mem_info.YResolution * ((vbe_mem_info.BitsPerPixel + 7) / 8));
+        break;
+    case THIRD:
+        memset(triple_buffer,0,vbe_mem_info.XResolution * vbe_mem_info.YResolution * ((vbe_mem_info.BitsPerPixel + 7) / 8));
+        break;
+    default:
+        break;
+    }
+
+    //if (draw_on) memset(second_buffer,0,vbe_mem_info.XResolution * vbe_mem_info.YResolution * ((vbe_mem_info.BitsPerPixel + 7) / 8));
+    //else memset(video_mem,0,vbe_mem_info.XResolution * vbe_mem_info.YResolution * ((vbe_mem_info.BitsPerPixel + 7) / 8));
 }
 
 
@@ -174,14 +210,28 @@ int vg_page_flip(){
     memset(&r86, 0, sizeof(r86));	// zero the structure
 
     unsigned int v_res = 0;  
-    if (draw_on) v_res = vbe_mem_info.YResolution;   
+    //if (draw_on) v_res = vbe_mem_info.YResolution;
+
+    switch (currentBuffer) {
+        case FIRST:
+            v_res = 0;
+            break;
+        case SECOND:
+            v_res = vbe_mem_info.YResolution;
+            break;
+        case THIRD:
+            v_res = vbe_mem_info.YResolution * 2;
+            break;
+        default:
+            break;
+    }
 
     // Specify the appropriate register values
     r86.intno = VIDEO_BIOS_SERVICE; // BIOS video services
     r86.ah = 0x4f; 
     r86.al = 0x07; // Set/Get display start
     r86.bh = 0x00; // Reserved and must be 00h
-    r86.bl = 0x00; // Set Display CRTC Start during Vertical Retrace
+    r86.bl = 0x80; // Set Display CRTC Start during Vertical Retrace
     r86.cx = 0;  // Starting pixel
     r86.dx = v_res; // Starting scan line
 
@@ -191,7 +241,21 @@ int vg_page_flip(){
         return 1;
     }
 
-    draw_on = !draw_on; // "Flip" the page
+    switch (currentBuffer) {
+        case FIRST:
+            currentBuffer = THIRD;
+            break;
+        case SECOND:
+            currentBuffer = FIRST;
+            break;
+        case THIRD:
+            currentBuffer = SECOND;
+            break;
+        default:
+            break;
+    }
+
+    //draw_on = !draw_on; // "Flip" the page
 
     return 0;
 }
