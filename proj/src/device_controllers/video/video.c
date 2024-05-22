@@ -134,83 +134,6 @@ int drawPixel(uint16_t x, uint16_t y, uint32_t color){
     return 0;
 }
 
-
-/**
- * @brief Draws a horizontal line on the current back buffer
- * @param x x-coordinate of the starting pixel
- * @param y y-coordinate of the line
- * @param len Length of the line
- * @param color Color of the line 
- */
-int (vg_draw_hline)(uint16_t x, uint16_t y, uint16_t len, uint32_t color){
-    for (unsigned i = 0 ; i < len ; i++){
-        if (drawPixel(x+i, y, color) != 0) return 1;
-    }
-    return 0;
-}
-
-
-/**
- * @brief Draws a rectangle on the current back buffer
- * @param x x-coordinate of the starting pixel
- * @param y y-coordinate of the starting pixel
- * @param width Rectangle width
- * @param height Rectangle height
- * @param color Rectangle color
- */
-int (vg_draw_rectangle)(uint16_t x, uint16_t y, uint16_t width, uint16_t height, uint32_t color){    
-    for (int i = 0; i < height; i++){
-        if (vg_draw_hline(x, y + i, width, color) != 0){
-            vg_exit();
-            return 1;
-        }
-    }
-
-    return 0;
-}
-
-
-/**
- * @brief Draws a pattern of rectangles on the current back buffer
- * @param no_rectangles Number of rectangles to draw
- * @param first Color of the first rectangle
- * @param step Step to determine next color
- */
-int vg_draw_pattern(uint8_t no_rectangles, uint32_t first, uint8_t step){
-    if (no_rectangles == 0) return 0; // Draw no rectangles
-
-    uint16_t width = vbe_mem_info.XResolution / no_rectangles;
-    uint16_t height = vbe_mem_info.YResolution / no_rectangles;
-
-    // Get bitmask for each component and shift it to the right for extraction
-    uint8_t RFirst = (BIT(vbe_mem_info.RedMaskSize) - 1) & (first >> vbe_mem_info.RedFieldPosition);
-    uint8_t GFirst = (BIT(vbe_mem_info.GreenMaskSize) - 1) & (first >> vbe_mem_info.GreenFieldPosition);
-    uint8_t BFirst = (BIT(vbe_mem_info.BlueMaskSize) - 1) & (first >> vbe_mem_info.BlueFieldPosition);
-
-    uint32_t cor = first;
-
-    for (int i = 0; i < no_rectangles; i++){
-        for (int j = 0; j < no_rectangles; j++){
-
-            if (vbe_mem_info.MemoryModel != 0x06){ // Indexed mode
-                cor = (first + (i * no_rectangles + j) * step) % (1 << vbe_mem_info.BitsPerPixel);
-            }
-            else{ // Direct mode
-                uint8_t R = (RFirst + j * step) % (1 << vbe_mem_info.RedMaskSize);
-                uint8_t G = (GFirst + i * step) % (1 << vbe_mem_info.GreenMaskSize);
-                uint8_t B = (BFirst + (j + i) * step) % (1 << vbe_mem_info.BlueMaskSize);
-
-                cor = (R << vbe_mem_info.RedFieldPosition) | (G << vbe_mem_info.GreenFieldPosition) | (B << vbe_mem_info.BlueFieldPosition);
-            }
-
-            vg_draw_rectangle(width * j, height * i, width, height, cor);
-
-        }
-    }
-    return 0;
-}
-
-
 /**
  * @brief Draws a pixmap on the current back buffer
  * @param x x-coordinate of the starting pixel
@@ -258,7 +181,7 @@ int vg_page_flip(){
     r86.ah = 0x4f; 
     r86.al = 0x07; // Set/Get display start
     r86.bh = 0x00; // Reserved and must be 00h
-    r86.bl = 0x80; // Set Display CRTC Start during Vertical Retrace
+    r86.bl = 0x00; // Set Display CRTC Start during Vertical Retrace
     r86.cx = 0;  // Starting pixel
     r86.dx = v_res; // Starting scan line
 
@@ -269,28 +192,6 @@ int vg_page_flip(){
     }
 
     draw_on = !draw_on; // "Flip" the page
-
-    return 0;
-}
-
-
-// TODO: Remove -> this function is for testing page flipping (Always call vg_page_flip() when using double buffering)
-/**
- * @brief Draw an entire page on the back buffer
- */
-int vg_draw_page(int i){    
-    /* if (draw_on){
-        vg_clear_screen();
-        vg_draw_rectangle(10, 0, 100, 50, 0x2); // Draw rectangle on B2
-    }
-    else {
-        vg_clear_screen();
-        vg_draw_rectangle(100, 100, 100, 50, 0x3); // Draw rectangle on B1
-    } */
-
-    vg_clear_screen();
-    vg_draw_rectangle(i, 0, 100, 50, 0x2); // Draw rectangle on B2
-    vg_page_flip();
 
     return 0;
 }

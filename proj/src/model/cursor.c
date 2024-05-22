@@ -12,6 +12,8 @@ Cursor *new_cursor(int x, int y){
     cursor->sprite = get_cursor_sprite();
     cursor->x = x; 
     cursor->y = y;
+    cursor->isClicked = false;
+
     return cursor;
 }
 
@@ -22,8 +24,8 @@ void delete_cursor(Cursor *cursor){
     free(cursor);
 }
 
-void draw(Cursor *cursor){
-    // TODO:
+void draw_cursor(Cursor *cursor){
+    drawSprite(cursor->sprite, cursor->x, cursor->y);
 }
 
 
@@ -32,9 +34,21 @@ Sprite* cursor_get_sprite(Cursor *cursor){
 }
 
 int cursor_get_x(Cursor *cursor){
-    return cursor->x;
+    return  cursor->x;
 }
 
 int cursor_get_y(Cursor *cursor){
-    return cursor->x;
+    return cursor->y;
+}
+
+bool cursor_isClicked(Cursor *cursor){
+    return cursor->isClicked;
+}
+
+void cursor_set_x(Cursor *cursor, int x){
+    cursor->x = x;
+}
+
+void cursor_set_y(Cursor *cursor, int y){
+    cursor->y = y;
 }

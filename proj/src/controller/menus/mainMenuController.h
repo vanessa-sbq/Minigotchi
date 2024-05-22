@@ -1,0 +1,21 @@
+#include <lcom/lcf.h>
+
+#include "../../model/stateModels/mainMenu.h"
+#include "../../model/button.h"
+#include "../../model/cursor.h"
+
+#include "../../viewer/menus/mainMenuViewer.h"
+
+typedef enum {START, CONTINUE, QUIT, NOP} collision_type_t;
+
+void mainMenuController_load_mainMenu();
+
+collision_type_t mainMenuController_checkCollision(Button* mainMenu);
+
+void mainMenuController_step();
+
+Cursor* getMainMenuCursor();
+
+void setMainMenuCursor(Cursor* cursor);
+
+void mainMenuController_destroy_mainMenu();

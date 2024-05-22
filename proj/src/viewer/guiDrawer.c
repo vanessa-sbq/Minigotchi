@@ -12,6 +12,8 @@
 
 static Sprite* _sprite;
 static Sprite* _cursor_sprite;
+static Sprite* _button_sprite;
+
 
 Sprite* getSprite() {
     return _sprite;
@@ -19,6 +21,10 @@ Sprite* getSprite() {
 
 Sprite* get_cursor_sprite() { // TODO: temp
     return _cursor_sprite;
+}
+
+Sprite* get_button_sprite(){
+	return _button_sprite;
 }
 
 /* int (draw_xpm)(xpm_map_t xpm, uint16_t x, uint16_t y){
@@ -58,6 +64,7 @@ Sprite *create_sprite_xpm(xpm_map_t sprite){
 void setup_sprites(){
 	_sprite = create_sprite_xpm((xpm_map_t) braco_direito_xpm);
 	_cursor_sprite = create_sprite_xpm((xpm_map_t) A_xpm);
+	_button_sprite = create_sprite_xpm((xpm_map_t) A_xpm);
 }
 
 int drawSprite(Sprite *sprite, int x, int y){
@@ -73,3 +80,10 @@ int drawSprite(Sprite *sprite, int x, int y){
 	return 0;
 }
 
+uint16_t sprite_get_width(Sprite* sprite){
+	return sprite->width;
+}
+
+uint16_t sprite_get_height(Sprite* sprite){
+	return sprite->height;
+}

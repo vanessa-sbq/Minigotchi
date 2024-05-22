@@ -5,18 +5,30 @@
 #include <stdio.h>
 
 // TODO: fix
+
+#include "model/cursor.h"
+#include "model/button.h"
+
+#include "model/stateModels/mainMenu.h"
+
 #include "viewer/guiDrawer.h"
+#include "viewer/menus/mainMenuViewer.h"
+
 #include "device_controllers/video/video.h"
 #include "device_controllers/kbc/keyboard.h"
 #include "device_controllers/kbc/kbc.h"
 #include "device_controllers/kbc/mouse.h"
-#include "model/cursor.h"
+#include "device_controllers/timer/timer.h"
+
+#include "controller/menus/mainMenuController.h"
+
+
 
 // TODO: Might need to add/remove some states
 typedef enum {MAIN_MENU, MAIN_ROOM, MINIGAME_1, MINIGAME_2, EXIT} state_t;
-//static state_t game_state = MAIN_MENU; // Game's current state
+static state_t game_state = MAIN_MENU; // Game's current state
 
-int frames = 60; // TODO: Make value not hard coded
+int frames = 30; // TODO: Make value not hard coded
 
 int main(int argc, char *argv[]) {
 	lcf_set_language("EN-US");
@@ -72,14 +84,6 @@ int (proj_main_loop)(int argc, char **argv) {
 	}
 
 	setup_sprites();
-	Cursor *cursor = new_cursor(100, 100);
-
-
-	// TODO: Temp (to clear memory)
-	/* vg_clear_screen();
-	vg_page_flip();
-	vg_clear_screen(); */
-
 
 	// Subscribe keyboard interrupts
     uint8_t kbd_bit_no = 0;
@@ -98,23 +102,57 @@ int (proj_main_loop)(int argc, char **argv) {
     	return 1;
   	}
 
+	uint8_t timer_bit_no = 0;
+
+	if (timer_subscribe_int(&timer_bit_no) != 0) {
+		return 1;
+	}
+
+
+
 	uint8_t counter = 0;
 	struct packet pp;
 	//uint8_t kbd_irq_set = BIT(kbd_bit_no);
 	uint8_t mouse_irq_set = BIT(mouse_bit_no);
+	uint8_t timer_irq_set = BIT(timer_bit_no);
 
 	int ipc_status, r;
-	int iters = 100;
-	int cursor_current_x = cursor_get_x(cursor);
-	int cursor_current_y = cursor_get_y(cursor); 
+	int iters = 1000;
+	/* int cursor_current_x = cursor_get_x(cursor);
+	int cursor_current_y = cursor_get_y(cursor);  */
+
+	// These are variables that are going to be dynamically assigned depending on the game state.
+	Cursor* cursor = NULL;
+
 	while( iters > 0 ) {
 		//tickdelay(micros_to_ticks(50000)); // Needed in order to prevent flickering (FIXME:)
-		vg_clear_screen();
-		//vg_draw_rectangle(0, 0, 1000, 1000, 0xFF123);
-		printf("x: %u, y: %u\n", cursor_current_x, cursor_current_y);
-		if(drawSprite(get_cursor_sprite(), cursor_current_x, cursor_current_y) != 0){
-			printf("Error in drawSprite()\n");
-			return 1;
+
+		if (((getTimerCounter() - (sys_hz()/frames)) == 0)){
+			switch (game_state) {
+				case MAIN_MENU:
+					mainMenuController_step();
+					mainMenuViewer_draw();
+					if (cursor == NULL) cursor = getMainMenuCursor(); // Singleton Pattern
+					else setMainMenuCursor(cursor);
+					break;
+				case MAIN_ROOM:
+					
+					break;
+				case MINIGAME_1:
+					
+					break;
+				case MINIGAME_2:
+					
+					break;
+				case EXIT:
+					
+					break;
+				default:
+					return 1;
+					break;
+			}
+			setTimerCounter(0);
+			vg_clear_screen(); // TODO: move to viewer.
 		}
 
 		message msg;
@@ -125,76 +163,85 @@ int (proj_main_loop)(int argc, char **argv) {
 		if (is_ipc_notify(ipc_status)){ 
 		switch (_ENDPOINT_P(msg.m_source)) {
 			case HARDWARE:
-			if ((msg.m_notify.interrupts & mouse_irq_set )!= 0) {
-				// Call the mouse interrupt handler.
-				mouse_ih();
-
-				// Store the read byte.
-				uint8_t byte = mouse_get_readByte();
-
-				if (byte == 0x00 && mouse_get_error()){ // An error occoured
-					mouse_set_error(false);
-					continue;
+				if ((msg.m_notify.interrupts & timer_irq_set) != 0) {
+					timer_int_handler();
 				}
 
-				switch (counter){
-				case 0:
-					pp.bytes[counter] = byte; // Store the byte
+				if ((msg.m_notify.interrupts & mouse_irq_set )!= 0) {
+					mouse_ih();
 
-					pp.lb = (byte & 0x01); // Left Button
-					pp.rb = ((byte & 0x02) != 0); // Right Button
-					pp.mb = ((byte & 0x04) != 0); // Middle Button
+					// Store the read byte.
+					uint8_t byte = mouse_get_readByte();
 
-					pp.delta_x = (byte & 0x10) << 4; // 9th bit
-					pp.delta_y = (byte & 0x20) << 3; // 9th bit
+					if (byte == 0x00 && mouse_get_error()){ // An error occoured
+						mouse_set_error(false);
+						continue;
+					}
 
-					pp.x_ov = ((byte & 0x40) != 0); // x overflow
-					pp.y_ov = ((byte & 0x80) != 0); // y overflow
-					break;
-				case 1:
-					pp.bytes[counter] = byte; // Store the byte
-					pp.delta_x = pp.delta_x | byte; // Append the remaining 8 bits
-					pp.delta_x = twosComplementToBinary(pp.delta_x);
-					
-					break;
-				case 2:
-					pp.bytes[counter] = byte; // Store the byte
-					pp.delta_y = pp.delta_y | byte; // Append the remaining 8 bits
+					switch (counter){
+					case 0:
+						pp.bytes[counter] = byte; // Store the byte
 
-					pp.delta_y = twosComplementToBinary(pp.delta_y);
+						pp.lb = (byte & 0x01); // Left Button
+						pp.rb = ((byte & 0x02) != 0); // Right Button
+						pp.mb = ((byte & 0x04) != 0); // Middle Button
 
-					break;
-				default:
-					printf("\nIllegal operation! Counter is greater or equal to 3.\n");
-					break;
+						pp.delta_x = (byte & 0x10) << 4; // 9th bit
+						pp.delta_y = (byte & 0x20) << 3; // 9th bit
+
+						pp.x_ov = ((byte & 0x40) != 0); // x overflow
+						pp.y_ov = ((byte & 0x80) != 0); // y overflow
+						break;
+					case 1:
+						pp.bytes[counter] = byte; // Store the byte
+						pp.delta_x = pp.delta_x | byte; // Append the remaining 8 bits
+						pp.delta_x = twosComplementToBinary(pp.delta_x);
+
+						break;
+					case 2:
+						pp.bytes[counter] = byte; // Store the byte
+						pp.delta_y = pp.delta_y | byte; // Append the remaining 8 bits
+
+						pp.delta_y = twosComplementToBinary(pp.delta_y);
+
+						break;
+					default:
+						printf("\nIllegal operation! Counter is greater or equal to 3.\n");
+						break;
+					}
+
+					counter++;
+
+					// Reset the byte counter and call the necessary functions.
+					if (counter >= 3){
+						iters--;
+						counter = 0;
+    					int delta_x = pp.delta_x;
+						int delta_y = pp.delta_y;
+
+						if (true) {
+							if (!pp.x_ov) cursor_set_x(cursor, cursor_get_x(cursor) + delta_x);
+							if (!pp.y_ov) cursor_set_y(cursor, cursor_get_y(cursor) - delta_y);	
+						}
+
+					}
+
 				}
 
-				counter++;
-
-				// Reset the byte counter and call the necessary functions.
-				if (counter >= 3){
-					iters--;
-					mouse_print_packet(&pp);
-					counter = 0;
-					printf("pp.delta_x: %x\n", pp.delta_x);
-    				int delta_x = twosComplementToSignedInt(pp.delta_x);
-					int delta_y = twosComplementToSignedInt(pp.delta_y);
-					cursor_current_x += delta_x;
-					cursor_current_y -= delta_y;
-				}
-
-			}
-			break;
-			default: break;
+				break;
+			default:
+				break;
 			}
 		} 
 
-		vg_page_flip();
 	}
 
 	// TODO: Remove (temp)
 	delete_cursor(cursor);
 
+	if (timer_unsubscribe_int() != 0) {
+		return 1;
+	}
 
 	// Unsubscribe keyboard interrupts
 	if (unsubscribe_interrupts_kbd() != 0){
