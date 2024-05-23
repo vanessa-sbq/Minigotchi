@@ -14,7 +14,7 @@ unsigned int video_get_vram_size();
 unsigned getBytesPerPixel();
 
 void getBufferFromSprite(uint16_t height, uint16_t width, uint32_t *colors, char** background_buffer);
-int setBackgroundFromBuffer(char** background_buffer);
+int setBackgroundFromBuffer(char* background_buffer);
 
 int drawPixel(uint16_t x, uint16_t y, uint32_t color);
 int vg_draw_pixmap(uint16_t x, uint16_t y, uint8_t* map, xpm_image_t pixmap_and_metadata);

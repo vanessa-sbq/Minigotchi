@@ -92,7 +92,7 @@ void setup_sprites(){
 	_quit_button_sprite = create_sprite_xpm((xpm_map_t) quit_button_xpm);
 	_background_sprite = create_sprite_xpm((xpm_map_t) bricks_xpm);
 
-	_backgroundBuffer = malloc(sizeof(video_get_vram_size())); // FIXME: ?
+	_backgroundBuffer = malloc(video_get_vram_size()); // FIXME: ?
 
 	getBufferFromSprite(_background_sprite->height, _background_sprite->width, _background_sprite->colors, &_backgroundBuffer);
 }
@@ -120,5 +120,5 @@ uint16_t sprite_get_height(Sprite* sprite){
 
 
 void wrapper_draw_background(/**/) {
-	setBackgroundFromBuffer(&_backgroundBuffer); // TODO: add more with a enum;
+	setBackgroundFromBuffer(_backgroundBuffer); // TODO: add more with a enum;
 }
