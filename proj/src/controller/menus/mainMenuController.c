@@ -30,7 +30,7 @@ collision_type_t mainMenuController_checkCollision(Button *button) {
 
     int left_lower_corner_y = right_upper_corner_y + button_height;
 
-    if ((cursorY >= left_upper_corner_x && cursorY <= right_upper_corner_x) && (cursorX >= right_upper_corner_y && cursorX <= left_lower_corner_y)) {
+    if ((cursorX >= left_upper_corner_x && cursorX <= right_upper_corner_x) && (cursorY >= right_upper_corner_y && cursorY <= left_lower_corner_y)) {
             return currentButtonEvent;
     }
 

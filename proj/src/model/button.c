@@ -30,5 +30,5 @@ int button_get_x(Button *button) {
 }
 
 int button_get_y(Button *button) {
-    return button->x;
+    return button->y;
 }
