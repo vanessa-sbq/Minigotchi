@@ -8,9 +8,9 @@ MainMenu *new_mainMenu(){
     // draw MAIN MENU // FIXME:
 
     // Initialize MainMenu
-    mainMenu->startNewButton = new_button(100, 0); // TODO: pass button text and pos
-    mainMenu->continueButton = new_button(100, 200); // TODO: pass button text and pos
-    mainMenu->quitButton = new_button(100, 400);     // TODO: pass button text and pos
+    mainMenu->startNewButton = new_button(100, 0, 0); // TODO: pass button text and pos
+    mainMenu->continueButton = new_button(100, 200, 0); // TODO: pass button text and pos
+    mainMenu->quitButton = new_button(100, 400, 1);     // TODO: pass button text and pos
     mainMenu->cursor = new_cursor(100, 100); // TODO: Change initial cursor position
     return mainMenu;
 }

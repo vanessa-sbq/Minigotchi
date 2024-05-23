@@ -1,14 +1,13 @@
 #include "button.h"
 
-Button *new_button(int x, int y) {
+Button *new_button(int x, int y, int text_index) { 
      Button *button = malloc(sizeof(*button));
     if (button == NULL) return NULL;
 
     // Initialize Cursor
-    button->sprite = get_button_sprite();
+    button->sprite = guiDrawer_get_button_sprite(text_index);
     button->x = x; 
     button->y = y;
-
 
     return button;
 }

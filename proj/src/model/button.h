@@ -11,7 +11,7 @@ typedef struct{
     int y;
 } Button;
 
-Button *new_button(int x, int y); // "Constructor"
+Button *new_button(int x, int y, int text_index); // "Constructor"
 
 void delete_button(Button *button); // "Destructor"
 

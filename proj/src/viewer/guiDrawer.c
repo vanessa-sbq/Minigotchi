@@ -6,40 +6,65 @@
 #include "../sprites/xpms/braco_direito.xpm"
 #include "../sprites/xpms/braco_esquerdo.xpm"
 #include "../sprites/xpms/Untitled.xpm"
+#include "../sprites/xpms/start_button-xpm.xpm"
+#include "../sprites/xpms/quit_button-xpm.xpm"
+#include "../sprites/xpms/bricks.xpm"
+
 // Font
 #include "../sprites/fonts/A.xpm"
 
-
 static Sprite* _sprite;
 static Sprite* _cursor_sprite;
-static Sprite* _button_sprite;
+static Sprite* _start_button_sprite;
+static Sprite* _quit_button_sprite;
+static Sprite* _background_sprite;
+
+	
+static char* _backgroundBuffer;
 
 
+/* Sprite Getters */
 Sprite* getSprite() {
     return _sprite;
 }
-
-Sprite* get_cursor_sprite() { // TODO: temp
+Sprite* get_cursor_sprite() {
     return _cursor_sprite;
 }
-
-Sprite* get_button_sprite(){
-	return _button_sprite;
-}
-
-/* int (draw_xpm)(xpm_map_t xpm, uint16_t x, uint16_t y){
-	xpm_image_t img;
-	uint8_t *color = xpm_load(xpm, XPM_8_8_8_8, &img);
-
-	for(int i = y; i < img.height + y; i++){
-		for(int j = x; j < img.width + x; j++){
-			drawPixel(j, i, *color);
-			color++;
-		}
+Sprite* guiDrawer_get_button_sprite(int text_index){
+	switch (text_index){
+		case 0:
+			return guiDrawer_get_start_button_sprite();
+			break;
+		case 1: 
+			return guiDrawer_get_quit_button_sprite();
+			break; 
+		default:break;
 	}
-	return 0;
+	return NULL;
 }
- */
+Sprite* guiDrawer_get_start_button_sprite(){
+	return _start_button_sprite;
+}
+Sprite* guiDrawer_get_quit_button_sprite(){
+	return _quit_button_sprite;
+}
+
+
+
+/* Buffer Getters */
+char** guiDrawer_get_backgroundBuffer(){
+	return &_backgroundBuffer;
+}
+
+
+
+/* Buffer Setters */
+/* void guiDrawer_set_backgroundBuffer(char** backgroundBuffer){
+	_backgroundBuffer = backgroundBuffer;
+} */
+
+
+
 Sprite *create_sprite_xpm(xpm_map_t sprite){
 	Sprite *sp = (Sprite *) malloc(sizeof(Sprite));
 	if(sp == NULL){
@@ -60,11 +85,16 @@ Sprite *create_sprite_xpm(xpm_map_t sprite){
 	return sp;
 }
 
-//void setup_sprites(char* sprite[]){
 void setup_sprites(){
 	_sprite = create_sprite_xpm((xpm_map_t) braco_direito_xpm);
 	_cursor_sprite = create_sprite_xpm((xpm_map_t) A_xpm);
-	_button_sprite = create_sprite_xpm((xpm_map_t) A_xpm);
+	_start_button_sprite = create_sprite_xpm((xpm_map_t) start_button_xpm);
+	_quit_button_sprite = create_sprite_xpm((xpm_map_t) quit_button_xpm);
+	_background_sprite = create_sprite_xpm((xpm_map_t) bricks_xpm);
+
+	_backgroundBuffer = malloc(sizeof(video_get_vram_size())); // FIXME: ?
+
+	getBufferFromSprite(_background_sprite->height, _background_sprite->width, _background_sprite->colors, &_backgroundBuffer);
 }
 
 int drawSprite(Sprite *sprite, int x, int y){
@@ -86,4 +116,9 @@ uint16_t sprite_get_width(Sprite* sprite){
 
 uint16_t sprite_get_height(Sprite* sprite){
 	return sprite->height;
+}
+
+
+void wrapper_draw_background(/**/) {
+	setBackgroundFromBuffer(&_backgroundBuffer); // TODO: add more with a enum;
 }

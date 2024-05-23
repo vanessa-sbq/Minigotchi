@@ -259,3 +259,49 @@ int vg_page_flip(){
 
     return 0;
 }
+
+// Receive sprite / xpm to a buffer
+// TODO:
+
+void getBufferFromSprite(uint16_t height, uint16_t width, uint32_t *colors, char** background_buffer) {
+	for(int i = 0; i < height; i++){
+		for(int j = 0; j < width; j++){
+
+            unsigned color = j + i * width;
+
+            if (color == TRANSPARENT /* || (x >= vbe_mem_info.XResolution ||  y >= vbe_mem_info.YResolution) */){ 
+                continue;
+            }
+
+            uint32_t bytes_pp_mask = 0;
+            for (uint32_t i = 0; i < vbe_mem_info.BitsPerPixel; i++){
+                bytes_pp_mask |= BIT(i);
+            }
+
+            color &= bytes_pp_mask;
+
+            memcpy(&(*background_buffer)[(j + i * width) * ((vbe_mem_info.BitsPerPixel + 7) / 8)], &(colors[color]), (vbe_mem_info.BitsPerPixel + 7) / 8);
+		}
+	}
+}
+
+unsigned getBytesPerPixel() {
+    return (vbe_mem_info.BitsPerPixel + 7) / 8;
+}
+
+int setBackgroundFromBuffer(char** background_buffer) {
+    switch (currentBuffer) {
+    case FIRST:
+        if (memcpy(&video_mem, (*background_buffer), sizeof(video_mem)) == NULL) return 1;
+        break;
+    case SECOND:
+        if (memcpy(&second_buffer, (*background_buffer), sizeof(second_buffer)) == NULL) return 1;
+        break;
+    case THIRD:
+        if (memcpy(&triple_buffer, (*background_buffer), sizeof(triple_buffer)) == NULL) return 1;
+        break;
+    default:
+        break;
+    }
+    return 0;
+}

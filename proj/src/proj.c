@@ -32,8 +32,8 @@ int frames = 60; // TODO: Make value not hard coded
 
 int main(int argc, char *argv[]) {
 	lcf_set_language("EN-US");
-	lcf_trace_calls("/home/lcom/labs/proj/trace.txt");  
-	lcf_log_output("/home/lcom/labs/proj/output.txt"); 
+	lcf_trace_calls("/home/lcom/labs/g5/proj/trace.txt");  
+	lcf_log_output("/home/lcom/labs/g5/proj/output.txt"); 
 	if (lcf_start(argc, argv)) return 1;
 	lcf_cleanup();
 	return 0;
@@ -109,7 +109,6 @@ int (proj_main_loop)(int argc, char **argv) {
 	}
 
 
-
 	uint8_t counter = 0;
 	struct packet pp;
 	//uint8_t kbd_irq_set = BIT(kbd_bit_no);
@@ -152,7 +151,6 @@ int (proj_main_loop)(int argc, char **argv) {
 					break;
 			}
 			setTimerCounter(0);
-			vg_clear_screen(); // TODO: move to viewer.
 		}
 
 		message msg;
