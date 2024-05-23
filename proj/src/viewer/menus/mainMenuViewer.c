@@ -14,7 +14,7 @@ void mainMenuViewer_draw(){
     wrapper_draw_background();
     //vg_draw_rectangle(0, 0, 1152, 864, 0xFF123);
 
-    //draw_button(mainMenu->startNewButton);
+    draw_button(mainMenu->startNewButton);
     //draw_button(mainMenu->continueButton);
     //draw_button(mainMenu->quitButton);
 

@@ -12,6 +12,8 @@ void mainMenuController_load_mainMenu();
 
 collision_type_t mainMenuController_checkCollision(Button* mainMenu);
 
+collision_type_t mainMenuController_getButtonEvent();
+
 void mainMenuController_step();
 
 Cursor* getMainMenuCursor();

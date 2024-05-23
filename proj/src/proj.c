@@ -32,11 +32,15 @@ int frames = 60; // TODO: Make value not hard coded
 
 int main(int argc, char *argv[]) {
 	lcf_set_language("EN-US");
-	lcf_trace_calls("/home/lcom/labs/g5/proj/trace.txt");  
-	lcf_log_output("/home/lcom/labs/g5/proj/output.txt"); 
+	lcf_trace_calls("/home/lcom/labs/proj/src/trace.txt");  
+	lcf_log_output("/home/lcom/labs/proj/src/output.txt"); 
 	if (lcf_start(argc, argv)) return 1;
 	lcf_cleanup();
 	return 0;
+}
+
+void proj_set_state(state_t state){
+	game_state = state;
 }
 
 // TODO: FIX AND DON'T USE
@@ -114,16 +118,16 @@ int (proj_main_loop)(int argc, char **argv) {
 	//uint8_t kbd_irq_set = BIT(kbd_bit_no);
 	uint8_t mouse_irq_set = BIT(mouse_bit_no);
 	uint8_t timer_irq_set = BIT(timer_bit_no);
+	bool endGame = false;
 
 	int ipc_status, r;
-	int iters = 1000;
 	/* int cursor_current_x = cursor_get_x(cursor);
 	int cursor_current_y = cursor_get_y(cursor);  */
 
 	// These are variables that are going to be dynamically assigned depending on the game state.
 	Cursor* cursor = NULL;
 
-	while( iters > 0 ) {
+	while(!endGame) { // TODO: change this
 		//tickdelay(micros_to_ticks(50000)); // Needed in order to prevent flickering (FIXME:)
 
 		if (((getTimerCounter() - (sys_hz()/frames)) == 0)){
@@ -131,11 +135,24 @@ int (proj_main_loop)(int argc, char **argv) {
 				case MAIN_MENU:
 					mainMenuController_step();
 					mainMenuViewer_draw();
+					
 					if (cursor == NULL) cursor = getMainMenuCursor(); // Singleton Pattern
 					else setMainMenuCursor(cursor);
+
+					if (mainMenuController_getButtonEvent() == START){ // Start the game
+						game_state = MAIN_ROOM;	
+					}
+
+					if (mainMenuController_getButtonEvent() == QUIT){ // Quit the game
+						//endGame = true;	// TODO: Uncomment
+					}
 					break;
 				case MAIN_ROOM:
-					
+					//printf("MAIN_ROOM REACHED");
+					vg_clear_screen(); // TODO: REMOVE (TEMP)
+					vg_page_flip(); // TODO: REMOVE (TEMP)
+					endGame = true;
+
 					break;
 				case MINIGAME_1:
 					
@@ -212,7 +229,6 @@ int (proj_main_loop)(int argc, char **argv) {
 
 					// Reset the byte counter and call the necessary functions.
 					if (counter >= 3){
-						iters--;
 						counter = 0;
     					int delta_x = pp.delta_x;
 						int delta_y = pp.delta_y;

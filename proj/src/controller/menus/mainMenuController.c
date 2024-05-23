@@ -1,7 +1,7 @@
 #include "mainMenuController.h"
 
 static MainMenu *mainMenu = NULL;
-static collision_type_t currentButton = START;
+static collision_type_t currentButtonEvent = START;
 
 void mainMenuController_load_mainMenu(){
     if (mainMenu == NULL){
@@ -10,50 +10,66 @@ void mainMenuController_load_mainMenu(){
     }
 }
 
-
 collision_type_t mainMenuController_checkCollision(Button *button) {
     Cursor* cursor = mainMenu_get_cursor(mainMenu);
 
-    int16_t cursorX = cursor_get_x(cursor);
-    int16_t cursorY = cursor_get_y(cursor);
+    int cursorX = cursor_get_x(cursor);
+    int cursorY = cursor_get_y(cursor);
 
-    
+    //printf("Cursor position is %u, %u", cursor->x, cursor->y);
+    //printf("Cursor position is 0");
 
-    int16_t button_width = sprite_get_width(button->sprite);
-    int16_t button_height = sprite_get_height(button->sprite);
+    int button_width = sprite_get_width(button->sprite);
+    int button_height = sprite_get_height(button->sprite);
 
-    int16_t left_upper_corner_x = button_get_x(button);
+    int left_upper_corner_x = button_get_x(button);
 
-    int16_t right_upper_corner_x = left_upper_corner_x + button_width;
+    int right_upper_corner_x = left_upper_corner_x + button_width;
 
-    int16_t right_upper_corner_y = button_get_y(button);
+    int right_upper_corner_y = button_get_y(button);
 
-    int16_t left_lower_corner_y = right_upper_corner_y + button_height;
+    int left_lower_corner_y = right_upper_corner_y + button_height;
 
-    if ( cursorX >= left_upper_corner_x && cursorX <= right_upper_corner_x) {
-        if (cursorY >= right_upper_corner_y && cursorY <= left_lower_corner_y) {
-            return currentButton;
-        }
+    if ((cursorY >= left_upper_corner_x && cursorY <= right_upper_corner_x) && (cursorX >= right_upper_corner_y && cursorX <= left_lower_corner_y)) {
+            return currentButtonEvent;
     }
 
     return NOP;
 }
 
+collision_type_t mainMenuController_getButtonEvent() {
+    return currentButtonEvent;
+}
+
+
 void mainMenuController_step(){
     mainMenuController_load_mainMenu();
 
-
-    //draw_mainMenu(mainMenu);
-
     // TODO: check return of checkCollision and do something about it
+    collision_type_t pressedButton = NOP;
 
-    currentButton = START;
-    mainMenuController_checkCollision(mainMenu_get_startNewButton(mainMenu));
-    currentButton = CONTINUE;
-    mainMenuController_checkCollision(mainMenu_get_continueButton(mainMenu));
-    currentButton = QUIT;
-    mainMenuController_checkCollision(mainMenu_get_quitButton(mainMenu));
+    currentButtonEvent = START;
+    pressedButton = mainMenuController_checkCollision(mainMenu_get_startNewButton(mainMenu));
 
+    if (pressedButton == currentButtonEvent) {
+        return;
+    }
+
+    currentButtonEvent = NOP;
+
+    /* currentButtonEvent = CONTINUE;
+    pressedButton = mainMenuController_checkCollision(mainMenu_get_continueButton(mainMenu));
+
+    if (pressedButton == currentButtonEvent) {
+        return;
+    }
+
+    currentButtonEvent = QUIT;
+    pressedButton = mainMenuController_checkCollision(mainMenu_get_quitButton(mainMenu));
+
+    if (pressedButton == currentButtonEvent) {
+        return;
+    } */
 }
 
 void mainMenuController_delete_mainMenu(){
