@@ -4,31 +4,34 @@
 #include <stdint.h>
 #include <stdio.h>
 
-// TODO: fix
+#define FPS 50
 
-#include "model/cursor.h"
-#include "model/button.h"
-
-#include "model/stateModels/mainMenu.h"
-
-#include "viewer/guiDrawer.h"
-#include "viewer/menus/mainMenuViewer.h"
-
+// Device controllers
 #include "device_controllers/video/video.h"
 #include "device_controllers/kbc/keyboard.h"
 #include "device_controllers/kbc/kbc.h"
 #include "device_controllers/kbc/mouse.h"
 #include "device_controllers/timer/timer.h"
 
+// Models
+#include "model/cursor.h"
+#include "model/button.h"
+#include "model/stateModels/mainMenu.h"
+
+// Viewers
+#include "viewer/guiDrawer.h"
+#include "viewer/menus/mainMenuViewer.h"
+#include "viewer/menus/mainRoomViewer.h"
+
+// Controllers
 #include "controller/menus/mainMenuController.h"
+#include "controller/menus/mainRoomController.h"
 
 
 
 // TODO: Might need to add/remove some states
 typedef enum {MAIN_MENU, MAIN_ROOM, MINIGAME_1, MINIGAME_2, EXIT} state_t;
 static state_t game_state = MAIN_MENU; // Game's current state
-
-int frames = 60; // TODO: Make value not hard coded
 
 int main(int argc, char *argv[]) {
 	lcf_set_language("EN-US");
@@ -130,7 +133,7 @@ int (proj_main_loop)(int argc, char **argv) {
 	while(!endGame) { // TODO: change this
 		//tickdelay(micros_to_ticks(50000)); // Needed in order to prevent flickering (FIXME:)
 
-		if (((getTimerCounter() - (sys_hz()/frames)) == 0)){
+		if (((getTimerCounter() - (sys_hz() / FPS)) == 0)){
 			switch (game_state) {
 				case MAIN_MENU:
 					mainMenuController_step();
@@ -141,6 +144,7 @@ int (proj_main_loop)(int argc, char **argv) {
 
 					if (mainMenuController_getButtonEvent() == START){ // Start the game
 						mainMenuController_delete_mainMenu(); // Free the main menu
+						cursor = NULL;
 						game_state = MAIN_ROOM;	
 					}
 
@@ -150,11 +154,16 @@ int (proj_main_loop)(int argc, char **argv) {
 					}
 					break;
 				case MAIN_ROOM:
-					//printf("MAIN_ROOM REACHED");
-					vg_clear_screen(); // TODO: REMOVE (TEMP)
-					vg_page_flip(); // TODO: REMOVE (TEMP)
-					endGame = true;
+					mainRoomController_step();
+					mainRoomViewer_draw();
+					if (cursor == NULL) cursor = getMainRoomCursor(); // Singleton Pattern
+					else setMainRoomCursor(cursor);
 
+					if (mainRoomController_getButtonEvent() == QUIT_MAINROOM){ // Quit the game
+						mainRoomController_delete_mainRoom(); // Free the main menu
+						endGame = true;	// TODO: Uncomment
+					}
+					
 					break;
 				case MINIGAME_1:
 					

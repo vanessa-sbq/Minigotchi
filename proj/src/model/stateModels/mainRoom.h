@@ -5,23 +5,21 @@
 
 #include "../button.h"
 #include "../cursor.h"
+#include "../minigotchi.h"
 
 typedef struct{
-    Button *startNewButton;
-    Button *continueButton;
+    Button *miniGamesButton;
     Button *quitButton;
+    Minigotchi* minigotchi;
     Cursor *cursor;
 } MainRoom;
 
 MainRoom *new_mainRoom(); // "Constructor"
 
-void delete_mainRoom(MainRoom *mainRoom); // "Destructor"
+void delete_mainRoom(MainRoom *mainRoom);
 
-void draw_mainRoom(MainRoom *mainRoom);
-
-// Getters and setters
-Button* mainRoom_get_startNewButton(MainRoom *mainRoom);
-Button* mainRoom_get_continueButton(MainRoom *mainRoom);
+Minigotchi* mainRoom_get_minigotchi(MainRoom *mainRoom);
+Button* mainRoom_get_miniGamesButton(MainRoom *mainRoom);
 Button* mainRoom_get_quitButton(MainRoom *mainRoom);
 Cursor* mainRoom_get_cursor(MainRoom *mainRoom);
 

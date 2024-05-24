@@ -6,38 +6,31 @@ MainRoom *new_mainRoom(){
     if (mainRoom == NULL) return NULL;
 
     // Initialize MainRoom
-    mainMenu->startNewButton = new_button(100, 0, 0); 
-    mainMenu->continueButton = new_button(100, 200, 0); 
-    mainMenu->quitButton = new_button(100, 400, 1);
-    mainMenu->cursor = new_cursor(400, 600); 
-    return mainMenu;
+    mainRoom->minigotchi = new_minigotchi(400, 400, 100, 100, "John Doe");
+    mainRoom->quitButton = new_button(100, 400, 1);
+    mainRoom->cursor = new_cursor(400, 600); 
+    return mainRoom;
 }
 
-void delete_mainRoom(MainMenu *mainRoom){
-    free(mainRoom); // FIXME: Should free the attributes too
+void delete_mainRoom(MainRoom *mainRoom){
+    free(mainRoom);
 }
 
-void draw_mainRoom(MainMenu *mainMenu){
-    draw_button(mainMenu->startNewButton);
-    draw_button(mainMenu->continueButton);
-    draw_button(mainMenu->quitButton);
-    draw_cursor(mainMenu->cursor);
+Minigotchi* mainRoom_get_minigotchi(MainRoom *mainRoom) {
+    return mainRoom->minigotchi;
 }
 
-Button* mainMenu_get_startNewButton(MainMenu *mainMenu){
-    return mainMenu->startNewButton;
+
+Button* mainRoom_get_miniGamesButton(MainRoom *mainRoom){
+    return mainRoom->miniGamesButton;
 }
 
-Button* mainMenu_get_continueButton(MainMenu *mainMenu){
-    return mainMenu->continueButton;
+Button* mainRoom_get_quitButton(MainRoom *mainRoom){
+    return mainRoom->quitButton;
 }
 
-Button* mainMenu_get_quitButton(MainMenu *mainMenu){
-    return mainMenu->quitButton;
-}
-
-Cursor* mainMenu_get_cursor(MainMenu *mainMenu){
-    return mainMenu->cursor;
+Cursor* mainRoom_get_cursor(MainRoom *mainRoom){
+    return mainRoom->cursor;
 }
 
 

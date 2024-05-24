@@ -6,14 +6,18 @@
 
 #include "../../viewer/menus/mainRoomViewer.h"
 
-typedef enum {BACK_TO_MENU, NOP} collision_type_t;
+typedef enum {QUIT_MAINROOM, MINIGAMES, NOP_MAINROOM} collision_type_mainRoom_t;
 
 void mainRoomController_load_mainRoom();
 
-collision_type_t mainRoomController_checkCollision(Button* mainMenu);
+collision_type_mainRoom_t mainRoomController_checkCollision(Button* button);
 
-collision_type_t mainRoomController_getButtonEvent();
+collision_type_mainRoom_t mainRoomController_getButtonEvent();
 
 void mainRoomController_step();
 
-void mainRoomController_destroy_mainMenu();
+void mainRoomController_delete_mainRoom();
+
+Cursor* getMainRoomCursor();
+
+void setMainRoomCursor(Cursor* cursor);

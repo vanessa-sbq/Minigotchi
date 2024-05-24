@@ -21,6 +21,10 @@ void returnToTextMode() {
     }
 }
 
+uint16_t getXResolution() {
+    return vbe_mem_info.XResolution;
+}
+
 
 /**
  * @brief Function that gets information about a video mode.
@@ -149,9 +153,6 @@ int drawPixel(uint16_t x, uint16_t y, uint32_t color){
     default:
         break;
     }
-
-    
-
     return 0;
 }
 

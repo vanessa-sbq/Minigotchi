@@ -1,7 +1,7 @@
 #include "mainRoomController.h"
 
 static MainRoom *mainRoom = NULL;
-static collision_type_t currentButtonEvent = START;
+static collision_type_mainRoom_t currentButtonEvent = NOP_MAINROOM;
 
 void mainRoomController_load_mainRoom(){
     if (mainRoom == NULL){
@@ -10,15 +10,12 @@ void mainRoomController_load_mainRoom(){
     }
 }
 
-collision_type_t mainRoomController_checkCollision(Button *button) {
-    Cursor* cursor = mainMenu_get_cursor(mainMenu);
+collision_type_mainRoom_t mainRoomController_checkCollision(Button* button) {
+    Cursor* cursor = mainRoom_get_cursor(mainRoom);
 
     int cursorX = cursor_get_x(cursor);
     int cursorY = cursor_get_y(cursor);
     bool beingPressed = get_buttonClicked(cursor);
-
-    //printf("Cursor position is %u, %u", cursor->x, cursor->y);
-    //printf("Cursor position is 0");
 
     int button_width = sprite_get_width(button->sprite);
     int button_height = sprite_get_height(button->sprite);
@@ -35,27 +32,28 @@ collision_type_t mainRoomController_checkCollision(Button *button) {
             return currentButtonEvent;
     }
 
-    return NOP;
+    return NOP_MAINROOM;
 }
 
-collision_type_t mainRoomController_getButtonEvent() {
+collision_type_mainRoom_t mainRoomController_getButtonEvent() {
     return currentButtonEvent;
 }
 
 
 void mainRoomController_step(){
-    mainRoomController_load_mainMenu();
+    mainRoomController_load_mainRoom();
+
+    // TODO: Check button collisions :)
 }
 
-void mainRoomController_delete_mainMenu(){
+void mainRoomController_delete_mainRoom(){
     delete_mainRoom(mainRoom);
 }
 
-Cursor* getMainMenuCursor() {
-    return mainMenu->cursor;
+Cursor* getMainRoomCursor() {
+    return mainRoom->cursor;
 }
 
-
-void setMainMenuCursor(Cursor* cursor) {
-    mainMenu->cursor = cursor;
+void setMainRoomCursor(Cursor* cursor) {
+    mainRoom->cursor = cursor;
 }

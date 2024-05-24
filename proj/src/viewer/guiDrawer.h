@@ -15,6 +15,7 @@ Sprite* guiDrawer_get_button_sprite(int text_index);
 Sprite* get_cursor_sprite(); 
 Sprite* guiDrawer_get_start_button_sprite(); 
 Sprite* guiDrawer_get_quit_button_sprite();
+Sprite* guiDrawer_get_minigotchi_sprite();
 
 // Buffer getters
 char** guiDrawer_get_backgroundBuffer();

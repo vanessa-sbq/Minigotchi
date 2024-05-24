@@ -10,6 +10,8 @@
 #include "../sprites/xpms/quit_button-xpm.xpm"
 #include "../sprites/xpms/bricks.xpm"
 #include "../sprites/xpms/bg_mainroom.xpm"
+#include "../sprites/xpms/Minigotchi.xpm"
+#include "../sprites/xpms/feather.xpm"
 
 // Font
 #include "../sprites/fonts/A.xpm"
@@ -20,6 +22,7 @@ static Sprite* _start_button_sprite;
 static Sprite* _quit_button_sprite;
 static Sprite* _background_sprite;
 static Sprite* _bg_mainroom_sprite;
+static Sprite* _minigotchi_sprite;
 	
 static char* _backgroundBuffer;
 /* 
@@ -51,6 +54,10 @@ Sprite* guiDrawer_get_start_button_sprite(){
 }
 Sprite* guiDrawer_get_quit_button_sprite(){
 	return _quit_button_sprite;
+}
+
+Sprite* guiDrawer_get_minigotchi_sprite() {
+	return _minigotchi_sprite;
 }
 
 
@@ -91,11 +98,12 @@ Sprite *create_sprite_xpm(xpm_map_t sprite){
 
 void setup_sprites(){
 	_sprite = create_sprite_xpm((xpm_map_t) braco_direito_xpm);
-	_cursor_sprite = create_sprite_xpm((xpm_map_t) A_xpm);
+	_cursor_sprite = create_sprite_xpm((xpm_map_t) feather_xpm);
 	_start_button_sprite = create_sprite_xpm((xpm_map_t) start_button_xpm);
 	_quit_button_sprite = create_sprite_xpm((xpm_map_t) quit_button_xpm);
 	_background_sprite = create_sprite_xpm((xpm_map_t) bricks_xpm);
-	_bg_mainroom_sprite = create_sprite_xpm((xpm_map_t) background_xpm);
+	_bg_mainroom_sprite = create_sprite_xpm((xpm_map_t) bg_mainroom_xpm);
+	_minigotchi_sprite = create_sprite_xpm((xpm_map_t) Minigotchi_xpm);
 
 
 	_backgroundBuffer = malloc(video_get_vram_size()); // FIXME: ?
@@ -131,5 +139,5 @@ uint16_t sprite_get_height(Sprite* sprite){
 
 
 void wrapper_draw_background(/**/) {
-	setBackgroundFromBuffer(_backgroundBuffer); // TODO: add more with a enum;
+	setBackgroundFromBuffer(_backgroundBuffer); // TODO: add more with an enum;
 }
