@@ -28,6 +28,14 @@ void draw_cursor(Cursor *cursor){
     drawSprite(cursor->sprite, cursor->x, cursor->y);
 }
 
+void set_buttonClicked(bool isPressed, Cursor* cursor) {
+    cursor->isClicked = isPressed;
+}
+
+bool get_buttonClicked(Cursor* cursor) {
+    return cursor->isClicked;
+}
+
 
 Sprite* cursor_get_sprite(Cursor *cursor){
     return cursor->sprite;

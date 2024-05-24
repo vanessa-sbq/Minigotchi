@@ -16,6 +16,9 @@ void delete_cursor(Cursor *cursor); // "Destructor"
 
 void draw_cursor(Cursor *cursor);
 
+void set_buttonClicked(bool isPressed, Cursor* cursor);
+bool get_buttonClicked(Cursor* cursor);
+
 // Getters and setters
 Sprite* cursor_get_sprite(Cursor *cursos);
 int cursor_get_x(Cursor *cursor);

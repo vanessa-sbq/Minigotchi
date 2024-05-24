@@ -13,7 +13,7 @@ typedef struct{
 
 Button *new_button(int x, int y, int text_index); // "Constructor"
 
-void delete_button(Button *button); // "Destructor"
+void button_delete(Button *button); // "Destructor"
 
 void draw_button(Button *button);
 

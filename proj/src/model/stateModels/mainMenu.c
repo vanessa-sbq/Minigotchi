@@ -16,6 +16,9 @@ MainMenu *new_mainMenu(){
 }
 
 void delete_mainMenu(MainMenu *mainMenu){
+    button_delete(mainMenu->startNewButton);
+    button_delete(mainMenu->continueButton);
+    button_delete(mainMenu->quitButton);
     free(mainMenu);
 }
 

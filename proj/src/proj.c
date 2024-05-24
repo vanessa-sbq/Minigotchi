@@ -140,11 +140,13 @@ int (proj_main_loop)(int argc, char **argv) {
 					else setMainMenuCursor(cursor);
 
 					if (mainMenuController_getButtonEvent() == START){ // Start the game
+						mainMenuController_delete_mainMenu(); // Free the main menu
 						game_state = MAIN_ROOM;	
 					}
 
 					if (mainMenuController_getButtonEvent() == QUIT){ // Quit the game
-						//endGame = true;	// TODO: Uncomment
+						mainMenuController_delete_mainMenu(); // Free the main menu
+						endGame = true;	// TODO: Uncomment
 					}
 					break;
 				case MAIN_ROOM:
@@ -234,6 +236,7 @@ int (proj_main_loop)(int argc, char **argv) {
 						int delta_y = pp.delta_y;
 
 						if (true) {
+							set_buttonClicked(pp.lb, cursor);
 							if (!pp.x_ov) cursor_set_x(cursor, cursor_get_x(cursor) + delta_x);
 							if (!pp.y_ov) cursor_set_y(cursor, cursor_get_y(cursor) - delta_y);	
 						}

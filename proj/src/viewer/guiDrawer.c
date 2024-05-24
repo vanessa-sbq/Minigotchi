@@ -9,6 +9,7 @@
 #include "../sprites/xpms/start_button-xpm.xpm"
 #include "../sprites/xpms/quit_button-xpm.xpm"
 #include "../sprites/xpms/bricks.xpm"
+#include "../sprites/xpms/bg_mainroom.xpm"
 
 // Font
 #include "../sprites/fonts/A.xpm"
@@ -18,9 +19,12 @@ static Sprite* _cursor_sprite;
 static Sprite* _start_button_sprite;
 static Sprite* _quit_button_sprite;
 static Sprite* _background_sprite;
-
+static Sprite* _bg_mainroom_sprite;
 	
 static char* _backgroundBuffer;
+/* 
+static char* _startButtonBuffer;
+static char* _quitButtonBufffer; */
 
 
 /* Sprite Getters */
@@ -91,10 +95,17 @@ void setup_sprites(){
 	_start_button_sprite = create_sprite_xpm((xpm_map_t) start_button_xpm);
 	_quit_button_sprite = create_sprite_xpm((xpm_map_t) quit_button_xpm);
 	_background_sprite = create_sprite_xpm((xpm_map_t) bricks_xpm);
+	_bg_mainroom_sprite = create_sprite_xpm((xpm_map_t) background_xpm);
+
 
 	_backgroundBuffer = malloc(video_get_vram_size()); // FIXME: ?
+	/* _startButtonBuffer = malloc(video_get_vram_size());
+	_quitButtonBufffer = malloc(video_get_vram_size()); */
 
-	getBufferFromSprite(_background_sprite->height, _background_sprite->width, _background_sprite->colors, &_backgroundBuffer);
+	getBufferFromSprite(_bg_mainroom_sprite->height, _bg_mainroom_sprite->width, 0, 0, _bg_mainroom_sprite->colors, &_backgroundBuffer);
+	/* getBufferFromSprite(_start_button_sprite->height, _background_sprite->width, 0, 0, _background_sprite->colors, &_startButtonBuffer); */
+	/* getBufferFromSprite(_quit_button_sprite->height, _background_sprite->width, 0, 0, _background_sprite->colors, &_quitButtonBufffer); */
+
 }
 
 int drawSprite(Sprite *sprite, int x, int y){

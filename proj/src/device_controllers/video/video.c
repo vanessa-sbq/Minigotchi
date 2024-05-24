@@ -263,7 +263,7 @@ int vg_page_flip(){
 // Receive sprite / xpm to a buffer
 // TODO:
 
-void getBufferFromSprite(uint16_t height, uint16_t width, uint32_t *colors, char **background_buffer) {
+void getBufferFromSprite(uint16_t height, uint16_t width, uint16_t x, uint16_t y, uint32_t *colors, char **background_buffer) {
     for(int i = 0; i < height; i++){
         for(int j = 0; j < width; j++){
 

@@ -15,6 +15,7 @@ collision_type_t mainMenuController_checkCollision(Button *button) {
 
     int cursorX = cursor_get_x(cursor);
     int cursorY = cursor_get_y(cursor);
+    bool beingPressed = get_buttonClicked(cursor);
 
     //printf("Cursor position is %u, %u", cursor->x, cursor->y);
     //printf("Cursor position is 0");
@@ -30,7 +31,7 @@ collision_type_t mainMenuController_checkCollision(Button *button) {
 
     int left_lower_corner_y = right_upper_corner_y + button_height;
 
-    if ((cursorX >= left_upper_corner_x && cursorX <= right_upper_corner_x) && (cursorY >= right_upper_corner_y && cursorY <= left_lower_corner_y)) {
+    if ((cursorX >= left_upper_corner_x && cursorX <= right_upper_corner_x) && (cursorY >= right_upper_corner_y && cursorY <= left_lower_corner_y) && beingPressed) {
             return currentButtonEvent;
     }
 
@@ -55,21 +56,21 @@ void mainMenuController_step(){
         return;
     }
 
-    currentButtonEvent = NOP;
-
-    /* currentButtonEvent = CONTINUE;
+   /*  currentButtonEvent = CONTINUE;
     pressedButton = mainMenuController_checkCollision(mainMenu_get_continueButton(mainMenu));
 
     if (pressedButton == currentButtonEvent) {
         return;
-    }
+    } */
 
     currentButtonEvent = QUIT;
     pressedButton = mainMenuController_checkCollision(mainMenu_get_quitButton(mainMenu));
 
     if (pressedButton == currentButtonEvent) {
         return;
-    } */
+    }
+
+    currentButtonEvent = NOP;
 }
 
 void mainMenuController_delete_mainMenu(){

@@ -20,4 +20,4 @@ Cursor* getMainMenuCursor();
 
 void setMainMenuCursor(Cursor* cursor);
 
-void mainMenuController_destroy_mainMenu();
+void mainMenuController_delete_mainMenu();

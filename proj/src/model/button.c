@@ -12,7 +12,7 @@ Button *new_button(int x, int y, int text_index) {
     return button;
 }
 
-void delete_button(Button *button) {
+void button_delete(Button *button) {
     free(button);
 }
 
