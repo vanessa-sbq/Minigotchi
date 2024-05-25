@@ -22,7 +22,7 @@ PROG=proj
 
 
 # source code files to be compiled
-SRCS = proj.c timer.c kbc.c utils.c keyboard.c mouse.c video.c guiDrawer.c cursor.c mainMenu.c button.c mainMenuController.c mainMenuViewer.c mainRoom.c mainRoomController.c mainRoomViewer.c minigotchi.c
+SRCS = proj.c timer.c kbc.c utils.c keyboard.c mouse.c video.c guiDrawer.c cursor.c mainMenu.c button.c mainMenuController.c mainMenuViewer.c mainRoom.c mainRoomController.c mainRoomViewer.c minigotchi.c minigameMenu.c minigameMenuController.c minigameMenuViewer.c
 
 # additional compilation flags
 # "-Wall -Wextra -Werror -I . -std=c11 -Wno-unused-parameter" are already set

@@ -10,7 +10,9 @@
 #include "../sprites/xpms/quit_button-xpm.xpm"
 #include "../sprites/xpms/bricks.xpm"
 #include "../sprites/xpms/bg_mainroom.xpm"
-#include "../sprites/xpms/Minigotchi.xpm"
+#include "../sprites/xpms/minigotchi_normal.xpm"
+#include "../sprites/xpms/minigotchi_happy.xpm"
+
 #include "../sprites/xpms/feather.xpm"
 
 // Font
@@ -23,6 +25,7 @@ static Sprite* _quit_button_sprite;
 static Sprite* _background_sprite;
 static Sprite* _bg_mainroom_sprite;
 static Sprite* _minigotchi_sprite;
+static Sprite* _minigotchi_happy_sprite;
 	
 static char* _backgroundBuffer;
 /* 
@@ -60,6 +63,13 @@ Sprite* guiDrawer_get_minigotchi_sprite() {
 	return _minigotchi_sprite;
 }
 
+Sprite* guiDrawer_get_minigotchi_cuddle_sprite(){
+	return _minigotchi_happy_sprite;
+}
+
+Sprite* guiDrawer_get_minigotchi_normal_sprite() {
+	return _minigotchi_sprite;
+}
 
 
 /* Buffer Getters */
@@ -103,7 +113,8 @@ void setup_sprites(){
 	_quit_button_sprite = create_sprite_xpm((xpm_map_t) quit_button_xpm);
 	_background_sprite = create_sprite_xpm((xpm_map_t) bricks_xpm);
 	_bg_mainroom_sprite = create_sprite_xpm((xpm_map_t) bg_mainroom_xpm);
-	_minigotchi_sprite = create_sprite_xpm((xpm_map_t) Minigotchi_xpm);
+	_minigotchi_sprite = create_sprite_xpm((xpm_map_t) minigotchi_normal_xpm);
+	_minigotchi_happy_sprite = create_sprite_xpm((xpm_map_t) minigotchi_happy_xpm);
 
 
 	_backgroundBuffer = malloc(video_get_vram_size()); // FIXME: ?
@@ -138,6 +149,8 @@ uint16_t sprite_get_height(Sprite* sprite){
 }
 
 
+/** Wrappers **/
 void wrapper_draw_background(/**/) {
 	setBackgroundFromBuffer(_backgroundBuffer); // TODO: add more with an enum;
 }
+

@@ -5,14 +5,17 @@
 #include "../../model/cursor.h"
 
 #include "../../viewer/menus/mainRoomViewer.h"
+#include "../../viewer/guiDrawer.h"
 
-typedef enum {QUIT_MAINROOM, MINIGAMES, NOP_MAINROOM} collision_type_mainRoom_t;
+typedef enum {QUIT_MAINROOM, MINIGAMES_MAINROOM, NOP_MAINROOM, CUDDLES} collision_type_mainRoom_t;
 
 void mainRoomController_load_mainRoom();
 
-collision_type_mainRoom_t mainRoomController_checkCollision(Button* button);
+bool mainRoomController_checkCollision(Sprite* sprite, int x, int y);
 
 collision_type_mainRoom_t mainRoomController_getButtonEvent();
+
+void mainRoomController_setButtonEvent(collision_type_mainRoom_t ct);
 
 void mainRoomController_step();
 

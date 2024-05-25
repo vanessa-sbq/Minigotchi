@@ -1,5 +1,5 @@
 /* XPM */
-static char * Minigotchi_xpm[] = {
+static char * minigotchi_happy_xpm[] = {
 "217 378 329 2",
 "  	c #000001",
 ". 	c #000000",

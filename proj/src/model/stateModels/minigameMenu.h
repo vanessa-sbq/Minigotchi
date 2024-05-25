@@ -1,0 +1,22 @@
+#ifndef _LCOM_MINIGAMEMENU_H_
+#define _LCOM_MINIGAMEMENU_H_
+
+#include "../../viewer/guiDrawer.h"
+
+#include "../button.h"
+#include "../cursor.h"
+#include "../minigotchi.h"
+
+typedef struct{
+    Button *quitButton;
+    Cursor *cursor;
+} MinigameMenu;
+
+MinigameMenu *new_minigameMenu(); // "Constructor"
+
+void delete_minigameMenu(MinigameMenu *minigameMenu);
+
+Button* minigameMenu_get_quitButton(MinigameMenu *minigameMenu);
+Cursor* minigameMenu_get_cursor(MinigameMenu *minigameMenu);
+
+#endif /* _MINIGAMEMENU_H */

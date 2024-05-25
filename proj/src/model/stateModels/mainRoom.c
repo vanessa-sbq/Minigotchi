@@ -7,12 +7,16 @@ MainRoom *new_mainRoom(){
 
     // Initialize MainRoom
     mainRoom->minigotchi = new_minigotchi(400, 400, 100, 100, "John Doe");
+    mainRoom->miniGamesButton = new_button(0, 0, 1);
     mainRoom->quitButton = new_button(100, 400, 1);
     mainRoom->cursor = new_cursor(400, 600); 
     return mainRoom;
 }
 
 void delete_mainRoom(MainRoom *mainRoom){
+    kill_minigotchi(mainRoom->minigotchi);
+    button_delete(mainRoom->miniGamesButton);
+    button_delete(mainRoom->quitButton);
     free(mainRoom);
 }
 

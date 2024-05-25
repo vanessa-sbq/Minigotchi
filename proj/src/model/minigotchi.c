@@ -10,6 +10,7 @@ Minigotchi *new_minigotchi(int x, int y, uint32_t hunger, uint32_t energy, char*
     minigotchi->hunger = hunger;
     minigotchi->energy = energy;
     minigotchi->name = name;
+    minigotchi->isRxCuddles = false;
     return minigotchi;
 }
 
@@ -25,6 +26,10 @@ void draw_minigotchi(Minigotchi *minigotchi) {
 // Getters and setters
 Sprite* minigotchi_get_sprite(Minigotchi *minigotchi) {
     return minigotchi->sprite;
+}
+
+void minigotchi_set_sprite(Minigotchi *minigotchi, Sprite* sprite) {
+    minigotchi->sprite = sprite;
 }
 
 int minigotchi_get_x(Minigotchi *minigotchi) {
@@ -66,5 +71,13 @@ char* minigotchi_get_name(Minigotchi *minigotchi) {
 
 void minigotchi_set_name(Minigotchi *minigotchi, char* name) {
     minigotchi->name = name;
+}
+
+bool minigotchi_get_cuddles(Minigotchi *minigotchi) {
+    return minigotchi->isRxCuddles;
+}
+
+void minigotchi_set_cuddles(Minigotchi *minigotchi, bool cuddles) {
+    minigotchi->isRxCuddles = cuddles;
 }
 

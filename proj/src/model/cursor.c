@@ -21,7 +21,9 @@ Cursor *new_cursor(int x, int y){
  * @brief Destroys cursor 
  */
 void delete_cursor(Cursor *cursor){
-    free(cursor);
+    if (cursor != NULL){
+        free(cursor);
+    }
 }
 
 void draw_cursor(Cursor *cursor){

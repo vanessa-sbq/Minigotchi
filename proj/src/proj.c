@@ -17,26 +17,29 @@
 #include "model/cursor.h"
 #include "model/button.h"
 #include "model/stateModels/mainMenu.h"
+#include "model/stateModels/mainRoom.h"
+#include "model/stateModels/minigameMenu.h"
 
 // Viewers
 #include "viewer/guiDrawer.h"
 #include "viewer/menus/mainMenuViewer.h"
 #include "viewer/menus/mainRoomViewer.h"
+#include "viewer/menus/minigameMenuViewer.h"
 
 // Controllers
 #include "controller/menus/mainMenuController.h"
 #include "controller/menus/mainRoomController.h"
-
+#include "controller/menus/minigameMenuController.h"
 
 
 // TODO: Might need to add/remove some states
-typedef enum {MAIN_MENU, MAIN_ROOM, MINIGAME_1, MINIGAME_2, EXIT} state_t;
+typedef enum {MAIN_MENU, MAIN_ROOM, MINIGAMES_WINDOW, MINIGAME_1, MINIGAME_2, EXIT} state_t;
 static state_t game_state = MAIN_MENU; // Game's current state
 
 int main(int argc, char *argv[]) {
 	lcf_set_language("EN-US");
-	lcf_trace_calls("/home/lcom/labs/proj/src/trace.txt");  
-	lcf_log_output("/home/lcom/labs/proj/src/output.txt"); 
+	lcf_trace_calls("/home/lcom/labs/g5/proj/src/trace.txt");  
+	lcf_log_output("/home/lcom/labs/g5/proj/src/output.txt"); 
 	if (lcf_start(argc, argv)) return 1;
 	lcf_cleanup();
 	return 0;
@@ -124,46 +127,54 @@ int (proj_main_loop)(int argc, char **argv) {
 	bool endGame = false;
 
 	int ipc_status, r;
-	/* int cursor_current_x = cursor_get_x(cursor);
-	int cursor_current_y = cursor_get_y(cursor);  */
 
 	// These are variables that are going to be dynamically assigned depending on the game state.
-	Cursor* cursor = NULL;
+	Cursor* cursor = new_cursor(100, 100);
 
-	while(!endGame) { // TODO: change this
-		//tickdelay(micros_to_ticks(50000)); // Needed in order to prevent flickering (FIXME:)
-
+	while(!endGame) {
 		if (((getTimerCounter() - (sys_hz() / FPS)) == 0)){
 			switch (game_state) {
 				case MAIN_MENU:
 					mainMenuController_step();
 					mainMenuViewer_draw();
 					
-					if (cursor == NULL) cursor = getMainMenuCursor(); // Singleton Pattern
-					else setMainMenuCursor(cursor);
+					setMainMenuCursor(cursor);
 
 					if (mainMenuController_getButtonEvent() == START){ // Start the game
 						mainMenuController_delete_mainMenu(); // Free the main menu
-						cursor = NULL;
 						game_state = MAIN_ROOM;	
 					}
 
 					if (mainMenuController_getButtonEvent() == QUIT){ // Quit the game
 						mainMenuController_delete_mainMenu(); // Free the main menu
-						endGame = true;	// TODO: Uncomment
+						endGame = true;
 					}
 					break;
 				case MAIN_ROOM:
 					mainRoomController_step();
 					mainRoomViewer_draw();
-					if (cursor == NULL) cursor = getMainRoomCursor(); // Singleton Pattern
-					else setMainRoomCursor(cursor);
+					
+					setMainRoomCursor(cursor);
+
+					if (mainRoomController_getButtonEvent() == MINIGAMES_MAINROOM){ // Open minigames 
+						mainRoomController_setButtonEvent(NOP_MAINROOM);
+						game_state = MINIGAMES_WINDOW;	
+					}
 
 					if (mainRoomController_getButtonEvent() == QUIT_MAINROOM){ // Quit the game
 						mainRoomController_delete_mainRoom(); // Free the main menu
-						endGame = true;	// TODO: Uncomment
+						endGame = true;	
 					}
+					break;
+				case MINIGAMES_WINDOW: 
+					minigameMenuController_step();
+					minigameMenuViewer_draw();
+					setMinigameMenuCursor(cursor);
 					
+					if (minigameMenuController_getButtonEvent() == QUIT_MINIGAMEMENU){ // Open minigames 
+						minigameMenuController_setButtonEvent(NOP_MINIGAMEMENU);
+						game_state = MAIN_ROOM;	
+					}
 					break;
 				case MINIGAME_1:
 					
@@ -244,7 +255,7 @@ int (proj_main_loop)(int argc, char **argv) {
     					int delta_x = pp.delta_x;
 						int delta_y = pp.delta_y;
 
-						if (true) {
+						if (true && cursor != NULL) {
 							set_buttonClicked(pp.lb, cursor);
 							if (!pp.x_ov) cursor_set_x(cursor, cursor_get_x(cursor) + delta_x);
 							if (!pp.y_ov) cursor_set_y(cursor, cursor_get_y(cursor) - delta_y);	

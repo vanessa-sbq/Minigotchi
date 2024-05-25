@@ -1,0 +1,67 @@
+#include "minigameMenuController.h"
+
+static MinigameMenu *minigameMenu = NULL;
+static collision_type_minigameMenu_t currentButtonEvent = NOP_MINIGAMEMENU;
+
+void minigameMenuController_load_minigameMenu(){
+    if (minigameMenu == NULL){
+        minigameMenu = new_minigameMenu();
+        minigameMenuViewer_setMinigameMenu(minigameMenu);
+    }
+}
+
+bool minigameMenuController_checkCollision(Sprite* sprite, int x, int y) {
+    Cursor* cursor = minigameMenu_get_cursor(minigameMenu);
+
+    int cursorX = cursor_get_x(cursor);
+    int cursorY = cursor_get_y(cursor);
+    bool beingPressed = get_buttonClicked(cursor);
+
+    int sprite_width = sprite_get_width(sprite);
+    int sprite_height = sprite_get_height(sprite);
+
+    int left_upper_corner_x = x;
+
+    int right_upper_corner_x = left_upper_corner_x + sprite_width;
+
+    int right_upper_corner_y = y;
+
+    int left_lower_corner_y = right_upper_corner_y + sprite_height;
+
+    if ((cursorX >= left_upper_corner_x && cursorX <= right_upper_corner_x) && (cursorY >= right_upper_corner_y && cursorY <= left_lower_corner_y) && beingPressed) {
+            return true;
+    }
+
+    return false;
+}
+
+collision_type_minigameMenu_t minigameMenuController_getButtonEvent() {
+    return currentButtonEvent;
+}
+
+void minigameMenuController_setButtonEvent(collision_type_minigameMenu_t ct){
+    currentButtonEvent = ct;
+}
+
+void minigameMenuController_step(){
+    minigameMenuController_load_minigameMenu();
+    
+    // Check if "Quit" clicked
+    Button* quit_button = minigameMenu_get_quitButton(minigameMenu);
+    if (minigameMenuController_checkCollision(button_get_sprite(quit_button), button_get_x(quit_button), button_get_y(quit_button))){
+        currentButtonEvent = QUIT_MINIGAMEMENU;
+    }
+}
+
+void minigameMenuController_delete_minigameMenu(){
+    delete_minigameMenu(minigameMenu);
+}
+
+Cursor* getMinigameMenuCursor() {
+    currentButtonEvent = NOP_MINIGAMEMENU;
+    return minigameMenu->cursor;
+}
+
+void setMinigameMenuCursor(Cursor* cursor) {
+    minigameMenu->cursor = cursor;
+}
