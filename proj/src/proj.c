@@ -119,9 +119,8 @@ int (proj_main_loop)(int argc, char **argv) {
 	}
 
 
-	uint8_t counter = 0;
 	struct packet pp;
-	//uint8_t kbd_irq_set = BIT(kbd_bit_no);
+	uint8_t kbd_irq_set = BIT(kbd_bit_no);
 	uint8_t mouse_irq_set = BIT(mouse_bit_no);
 	uint8_t timer_irq_set = BIT(timer_bit_no);
 	bool endGame = false;
@@ -130,9 +129,22 @@ int (proj_main_loop)(int argc, char **argv) {
 
 	// These are variables that are going to be dynamically assigned depending on the game state.
 	Cursor* cursor = new_cursor(100, 100);
+	switchBackground(0);
 
+	bool lockKeyboard = false;
+    uint8_t scanCodes[2];
+	
+	scanCodes[0] = 0x00;
+	scanCodes[1] = 0x00;	
+	
+    uint8_t counter = 0;
+    uint8_t scanCodeCounter = 0;
 	while(!endGame) {
 		if (((getTimerCounter() - (sys_hz() / FPS)) == 0)){
+
+			uint8_t scancode_first_byte = 0x00;
+			uint8_t scancode_second_byte = 0x00;
+
 			switch (game_state) {
 				case MAIN_MENU:
 					mainMenuController_step();
@@ -142,6 +154,7 @@ int (proj_main_loop)(int argc, char **argv) {
 
 					if (mainMenuController_getButtonEvent() == START){ // Start the game
 						mainMenuController_delete_mainMenu(); // Free the main menu
+						switchBackground(1);
 						game_state = MAIN_ROOM;	
 					}
 
@@ -156,8 +169,32 @@ int (proj_main_loop)(int argc, char **argv) {
 					
 					setMainRoomCursor(cursor);
 
+					// We only want to read the keyboard if the driver receive loop has finished writting to the buffer.
+					if (lockKeyboard) {
+						scancode_first_byte = scanCodes[0];
+						scancode_second_byte = scanCodes[1];
+							
+							if (scancode_first_byte == 0xe0 && scancode_second_byte == 0x4d) {
+								mainRoomController_Hotbar_goRight();
+							}
+    						if (scancode_first_byte == 0xe0 && scancode_second_byte == 0x4b) {
+								mainRoomController_Hotbar_goLeft();
+							}
+						
+
+						// Call necessary function...
+						if (scanCodes[0] == 0x12) {
+							mainRoomController_toggleHotbar();
+						}
+						
+						scanCodes[0] = 0x00;
+						scanCodes[1] = 0x00;
+						lockKeyboard = false;
+					}
+
 					if (mainRoomController_getButtonEvent() == MINIGAMES_MAINROOM){ // Open minigames 
 						mainRoomController_setButtonEvent(NOP_MAINROOM);
+						switchBackground(2);
 						game_state = MINIGAMES_WINDOW;	
 					}
 
@@ -173,6 +210,7 @@ int (proj_main_loop)(int argc, char **argv) {
 					
 					if (minigameMenuController_getButtonEvent() == QUIT_MINIGAMEMENU){ // Open minigames 
 						minigameMenuController_setButtonEvent(NOP_MINIGAMEMENU);
+						switchBackground(1);
 						game_state = MAIN_ROOM;	
 					}
 					break;
@@ -243,7 +281,6 @@ int (proj_main_loop)(int argc, char **argv) {
 
 						break;
 					default:
-						printf("\nIllegal operation! Counter is greater or equal to 3.\n");
 						break;
 					}
 
@@ -264,6 +301,34 @@ int (proj_main_loop)(int argc, char **argv) {
 					}
 
 				}
+
+				if (msg.m_notify.interrupts & kbd_irq_set) {
+                        kbc_ih();
+                        
+                        uint8_t scanCode = getScanCode(); // Fetch the scancode.
+                        
+                        switch (scanCodeCounter){
+                        case 0:
+                            if (!lockKeyboard) scanCodes[scanCodeCounter] = scanCode;
+
+                            if (scanCode == 0xe0){
+                            	scanCodeCounter++;
+                            } else {
+								lockKeyboard = true;
+                            	scanCodeCounter = 0;
+                            }
+
+                            break;
+                        case 1:
+                            if (!lockKeyboard) scanCodes[scanCodeCounter] = scanCode;
+							lockKeyboard = true;
+                            scanCodeCounter = 0;
+                            break;
+                        default:
+                            return -1;
+                            break;
+                        }
+                    }
 
 				break;
 			default:

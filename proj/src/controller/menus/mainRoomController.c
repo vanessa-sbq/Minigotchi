@@ -10,6 +10,24 @@ void mainRoomController_load_mainRoom(){
     }
 }
 
+void mainRoomController_toggleHotbar() {
+    mainRoom->hotbar->hidden = !mainRoom->hotbar->hidden;
+}
+
+void mainRoomController_Hotbar_goRight() {
+    mainRoom->hotbar->highlighted++;
+    mainRoom->hotbar->highlighted %= 9;
+
+    
+}
+
+void mainRoomController_Hotbar_goLeft() {
+    if (mainRoom->hotbar->highlighted == 0) {
+        mainRoom->hotbar->highlighted = 9;
+    }
+    mainRoom->hotbar->highlighted--; // 1111 1111 1111 1111
+}
+
 bool mainRoomController_checkCollision(Sprite* sprite, int x, int y) {
     Cursor* cursor = mainRoom_get_cursor(mainRoom);
 

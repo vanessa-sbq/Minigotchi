@@ -6,10 +6,11 @@ MainRoom *new_mainRoom(){
     if (mainRoom == NULL) return NULL;
 
     // Initialize MainRoom
-    mainRoom->minigotchi = new_minigotchi(400, 400, 100, 100, "John Doe");
+    mainRoom->minigotchi = new_minigotchi(467, 400, 100, 100, "John Doe");
     mainRoom->miniGamesButton = new_button(0, 0, 1);
     mainRoom->quitButton = new_button(100, 400, 1);
     mainRoom->cursor = new_cursor(400, 600); 
+    mainRoom->hotbar = new_hotbar(213, 750, 0);
     return mainRoom;
 }
 
@@ -35,6 +36,10 @@ Button* mainRoom_get_quitButton(MainRoom *mainRoom){
 
 Cursor* mainRoom_get_cursor(MainRoom *mainRoom){
     return mainRoom->cursor;
+}
+
+Hotbar* mainRoom_get_hotbar(MainRoom *mainRoom) {
+    return mainRoom->hotbar;
 }
 
 

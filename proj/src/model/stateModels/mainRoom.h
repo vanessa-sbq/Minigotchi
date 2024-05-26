@@ -6,12 +6,14 @@
 #include "../button.h"
 #include "../cursor.h"
 #include "../minigotchi.h"
+#include "../hotbar.h"
 
 typedef struct{
     Button *miniGamesButton;
     Button *quitButton;
     Minigotchi* minigotchi;
     Cursor *cursor;
+    Hotbar *hotbar;
 } MainRoom;
 
 MainRoom *new_mainRoom(); // "Constructor"
@@ -22,5 +24,6 @@ Minigotchi* mainRoom_get_minigotchi(MainRoom *mainRoom);
 Button* mainRoom_get_miniGamesButton(MainRoom *mainRoom);
 Button* mainRoom_get_quitButton(MainRoom *mainRoom);
 Cursor* mainRoom_get_cursor(MainRoom *mainRoom);
+Hotbar* mainRoom_get_hotbar(MainRoom *mainRoom);
 
 #endif /* _MAINROOM_H */

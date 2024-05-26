@@ -13,6 +13,11 @@ void mainRoomController_load_mainRoom();
 
 bool mainRoomController_checkCollision(Sprite* sprite, int x, int y);
 
+void mainRoomController_toggleHotbar();
+
+void mainRoomController_Hotbar_goRight();
+void mainRoomController_Hotbar_goLeft();
+
 collision_type_mainRoom_t mainRoomController_getButtonEvent();
 
 void mainRoomController_setButtonEvent(collision_type_mainRoom_t ct);

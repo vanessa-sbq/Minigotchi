@@ -2,6 +2,8 @@
 
 static int kbd_hook_id = KBD_IRQ;
 
+static uint8_t scanCode = 0x00;
+
 /**
  * @brief Subscribes and enables KBC interrupts.
  * @param bit_no address of memory to be initialized with the bit number to be set in the mask returned upon an interrupt
@@ -14,6 +16,14 @@ int subscribe_interrupts_kbd(uint8_t* bit_no){
         return 1;
     }
     return 0;
+}
+
+void (kbc_ih)(){
+    readFromOutputBuffer(&scanCode); // Fetch the scancode.
+}
+
+uint8_t getScanCode() {
+    return scanCode;
 }
 
 /**
