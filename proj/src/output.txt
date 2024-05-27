@@ -1,0 +1,6 @@
+File '/usr/save.txt' exists.
+Name: Mini
+Hunger: 1000
+Happiness: 1000
+Coins: 0
+File 'save.txt' created in '/usr' directory.

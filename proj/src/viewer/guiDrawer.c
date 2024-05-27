@@ -15,6 +15,9 @@
 #include "../sprites/xpms/hotbar.xpm"
 #include "../sprites/xpms/hotbar_select.xpm"
 #include "../sprites/xpms/feather.xpm"
+#include "../sprites/xpms/happiness_bar_max.xpm"
+#include "../sprites/xpms/hunger_bar_max.xpm"
+#include "../sprites/xpms/nameMinigotchi_bg.xpm"
 
 // Font
 #include "../sprites/xpm_fonts/A.xpm"
@@ -30,11 +33,25 @@
 #include "../sprites/xpm_fonts/K.xpm"
 #include "../sprites/xpm_fonts/L.xpm"
 #include "../sprites/xpm_fonts/M.xpm"
+#include "../sprites/xpm_fonts/N.xpm"
+#include "../sprites/xpm_fonts/O.xpm"
+#include "../sprites/xpm_fonts/P.xpm"
+#include "../sprites/xpm_fonts/Q.xpm"
+#include "../sprites/xpm_fonts/R.xpm"
+#include "../sprites/xpm_fonts/S.xpm"
+#include "../sprites/xpm_fonts/T.xpm"
+#include "../sprites/xpm_fonts/U.xpm"
+#include "../sprites/xpm_fonts/V.xpm"
+#include "../sprites/xpm_fonts/W.xpm"
+#include "../sprites/xpm_fonts/X.xpm"
+#include "../sprites/xpm_fonts/Y.xpm"
+#include "../sprites/xpm_fonts/Z.xpm"
 
 // Backgrounds
 static Sprite* _bg_mainmenu_sprite = NULL;
 static Sprite* _bg_mainroom_sprite = NULL;
 static Sprite* _bg_minigames_sprite = NULL;
+static Sprite* _bg_nameMinigotchi_sprite = NULL;
 
 // Other Game Elements
 static Sprite* _cursor_sprite = NULL;
@@ -46,6 +63,8 @@ static Sprite* _minigotchi_happy_sprite = NULL;
 // GUI Elements
 static Sprite* _hotbar_sprite = NULL;
 static Sprite* _hotbar_select_sprite = NULL;
+static Sprite* _happiness_bar_sprite = NULL;
+static Sprite* _hunger_bar_sprite = NULL;
 	
 /*** Buffers ***/
 static char* _backgroundBuffer;
@@ -96,6 +115,13 @@ Sprite* guiDrawer_get_hotbar_select_sprite() {
 	return _hotbar_select_sprite;
 }
 
+Sprite* guiDrawer_get_bar_sprite(int bar_type, int level){
+	if (bar_type == 0){
+		return _happiness_bar_sprite;
+	} else {
+		return _hunger_bar_sprite;
+	}
+}
 
 
 /* Buffer Getters */
@@ -128,6 +154,7 @@ void setup_sprites(){
 	_bg_mainmenu_sprite = create_sprite_xpm((xpm_map_t) bricks_xpm);
 	_bg_mainroom_sprite = create_sprite_xpm((xpm_map_t) bg_mainroom_xpm);
 	_bg_minigames_sprite = create_sprite_xpm((xpm_map_t) bricks_xpm);
+	_bg_nameMinigotchi_sprite = create_sprite_xpm((xpm_map_t) nameMinigotchi_bg_xpm);
 	_backgroundBuffer = malloc(video_get_vram_size());
 
 	// Cursor
@@ -136,6 +163,10 @@ void setup_sprites(){
 	// Buttons
 	_start_button_sprite = create_sprite_xpm((xpm_map_t) start_button_xpm);
 	_quit_button_sprite = create_sprite_xpm((xpm_map_t) quit_button_xpm);
+
+	// Bars
+	_happiness_bar_sprite = create_sprite_xpm((xpm_map_t) happiness_bar_max_xpm);
+	_hunger_bar_sprite = create_sprite_xpm((xpm_map_t) hunger_bar_max_xpm);
 	
 	// Minigotchi
 	_minigotchi_sprite = create_sprite_xpm((xpm_map_t) minigotchi_normal_xpm);
@@ -157,8 +188,8 @@ void switchBackground(uint8_t bg) {
 		case 2: // MinigamesMenu
 			getBufferFromSprite(_bg_minigames_sprite->height, _bg_minigames_sprite->width, 0, 0, _bg_minigames_sprite->colors, &_backgroundBuffer);
 			break;
-		case 3:
-			//getBufferFromSprite(_bg_mainroom_sprite->height, _bg_mainroom_sprite->width, 0, 0, _bg_mainroom_sprite->colors, &_backgroundBuffer);
+		case 3: // NameMinigotchi
+			getBufferFromSprite(_bg_nameMinigotchi_sprite->height, _bg_nameMinigotchi_sprite->width, 0, 0, _bg_nameMinigotchi_sprite->colors, &_backgroundBuffer);
 			break;
 		case 4:
 			//getBufferFromSprite(_bg_mainroom_sprite->height, _bg_mainroom_sprite->width, 0, 0, _bg_mainroom_sprite->colors, &_backgroundBuffer);

@@ -4,7 +4,10 @@
 #include <stdint.h>
 #include <stdio.h>
 
-#define FPS 50
+#define FPS 60 // TODO: Change to 60?
+
+// Player data
+#include "player_data/database.h"
 
 // Device controllers
 #include "device_controllers/video/video.h"
@@ -16,29 +19,40 @@
 // Models
 #include "model/cursor.h"
 #include "model/button.h"
+#include "model/bar.h"
 #include "model/stateModels/mainMenu.h"
 #include "model/stateModels/mainRoom.h"
 #include "model/stateModels/minigameMenu.h"
+#include "model/stateModels/nameMinigotchi.h"
 
 // Viewers
 #include "viewer/guiDrawer.h"
 #include "viewer/menus/mainMenuViewer.h"
 #include "viewer/menus/mainRoomViewer.h"
 #include "viewer/menus/minigameMenuViewer.h"
+#include "viewer/menus/nameMinigotchiViewer.h"
 
 // Controllers
 #include "controller/menus/mainMenuController.h"
 #include "controller/menus/mainRoomController.h"
 #include "controller/menus/minigameMenuController.h"
+#include "controller/menus/nameMinigotchiController.h"
+
+
+// Database
+static Database* database;
 
 
 // TODO: Might need to add/remove some states
-typedef enum {MAIN_MENU, MAIN_ROOM, MINIGAMES_WINDOW, MINIGAME_1, MINIGAME_2, EXIT} state_t;
+typedef enum {MAIN_MENU, MAIN_ROOM, NAME_MINIGOTCHI, MINIGAMES_WINDOW, MINIGAME_1, MINIGAME_2, EXIT} state_t;
 static state_t game_state = MAIN_MENU; // Game's current state
+static bool newGame = false; // Check if playing for the first time
+//static char* minigotchi_name = "John Doe";
+
 
 int main(int argc, char *argv[]) {
 	lcf_set_language("EN-US");
-	lcf_trace_calls("/home/lcom/labs/g5/proj/src/trace.txt");  
+	//lcf_trace_calls("/home/lcom/labs/g5/proj/src/trace.txt");  
 	lcf_log_output("/home/lcom/labs/g5/proj/src/output.txt"); 
 	if (lcf_start(argc, argv)) return 1;
 	lcf_cleanup();
@@ -118,7 +132,6 @@ int (proj_main_loop)(int argc, char **argv) {
 		return 1;
 	}
 
-
 	struct packet pp;
 	uint8_t kbd_irq_set = BIT(kbd_bit_no);
 	uint8_t mouse_irq_set = BIT(mouse_bit_no);
@@ -126,6 +139,16 @@ int (proj_main_loop)(int argc, char **argv) {
 	bool endGame = false;
 
 	int ipc_status, r;
+
+	// Get database instance
+	database = new_database();
+	if (database_check_file_exists()){ // Check if save file exists
+		newGame = false; // Not playing for the first time
+		database_load_from_file(database);
+		
+	} else {
+		newGame = true; // Playing for the first time (database_check_file_exists() automatically creates new save file)
+	}
 
 	// These are variables that are going to be dynamically assigned depending on the game state.
 	Cursor* cursor = new_cursor(100, 100);
@@ -146,6 +169,28 @@ int (proj_main_loop)(int argc, char **argv) {
 			uint8_t scancode_second_byte = 0x00;
 
 			switch (game_state) {
+				case NAME_MINIGOTCHI:
+					nameMinigotchiController_step();
+					nameMinigotchiViewer_draw();
+
+					setNameMinigotchiCursor(cursor);
+
+					if (nameMinigotchiController_getButtonEvent() == CONTINUE_NAMEMINIGOTCHI) {
+						switchBackground(1);
+						game_state = MAIN_ROOM;
+						newGame = false;
+						nameMinigotchiController_delete_nameMinigotchi();
+						break;
+					}
+
+					if (nameMinigotchiController_getButtonEvent() == QUIT_NAMEMINIGOTCHI) {
+						database_delete_file(database);
+						nameMinigotchiController_delete_nameMinigotchi();
+						endGame = true;
+						break;
+					}
+
+					break;
 				case MAIN_MENU:
 					mainMenuController_step();
 					mainMenuViewer_draw();
@@ -154,6 +199,11 @@ int (proj_main_loop)(int argc, char **argv) {
 
 					if (mainMenuController_getButtonEvent() == START){ // Start the game
 						mainMenuController_delete_mainMenu(); // Free the main menu
+						if (newGame) {
+							switchBackground(3);
+							game_state = NAME_MINIGOTCHI;
+							break;
+						}
 						switchBackground(1);
 						game_state = MAIN_ROOM;	
 					}

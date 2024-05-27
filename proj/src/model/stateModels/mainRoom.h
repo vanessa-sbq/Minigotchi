@@ -4,6 +4,7 @@
 #include "../../viewer/guiDrawer.h"
 
 #include "../button.h"
+#include "../bar.h"
 #include "../cursor.h"
 #include "../minigotchi.h"
 #include "../hotbar.h"
@@ -11,6 +12,8 @@
 typedef struct{
     Button *miniGamesButton;
     Button *quitButton;
+    Bar* happinessBar;
+    Bar* hungerBar;
     Minigotchi* minigotchi;
     Cursor *cursor;
     Hotbar *hotbar;
@@ -23,6 +26,8 @@ void delete_mainRoom(MainRoom *mainRoom);
 Minigotchi* mainRoom_get_minigotchi(MainRoom *mainRoom);
 Button* mainRoom_get_miniGamesButton(MainRoom *mainRoom);
 Button* mainRoom_get_quitButton(MainRoom *mainRoom);
+Bar* mainRoom_get_happinessBar(MainRoom *mainRoom);
+Bar* mainRoom_get_hungerBar(MainRoom *mainRoom);
 Cursor* mainRoom_get_cursor(MainRoom *mainRoom);
 Hotbar* mainRoom_get_hotbar(MainRoom *mainRoom);
 

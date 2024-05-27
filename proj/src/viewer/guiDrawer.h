@@ -19,6 +19,7 @@ Sprite* guiDrawer_get_minigotchi_cuddle_sprite();
 Sprite* guiDrawer_get_minigotchi_normal_sprite();
 Sprite* guiDrawer_get_hotbar_sprite();
 Sprite* guiDrawer_get_hotbar_select_sprite();
+Sprite* guiDrawer_get_bar_sprite(int bar_type, int level);
 
 // Buffer getters
 char** guiDrawer_get_backgroundBuffer();

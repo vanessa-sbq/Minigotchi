@@ -21,6 +21,8 @@ void mainRoomViewer_draw(){
     // Foreground elements
     draw_button(mainRoom_get_miniGamesButton(mainRoom));
     draw_button(mainRoom_get_quitButton(mainRoom));
+    draw_bar(mainRoom_get_happinessBar(mainRoom));
+    draw_bar(mainRoom_get_hungerBar(mainRoom));
 
     if (!mainRoom_get_hotbar(mainRoom)->hidden) {
         drawHotbar(mainRoom_get_hotbar(mainRoom));

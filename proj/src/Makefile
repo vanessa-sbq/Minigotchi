@@ -1,6 +1,9 @@
 # name of the program (Minix service)
 PROG=proj
 
+# player data
+.PATH: ${.CURDIR}/player_data
+
 # device controllers
 .PATH: ${.CURDIR}/device_controllers
 .PATH: ${.CURDIR}/device_controllers/timer
@@ -22,12 +25,12 @@ PROG=proj
 
 
 # source code files to be compiled
-SRCS = proj.c timer.c kbc.c utils.c keyboard.c mouse.c video.c guiDrawer.c cursor.c mainMenu.c button.c mainMenuController.c mainMenuViewer.c mainRoom.c mainRoomController.c mainRoomViewer.c minigotchi.c minigameMenu.c minigameMenuController.c minigameMenuViewer.c item.c hotbar.c
+SRCS = proj.c timer.c kbc.c utils.c keyboard.c mouse.c video.c guiDrawer.c cursor.c mainMenu.c button.c mainMenuController.c mainMenuViewer.c mainRoom.c mainRoomController.c mainRoomViewer.c minigotchi.c minigameMenu.c minigameMenuController.c minigameMenuViewer.c item.c hotbar.c database.c nameMinigotchi.c nameMinigotchiViewer.c nameMinigotchiController.c bar.c
 
 # additional compilation flags
 # "-Wall -Wextra -Werror -I . -std=c11 -Wno-unused-parameter" are already set
 CFLAGS += -pedantic
-CPPFLAGS += -pedantic -D __LCOM_OPTIMIZED__
+CPPFLAGS += -pedantic #-D __LCOM_OPTIMIZED__
 
 # list of library dependencies (for Lab 2, only LCF library)
 DPADD += ${LIBLCF}
