@@ -21,6 +21,10 @@ Sprite* guiDrawer_get_hotbar_sprite();
 Sprite* guiDrawer_get_hotbar_select_sprite();
 Sprite* guiDrawer_get_bar_sprite(int bar_type, int level);
 
+Sprite* get_text_sprite_from_index(uint8_t index);
+void setup_text_sprite();
+void cleanup_text_sprite();
+
 // Buffer getters
 char** guiDrawer_get_backgroundBuffer();
 

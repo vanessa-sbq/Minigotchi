@@ -12,10 +12,23 @@ typedef struct{
     int coins;
 } Database;
 
+Database* getDatabase();
+void setDatabase(Database* database);
+
 Database *new_database();
 int database_load_from_file(Database *database);
 int database_save_to_file(Database *database);
 bool database_check_file_exists();
 int database_delete_file();
+
+int database_get_hunger(Database *database);
+int database_get_happiness(Database *database);
+int database_get_coins(Database *database);
+char* database_get_minigotchiName(Database *database);
+
+void database_set_hunger(Database *database, int value);
+void database_set_happiness(Database *database, int value);
+void database_set_coins(Database *database, int value);
+void database_set_minigotchiName(Database *database, char* value);
 
 #endif /* _DATABASE_H_ */

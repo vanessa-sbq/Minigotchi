@@ -4,7 +4,7 @@
 #include <stdint.h>
 #include <stdio.h>
 
-#define FPS 60 // TODO: Change to 60?
+#define FPS 60 
 
 // Player data
 #include "player_data/database.h"
@@ -149,6 +149,7 @@ int (proj_main_loop)(int argc, char **argv) {
 	} else {
 		newGame = true; // Playing for the first time (database_check_file_exists() automatically creates new save file)
 	}
+	setDatabase(database);
 
 	// These are variables that are going to be dynamically assigned depending on the game state.
 	Cursor* cursor = new_cursor(100, 100);
@@ -170,12 +171,24 @@ int (proj_main_loop)(int argc, char **argv) {
 
 			switch (game_state) {
 				case NAME_MINIGOTCHI:
-					nameMinigotchiController_step();
+					nameMinigotchiController_step(scanCodes[0]);
+					lockKeyboard = false;
 					nameMinigotchiViewer_draw();
 
 					setNameMinigotchiCursor(cursor);
 
-					if (nameMinigotchiController_getButtonEvent() == CONTINUE_NAMEMINIGOTCHI) {
+					if (nameMinigotchiController_getButtonEvent() == CONTINUE_NAMEMINIGOTCHI && nameMinigotchiViewer_get_spriteVector()->size != 0) {
+
+						char* minigotchiName = malloc(11*sizeof(char));
+						minigotchiName = "\0\0\0\0\0\0\0\0\0\0";
+
+						for (size_t i = 0; i < nameMinigotchiViewer_get_spriteVector()->size; i++) {
+							char toBeConcatenated = ((char)(nameMinigotchiViewer_get_spriteVector()->data[i])) + 'A';
+							minigotchiName[i] = toBeConcatenated;
+						}
+						database_set_minigotchiName(database, minigotchiName);
+						
+
 						switchBackground(1);
 						game_state = MAIN_ROOM;
 						newGame = false;
@@ -356,6 +369,10 @@ int (proj_main_loop)(int argc, char **argv) {
                         kbc_ih();
                         
                         uint8_t scanCode = getScanCode(); // Fetch the scancode.
+
+						if (scanCode & 0x80) {
+							nameMinigotchi_setKeyReleased();
+						}
                         
                         switch (scanCodeCounter){
                         case 0:
@@ -387,6 +404,8 @@ int (proj_main_loop)(int argc, char **argv) {
 		} 
 
 	}
+
+	database_save_to_file(database);
 
 	// TODO: Remove (temp)
 	delete_cursor(cursor);

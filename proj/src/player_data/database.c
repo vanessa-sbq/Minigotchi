@@ -1,6 +1,15 @@
 #include "database.h"
 
 const char* filePath = "/usr/save.txt";
+static Database *_database;
+
+Database* getDatabase() {
+    return _database;
+}
+
+void setDatabase(Database* database) {
+    _database = database;
+}
 
 /**
  * @brief Creates a new database 
@@ -129,4 +138,30 @@ int database_delete_file(){
     }
     printf("File '%s' deleted successfully.\n", filePath);  // TODO: Remove (DEBUG)
     return 0;
+}
+
+int database_get_hunger(Database *database) {
+    return database->minigotchi_hunger;
+}
+int database_get_happiness(Database *database) {
+    return database->minigotchi_happiness;
+}
+int database_get_coins(Database *database) {
+    return database->coins;
+}
+char* database_get_minigotchiName(Database *database) {
+    return database->minigotchi_name;
+}
+
+void database_set_hunger(Database *database, int value) {
+    database->minigotchi_hunger = value;
+}
+void database_set_happiness(Database *database, int value) {
+    database->minigotchi_happiness = value;
+}
+void database_set_coins(Database *database, int value) {
+    database->coins = value;
+}
+void database_set_minigotchiName(Database *database, char* value) {
+    database->minigotchi_name = value;
 }

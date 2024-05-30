@@ -2,11 +2,16 @@
 
 static MainRoom *mainRoom = NULL;
 static collision_type_mainRoom_t currentButtonEvent = NOP_MAINROOM;
+static Database* database;
+
 
 void mainRoomController_load_mainRoom(){
     if (mainRoom == NULL){
+        database = getDatabase();
         mainRoom = new_mainRoom();
         mainRoomViewer_setMainRoom(mainRoom);
+        mainRoom->minigotchi->name = database_get_minigotchiName(database);
+        
     }
 }
 

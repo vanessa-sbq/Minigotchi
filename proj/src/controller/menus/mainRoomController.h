@@ -3,6 +3,7 @@
 #include "../../model/stateModels/mainRoom.h"
 #include "../../model/button.h"
 #include "../../model/cursor.h"
+#include "../../player_data/database.h"
 
 #include "../../viewer/menus/mainRoomViewer.h"
 #include "../../viewer/guiDrawer.h"

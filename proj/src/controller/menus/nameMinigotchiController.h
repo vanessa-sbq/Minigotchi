@@ -6,6 +6,8 @@
 
 #include "../../viewer/menus/nameMinigotchiViewer.h"
 
+#include "../../device_controllers/kbc/keyboardMappings.h"
+
 typedef enum {CONTINUE_NAMEMINIGOTCHI, QUIT_NAMEMINIGOTCHI, NOP_NAMEMINIGOTCHI} collision_type_nameMinigotchi_t;
 
 void nameMinigotchiController_load_nameMinigotchi();
@@ -16,7 +18,9 @@ collision_type_nameMinigotchi_t nameMinigotchiController_getButtonEvent();
 
 void nameMinigotchiController_setButtonEvent(collision_type_nameMinigotchi_t ct);
 
-void nameMinigotchiController_step();
+void nameMinigotchi_setKeyReleased();
+
+void nameMinigotchiController_step(uint8_t keyPress);
 
 Cursor* getNameMinigotchiCursor();
 

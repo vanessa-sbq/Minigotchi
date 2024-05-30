@@ -5,6 +5,7 @@
 
 #include "../button.h"
 #include "../cursor.h"
+#include "../../utilities/vector.h"
 
 typedef struct{
     Button *continueButton;
