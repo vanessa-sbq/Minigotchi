@@ -3,5 +3,6 @@
 #include "../../model/stateModels/mainRoom.h"
 #include "../../model/hotbar.h"
 
+void setRTCWindow(Sprite* window);
 void mainRoomViewer_setMainRoom(MainRoom* mr);
 void mainRoomViewer_draw();

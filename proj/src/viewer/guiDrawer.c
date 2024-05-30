@@ -18,6 +18,9 @@
 #include "../sprites/xpms/happiness_bar_max.xpm"
 #include "../sprites/xpms/hunger_bar_max.xpm"
 #include "../sprites/xpms/nameMinigotchi_bg.xpm"
+#include "../sprites/xpms/day_window.xpm"
+#include "../sprites/xpms/evening_window.xpm"
+#include "../sprites/xpms/night_window.xpm"
 
 // Font
 #include "../sprites/xpm_fonts/A.xpm"
@@ -59,6 +62,9 @@ static Sprite* _start_button_sprite = NULL;
 static Sprite* _quit_button_sprite = NULL;
 static Sprite* _minigotchi_sprite = NULL;
 static Sprite* _minigotchi_happy_sprite = NULL;
+static Sprite* _day_window = NULL;
+static Sprite* _evening_window = NULL;
+static Sprite* _night_window = NULL;
 
 // GUI Elements
 static Sprite* _hotbar_sprite = NULL;
@@ -142,6 +148,18 @@ Sprite* guiDrawer_get_hotbar_sprite() {
 
 Sprite* guiDrawer_get_hotbar_select_sprite() {
 	return _hotbar_select_sprite;
+}
+
+Sprite* guiDrawer_get_day_window() {
+	return _day_window;
+}
+
+Sprite* guiDrawer_get_evening_window() {
+	return _evening_window;
+}
+
+Sprite* guiDrawer_get_night_window() {
+	return _night_window;
 }
 
 Sprite* guiDrawer_get_bar_sprite(int bar_type, int level){
@@ -326,6 +344,9 @@ void setup_sprites(){
 	_bg_mainroom_sprite = create_sprite_xpm((xpm_map_t) bg_mainroom_xpm);
 	_bg_minigames_sprite = create_sprite_xpm((xpm_map_t) bricks_xpm);
 	_bg_nameMinigotchi_sprite = create_sprite_xpm((xpm_map_t) nameMinigotchi_bg_xpm);
+	_day_window = create_sprite_xpm((xpm_map_t) day_window_xpm);
+	_evening_window = create_sprite_xpm((xpm_map_t) evening_window_xpm);
+	_night_window = create_sprite_xpm((xpm_map_t) night_window_xpm);
 	_backgroundBuffer = malloc(video_get_vram_size());
 
 	// Cursor
