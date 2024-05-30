@@ -15,6 +15,7 @@
 #include "device_controllers/kbc/kbc.h"
 #include "device_controllers/kbc/mouse.h"
 #include "device_controllers/timer/timer.h"
+#include "device_controllers/rtc/rtc.h"
 
 // Models
 #include "model/cursor.h"
@@ -45,15 +46,18 @@ static Database* database;
 
 // TODO: Might need to add/remove some states
 typedef enum {MAIN_MENU, MAIN_ROOM, NAME_MINIGOTCHI, MINIGAMES_WINDOW, MINIGAME_1, MINIGAME_2, EXIT} state_t;
+typedef enum {DAY, EVENING, NIGHT} timeOfDay_t;
 static state_t game_state = MAIN_MENU; // Game's current state
 static bool newGame = false; // Check if playing for the first time
+static timeOfDay_t dateTime;
+
 //static char* minigotchi_name = "John Doe";
 
 
 int main(int argc, char *argv[]) {
 	lcf_set_language("EN-US");
-	//lcf_trace_calls("/home/lcom/labs/g5/proj/src/trace.txt");  
-	lcf_log_output("/home/lcom/labs/g5/proj/src/output.txt"); 
+	//lcf_trace_calls("/home/lcom/labs/proj/src/trace.txt");  
+	lcf_log_output("/home/lcom/labs/proj/src/output.txt"); 
 	if (lcf_start(argc, argv)) return 1;
 	lcf_cleanup();
 	return 0;
@@ -127,15 +131,68 @@ int (proj_main_loop)(int argc, char **argv) {
   	}
 
 	uint8_t timer_bit_no = 0;
-
 	if (timer_subscribe_int(&timer_bit_no) != 0) {
 		return 1;
 	}
+
+	if (rtc_clear_flags() != 0) {
+        return 1;
+    }
+
+	uint32_t rtc_bit_no = 0;
+    if (rtc_subscribe_int(&rtc_bit_no) != 0) {
+        return 1;
+    }
+
+	if (disable_pie_int() != 0) {
+        return 1;
+    }
+
+	if (disable_uie_int() != 0) {
+        return 1;
+    }
+
+	if (enable_aie_int() != 0) {
+        return 1;
+    }
+
+	RTC_Config rtcConfig = rtc_get_config();
+
+	printf("Time: %x\n", rtcConfig.hours);
+
+	if (rtcConfig.hours >= 0x08 && rtcConfig.hours < 0x18) { // Day time
+
+		setRTCWindow(guiDrawer_get_day_window());
+		printf("Day\n");
+		dateTime = DAY;
+		if (rtc_set_alarm(0,0x00,0x18) != 0) {
+			return 1;
+		}
+
+	} else if (rtcConfig.hours >= 0x18 && rtcConfig.hours < 0x21) { // Evening time
+		setRTCWindow(guiDrawer_get_evening_window());
+		printf("Evening\n");
+		dateTime = EVENING;
+		if (rtc_set_alarm(0,0x00,0x21) != 0) {
+			return 1;
+		}
+
+	} else { // Night time
+
+		setRTCWindow(guiDrawer_get_night_window());
+		dateTime = NIGHT;
+		printf("Night\n");
+		if (rtc_set_alarm(0,0x00,0x08) != 0) {
+			return 1;
+		}
+
+	}	
 
 	struct packet pp;
 	uint8_t kbd_irq_set = BIT(kbd_bit_no);
 	uint8_t mouse_irq_set = BIT(mouse_bit_no);
 	uint8_t timer_irq_set = BIT(timer_bit_no);
+	uint32_t rtc_irq_set = BIT(rtc_bit_no);
 	bool endGame = false;
 
 	int ipc_status, r;
@@ -329,6 +386,51 @@ int (proj_main_loop)(int argc, char **argv) {
 		if (is_ipc_notify(ipc_status)){ 
 		switch (_ENDPOINT_P(msg.m_source)) {
 			case HARDWARE:
+
+				if (msg.m_notify.interrupts & rtc_irq_set) {
+					rtc_ih();
+					if (rtc_get_interrupt_was_periodic()) {
+						rtc_set_interrupt_periodic_processed();
+						printf("Ignoring non important rtc interrupt.\n");
+					}
+					if (rtc_get_interrupt_was_update()) {
+						rtc_set_interrupt_update_processed();
+						printf("Ignoring non important rtc interrupt.\n");
+					}
+					if (rtc_get_interrupt_was_alarm()) {
+						rtc_set_interrupt_alarm_processed();
+
+						switch (dateTime) {
+							case DAY:
+								dateTime = EVENING;
+								if (rtc_set_alarm(0,0x00,0x21) != 0) {
+									return 1;
+								}
+								setRTCWindow(guiDrawer_get_evening_window());
+								break;
+							case EVENING:
+								dateTime = NIGHT;
+								if (rtc_set_alarm(0,0x00,0x08) != 0) {
+									return 1;
+								}
+								setRTCWindow(guiDrawer_get_night_window());
+								break;
+							case NIGHT:
+								dateTime = DAY;
+								if (rtc_set_alarm(0,0x00,0x18) != 0) {
+									return 1;
+								}
+								setRTCWindow(guiDrawer_get_day_window());
+								break;
+							default:
+								break;
+						}
+
+
+					}
+					
+				}
+
 				if ((msg.m_notify.interrupts & timer_irq_set) != 0) {
 					timer_int_handler();
 				}
@@ -437,6 +539,19 @@ int (proj_main_loop)(int argc, char **argv) {
 
 	// TODO: Remove (temp)
 	delete_cursor(cursor);
+
+	// Unsubscribe rtc interrupts
+	if (disable_aie_int() != 0) {
+        return 1;
+    }
+
+    if (rtc_clear_flags() != 0) {
+        return 1;
+    }
+
+    if (rtc_unsubscribe_int() != 0) {
+        return 1;
+    }
 
 	if (timer_unsubscribe_int() != 0) {
 		return 1;
