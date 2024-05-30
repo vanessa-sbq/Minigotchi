@@ -1,4 +1,5 @@
 #include "mainRoom.h"
+#include "../../player_data/database.h"
 
 MainRoom *new_mainRoom(){
     // Allocate MainRoom object

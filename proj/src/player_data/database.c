@@ -20,10 +20,11 @@ Database *new_database(){
     if (database == NULL) return NULL;
 
     database->minigotchi_name = "Default";
-    database->minigotchi_hunger = 0;
-    database->minigotchi_happiness = 0;
+    database->minigotchi_hunger = 1000;
+    database->minigotchi_happiness = 1000;
     database->coins = 0;
 
+    _database = database;
     return database;
 }
 
@@ -38,7 +39,7 @@ int database_load_from_file(Database *database){
     }
 
     // Variables to store the data
-    char name[100];  // FIXME: Limit
+    char name[100]; 
     int hunger, happiness, coins;
 
     // Read Minigotchi name
@@ -61,6 +62,7 @@ int database_load_from_file(Database *database){
 
     // Read Minigotchi happiness status
     if (fscanf(file, "%d", &happiness) == 1) {
+        //database_set_happiness(_database, 2);
         printf("Happiness: %d\n", happiness);
     } else {
         perror("Error reading happiness status");
@@ -76,6 +78,11 @@ int database_load_from_file(Database *database){
         fclose(file);
         return 1;
     }
+
+    database_set_minigotchiName(database, name);
+    database_set_happiness(database, happiness);
+    database_set_hunger(database, hunger);
+    database_set_coins(database, coins);
 
     fclose(file);
     printf("File 'save.txt' created in '/usr' directory.\n");  // TODO: Remove (DEBUG)
@@ -97,14 +104,22 @@ int database_save_to_file(Database *database){
     fprintf(file, "%d\n", database->minigotchi_hunger);
     fprintf(file, "%d\n", database->minigotchi_happiness);
     fprintf(file, "%d\n", database->coins);
+
+
+    // TODO: REMOVE (DEBUG)
+    printf("\nSaving...\n");
+    printf("%s\n", database->minigotchi_name);
+    printf("%d\n", database->minigotchi_hunger);
+    printf("%d\n", database->minigotchi_happiness);
+    printf("%d\n", database->coins);
     return 0;
 }
 
 /**
  * @brief Check if the player data file already exists. Creates the save file in case it doesn't exist
  */
-bool database_check_file_exists(){
-    if (access(filePath, F_OK) == -1) {
+bool database_check_file_exists(){ // TODO: Ref
+    if (access(filePath, F_OK) != 0) {
         printf("File '%s' does not exist.\n", filePath);  // TODO: Remove (DEBUG)
 
         FILE *file = fopen(filePath, "w");
@@ -124,8 +139,11 @@ bool database_check_file_exists(){
         printf("File '%s' created with default values.\n", filePath);  // TODO: Remove (DEBUG)
         return false;
     } 
-    printf("File '%s' exists.\n", filePath); // TODO: Remove (DEBUG)
-    return true;
+    else{
+        printf("File '%s' exists.\n", filePath); // TODO: Remove (DEBUG)
+        return true;
+    }
+    return false;
 }
 
 /**

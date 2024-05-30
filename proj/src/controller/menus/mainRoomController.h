@@ -8,6 +8,9 @@
 #include "../../viewer/menus/mainRoomViewer.h"
 #include "../../viewer/guiDrawer.h"
 
+#define MAX_HUNGER 1000
+#define MIN_HUNGER 1000
+
 typedef enum {QUIT_MAINROOM, MINIGAMES_MAINROOM, NOP_MAINROOM, CUDDLES} collision_type_mainRoom_t;
 
 void mainRoomController_load_mainRoom();

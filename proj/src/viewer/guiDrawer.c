@@ -15,8 +15,6 @@
 #include "../sprites/xpms/hotbar.xpm"
 #include "../sprites/xpms/hotbar_select.xpm"
 #include "../sprites/xpms/feather.xpm"
-#include "../sprites/xpms/happiness_bar_max.xpm"
-#include "../sprites/xpms/hunger_bar_max.xpm"
 #include "../sprites/xpms/nameMinigotchi_bg.xpm"
 
 // Font
@@ -47,6 +45,36 @@
 #include "../sprites/xpm_fonts/Y.xpm"
 #include "../sprites/xpm_fonts/Z.xpm"
 
+// Happiness Bar
+#include "../sprites/xpm_happiness_levels/happiness_bar_L0.xpm"
+#include "../sprites/xpm_happiness_levels/happiness_bar_L1.xpm"
+#include "../sprites/xpm_happiness_levels/happiness_bar_L2.xpm"
+#include "../sprites/xpm_happiness_levels/happiness_bar_L3.xpm"
+#include "../sprites/xpm_happiness_levels/happiness_bar_L4.xpm"
+#include "../sprites/xpm_happiness_levels/happiness_bar_L5.xpm"
+#include "../sprites/xpm_happiness_levels/happiness_bar_L6.xpm"
+#include "../sprites/xpm_happiness_levels/happiness_bar_L7.xpm"
+#include "../sprites/xpm_happiness_levels/happiness_bar_L8.xpm"
+#include "../sprites/xpm_happiness_levels/happiness_bar_L9.xpm"
+#include "../sprites/xpm_happiness_levels/happiness_bar_L10.xpm"
+#include "../sprites/xpm_happiness_levels/happiness_bar_max.xpm"
+
+// Happiness Bar
+#include "../sprites/xpm_hunger_levels/hunger_bar_L0.xpm"
+#include "../sprites/xpm_hunger_levels/hunger_bar_L1.xpm"
+#include "../sprites/xpm_hunger_levels/hunger_bar_L2.xpm"
+#include "../sprites/xpm_hunger_levels/hunger_bar_L3.xpm"
+#include "../sprites/xpm_hunger_levels/hunger_bar_L4.xpm"
+#include "../sprites/xpm_hunger_levels/hunger_bar_L5.xpm"
+#include "../sprites/xpm_hunger_levels/hunger_bar_L6.xpm"
+#include "../sprites/xpm_hunger_levels/hunger_bar_L7.xpm"
+#include "../sprites/xpm_hunger_levels/hunger_bar_L8.xpm"
+#include "../sprites/xpm_hunger_levels/hunger_bar_L9.xpm"
+#include "../sprites/xpm_hunger_levels/hunger_bar_L10.xpm"
+#include "../sprites/xpm_hunger_levels/hunger_bar_max.xpm"
+
+
+
 // Backgrounds
 static Sprite* _bg_mainmenu_sprite = NULL;
 static Sprite* _bg_mainroom_sprite = NULL;
@@ -63,14 +91,12 @@ static Sprite* _minigotchi_happy_sprite = NULL;
 // GUI Elements
 static Sprite* _hotbar_sprite = NULL;
 static Sprite* _hotbar_select_sprite = NULL;
-static Sprite* _happiness_bar_sprite = NULL;
 static Sprite* _hunger_bar_sprite = NULL;
 	
 /*** Buffers ***/
 static char* _backgroundBuffer;
 
 /* Text */
-
 static Sprite* _A_sprite;
 static Sprite* _B_sprite;
 static Sprite* _C_sprite;
@@ -97,6 +123,34 @@ static Sprite* _W_sprite;
 static Sprite* _X_sprite;
 static Sprite* _Y_sprite;
 static Sprite* _Z_sprite;
+
+// Happiness Bar
+static Sprite* _happiness_L0_sprite;
+static Sprite* _happiness_L1_sprite;
+static Sprite* _happiness_L2_sprite;
+static Sprite* _happiness_L3_sprite;
+static Sprite* _happiness_L4_sprite;
+static Sprite* _happiness_L5_sprite;
+static Sprite* _happiness_L6_sprite;
+static Sprite* _happiness_L7_sprite;
+static Sprite* _happiness_L8_sprite;
+static Sprite* _happiness_L9_sprite;
+static Sprite* _happiness_L10_sprite;
+static Sprite* _happiness_max_sprite;
+
+// Hunger
+static Sprite* _hunger_L0_sprite;
+static Sprite* _hunger_L1_sprite;
+static Sprite* _hunger_L2_sprite;
+static Sprite* _hunger_L3_sprite;
+static Sprite* _hunger_L4_sprite;
+static Sprite* _hunger_L5_sprite;
+static Sprite* _hunger_L6_sprite;
+static Sprite* _hunger_L7_sprite;
+static Sprite* _hunger_L8_sprite;
+static Sprite* _hunger_L9_sprite;
+static Sprite* _hunger_L10_sprite;
+static Sprite* _hunger_max_sprite;
 
 
 Sprite* get_cursor_sprite() {
@@ -145,10 +199,26 @@ Sprite* guiDrawer_get_hotbar_select_sprite() {
 }
 
 Sprite* guiDrawer_get_bar_sprite(int bar_type, int level){
+	// There are 12 ranges of happiness levels
+	int index = 0;
+	if (level < 83) index = 0;
+	else if ((level >= 83) && (level < 166)) index = 1; 
+	else if ((level >= 166) && (level < 249)) index = 2; 
+	else if ((level >= 249) && (level < 332)) index = 3; 
+	else if ((level >= 332) && (level < 415)) index = 4; 
+	else if ((level >= 415) && (level < 498)) index = 5; 
+	else if ((level >= 498) && (level < 581)) index = 6; 
+	else if ((level >= 581) && (level < 664)) index = 7; 
+	else if ((level >= 664) && (level < 747)) index = 8; 
+	else if ((level >= 747) && (level < 830)) index = 9; 
+	else if ((level >= 830) && (level < 913)) index = 10; 
+	else if ((level >= 913) && (level <= 1000)) index = 11; 
+	else index = 0;
+
 	if (bar_type == 0){
-		return _happiness_bar_sprite;
+		return guiDrawer_get_happiness_level_sprite_from_index(index);
 	} else {
-		return _hunger_bar_sprite;
+		return guiDrawer_get_hunger_level_sprite_from_index(index);
 	}
 }
 
@@ -262,6 +332,91 @@ Sprite* get_text_sprite_from_index(uint8_t index) {
 	return NULL;
 }
 
+Sprite* guiDrawer_get_happiness_level_sprite_from_index(uint8_t index) {
+	switch (index){
+		case 0:
+			return _happiness_L0_sprite;
+			break;
+		case 1:
+			return _happiness_L1_sprite;
+			break;
+		case 2:
+			return _happiness_L2_sprite;
+			break;
+		case 3:
+			return _happiness_L3_sprite;
+			break;
+		case 4:
+			return _happiness_L4_sprite;
+			break;
+		case 5:
+			return _happiness_L5_sprite;
+			break;
+		case 6:
+			return _happiness_L6_sprite;
+			break;
+		case 7:
+			return _happiness_L7_sprite;
+			break;
+		case 8:
+			return _happiness_L8_sprite;
+			break;
+		case 9:
+			return _happiness_L9_sprite;
+			break;
+		case 10:
+			return _happiness_L10_sprite;
+			break;
+		case 11:
+			return _happiness_max_sprite;
+			break;
+	}
+	return NULL;
+}
+
+Sprite* guiDrawer_get_hunger_level_sprite_from_index(uint8_t index){
+	switch (index){
+		case 0:
+			return _hunger_L0_sprite;
+			break;
+		case 1:
+			return _hunger_L1_sprite;
+			break;
+		case 2:
+			return _hunger_L2_sprite;
+			break;
+		case 3:
+			return _hunger_L3_sprite;
+			break;
+		case 4:
+			return _hunger_L4_sprite;
+			break;
+		case 5:
+			return _hunger_L5_sprite;
+			break;
+		case 6:
+			return _hunger_L6_sprite;
+			break;
+		case 7:
+			return _hunger_L7_sprite;
+			break;
+		case 8:
+			return _hunger_L8_sprite;
+			break;
+		case 9:
+			return _hunger_L9_sprite;
+			break;
+		case 10:
+			return _hunger_L10_sprite;
+			break;
+		case 11:
+			return _hunger_max_sprite;
+			break;
+	}
+	return NULL;
+}
+
+
 void setup_text_sprite() {
 	_A_sprite = create_sprite_xpm((xpm_map_t) A_xpm );
 	_B_sprite = create_sprite_xpm((xpm_map_t) B_xpm );
@@ -290,6 +445,37 @@ void setup_text_sprite() {
 	_Y_sprite = create_sprite_xpm((xpm_map_t) Y_xpm );
 	_Z_sprite = create_sprite_xpm((xpm_map_t) Z_xpm );
 }
+
+void setup_happiness_sprites(){
+	_happiness_L0_sprite = create_sprite_xpm((xpm_map_t) happiness_bar_L0_xpm);
+	_happiness_L1_sprite = create_sprite_xpm((xpm_map_t) happiness_bar_L1_xpm);
+	_happiness_L2_sprite = create_sprite_xpm((xpm_map_t) happiness_bar_L2_xpm);
+	_happiness_L3_sprite = create_sprite_xpm((xpm_map_t) happiness_bar_L3_xpm);
+	_happiness_L4_sprite = create_sprite_xpm((xpm_map_t) happiness_bar_L4_xpm);
+	_happiness_L5_sprite = create_sprite_xpm((xpm_map_t) happiness_bar_L5_xpm);
+	_happiness_L6_sprite = create_sprite_xpm((xpm_map_t) happiness_bar_L6_xpm);
+	_happiness_L7_sprite = create_sprite_xpm((xpm_map_t) happiness_bar_L7_xpm);
+	_happiness_L8_sprite = create_sprite_xpm((xpm_map_t) happiness_bar_L8_xpm);
+	_happiness_L9_sprite = create_sprite_xpm((xpm_map_t) happiness_bar_L9_xpm);
+	_happiness_L10_sprite = create_sprite_xpm((xpm_map_t) happiness_bar_L10_xpm);
+	_happiness_max_sprite = create_sprite_xpm((xpm_map_t) happiness_bar_max_xpm);
+}
+
+void setup_hunger_sprites(){
+	_hunger_L0_sprite = create_sprite_xpm((xpm_map_t) hunger_bar_L0_xpm);
+	_hunger_L1_sprite = create_sprite_xpm((xpm_map_t) hunger_bar_L1_xpm);
+	_hunger_L2_sprite = create_sprite_xpm((xpm_map_t) hunger_bar_L2_xpm);
+	_hunger_L3_sprite = create_sprite_xpm((xpm_map_t) hunger_bar_L3_xpm);
+	_hunger_L4_sprite = create_sprite_xpm((xpm_map_t) hunger_bar_L4_xpm);
+	_hunger_L5_sprite = create_sprite_xpm((xpm_map_t) hunger_bar_L5_xpm);
+	_hunger_L6_sprite = create_sprite_xpm((xpm_map_t) hunger_bar_L6_xpm);
+	_hunger_L7_sprite = create_sprite_xpm((xpm_map_t) hunger_bar_L7_xpm);
+	_hunger_L8_sprite = create_sprite_xpm((xpm_map_t) hunger_bar_L8_xpm);
+	_hunger_L9_sprite = create_sprite_xpm((xpm_map_t) hunger_bar_L9_xpm);
+	_hunger_L10_sprite = create_sprite_xpm((xpm_map_t) hunger_bar_L10_xpm);
+	_hunger_max_sprite = create_sprite_xpm((xpm_map_t) hunger_bar_max_xpm);
+}
+
 
 void cleanup_text_sprite() {
 	free(_A_sprite);
@@ -320,6 +506,37 @@ void cleanup_text_sprite() {
 	free(_Z_sprite);
 }
 
+void cleanup_happiness_sprites(){
+	free(_happiness_L0_sprite);
+	free(_happiness_L1_sprite);
+	free(_happiness_L2_sprite);
+	free(_happiness_L3_sprite);
+	free(_happiness_L4_sprite);
+	free(_happiness_L5_sprite);
+	free(_happiness_L6_sprite);
+	free(_happiness_L7_sprite);
+	free(_happiness_L8_sprite);
+	free(_happiness_L9_sprite);
+	free(_happiness_L10_sprite); 
+	free(_happiness_max_sprite); 
+}
+
+void cleanup_hunger_sprites(){
+	free(_hunger_L0_sprite);
+	free(_hunger_L1_sprite);
+	free(_hunger_L2_sprite);
+	free(_hunger_L3_sprite);
+	free(_hunger_L4_sprite);
+	free(_hunger_L5_sprite);
+	free(_hunger_L6_sprite);
+	free(_hunger_L7_sprite);
+	free(_hunger_L8_sprite);
+	free(_hunger_L9_sprite);
+	free(_hunger_L10_sprite); 
+	free(_hunger_max_sprite); 
+}
+
+
 void setup_sprites(){
 	// Backgrounds
 	_bg_mainmenu_sprite = create_sprite_xpm((xpm_map_t) bricks_xpm);
@@ -336,7 +553,6 @@ void setup_sprites(){
 	_quit_button_sprite = create_sprite_xpm((xpm_map_t) quit_button_xpm);
 
 	// Bars
-	_happiness_bar_sprite = create_sprite_xpm((xpm_map_t) happiness_bar_max_xpm);
 	_hunger_bar_sprite = create_sprite_xpm((xpm_map_t) hunger_bar_max_xpm);
 	
 	// Minigotchi

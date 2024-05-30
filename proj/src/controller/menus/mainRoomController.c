@@ -7,11 +7,12 @@ static Database* database;
 
 void mainRoomController_load_mainRoom(){
     if (mainRoom == NULL){
+        setup_happiness_sprites();
+        setup_hunger_sprites();
         database = getDatabase();
         mainRoom = new_mainRoom();
         mainRoomViewer_setMainRoom(mainRoom);
         mainRoom->minigotchi->name = database_get_minigotchiName(database);
-        
     }
 }
 
@@ -52,7 +53,7 @@ bool mainRoomController_checkCollision(Sprite* sprite, int x, int y) {
     int left_lower_corner_y = right_upper_corner_y + sprite_height;
 
     if ((cursorX >= left_upper_corner_x && cursorX <= right_upper_corner_x) && (cursorY >= right_upper_corner_y && cursorY <= left_lower_corner_y) && beingPressed) {
-            return true;
+        return true;
     }
 
     return false;
@@ -81,10 +82,22 @@ void mainRoomController_step(){
         currentButtonEvent = MINIGAMES_MAINROOM;
     }
 
+    // Update Happiness
+    Bar* happiness_bar = mainRoom_get_happinessBar(mainRoom);
+    bar_set_level(happiness_bar, database_get_happiness(getDatabase()));
+    bar_set_sprite(happiness_bar, guiDrawer_get_bar_sprite(0, database_get_happiness(getDatabase())));
+
+    // Update Hunger
+    Bar* hunger_bar = mainRoom_get_hungerBar(mainRoom);
+    bar_set_level(hunger_bar, database_get_hunger(getDatabase()));
+    bar_set_sprite(hunger_bar, guiDrawer_get_bar_sprite(1, database_get_hunger(getDatabase())));
+
     Minigotchi* minigotchi = mainRoom_get_minigotchi(mainRoom);
     if (mainRoomController_checkCollision(minigotchi_get_sprite(minigotchi), minigotchi_get_x(minigotchi), minigotchi_get_y(minigotchi))){
         minigotchi_set_sprite(minigotchi, guiDrawer_get_minigotchi_cuddle_sprite());
         minigotchi_set_cuddles(minigotchi, true);
+        int current_happiness = database_get_happiness(getDatabase());
+        if (current_happiness < MAX_HUNGER) database_set_happiness(getDatabase(), current_happiness + 1);
     }else{
         minigotchi_set_sprite(minigotchi, guiDrawer_get_minigotchi_normal_sprite());
         minigotchi_set_cuddles(minigotchi, false);

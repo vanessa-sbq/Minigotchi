@@ -145,7 +145,6 @@ int (proj_main_loop)(int argc, char **argv) {
 	if (database_check_file_exists()){ // Check if save file exists
 		newGame = false; // Not playing for the first time
 		database_load_from_file(database);
-		
 	} else {
 		newGame = true; // Playing for the first time (database_check_file_exists() automatically creates new save file)
 	}
@@ -154,6 +153,10 @@ int (proj_main_loop)(int argc, char **argv) {
 	// These are variables that are going to be dynamically assigned depending on the game state.
 	Cursor* cursor = new_cursor(100, 100);
 	switchBackground(0);
+
+	// Timers to keep track of bars
+	int minutes_passed = 0;
+	int minutes_aux_cnt = 0;
 
 	bool lockKeyboard = false;
     uint8_t scanCodes[2];
@@ -165,6 +168,7 @@ int (proj_main_loop)(int argc, char **argv) {
     uint8_t scanCodeCounter = 0;
 	while(!endGame) {
 		if (((getTimerCounter() - (sys_hz() / FPS)) == 0)){
+			minutes_aux_cnt++;
 
 			uint8_t scancode_first_byte = 0x00;
 			uint8_t scancode_second_byte = 0x00;
@@ -267,6 +271,8 @@ int (proj_main_loop)(int argc, char **argv) {
 					}
 					break;
 				case MINIGAMES_WINDOW: 
+					database_set_happiness(getDatabase(), 700);  // TODO: REMOVE
+					database_set_hunger(getDatabase(), 600);  // TODO: REMOVE
 					minigameMenuController_step();
 					minigameMenuViewer_draw();
 					setMinigameMenuCursor(cursor);
@@ -289,6 +295,28 @@ int (proj_main_loop)(int argc, char **argv) {
 				default:
 					return 1;
 					break;
+			}
+			if (minutes_aux_cnt == (60 * 60)){
+				printf("\n1 minunte passed\n"); // TODO: Remove (DEBUG)
+				int current_happiness = database_get_happiness(getDatabase());
+				int current_hunger = database_get_hunger(getDatabase());
+				
+				// Check happiness
+				if (current_happiness <= 0) {
+					database_set_happiness(database, 0); // Minigotchi is very unhappy
+				} else {
+					database_set_happiness(getDatabase(), current_happiness - 100);  // Minigotchi loses 100 happiness every minute
+				}
+
+				// Check hunger
+				if (current_hunger <= 0) {
+					database_set_hunger(database, 0); // Minigotchi is very hungry
+				} else {
+					database_set_hunger(getDatabase(), current_hunger - 100);  // Minigotchi loses 100 happiness every minute
+				}
+				
+				minutes_aux_cnt = 0;
+				minutes_passed = 0;
 			}
 			setTimerCounter(0);
 		}

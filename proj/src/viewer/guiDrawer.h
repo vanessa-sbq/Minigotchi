@@ -21,6 +21,16 @@ Sprite* guiDrawer_get_hotbar_sprite();
 Sprite* guiDrawer_get_hotbar_select_sprite();
 Sprite* guiDrawer_get_bar_sprite(int bar_type, int level);
 
+Sprite* guiDrawer_get_happiness_level_sprite_from_index(uint8_t index);
+void setup_happiness_sprites();
+void cleanup_happiness_sprites();
+
+// Happiness bar
+Sprite* guiDrawer_get_hunger_level_sprite_from_index(uint8_t index);
+void setup_hunger_sprites();
+void cleanup_hunger_sprites();
+
+// Hunger bar
 Sprite* get_text_sprite_from_index(uint8_t index);
 void setup_text_sprite();
 void cleanup_text_sprite();
