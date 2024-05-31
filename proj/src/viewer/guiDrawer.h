@@ -26,6 +26,13 @@ Sprite* guiDrawer_get_bar_sprite(int bar_type, int level);
 Sprite* guiDrawer_get_minigamesIcon_sprite();
 Sprite* guiDrawer_get_apple_sprite();
 Sprite* guiDrawer_get_item_sprite(int id);
+Sprite* guiDrawer_get_rock_sprite();
+Sprite* guiDrawer_get_paper_sprite();
+Sprite* guiDrawer_get_scissors_sprite();
+Sprite* guiDrawer_get_rpsWin_sprite();
+Sprite* guiDrawer_get_rpsTie_sprite();
+Sprite* guiDrawer_get_rpsLose_sprite();
+Sprite* guiDrawer_get_botChose_sprite();
 
 Sprite* guiDrawer_get_happiness_level_sprite_from_index(uint8_t index);
 void setup_happiness_sprites();

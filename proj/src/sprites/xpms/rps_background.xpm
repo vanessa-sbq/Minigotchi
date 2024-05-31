@@ -1,5 +1,5 @@
 /* XPM */
-static char * rpc_background_xpm[] = {
+static char * rps_background_xpm[] = {
 "1152 864 2 1",
 " 	c #C5F4F4",
 ".	c #659091",
