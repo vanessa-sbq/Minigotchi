@@ -1,0 +1,92 @@
+#include "tictactoe.h"
+
+TicTacToe *new_ticTacToe(){
+    // Allocate TTT object
+    TicTacToe *ttt = malloc(sizeof(*ttt));
+    if (ttt == NULL) return NULL;
+
+    // Initialize TTT
+    ttt->quitButton = new_button(0, 700, 1);
+    ttt->hostButton = new_button(0, 400, 6);
+    ttt->guestButton = new_button(0, 600, 7);
+    ttt->cursor = new_cursor(400, 600);
+    ttt->ticTacToeState = TX_RX_DECISION_TTT;
+    
+    for (uint8_t i = 0; i < 9; i++) {
+        ttt->otherPlayersMoves[i] = false;
+        ttt->currentPlayersMoves[i] = false;
+    }
+
+    return ttt;
+}
+
+bool* ticTacToe_get_otherPlayersMoves(TicTacToe* ttt) {
+    return ttt->otherPlayersMoves;
+}
+
+bool* ticTacToe_get_currentPlayersMoves(TicTacToe* ttt) {
+    return ttt->currentPlayersMoves;
+}
+
+bool ticTacToe_set_otherPlayersMoves(TicTacToe* ttt, uint8_t pos) {
+    if (pos >= 9) {
+        return false;
+    }
+
+    if (!ttt->otherPlayersMoves[pos]) {
+        ttt->otherPlayersMoves[pos] = true;
+        return true;
+    }
+
+    return false;
+}
+
+bool ticTacToe_set_currentPlayersMoves(TicTacToe* ttt, uint8_t pos) {
+    if (pos >= 9) {
+        return false;
+    }
+
+    if (!ttt->currentPlayersMoves[pos]) {
+        ttt->currentPlayersMoves[pos] = true;
+        return true;
+    }
+
+    return false;
+}
+
+void delete_ticTacToe(TicTacToe *ttt){ 
+    if (ttt != NULL) {
+        button_delete(ttt->quitButton);
+        button_delete(ttt->guestButton);
+        button_delete(ttt->hostButton);
+        delete_cursor(ttt->cursor); // TODO: remove ?
+        free(ttt);
+    }
+}
+
+state_ttt_t ticTacToe_get_state(TicTacToe* ttt) {
+    return ttt->ticTacToeState;
+}
+
+void ticTacToe_set_state(TicTacToe* ttt, state_ttt_t st) {
+    ttt->ticTacToeState = st;
+}
+
+void undoChangeInCurrentPlayer(TicTacToe* ttt, uint8_t pos) {
+    ttt->currentPlayersMoves[pos] = false;
+}
+
+Button* ticTacToe_get_quitButton(TicTacToe *ttt){
+    return ttt->quitButton;
+}
+
+Button* ticTacToe_get_guestButton(TicTacToe *ttt) {
+    return ttt->guestButton;
+}
+Button* ticTacToe_get_hostButton(TicTacToe *ttt) {
+    return ttt->hostButton;
+}
+
+Cursor* ticTacToe_get_cursor(TicTacToe *ttt){
+    return ttt->cursor;
+}

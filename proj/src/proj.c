@@ -16,6 +16,7 @@
 #include "device_controllers/kbc/mouse.h"
 #include "device_controllers/timer/timer.h"
 #include "device_controllers/rtc/rtc.h"
+#include "device_controllers/uart/uart.h"
 
 // Models
 #include "model/cursor.h"
@@ -25,6 +26,7 @@
 #include "model/stateModels/mainRoom.h"
 #include "model/stateModels/minigameMenu.h"
 #include "model/stateModels/nameMinigotchi.h"
+#include "model/stateModels/tictactoe.h"
 
 // Viewers
 #include "viewer/guiDrawer.h"
@@ -32,12 +34,14 @@
 #include "viewer/menus/mainRoomViewer.h"
 #include "viewer/menus/minigameMenuViewer.h"
 #include "viewer/menus/nameMinigotchiViewer.h"
+#include "viewer/minigames/tictactoeViewer.h"
 
 // Controllers
 #include "controller/menus/mainMenuController.h"
 #include "controller/menus/mainRoomController.h"
 #include "controller/menus/minigameMenuController.h"
 #include "controller/menus/nameMinigotchiController.h"
+#include "controller/minigames/tictactoeController.h"
 
 
 // Database
@@ -50,7 +54,6 @@ typedef enum {DAY, EVENING, NIGHT} timeOfDay_t;
 static state_t game_state = MAIN_MENU; // Game's current state
 static bool newGame = false; // Check if playing for the first time
 static timeOfDay_t dateTime;
-
 //static char* minigotchi_name = "John Doe";
 
 
@@ -188,6 +191,16 @@ int (proj_main_loop)(int argc, char **argv) {
 
 	}	
 
+	// Subscribe and prepare uart interface.
+	uint8_t uart_bit_no = 0;
+	if (serial_subscribe_int(&uart_bit_no) != 0) {
+		return 1;
+	}
+
+	if (serial_init() != 0) {
+		return 1;
+	}
+
 	struct packet pp;
 	uint8_t kbd_irq_set = BIT(kbd_bit_no);
 	uint8_t mouse_irq_set = BIT(mouse_bit_no);
@@ -318,8 +331,13 @@ int (proj_main_loop)(int argc, char **argv) {
 
 					if (mainRoomController_getButtonEvent() == MINIGAMES_MAINROOM){ // Open minigames 
 						mainRoomController_setButtonEvent(NOP_MAINROOM);
-						switchBackground(2);
-						game_state = MINIGAMES_WINDOW;	
+						//switchBackground(2);
+						//game_state = MINIGAMES_WINDOW;
+						// TODO: GO BACCCKCKCCCCC
+
+						setup_ttt_sprites();
+						game_state = MINIGAME_1;	
+						switchBackground(5);
 					}
 
 					if (mainRoomController_getButtonEvent() == QUIT_MAINROOM){ // Quit the game
@@ -339,9 +357,21 @@ int (proj_main_loop)(int argc, char **argv) {
 						switchBackground(1);
 						game_state = MAIN_ROOM;	
 					}
+					
 					break;
 				case MINIGAME_1:
-					
+					ticTacToeController_step();
+					ticTacToeViewer_draw();
+					setTicTacToeCursor(cursor);
+
+					if (ticTacToeController_getButtonEvent() == QUIT_TTT){ // Quit TicTacToe
+							// FIXME: ?
+							// Delete everything that was created ?
+
+							ticTacToeController_setButtonEvent(NOP_TTT);
+							switchBackground(1);
+							game_state = MAIN_ROOM;	
+					}
 					break;
 				case MINIGAME_2:
 					
@@ -386,6 +416,10 @@ int (proj_main_loop)(int argc, char **argv) {
 		if (is_ipc_notify(ipc_status)){ 
 		switch (_ENDPOINT_P(msg.m_source)) {
 			case HARDWARE:
+
+				if(msg.m_notify.interrupts & BIT(uart_bit_no)) {
+                 	serial_interrupt_handler();
+                }
 
 				if (msg.m_notify.interrupts & rtc_irq_set) {
 					rtc_ih();
@@ -539,6 +573,13 @@ int (proj_main_loop)(int argc, char **argv) {
 
 	// TODO: Remove (temp)
 	delete_cursor(cursor);
+
+	// Unsubscribe uart interrupts
+	if (serial_unsubscribe_int() != 0) {
+		return 1;
+	}
+
+	serial_exit();
 
 	// Unsubscribe rtc interrupts
 	if (disable_aie_int() != 0) {
