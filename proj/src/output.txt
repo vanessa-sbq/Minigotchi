@@ -1,32 +1,57 @@
-Time: 7
+Time: 23
 Night
 File '/usr/save.txt' exists.
 Name: 
-Hunger: 900
-Happiness: 804
+Hunger: 1000
+Happiness: 1000
 Coins: 0
-Food 0: 0
-Food 1: 0
-Food 2: 0
-Food 3: 0
-Food 4: 0
-Food 5: 0
-Food 6: 0
-Food 7: 0
-Food 8: 0
 File 'save.txt' created in '/usr' directory.
+received value 0: 0
+received value 1: 0
+received value 2: 0
+received value 3: 0
+received value 4: 0
+received value 5: 0
+received value 6: 1
+received value 7: 0
+received value 8: 0
+received value 0: 0
+received value 1: 0
+received value 2: 0
+received value 3: 0
+received value 4: 0
+received value 5: 1
+received value 6: 1
+received value 7: 0
+received value 8: 0
+received value 0: 0
+received value 1: 0
+received value 2: 0
+received value 3: 0
+received value 4: 0
+received value 5: 1
+received value 6: 1
+received value 7: 1
+received value 8: 0
+received value 0: 1
+received value 1: 0
+received value 2: 0
+received value 3: 0
+received value 4: 0
+received value 5: 1
+received value 6: 1
+received value 7: 1
+received value 8: 0
 
-Saving...
+1 minunte passed
+received value 0: 0
+received value 1: 1
+received value 2: 1
+received value 3: 1
+received value 4: 1
+received value 5: 0
+received value 6: 0
+received value 7: 0
+received value 8: 1
 
-900
-867
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
+1 minunte passed

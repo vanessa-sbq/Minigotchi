@@ -83,6 +83,15 @@
 #include "../sprites/xpm_hunger_levels/hunger_bar_L10.xpm"
 #include "../sprites/xpm_hunger_levels/hunger_bar_max.xpm"
 
+// Tic-Tac-Toe
+#include "../sprites/xpms/guest_button.xpm"
+#include "../sprites/xpms/host_button.xpm"
+#include "../sprites/xpms/tictactoe_field.xpm"
+#include "../sprites/xpms/tictactoe_wait.xpm"
+#include "../sprites/xpms/tictactoe_menu_bg.xpm"
+#include "../sprites/xpms/tictactoe_o.xpm"
+#include "../sprites/xpms/tictactoe_x.xpm"
+
 
 
 // Backgrounds
@@ -172,6 +181,15 @@ static Sprite* _hunger_L10_sprite;
 static Sprite* _hunger_max_sprite;
 
 
+// Elements for TicTacToe
+static Sprite* _ttt_field;
+static Sprite* _ttt_wait;
+static Sprite* _ttt_menu_bg;
+static Sprite* _guest_button_sprite;
+static Sprite* _host_button_sprite;
+static Sprite* _ttt_o;
+static Sprite* _ttt_x;
+
 Sprite* get_cursor_sprite() {
     return _cursor_sprite;
 }
@@ -187,7 +205,14 @@ Sprite* guiDrawer_get_button_sprite(int text_index){
 		case 2:
 			return guiDrawer_get_minigamesIcon_sprite();
 			break;
-		default:break;
+        case 6:
+            return guiDrawer_get_host_button_sprite();
+            break;
+        case 7:
+            return guiDrawer_get_guest_button_sprite();
+            break;
+        default:
+            break;
 	}
 	return NULL;
 }
@@ -258,6 +283,28 @@ Sprite* guiDrawer_get_evening_window() {
 Sprite* guiDrawer_get_night_window() {
 	return _night_window;
 }
+
+Sprite* guiDrawer_get_guest_button_sprite() {
+	return _guest_button_sprite;
+}
+Sprite* guiDrawer_get_host_button_sprite() {
+	return _host_button_sprite;
+}
+Sprite* guiDrawer_get_ttt_field() {
+	return _ttt_field;
+}
+Sprite* guiDrawer_get_ttt_wait() {
+	return _ttt_wait;
+}
+
+Sprite* guiDrawer_get_ttt_o() {
+	return _ttt_o;
+}
+
+Sprite* guiDrawer_get_ttt_x() {
+	return _ttt_x;
+}
+
 
 Sprite* guiDrawer_get_bar_sprite(int bar_type, int level){
 	// There are 12 ranges of happiness levels
@@ -477,6 +524,26 @@ Sprite* guiDrawer_get_hunger_level_sprite_from_index(uint8_t index){
 	return NULL;
 }
 
+void setup_ttt_sprites() {
+	_ttt_field = create_sprite_xpm((xpm_map_t) tictactoe_field_xpm);
+	_ttt_wait = create_sprite_xpm((xpm_map_t) tictactoe_wait_xpm);
+	_ttt_menu_bg = create_sprite_xpm((xpm_map_t) tictactoe_menu_bg_xpm);
+	_guest_button_sprite = create_sprite_xpm((xpm_map_t) guest_button_xpm);
+	_host_button_sprite = create_sprite_xpm((xpm_map_t) host_button_xpm);
+	_ttt_o = create_sprite_xpm((xpm_map_t) tictactoe_o_xpm);
+	_ttt_x = create_sprite_xpm((xpm_map_t) tictactoe_x_xpm);
+}
+
+void cleanup_ttt_sprites() {
+	free(_ttt_field);
+	free(_ttt_wait);
+	free(_ttt_menu_bg);
+	free(_guest_button_sprite);
+	free(_host_button_sprite);
+	free(_ttt_o);
+	free(_ttt_x);
+}
+
 
 void setup_text_sprite() {
 	_A_sprite = create_sprite_xpm((xpm_map_t) A_xpm );
@@ -651,8 +718,14 @@ void switchBackground(uint8_t bg) {
 		case 4:
 			//getBufferFromSprite(_bg_mainroom_sprite->height, _bg_mainroom_sprite->width, 0, 0, _bg_mainroom_sprite->colors, &_backgroundBuffer);
 			break;
-		case 5:
-			//getBufferFromSprite(_bg_mainroom_sprite->height, _bg_mainroom_sprite->width, 0, 0, _bg_mainroom_sprite->colors, &_backgroundBuffer);
+		case 5: // Tic-Tac-Toe Menu
+			getBufferFromSprite(_ttt_menu_bg->height, _ttt_menu_bg->width, 0, 0, _ttt_menu_bg->colors, &_backgroundBuffer);
+			break;
+		case 6: // Tic-Tac-Toe Game Field
+			getBufferFromSprite(_ttt_field->height, _ttt_field->width, 0, 0, _ttt_field->colors, &_backgroundBuffer);
+			break;
+		case 7: // Tic-Tac-Toe Game Field
+			getBufferFromSprite(_ttt_wait->height, _ttt_wait->width, 0, 0, _ttt_wait->colors, &_backgroundBuffer);
 			break;
 		default:
 			break;
