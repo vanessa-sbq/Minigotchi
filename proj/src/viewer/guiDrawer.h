@@ -20,6 +20,9 @@ Sprite* guiDrawer_get_minigotchi_normal_sprite();
 Sprite* guiDrawer_get_hotbar_sprite();
 Sprite* guiDrawer_get_hotbar_select_sprite();
 Sprite* guiDrawer_get_bar_sprite(int bar_type, int level);
+Sprite* guiDrawer_get_minigamesIcon_sprite();
+Sprite* guiDrawer_get_apple_sprite();
+Sprite* guiDrawer_get_item_sprite(int id);
 
 Sprite* guiDrawer_get_happiness_level_sprite_from_index(uint8_t index);
 void setup_happiness_sprites();
@@ -41,7 +44,6 @@ char** guiDrawer_get_backgroundBuffer();
 // Buffer setters
 void guiDrawer_set_backgroundBuffer(char** backgroundBuffer);
 
-/* int (draw_xpm)(xpm_map_t xpm, uint16_t x, uint16_t y);*/
 Sprite *create_sprite_xpm(xpm_map_t sprite);
 void setup_sprites();
 int drawSprite(Sprite *sprite, int x, int y);

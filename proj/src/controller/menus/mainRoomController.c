@@ -34,6 +34,25 @@ void mainRoomController_Hotbar_goLeft() {
     mainRoom->hotbar->highlighted--; // 1111 1111 1111 1111
 }
 
+void mainRoomController_feed_minigotchi() {
+    Hotbar* hotbar = mainRoom_get_hotbar(mainRoom);
+    if (!hotbar_is_hidden(hotbar)){
+        uint8_t highlighted_index = hotbar_get_highlighted(hotbar);
+        Item* highlighted_item = hotbar_get_highlighted_item(hotbar);
+        if (item_get_id(highlighted_item) != 0){ // Make sure there is an item
+            if ((item_get_feedLevel(highlighted_item) + database_get_hunger(database)) >= MAX_HUNGER){
+                database_set_hunger(database, MAX_HUNGER);
+            }
+            else{
+                database_set_hunger(database, database_get_hunger(database) + item_get_feedLevel(highlighted_item));
+            }
+            int* food_array = database_get_foodArray(database); 
+            food_array[highlighted_index] = 0;
+            database_set_foodArray(database, food_array);
+        }
+    }
+}
+
 bool mainRoomController_checkCollision(Sprite* sprite, int x, int y) {
     Cursor* cursor = mainRoom_get_cursor(mainRoom);
 
@@ -91,6 +110,10 @@ void mainRoomController_step(){
     Bar* hunger_bar = mainRoom_get_hungerBar(mainRoom);
     bar_set_level(hunger_bar, database_get_hunger(getDatabase()));
     bar_set_sprite(hunger_bar, guiDrawer_get_bar_sprite(1, database_get_hunger(getDatabase())));
+
+    // Update Hotbar
+    Hotbar* hotbar = mainRoom_get_hotbar(mainRoom);
+    hotbar_update_items(hotbar, database_get_foodArray(getDatabase())); // Load database items into hotbar
 
     Minigotchi* minigotchi = mainRoom_get_minigotchi(mainRoom);
     if (mainRoomController_checkCollision(minigotchi_get_sprite(minigotchi), minigotchi_get_x(minigotchi), minigotchi_get_y(minigotchi))){

@@ -8,7 +8,7 @@ MainRoom *new_mainRoom(){
 
     // Initialize MainRoom
     mainRoom->minigotchi = new_minigotchi(467, 400, 100, 100, "John Doe");
-    mainRoom->miniGamesButton = new_button(10, 10, 1);
+    mainRoom->miniGamesButton = new_button(10, 10, 2);
     mainRoom->quitButton = new_button(886, 10, 1);
     mainRoom->happinessBar = new_bar(10, 100, 1000, 0); // FIXME: Might need to change arguments
     mainRoom->hungerBar = new_bar(10, 150, 1000, 1); // FIXME: Might need to change arguments

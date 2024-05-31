@@ -247,6 +247,9 @@ int (proj_main_loop)(int argc, char **argv) {
     						if (scancode_first_byte == 0xe0 && scancode_second_byte == 0x4b) {
 								mainRoomController_Hotbar_goLeft();
 							}
+							if (scancode_first_byte == 0x1c) {
+								mainRoomController_feed_minigotchi();
+							}
 						
 
 						// Call necessary function...

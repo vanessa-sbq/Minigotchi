@@ -10,6 +10,7 @@ typedef struct{
     int minigotchi_hunger;
     int minigotchi_happiness;
     int coins;
+    int food_array[9];
 } Database;
 
 Database* getDatabase();
@@ -25,10 +26,12 @@ int database_get_hunger(Database *database);
 int database_get_happiness(Database *database);
 int database_get_coins(Database *database);
 char* database_get_minigotchiName(Database *database);
+int* database_get_foodArray(Database *database);
 
 void database_set_hunger(Database *database, int value);
 void database_set_happiness(Database *database, int value);
 void database_set_coins(Database *database, int value);
 void database_set_minigotchiName(Database *database, char* value);
+void database_set_foodArray(Database *database, int* food_array);
 
 #endif /* _DATABASE_H_ */

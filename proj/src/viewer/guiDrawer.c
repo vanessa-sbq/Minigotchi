@@ -16,6 +16,13 @@
 #include "../sprites/xpms/hotbar_select.xpm"
 #include "../sprites/xpms/feather.xpm"
 #include "../sprites/xpms/nameMinigotchi_bg.xpm"
+#include "../sprites/xpms/minigames_icon.xpm"
+
+// Items
+#include "../sprites/xpm_items/apple.xpm"
+#include "../sprites/xpm_items/banana.xpm"
+#include "../sprites/xpm_items/chocolate.xpm"
+#include "../sprites/xpm_items/empty.xpm"
 
 // Font
 #include "../sprites/xpm_fonts/A.xpm"
@@ -87,11 +94,17 @@ static Sprite* _start_button_sprite = NULL;
 static Sprite* _quit_button_sprite = NULL;
 static Sprite* _minigotchi_sprite = NULL;
 static Sprite* _minigotchi_happy_sprite = NULL;
+static Sprite* _minigames_icon_sprite = NULL;
+
+// Items
+static Sprite* _empty_sprite = NULL;
+static Sprite* _apple_sprite = NULL;
+static Sprite* _banana_sprite = NULL;
+static Sprite* _chocolate_sprite = NULL;
 
 // GUI Elements
 static Sprite* _hotbar_sprite = NULL;
 static Sprite* _hotbar_select_sprite = NULL;
-static Sprite* _hunger_bar_sprite = NULL;
 	
 /*** Buffers ***/
 static char* _backgroundBuffer;
@@ -165,6 +178,9 @@ Sprite* guiDrawer_get_button_sprite(int text_index){
 		case 1: 
 			return guiDrawer_get_quit_button_sprite();
 			break; 
+		case 2:
+			return guiDrawer_get_minigamesIcon_sprite();
+			break;
 		default:break;
 	}
 	return NULL;
@@ -196,6 +212,33 @@ Sprite* guiDrawer_get_hotbar_sprite() {
 
 Sprite* guiDrawer_get_hotbar_select_sprite() {
 	return _hotbar_select_sprite;
+}
+
+Sprite* guiDrawer_get_minigamesIcon_sprite() {
+	return _minigames_icon_sprite;
+}
+
+Sprite* guiDrawer_get_apple_sprite() {
+	return _apple_sprite;
+}
+
+Sprite* guiDrawer_get_item_sprite(int id){
+	switch (id){
+		case 0:
+			return _empty_sprite; // TODO: Change (This is the empty item)
+			break;
+		case 1:
+			return _apple_sprite;
+			break;
+		case 2:
+			return _banana_sprite;
+			break;
+		case 3:
+			return _chocolate_sprite;
+			break;
+		default:
+			return _apple_sprite;
+	}
 }
 
 Sprite* guiDrawer_get_bar_sprite(int bar_type, int level){
@@ -545,15 +588,21 @@ void setup_sprites(){
 	_bg_nameMinigotchi_sprite = create_sprite_xpm((xpm_map_t) nameMinigotchi_bg_xpm);
 	_backgroundBuffer = malloc(video_get_vram_size());
 
+	// Icons
+	_minigames_icon_sprite =  create_sprite_xpm((xpm_map_t) minigames_icon_xpm);
+
+	// Items
+	_empty_sprite =  create_sprite_xpm((xpm_map_t) empty_xpm);
+	_apple_sprite =  create_sprite_xpm((xpm_map_t) apple_xpm);
+	_banana_sprite =  create_sprite_xpm((xpm_map_t) banana_xpm);
+	_chocolate_sprite =  create_sprite_xpm((xpm_map_t) chocolate_xpm);
+
 	// Cursor
 	_cursor_sprite = create_sprite_xpm((xpm_map_t) feather_xpm);
 
 	// Buttons
 	_start_button_sprite = create_sprite_xpm((xpm_map_t) start_button_xpm);
 	_quit_button_sprite = create_sprite_xpm((xpm_map_t) quit_button_xpm);
-
-	// Bars
-	_hunger_bar_sprite = create_sprite_xpm((xpm_map_t) hunger_bar_max_xpm);
 	
 	// Minigotchi
 	_minigotchi_sprite = create_sprite_xpm((xpm_map_t) minigotchi_normal_xpm);

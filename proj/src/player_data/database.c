@@ -18,11 +18,15 @@ Database *new_database(){
     Database *database = malloc(sizeof(*database));
 
     if (database == NULL) return NULL;
+    
+    int food_array[] = {0,0,0,0,0,0,0,0,0}; 
 
     database->minigotchi_name = "Default";
     database->minigotchi_hunger = 1000;
-    database->minigotchi_happiness = 1000;
+    database->minigotchi_happiness = 1000; 
     database->coins = 0;
+    memcpy(database->food_array, food_array, sizeof(food_array));
+
 
     _database = database;
     return database;
@@ -41,6 +45,7 @@ int database_load_from_file(Database *database){
     // Variables to store the data
     char name[100]; 
     int hunger, happiness, coins;
+    int food_array[9];
 
     // Read Minigotchi name
     if (fgets(name, sizeof(name), file) != NULL) {
@@ -79,10 +84,24 @@ int database_load_from_file(Database *database){
         return 1;
     }
 
+    // Read food array
+    for (int i = 0; i < 9; i++){
+        if (fscanf(file, "%d", &food_array[i]) == 1) {
+            printf("Food %u: %d\n", i, food_array[i]);
+        } else {
+            printf("Error reading food %u\n", i);
+            fclose(file);
+            return 1;
+        }
+    }
+
     database_set_minigotchiName(database, name);
     database_set_happiness(database, happiness);
     database_set_hunger(database, hunger);
     database_set_coins(database, coins);
+    //int food_debug_array[] = {2, 3, 1, 0, 0, 0, 0, 0, 0};  // TODO: remove
+    //database_set_foodArray(database, food_debug_array);   // TODO: remove
+    database_set_foodArray(database, food_array);
 
     fclose(file);
     printf("File 'save.txt' created in '/usr' directory.\n");  // TODO: Remove (DEBUG)
@@ -104,7 +123,9 @@ int database_save_to_file(Database *database){
     fprintf(file, "%d\n", database->minigotchi_hunger);
     fprintf(file, "%d\n", database->minigotchi_happiness);
     fprintf(file, "%d\n", database->coins);
-
+    for (int i = 0; i < 9; i++){
+        fprintf(file, "%d\n", database->food_array[i]);
+    }
 
     // TODO: REMOVE (DEBUG)
     printf("\nSaving...\n");
@@ -112,6 +133,10 @@ int database_save_to_file(Database *database){
     printf("%d\n", database->minigotchi_hunger);
     printf("%d\n", database->minigotchi_happiness);
     printf("%d\n", database->coins);
+    for (int i = 0; i < 9; i++){
+        printf("%d\n", database->food_array[i]);
+    }
+
     return 0;
 }
 
@@ -133,6 +158,9 @@ bool database_check_file_exists(){ // TODO: Ref
         fprintf(file, "%d\n", 1000);  // Default hunger
         fprintf(file, "%d\n", 1000);  // Default happiness
         fprintf(file, "%d\n", 0);  // Default coins
+        for (int i = 0; i < 9; i++){
+            fprintf(file, "%d\n", 0);  // Default food
+        }
 
         fclose(file);
 
@@ -169,6 +197,15 @@ int database_get_coins(Database *database) {
 }
 char* database_get_minigotchiName(Database *database) {
     return database->minigotchi_name;
+}
+
+int* database_get_foodArray(Database *database){
+    return database->food_array;
+}
+
+
+void database_set_foodArray(Database *database, int* food_array){
+    memcpy(database->food_array, food_array, sizeof(database->food_array));
 }
 
 void database_set_hunger(Database *database, int value) {

@@ -21,6 +21,7 @@ void mainRoomController_toggleHotbar();
 
 void mainRoomController_Hotbar_goRight();
 void mainRoomController_Hotbar_goLeft();
+void mainRoomController_feed_minigotchi();
 
 collision_type_mainRoom_t mainRoomController_getButtonEvent();
 

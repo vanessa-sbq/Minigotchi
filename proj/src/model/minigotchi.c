@@ -1,6 +1,6 @@
 #include "minigotchi.h"
 
-Minigotchi *new_minigotchi(int x, int y, uint32_t hunger, uint32_t energy, char* name) {
+Minigotchi *new_minigotchi(int x, int y, uint32_t hunger, uint32_t happiness, char* name) {
     Minigotchi *minigotchi = malloc(sizeof(*minigotchi));
     if (minigotchi == NULL) return NULL;
 
@@ -8,7 +8,7 @@ Minigotchi *new_minigotchi(int x, int y, uint32_t hunger, uint32_t energy, char*
     minigotchi->x = x;
     minigotchi->y = y; 
     minigotchi->hunger = hunger;
-    minigotchi->energy = energy;
+    minigotchi->happiness = happiness;
     minigotchi->name = name;
     minigotchi->isRxCuddles = false;
     return minigotchi;
@@ -49,16 +49,16 @@ void minigotchi_set_y(Minigotchi *minigotchi, int y) {
     minigotchi->y = y;
 }
 
-uint32_t minigotchi_get_energy(Minigotchi *minigotchi) {
-    return minigotchi->energy;
+uint32_t minigotchi_get_happiness(Minigotchi *minigotchi) {
+    return minigotchi->happiness;
 }
 
 uint32_t minigotchi_get_hunger(Minigotchi *minigotchi) {
     return minigotchi->hunger;
 }
 
-void minigotchi_set_energy(Minigotchi *minigotchi, uint32_t value){
-    minigotchi->energy = value;
+void minigotchi_set_happiness(Minigotchi *minigotchi, uint32_t value){
+    minigotchi->happiness = value;
 }
 
 void minigotchi_set_hunger(Minigotchi *minigotchi, uint32_t value){
