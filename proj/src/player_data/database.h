@@ -33,5 +33,6 @@ void database_set_happiness(Database *database, int value);
 void database_set_coins(Database *database, int value);
 void database_set_minigotchiName(Database *database, char* value);
 void database_set_foodArray(Database *database, int* food_array);
+void database_add_food_to_array(Database *database, int food_item);
 
 #endif /* _DATABASE_H_ */

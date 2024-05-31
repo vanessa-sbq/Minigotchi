@@ -20,6 +20,14 @@
 #include "../sprites/xpms/day_window.xpm"
 #include "../sprites/xpms/evening_window.xpm"
 #include "../sprites/xpms/night_window.xpm"
+#include "../sprites/xpms/rps_background.xpm"
+#include "../sprites/xpms/rock.xpm"
+#include "../sprites/xpms/paper.xpm"
+#include "../sprites/xpms/scissors.xpm"
+#include "../sprites/xpms/rps_win.xpm"
+#include "../sprites/xpms/rps_tie.xpm"
+#include "../sprites/xpms/rps_lose.xpm"
+#include "../sprites/xpms/bot_chose.xpm"
 
 // Items
 #include "../sprites/xpm_items/apple.xpm"
@@ -99,6 +107,7 @@ static Sprite* _bg_mainmenu_sprite = NULL;
 static Sprite* _bg_mainroom_sprite = NULL;
 static Sprite* _bg_minigames_sprite = NULL;
 static Sprite* _bg_nameMinigotchi_sprite = NULL;
+static Sprite* _bg_rps_sprite = NULL;
 
 // Other Game Elements
 static Sprite* _cursor_sprite = NULL;
@@ -110,6 +119,13 @@ static Sprite* _minigames_icon_sprite = NULL;
 static Sprite* _day_window = NULL;
 static Sprite* _evening_window = NULL;
 static Sprite* _night_window = NULL;
+static Sprite* _rock_sprite = NULL;
+static Sprite* _paper_sprite = NULL;
+static Sprite* _scissors_sprite = NULL;
+static Sprite* _rps_win_sprite = NULL;
+static Sprite* _rps_tie_sprite = NULL;
+static Sprite* _rps_lose_sprite = NULL;
+static Sprite* _bot_chose_sprite = NULL;
 
 // Items
 static Sprite* _empty_sprite = NULL;
@@ -205,14 +221,22 @@ Sprite* guiDrawer_get_button_sprite(int text_index){
 		case 2:
 			return guiDrawer_get_minigamesIcon_sprite();
 			break;
+        case 3:
+            return guiDrawer_get_rock_sprite();
+            break;
+        case 4:
+            return guiDrawer_get_paper_sprite();
+            break;
+        case 5:
+            return guiDrawer_get_scissors_sprite();
+            break;
         case 6:
             return guiDrawer_get_host_button_sprite();
             break;
         case 7:
             return guiDrawer_get_guest_button_sprite();
             break;
-        default:
-            break;
+		default: break;
 	}
 	return NULL;
 }
@@ -252,6 +276,36 @@ Sprite* guiDrawer_get_minigamesIcon_sprite() {
 Sprite* guiDrawer_get_apple_sprite() {
 	return _apple_sprite;
 }
+
+Sprite* guiDrawer_get_rock_sprite(){
+	return _rock_sprite;
+}
+
+Sprite* guiDrawer_get_paper_sprite(){
+	return _paper_sprite;
+}
+
+Sprite* guiDrawer_get_scissors_sprite(){
+	return _scissors_sprite;
+}
+
+Sprite* guiDrawer_get_rpsWin_sprite(){
+	return _rps_win_sprite;
+}
+
+Sprite* guiDrawer_get_rpsTie_sprite(){
+	return _rps_tie_sprite;
+}
+
+Sprite* guiDrawer_get_rpsLose_sprite(){
+	return _rps_lose_sprite;
+}
+
+Sprite* guiDrawer_get_botChose_sprite(){
+	return _bot_chose_sprite;
+}
+
+
 
 Sprite* guiDrawer_get_item_sprite(int id){
 	switch (id){
@@ -671,6 +725,7 @@ void setup_sprites(){
 	_bg_mainroom_sprite = create_sprite_xpm((xpm_map_t) bg_mainroom_xpm);
 	_bg_minigames_sprite = create_sprite_xpm((xpm_map_t) bricks_xpm);
 	_bg_nameMinigotchi_sprite = create_sprite_xpm((xpm_map_t) nameMinigotchi_bg_xpm);
+	_bg_rps_sprite = create_sprite_xpm((xpm_map_t) rps_background_xpm);
 	_day_window = create_sprite_xpm((xpm_map_t) day_window_xpm);
 	_evening_window = create_sprite_xpm((xpm_map_t) evening_window_xpm);
 	_night_window = create_sprite_xpm((xpm_map_t) night_window_xpm);
@@ -678,6 +733,12 @@ void setup_sprites(){
 
 	// Icons
 	_minigames_icon_sprite =  create_sprite_xpm((xpm_map_t) minigames_icon_xpm);
+
+	// Rock Paper Scissors
+	_rps_win_sprite =  create_sprite_xpm((xpm_map_t) rps_win_xpm);
+	_rps_tie_sprite =  create_sprite_xpm((xpm_map_t) rps_tie_xpm);
+	_rps_lose_sprite =  create_sprite_xpm((xpm_map_t) rps_lose_xpm);
+	_bot_chose_sprite =  create_sprite_xpm((xpm_map_t) bot_chose_xpm);
 
 	// Items
 	_empty_sprite =  create_sprite_xpm((xpm_map_t) empty_xpm);
@@ -691,7 +752,10 @@ void setup_sprites(){
 	// Buttons
 	_start_button_sprite = create_sprite_xpm((xpm_map_t) start_button_xpm);
 	_quit_button_sprite = create_sprite_xpm((xpm_map_t) quit_button_xpm);
-	
+	_rock_sprite = create_sprite_xpm((xpm_map_t) rock_xpm);
+	_paper_sprite = create_sprite_xpm((xpm_map_t) paper_xpm);
+	_scissors_sprite = create_sprite_xpm((xpm_map_t) scissors_xpm);
+
 	// Minigotchi
 	_minigotchi_sprite = create_sprite_xpm((xpm_map_t) minigotchi_normal_xpm);
 	_minigotchi_happy_sprite = create_sprite_xpm((xpm_map_t) minigotchi_happy_xpm);
@@ -715,8 +779,8 @@ void switchBackground(uint8_t bg) {
 		case 3: // NameMinigotchi
 			getBufferFromSprite(_bg_nameMinigotchi_sprite->height, _bg_nameMinigotchi_sprite->width, 0, 0, _bg_nameMinigotchi_sprite->colors, &_backgroundBuffer);
 			break;
-		case 4:
-			//getBufferFromSprite(_bg_mainroom_sprite->height, _bg_mainroom_sprite->width, 0, 0, _bg_mainroom_sprite->colors, &_backgroundBuffer);
+		case 4: // RockPaperScissors
+			getBufferFromSprite(_bg_rps_sprite->height, _bg_rps_sprite->width, 0, 0, _bg_rps_sprite->colors, &_backgroundBuffer);
 			break;
 		case 5: // Tic-Tac-Toe Menu
 			getBufferFromSprite(_ttt_menu_bg->height, _ttt_menu_bg->width, 0, 0, _ttt_menu_bg->colors, &_backgroundBuffer);

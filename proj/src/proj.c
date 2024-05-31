@@ -27,6 +27,7 @@
 #include "model/stateModels/minigameMenu.h"
 #include "model/stateModels/nameMinigotchi.h"
 #include "model/stateModels/tictactoe.h"
+#include "model/stateModels/rockPaperScissors.h"
 
 // Viewers
 #include "viewer/guiDrawer.h"
@@ -35,6 +36,7 @@
 #include "viewer/menus/minigameMenuViewer.h"
 #include "viewer/menus/nameMinigotchiViewer.h"
 #include "viewer/minigames/tictactoeViewer.h"
+#include "viewer/menus/rockPaperScissorsViewer.h"
 
 // Controllers
 #include "controller/menus/mainMenuController.h"
@@ -42,6 +44,7 @@
 #include "controller/menus/minigameMenuController.h"
 #include "controller/menus/nameMinigotchiController.h"
 #include "controller/minigames/tictactoeController.h"
+#include "controller/menus/rockPaperScissorsController.h"
 
 
 // Database
@@ -339,7 +342,7 @@ int (proj_main_loop)(int argc, char **argv) {
 						// TODO: GO BACCCKCKCCCCC
 
 						setup_ttt_sprites();
-						game_state = MINIGAME_1;	
+						game_state = MINIGAME_1;
 						switchBackground(5);
 					}
 
@@ -360,7 +363,13 @@ int (proj_main_loop)(int argc, char **argv) {
 						switchBackground(1);
 						game_state = MAIN_ROOM;	
 					}
-					
+
+
+					if (minigameMenuController_getButtonEvent() == MINIGAME1_MINIGAMEMENU){ // Open minigames
+						minigameMenuController_setButtonEvent(NOP_MINIGAMEMENU);
+						switchBackground(4);
+						game_state = MINIGAME_2;
+					}
 					break;
 				case MINIGAME_1:
 					ticTacToeController_step();
@@ -373,11 +382,20 @@ int (proj_main_loop)(int argc, char **argv) {
 
 							ticTacToeController_setButtonEvent(NOP_TTT);
 							switchBackground(1);
-							game_state = MAIN_ROOM;	
+							game_state = MAIN_ROOM;
 					}
 					break;
 				case MINIGAME_2:
-					
+					rockPaperScissorsController_step();
+					rockPaperScissorsViewer_draw();
+					setRockPaperScissorsCursor(cursor);
+
+					if (rockPaperScissorsController_getButtonEvent() == QUIT_RPS){ // Open minigames
+						rockPaperScissorsController_setButtonEvent(NOP_RPS);
+						switchBackground(1);
+						game_state = MAIN_ROOM;
+					}
+
 					break;
 				case EXIT:
 					

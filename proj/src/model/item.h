@@ -3,6 +3,7 @@
 
 #include "../viewer/guiDrawer.h"
 
+#define NUM_ITEMS 4
 typedef enum {EMPTY_ITEM, BANANA, APPLE, CHOCOLATE} item_t;
 
 typedef struct{
@@ -24,6 +25,7 @@ int item_get_y(Item *item);
 item_t item_get_id(Item *item);
 int item_get_quantity(Item *item);
 int item_get_feedLevel(Item *item);
+Sprite* item_get_sprite(Item *item);
 
 // Setters
 void item_set_x(Item *item, int x);

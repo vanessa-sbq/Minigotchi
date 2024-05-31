@@ -9,6 +9,7 @@ typedef struct{
     Sprite *sprite;
     int x;
     int y;
+    bool activated;
 } Button;
 
 Button *new_button(int x, int y, int text_index); // "Constructor"
@@ -21,5 +22,7 @@ void draw_button(Button *button);
 Sprite* button_get_sprite(Button *button);
 int button_get_x(Button *button);
 int button_get_y(Button *button);
+bool button_get_activated(Button *button);
+void button_set_activated(Button *button, bool activated);
 
 #endif /* _BUTTON_H */

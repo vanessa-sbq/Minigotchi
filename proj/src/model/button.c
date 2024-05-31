@@ -8,6 +8,7 @@ Button *new_button(int x, int y, int text_index) {
     button->sprite = guiDrawer_get_button_sprite(text_index);
     button->x = x; 
     button->y = y;
+    button->activated = true;
 
     return button;
 }
@@ -17,7 +18,9 @@ void button_delete(Button *button) {
 }
 
 void draw_button(Button *button) {
-    drawSprite(button->sprite, button->x, button->y);
+    if (button->activated){
+        drawSprite(button->sprite, button->x, button->y);
+    }
 }
 
 // Getters and setters
@@ -31,4 +34,12 @@ int button_get_x(Button *button) {
 
 int button_get_y(Button *button) {
     return button->y;
+}
+
+bool button_get_activated(Button *button){
+    return button->activated;
+}
+
+void button_set_activated(Button *button, bool activated){
+    button->activated = activated;
 }

@@ -40,6 +40,10 @@ int item_get_feedLevel(Item *item){
     return item->feed_level;
 }
 
+Sprite* item_get_sprite(Item *item){
+    return item->sprite;
+}
+
 
 // Setters
 void item_set_x(Item *item, int x){

@@ -220,3 +220,15 @@ void database_set_coins(Database *database, int value) {
 void database_set_minigotchiName(Database *database, char* value) {
     database->minigotchi_name = value;
 }
+
+/**
+ * @brief Searches for an empty slot on the hotbar and in case the hotbar is full doesn't add it
+ */
+void database_add_food_to_array(Database *database, int food_item){
+    for (int i = 0; i < 9; i++){
+        if (database->food_array[i] == 0){
+            database->food_array[i] = food_item;
+            return;
+        }
+    }
+}

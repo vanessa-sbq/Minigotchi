@@ -16,6 +16,8 @@ void minigameMenuViewer_draw(){
     wrapper_draw_background();
 
     // Foreground elements
+    draw_button(minigameMenu_get_tttButton(minigameMenu));
+    draw_button(minigameMenu_get_rpsButton(minigameMenu));
     draw_button(minigameMenu_get_quitButton(minigameMenu));
     draw_cursor(minigameMenu_get_cursor(minigameMenu));
 

@@ -8,6 +8,8 @@
 #include "../minigotchi.h"
 
 typedef struct{
+    Button *tttButton;
+    Button *rpsButton;
     Button *quitButton;
     Cursor *cursor;
 } MinigameMenu;
@@ -16,6 +18,8 @@ MinigameMenu *new_minigameMenu(); // "Constructor"
 
 void delete_minigameMenu(MinigameMenu *minigameMenu);
 
+Button* minigameMenu_get_tttButton(MinigameMenu *minigameMenu);
+Button* minigameMenu_get_rpsButton(MinigameMenu *minigameMenu);
 Button* minigameMenu_get_quitButton(MinigameMenu *minigameMenu);
 Cursor* minigameMenu_get_cursor(MinigameMenu *minigameMenu);
 

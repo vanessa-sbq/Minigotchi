@@ -21,11 +21,8 @@ bool minigameMenuController_checkCollision(Sprite* sprite, int x, int y) {
     int sprite_height = sprite_get_height(sprite);
 
     int left_upper_corner_x = x;
-
     int right_upper_corner_x = left_upper_corner_x + sprite_width;
-
     int right_upper_corner_y = y;
-
     int left_lower_corner_y = right_upper_corner_y + sprite_height;
 
     if ((cursorX >= left_upper_corner_x && cursorX <= right_upper_corner_x) && (cursorY >= right_upper_corner_y && cursorY <= left_lower_corner_y) && beingPressed) {
@@ -50,6 +47,12 @@ void minigameMenuController_step(){
     Button* quit_button = minigameMenu_get_quitButton(minigameMenu);
     if (minigameMenuController_checkCollision(button_get_sprite(quit_button), button_get_x(quit_button), button_get_y(quit_button))){
         currentButtonEvent = QUIT_MINIGAMEMENU;
+    }
+
+    // Check if "Rock Paper Scissors" clicked
+    Button* rps_button = minigameMenu_get_rpsButton(minigameMenu);
+    if (minigameMenuController_checkCollision(button_get_sprite(rps_button), button_get_x(rps_button), button_get_y(rps_button))){
+        currentButtonEvent = MINIGAME1_MINIGAMEMENU;
     }
 }
 
