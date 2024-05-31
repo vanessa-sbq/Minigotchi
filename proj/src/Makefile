@@ -9,6 +9,7 @@ PROG=proj
 .PATH: ${.CURDIR}/device_controllers/timer
 .PATH: ${.CURDIR}/device_controllers/video
 .PATH: ${.CURDIR}/device_controllers/kbc
+.PATH: ${.CURDIR}/device_controllers/rtc
 # sprites
 .PATH: ${.CURDIR}/sprites/xpms
 # models
@@ -27,7 +28,7 @@ PROG=proj
 
 
 # source code files to be compiled
-SRCS = proj.c timer.c kbc.c utils.c keyboard.c mouse.c video.c guiDrawer.c cursor.c mainMenu.c button.c mainMenuController.c mainMenuViewer.c mainRoom.c mainRoomController.c mainRoomViewer.c minigotchi.c minigameMenu.c minigameMenuController.c minigameMenuViewer.c item.c hotbar.c database.c nameMinigotchi.c nameMinigotchiViewer.c nameMinigotchiController.c bar.c vector.c
+SRCS = proj.c timer.c kbc.c utils.c keyboard.c mouse.c video.c guiDrawer.c cursor.c mainMenu.c button.c mainMenuController.c mainMenuViewer.c mainRoom.c mainRoomController.c mainRoomViewer.c minigotchi.c minigameMenu.c minigameMenuController.c minigameMenuViewer.c item.c hotbar.c database.c nameMinigotchi.c nameMinigotchiViewer.c nameMinigotchiController.c bar.c vector.c rtc.c
 
 # additional compilation flags
 # "-Wall -Wextra -Werror -I . -std=c11 -Wno-unused-parameter" are already set

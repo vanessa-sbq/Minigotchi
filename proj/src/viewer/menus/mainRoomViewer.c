@@ -1,6 +1,11 @@
 #include "mainRoomViewer.h"
 
 static MainRoom *mainRoom;
+static Sprite* currentWindow;
+
+void setRTCWindow(Sprite* window) {
+    currentWindow = window;
+}
 
 void mainRoomViewer_setMainRoom(MainRoom* mr){
     mainRoom = mr;
@@ -16,6 +21,7 @@ void mainRoomViewer_draw(){
 
     // Background elements
     wrapper_draw_background();
+    drawSprite(currentWindow, 879, 285);
     draw_minigotchi(mainRoom_get_minigotchi(mainRoom)); // TODO: add viewer in case of animations.
 
     // Foreground elements

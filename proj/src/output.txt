@@ -1,3 +1,5 @@
+Time: 7
+Night
 File '/usr/save.txt' exists.
 Name: 
 Hunger: 900
