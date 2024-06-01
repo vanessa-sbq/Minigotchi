@@ -28,67 +28,6 @@ void mouse_set_error(bool er){
 }
 
 /**
- * @brief Reads the status byte from the KBC
- */
-int read_status_from_kbc(uint8_t* statusByte){
-  if (statusByte == NULL){
-    return 1;    
-  }
-  if (util_sys_inb(STATUS_REG_PORT, statusByte) != 0){
-      return 1;
-  }
-  return 0;
-}
-
-/**
- * @brief Reads the KBC output buffer
- */
-int read_from_out_buf_kbc(uint8_t* storeByte){
-  uint8_t statusByte; // Store status byte.
-  if (storeByte == NULL){
-    return 1;    
-  }
-  while (1){
-    if (read_status_from_kbc(&statusByte) != 0){ // Fetch the status byte.
-      return 1; 
-    }
-    if (statusByte & OBF_BIT){ // Output buffer must be full.
-      if (util_sys_inb(OUT_BUF, storeByte) != 0){
-        return 1; 
-      }
-      return 0;
-    }
-  }
-
-}
-
-/**
- * @brief Issues a command to the KBC
- */
-int issueCommandKBC(uint8_t port, uint8_t sendToPort){
-  uint8_t statusByte;
-  while(1) {
-    if (util_sys_inb(STATUS_REG_PORT, &statusByte) != 0){
-      return 1;
-    }
-
-    if((statusByte & IBF_BIT) == 0 ) {
-      sys_outb(port, sendToPort);
-      return 0; 
-    }
-    
-  }
-}
-
-
-
-/* 
-
-  Functions that activate/deactivate the necessary things for mouse to work.
-
-*/
-
-/**
  * @brief Subscribe mouse interrupts 
  */
 int (mouse_subscribe_int)(uint8_t* bit_no){
@@ -124,12 +63,12 @@ int send_byte_to_mouse(uint8_t commandToSend){
   while( out_buf_byte != ACK && tries >= 0 ) {
 
     // Tell kbc we want to send a command to the mouse.
-    if (issueCommandKBC(CMDS_REG_PORT, MOUSE_WRITE_COMMAND) != 0) { 
+    if (writeToKBCPort(CMDS_REG_PORT, MOUSE_WRITE_COMMAND) != 0) { 
       return 1;
     }
 
     // Send the command to the mouse.
-    if (issueCommandKBC(ARGS_REG_PORT, commandToSend) != 0) {
+    if (writeToKBCPort(ARGS_REG_PORT, commandToSend) != 0) {
       return 1;
     }
 
@@ -148,7 +87,7 @@ int send_byte_to_mouse(uint8_t commandToSend){
  * @brief Mouse interrupt handler, reads the output buffer upon an interrupt 
  */
 void (mouse_ih)(){
-  if (read_from_out_buf_kbc(&readByte) != 0){ // Something went wrong.
+  if (readFromOutputBuffer(&readByte) != 0){ // Something went wrong.
     readByte = 0x00;
     error = true;
   }

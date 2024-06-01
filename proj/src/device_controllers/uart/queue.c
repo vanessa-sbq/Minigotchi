@@ -1,6 +1,10 @@
 #include "queue.h"
 
-// Function to create a new node
+/* Inspired by GeeksForGeeks: https://www.geeksforgeeks.org/queue-linked-list-implementation/ */
+
+/**
+ * @brief Function to create a new node
+ */
 Node* createNode(char data) {
     Node* newNode = (Node*)malloc(sizeof(Node));
     if (!newNode) {
@@ -11,7 +15,10 @@ Node* createNode(char data) {
     return newNode;
 }
 
-// Function to initialize the queue
+
+/**
+ * @brief Function to initialize the queue
+ */
 Queue* createQueue() {
     Queue* queue = (Queue*)malloc(sizeof(Queue));
     if (!queue) {
@@ -22,17 +29,26 @@ Queue* createQueue() {
     return queue;
 }
 
-// Function to check if the queue is empty
+
+/**
+ * @brief Function to check if the queue is empty
+ */
 int isEmpty(Queue* queue) {
     return queue->size == 0;
 }
 
-// Function to get the size of the queue
+
+/**
+ * @brief Function to get the size of the queue
+ */
 int getSize(Queue* queue) {
     return queue->size;
 }
 
-// Function to add an element to the queue (enqueue)
+
+/**
+ * @brief Function to add an element to the queue (enqueue)
+ */
 void enqueue(Queue* queue, char data) {
     Node* newNode = createNode(data);
     if (queue->rear == NULL) {
@@ -44,7 +60,10 @@ void enqueue(Queue* queue, char data) {
     queue->size++;
 }
 
-// Function to remove an element from the queue (dequeue)
+
+/**
+ * @brief Function to remove an element from the queue (dequeue)
+ */
 char dequeue(Queue* queue) {
     if (isEmpty(queue)) {
         return '\0';  // Return a null character if the queue is empty
@@ -60,7 +79,10 @@ char dequeue(Queue* queue) {
     return data;
 }
 
-// Function to peek at the front element of the queue without removing it
+
+/**
+ * @brief Function to peek at the front element of the queue without removing it
+ */
 char peek(Queue* queue) {
     if (isEmpty(queue)) {
         return '\0';

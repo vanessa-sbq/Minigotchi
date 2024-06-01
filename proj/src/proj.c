@@ -56,7 +56,9 @@ static state_t game_state = MAIN_MENU;
 static bool newGame = false;
 static timeOfDay_t dateTime;
 
-
+/**
+ * @brief Main function that will start the LCF 
+ */
 int main(int argc, char *argv[]) {
 	lcf_set_language("EN-US");
 	if (lcf_start(argc, argv)) return 1;
@@ -64,10 +66,16 @@ int main(int argc, char *argv[]) {
 	return 0;
 }
 
+/**
+ * @brief Setter for game state 
+ */
 void proj_set_state(state_t state){
 	game_state = state;
 }
 
+/**
+ * @brief Convert 2's complement to binary
+ */
 int16_t twosComplementToBinary(int16_t n) {
 	int8_t sign = ((n & 0x0100) >> 8) ;
 	if (sign){
@@ -78,6 +86,9 @@ int16_t twosComplementToBinary(int16_t n) {
 	return n;
 }
 
+/**
+ * @brief Convert 2's complement to signed int (so that we change the cursor position)
+ */
 int twosComplementToSignedInt(unsigned char value) {
     if (value & 0x80) {
         return (int)((unsigned int)value | 0xFFFFFF00);
@@ -87,6 +98,10 @@ int twosComplementToSignedInt(unsigned char value) {
 }
 
 
+/**
+ * @brief Project main function that starts the game
+ * @details This function includes the game loop (as a state machine) and handles all the device controller interrupts
+ */
 int (proj_main_loop)(int argc, char **argv) {
 	// Get mode information
 	if (video_get_mode_information(0x14C) != 0){
@@ -258,7 +273,7 @@ int (proj_main_loop)(int argc, char **argv) {
 						newGame = false;
 						nameMinigotchiController_delete_nameMinigotchi();
 						break;
-					}
+					} 
 
 					if (nameMinigotchiController_getButtonEvent() == QUIT_NAMEMINIGOTCHI) {
 						database_delete_file(database);
@@ -268,6 +283,8 @@ int (proj_main_loop)(int argc, char **argv) {
 						break;
 					}
 
+					nameMinigotchiController_setButtonEvent(NOP_NAMEMINIGOTCHI);
+					
 					break;
 				case MAIN_MENU:
 					mainMenuController_step();

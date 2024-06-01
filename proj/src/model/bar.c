@@ -1,5 +1,8 @@
 #include "bar.h"
 
+/**
+ * @brief Creates a new bar "object" and returns a pointer to it.
+ */
 Bar *new_bar(int x, int y, int level, int bar_type) { 
     Bar *bar = malloc(sizeof(*bar));
     if (bar == NULL) return NULL;
@@ -13,14 +16,19 @@ Bar *new_bar(int x, int y, int level, int bar_type) {
     return bar;
 }
 
+/**
+ * @brief Bar destructor
+ */
 void bar_delete(Bar *bar) {
     free(bar);
 }
 
+/**
+ * @brief Draws a bar
+ */
 void draw_bar(Bar *bar) {
     drawSprite(bar->sprite, bar->x, bar->y);
 }
-
 
 // Getters
 Sprite* bar_get_sprite(Bar *bar) {

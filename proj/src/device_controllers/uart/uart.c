@@ -3,7 +3,10 @@
 int serial_hook_id = 7;
 static Queue* rxQueue;
 
-/* Functions for RX Side */
+
+/**
+ * @brief Functions for RX Side
+ */
 int serial_read_byte(){
     uint8_t st;
     uint8_t byte;
@@ -27,7 +30,9 @@ int serial_read_byte(){
 
 
 
-/* Functions for TX Side */
+/**
+ * @brief Functions for TX Side
+ */
 int serial_send_byte(uint8_t byte){
     uint8_t st;
     uint8_t attmps = 10;
@@ -49,7 +54,9 @@ int serial_send_byte(uint8_t byte){
 
 
 
-/* Functions that enable uart */
+/**
+ * @brief Subscribes UART interrupts
+ */
 int serial_subscribe_int(uint8_t* bit_no){
     *bit_no = serial_hook_id;
     if(sys_irqsetpolicy(SERIAL_IRQ_1, IRQ_REENABLE | IRQ_EXCLUSIVE, &serial_hook_id) != 0){
@@ -59,6 +66,9 @@ int serial_subscribe_int(uint8_t* bit_no){
     return 0;
 }
 
+/**
+ * @brief This function initializes the Serial Port
+ */
 int serial_init(){
     uint8_t lcr;
 
@@ -82,7 +92,9 @@ int serial_init(){
 
 
 
-/* Functions that disable uart */
+/**
+ * @brief Unsubscribes UART interrupts
+*/
 int serial_unsubscribe_int(){
     if(sys_irqrmpolicy(&serial_hook_id) != 0){
         printf("Error in sys_irqrmpolicy()\n");
@@ -91,6 +103,9 @@ int serial_unsubscribe_int(){
     return 0;
 }
 
+/**
+ * @brief Free RX queue
+*/
 void serial_exit(){
     free(rxQueue);
 }
@@ -99,11 +114,16 @@ void serial_exit(){
 
 
 
-/* Functions that help use uart */
+/**
+ * @brief Get RX queue 
+ */
 Queue* serial_get_receive_queue(){
     return rxQueue;
 }
 
+/**
+ * @brief UART interrupt handler
+ */
 void serial_interrupt_handler(){
     uint8_t ir;
 
@@ -121,7 +141,9 @@ void serial_interrupt_handler(){
     serial_clear_interrupts();
 }
 
-
+/**
+ * @brief Clear UART interrupts
+ */
 int serial_clear_interrupts(){
     if(sys_outb(SERIAL_PORT + FIFO_CONTROL, FCR_CLEAR) != 0){
         printf("Error in sys_outb()\n");

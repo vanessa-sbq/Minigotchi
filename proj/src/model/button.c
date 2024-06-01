@@ -1,5 +1,8 @@
 #include "button.h"
 
+/**
+ * @brief Creates a new button "object" and returns a pointer to it.
+ */
 Button *new_button(int x, int y, int text_index) { 
      Button *button = malloc(sizeof(*button));
     if (button == NULL) return NULL;
@@ -13,10 +16,16 @@ Button *new_button(int x, int y, int text_index) {
     return button;
 }
 
+/**
+ * @brief Button destructor
+ */
 void button_delete(Button *button) {
     free(button);
 }
 
+/**
+ * @brief Draws a button
+ */
 void draw_button(Button *button) {
     if (button->activated){
         drawSprite(button->sprite, button->x, button->y);

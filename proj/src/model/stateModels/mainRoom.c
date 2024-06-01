@@ -1,6 +1,9 @@
 #include "mainRoom.h"
 #include "../../player_data/database.h"
 
+/**
+ * @brief Creates a new MainRoom "object" and returns a pointer to it.
+ */
 MainRoom *new_mainRoom(){
     // Allocate MainRoom object
     MainRoom *mainRoom = malloc(sizeof(*mainRoom));
@@ -17,6 +20,9 @@ MainRoom *new_mainRoom(){
     return mainRoom;
 }
 
+/**
+ * @brief MainRoom destructor
+ */
 void delete_mainRoom(MainRoom *mainRoom){
     kill_minigotchi(mainRoom->minigotchi);
     button_delete(mainRoom->miniGamesButton);
@@ -24,10 +30,11 @@ void delete_mainRoom(MainRoom *mainRoom){
     free(mainRoom);
 }
 
+// Getters and Setters
+
 Minigotchi* mainRoom_get_minigotchi(MainRoom *mainRoom) {
     return mainRoom->minigotchi;
 }
-
 
 Button* mainRoom_get_miniGamesButton(MainRoom *mainRoom){
     return mainRoom->miniGamesButton;
@@ -52,5 +59,3 @@ Cursor* mainRoom_get_cursor(MainRoom *mainRoom){
 Hotbar* mainRoom_get_hotbar(MainRoom *mainRoom) {
     return mainRoom->hotbar;
 }
-
-

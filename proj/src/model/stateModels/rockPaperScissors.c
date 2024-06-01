@@ -1,5 +1,9 @@
 #include "rockPaperScissors.h"
 
+
+/**
+ * @brief Creates a new RockPaperScissors "object" and returns a pointer to it.
+ */
 RockPaperScissors *new_rockPaperScissors(){
     // Allocate RockPaperScissors object
     RockPaperScissors *rockPaperScissors = malloc(sizeof(*rockPaperScissors));
@@ -21,6 +25,9 @@ RockPaperScissors *new_rockPaperScissors(){
     return rockPaperScissors;
 }
 
+/**
+ * @brief RockPaperScissors destructor
+*/
 void delete_rockPaperScissors(RockPaperScissors *rockPaperScissors){ 
     if (rockPaperScissors != NULL) {
         button_delete(rockPaperScissors->rockButton);
@@ -31,6 +38,9 @@ void delete_rockPaperScissors(RockPaperScissors *rockPaperScissors){
         free(rockPaperScissors);
     }
 }
+
+
+// Getters and Setters
 
 Button* rockPaperScissors_get_rockButton(RockPaperScissors *rockPaperScissors){
     return rockPaperScissors->rockButton;

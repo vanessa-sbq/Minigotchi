@@ -1,11 +1,12 @@
 #include "mainMenu.h"
 
+/**
+ * @brief Creates a new MainMenu "object" and returns a pointer to it.
+ */
 MainMenu *new_mainMenu(){
     // Allocate MainMenu object
     MainMenu *mainMenu = malloc(sizeof(*mainMenu));
     if (mainMenu == NULL) return NULL;
-
-    // draw MAIN MENU // FIXME:
 
     // Initialize MainMenu
     mainMenu->startNewButton = new_button(401, 400, 0);
@@ -15,12 +16,18 @@ MainMenu *new_mainMenu(){
     return mainMenu;
 }
 
+/**
+ * @brief MainMenu destructor
+ */
 void delete_mainMenu(MainMenu *mainMenu){
     button_delete(mainMenu->startNewButton);
     button_delete(mainMenu->continueButton);
     button_delete(mainMenu->quitButton);
     free(mainMenu);
 }
+
+
+// Getters and setters
 
 Button* mainMenu_get_startNewButton(MainMenu *mainMenu){
     return mainMenu->startNewButton;
@@ -37,5 +44,3 @@ Button* mainMenu_get_quitButton(MainMenu *mainMenu){
 Cursor* mainMenu_get_cursor(MainMenu *mainMenu){
     return mainMenu->cursor;
 }
-
-

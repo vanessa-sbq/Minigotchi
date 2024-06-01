@@ -1,7 +1,7 @@
 #include "cursor.h"
 
 /**
- * @brief Constructs a cursor in the specified x and y positions 
+ * @brief Creates a new cursor "object" and returns a pointer to it.
  */
 Cursor *new_cursor(int x, int y){
     // Allocate Cursor object
@@ -26,9 +26,14 @@ void delete_cursor(Cursor *cursor){
     }
 }
 
+/**
+ * @brief Draws a cursor
+ */
 void draw_cursor(Cursor *cursor){
     drawSprite(cursor->sprite, cursor->x, cursor->y);
 }
+
+// Getters and setters
 
 void set_buttonClicked(bool isPressed, Cursor* cursor) {
     cursor->isClicked = isPressed;
@@ -37,7 +42,6 @@ void set_buttonClicked(bool isPressed, Cursor* cursor) {
 bool get_buttonClicked(Cursor* cursor) {
     return cursor->isClicked;
 }
-
 
 Sprite* cursor_get_sprite(Cursor *cursor){
     return cursor->sprite;

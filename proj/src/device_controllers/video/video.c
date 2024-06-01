@@ -5,7 +5,6 @@ static vbe_mode_info_t vbe_mem_info; // VBE mode info struct
 static char *video_mem; // Frame buffer
 static char *second_buffer; // Second frame buffer (for double buffering)
 static char *triple_buffer; // Triple frame buffer (for triple buffering)
-//static int draw_on = 1; // Start drawing on back buffer
 static unsigned int vram_size; // VRAM's size
 static unsigned int vram_base; // VRAM's physical address
 
@@ -21,6 +20,9 @@ void returnToTextMode() {
     }
 }
 
+/**
+ * @brief Get VRAM's X Resolution
+ */
 uint16_t getXResolution() {
     return vbe_mem_info.XResolution;
 }
@@ -49,7 +51,6 @@ int video_map_vram(){
 
     struct minix_mem_range mr;
     mr.mr_base = (phys_bytes) vram_base;
-    //mr.mr_limit = mr.mr_base + 2*vram_size;
     mr.mr_limit = mr.mr_base + 3*vram_size;
     int r;
 
@@ -133,13 +134,6 @@ int drawPixel(uint16_t x, uint16_t y, uint32_t color){
 
     unsigned index = (vbe_mem_info.XResolution * y + x) * bytes_per_pixel;
 
-    /* if (draw_on){
-        if (memcpy(&second_buffer[index], &color, bytes_per_pixel) == NULL) return 1;
-    }
-    else {
-        if (memcpy(&video_mem[index], &color, bytes_per_pixel) == NULL) return 1;
-    } */
-
     switch (currentBuffer) {
     case FIRST:
         if (memcpy(&video_mem[index], &color, bytes_per_pixel) == NULL) return 1;
@@ -197,9 +191,6 @@ void vg_clear_screen(){
     default:
         break;
     }
-
-    //if (draw_on) memset(second_buffer,0,vbe_mem_info.XResolution * vbe_mem_info.YResolution * ((vbe_mem_info.BitsPerPixel + 7) / 8));
-    //else memset(video_mem,0,vbe_mem_info.XResolution * vbe_mem_info.YResolution * ((vbe_mem_info.BitsPerPixel + 7) / 8));
 }
 
 
@@ -211,7 +202,6 @@ int vg_page_flip(){
     memset(&r86, 0, sizeof(r86));	// zero the structure
 
     unsigned int v_res = 0;  
-    //if (draw_on) v_res = vbe_mem_info.YResolution;
 
     switch (currentBuffer) {
         case FIRST:
@@ -256,14 +246,13 @@ int vg_page_flip(){
             break;
     }
 
-    //draw_on = !draw_on; // "Flip" the page
-
     return 0;
 }
 
-// Receive sprite / xpm to a buffer
-// TODO:
 
+/**
+ * @brief Get a buffer from a sprite
+ */
 void getBufferFromSprite(uint16_t height, uint16_t width, uint16_t x, uint16_t y, uint32_t *colors, char **background_buffer) {
     for(int i = 0; i < height; i++){
         for(int j = 0; j < width; j++){
@@ -286,10 +275,16 @@ void getBufferFromSprite(uint16_t height, uint16_t width, uint16_t x, uint16_t y
     }
 }
 
+/**
+ * @brief Get the number of bytes in a pixel
+ */
 unsigned getBytesPerPixel() {
     return (vbe_mem_info.BitsPerPixel + 7) / 8;
 }
 
+/**
+ * @brief Set the background with triple buffering
+ */
 int setBackgroundFromBuffer(char* background_buffer) {
     switch (currentBuffer) {
     case FIRST:

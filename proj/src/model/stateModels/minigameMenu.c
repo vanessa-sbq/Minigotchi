@@ -1,5 +1,8 @@
 #include "minigameMenu.h"
 
+/**
+ * @brief Creates a new MinigameMenu "object" and returns a pointer to it.
+ */
 MinigameMenu *new_minigameMenu(){
 
     // Allocate MinigameMenu object
@@ -15,6 +18,9 @@ MinigameMenu *new_minigameMenu(){
     return minigameMenu;
 }
 
+/**
+ * @brief MinigameMenu destructor
+ */
 void delete_minigameMenu(MinigameMenu *minigameMenu){ 
     if (minigameMenu != NULL) {
         button_delete(minigameMenu->tttButton);
@@ -24,6 +30,9 @@ void delete_minigameMenu(MinigameMenu *minigameMenu){
         free(minigameMenu);
     }
 }
+
+
+// Getters and Setters
 
 Button* minigameMenu_get_tttButton(MinigameMenu *minigameMenu){
     return minigameMenu->tttButton;

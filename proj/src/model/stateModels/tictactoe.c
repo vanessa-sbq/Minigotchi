@@ -1,5 +1,8 @@
 #include "tictactoe.h"
 
+/**
+ * @brief Creates a new TicTacToe "object" and returns a pointer to it.
+ */
 TicTacToe *new_ticTacToe(){
     // Allocate TTT object
     TicTacToe *ttt = malloc(sizeof(*ttt));
@@ -24,6 +27,8 @@ TicTacToe *new_ticTacToe(){
 
     return ttt;
 }
+
+// Getters and Setters
 
 bool* ticTacToe_get_otherPlayersMoves(TicTacToe* ttt) {
     return ttt->otherPlayersMoves;
@@ -59,32 +64,6 @@ bool ticTacToe_set_currentPlayersMoves(TicTacToe* ttt, uint8_t pos) {
     return false;
 }
 
-void reset_ticTacToe(TicTacToe *ttt) {
-    ttt->ticTacToeState = TX_RX_DECISION_TTT;
-
-    for (uint8_t i = 0; i < 9; i++) {
-        ttt->otherPlayersMoves[i] = false;
-        ttt->currentPlayersMoves[i] = false;
-    }
-
-    srand(time(NULL));
-    int reward_id = (rand() % NUM_ITEMS) + 1;
-    ttt->reward = new_item(400, 500, reward_id, 1, 100);
-}
-
-void delete_ticTacToe(TicTacToe *ttt){ 
-    button_delete(ttt->quitButton);
-    button_delete(ttt->guestButton);
-    button_delete(ttt->hostButton);
-    if (ttt->cursor != NULL) {
-        free(ttt->cursor);
-    }
-    if (ttt->reward != NULL) {
-        free(ttt->reward);
-    }
-    free(ttt);
-}
-
 state_ttt_t ticTacToe_get_state(TicTacToe* ttt) {
     return ttt->ticTacToeState;
 }
@@ -118,4 +97,37 @@ Button* ticTacToe_get_hostButton(TicTacToe *ttt) {
 
 Cursor* ticTacToe_get_cursor(TicTacToe *ttt){
     return ttt->cursor;
+}
+
+
+/**
+ * @brief Resets the TicTacToe game 
+*/
+void reset_ticTacToe(TicTacToe *ttt) {
+    ttt->ticTacToeState = TX_RX_DECISION_TTT;
+
+    for (uint8_t i = 0; i < 9; i++) {
+        ttt->otherPlayersMoves[i] = false;
+        ttt->currentPlayersMoves[i] = false;
+    }
+
+    srand(time(NULL));
+    int reward_id = (rand() % NUM_ITEMS) + 1;
+    ttt->reward = new_item(400, 500, reward_id, 1, 100);
+}
+
+/**
+ * @brief TicTacToe destructor
+ */
+void delete_ticTacToe(TicTacToe *ttt){ 
+    button_delete(ttt->quitButton);
+    button_delete(ttt->guestButton);
+    button_delete(ttt->hostButton);
+    if (ttt->cursor != NULL) {
+        free(ttt->cursor);
+    }
+    if (ttt->reward != NULL) {
+        free(ttt->reward);
+    }
+    free(ttt);
 }

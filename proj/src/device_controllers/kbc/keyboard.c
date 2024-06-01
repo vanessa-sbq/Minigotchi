@@ -19,7 +19,7 @@ int subscribe_interrupts_kbd(uint8_t* bit_no){
 }
 
 /**
- * @brief KBC interrupt handler, reads the output buffer upon an interrupt. 
+ * @brief Keyboard interrupt handler, reads the scancode from the output buffer upon an interrupt. 
  */
 void (kbc_ih)(){
     readFromOutputBuffer(&scanCode); // Fetch the scancode.

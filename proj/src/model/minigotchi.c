@@ -1,5 +1,8 @@
 #include "minigotchi.h"
 
+/**
+ * @brief Creates a new minigotchi "object" and returns a pointer to it.
+ */
 Minigotchi *new_minigotchi(int x, int y, uint32_t hunger, uint32_t happiness, char* name) {
     Minigotchi *minigotchi = malloc(sizeof(*minigotchi));
     if (minigotchi == NULL) return NULL;
@@ -14,10 +17,16 @@ Minigotchi *new_minigotchi(int x, int y, uint32_t hunger, uint32_t happiness, ch
     return minigotchi;
 }
 
+/**
+ * @brief Minigotchi destructor
+ */
 void kill_minigotchi(Minigotchi *minigotchi) {
     free(minigotchi);
 }
 
+/**
+ * @brief Draws a minigotchi 
+ */
 void draw_minigotchi(Minigotchi *minigotchi) {
     drawSprite(minigotchi->sprite, minigotchi->x, minigotchi->y);
 }
@@ -79,4 +88,3 @@ bool minigotchi_get_cuddles(Minigotchi *minigotchi) {
 void minigotchi_set_cuddles(Minigotchi *minigotchi, bool cuddles) {
     minigotchi->isRxCuddles = cuddles;
 }
-

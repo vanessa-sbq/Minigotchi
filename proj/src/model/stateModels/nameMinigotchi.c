@@ -1,5 +1,8 @@
 #include "nameMinigotchi.h"
 
+/**
+ * @brief Creates a new NameMinigotchi "object" and returns a pointer to it.
+ */
 NameMinigotchi *new_nameMinigotchi() {
     NameMinigotchi *nameMinigotchi = malloc(sizeof(*nameMinigotchi));
     if (nameMinigotchi == NULL) return NULL;
@@ -10,9 +13,15 @@ NameMinigotchi *new_nameMinigotchi() {
     return nameMinigotchi;
 }
 
+/**
+ * @brief NameMinigotchi destructor
+ */
 void delete_nameMinigotchi(NameMinigotchi *nameMinigotchi) {
     free(nameMinigotchi);
 }
+
+
+// Getters and Setters
 
 Button* nameMinigotchi_get_continueButton(NameMinigotchi *nameMinigotchi) {
     return nameMinigotchi->continueButton;

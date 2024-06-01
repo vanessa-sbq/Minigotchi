@@ -1,10 +1,13 @@
 #include "item.h"
 
+/**
+ * @brief Creates a new item "object" and returns a pointer to it.
+ */
 Item *new_item(int x, int y, item_t id, int quantity, int feed_level){
     Item *item = malloc(sizeof(*item));
     if (item == NULL) return NULL;
 
-    item->sprite = guiDrawer_get_item_sprite(id); // FIXME: Pass the id to get the corresponding sprite
+    item->sprite = guiDrawer_get_item_sprite(id); // Pass the id to get the corresponding sprite
     item->x = x;
     item->y = y;
     item->id = id;
@@ -14,6 +17,9 @@ Item *new_item(int x, int y, item_t id, int quantity, int feed_level){
     return item;
 }
 
+/**
+ * @brief Draws an item
+ */
 void draw_item(Item* item){
     drawSprite(item->sprite, item->x, item->y);
 }
