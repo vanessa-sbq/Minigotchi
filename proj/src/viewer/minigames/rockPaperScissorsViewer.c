@@ -7,7 +7,7 @@ void rockPaperScissorsViewer_setRockPaperScissors(RockPaperScissors* rps){
 }
 
 /**
- * @brief Calls draw function of each element the MainMenu contains
+ * @brief Calls draw function of each element the rock paper scissors game contains (also draws the GUI elements when the game terminates)
  */
 void rockPaperScissorsViewer_draw(){
     vg_clear_screen();

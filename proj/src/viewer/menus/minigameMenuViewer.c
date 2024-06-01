@@ -7,7 +7,7 @@ void minigameMenuViewer_setMinigameMenu(MinigameMenu* mm){
 }
 
 /**
- * @brief Calls draw function of each element the MainMenu contains
+ * @brief Calls draw function of each element the minigame menu contains
  */
 void minigameMenuViewer_draw(){
     vg_clear_screen();

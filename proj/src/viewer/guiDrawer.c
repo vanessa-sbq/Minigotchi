@@ -217,10 +217,17 @@ static Sprite* _host_button_sprite;
 static Sprite* _ttt_o;
 static Sprite* _ttt_x;
 
+
+
+// Sprite getters 
+
 Sprite* get_cursor_sprite() {
     return _cursor_sprite;
 }
 
+/**
+ * @brief Get the button sprite from an index
+*/
 Sprite* guiDrawer_get_button_sprite(int text_index){
 	switch (text_index){
 		case 0:
@@ -337,8 +344,9 @@ Sprite* guiDrawer_get_rps_button_sprite(){
 	return _rps_button_sprite;
 }
 
-
-
+/**
+ * @brief Get an item sprite from an id
+*/
 Sprite* guiDrawer_get_item_sprite(int id){
 	switch (id){
 		case 0:
@@ -391,7 +399,10 @@ Sprite* guiDrawer_get_ttt_x() {
 	return _ttt_x;
 }
 
-
+/**
+ * @brief Get a bar sprite from an index and level
+ * @details This function gets the correct sprite based on a level which belongs to a certain range for which there is a sprite
+*/
 Sprite* guiDrawer_get_bar_sprite(int bar_type, int level){
 	// There are 12 ranges of happiness levels
 	int index = 0;
@@ -422,6 +433,9 @@ char** guiDrawer_get_backgroundBuffer(){
 	return &_backgroundBuffer;
 }
 
+/**
+ * @brief Creates a sprite from a XPM
+ */
 Sprite *create_sprite_xpm(xpm_map_t sprite){
 	Sprite *sp = (Sprite *) malloc(sizeof(Sprite));
 	if(sp == NULL){
@@ -442,6 +456,9 @@ Sprite *create_sprite_xpm(xpm_map_t sprite){
 	return sp;
 }
 
+/**
+ * @brief Get a text sprite from an index
+*/
 Sprite* get_text_sprite_from_index(uint8_t index) {
 	switch (index) {
 		case 0:
@@ -526,6 +543,9 @@ Sprite* get_text_sprite_from_index(uint8_t index) {
 	return NULL;
 }
 
+/**
+ * @brief Get a happiness bar sprite from an index
+ */
 Sprite* guiDrawer_get_happiness_level_sprite_from_index(uint8_t index) {
 	switch (index){
 		case 0:
@@ -568,6 +588,9 @@ Sprite* guiDrawer_get_happiness_level_sprite_from_index(uint8_t index) {
 	return NULL;
 }
 
+/**
+ * @brief Get a hunger bar sprite from an index
+ */
 Sprite* guiDrawer_get_hunger_level_sprite_from_index(uint8_t index){
 	switch (index){
 		case 0:
@@ -610,6 +633,9 @@ Sprite* guiDrawer_get_hunger_level_sprite_from_index(uint8_t index){
 	return NULL;
 }
 
+/**
+ * @brief Sets up the sprites used in the Tic Tac Toe minigame
+ */
 void setup_ttt_sprites() {
 	_ttt_field = create_sprite_xpm((xpm_map_t) tictactoe_field_xpm);
 	_ttt_wait = create_sprite_xpm((xpm_map_t) tictactoe_wait_xpm);
@@ -620,6 +646,9 @@ void setup_ttt_sprites() {
 	_ttt_x = create_sprite_xpm((xpm_map_t) tictactoe_x_xpm);
 }
 
+/**
+ * @brief Frees the sprites used in the Tic Tac Toe minigame
+ */
 void cleanup_ttt_sprites() {
 	free(_ttt_field);
 	free(_ttt_wait);
@@ -630,7 +659,9 @@ void cleanup_ttt_sprites() {
 	free(_ttt_x);
 }
 
-
+/**
+ * @brief Sets up the letter sprites that make up the font
+ */
 void setup_text_sprite() {
 	_A_sprite = create_sprite_xpm((xpm_map_t) A_xpm );
 	_B_sprite = create_sprite_xpm((xpm_map_t) B_xpm );
@@ -660,6 +691,9 @@ void setup_text_sprite() {
 	_Z_sprite = create_sprite_xpm((xpm_map_t) Z_xpm );
 }
 
+/**
+ * @brief Sets up the happiness bar sprites
+ */
 void setup_happiness_sprites(){
 	_happiness_L0_sprite = create_sprite_xpm((xpm_map_t) happiness_bar_L0_xpm);
 	_happiness_L1_sprite = create_sprite_xpm((xpm_map_t) happiness_bar_L1_xpm);
@@ -675,6 +709,9 @@ void setup_happiness_sprites(){
 	_happiness_max_sprite = create_sprite_xpm((xpm_map_t) happiness_bar_max_xpm);
 }
 
+/**
+ * @brief Sets up the hunger bar sprites
+ */
 void setup_hunger_sprites(){
 	_hunger_L0_sprite = create_sprite_xpm((xpm_map_t) hunger_bar_L0_xpm);
 	_hunger_L1_sprite = create_sprite_xpm((xpm_map_t) hunger_bar_L1_xpm);
@@ -690,7 +727,9 @@ void setup_hunger_sprites(){
 	_hunger_max_sprite = create_sprite_xpm((xpm_map_t) hunger_bar_max_xpm);
 }
 
-
+/**
+ * @brief Frees the letter sprites that make up the font
+ */
 void cleanup_text_sprite() {
 	free(_A_sprite);
 	free(_B_sprite);
@@ -720,6 +759,9 @@ void cleanup_text_sprite() {
 	free(_Z_sprite);
 }
 
+/**
+ * @brief Frees the happiness bar sprites
+ */
 void cleanup_happiness_sprites(){
 	free(_happiness_L0_sprite);
 	free(_happiness_L1_sprite);
@@ -735,6 +777,9 @@ void cleanup_happiness_sprites(){
 	free(_happiness_max_sprite); 
 }
 
+/**
+ * @brief Frees the hunger bar sprites
+*/
 void cleanup_hunger_sprites(){
 	free(_hunger_L0_sprite);
 	free(_hunger_L1_sprite);
@@ -750,7 +795,9 @@ void cleanup_hunger_sprites(){
 	free(_hunger_max_sprite); 
 }
 
-
+/**
+ * @brief Sets up all the main sprites
+*/
 void setup_sprites(){
 	// Backgrounds
 	_bg_mainmenu_sprite = create_sprite_xpm((xpm_map_t) main_menu_bg_xpm);
@@ -803,6 +850,9 @@ void setup_sprites(){
 	_hotbar_select_sprite = create_sprite_xpm((xpm_map_t) hotbar_select_xpm);
 }
 
+/**
+ * @brief Switches the background from an index (We are using buffers to make the game faster)
+ */
 void switchBackground(uint8_t bg) {
 	switch (bg) {
 		case 0: // MainMenu
@@ -835,6 +885,9 @@ void switchBackground(uint8_t bg) {
 	}
 }
 
+/**
+ * @brief Function responsible for drawing the sprites on the screen
+ */
 int drawSprite(Sprite *sprite, int x, int y){
 	uint16_t height = sprite->height;
 	uint16_t width = sprite->width;
@@ -858,6 +911,9 @@ uint16_t sprite_get_height(Sprite* sprite){
 
 
 /*** Wrappers ***/
+/**
+ * @brief Draws the backfround (wrapper function)
+*/
 void wrapper_draw_background(uint8_t bufferIndex) {
 	switch (bufferIndex) {
 		case 0:

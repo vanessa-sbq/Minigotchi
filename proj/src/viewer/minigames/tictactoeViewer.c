@@ -15,6 +15,9 @@ TicTacToe* ticTacToeViewer_get_saved_ttt() {
     return _ttt;
 }
 
+/**
+ * @brief Calls draw function of each element the tic tac toe game contains (also draws the GUI elements when the game terminates)
+ */
 void ticTacToeViewer_draw() {
 
     vg_clear_screen();

@@ -12,7 +12,7 @@ void mainRoomViewer_setMainRoom(MainRoom* mr){
 }
 
 /**
- * @brief Calls draw function of each element the MainMenu contains
+ * @brief Calls draw function of each element the main room contains
  */
 void mainRoomViewer_draw(){
     vg_clear_screen();
@@ -39,8 +39,6 @@ void mainRoomViewer_draw(){
     }
 
     draw_cursor(mainRoom_get_cursor(mainRoom));
-
-
 
     vg_page_flip();
 }
