@@ -3,6 +3,9 @@
 static MainMenu *mainMenu = NULL;
 static collision_type_t currentButtonEvent = START;
 
+/**
+ * @brief Load the main menu (first time)
+ */
 void mainMenuController_load_mainMenu(){
     if (mainMenu == NULL){
         mainMenu = new_mainMenu();
@@ -10,6 +13,9 @@ void mainMenuController_load_mainMenu(){
     }
 }
 
+/**
+ * @brief Function that checks button collisions with the cursor
+ */
 collision_type_t mainMenuController_checkCollision(Button *button) {
     Cursor* cursor = mainMenu_get_cursor(mainMenu);
 
@@ -39,7 +45,9 @@ collision_type_t mainMenuController_getButtonEvent() {
     return currentButtonEvent;
 }
 
-
+/**
+ * @brief Controller function that is called once every frame and updates / checks every action in the main menu
+ */
 void mainMenuController_step(){
     mainMenuController_load_mainMenu();
 
@@ -62,6 +70,9 @@ void mainMenuController_step(){
     currentButtonEvent = NOP;
 }
 
+/**
+ * @brief Calls the main menu destructor
+ */
 void mainMenuController_delete_mainMenu(){
     delete_mainMenu(mainMenu);
 }
@@ -69,7 +80,6 @@ void mainMenuController_delete_mainMenu(){
 Cursor* getMainMenuCursor() {
     return mainMenu->cursor;
 }
-
 
 void setMainMenuCursor(Cursor* cursor) {
     mainMenu->cursor = cursor;

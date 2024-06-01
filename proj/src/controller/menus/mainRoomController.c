@@ -4,7 +4,9 @@ static MainRoom *mainRoom = NULL;
 static collision_type_mainRoom_t currentButtonEvent = NOP_MAINROOM;
 static Database* database;
 
-
+/**
+ * @brief Load the main room (first time)
+ */
 void mainRoomController_load_mainRoom(){
     if (mainRoom == NULL){
         setup_happiness_sprites();
@@ -18,10 +20,16 @@ void mainRoomController_load_mainRoom(){
     }
 }
 
+/**
+ * @brief Function that toggles the hotbar
+ */
 void mainRoomController_toggleHotbar() {
     mainRoom->hotbar->hidden = !mainRoom->hotbar->hidden;
 }
 
+/**
+ * @brief Function that enables going right on the hotbar
+ */
 void mainRoomController_Hotbar_goRight() {
     mainRoom->hotbar->highlighted++;
     mainRoom->hotbar->highlighted %= 9;
@@ -29,6 +37,9 @@ void mainRoomController_Hotbar_goRight() {
     
 }
 
+/**
+ * @brief Function that enables going left on the hotbar
+ */
 void mainRoomController_Hotbar_goLeft() {
     if (mainRoom->hotbar->highlighted == 0) {
         mainRoom->hotbar->highlighted = 9;
@@ -36,6 +47,9 @@ void mainRoomController_Hotbar_goLeft() {
     mainRoom->hotbar->highlighted--;
 }
 
+/**
+ * @brief Functions that handles the minigotchi feeding event, by removing the item from the hotbar and updating the minigotchi's hunger
+ */
 void mainRoomController_feed_minigotchi() {
     Hotbar* hotbar = mainRoom_get_hotbar(mainRoom);
     if (!hotbar_is_hidden(hotbar)){
@@ -54,6 +68,9 @@ void mainRoomController_feed_minigotchi() {
     }
 }
 
+/**
+ * @brief Function that checks sprite collisions with the cursor
+ */
 bool mainRoomController_checkCollision(Sprite* sprite, int x, int y) {
     Cursor* cursor = mainRoom_get_cursor(mainRoom);
 
@@ -87,6 +104,9 @@ void mainRoomController_setButtonEvent(collision_type_mainRoom_t ct) {
     currentButtonEvent = ct;
 }
 
+/**
+ * @brief Controller function that is called once every frame and updates / checks every action in the main room
+ */
 void mainRoomController_step(){
     mainRoomController_load_mainRoom();
     
@@ -129,6 +149,9 @@ void mainRoomController_step(){
 
 }
 
+/**
+ * @brief Calls the MainRoom destructor
+*/
 void mainRoomController_delete_mainRoom(){
     delete_mainRoom(mainRoom);
 }

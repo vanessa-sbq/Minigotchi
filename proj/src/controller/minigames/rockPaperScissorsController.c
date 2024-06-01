@@ -4,10 +4,16 @@ static RockPaperScissors *rockPaperScissors = NULL;
 static collision_type_rps_t currentButtonEvent = NOP_RPS;
 static bool canClick = true;
 
+/**
+ * @brief Flag to fix button overlapping (When a button before is clicked)
+ */
 void rps_set_canClick(){
     canClick = true;
 }
 
+/**
+ * @brief Load the Rock Paper Scissors minigame (first time)
+ */
 void rockPaperScissorsController_load_rockPaperScissors(){
     if (rockPaperScissors == NULL){
         rockPaperScissors = new_rockPaperScissors();
@@ -15,6 +21,9 @@ void rockPaperScissorsController_load_rockPaperScissors(){
     }
 }
 
+/**
+ * @brief Function that checks sprite collisions with the cursor
+ */
 bool rockPaperScissorsController_checkCollision(Sprite* sprite, int x, int y) {
     Cursor* cursor = rockPaperScissors_get_cursor(rockPaperScissors);
 
@@ -48,6 +57,9 @@ void rockPaperScissorsController_setButtonEvent(collision_type_rps_t ct){
     currentButtonEvent = ct;
 }
 
+/**
+ * @brief Controller function that is called once every frame and updates / checks every action in the Rock Paper Scissors minigame
+ */
 void rockPaperScissorsController_step(){
     rockPaperScissorsController_load_rockPaperScissors();
 
@@ -92,6 +104,10 @@ void rockPaperScissorsController_step(){
     }
 }
 
+/**
+ * @brief Processes a player choice by letting the bot play
+ * @details The bot chooses an option randomly and in case the player wins, he gets rewarded with an item
+ */
 void rockPaperScissorsController_process_choice(){
     srand(time(NULL));
     int bot_choice = rand() % 3; // "AI" that chooses his option
@@ -122,6 +138,9 @@ void rockPaperScissorsController_process_choice(){
     }
 }
 
+/**
+ * @brief Function that randomizes the reward (after each game)
+ */
 void rockPaperScissorsController_randomize_reward(){
     srand(time(NULL));
     int reward_id = (rand() % NUM_ITEMS) + 1;
@@ -129,6 +148,9 @@ void rockPaperScissorsController_randomize_reward(){
     rockPaperScissors_set_reward(rockPaperScissors, next_reward);
 }
 
+/**
+ * @brief Function that resets the game
+ */
 void rockPaperScissorsController_resetGame(){
     rockPaperScissors_set_rpsState(rockPaperScissors, RPS_PLAYING);
     button_set_activated(rockPaperScissors_get_rockButton(rockPaperScissors), true);
@@ -137,6 +159,9 @@ void rockPaperScissorsController_resetGame(){
     rockPaperScissorsController_randomize_reward(); // Choose a different reward next time
 }
 
+/**
+ * @brief Calls the Rock Paper Scissors destructor
+ */
 void rockPaperScissorsController_delete_rockPaperScissors(){
     delete_rockPaperScissors(rockPaperScissors);
 }

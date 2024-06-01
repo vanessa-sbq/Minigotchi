@@ -6,6 +6,9 @@ static NameMinigotchi *nameMinigotchi = NULL;
 static collision_type_nameMinigotchi_t currentButtonEvent = NOP_NAMEMINIGOTCHI;
 static bool keyReleased = true;
 
+/**
+ * @brief Load the minigotchi naming screen (first time)
+ */
 void nameMinigotchiController_load_nameMinigotchi() {
     if (nameMinigotchi == NULL){
         nameMinigotchi = new_nameMinigotchi();
@@ -14,6 +17,9 @@ void nameMinigotchiController_load_nameMinigotchi() {
     }
 }
 
+/**
+ * @brief Function that checks sprite collisions with the cursor
+ */
 bool nameMinigotchiController_checkCollision(Sprite* sprite, int x, int y) {
     Cursor* cursor = nameMinigotchi_get_cursor(nameMinigotchi);
 
@@ -51,6 +57,9 @@ void nameMinigotchi_setKeyReleased() {
     keyReleased = true;
 }
 
+/**
+ * @brief Controller function that is called once every frame and updates / checks every action in the minigotchi naming screen
+ */
 void nameMinigotchiController_step(uint8_t keyPress) {
 
     nameMinigotchiController_load_nameMinigotchi();
@@ -169,6 +178,9 @@ void setNameMinigotchiCursor(Cursor* cursor) {
     nameMinigotchi->cursor = cursor;
 }
 
+/**
+ * @brief Calls the minigotchi naming screen
+ */
 void nameMinigotchiController_delete_nameMinigotchi() {
     delete_nameMinigotchi(nameMinigotchi);
 }

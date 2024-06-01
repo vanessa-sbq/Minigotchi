@@ -3,6 +3,9 @@
 static MinigameMenu *minigameMenu = NULL;
 static collision_type_minigameMenu_t currentButtonEvent = NOP_MINIGAMEMENU;
 
+/**
+ * @brief Load the minigame selection menu (first time)
+ */
 void minigameMenuController_load_minigameMenu(){
     if (minigameMenu == NULL){
         minigameMenu = new_minigameMenu();
@@ -10,6 +13,9 @@ void minigameMenuController_load_minigameMenu(){
     }
 }
 
+/**
+ * @brief Function that checks sprite collisions with the cursor
+ */
 bool minigameMenuController_checkCollision(Sprite* sprite, int x, int y) {
     Cursor* cursor = minigameMenu_get_cursor(minigameMenu);
 
@@ -40,6 +46,9 @@ void minigameMenuController_setButtonEvent(collision_type_minigameMenu_t ct){
     currentButtonEvent = ct;
 }
 
+/**
+ * @brief Controller function that is called once every frame and updates / checks every action in the minigame selection menu
+ */
 void minigameMenuController_step(){
     minigameMenuController_load_minigameMenu();
     
@@ -62,6 +71,9 @@ void minigameMenuController_step(){
     }
 }
 
+/**
+ * @brief Calls the MinigameMenu destructor
+ */
 void minigameMenuController_delete_minigameMenu(){
     delete_minigameMenu(minigameMenu);
 }

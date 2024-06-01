@@ -12,7 +12,7 @@ void setDatabase(Database* database) {
 }
 
 /**
- * @brief Creates a new database 
+ * @brief Creates a new database "object" and returns a pointer to it
  */
 Database *new_database(){
     Database *database = malloc(sizeof(*database));
@@ -40,7 +40,7 @@ Database *new_database(){
 int database_load_from_file(Database *database){
     FILE *file = fopen(filePath, "r");
     if (file == NULL) {
-        perror("Error opening file");
+        printf("Error opening file");
         return 1;
     }
 
@@ -53,7 +53,7 @@ int database_load_from_file(Database *database){
     if (fgets(name, sizeof(name), file) != NULL) {
         printf("Name: %s\n", name);
     } else {
-        perror("Error reading minigotchi name");
+        printf("Error reading minigotchi name");
         fclose(file);
         return 1;
     }
@@ -62,7 +62,7 @@ int database_load_from_file(Database *database){
     if (fscanf(file, "%d", &hunger) == 1) {
         printf("Hunger: %d\n", hunger);
     } else {
-        perror("Error reading hunger status");
+        printf("Error reading hunger status");
         fclose(file);
         return 1;
     }
@@ -72,7 +72,7 @@ int database_load_from_file(Database *database){
         //database_set_happiness(_database, 2);
         printf("Happiness: %d\n", happiness);
     } else {
-        perror("Error reading happiness status");
+        printf("Error reading happiness status");
         fclose(file);
         return 1;
     }
@@ -81,7 +81,7 @@ int database_load_from_file(Database *database){
     if (fscanf(file, "%d", &coins) == 1) {
         printf("Coins: %d\n", coins);
     } else {
-        perror("Error reading coins");
+        printf("Error reading coins");
         fclose(file);
         return 1;
     }
@@ -113,7 +113,7 @@ int database_load_from_file(Database *database){
 int database_save_to_file(Database *db){
     FILE *file = fopen(filePath, "w");
     if (file == NULL) {
-        perror("Error opening file");
+        printf("Error opening file");
         return 1;
     }
 
@@ -136,7 +136,7 @@ bool database_check_file_exists(){ // TODO: Ref
 
         FILE *file = fopen(filePath, "w");
         if (file == NULL) {
-            perror("Error creating file\n");
+            printf("Error creating file\n");
             return false;
         }
 
@@ -172,6 +172,9 @@ int database_delete_file(){
     printf("File '%s' deleted successfully.\n", filePath);  // TODO: Remove (DEBUG)
     return 0;
 }
+
+
+// Getters and Setters
 
 int database_get_hunger(Database *db) {
     return db->minigotchi_hunger;

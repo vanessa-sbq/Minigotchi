@@ -11,10 +11,16 @@ static bool canClick = true;
 #define SYNC_BYTE 0x01
 #define ACK_BYTE 0x02
 
+/**
+ * @brief Flag to fix button overlapping (When a button before is clicked)
+ */
 void ttt_set_canClick(){
     canClick = true;
 }
 
+/**
+ * @brief Load the Tic Tac Toe minigame (first time)
+ */
 void ticTacToeController_load_tictactoe() {
      if (ttt == NULL){
         ttt = new_ticTacToe();
@@ -22,6 +28,9 @@ void ticTacToeController_load_tictactoe() {
     }
 }
 
+/**
+ * @brief Restore a saved Tic Tac Toe game
+ */
 TicTacToe* ticTacToeController_get_saved_ttt() {
     currentButtonEvent = NOP_TTT;
     currentPlayerPlayed = false;
@@ -31,6 +40,9 @@ TicTacToe* ticTacToeController_get_saved_ttt() {
     return ttt;
 }
 
+/**
+ * @brief Function that checks sprite collisions with the cursor
+ */
 bool ticTacToeController_checkCollisionWithSprites(Sprite* sprite, int x, int y) {
     int sprite_width = sprite_get_width(sprite);
     int sprite_height = sprite_get_height(sprite);
@@ -38,6 +50,9 @@ bool ticTacToeController_checkCollisionWithSprites(Sprite* sprite, int x, int y)
     return ticTacToe_checkCollision(x, y, sprite_width, sprite_height);
 }
 
+/**
+ * @brief Function that checks collisions with the cursor
+ */
 bool ticTacToe_checkCollision(int x, int y, int width, int height) {
     Cursor* cursor = ticTacToe_get_cursor(ttt);
 
@@ -68,6 +83,9 @@ void ticTacToeController_setButtonEvent(collision_type_ttt_t ct) {
     currentButtonEvent = ct;
 }
 
+/**
+ * @brief Sets the board position of the current player
+ */
 void currentPlayerSetPosition(uint8_t index) {
 
     if (ticTacToe_get_otherPlayersMoves(ttt)[index]) return; // Player cannot set it's move in other player's move.
@@ -86,7 +104,9 @@ void currentPlayerSetPosition(uint8_t index) {
     }
 }
 
-
+/**
+ * @brief Controller function that is called once every frame and updates / checks every action in the Tic Tac Toe minigame
+ */
 void ticTacToeController_step() {
     ticTacToeController_load_tictactoe();
 
@@ -282,6 +302,9 @@ void ticTacToeController_step() {
     
 }
 
+/**
+ * @brief Function that calls the Tic Tac Toe destructor
+ */
 void ticTacToeController_delete_tictactoe() {
     delete_ticTacToe(ttt);
 }
@@ -296,6 +319,9 @@ void setTicTacToeCursor(Cursor* cursor)  {
     ttt->cursor = cursor;
 }
 
+/**
+ * @brief Function that randomizes the reward (after each game)
+ */
 void ticTacToeController_randomize_reward(){
     srand(time(NULL));
     int reward_id = (rand() % NUM_ITEMS) + 1;
