@@ -1,3 +1,6 @@
+#ifndef _VECTOR_H_
+#define _VECTOR_H_
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -16,3 +19,5 @@ void resize_vector(Vector *vec, size_t new_capacity);
 void push_back(Vector *vec, uint8_t unsignedInt);
 void remove_at(Vector *vec, size_t index);
 void free_vector(Vector *vec);
+
+#endif /* _VECTOR_H_ */

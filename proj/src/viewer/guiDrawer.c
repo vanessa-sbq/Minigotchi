@@ -34,6 +34,7 @@
 #include "../sprites/xpms/minigames_menu_bg.xpm"
 #include "../sprites/xpms/tic_tac_toe_button.xpm"
 #include "../sprites/xpms/rps_button.xpm"
+#include "../sprites/xpms/exit_icon_small.xpm"
 
 // Items
 #include "../sprites/xpm_items/apple.xpm"
@@ -135,6 +136,7 @@ static Sprite* _rps_lose_sprite = NULL;
 static Sprite* _bot_chose_sprite = NULL;
 static Sprite* _exit_game_mini_sprite = NULL;
 static Sprite* _rps_button_sprite = NULL;
+static Sprite* _exit_game_small_sprite = NULL;
 
 // Items
 static Sprite* _empty_sprite = NULL;
@@ -263,6 +265,8 @@ Sprite* guiDrawer_get_button_sprite(int text_index){
 		case 10:
 			return guiDrawer_get_rps_button_sprite();
 			break;
+		case 11:
+			return guiDrawer_get_exitIconSmall_button_sprite();
 		default: break;
 	}
 	return NULL;
@@ -342,6 +346,10 @@ Sprite* guiDrawer_get_ttt_button_sprite(){
 
 Sprite* guiDrawer_get_rps_button_sprite(){
 	return _rps_button_sprite;
+}
+
+Sprite* guiDrawer_get_exitIconSmall_button_sprite(){
+	return _exit_game_small_sprite;
 }
 
 /**
@@ -538,6 +546,9 @@ Sprite* get_text_sprite_from_index(uint8_t index) {
 			break;
 		case 25:
 			return _Z_sprite;
+			break;
+		default: 
+			return NULL;
 			break;
 	}
 	return NULL;
@@ -815,6 +826,7 @@ void setup_sprites(){
 	// Icons
 	_minigames_icon_sprite =  create_sprite_xpm((xpm_map_t) minigames_icon_xpm);
 	_exit_game_mini_sprite = create_sprite_xpm((xpm_map_t) exitGame_mini_xpm);
+	_exit_game_small_sprite = create_sprite_xpm((xpm_map_t) exit_icon_small_xpm);
 
 	// Rock Paper Scissors
 	_rps_win_sprite =  create_sprite_xpm((xpm_map_t) rps_win_xpm);

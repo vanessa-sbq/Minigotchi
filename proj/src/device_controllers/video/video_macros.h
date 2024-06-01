@@ -14,6 +14,6 @@
 #define VIDEO_LINEAR_FRAMEBUF_MODE BIT(14)
 
 // Transparency color
-#define TRANSPARENT 0x000001 // FIXME: Might need to change
+#define TRANSPARENT 0x000001
 
 #endif /* _LCOM_VIDEO_MACROS_H */

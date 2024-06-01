@@ -131,7 +131,7 @@ int database_save_to_file(Database *db){
 /**
  * @brief Check if the player data file already exists. Creates the save file in case it doesn't exist
  */
-bool database_check_file_exists(){ // TODO: Ref
+bool database_check_file_exists(){
     if (access(filePath, F_OK) != 0) {
 
         FILE *file = fopen(filePath, "w");
@@ -151,11 +151,9 @@ bool database_check_file_exists(){ // TODO: Ref
 
         fclose(file);
 
-        printf("File '%s' created with default values.\n", filePath);  // TODO: Remove (DEBUG)
         return false;
     } 
     else{
-        printf("File '%s' exists.\n", filePath); // TODO: Remove (DEBUG)
         return true;
     }
     return false;
@@ -169,7 +167,6 @@ int database_delete_file(){
         printf("Error deleting save file");
         return 1;
     }
-    printf("File '%s' deleted successfully.\n", filePath);  // TODO: Remove (DEBUG)
     return 0;
 }
 

@@ -1,5 +1,7 @@
 #include <lcom/lcf.h>
 
+#include <ctype.h>
+
 #include "../../model/stateModels/mainRoom.h"
 #include "../../model/button.h"
 #include "../../model/cursor.h"

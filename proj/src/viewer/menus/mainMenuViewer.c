@@ -6,6 +6,7 @@ void mainMenuViewer_setMainMenu(MainMenu* mm){
     mainMenu = mm;
 }
 
+
 /**
  * @brief Calls draw function of each element the MainMenu contains
  */
@@ -15,7 +16,7 @@ void mainMenuViewer_draw(){
 
     draw_button(mainMenu->startNewButton);
     draw_button(mainMenu->quitButton);
-
+    
     draw_cursor(mainMenu->cursor);
     vg_page_flip();
 }

@@ -14,6 +14,36 @@ void mainRoomController_load_mainRoom(){
         database = getDatabase();
         mainRoom = new_mainRoom();
         mainRoomViewer_setMainRoom(mainRoom);
+        setup_text_sprite();
+        
+        // Load text into vector
+        char* minigotchiName = database_get_minigotchiName(database);
+        printf("Minini: %s\n", minigotchiName);
+
+        int i = 0;
+        /* do { 
+            printf("Char %d is %c\n", i, minigotchiName[i]);
+            i++;
+        } while (minigotchiName[i] != '\0'); */
+
+
+        if (getSpriteVector() == NULL) {
+            Vector* vector = init_vector(1);
+            while (true) {
+                char ch = minigotchiName[i];    
+                push_back(vector, (uint8_t)(ch - 'A'));
+                if (ch == '\0') break;
+                i++;
+            }
+            setSpriteVector(vector);
+        }
+        
+
+        
+        //spriteVector = init_vector(i - 1); // Store the chars in the vector
+
+        
+
 
         printf("%s \n", database->minigotchi_name);
         mainRoom->minigotchi->name = database->minigotchi_name;
