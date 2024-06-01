@@ -6,9 +6,9 @@ static bool currentPlayerPlayed = false;
 static uint8_t amountReceived = 0;
 static uint8_t lastKnownMove = 200;
 static bool game_end_screen_flag = true;
-static uint8_t ackn_host_buf[5];
-static uint8_t ackn_host_buf_idx = 0;
-static bool readyToSwitch = false;
+
+#define SYNC_BYTE 0x01
+#define ACK_BYTE 0x02
 
 void ticTacToeController_load_tictactoe() {
      if (ttt == NULL){
@@ -101,8 +101,7 @@ void ticTacToeController_step() {
             host_button = ticTacToe_get_hostButton(ttt);
             if (ticTacToeController_checkCollisionWithSprites(button_get_sprite(host_button), button_get_x(host_button), button_get_y(host_button))){
                 currentButtonEvent = HOST_TTT;
-                switchBackground(7);
-                //ticTacToe_set_state(ttt, CURRENT_PLAYER_TURN_TTT);
+                switchBackground(6);
                 ticTacToe_set_state(ttt, SERIAL_WAIT_HOST_TTT);
             }
 
@@ -111,47 +110,25 @@ void ticTacToeController_step() {
             if (ticTacToeController_checkCollisionWithSprites(button_get_sprite(guest_button), button_get_x(guest_button), button_get_y(guest_button))){
                 currentButtonEvent = GUEST_TTT;
                 switchBackground(7);
-                //ticTacToe_set_state(ttt, OTHER_PLAYER_TURN_TTT);
                 ticTacToe_set_state(ttt, SERIAL_WAIT_GUEST_TTT);
             }
 
             break;
         case SERIAL_WAIT_HOST_TTT:
-
-            if (isEmpty(serial_get_receive_queue())) {
-                serial_send_byte('S');
-            } else {
-                uint8_t value = dequeue(serial_get_receive_queue());
-                ackn_host_buf[ackn_host_buf_idx] = value;
-                ackn_host_buf_idx++;
-
-                if (ackn_host_buf_idx >= 5) {
-                    for (uint8_t i = 0; i < 5; i++) {
-                        ackn_host_buf[i] = 0;
-                    }
-                    ackn_host_buf_idx = 0;
-                }
-
-                switchBackground(6);
-                ticTacToe_set_state(ttt, CURRENT_PLAYER_TURN_TTT);
-            }
-
+            serial_send_byte(SYNC_BYTE);
+            ticTacToe_set_state(ttt, WAIT_FOR_GUEST_SYNC_TTT);
             break;
         case SERIAL_WAIT_GUEST_TTT:
-            if (isEmpty(serial_get_receive_queue())) {
-                for (int i = 0; i < 5 ;i++)
-                    serial_send_byte('S');
-                if (readyToSwitch) {
-                    switchBackground(7);
-                    ticTacToe_set_state(ttt, OTHER_PLAYER_TURN_TTT);
-                    readyToSwitch = false;
-                }
-            } else {
-
-                if (peek(serial_get_receive_queue()) == 'S') {
-                    dequeue(serial_get_receive_queue());
-                    readyToSwitch = true;
-                }
+            if (isEmpty(serial_get_receive_queue())) break;
+            if (dequeue(serial_get_receive_queue()) == SYNC_BYTE) {
+                serial_send_byte(ACK_BYTE);
+                ticTacToe_set_state(ttt, OTHER_PLAYER_TURN_TTT);
+            }
+            break;
+        case WAIT_FOR_GUEST_SYNC_TTT:
+            if (isEmpty(serial_get_receive_queue())) break;
+            if (dequeue(serial_get_receive_queue()) == ACK_BYTE) {
+                ticTacToe_set_state(ttt, CURRENT_PLAYER_TURN_TTT);
             }
             break;
         case CURRENT_PLAYER_TURN_TTT:

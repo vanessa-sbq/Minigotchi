@@ -225,6 +225,7 @@ int (proj_main_loop)(int argc, char **argv) {
 	
     uint8_t counter = 0;
     uint8_t scanCodeCounter = 0;
+	bool quitTTT = false;
 	while(!endGame) {
 		if (((getTimerCounter() - (sys_hz() / FPS)) == 0)){
 			minutes_aux_cnt++;
@@ -358,23 +359,31 @@ int (proj_main_loop)(int argc, char **argv) {
 					
 					break;
 				case MINIGAME_1:
-					ticTacToeController_step();
-					bool quitTTT = false;
-
-					if (ticTacToeController_getButtonEvent() == QUIT_TTT){ // Quit TicTacToe
-						quitTTT = true;
-					}
-
-					ticTacToeViewer_draw();
-					setTicTacToeCursor(cursor);
 
 					if (quitTTT) {
 						ticTacToeController_setButtonEvent(NOP_TTT);
 						reset_ticTacToe(ticTacToeController_get_saved_ttt());
 						reset_ticTacToe(ticTacToeViewer_get_saved_ttt());
-						switchBackground(1);
-						game_state = MAIN_ROOM;
-					}
+
+						if (!isEmpty(serial_get_receive_queue())) {
+							dequeue(serial_get_receive_queue());
+						} else {
+							switchBackground(1);
+							game_state = MAIN_ROOM;
+							quitTTT = false;
+						}
+						
+					} else {
+						ticTacToeController_step();
+						
+
+						if (ticTacToeController_getButtonEvent() == QUIT_TTT){ // Quit TicTacToe
+							quitTTT = true;
+						}
+
+						ticTacToeViewer_draw();
+						setTicTacToeCursor(cursor);
+					}					
 					break;
 				case MINIGAME_2:
 					rockPaperScissorsController_step();
