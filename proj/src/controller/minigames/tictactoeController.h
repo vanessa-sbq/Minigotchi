@@ -4,6 +4,8 @@
 #include "../../model/button.h"
 #include "../../model/cursor.h"
 
+#include "../../player_data/database.h"
+
 #include "../../viewer/minigames/tictactoeViewer.h"
 #include "../../viewer/guiDrawer.h"
 
@@ -20,4 +22,6 @@ void checkIfPlayerWon(uint8_t curI, uint8_t curPath[9], bool plays[9]);
 void ticTacToeController_step();
 void ticTacToeController_delete_tictactoe();
 Cursor* getTicTacToeCursor();
+TicTacToe* ticTacToeController_get_saved_ttt();
 void setTicTacToeCursor(Cursor* cursor);
+void ticTacToeController_randomize_reward();

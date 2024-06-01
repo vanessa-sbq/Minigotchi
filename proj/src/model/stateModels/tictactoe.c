@@ -6,11 +6,15 @@ TicTacToe *new_ticTacToe(){
     if (ttt == NULL) return NULL;
 
     // Initialize TTT
-    ttt->quitButton = new_button(0, 700, 1);
-    ttt->hostButton = new_button(0, 400, 6);
-    ttt->guestButton = new_button(0, 600, 7);
+    ttt->quitButton = new_button(990, 50, 8);
+    ttt->hostButton = new_button(388, 272, 6);
+    ttt->guestButton = new_button(388, 462, 7);
     ttt->cursor = new_cursor(400, 600);
     ttt->ticTacToeState = TX_RX_DECISION_TTT;
+    
+    srand(time(NULL));
+    int reward_id = (rand() % NUM_ITEMS) + 1;
+    ttt->reward = new_item(400, 500, reward_id, 1, 100);
     
     for (uint8_t i = 0; i < 9; i++) {
         ttt->otherPlayersMoves[i] = false;
@@ -54,14 +58,30 @@ bool ticTacToe_set_currentPlayersMoves(TicTacToe* ttt, uint8_t pos) {
     return false;
 }
 
-void delete_ticTacToe(TicTacToe *ttt){ 
-    if (ttt != NULL) {
-        button_delete(ttt->quitButton);
-        button_delete(ttt->guestButton);
-        button_delete(ttt->hostButton);
-        delete_cursor(ttt->cursor); // TODO: remove ?
-        free(ttt);
+void reset_ticTacToe(TicTacToe *ttt) {
+    ttt->ticTacToeState = TX_RX_DECISION_TTT;
+
+    for (uint8_t i = 0; i < 9; i++) {
+        ttt->otherPlayersMoves[i] = false;
+        ttt->currentPlayersMoves[i] = false;
     }
+
+    srand(time(NULL));
+    int reward_id = (rand() % NUM_ITEMS) + 1;
+    ttt->reward = new_item(400, 500, reward_id, 1, 100);
+}
+
+void delete_ticTacToe(TicTacToe *ttt){ 
+    button_delete(ttt->quitButton);
+    button_delete(ttt->guestButton);
+    button_delete(ttt->hostButton);
+    if (ttt->cursor != NULL) {
+        free(ttt->cursor);
+    }
+    if (ttt->reward != NULL) {
+        free(ttt->reward);
+    }
+    free(ttt);
 }
 
 state_ttt_t ticTacToe_get_state(TicTacToe* ttt) {
@@ -70,6 +90,14 @@ state_ttt_t ticTacToe_get_state(TicTacToe* ttt) {
 
 void ticTacToe_set_state(TicTacToe* ttt, state_ttt_t st) {
     ttt->ticTacToeState = st;
+}
+
+Item* ticTacToe_get_reward(TicTacToe* ttt){
+    return ttt->reward;
+}
+
+void ticTacToe_set_reward(TicTacToe* ttt, Item* item){
+    ttt->reward = item;
 }
 
 void undoChangeInCurrentPlayer(TicTacToe* ttt, uint8_t pos) {

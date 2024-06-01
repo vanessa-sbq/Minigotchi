@@ -21,7 +21,9 @@ Database *new_database(){
     
     int food_array[] = {0,0,0,0,0,0,0,0,0}; 
 
-    database->minigotchi_name = "Default";
+    char* tempName = "MINIGOTCHI";
+    memcpy(database->minigotchi_name, tempName, 11*sizeof(char));
+
     database->minigotchi_hunger = 1000;
     database->minigotchi_happiness = 1000; 
     database->coins = 0;
@@ -43,13 +45,13 @@ int database_load_from_file(Database *database){
     }
 
     // Variables to store the data
-    char name[100]; 
+    char name[11]; 
     int hunger, happiness, coins;
     int food_array[9];
 
     // Read Minigotchi name
     if (fgets(name, sizeof(name), file) != NULL) {
-        printf("Name: %s", name);
+        printf("Name: %s\n", name);
     } else {
         perror("Error reading minigotchi name");
         fclose(file);
@@ -99,42 +101,28 @@ int database_load_from_file(Database *database){
     database_set_happiness(database, happiness);
     database_set_hunger(database, hunger);
     database_set_coins(database, coins);
-    //int food_debug_array[] = {2, 3, 1, 0, 0, 0, 0, 0, 0};  // TODO: remove
-    //database_set_foodArray(database, food_debug_array);   // TODO: remove
     database_set_foodArray(database, food_array);
 
     fclose(file);
-    printf("File 'save.txt' created in '/usr' directory.\n");  // TODO: Remove (DEBUG)
-
     return 0;
 }
 
 /**
  * @brief Write the player data to the file to resume from where he started, the next time he opens the game 
  */
-int database_save_to_file(Database *database){
+int database_save_to_file(Database *db){
     FILE *file = fopen(filePath, "w");
     if (file == NULL) {
         perror("Error opening file");
         return 1;
     }
 
-    fprintf(file, "%s\n", database->minigotchi_name);
-    fprintf(file, "%d\n", database->minigotchi_hunger);
-    fprintf(file, "%d\n", database->minigotchi_happiness);
-    fprintf(file, "%d\n", database->coins);
+    fprintf(file, "%s\n", db->minigotchi_name);
+    fprintf(file, "%d\n", db->minigotchi_hunger);
+    fprintf(file, "%d\n", db->minigotchi_happiness);
+    fprintf(file, "%d\n", db->coins);
     for (int i = 0; i < 9; i++){
-        fprintf(file, "%d\n", database->food_array[i]);
-    }
-
-    // TODO: REMOVE (DEBUG)
-    printf("\nSaving...\n");
-    printf("%s\n", database->minigotchi_name);
-    printf("%d\n", database->minigotchi_hunger);
-    printf("%d\n", database->minigotchi_happiness);
-    printf("%d\n", database->coins);
-    for (int i = 0; i < 9; i++){
-        printf("%d\n", database->food_array[i]);
+        fprintf(file, "%d\n", db->food_array[i]);
     }
 
     return 0;
@@ -145,16 +133,15 @@ int database_save_to_file(Database *database){
  */
 bool database_check_file_exists(){ // TODO: Ref
     if (access(filePath, F_OK) != 0) {
-        printf("File '%s' does not exist.\n", filePath);  // TODO: Remove (DEBUG)
 
         FILE *file = fopen(filePath, "w");
         if (file == NULL) {
-            perror("Error creating file");
+            perror("Error creating file\n");
             return false;
         }
 
         // Write default values to the file
-        fprintf(file, "Mini\n");    // Default name
+        fprintf(file, "MINIGOTCHI\n");    // Default name
         fprintf(file, "%d\n", 1000);  // Default hunger
         fprintf(file, "%d\n", 1000);  // Default happiness
         fprintf(file, "%d\n", 0);  // Default coins
@@ -186,48 +173,48 @@ int database_delete_file(){
     return 0;
 }
 
-int database_get_hunger(Database *database) {
-    return database->minigotchi_hunger;
+int database_get_hunger(Database *db) {
+    return db->minigotchi_hunger;
 }
-int database_get_happiness(Database *database) {
-    return database->minigotchi_happiness;
+int database_get_happiness(Database *db) {
+    return db->minigotchi_happiness;
 }
-int database_get_coins(Database *database) {
-    return database->coins;
+int database_get_coins(Database *db) {
+    return db->coins;
 }
-char* database_get_minigotchiName(Database *database) {
-    return database->minigotchi_name;
-}
-
-int* database_get_foodArray(Database *database){
-    return database->food_array;
+char* database_get_minigotchiName(Database *db) {
+    return db->minigotchi_name;
 }
 
-
-void database_set_foodArray(Database *database, int* food_array){
-    memcpy(database->food_array, food_array, sizeof(database->food_array));
+int* database_get_foodArray(Database *db){
+    return db->food_array;
 }
 
-void database_set_hunger(Database *database, int value) {
-    database->minigotchi_hunger = value;
+
+void database_set_foodArray(Database *db, int* food_array){
+    memcpy(db->food_array, food_array, sizeof(db->food_array));
 }
-void database_set_happiness(Database *database, int value) {
-    database->minigotchi_happiness = value;
+
+void database_set_hunger(Database *db, int value) {
+    db->minigotchi_hunger = value;
 }
-void database_set_coins(Database *database, int value) {
-    database->coins = value;
+void database_set_happiness(Database *db, int value) {
+    db->minigotchi_happiness = value;
 }
-void database_set_minigotchiName(Database *database, char* value) {
-    database->minigotchi_name = value;
+void database_set_coins(Database *db, int value) {
+    db->coins = value;
+}
+void database_set_minigotchiName(Database *db, char* value) {
+    memcpy(db->minigotchi_name, value, 10*sizeof(char));
 }
 
 /**
  * @brief Searches for an empty slot on the hotbar and in case the hotbar is full doesn't add it
  */
-void database_add_food_to_array(Database *database, int food_item){
+void database_add_food_to_array(Database *db, int food_item){
     for (int i = 0; i < 9; i++){
-        if (database->food_array[i] == 0){
-            database->food_array[i] = food_item;
+        if (db->food_array[i] == 0){
+            db->food_array[i] = food_item;
             return;
         }
     }

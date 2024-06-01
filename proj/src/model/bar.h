@@ -12,9 +12,11 @@ typedef struct{
     int y;
 } Bar;
 
-Bar *new_bar(int x, int y, int level, int bar_type); // "Constructor"
+// "Constructor"
+Bar *new_bar(int x, int y, int level, int bar_type);
 
-void bar_delete(Bar *bar); // "Destructor"
+// "Destructor"
+void bar_delete(Bar *bar);
 
 void draw_bar(Bar *bar);
 

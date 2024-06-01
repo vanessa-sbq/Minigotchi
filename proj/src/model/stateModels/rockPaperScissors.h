@@ -22,7 +22,8 @@ typedef struct{
     Cursor *cursor;
 } RockPaperScissors;
 
-RockPaperScissors *new_rockPaperScissors(); // "Constructor"
+// "Constructor"
+RockPaperScissors *new_rockPaperScissors();
 
 void delete_rockPaperScissors(RockPaperScissors *rockPaperScissors);
 
@@ -40,7 +41,5 @@ collision_type_rps_t rockPaperScissors_get_botChoice(RockPaperScissors *rockPape
 void rockPaperScissors_set_rpsState(RockPaperScissors *rockPaperScissors, rps_state_t rpsState);
 void rockPaperScissors_set_reward(RockPaperScissors *rockPaperScissors, Item* reward);
 void rockPaperScissors_set_botChoice(RockPaperScissors *rockPaperScissors, collision_type_rps_t bot_choice);
-
-
 
 #endif /* _ROCKPAPERSCISSORS_H */

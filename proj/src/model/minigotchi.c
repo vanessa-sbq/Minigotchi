@@ -16,11 +16,10 @@ Minigotchi *new_minigotchi(int x, int y, uint32_t hunger, uint32_t happiness, ch
 
 void kill_minigotchi(Minigotchi *minigotchi) {
     free(minigotchi);
-    // TODO: Implement a function that let's us save the information about minigotchi
 }
 
 void draw_minigotchi(Minigotchi *minigotchi) {
-    drawSprite(minigotchi->sprite, minigotchi->x, minigotchi->y); // FIXME: Need to add a way to make this constsnt ?
+    drawSprite(minigotchi->sprite, minigotchi->x, minigotchi->y);
 }
 
 // Getters and setters

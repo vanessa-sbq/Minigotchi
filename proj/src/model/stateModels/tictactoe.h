@@ -5,8 +5,9 @@
 
 #include "../button.h"
 #include "../cursor.h"
+#include "../item.h"
 
-typedef enum {TX_RX_DECISION_TTT, CURRENT_PLAYER_TURN_TTT, OTHER_PLAYER_TURN_TTT, CPLAYER_WON, CPLAYER_LOST, EXIT_TTT, WAIT_ACK} state_ttt_t;
+typedef enum {TX_RX_DECISION_TTT, CURRENT_PLAYER_TURN_TTT, OTHER_PLAYER_TURN_TTT, CPLAYER_WON, CPLAYER_LOST, EXIT_TTT, WAIT_ACK, TIE_TTT, SERIAL_WAIT_HOST_TTT, SERIAL_WAIT_GUEST_TTT} state_ttt_t;
 
 typedef struct{
     Button *guestButton;
@@ -14,16 +15,22 @@ typedef struct{
     Button *quitButton;
     Cursor *cursor;
     state_ttt_t ticTacToeState;
+    Item* reward;
     bool otherPlayersMoves[9];
     bool currentPlayersMoves[9];
 } TicTacToe;
 
 TicTacToe *new_ticTacToe();
 
+void reset_ticTacToe();
+
 void delete_ticTacToe(TicTacToe *ttt);
 
 state_ttt_t ticTacToe_get_state(TicTacToe* ttt);
 void ticTacToe_set_state(TicTacToe* ttt, state_ttt_t st);
+
+Item* ticTacToe_get_reward(TicTacToe* ttt);
+void ticTacToe_set_reward(TicTacToe* ttt, Item* item);
 
 bool* ticTacToe_get_otherPlayersMoves(TicTacToe* ttt);
 bool* ticTacToe_get_currentPlayersMoves(TicTacToe* ttt);

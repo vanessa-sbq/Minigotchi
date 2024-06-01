@@ -10,9 +10,11 @@ typedef struct{
     bool isClicked;
 } Cursor;
 
-Cursor *new_cursor(int x, int y); // "Constructor"
+// "Constructor"
+Cursor *new_cursor(int x, int y);
 
-void delete_cursor(Cursor *cursor); // "Destructor"
+// "Destructor"
+void delete_cursor(Cursor *cursor);
 
 void draw_cursor(Cursor *cursor);
 

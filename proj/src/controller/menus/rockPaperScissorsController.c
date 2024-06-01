@@ -2,7 +2,6 @@
 
 static RockPaperScissors *rockPaperScissors = NULL;
 static collision_type_rps_t currentButtonEvent = NOP_RPS;
-//static collision_type_rps_t bot_choice = NOP_RPS;
 
 void rockPaperScissorsController_load_rockPaperScissors(){
     if (rockPaperScissors == NULL){

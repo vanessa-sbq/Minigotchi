@@ -101,7 +101,7 @@ void serial_exit(){
 
 /* Functions that help use uart */
 Queue* serial_get_receive_queue(){
-    return rxQueue; // FIXME
+    return rxQueue;
 }
 
 void serial_interrupt_handler(){
@@ -127,9 +127,6 @@ int serial_clear_interrupts(){
         printf("Error in sys_outb()\n");
         return 1;
     }
-    /* while(!isEmpty(receive_queue)){
-        dequeue(receive_queue);
-    } */
 
     return 0;
 }

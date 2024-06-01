@@ -12,7 +12,9 @@ void mainRoomController_load_mainRoom(){
         database = getDatabase();
         mainRoom = new_mainRoom();
         mainRoomViewer_setMainRoom(mainRoom);
-        mainRoom->minigotchi->name = database_get_minigotchiName(database);
+
+        printf("%s \n", database->minigotchi_name);
+        mainRoom->minigotchi->name = database->minigotchi_name;
     }
 }
 
@@ -31,7 +33,7 @@ void mainRoomController_Hotbar_goLeft() {
     if (mainRoom->hotbar->highlighted == 0) {
         mainRoom->hotbar->highlighted = 9;
     }
-    mainRoom->hotbar->highlighted--; // 1111 1111 1111 1111
+    mainRoom->hotbar->highlighted--;
 }
 
 void mainRoomController_feed_minigotchi() {
@@ -39,11 +41,10 @@ void mainRoomController_feed_minigotchi() {
     if (!hotbar_is_hidden(hotbar)){
         uint8_t highlighted_index = hotbar_get_highlighted(hotbar);
         Item* highlighted_item = hotbar_get_highlighted_item(hotbar);
-        if (item_get_id(highlighted_item) != 0){ // Make sure there is an item
-            if ((item_get_feedLevel(highlighted_item) + database_get_hunger(database)) >= MAX_HUNGER){
+        if (item_get_id(highlighted_item) != 0){
+            if ((item_get_feedLevel(highlighted_item) + database_get_hunger(database)) >= MAX_HUNGER) {
                 database_set_hunger(database, MAX_HUNGER);
-            }
-            else{
+            } else {
                 database_set_hunger(database, database_get_hunger(database) + item_get_feedLevel(highlighted_item));
             }
             int* food_array = database_get_foodArray(database); 
@@ -116,12 +117,12 @@ void mainRoomController_step(){
     hotbar_update_items(hotbar, database_get_foodArray(getDatabase())); // Load database items into hotbar
 
     Minigotchi* minigotchi = mainRoom_get_minigotchi(mainRoom);
-    if (mainRoomController_checkCollision(minigotchi_get_sprite(minigotchi), minigotchi_get_x(minigotchi), minigotchi_get_y(minigotchi))){
+    if (mainRoomController_checkCollision(minigotchi_get_sprite(minigotchi), minigotchi_get_x(minigotchi), minigotchi_get_y(minigotchi))) {
         minigotchi_set_sprite(minigotchi, guiDrawer_get_minigotchi_cuddle_sprite());
         minigotchi_set_cuddles(minigotchi, true);
         int current_happiness = database_get_happiness(getDatabase());
         if (current_happiness < MAX_HUNGER) database_set_happiness(getDatabase(), current_happiness + 1);
-    }else{
+    } else {
         minigotchi_set_sprite(minigotchi, guiDrawer_get_minigotchi_normal_sprite());
         minigotchi_set_cuddles(minigotchi, false);
     }

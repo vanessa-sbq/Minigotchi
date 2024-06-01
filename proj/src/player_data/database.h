@@ -6,7 +6,7 @@
 #include <dirent.h>
 
 typedef struct{
-    char* minigotchi_name;
+    char minigotchi_name[11];
     int minigotchi_hunger;
     int minigotchi_happiness;
     int coins;

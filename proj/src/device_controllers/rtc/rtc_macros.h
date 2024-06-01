@@ -24,8 +24,6 @@
 #define RTC_REG_B 11
 #define RTC_REG_C 12   
 
-// TODO: Are all needed???
-
 #define RTC_DC 0xC0
 
 #define RTC_UIP BIT(7)

@@ -14,7 +14,8 @@ typedef struct{
     Cursor *cursor;
 } MinigameMenu;
 
-MinigameMenu *new_minigameMenu(); // "Constructor"
+// "Constructor"
+MinigameMenu *new_minigameMenu(); 
 
 void delete_minigameMenu(MinigameMenu *minigameMenu);
 

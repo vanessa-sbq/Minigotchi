@@ -11,11 +11,9 @@ void mainMenuViewer_setMainMenu(MainMenu* mm){
  */
 void mainMenuViewer_draw(){
     vg_clear_screen();
-    wrapper_draw_background();
-    //vg_draw_rectangle(0, 0, 1152, 864, 0xFF123);
+    wrapper_draw_background(0);
 
     draw_button(mainMenu->startNewButton);
-    //draw_button(mainMenu->continueButton);
     draw_button(mainMenu->quitButton);
 
     draw_cursor(mainMenu->cursor);

@@ -7,11 +7,11 @@ MainRoom *new_mainRoom(){
     if (mainRoom == NULL) return NULL;
 
     // Initialize MainRoom
-    mainRoom->minigotchi = new_minigotchi(467, 400, 100, 100, "John Doe");
+    mainRoom->minigotchi = new_minigotchi(467, 370, 100, 100, "MINIGOTCHI");
     mainRoom->miniGamesButton = new_button(10, 10, 2);
     mainRoom->quitButton = new_button(886, 10, 1);
-    mainRoom->happinessBar = new_bar(10, 100, 1000, 0); // FIXME: Might need to change arguments
-    mainRoom->hungerBar = new_bar(10, 150, 1000, 1); // FIXME: Might need to change arguments
+    mainRoom->happinessBar = new_bar(10, 100, 1000, 0);
+    mainRoom->hungerBar = new_bar(10, 150, 1000, 1);
     mainRoom->cursor = new_cursor(400, 600); 
     mainRoom->hotbar = new_hotbar(213, 750, 0);
     return mainRoom;

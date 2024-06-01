@@ -13,7 +13,7 @@ void rockPaperScissorsViewer_draw(){
     vg_clear_screen();
 
     // Background elements
-    wrapper_draw_background();
+    wrapper_draw_background(0);
 
     // Foreground elements
     draw_button(rockPaperScissors_get_rockButton(rockPaperScissors));

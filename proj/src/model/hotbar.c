@@ -36,7 +36,6 @@ bool hotbar_is_hidden(Hotbar* hotbar){
 }
 
 void drawHotbar(Hotbar *hotbar) {
-    drawSprite(hotbar->sprite, hotbar->x, hotbar->y);
     for (int i = 0; i < 9; i++){
         draw_item(hotbar->item_array[i]);
     }
@@ -57,10 +56,8 @@ void hotbar_set_items(Hotbar *hotbar, Item* item_array){
 void hotbar_update_items(Hotbar *hotbar, int* item_array){
     for (int i = 0; i < 9; i++){
         if (item_get_id(hotbar->item_array[i]) != item_array[i]){
-            printf("Item %u needs to be updated\n", i); // TODO: REMOVE (DEBUG)
             Item* item = new_item(HOTBAR_START_SLOT_X + HOTBAR_SLOT_WIDTH * i, HOTBAR_START_SLOT_Y, item_array[i], 1, 300);
             hotbar->item_array[i] = item;
-            // FIXME: REMOVE OLD ITEMS
         } 
     }
 }

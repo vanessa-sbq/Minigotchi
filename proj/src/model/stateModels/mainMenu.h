@@ -13,11 +13,11 @@ typedef struct{
     Cursor *cursor;
 } MainMenu;
 
-MainMenu *new_mainMenu(); // "Constructor"
+// "Constructor"
+MainMenu *new_mainMenu(); 
 
-void delete_mainMenu(MainMenu *mainMenu); // "Destructor"
-
-void draw_mainMenu(MainMenu *mainMenu);
+// "Destructor"
+void delete_mainMenu(MainMenu *mainMenu); 
 
 // Getters and setters
 Button* mainMenu_get_startNewButton(MainMenu *mainMenu);

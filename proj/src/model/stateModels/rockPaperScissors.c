@@ -63,8 +63,6 @@ collision_type_rps_t rockPaperScissors_get_botChoice(RockPaperScissors *rockPape
     return rockPaperScissors->bot_choice;
 }
 
-
-
 void rockPaperScissors_set_rpsState(RockPaperScissors *rockPaperScissors, rps_state_t rpsState){
     rockPaperScissors->rps_state = rpsState;
 }

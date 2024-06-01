@@ -49,10 +49,16 @@ void minigameMenuController_step(){
         currentButtonEvent = QUIT_MINIGAMEMENU;
     }
 
+    // Check if "Tic tac toe" clicked
+    Button* ttt_button = minigameMenu_get_tttButton(minigameMenu);
+    if (minigameMenuController_checkCollision(button_get_sprite(ttt_button), button_get_x(ttt_button), button_get_y(ttt_button))){
+        currentButtonEvent = MINIGAME1_MINIGAMEMENU;
+    }
+
     // Check if "Rock Paper Scissors" clicked
     Button* rps_button = minigameMenu_get_rpsButton(minigameMenu);
     if (minigameMenuController_checkCollision(button_get_sprite(rps_button), button_get_x(rps_button), button_get_y(rps_button))){
-        currentButtonEvent = MINIGAME1_MINIGAMEMENU;
+        currentButtonEvent = MINIGAME2_MINIGAMEMENU;
     }
 }
 

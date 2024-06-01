@@ -19,7 +19,7 @@ void nameMinigotchiViewer_draw(){
     vg_clear_screen();
 
     // Background elements
-    wrapper_draw_background();
+    wrapper_draw_background(0);
 
     // Foreground elements
     draw_button(nameMinigotchi_get_continueButton(nameMinigotchi));

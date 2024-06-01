@@ -5,12 +5,25 @@ static collision_type_ttt_t currentButtonEvent = NOP_TTT;
 static bool currentPlayerPlayed = false;
 static uint8_t amountReceived = 0;
 static uint8_t lastKnownMove = 200;
+static bool game_end_screen_flag = true;
+static uint8_t ackn_host_buf[5];
+static uint8_t ackn_host_buf_idx = 0;
+static bool readyToSwitch = false;
 
 void ticTacToeController_load_tictactoe() {
      if (ttt == NULL){
         ttt = new_ticTacToe();
         ticTacToeViewer_setTicTacToe(ttt);
     }
+}
+
+TicTacToe* ticTacToeController_get_saved_ttt() {
+    currentButtonEvent = NOP_TTT;
+    currentPlayerPlayed = false;
+    amountReceived = 0;
+    lastKnownMove = 200;
+    game_end_screen_flag = true;
+    return ttt;
 }
 
 bool ticTacToeController_checkCollisionWithSprites(Sprite* sprite, int x, int y) {
@@ -76,21 +89,21 @@ void ticTacToeController_step() {
     uint8_t other_player_index = 200;
     bool errorOccoured = false;
 
+   // Check if "Quit" clicked
+    quit_button = ticTacToe_get_quitButton(ttt);
+    if (ticTacToeController_checkCollisionWithSprites(button_get_sprite(quit_button), button_get_x(quit_button), button_get_y(quit_button))){
+        currentButtonEvent = QUIT_TTT;
+    }
+
     switch (currentTicTacToe) {
         case TX_RX_DECISION_TTT:
-
-            // Check if "Quit" clicked
-            quit_button = ticTacToe_get_quitButton(ttt);
-            if (ticTacToeController_checkCollisionWithSprites(button_get_sprite(quit_button), button_get_x(quit_button), button_get_y(quit_button))){
-                currentButtonEvent = QUIT_TTT;
-            }
-
             // Check if "Host" clicked
             host_button = ticTacToe_get_hostButton(ttt);
             if (ticTacToeController_checkCollisionWithSprites(button_get_sprite(host_button), button_get_x(host_button), button_get_y(host_button))){
                 currentButtonEvent = HOST_TTT;
-                switchBackground(6);
-                ticTacToe_set_state(ttt, CURRENT_PLAYER_TURN_TTT);
+                switchBackground(7);
+                //ticTacToe_set_state(ttt, CURRENT_PLAYER_TURN_TTT);
+                ticTacToe_set_state(ttt, SERIAL_WAIT_HOST_TTT);
             }
 
             // Check if "Guest" clicked
@@ -98,14 +111,50 @@ void ticTacToeController_step() {
             if (ticTacToeController_checkCollisionWithSprites(button_get_sprite(guest_button), button_get_x(guest_button), button_get_y(guest_button))){
                 currentButtonEvent = GUEST_TTT;
                 switchBackground(7);
-                ticTacToe_set_state(ttt, OTHER_PLAYER_TURN_TTT);
+                //ticTacToe_set_state(ttt, OTHER_PLAYER_TURN_TTT);
+                ticTacToe_set_state(ttt, SERIAL_WAIT_GUEST_TTT);
             }
 
             break;
+        case SERIAL_WAIT_HOST_TTT:
+
+            if (isEmpty(serial_get_receive_queue())) {
+                serial_send_byte('S');
+            } else {
+                uint8_t value = dequeue(serial_get_receive_queue());
+                ackn_host_buf[ackn_host_buf_idx] = value;
+                ackn_host_buf_idx++;
+
+                if (ackn_host_buf_idx >= 5) {
+                    for (uint8_t i = 0; i < 5; i++) {
+                        ackn_host_buf[i] = 0;
+                    }
+                    ackn_host_buf_idx = 0;
+                }
+
+                switchBackground(6);
+                ticTacToe_set_state(ttt, CURRENT_PLAYER_TURN_TTT);
+            }
+
+            break;
+        case SERIAL_WAIT_GUEST_TTT:
+            if (isEmpty(serial_get_receive_queue())) {
+                for (int i = 0; i < 5 ;i++)
+                    serial_send_byte('S');
+                if (readyToSwitch) {
+                    switchBackground(7);
+                    ticTacToe_set_state(ttt, OTHER_PLAYER_TURN_TTT);
+                    readyToSwitch = false;
+                }
+            } else {
+
+                if (peek(serial_get_receive_queue()) == 'S') {
+                    dequeue(serial_get_receive_queue());
+                    readyToSwitch = true;
+                }
+            }
+            break;
         case CURRENT_PLAYER_TURN_TTT:
-
-            // Does something to check if current player has placed their spot on the grid
-
             if (!currentPlayerPlayed) {
 
                 if (ticTacToe_checkCollision(246, 110, 213, 213)) currentPlayerSetPosition(0);
@@ -122,13 +171,6 @@ void ticTacToeController_step() {
             } else {
                 ticTacToe_set_state(ttt, OTHER_PLAYER_TURN_TTT);
             }
-
-            // If they did then we need to:
-
-            // Send data to other user.
-            // Wait for acknoledgment ?
-            // Switch backgrounds.
-
             
             break;
         case OTHER_PLAYER_TURN_TTT:
@@ -138,7 +180,6 @@ void ticTacToeController_step() {
 
             bool val = dequeue(serial_get_receive_queue());
 
-            printf("received value %u: %u\n", amountReceived, val);
             if (val) {
                 ticTacToe_set_otherPlayersMoves(ttt, amountReceived);
             }
@@ -146,11 +187,11 @@ void ticTacToeController_step() {
 
             if (amountReceived == 8) {
                 val = dequeue(serial_get_receive_queue());
-
-                printf("received value %u: %u\n", amountReceived, val);
+                
                 if (val) {
                     ticTacToe_set_otherPlayersMoves(ttt, amountReceived);
                 }
+
                 // Check if position is valid and acknoledge
                 errorOccoured = false;
                 for (uint8_t i = 0; i < 9; i++) {
@@ -175,6 +216,7 @@ void ticTacToeController_step() {
             
             break;
         case EXIT_TTT:
+            ticTacToeMayBeResetNow();
             break;
         case WAIT_ACK:
             if (isEmpty(serial_get_receive_queue())) return;
@@ -196,25 +238,18 @@ void ticTacToeController_step() {
             break;
     }
     
-    // Check if someone won...
-
-    /*
-    
-    xxx     ---     ---
-    ---     xxx     ---
-    ---     ---     xxx
-
-    x--     -x-     --x
-    x--     -x-     --x
-    x--     -x-     --x
-
-    x--     --x
-    -x-     -x-
-    --x     x--
-
-    */
-
-    if (currentTicTacToe == CPLAYER_LOST || currentTicTacToe == CPLAYER_WON) return;
+    if (currentTicTacToe == CPLAYER_LOST || currentTicTacToe == CPLAYER_WON || currentTicTacToe == TIE_TTT){
+        if (game_end_screen_flag){
+            game_end_screen_flag = false;
+            switchBackground(5); 
+            
+            if (currentTicTacToe == CPLAYER_WON){
+                Item* reward = ticTacToe_get_reward(ttt);
+                database_add_food_to_array(getDatabase(), item_get_id(reward));
+            }
+        }
+        return;
+    }
 
     bool playerWon = false;
     
@@ -230,7 +265,6 @@ void ticTacToeController_step() {
 
     if (playerWon) {
         ticTacToe_set_state(ttt, CPLAYER_LOST);
-        printf("The other player won");
         return;
     }
 
@@ -246,9 +280,20 @@ void ticTacToeController_step() {
    
     if (playerWon) {
         ticTacToe_set_state(ttt, CPLAYER_WON);
-        printf("The current player won");
         return;
     }
+
+    
+    uint8_t counter = 0;
+    for (uint8_t i = 0; i < 9; i++){
+        if (ticTacToe_get_currentPlayersMoves(ttt)[i] || ticTacToe_get_otherPlayersMoves(ttt)[i]) counter++;
+    } 
+    
+    if (!playerWon && counter == 9){ // Tie
+        ticTacToe_set_state(ttt, TIE_TTT);
+        return;
+    } 
+    
 }
 
 void ticTacToeController_delete_tictactoe() {
@@ -265,3 +310,9 @@ void setTicTacToeCursor(Cursor* cursor)  {
     ttt->cursor = cursor;
 }
 
+void ticTacToeController_randomize_reward(){
+    srand(time(NULL));
+    int reward_id = (rand() % NUM_ITEMS) + 1;
+    Item* next_reward = new_item(700, 500, reward_id, 1, 100);
+    ticTacToe_set_reward(ttt, next_reward);
+}

@@ -5,7 +5,7 @@ Bar *new_bar(int x, int y, int level, int bar_type) {
     if (bar == NULL) return NULL;
 
     // Initialize Bar
-    bar->sprite = guiDrawer_get_bar_sprite(bar_type, level); // TODO: Switch case to create ranges for specific sprites with bar
+    bar->sprite = guiDrawer_get_bar_sprite(bar_type, level);
     bar->level = level; 
     bar->x = x; 
     bar->y = y;

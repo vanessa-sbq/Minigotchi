@@ -1,6 +1,5 @@
 #include <lcom/lcf.h>
 #include "video_macros.h"
-//#include "../../viewer/guiDrawer.h"
 
 #ifndef __VIDEO_H
 #define __VIDEO_H

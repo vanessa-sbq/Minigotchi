@@ -39,6 +39,7 @@ Sprite* guiDrawer_get_rpsWin_sprite();
 Sprite* guiDrawer_get_rpsTie_sprite();
 Sprite* guiDrawer_get_rpsLose_sprite();
 Sprite* guiDrawer_get_botChose_sprite();
+Sprite* guiDrawer_get_exitGameIcon_sprite();
 
 Sprite* guiDrawer_get_happiness_level_sprite_from_index(uint8_t index);
 void setup_happiness_sprites();
@@ -75,6 +76,6 @@ uint16_t sprite_get_height(Sprite* sprite);
 void switchBackground(uint8_t bg);
 
 // Wrappers
-void wrapper_draw_background(/**/);
+void wrapper_draw_background(uint8_t bufferIndex);
 
 #endif /* __GUIDRAWER_H */

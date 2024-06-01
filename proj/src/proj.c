@@ -50,20 +50,15 @@
 // Database
 static Database* database;
 
-
-// TODO: Might need to add/remove some states
 typedef enum {MAIN_MENU, MAIN_ROOM, NAME_MINIGOTCHI, MINIGAMES_WINDOW, MINIGAME_1, MINIGAME_2, EXIT} state_t;
 typedef enum {DAY, EVENING, NIGHT} timeOfDay_t;
-static state_t game_state = MAIN_MENU; // Game's current state
-static bool newGame = false; // Check if playing for the first time
+static state_t game_state = MAIN_MENU;
+static bool newGame = false;
 static timeOfDay_t dateTime;
-//static char* minigotchi_name = "John Doe";
 
 
 int main(int argc, char *argv[]) {
 	lcf_set_language("EN-US");
-	//lcf_trace_calls("/home/lcom/labs/proj/src/trace.txt");  
-	lcf_log_output("/home/lcom/labs/proj/src/output.txt"); 
 	if (lcf_start(argc, argv)) return 1;
 	lcf_cleanup();
 	return 0;
@@ -73,22 +68,19 @@ void proj_set_state(state_t state){
 	game_state = state;
 }
 
-// TODO: FIX AND DON'T USE
 int16_t twosComplementToBinary(int16_t n) {
-	// Sign extraction
 	int8_t sign = ((n & 0x0100) >> 8) ;
-	if (sign){ // If bit is set then it's a negative number (2's complement).
-		n = ~n + 1; // Convert from 2's complement to normal representation.
-		n = n & 0x01FF; // We are dealing with a 16 bit number...
+	if (sign){
+		n = ~n + 1;
+		n = n & 0x01FF;
 		return -n;
 	}
 	return n;
 }
 
-// TODO: FIX AND DON'T USE
 int twosComplementToSignedInt(unsigned char value) {
     if (value & 0x80) {
-        return (int)((unsigned int)value | 0xFFFFFF00); // Extend sign bit
+        return (int)((unsigned int)value | 0xFFFFFF00);
     } else {
         return (int)value;
     }
@@ -98,22 +90,22 @@ int twosComplementToSignedInt(unsigned char value) {
 int (proj_main_loop)(int argc, char **argv) {
 	// Get mode information
 	if (video_get_mode_information(0x14C) != 0){
-		printf("Error in video_get_mode_information()\n");
-		if (vg_exit() != 0) printf("Error in vg_exit()\n");
+		panic("Error in video_get_mode_information()\n");
+		if (vg_exit() != 0) panic("Error in vg_exit()\n");
 		return 1;
 	}
 
 	// Write to VRAM to display on the screen what is requested
 	if (video_map_vram() != 0){
-		printf("Error in video_write_to_vram()\n");
-		if (vg_exit() != 0) printf("Error in vg_exit()\n");
+		panic("Error in video_write_to_vram()\n");
+		if (vg_exit() != 0) panic("Error in vg_exit()\n");
 		return 1;
 	}
 
     // Configure video card for desired graphics mode
 	if (video_set_graphics_mode(0x14C) != 0){
-		printf("Error in video_set_graphics_mode()\n");
-		if (vg_exit() != 0) printf("Error in vg_exit()\n");
+		panic("Error in video_set_graphics_mode()\n");
+		if (vg_exit() != 0) panic("Error in vg_exit()\n");
 		return 1;
 	}
 
@@ -164,12 +156,9 @@ int (proj_main_loop)(int argc, char **argv) {
 
 	RTC_Config rtcConfig = rtc_get_config();
 
-	printf("Time: %x\n", rtcConfig.hours);
-
 	if (rtcConfig.hours >= 0x08 && rtcConfig.hours < 0x18) { // Day time
 
 		setRTCWindow(guiDrawer_get_day_window());
-		printf("Day\n");
 		dateTime = DAY;
 		if (rtc_set_alarm(0,0x00,0x18) != 0) {
 			return 1;
@@ -177,7 +166,6 @@ int (proj_main_loop)(int argc, char **argv) {
 
 	} else if (rtcConfig.hours >= 0x18 && rtcConfig.hours < 0x21) { // Evening time
 		setRTCWindow(guiDrawer_get_evening_window());
-		printf("Evening\n");
 		dateTime = EVENING;
 		if (rtc_set_alarm(0,0x00,0x21) != 0) {
 			return 1;
@@ -187,7 +175,6 @@ int (proj_main_loop)(int argc, char **argv) {
 
 		setRTCWindow(guiDrawer_get_night_window());
 		dateTime = NIGHT;
-		printf("Night\n");
 		if (rtc_set_alarm(0,0x00,0x08) != 0) {
 			return 1;
 		}
@@ -210,24 +197,23 @@ int (proj_main_loop)(int argc, char **argv) {
 	uint8_t timer_irq_set = BIT(timer_bit_no);
 	uint32_t rtc_irq_set = BIT(rtc_bit_no);
 	bool endGame = false;
+	bool canSave = true;
 
 	int ipc_status, r;
 
 	// Get database instance
 	database = new_database();
-	if (database_check_file_exists()){ // Check if save file exists
-		newGame = false; // Not playing for the first time
+	if (database_check_file_exists()){
+		newGame = false;
 		database_load_from_file(database);
 	} else {
-		newGame = true; // Playing for the first time (database_check_file_exists() automatically creates new save file)
+		newGame = true;
 	}
 	setDatabase(database);
 
-	// These are variables that are going to be dynamically assigned depending on the game state.
 	Cursor* cursor = new_cursor(100, 100);
 	switchBackground(0);
 
-	// Timers to keep track of bars
 	int minutes_passed = 0;
 	int minutes_aux_cnt = 0;
 
@@ -276,6 +262,7 @@ int (proj_main_loop)(int argc, char **argv) {
 					if (nameMinigotchiController_getButtonEvent() == QUIT_NAMEMINIGOTCHI) {
 						database_delete_file(database);
 						nameMinigotchiController_delete_nameMinigotchi();
+						canSave = false;
 						endGame = true;
 						break;
 					}
@@ -300,6 +287,7 @@ int (proj_main_loop)(int argc, char **argv) {
 
 					if (mainMenuController_getButtonEvent() == QUIT){ // Quit the game
 						mainMenuController_delete_mainMenu(); // Free the main menu
+						canSave = false;
 						endGame = true;
 					}
 					break;
@@ -309,7 +297,6 @@ int (proj_main_loop)(int argc, char **argv) {
 					
 					setMainRoomCursor(cursor);
 
-					// We only want to read the keyboard if the driver receive loop has finished writting to the buffer.
 					if (lockKeyboard) {
 						scancode_first_byte = scanCodes[0];
 						scancode_second_byte = scanCodes[1];
@@ -325,8 +312,7 @@ int (proj_main_loop)(int argc, char **argv) {
 							}
 						
 
-						// Call necessary function...
-						if (scanCodes[0] == 0x12) {
+						if (scanCodes[0] == E) {
 							mainRoomController_toggleHotbar();
 						}
 						
@@ -335,25 +321,18 @@ int (proj_main_loop)(int argc, char **argv) {
 						lockKeyboard = false;
 					}
 
-					if (mainRoomController_getButtonEvent() == MINIGAMES_MAINROOM){ // Open minigames 
+					// Open minigames 
+					if (mainRoomController_getButtonEvent() == MINIGAMES_MAINROOM){ 
 						mainRoomController_setButtonEvent(NOP_MAINROOM);
-						//switchBackground(2);
-						//game_state = MINIGAMES_WINDOW;
-						// TODO: GO BACCCKCKCCCCC
-
-						setup_ttt_sprites();
-						game_state = MINIGAME_1;
-						switchBackground(5);
+						switchBackground(2);
+						game_state = MINIGAMES_WINDOW;
 					}
 
 					if (mainRoomController_getButtonEvent() == QUIT_MAINROOM){ // Quit the game
-						mainRoomController_delete_mainRoom(); // Free the main menu
 						endGame = true;	
 					}
 					break;
 				case MINIGAMES_WINDOW: 
-					database_set_happiness(getDatabase(), 700);  // TODO: REMOVE
-					database_set_hunger(getDatabase(), 600);  // TODO: REMOVE
 					minigameMenuController_step();
 					minigameMenuViewer_draw();
 					setMinigameMenuCursor(cursor);
@@ -364,25 +343,37 @@ int (proj_main_loop)(int argc, char **argv) {
 						game_state = MAIN_ROOM;	
 					}
 
+					if (minigameMenuController_getButtonEvent() == MINIGAME1_MINIGAMEMENU){ // Tic tac toe
+						minigameMenuController_setButtonEvent(NOP_MINIGAMEMENU);
+						setup_ttt_sprites();
+						game_state = MINIGAME_1;
+						switchBackground(5);
+					}
 
-					if (minigameMenuController_getButtonEvent() == MINIGAME1_MINIGAMEMENU){ // Open minigames
+					if (minigameMenuController_getButtonEvent() == MINIGAME2_MINIGAMEMENU){ // Rock paper scissors
 						minigameMenuController_setButtonEvent(NOP_MINIGAMEMENU);
 						switchBackground(4);
 						game_state = MINIGAME_2;
 					}
+					
 					break;
 				case MINIGAME_1:
 					ticTacToeController_step();
+					bool quitTTT = false;
+
+					if (ticTacToeController_getButtonEvent() == QUIT_TTT){ // Quit TicTacToe
+						quitTTT = true;
+					}
+
 					ticTacToeViewer_draw();
 					setTicTacToeCursor(cursor);
 
-					if (ticTacToeController_getButtonEvent() == QUIT_TTT){ // Quit TicTacToe
-							// FIXME: ?
-							// Delete everything that was created ?
-
-							ticTacToeController_setButtonEvent(NOP_TTT);
-							switchBackground(1);
-							game_state = MAIN_ROOM;
+					if (quitTTT) {
+						ticTacToeController_setButtonEvent(NOP_TTT);
+						reset_ticTacToe(ticTacToeController_get_saved_ttt());
+						reset_ticTacToe(ticTacToeViewer_get_saved_ttt());
+						switchBackground(1);
+						game_state = MAIN_ROOM;
 					}
 					break;
 				case MINIGAME_2:
@@ -405,7 +396,6 @@ int (proj_main_loop)(int argc, char **argv) {
 					break;
 			}
 			if (minutes_aux_cnt == (60 * 60)){
-				printf("\n1 minunte passed\n"); // TODO: Remove (DEBUG)
 				int current_happiness = database_get_happiness(getDatabase());
 				int current_hunger = database_get_hunger(getDatabase());
 				
@@ -446,11 +436,9 @@ int (proj_main_loop)(int argc, char **argv) {
 					rtc_ih();
 					if (rtc_get_interrupt_was_periodic()) {
 						rtc_set_interrupt_periodic_processed();
-						printf("Ignoring non important rtc interrupt.\n");
 					}
 					if (rtc_get_interrupt_was_update()) {
 						rtc_set_interrupt_update_processed();
-						printf("Ignoring non important rtc interrupt.\n");
 					}
 					if (rtc_get_interrupt_was_alarm()) {
 						rtc_set_interrupt_alarm_processed();
@@ -493,40 +481,33 @@ int (proj_main_loop)(int argc, char **argv) {
 				if ((msg.m_notify.interrupts & mouse_irq_set )!= 0) {
 					mouse_ih();
 
-					// Store the read byte.
 					uint8_t byte = mouse_get_readByte();
 
-					if (byte == 0x00 && mouse_get_error()){ // An error occoured
+					if (byte == 0x00 && mouse_get_error()){
 						mouse_set_error(false);
 						continue;
 					}
 
 					switch (counter){
 					case 0:
-						pp.bytes[counter] = byte; // Store the byte
-
-						pp.lb = (byte & 0x01); // Left Button
-						pp.rb = ((byte & 0x02) != 0); // Right Button
-						pp.mb = ((byte & 0x04) != 0); // Middle Button
-
-						pp.delta_x = (byte & 0x10) << 4; // 9th bit
-						pp.delta_y = (byte & 0x20) << 3; // 9th bit
-
-						pp.x_ov = ((byte & 0x40) != 0); // x overflow
-						pp.y_ov = ((byte & 0x80) != 0); // y overflow
+						pp.bytes[counter] = byte;
+						pp.lb = (byte & 0x01);
+						pp.rb = ((byte & 0x02) != 0);
+						pp.mb = ((byte & 0x04) != 0);
+						pp.delta_x = (byte & 0x10) << 4;
+						pp.delta_y = (byte & 0x20) << 3;
+						pp.x_ov = ((byte & 0x40) != 0);
+						pp.y_ov = ((byte & 0x80) != 0);
 						break;
 					case 1:
-						pp.bytes[counter] = byte; // Store the byte
-						pp.delta_x = pp.delta_x | byte; // Append the remaining 8 bits
+						pp.bytes[counter] = byte;
+						pp.delta_x = pp.delta_x | byte;
 						pp.delta_x = twosComplementToBinary(pp.delta_x);
-
 						break;
 					case 2:
-						pp.bytes[counter] = byte; // Store the byte
-						pp.delta_y = pp.delta_y | byte; // Append the remaining 8 bits
-
+						pp.bytes[counter] = byte;
+						pp.delta_y = pp.delta_y | byte;
 						pp.delta_y = twosComplementToBinary(pp.delta_y);
-
 						break;
 					default:
 						break;
@@ -534,7 +515,6 @@ int (proj_main_loop)(int argc, char **argv) {
 
 					counter++;
 
-					// Reset the byte counter and call the necessary functions.
 					if (counter >= 3){
 						counter = 0;
     					int delta_x = pp.delta_x;
@@ -590,9 +570,12 @@ int (proj_main_loop)(int argc, char **argv) {
 
 	}
 
-	database_save_to_file(database);
+	if (canSave)
+		database_save_to_file(database);
 
-	// TODO: Remove (temp)
+	if (!canSave && newGame)
+		database_delete_file(database);
+
 	delete_cursor(cursor);
 
 	// Unsubscribe uart interrupts
@@ -602,7 +585,7 @@ int (proj_main_loop)(int argc, char **argv) {
 
 	serial_exit();
 
-	// Unsubscribe rtc interrupts
+	// Unsubscribe rtc interrupts.
 	if (disable_aie_int() != 0) {
         return 1;
     }
@@ -615,21 +598,22 @@ int (proj_main_loop)(int argc, char **argv) {
         return 1;
     }
 
+	// Unsubscribe timer's interrupts.
 	if (timer_unsubscribe_int() != 0) {
 		return 1;
 	}
 
-	// Unsubscribe keyboard interrupts
+	// Unsubscribe keyboard interrupts.
 	if (unsubscribe_interrupts_kbd() != 0){
         return 1;
     }
 
-	// Unsubscribe mouse interrupts
+	// Unsubscribe mouse interrupts.
 	if (mouse_unsubscribe_int() != 0) {
     	return 1;
   	}
 
-	// Disable data reporting (mouse)
+	// Disable data reporting (mouse).
 	if (send_byte_to_mouse(MOUSE_DISABLE_DATA_REPORTING) != 0){
 		return 1;
 	}

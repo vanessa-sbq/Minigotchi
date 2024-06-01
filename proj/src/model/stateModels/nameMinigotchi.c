@@ -14,8 +14,6 @@ void delete_nameMinigotchi(NameMinigotchi *nameMinigotchi) {
     free(nameMinigotchi);
 }
 
-void draw_nameMinigotchi(NameMinigotchi *nameMinigotchi);
-
 Button* nameMinigotchi_get_continueButton(NameMinigotchi *nameMinigotchi) {
     return nameMinigotchi->continueButton;
 }

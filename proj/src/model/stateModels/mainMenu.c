@@ -8,10 +8,10 @@ MainMenu *new_mainMenu(){
     // draw MAIN MENU // FIXME:
 
     // Initialize MainMenu
-    mainMenu->startNewButton = new_button(448, 216, 0); // TODO: pass button text and pos
-    mainMenu->continueButton = new_button(448, 400, 0); // TODO: pass button text and pos
-    mainMenu->quitButton = new_button(448, 600, 1);     // TODO: pass button text and pos
-    mainMenu->cursor = new_cursor(400, 600); // TODO: Change initial cursor position
+    mainMenu->startNewButton = new_button(448, 216, 0);
+    mainMenu->continueButton = new_button(448, 400, 0);
+    mainMenu->quitButton = new_button(448, 600, 1);
+    mainMenu->cursor = new_cursor(400, 600);
     return mainMenu;
 }
 
@@ -20,16 +20,6 @@ void delete_mainMenu(MainMenu *mainMenu){
     button_delete(mainMenu->continueButton);
     button_delete(mainMenu->quitButton);
     free(mainMenu);
-}
-
-void draw_mainMenu(MainMenu *mainMenu){
-
-    // draw MAIN MENU // FIXME:
-
-    draw_button(mainMenu->startNewButton);
-    draw_button(mainMenu->continueButton);
-    draw_button(mainMenu->quitButton);
-    draw_cursor(mainMenu->cursor);
 }
 
 Button* mainMenu_get_startNewButton(MainMenu *mainMenu){

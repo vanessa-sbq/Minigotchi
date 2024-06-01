@@ -28,6 +28,8 @@
 #include "../sprites/xpms/rps_tie.xpm"
 #include "../sprites/xpms/rps_lose.xpm"
 #include "../sprites/xpms/bot_chose.xpm"
+#include "../sprites/xpms/exitGame_mini.xpm"
+#include "../sprites/xpms/bg_mainroom_hotbar.xpm"
 
 // Items
 #include "../sprites/xpm_items/apple.xpm"
@@ -105,6 +107,7 @@
 // Backgrounds
 static Sprite* _bg_mainmenu_sprite = NULL;
 static Sprite* _bg_mainroom_sprite = NULL;
+static Sprite* _bg_mainroom_hotbar_sprite = NULL;
 static Sprite* _bg_minigames_sprite = NULL;
 static Sprite* _bg_nameMinigotchi_sprite = NULL;
 static Sprite* _bg_rps_sprite = NULL;
@@ -126,6 +129,7 @@ static Sprite* _rps_win_sprite = NULL;
 static Sprite* _rps_tie_sprite = NULL;
 static Sprite* _rps_lose_sprite = NULL;
 static Sprite* _bot_chose_sprite = NULL;
+static Sprite* _exit_game_mini_sprite = NULL;
 
 // Items
 static Sprite* _empty_sprite = NULL;
@@ -139,6 +143,7 @@ static Sprite* _hotbar_select_sprite = NULL;
 	
 /*** Buffers ***/
 static char* _backgroundBuffer;
+static char* _backgroundBufferAlternative;
 
 /* Text */
 static Sprite* _A_sprite;
@@ -236,6 +241,8 @@ Sprite* guiDrawer_get_button_sprite(int text_index){
         case 7:
             return guiDrawer_get_guest_button_sprite();
             break;
+		case 8:
+			return guiDrawer_get_exitGameIcon_sprite();
 		default: break;
 	}
 	return NULL;
@@ -305,12 +312,16 @@ Sprite* guiDrawer_get_botChose_sprite(){
 	return _bot_chose_sprite;
 }
 
+Sprite* guiDrawer_get_exitGameIcon_sprite(){
+	return _exit_game_mini_sprite;
+}
+
 
 
 Sprite* guiDrawer_get_item_sprite(int id){
 	switch (id){
 		case 0:
-			return _empty_sprite; // TODO: Change (This is the empty item)
+			return _empty_sprite;
 			break;
 		case 1:
 			return _apple_sprite;
@@ -723,6 +734,7 @@ void setup_sprites(){
 	// Backgrounds
 	_bg_mainmenu_sprite = create_sprite_xpm((xpm_map_t) bricks_xpm);
 	_bg_mainroom_sprite = create_sprite_xpm((xpm_map_t) bg_mainroom_xpm);
+	_bg_mainroom_hotbar_sprite = create_sprite_xpm((xpm_map_t) bg_mainroom_hotbar_xpm);
 	_bg_minigames_sprite = create_sprite_xpm((xpm_map_t) bricks_xpm);
 	_bg_nameMinigotchi_sprite = create_sprite_xpm((xpm_map_t) nameMinigotchi_bg_xpm);
 	_bg_rps_sprite = create_sprite_xpm((xpm_map_t) rps_background_xpm);
@@ -730,9 +742,11 @@ void setup_sprites(){
 	_evening_window = create_sprite_xpm((xpm_map_t) evening_window_xpm);
 	_night_window = create_sprite_xpm((xpm_map_t) night_window_xpm);
 	_backgroundBuffer = malloc(video_get_vram_size());
+	_backgroundBufferAlternative = malloc(video_get_vram_size());
 
 	// Icons
 	_minigames_icon_sprite =  create_sprite_xpm((xpm_map_t) minigames_icon_xpm);
+	_exit_game_mini_sprite = create_sprite_xpm((xpm_map_t) exitGame_mini_xpm);
 
 	// Rock Paper Scissors
 	_rps_win_sprite =  create_sprite_xpm((xpm_map_t) rps_win_xpm);
@@ -772,6 +786,7 @@ void switchBackground(uint8_t bg) {
 			break;
 		case 1: // MainRoom
 			getBufferFromSprite(_bg_mainroom_sprite->height, _bg_mainroom_sprite->width, 0, 0, _bg_mainroom_sprite->colors, &_backgroundBuffer);
+			getBufferFromSprite(_bg_mainroom_hotbar_sprite->height, _bg_mainroom_hotbar_sprite->width, 0, 0, _bg_mainroom_hotbar_sprite->colors, &_backgroundBufferAlternative);
 			break;
 		case 2: // MinigamesMenu
 			getBufferFromSprite(_bg_minigames_sprite->height, _bg_minigames_sprite->width, 0, 0, _bg_minigames_sprite->colors, &_backgroundBuffer);
@@ -819,7 +834,16 @@ uint16_t sprite_get_height(Sprite* sprite){
 
 
 /*** Wrappers ***/
-void wrapper_draw_background(/**/) {
-	setBackgroundFromBuffer(_backgroundBuffer); // TODO: add more with an enum;
+void wrapper_draw_background(uint8_t bufferIndex) {
+	switch (bufferIndex) {
+		case 0:
+			setBackgroundFromBuffer(_backgroundBuffer);
+			break;
+		case 1:
+			setBackgroundFromBuffer(_backgroundBufferAlternative);
+			break;
+		default:
+			break;
+	}
 }
 

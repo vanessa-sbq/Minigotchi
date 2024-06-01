@@ -17,9 +17,6 @@ collision_type_t mainMenuController_checkCollision(Button *button) {
     int cursorY = cursor_get_y(cursor);
     bool beingPressed = get_buttonClicked(cursor);
 
-    //printf("Cursor position is %u, %u", cursor->x, cursor->y);
-    //printf("Cursor position is 0");
-
     int button_width = sprite_get_width(button->sprite);
     int button_height = sprite_get_height(button->sprite);
 
@@ -46,7 +43,6 @@ collision_type_t mainMenuController_getButtonEvent() {
 void mainMenuController_step(){
     mainMenuController_load_mainMenu();
 
-    // TODO: check return of checkCollision and do something about it
     collision_type_t pressedButton = NOP;
 
     currentButtonEvent = START;
@@ -55,13 +51,6 @@ void mainMenuController_step(){
     if (pressedButton == currentButtonEvent) {
         return;
     }
-
-   /*  currentButtonEvent = CONTINUE;
-    pressedButton = mainMenuController_checkCollision(mainMenu_get_continueButton(mainMenu));
-
-    if (pressedButton == currentButtonEvent) {
-        return;
-    } */
 
     currentButtonEvent = QUIT;
     pressedButton = mainMenuController_checkCollision(mainMenu_get_quitButton(mainMenu));

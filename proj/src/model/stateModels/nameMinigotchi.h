@@ -18,8 +18,6 @@ NameMinigotchi *new_nameMinigotchi(); // "Constructor"
 
 void delete_nameMinigotchi(NameMinigotchi *nameMinigotchi); // "Destructor"
 
-void draw_nameMinigotchi(NameMinigotchi *nameMinigotchi);
-
 // Getters and setters
 
 Button* nameMinigotchi_get_continueButton(NameMinigotchi *nameMinigotchi);

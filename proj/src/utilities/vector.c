@@ -9,7 +9,7 @@ Vector* init_vector(size_t initial_capacity) {
 
     vector->data = (uint8_t *)malloc(initial_capacity * sizeof(uint8_t));
     if (vector->data == NULL) {
-        fprintf(stderr, "Failed to allocate memory for vector\n");
+        panic("Failed to allocate memory for vector\n");
         exit(EXIT_FAILURE);
     }
     vector->size = 0;
@@ -20,7 +20,7 @@ Vector* init_vector(size_t initial_capacity) {
 void resize_vector(Vector *vec, size_t new_capacity) {
     uint8_t *new_data = (uint8_t *)realloc(vec->data, new_capacity * sizeof(uint8_t));
     if (new_data == NULL) {
-        printf("Failed to reallocate memory for vector\n");
+        panic("Failed to allocate memory for vector\n");
         free_vector(vec);
         exit(EXIT_FAILURE);
     }
