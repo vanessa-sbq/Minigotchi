@@ -10,6 +10,7 @@ TicTacToe *new_ticTacToe(){
     ttt->hostButton = new_button(388, 272, 6);
     ttt->guestButton = new_button(388, 462, 7);
     ttt->cursor = new_cursor(400, 600);
+    set_buttonClicked(true, ttt->cursor);
     ttt->ticTacToeState = TX_RX_DECISION_TTT;
     
     srand(time(NULL));

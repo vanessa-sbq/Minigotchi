@@ -7,9 +7,9 @@ MinigameMenu *new_minigameMenu(){
     if (minigameMenu == NULL) return NULL;
 
     // Initialize MinigameMenu
-    minigameMenu->tttButton = new_button(0, 0, 1);
-    minigameMenu->rpsButton = new_button(0, 200, 1);
-    minigameMenu->quitButton = new_button(0, 700, 1);
+    minigameMenu->tttButton = new_button(307, 165, 9);
+    minigameMenu->rpsButton = new_button(307, 455, 10);
+    minigameMenu->quitButton = new_button(10, 740, 1);
     minigameMenu->cursor = new_cursor(400, 600);
 
     return minigameMenu;

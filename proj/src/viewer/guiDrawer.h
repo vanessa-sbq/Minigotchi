@@ -40,6 +40,8 @@ Sprite* guiDrawer_get_rpsTie_sprite();
 Sprite* guiDrawer_get_rpsLose_sprite();
 Sprite* guiDrawer_get_botChose_sprite();
 Sprite* guiDrawer_get_exitGameIcon_sprite();
+Sprite* guiDrawer_get_ttt_button_sprite();
+Sprite* guiDrawer_get_rps_button_sprite();
 
 Sprite* guiDrawer_get_happiness_level_sprite_from_index(uint8_t index);
 void setup_happiness_sprites();

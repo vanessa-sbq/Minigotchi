@@ -6,8 +6,8 @@
 #include "../sprites/xpms/braco_direito.xpm"
 #include "../sprites/xpms/braco_esquerdo.xpm"
 #include "../sprites/xpms/Untitled.xpm"
-#include "../sprites/xpms/start_button-xpm.xpm"
-#include "../sprites/xpms/quit_button-xpm.xpm"
+#include "../sprites/xpms/start_button.xpm"
+#include "../sprites/xpms/quit_button.xpm"
 #include "../sprites/xpms/bricks.xpm"
 #include "../sprites/xpms/bg_mainroom.xpm"
 #include "../sprites/xpms/minigotchi_normal.xpm"
@@ -30,6 +30,10 @@
 #include "../sprites/xpms/bot_chose.xpm"
 #include "../sprites/xpms/exitGame_mini.xpm"
 #include "../sprites/xpms/bg_mainroom_hotbar.xpm"
+#include "../sprites/xpms/main_menu_bg.xpm"
+#include "../sprites/xpms/minigames_menu_bg.xpm"
+#include "../sprites/xpms/tic_tac_toe_button.xpm"
+#include "../sprites/xpms/rps_button.xpm"
 
 // Items
 #include "../sprites/xpm_items/apple.xpm"
@@ -130,6 +134,7 @@ static Sprite* _rps_tie_sprite = NULL;
 static Sprite* _rps_lose_sprite = NULL;
 static Sprite* _bot_chose_sprite = NULL;
 static Sprite* _exit_game_mini_sprite = NULL;
+static Sprite* _rps_button_sprite = NULL;
 
 // Items
 static Sprite* _empty_sprite = NULL;
@@ -203,6 +208,7 @@ static Sprite* _hunger_max_sprite;
 
 
 // Elements for TicTacToe
+static Sprite* _ttt_button_sprite;
 static Sprite* _ttt_field;
 static Sprite* _ttt_wait;
 static Sprite* _ttt_menu_bg;
@@ -243,6 +249,13 @@ Sprite* guiDrawer_get_button_sprite(int text_index){
             break;
 		case 8:
 			return guiDrawer_get_exitGameIcon_sprite();
+			break;
+		case 9:
+			return guiDrawer_get_ttt_button_sprite();
+			break;
+		case 10:
+			return guiDrawer_get_rps_button_sprite();
+			break;
 		default: break;
 	}
 	return NULL;
@@ -314,6 +327,14 @@ Sprite* guiDrawer_get_botChose_sprite(){
 
 Sprite* guiDrawer_get_exitGameIcon_sprite(){
 	return _exit_game_mini_sprite;
+}
+
+Sprite* guiDrawer_get_ttt_button_sprite(){
+	return _ttt_button_sprite;
+}
+
+Sprite* guiDrawer_get_rps_button_sprite(){
+	return _rps_button_sprite;
 }
 
 
@@ -732,10 +753,10 @@ void cleanup_hunger_sprites(){
 
 void setup_sprites(){
 	// Backgrounds
-	_bg_mainmenu_sprite = create_sprite_xpm((xpm_map_t) bricks_xpm);
+	_bg_mainmenu_sprite = create_sprite_xpm((xpm_map_t) main_menu_bg_xpm);
 	_bg_mainroom_sprite = create_sprite_xpm((xpm_map_t) bg_mainroom_xpm);
 	_bg_mainroom_hotbar_sprite = create_sprite_xpm((xpm_map_t) bg_mainroom_hotbar_xpm);
-	_bg_minigames_sprite = create_sprite_xpm((xpm_map_t) bricks_xpm);
+	_bg_minigames_sprite = create_sprite_xpm((xpm_map_t) minigames_menu_bg_xpm);
 	_bg_nameMinigotchi_sprite = create_sprite_xpm((xpm_map_t) nameMinigotchi_bg_xpm);
 	_bg_rps_sprite = create_sprite_xpm((xpm_map_t) rps_background_xpm);
 	_day_window = create_sprite_xpm((xpm_map_t) day_window_xpm);
@@ -769,6 +790,9 @@ void setup_sprites(){
 	_rock_sprite = create_sprite_xpm((xpm_map_t) rock_xpm);
 	_paper_sprite = create_sprite_xpm((xpm_map_t) paper_xpm);
 	_scissors_sprite = create_sprite_xpm((xpm_map_t) scissors_xpm);
+	_rps_button_sprite =  create_sprite_xpm((xpm_map_t) rps_button_xpm);
+	_ttt_button_sprite =  create_sprite_xpm((xpm_map_t) tic_tac_toe_button_xpm);
+
 
 	// Minigotchi
 	_minigotchi_sprite = create_sprite_xpm((xpm_map_t) minigotchi_normal_xpm);

@@ -8,9 +8,9 @@ MainMenu *new_mainMenu(){
     // draw MAIN MENU // FIXME:
 
     // Initialize MainMenu
-    mainMenu->startNewButton = new_button(448, 216, 0);
-    mainMenu->continueButton = new_button(448, 400, 0);
-    mainMenu->quitButton = new_button(448, 600, 1);
+    mainMenu->startNewButton = new_button(401, 400, 0);
+    mainMenu->continueButton = new_button(401, 700, 0);
+    mainMenu->quitButton = new_button(401, 600, 1);
     mainMenu->cursor = new_cursor(400, 600);
     return mainMenu;
 }

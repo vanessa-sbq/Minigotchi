@@ -12,13 +12,11 @@ void minigameMenuViewer_setMinigameMenu(MinigameMenu* mm){
 void minigameMenuViewer_draw(){
     vg_clear_screen();
 
-    // Background elements
+    // Background elements  
     wrapper_draw_background(0);
 
-    // Foreground elements
-    draw_button(minigameMenu_get_tttButton(minigameMenu));
-    draw_button(minigameMenu_get_rpsButton(minigameMenu));
     draw_button(minigameMenu_get_quitButton(minigameMenu));
+
     draw_cursor(minigameMenu_get_cursor(minigameMenu));
 
     vg_page_flip();

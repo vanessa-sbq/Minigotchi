@@ -36,7 +36,7 @@
 #include "viewer/menus/minigameMenuViewer.h"
 #include "viewer/menus/nameMinigotchiViewer.h"
 #include "viewer/minigames/tictactoeViewer.h"
-#include "viewer/menus/rockPaperScissorsViewer.h"
+#include "viewer/minigames/rockPaperScissorsViewer.h"
 
 // Controllers
 #include "controller/menus/mainMenuController.h"
@@ -44,7 +44,7 @@
 #include "controller/menus/minigameMenuController.h"
 #include "controller/menus/nameMinigotchiController.h"
 #include "controller/minigames/tictactoeController.h"
-#include "controller/menus/rockPaperScissorsController.h"
+#include "controller/minigames/rockPaperScissorsController.h"
 
 
 // Database
@@ -347,6 +347,7 @@ int (proj_main_loop)(int argc, char **argv) {
 					if (minigameMenuController_getButtonEvent() == MINIGAME1_MINIGAMEMENU){ // Tic tac toe
 						minigameMenuController_setButtonEvent(NOP_MINIGAMEMENU);
 						setup_ttt_sprites();
+						ttt_set_canClick(); // To avoid clicking the buttons at first
 						game_state = MINIGAME_1;
 						switchBackground(5);
 					}
@@ -354,6 +355,7 @@ int (proj_main_loop)(int argc, char **argv) {
 					if (minigameMenuController_getButtonEvent() == MINIGAME2_MINIGAMEMENU){ // Rock paper scissors
 						minigameMenuController_setButtonEvent(NOP_MINIGAMEMENU);
 						switchBackground(4);
+						rps_set_canClick(); // To avoid clicking the buttons at first
 						game_state = MINIGAME_2;
 					}
 					

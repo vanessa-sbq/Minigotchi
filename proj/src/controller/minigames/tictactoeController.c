@@ -6,9 +6,14 @@ static bool currentPlayerPlayed = false;
 static uint8_t amountReceived = 0;
 static uint8_t lastKnownMove = 200;
 static bool game_end_screen_flag = true;
+static bool canClick = true;
 
 #define SYNC_BYTE 0x01
 #define ACK_BYTE 0x02
+
+void ttt_set_canClick(){
+    canClick = true;
+}
 
 void ticTacToeController_load_tictactoe() {
      if (ttt == NULL){
@@ -40,6 +45,9 @@ bool ticTacToe_checkCollision(int x, int y, int width, int height) {
     int cursorY = cursor_get_y(cursor);
     bool beingPressed = get_buttonClicked(cursor);
 
+    if (canClick && beingPressed) return false;
+    else canClick = false;
+    
     int left_upper_corner_x = x;
     int right_upper_corner_x = left_upper_corner_x + width;
     int right_upper_corner_y = y;
@@ -194,6 +202,7 @@ void ticTacToeController_step() {
             break;
         case EXIT_TTT:
             ticTacToeMayBeResetNow();
+            canClick = true;
             break;
         case WAIT_ACK:
             if (isEmpty(serial_get_receive_queue())) return;

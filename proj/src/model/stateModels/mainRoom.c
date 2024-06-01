@@ -8,10 +8,10 @@ MainRoom *new_mainRoom(){
 
     // Initialize MainRoom
     mainRoom->minigotchi = new_minigotchi(467, 370, 100, 100, "MINIGOTCHI");
-    mainRoom->miniGamesButton = new_button(10, 10, 2);
-    mainRoom->quitButton = new_button(886, 10, 1);
-    mainRoom->happinessBar = new_bar(10, 100, 1000, 0);
-    mainRoom->hungerBar = new_bar(10, 150, 1000, 1);
+    mainRoom->miniGamesButton = new_button(10, 130, 2);
+    mainRoom->quitButton = new_button(70, 110, 1);
+    mainRoom->happinessBar = new_bar(10, 10, 1000, 0);
+    mainRoom->hungerBar = new_bar(10, 60, 1000, 1);
     mainRoom->cursor = new_cursor(400, 600); 
     mainRoom->hotbar = new_hotbar(213, 750, 0);
     return mainRoom;

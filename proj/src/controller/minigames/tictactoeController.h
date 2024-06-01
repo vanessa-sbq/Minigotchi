@@ -13,6 +13,7 @@
 
 typedef enum {QUIT_TTT, HOST_TTT, GUEST_TTT, NOP_TTT} collision_type_ttt_t;
 
+void ttt_set_canClick();
 void ticTacToeController_load_tictactoe();
 bool ticTacToeController_checkCollisionWithSprites(Sprite* sprite, int x, int y);
 bool ticTacToe_checkCollision(int x, int y, int width, int height);

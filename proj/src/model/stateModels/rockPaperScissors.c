@@ -9,8 +9,9 @@ RockPaperScissors *new_rockPaperScissors(){
     rockPaperScissors->rockButton = new_button(500, 150, 3);
     rockPaperScissors->paperButton = new_button(510, 350, 4);
     rockPaperScissors->scissorsButton = new_button(500, 550, 5);
-    rockPaperScissors->quitButton = new_button(80, 710, 1);
+    rockPaperScissors->quitButton = new_button(60, 690, 1);
     rockPaperScissors->cursor = new_cursor(400, 600);
+    set_buttonClicked(true, rockPaperScissors->cursor);
     rockPaperScissors->rps_state = RPS_PLAYING;
 
     srand(time(NULL));
