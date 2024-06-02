@@ -8,8 +8,6 @@ Made by:
 2. Antonio Abilio (up202205469@fe.up.pt)
 3. Vanessa Queiros (up202207919@fe.up.pt)
 
-
-
 ## A brief description
 
 Minigotchi is an implementation of a Tamagotchi that runs on minix. Currently it has the character itself (The Minigotchi) that can be named, fed and cuddled.
@@ -24,12 +22,39 @@ Below are some pictures of the gameplay:
 
 After running doxygen we got the following graph
 
+<div style="display: flex; justify-content: center;">
+  <img src="" alt="Code Graph" style="max-width: 60%; height: auto;">
+</div>
 
 ## Minigotchi Room
+
+<div style="display: flex; justify-content: center;">
+  <img src="https://git.fe.up.pt/lcom/2324/t10/g5/-/blob/3a9adf91cd29502dddf59f7fb64210d86c7c74d9/proj/doc/game_images/Minigotchi_Main_Room.png" alt="Minigotchi Room" style="max-width: 60%; height: auto;">
+</div>
 
 
 ## Minigames
 
+<div style="display: flex; justify-content: center;">
+  <img src="https://git.fe.up.pt/lcom/2324/t10/g5/-/blob/3a9adf91cd29502dddf59f7fb64210d86c7c74d9/proj/doc/game_images/Minigames_Menu.png" alt="Minigames Menu" style="max-width: 60%; height: auto;">
+</div>
+
 ### Tic Tac Toe
 
+<div style="display: flex; justify-content: center;">
+  <img src="https://git.fe.up.pt/lcom/2324/t10/g5/-/blob/3a9adf91cd29502dddf59f7fb64210d86c7c74d9/proj/doc/game_images/TicTacToe_Minigame.png" alt="Tic Tac Toe Gameplay" style="max-width: 60%; height: auto;">
+</div>
+
+<div style="display: flex; justify-content: center;">
+  <img src="https://git.fe.up.pt/lcom/2324/t10/g5/-/blob/3a9adf91cd29502dddf59f7fb64210d86c7c74d9/proj/doc/game_images/TicTacToe_Minigame_Winning_Screen.png" alt="Tic Tac Toe Winning Screen" style="max-width: 60%; height: auto;">
+</div>
+
 ### Rock Paper Scissors
+
+<div style="display: flex; justify-content: center;">
+  <img src="https://git.fe.up.pt/lcom/2324/t10/g5/-/blob/3a9adf91cd29502dddf59f7fb64210d86c7c74d9/proj/doc/game_images/RockPaperScissors_Minigame.png" alt="Rock Paper Scissors Gameplay" style="max-width: 60%; height: auto;">
+</div>
+
+<div style="display: flex; justify-content: center;">
+  <img src="https://git.fe.up.pt/lcom/2324/t10/g5/-/blob/3a9adf91cd29502dddf59f7fb64210d86c7c74d9/proj/doc/game_images/RockPaperScissors_Minigame_Winning.png" alt="Rock Paper Scissors Winning Screen" style="max-width: 60%; height: auto;">
+</div>
