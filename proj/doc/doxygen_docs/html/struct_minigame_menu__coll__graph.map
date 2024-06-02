@@ -1,0 +1,10 @@
+<map id="MinigameMenu" name="MinigameMenu">
+<area shape="rect" id="Node000001" title=" " alt="" coords="23,219,132,245"/>
+<area shape="rect" id="Node000002" href="$struct_button.html" title=" " alt="" coords="5,96,65,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="31,138,28,166,34,194,44,206,56,216,53,220,40,210,30,196,23,166,25,137"/>
+<area shape="rect" id="Node000003" href="$struct_sprite.html" title=" " alt="" coords="49,5,104,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="58,46,51,57,39,96,34,95,46,55,53,43"/>
+<area shape="rect" id="Node000004" href="$struct_cursor.html" title=" " alt="" coords="92,96,151,123"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="92,45,118,94,113,97,87,47"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="117,138,97,196,87,219,82,217,93,194,112,137"/>
+</map>

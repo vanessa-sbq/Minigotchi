@@ -1,0 +1,7 @@
+<map id="mainMenuController_delete_mainMenu" name="mainMenuController_delete_mainMenu">
+<area shape="rect" id="Node000001" title="Calls the main menu destructor." alt="" coords="5,5,142,48"/>
+<area shape="rect" id="Node000002" href="$main_menu_8c.html#a3b8cfcadd81541b192677d72872724cd" title="MainMenu destructor." alt="" coords="190,13,313,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,24,175,24,175,29,142,29"/>
+<area shape="rect" id="Node000003" href="$button_8c.html#a0e0fe01cc691c356d04430d1c200a8da" title="Button destructor." alt="" coords="361,13,460,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="313,24,345,24,345,29,313,29"/>
+</map>

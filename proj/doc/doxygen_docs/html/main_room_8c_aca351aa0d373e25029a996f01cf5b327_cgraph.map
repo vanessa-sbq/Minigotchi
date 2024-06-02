@@ -1,0 +1,7 @@
+<map id="delete_mainRoom" name="delete_mainRoom">
+<area shape="rect" id="Node000001" title="MainRoom destructor." alt="" coords="5,31,131,57"/>
+<area shape="rect" id="Node000002" href="$button_8c.html#a0e0fe01cc691c356d04430d1c200a8da" title="Button destructor." alt="" coords="181,5,280,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,32,165,26,166,31,131,37"/>
+<area shape="rect" id="Node000003" href="$minigotchi_8c.html#afe1499272c08d222820a15e44ffa6c68" title="Minigotchi destructor." alt="" coords="179,56,282,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="131,51,164,56,163,62,131,56"/>
+</map>

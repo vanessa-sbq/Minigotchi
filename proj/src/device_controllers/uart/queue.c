@@ -1,7 +1,5 @@
 #include "queue.h"
 
-/* Inspired by GeeksForGeeks: https://www.geeksforgeeks.org/queue-linked-list-implementation/ */
-
 /**
  * @brief Function to create a new node
  */

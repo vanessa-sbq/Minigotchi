@@ -1,0 +1,5 @@
+<map id="delete_mainMenu" name="delete_mainMenu">
+<area shape="rect" id="Node000001" title="MainMenu destructor." alt="" coords="5,5,129,32"/>
+<area shape="rect" id="Node000002" href="$button_8c.html#a0e0fe01cc691c356d04430d1c200a8da" title="Button destructor." alt="" coords="177,5,276,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,16,161,16,161,21,129,21"/>
+</map>

@@ -1,0 +1,205 @@
+\doxysection{C\+:/\+Users/anton/\+Documents/lcom/labs/proj/src/model/cursor.h File Reference}
+\hypertarget{cursor_8h}{}\label{cursor_8h}\index{C:/Users/anton/Documents/lcom/labs/proj/src/model/cursor.h@{C:/Users/anton/Documents/lcom/labs/proj/src/model/cursor.h}}
+{\ttfamily \#include "{}../viewer/gui\+Drawer.\+h"{}}\newline
+Include dependency graph for cursor.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{cursor_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cursor_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_cursor}{Cursor}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{cursor_8h_a4cc403b0eefc445792f54d05e76d6f02}{new\+\_\+cursor}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Creates a new cursor "{}object"{} and returns a pointer to it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{cursor_8h_a109f86406f7b7adc03d9f0f8fc057629}{delete\+\_\+cursor}} (\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*}cursor)
+\begin{DoxyCompactList}\small\item\em Destroys cursor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{cursor_8h_a4acb89b058c3a72154e1b2650107a77f}{draw\+\_\+cursor}} (\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*}cursor)
+\begin{DoxyCompactList}\small\item\em Draws a cursor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{cursor_8h_a56c247acdeadfc45d614b71e15ed57d2}{set\+\_\+button\+Clicked}} (bool is\+Pressed, \mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*}cursor)
+\item 
+bool \mbox{\hyperlink{cursor_8h_a98149df29b06207e2304795ea8e00d7e}{get\+\_\+button\+Clicked}} (\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*}cursor)
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{cursor_8h_ade1397613b64a382a641d098ca489c4b}{cursor\+\_\+get\+\_\+sprite}} (\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*}cursos)
+\item 
+int \mbox{\hyperlink{cursor_8h_a95277b3c428a0b3c1b79cfcb49628397}{cursor\+\_\+get\+\_\+x}} (\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*}cursor)
+\item 
+int \mbox{\hyperlink{cursor_8h_ab346189d7aeb1bbd182952fa838ae45c}{cursor\+\_\+get\+\_\+y}} (\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*}cursor)
+\item 
+void \mbox{\hyperlink{cursor_8h_a57cf5c9a83024dcc204c2fbdd14f715f}{cursor\+\_\+set\+\_\+x}} (\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*}cursor, int x)
+\item 
+void \mbox{\hyperlink{cursor_8h_adc5342700a0d7a15fcbc2916f4edfcff}{cursor\+\_\+set\+\_\+y}} (\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*}cursor, int y)
+\item 
+bool \mbox{\hyperlink{cursor_8h_a9611b7aa9210df345498a90dc7465af1}{cursor\+\_\+is\+Clicked}} (\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*}cursor)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{cursor_8h_ade1397613b64a382a641d098ca489c4b}\index{cursor.h@{cursor.h}!cursor\_get\_sprite@{cursor\_get\_sprite}}
+\index{cursor\_get\_sprite@{cursor\_get\_sprite}!cursor.h@{cursor.h}}
+\doxysubsubsection{\texorpdfstring{cursor\_get\_sprite()}{cursor\_get\_sprite()}}
+{\footnotesize\ttfamily \label{cursor_8h_ade1397613b64a382a641d098ca489c4b} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} cursor\+\_\+get\+\_\+sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*}}]{cursos}{}\end{DoxyParamCaption})}
+
+\Hypertarget{cursor_8h_a95277b3c428a0b3c1b79cfcb49628397}\index{cursor.h@{cursor.h}!cursor\_get\_x@{cursor\_get\_x}}
+\index{cursor\_get\_x@{cursor\_get\_x}!cursor.h@{cursor.h}}
+\doxysubsubsection{\texorpdfstring{cursor\_get\_x()}{cursor\_get\_x()}}
+{\footnotesize\ttfamily \label{cursor_8h_a95277b3c428a0b3c1b79cfcb49628397} 
+int cursor\+\_\+get\+\_\+x (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*}}]{cursor}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cursor_8h_a95277b3c428a0b3c1b79cfcb49628397_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{cursor_8h_ab346189d7aeb1bbd182952fa838ae45c}\index{cursor.h@{cursor.h}!cursor\_get\_y@{cursor\_get\_y}}
+\index{cursor\_get\_y@{cursor\_get\_y}!cursor.h@{cursor.h}}
+\doxysubsubsection{\texorpdfstring{cursor\_get\_y()}{cursor\_get\_y()}}
+{\footnotesize\ttfamily \label{cursor_8h_ab346189d7aeb1bbd182952fa838ae45c} 
+int cursor\+\_\+get\+\_\+y (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*}}]{cursor}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cursor_8h_ab346189d7aeb1bbd182952fa838ae45c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{cursor_8h_a9611b7aa9210df345498a90dc7465af1}\index{cursor.h@{cursor.h}!cursor\_isClicked@{cursor\_isClicked}}
+\index{cursor\_isClicked@{cursor\_isClicked}!cursor.h@{cursor.h}}
+\doxysubsubsection{\texorpdfstring{cursor\_isClicked()}{cursor\_isClicked()}}
+{\footnotesize\ttfamily \label{cursor_8h_a9611b7aa9210df345498a90dc7465af1} 
+bool cursor\+\_\+is\+Clicked (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*}}]{cursor}{}\end{DoxyParamCaption})}
+
+\Hypertarget{cursor_8h_a57cf5c9a83024dcc204c2fbdd14f715f}\index{cursor.h@{cursor.h}!cursor\_set\_x@{cursor\_set\_x}}
+\index{cursor\_set\_x@{cursor\_set\_x}!cursor.h@{cursor.h}}
+\doxysubsubsection{\texorpdfstring{cursor\_set\_x()}{cursor\_set\_x()}}
+{\footnotesize\ttfamily \label{cursor_8h_a57cf5c9a83024dcc204c2fbdd14f715f} 
+void cursor\+\_\+set\+\_\+x (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*}}]{cursor}{, }\item[{int}]{x}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{cursor_8h_a57cf5c9a83024dcc204c2fbdd14f715f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{cursor_8h_adc5342700a0d7a15fcbc2916f4edfcff}\index{cursor.h@{cursor.h}!cursor\_set\_y@{cursor\_set\_y}}
+\index{cursor\_set\_y@{cursor\_set\_y}!cursor.h@{cursor.h}}
+\doxysubsubsection{\texorpdfstring{cursor\_set\_y()}{cursor\_set\_y()}}
+{\footnotesize\ttfamily \label{cursor_8h_adc5342700a0d7a15fcbc2916f4edfcff} 
+void cursor\+\_\+set\+\_\+y (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*}}]{cursor}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{cursor_8h_adc5342700a0d7a15fcbc2916f4edfcff_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{cursor_8h_a109f86406f7b7adc03d9f0f8fc057629}\index{cursor.h@{cursor.h}!delete\_cursor@{delete\_cursor}}
+\index{delete\_cursor@{delete\_cursor}!cursor.h@{cursor.h}}
+\doxysubsubsection{\texorpdfstring{delete\_cursor()}{delete\_cursor()}}
+{\footnotesize\ttfamily \label{cursor_8h_a109f86406f7b7adc03d9f0f8fc057629} 
+void delete\+\_\+cursor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*}}]{cursor}{}\end{DoxyParamCaption})}
+
+
+
+Destroys cursor. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cursor_8h_a109f86406f7b7adc03d9f0f8fc057629_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{cursor_8h_a4acb89b058c3a72154e1b2650107a77f}\index{cursor.h@{cursor.h}!draw\_cursor@{draw\_cursor}}
+\index{draw\_cursor@{draw\_cursor}!cursor.h@{cursor.h}}
+\doxysubsubsection{\texorpdfstring{draw\_cursor()}{draw\_cursor()}}
+{\footnotesize\ttfamily \label{cursor_8h_a4acb89b058c3a72154e1b2650107a77f} 
+void draw\+\_\+cursor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*}}]{cursor}{}\end{DoxyParamCaption})}
+
+
+
+Draws a cursor. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{cursor_8h_a4acb89b058c3a72154e1b2650107a77f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cursor_8h_a4acb89b058c3a72154e1b2650107a77f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{cursor_8h_a98149df29b06207e2304795ea8e00d7e}\index{cursor.h@{cursor.h}!get\_buttonClicked@{get\_buttonClicked}}
+\index{get\_buttonClicked@{get\_buttonClicked}!cursor.h@{cursor.h}}
+\doxysubsubsection{\texorpdfstring{get\_buttonClicked()}{get\_buttonClicked()}}
+{\footnotesize\ttfamily \label{cursor_8h_a98149df29b06207e2304795ea8e00d7e} 
+bool get\+\_\+button\+Clicked (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*}}]{cursor}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cursor_8h_a98149df29b06207e2304795ea8e00d7e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{cursor_8h_a4cc403b0eefc445792f54d05e76d6f02}\index{cursor.h@{cursor.h}!new\_cursor@{new\_cursor}}
+\index{new\_cursor@{new\_cursor}!cursor.h@{cursor.h}}
+\doxysubsubsection{\texorpdfstring{new\_cursor()}{new\_cursor()}}
+{\footnotesize\ttfamily \label{cursor_8h_a4cc403b0eefc445792f54d05e76d6f02} 
+\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*} new\+\_\+cursor (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new cursor "{}object"{} and returns a pointer to it. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{cursor_8h_a4cc403b0eefc445792f54d05e76d6f02_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cursor_8h_a4cc403b0eefc445792f54d05e76d6f02_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{cursor_8h_a56c247acdeadfc45d614b71e15ed57d2}\index{cursor.h@{cursor.h}!set\_buttonClicked@{set\_buttonClicked}}
+\index{set\_buttonClicked@{set\_buttonClicked}!cursor.h@{cursor.h}}
+\doxysubsubsection{\texorpdfstring{set\_buttonClicked()}{set\_buttonClicked()}}
+{\footnotesize\ttfamily \label{cursor_8h_a56c247acdeadfc45d614b71e15ed57d2} 
+void set\+\_\+button\+Clicked (\begin{DoxyParamCaption}\item[{bool}]{is\+Pressed}{, }\item[{\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*}}]{cursor}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cursor_8h_a56c247acdeadfc45d614b71e15ed57d2_icgraph}
+\end{center}
+\end{figure}

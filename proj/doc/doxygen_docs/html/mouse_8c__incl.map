@@ -1,0 +1,17 @@
+<map id="C:/Users/anton/Documents/lcom/labs/proj/src/device_controllers/kbc/mouse.c" name="C:/Users/anton/Documents/lcom/labs/proj/src/device_controllers/kbc/mouse.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="58,5,237,64"/>
+<area shape="rect" id="Node000002" href="$mouse_8h.html" title=" " alt="" coords="112,112,183,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,64,150,96,145,96,145,64"/>
+<area shape="rect" id="Node000003" href="$utils_8h.html" title=" " alt="" coords="5,261,74,288"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="129,141,102,162,76,188,60,218,49,247,44,246,55,215,72,185,98,158,125,137"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="73,336,150,363"/>
+<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="164,137,191,165,219,203,229,224,235,246,235,268,227,289,215,305,200,318,165,336,163,331,197,313,211,301,223,287,230,267,230,247,224,226,214,206,187,168,160,141"/>
+<area shape="rect" id="Node000005" href="$i8042_8h.html" title=" " alt="" coords="149,261,213,288"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="153,139,177,246,172,247,148,140"/>
+<area shape="rect" id="Node000006" href="$kbc_8h.html" title=" " alt="" coords="86,187,140,213"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="144,140,128,174,123,171,139,138"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="54,287,90,323,87,327,50,290"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="102,216,65,252,61,248,98,212"/>
+<area shape="poly" id="edge9_Node000006_Node000004" title=" " alt="" coords="115,214,114,320,109,320,110,214"/>
+<area shape="poly" id="edge8_Node000006_Node000005" title=" " alt="" coords="127,212,161,248,157,252,123,216"/>
+</map>

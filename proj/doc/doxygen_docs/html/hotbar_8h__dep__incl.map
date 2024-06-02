@@ -1,0 +1,23 @@
+<map id="C:/Users/anton/Documents/lcom/labs/proj/src/model/hotbar.h" name="C:/Users/anton/Documents/lcom/labs/proj/src/model/hotbar.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="208,5,386,64"/>
+<area shape="rect" id="Node000002" href="$hotbar_8c.html" title=" " alt="" coords="5,112,184,171"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="230,74,151,114,149,109,227,69"/>
+<area shape="rect" id="Node000003" href="$main_room_8h.html" title=" " alt="" coords="208,112,386,171"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="300,80,300,112,295,112,295,80"/>
+<area shape="rect" id="Node000008" href="$main_room_viewer_8h.html" title=" " alt="" coords="335,219,515,277"/>
+<area shape="poly" id="edge12_Node000001_Node000008" title=" " alt="" coords="364,71,384,89,401,111,414,137,422,166,428,218,423,219,417,167,409,139,396,113,380,93,360,75"/>
+<area shape="rect" id="Node000004" href="$main_room_controller_8h.html" title=" " alt="" coords="63,325,259,384"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="278,186,223,279,187,326,183,323,219,276,273,183"/>
+<area shape="rect" id="Node000006" href="$proj_8c.html" title=" " alt="" coords="247,440,425,483"/>
+<area shape="poly" id="edge7_Node000003_Node000006" title=" " alt="" coords="303,186,325,384,334,439,329,440,320,384,298,186"/>
+<area shape="rect" id="Node000007" href="$main_room_8c.html" title=" " alt="" coords="31,219,209,277"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="237,181,170,221,167,216,235,176"/>
+<area shape="poly" id="edge8_Node000003_Node000008" title=" " alt="" coords="346,179,392,216,389,220,342,183"/>
+<area shape="rect" id="Node000005" href="$main_room_controller_8c.html" title=" " alt="" coords="26,432,222,491"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="148,399,137,433,132,431,143,398"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="223,390,303,437,300,442,221,395"/>
+<area shape="poly" id="edge9_Node000008_Node000004" title=" " alt="" coords="339,286,234,327,233,322,337,281"/>
+<area shape="poly" id="edge10_Node000008_Node000006" title=" " alt="" coords="496,285,515,303,530,324,540,355,538,370,530,386,509,409,484,427,455,440,426,450,424,445,453,435,481,422,506,405,526,382,533,368,535,356,525,327,511,306,493,289"/>
+<area shape="rect" id="Node000009" href="$main_room_viewer_8c.html" title=" " alt="" coords="335,325,515,384"/>
+<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="428,293,428,325,423,325,423,293"/>
+</map>

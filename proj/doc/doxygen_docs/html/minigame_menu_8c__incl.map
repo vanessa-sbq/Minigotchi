@@ -1,0 +1,24 @@
+<map id="C:/Users/anton/Documents/lcom/labs/proj/src/model/stateModels/minigameMenu.c" name="C:/Users/anton/Documents/lcom/labs/proj/src/model/stateModels/minigameMenu.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="21,5,220,64"/>
+<area shape="rect" id="Node000002" href="$minigame_menu_8h.html" title=" " alt="" coords="60,112,181,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,64,123,96,118,96,118,64"/>
+<area shape="rect" id="Node000003" href="$gui_drawer_8h.html" title=" " alt="" coords="83,261,235,288"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="81,142,51,155,24,171,9,191,9,201,13,212,38,237,70,253,68,258,35,241,9,215,3,202,4,189,20,167,48,150,79,137"/>
+<area shape="rect" id="Node000007" href="$button_8h.html" title=" " alt="" coords="255,187,335,213"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="152,137,251,178,249,183,150,142"/>
+<area shape="rect" id="Node000008" href="$cursor_8h.html" title=" " alt="" coords="23,187,103,213"/>
+<area shape="poly" id="edge10_Node000002_Node000008" title=" " alt="" coords="112,141,84,176,80,173,108,138"/>
+<area shape="rect" id="Node000009" href="$minigotchi_8h.html" title=" " alt="" coords="127,187,231,213"/>
+<area shape="poly" id="edge12_Node000002_Node000009" title=" " alt="" coords="133,138,161,173,157,176,129,141"/>
+<area shape="rect" id="Node000004" href="$video_8h.html" title=" " alt="" coords="71,336,207,379"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="158,289,150,322,145,321,153,288"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="212,427,290,453"/>
+<area shape="poly" id="edge6_Node000003_Node000005" title=" " alt="" coords="177,287,200,308,221,335,239,374,249,411,244,413,234,376,217,337,196,311,174,291"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="169,377,223,415,220,420,166,381"/>
+<area shape="rect" id="Node000006" href="$video__macros_8h.html" title=" " alt="" coords="77,427,188,453"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="140,379,137,411,132,411,135,379"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="273,216,197,256,195,251,270,212"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="295,214,259,412,253,411,290,213"/>
+<area shape="poly" id="edge11_Node000008_Node000003" title=" " alt="" coords="81,212,132,250,129,254,78,216"/>
+<area shape="poly" id="edge13_Node000009_Node000003" title=" " alt="" coords="178,215,169,247,164,246,173,213"/>
+</map>

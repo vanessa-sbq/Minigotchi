@@ -1,0 +1,10 @@
+<map id="mainRoom_get_happinessBar" name="mainRoom_get_happinessBar">
+<area shape="rect" id="Node000001" title=" " alt="" coords="380,31,574,57"/>
+<area shape="rect" id="Node000002" href="$main_room_controller_8c.html#ac448f52b9ec47f6aa868245cb08a5a19" title="Controller function that is called once every frame and updates / checks every action in the main roo..." alt="" coords="162,5,332,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="365,34,332,31,333,25,365,29"/>
+<area shape="rect" id="Node000004" href="$main_room_viewer_8c.html#ab712f0c477c358dac8015032c3aa3b72" title="Calls draw function of each element the main room contains." alt="" coords="169,56,325,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="365,59,326,63,325,58,365,54"/>
+<area shape="rect" id="Node000003" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Project main function that starts the game." alt="" coords="5,31,114,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="147,35,115,39,114,34,146,30"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="153,59,114,54,115,49,154,54"/>
+</map>

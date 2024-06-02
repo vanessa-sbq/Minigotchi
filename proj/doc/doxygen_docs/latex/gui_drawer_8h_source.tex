@@ -1,0 +1,90 @@
+\doxysection{gui\+Drawer.\+h}
+\hypertarget{gui_drawer_8h_source}{}\label{gui_drawer_8h_source}\index{C:/Users/anton/Documents/lcom/labs/proj/src/viewer/guiDrawer.h@{C:/Users/anton/Documents/lcom/labs/proj/src/viewer/guiDrawer.h}}
+\mbox{\hyperlink{gui_drawer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_\_GUIDRAWER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_\_GUIDRAWER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{video_8h}{../device\_controllers/video/video.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <lcom/lcf.h>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00009\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{struct_sprite_a7d2d72b3ea47dab6db0ada4b36017d7a}{height}},\ width;}
+\DoxyCodeLine{00010\ \ \ \ \ uint32\_t\ *\mbox{\hyperlink{struct_sprite_a394114f3fce04459a1593a68166c8621}{colors}};}
+\DoxyCodeLine{00011\ \}\ \mbox{\hyperlink{struct_sprite}{Sprite}};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{gui_drawer_8h_abe19e91476f63ac9e618f47092dd15d0}{guiDrawer\_get\_button\_sprite}}(\textcolor{keywordtype}{int}\ text\_index);}
+\DoxyCodeLine{00014\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{gui_drawer_8h_ae94978bb53705702e1da21044df5f9c9}{get\_cursor\_sprite}}();\ }
+\DoxyCodeLine{00015\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{gui_drawer_8h_a0c4a49f9b2916a971f1998a53aef8374}{guiDrawer\_get\_start\_button\_sprite}}();\ }
+\DoxyCodeLine{00016\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{gui_drawer_8h_a64b3e77e046a0e0122df2b0ec4d5d04c}{guiDrawer\_get\_quit\_button\_sprite}}();}
+\DoxyCodeLine{00017\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{gui_drawer_8h_ac373cd78214aec6ee8f6c384a30a31de}{guiDrawer\_get\_minigotchi\_sprite}}();}
+\DoxyCodeLine{00018\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{gui_drawer_8h_aad601cd211ca0464f3387be62caf3001}{guiDrawer\_get\_minigotchi\_cuddle\_sprite}}();}
+\DoxyCodeLine{00019\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{gui_drawer_8h_ace6f4f2f14abaa08fa9eb03fe51778a1}{guiDrawer\_get\_minigotchi\_normal\_sprite}}();}
+\DoxyCodeLine{00020\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{gui_drawer_8h_ad586ed11d3d42784c6234891f4632e2f}{guiDrawer\_get\_hotbar\_sprite}}();}
+\DoxyCodeLine{00021\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{gui_drawer_8h_a6135553cb136bd9f357a0f1780c75053}{guiDrawer\_get\_hotbar\_select\_sprite}}();}
+\DoxyCodeLine{00022\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{gui_drawer_8h_af5e13d9c956dd76ce26c6dac6068be5b}{guiDrawer\_get\_day\_window}}();}
+\DoxyCodeLine{00023\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{gui_drawer_8h_abec931f42a76707edd2b438e31116dfc}{guiDrawer\_get\_evening\_window}}();}
+\DoxyCodeLine{00024\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{gui_drawer_8h_a9260e1a63ff276d6aa374fc3056395f5}{guiDrawer\_get\_night\_window}}();}
+\DoxyCodeLine{00025\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{gui_drawer_8h_a2565c8857d19e2c807791510d945f2f5}{guiDrawer\_get\_guest\_button\_sprite}}();}
+\DoxyCodeLine{00026\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{gui_drawer_8h_a71536932ff4e8b22f58b76e7b8a54db3}{guiDrawer\_get\_host\_button\_sprite}}();}
+\DoxyCodeLine{00027\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{gui_drawer_8h_ab5a453eaf98d38de1d61c1f342ab60e9}{guiDrawer\_get\_ttt\_field}}();}
+\DoxyCodeLine{00028\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{gui_drawer_8h_ab89da73766e8307c1d6fdfd384c1c1a3}{guiDrawer\_get\_ttt\_wait}}();}
+\DoxyCodeLine{00029\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{gui_drawer_8h_aa7f31d5652876ae995250dee9b2a017a}{guiDrawer\_get\_ttt\_o}}();}
+\DoxyCodeLine{00030\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{gui_drawer_8h_a1fe80b911f2992528727f80a8574824b}{guiDrawer\_get\_ttt\_x}}();}
+\DoxyCodeLine{00031\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{gui_drawer_8h_ae9acd0b7c376bc23775829cb580810e1}{guiDrawer\_get\_bar\_sprite}}(\textcolor{keywordtype}{int}\ bar\_type,\ \textcolor{keywordtype}{int}\ level);}
+\DoxyCodeLine{00032\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{gui_drawer_8h_a96bfeea6db497a209432e2975c9b5a9d}{guiDrawer\_get\_minigamesIcon\_sprite}}();}
+\DoxyCodeLine{00033\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{gui_drawer_8h_aab079e52fbe7f45b0f7d6c876b975bcf}{guiDrawer\_get\_apple\_sprite}}();}
+\DoxyCodeLine{00034\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{gui_drawer_8h_a05800c123125bd7b453bfb960405431b}{guiDrawer\_get\_item\_sprite}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00035\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{gui_drawer_8h_a2beefa168c683c4411aa36515e184d26}{guiDrawer\_get\_rock\_sprite}}();}
+\DoxyCodeLine{00036\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{gui_drawer_8h_a5a7b61ff4d0d6f1b815bc5420fd2b8bd}{guiDrawer\_get\_paper\_sprite}}();}
+\DoxyCodeLine{00037\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{gui_drawer_8h_ae50f96294387b017a799f9105bcc4134}{guiDrawer\_get\_scissors\_sprite}}();}
+\DoxyCodeLine{00038\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{gui_drawer_8h_a9a42e3169b1ed9edce57c654a90b72d8}{guiDrawer\_get\_rpsWin\_sprite}}();}
+\DoxyCodeLine{00039\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{gui_drawer_8h_a6d96da5ee69bb7384231edea5638a85d}{guiDrawer\_get\_rpsTie\_sprite}}();}
+\DoxyCodeLine{00040\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{gui_drawer_8h_aa041e05b112df2340b722f49f481031e}{guiDrawer\_get\_rpsLose\_sprite}}();}
+\DoxyCodeLine{00041\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{gui_drawer_8h_af4407c19bcf8487cd7c87de619379c7a}{guiDrawer\_get\_botChose\_sprite}}();}
+\DoxyCodeLine{00042\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{gui_drawer_8h_acacf8cc3c80419dd04f364c0e2b92785}{guiDrawer\_get\_exitGameIcon\_sprite}}();}
+\DoxyCodeLine{00043\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{gui_drawer_8h_a719c69c695d890889060ec955a8040de}{guiDrawer\_get\_ttt\_button\_sprite}}();}
+\DoxyCodeLine{00044\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{gui_drawer_8h_a930ac7485a0948e0d77ecfde963ee589}{guiDrawer\_get\_rps\_button\_sprite}}();}
+\DoxyCodeLine{00045\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{gui_drawer_8h_a2ed2f5ecc38862ba578d84587934e781}{guiDrawer\_get\_exitIconSmall\_button\_sprite}}();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{gui_drawer_8h_ada3a8eb361ce7e3fddbbceff58425efd}{guiDrawer\_get\_happiness\_level\_sprite\_from\_index}}(uint8\_t\ index);}
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{gui_drawer_8h_a9a9776a57d5e9f94450acf2cccd51333}{setup\_happiness\_sprites}}();}
+\DoxyCodeLine{00049\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{gui_drawer_8h_af45b904254dba9e233457a88da1371f4}{cleanup\_happiness\_sprites}}();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{comment}{//\ TicTacToe}}
+\DoxyCodeLine{00052\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{gui_drawer_8h_ab36a54932debf96ff4d24f689bcc4472}{setup\_ttt\_sprites}}();}
+\DoxyCodeLine{00053\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{gui_drawer_8h_a9da3ff4ec69279dd0b670291ae02d0b0}{cleanup\_ttt\_sprites}}();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{comment}{//\ Happiness\ bar}}
+\DoxyCodeLine{00056\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{gui_drawer_8h_af01037e6016234adfc9be7f3082bcf5d}{guiDrawer\_get\_hunger\_level\_sprite\_from\_index}}(uint8\_t\ index);}
+\DoxyCodeLine{00057\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{gui_drawer_8h_aa18c3a26c9d1e2245d5264d7d457de6f}{setup\_hunger\_sprites}}();}
+\DoxyCodeLine{00058\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{gui_drawer_8h_a9c1185b085db12be6ab57076bb41a7b5}{cleanup\_hunger\_sprites}}();}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{comment}{//\ Hunger\ bar}}
+\DoxyCodeLine{00061\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{gui_drawer_8h_ae87e906f79815d3d6eef042e98b68ea1}{get\_text\_sprite\_from\_index}}(uint8\_t\ index);}
+\DoxyCodeLine{00062\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{gui_drawer_8h_afec62e1339a5415e0e26f1a3a426dda3}{setup\_text\_sprite}}();}
+\DoxyCodeLine{00063\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{gui_drawer_8h_ac2b44e431af5a4ef336dc098f3efa808}{cleanup\_text\_sprite}}();}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{comment}{//\ Buffer\ getters}}
+\DoxyCodeLine{00066\ \textcolor{keywordtype}{char}**\ \mbox{\hyperlink{gui_drawer_8h_a70603a5f7d69b625a1602bdce32cd7df}{guiDrawer\_get\_backgroundBuffer}}();}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{comment}{//\ Buffer\ setters}}
+\DoxyCodeLine{00069\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{gui_drawer_8h_a29b66167c2c9d8a119bbdc7cbe8fcb0b}{guiDrawer\_set\_backgroundBuffer}}(\textcolor{keywordtype}{char}**\ backgroundBuffer);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \mbox{\hyperlink{struct_sprite}{Sprite}}\ *\mbox{\hyperlink{gui_drawer_8h_acb93792ebc27a32413e0b31624c6d9b1}{create\_sprite\_xpm}}(xpm\_map\_t\ sprite);}
+\DoxyCodeLine{00072\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{gui_drawer_8h_a834200084177d31e41dd9b28754a3312}{setup\_sprites}}();}
+\DoxyCodeLine{00073\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{gui_drawer_8h_a3fc1965bb7f45fd72fff8a402c507186}{drawSprite}}(\mbox{\hyperlink{struct_sprite}{Sprite}}\ *sprite,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{comment}{//\ Sprite\ getters}}
+\DoxyCodeLine{00076\ uint16\_t\ \mbox{\hyperlink{gui_drawer_8h_a4c63acd65b3e03c46066da90b1bd0c99}{sprite\_get\_width}}(\mbox{\hyperlink{struct_sprite}{Sprite}}*\ sprite);}
+\DoxyCodeLine{00077\ uint16\_t\ \mbox{\hyperlink{gui_drawer_8h_aeb0c1fe0e10a344dac885302cf50eee8}{sprite\_get\_height}}(\mbox{\hyperlink{struct_sprite}{Sprite}}*\ sprite);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{gui_drawer_8h_a7592194eb7112ccb6d48a0bbe2271055}{switchBackground}}(uint8\_t\ bg);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \textcolor{comment}{//\ Wrappers}}
+\DoxyCodeLine{00082\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{gui_drawer_8h_a24861d3e2d5bf9ae60eee311f072216c}{wrapper\_draw\_background}}(uint8\_t\ bufferIndex);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_GUIDRAWER\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

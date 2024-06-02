@@ -1,0 +1,5 @@
+<map id="new_minigotchi" name="new_minigotchi">
+<area shape="rect" id="Node000001" title="Creates a new minigotchi &quot;object&quot; and returns a pointer to it." alt="" coords="5,13,116,40"/>
+<area shape="rect" id="Node000002" href="$gui_drawer_8c.html#ac373cd78214aec6ee8f6c384a30a31de" title=" " alt="" coords="164,5,333,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,24,148,24,148,29,116,29"/>
+</map>

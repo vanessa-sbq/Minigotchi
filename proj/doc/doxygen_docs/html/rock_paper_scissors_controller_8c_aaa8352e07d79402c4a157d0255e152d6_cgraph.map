@@ -1,0 +1,21 @@
+<map id="rockPaperScissorsController_resetGame" name="rockPaperScissorsController_resetGame">
+<area shape="rect" id="Node000001" title="Function that resets the game." alt="" coords="5,156,192,199"/>
+<area shape="rect" id="Node000002" href="$button_8c.html#adf4f3bb8d3b2d1f9aa3089f5a426818d" title=" " alt="" coords="263,5,403,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,154,166,98,200,67,238,42,250,36,253,40,241,46,204,72,170,101,119,157"/>
+<area shape="rect" id="Node000003" href="$rock_paper_scissors_8c.html#a10022e85f855aff396340c6d9f4a7acd" title=" " alt="" coords="255,56,411,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="142,153,239,108,253,102,255,107,241,113,144,158"/>
+<area shape="rect" id="Node000004" href="$rock_paper_scissors_8c.html#ae6c2d4873910e8567a7125d8860ef001" title=" " alt="" coords="255,123,411,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="192,161,239,155,240,160,192,167"/>
+<area shape="rect" id="Node000005" href="$rock_paper_scissors_8c.html#aa61b2ee0ae8a1c04c5c1de887033dfd1" title=" " alt="" coords="255,189,411,232"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="192,188,240,195,239,200,192,193"/>
+<area shape="rect" id="Node000006" href="$rock_paper_scissors_8c.html#a8c03d4ffd119e5936fd032b861743f93" title=" " alt="" coords="255,256,411,299"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="144,197,241,242,255,247,253,252,239,246,142,202"/>
+<area shape="rect" id="Node000007" href="$rock_paper_scissors_controller_8c.html#aaae40f3e4b724e8a93f27e56d8293aa2" title="Function that randomizes the reward (after each game)" alt="" coords="240,323,426,365"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="120,197,171,252,205,282,241,308,249,313,247,318,238,313,201,286,167,256,116,201"/>
+<area shape="rect" id="Node000008" href="$item_8c.html#a9e63f1318fbd43087177d034a95991fa" title="Creates a new item &quot;object&quot; and returns a pointer to it." alt="" coords="514,301,590,328"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="426,329,498,319,499,324,426,334"/>
+<area shape="rect" id="Node000010" href="$rock_paper_scissors_8c.html#a93161e865485e818eb327f4ffbe55d4f" title=" " alt="" coords="474,352,630,395"/>
+<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="426,354,459,358,458,363,426,359"/>
+<area shape="rect" id="Node000009" href="$gui_drawer_8c.html#a05800c123125bd7b453bfb960405431b" title="Get an item sprite from an id." alt="" coords="678,293,814,336"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="591,312,663,312,663,317,591,317"/>
+</map>

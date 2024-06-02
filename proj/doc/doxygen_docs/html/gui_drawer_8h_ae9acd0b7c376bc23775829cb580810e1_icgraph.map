@@ -1,0 +1,14 @@
+<map id="guiDrawer_get_bar_sprite" name="guiDrawer_get_bar_sprite">
+<area shape="rect" id="Node000001" title="Get a bar sprite from an index and level." alt="" coords="845,5,1012,32"/>
+<area shape="rect" id="Node000002" href="$main_room_controller_8c.html#ac448f52b9ec47f6aa868245cb08a5a19" title="Controller function that is called once every frame and updates / checks every action in the main roo..." alt="" coords="162,5,332,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="829,19,622,17,380,17,333,18,332,13,380,12,622,11,829,14"/>
+<area shape="rect" id="Node000004" href="$bar_8c.html#a0ee9fd5d157ba01a58297fbad1f89959" title="Creates a new bar &quot;object&quot; and returns a pointer to it." alt="" coords="728,31,797,57"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="830,36,798,41,797,36,829,31"/>
+<area shape="rect" id="Node000003" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Project main function that starts the game." alt="" coords="5,5,114,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="146,21,114,21,114,16,146,16"/>
+<area shape="rect" id="Node000005" href="$main_room_8c.html#ade78c0beb24832f2324ff1ce1e7748e6" title="Creates a new MainRoom &quot;object&quot; and returns a pointer to it." alt="" coords="566,33,680,60"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="712,48,680,48,680,43,712,42"/>
+<area shape="rect" id="Node000006" href="$main_room_controller_8c.html#a2ecc67af3b606dcd5918c3ba5d0b57b3" title="Load the main room (first time)" alt="" coords="380,27,518,69"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="551,50,519,50,519,45,551,45"/>
+<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="364,38,332,34,333,28,365,33"/>
+</map>

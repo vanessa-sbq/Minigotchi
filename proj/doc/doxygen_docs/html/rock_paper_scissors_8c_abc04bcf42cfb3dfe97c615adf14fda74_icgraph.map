@@ -1,0 +1,10 @@
+<map id="rockPaperScissors_get_quitButton" name="rockPaperScissors_get_quitButton">
+<area shape="rect" id="Node000001" title=" " alt="" coords="428,23,584,65"/>
+<area shape="rect" id="Node000002" href="$rock_paper_scissors_controller_8c.html#a339536fe7855348648d6a841feb4c332" title="Controller function that is called once every frame and updates / checks every action in the Rock Pap..." alt="" coords="162,5,380,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="412,37,380,33,381,28,413,31"/>
+<area shape="rect" id="Node000004" href="$rock_paper_scissors_viewer_8c.html#a769d9078f52fcb28fa5c8d2831f44f04" title="Calls draw function of each element the rock paper scissors game contains (also draws the GUI element..." alt="" coords="169,56,373,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="413,57,374,61,373,56,412,51"/>
+<area shape="rect" id="Node000003" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Project main function that starts the game." alt="" coords="5,31,114,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="147,36,114,40,114,35,146,31"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="153,58,114,53,114,48,154,53"/>
+</map>

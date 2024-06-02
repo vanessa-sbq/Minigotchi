@@ -1,0 +1,7 @@
+<map id="serial_init" name="serial_init">
+<area shape="rect" id="Node000001" title="This function initializes the Serial Port." alt="" coords="5,31,82,57"/>
+<area shape="rect" id="Node000002" href="$queue_8c.html#a839b722b6c4924b41f3afa1bfaa525ef" title="Function to initialize the queue." alt="" coords="130,5,225,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,34,114,28,115,33,83,39"/>
+<area shape="rect" id="Node000003" href="$utils_8c.html#a2b56f50ba159e9d5115ed1a75eff15d9" title="Invokes sys_inb() system call but reads the value into a uint8_t variable." alt="" coords="132,56,223,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="83,49,117,55,116,61,82,54"/>
+</map>

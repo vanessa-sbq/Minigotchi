@@ -1,0 +1,32 @@
+<map id="C:/Users/anton/Documents/lcom/labs/proj/src/utilities/vector.h" name="C:/Users/anton/Documents/lcom/labs/proj/src/utilities/vector.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="516,5,694,64"/>
+<area shape="rect" id="Node000002" href="$name_minigotchi_8h.html" title=" " alt="" coords="289,112,491,171"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="534,73,450,114,448,109,531,69"/>
+<area shape="rect" id="Node000009" href="$vector_8c.html" title=" " alt="" coords="516,112,694,171"/>
+<area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="607,80,607,112,602,112,602,80"/>
+<area shape="rect" id="Node000010" href="$main_room_viewer_8h.html" title=" " alt="" coords="641,219,822,277"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="671,71,691,89,708,111,721,137,729,166,734,218,729,219,724,167,716,139,704,113,688,93,668,75"/>
+<area shape="rect" id="Node000003" href="$name_minigotchi_controller_8h.html" title=" " alt="" coords="5,325,231,384"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="274,158,211,168,150,181,100,199,82,209,69,220,63,232,60,245,64,272,77,299,95,323,90,327,73,302,59,274,55,244,58,230,65,217,79,205,98,194,149,176,210,163,273,152"/>
+<area shape="rect" id="Node000005" href="$proj_8c.html" title=" " alt="" coords="464,440,642,483"/>
+<area shape="poly" id="edge6_Node000002_Node000005" title=" " alt="" coords="486,177,510,195,530,217,545,245,555,276,564,338,564,396,559,440,554,439,559,396,559,339,550,277,540,247,525,220,506,198,483,181"/>
+<area shape="rect" id="Node000006" href="$name_minigotchi_8c.html" title=" " alt="" coords="80,219,282,277"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="321,180,239,220,237,216,318,175"/>
+<area shape="rect" id="Node000007" href="$name_minigotchi_viewer_8h.html" title=" " alt="" coords="305,219,515,277"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="401,185,407,218,402,219,396,186"/>
+<area shape="rect" id="Node000004" href="$name_minigotchi_controller_8c.html" title=" " alt="" coords="5,432,231,491"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="121,400,121,432,115,432,115,400"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="247,384,467,437,466,442,245,389"/>
+<area shape="poly" id="edge8_Node000007_Node000003" title=" " alt="" coords="316,285,199,327,197,322,315,280"/>
+<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="450,287,479,324,517,385,545,438,540,441,513,388,474,327,445,291"/>
+<area shape="rect" id="Node000008" href="$name_minigotchi_viewer_8c.html" title=" " alt="" coords="255,325,464,384"/>
+<area shape="poly" id="edge10_Node000007_Node000008" title=" " alt="" coords="392,293,376,326,371,324,387,290"/>
+<area shape="poly" id="edge16_Node000010_Node000005" title=" " alt="" coords="674,288,631,327,609,356,590,387,563,441,559,438,585,384,604,353,627,324,671,284"/>
+<area shape="rect" id="Node000011" href="$main_room_controller_8h.html" title=" " alt="" coords="845,325,1042,384"/>
+<area shape="poly" id="edge13_Node000010_Node000011" title=" " alt="" coords="804,282,886,322,884,327,802,287"/>
+<area shape="rect" id="Node000013" href="$main_room_viewer_8c.html" title=" " alt="" coords="641,325,822,384"/>
+<area shape="poly" id="edge17_Node000010_Node000013" title=" " alt="" coords="734,293,734,325,729,325,729,293"/>
+<area shape="poly" id="edge15_Node000011_Node000005" title=" " alt="" coords="831,389,631,442,630,437,829,384"/>
+<area shape="rect" id="Node000012" href="$main_room_controller_8c.html" title=" " alt="" coords="845,432,1042,491"/>
+<area shape="poly" id="edge14_Node000011_Node000012" title=" " alt="" coords="946,400,946,432,941,432,941,400"/>
+</map>

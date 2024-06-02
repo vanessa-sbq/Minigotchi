@@ -1,0 +1,44 @@
+\doxysection{database.\+h}
+\hypertarget{database_8h_source}{}\label{database_8h_source}\index{C:/Users/anton/Documents/lcom/labs/proj/src/player\_data/database.h@{C:/Users/anton/Documents/lcom/labs/proj/src/player\_data/database.h}}
+\mbox{\hyperlink{database_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_DATABASE\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_DATABASE\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <lcom/lcf.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <dirent.h>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{char}\ minigotchi\_name[11];}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_database_ab83adcbecbb3f90ac56f807591e48cfa}{minigotchi\_hunger}};}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_database_ac32dccf0ebc28bc93a2900a8c24b0838}{minigotchi\_happiness}};}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_database_a8a39aedf04bf925a219bd3a35e38ec64}{coins}};}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{int}\ food\_array[9];}
+\DoxyCodeLine{00014\ \}\ \mbox{\hyperlink{struct_database}{Database}};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \mbox{\hyperlink{struct_database}{Database}}*\ \mbox{\hyperlink{database_8h_a6485ea5a811185f7f84ec62efa72f45e}{getDatabase}}();}
+\DoxyCodeLine{00017\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{database_8h_a5ff42ebfdfc8c32675358c3be04bca01}{setDatabase}}(\mbox{\hyperlink{struct_database}{Database}}*\ \mbox{\hyperlink{main_room_controller_8c_a46412799b92880e8b22508d832becca0}{database}});}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \mbox{\hyperlink{struct_database}{Database}}\ *\mbox{\hyperlink{database_8h_ac4227a4f10cf05cbaab4a47911d5de92}{new\_database}}();}
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{database_8h_a36c67190cba777bc01fa5b52bf8235c1}{database\_load\_from\_file}}(\mbox{\hyperlink{struct_database}{Database}}\ *\mbox{\hyperlink{main_room_controller_8c_a46412799b92880e8b22508d832becca0}{database}});}
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{database_8h_a4e7ac9d57063586e070cd5f334c7e2ae}{database\_save\_to\_file}}(\mbox{\hyperlink{struct_database}{Database}}\ *\mbox{\hyperlink{main_room_controller_8c_a46412799b92880e8b22508d832becca0}{database}});}
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{database_8h_a018987c27a3a712e205096869c3569bb}{database\_check\_file\_exists}}();}
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{database_8h_a03e07297c05a6475319536d56132ae41}{database\_delete\_file}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{database_8h_a1ef67d7754d1d7dd31753c4ad5b8e342}{database\_get\_hunger}}(\mbox{\hyperlink{struct_database}{Database}}\ *\mbox{\hyperlink{main_room_controller_8c_a46412799b92880e8b22508d832becca0}{database}});}
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{database_8h_a67a693409595bbab2ac7bc818cb15300}{database\_get\_happiness}}(\mbox{\hyperlink{struct_database}{Database}}\ *\mbox{\hyperlink{main_room_controller_8c_a46412799b92880e8b22508d832becca0}{database}});}
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{database_8h_ab4834315ff3cd64d2dd619ca7a89aadd}{database\_get\_coins}}(\mbox{\hyperlink{struct_database}{Database}}\ *\mbox{\hyperlink{main_room_controller_8c_a46412799b92880e8b22508d832becca0}{database}});}
+\DoxyCodeLine{00028\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{database_8h_a52a29295aae78877c76126ae6dbf6242}{database\_get\_minigotchiName}}(\mbox{\hyperlink{struct_database}{Database}}\ *\mbox{\hyperlink{main_room_controller_8c_a46412799b92880e8b22508d832becca0}{database}});}
+\DoxyCodeLine{00029\ \textcolor{keywordtype}{int}*\ \mbox{\hyperlink{database_8h_aaa8da9a6a65b72e40a3d1aa910aac673}{database\_get\_foodArray}}(\mbox{\hyperlink{struct_database}{Database}}\ *\mbox{\hyperlink{main_room_controller_8c_a46412799b92880e8b22508d832becca0}{database}});}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{database_8h_a07bc70ec983a4c8238d07b0e2df2264f}{database\_set\_hunger}}(\mbox{\hyperlink{struct_database}{Database}}\ *\mbox{\hyperlink{main_room_controller_8c_a46412799b92880e8b22508d832becca0}{database}},\ \textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{database_8h_ab34b2cccb4adeca7d46e1bade97ab42f}{database\_set\_happiness}}(\mbox{\hyperlink{struct_database}{Database}}\ *\mbox{\hyperlink{main_room_controller_8c_a46412799b92880e8b22508d832becca0}{database}},\ \textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{database_8h_a708c6480cb1f4efbf820ffd3d5c94efc}{database\_set\_coins}}(\mbox{\hyperlink{struct_database}{Database}}\ *\mbox{\hyperlink{main_room_controller_8c_a46412799b92880e8b22508d832becca0}{database}},\ \textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00034\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{database_8h_aa63a095b6e2a945a92b2fea9682e62c2}{database\_set\_minigotchiName}}(\mbox{\hyperlink{struct_database}{Database}}\ *\mbox{\hyperlink{main_room_controller_8c_a46412799b92880e8b22508d832becca0}{database}},\ \textcolor{keywordtype}{char}*\ value);}
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{database_8h_aacee07019f50bc20c2c46651853230e1}{database\_set\_foodArray}}(\mbox{\hyperlink{struct_database}{Database}}\ *\mbox{\hyperlink{main_room_controller_8c_a46412799b92880e8b22508d832becca0}{database}},\ \textcolor{keywordtype}{int}*\ food\_array);}
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{database_8h_a360523abc6c9197c3ad3840f03d896f4}{database\_add\_food\_to\_array}}(\mbox{\hyperlink{struct_database}{Database}}\ *\mbox{\hyperlink{main_room_controller_8c_a46412799b92880e8b22508d832becca0}{database}},\ \textcolor{keywordtype}{int}\ food\_item);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_DATABASE\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

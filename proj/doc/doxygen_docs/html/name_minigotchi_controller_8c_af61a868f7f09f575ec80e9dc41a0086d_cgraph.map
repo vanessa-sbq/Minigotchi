@@ -1,0 +1,15 @@
+<map id="nameMinigotchiController_checkCollision" name="nameMinigotchiController_checkCollision">
+<area shape="rect" id="Node000001" title="Function that checks sprite collisions with the cursor." alt="" coords="5,128,173,171"/>
+<area shape="rect" id="Node000002" href="$cursor_8c.html#a95277b3c428a0b3c1b79cfcb49628397" title=" " alt="" coords="241,5,338,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,125,159,84,219,42,230,36,232,41,222,46,162,88,114,129"/>
+<area shape="rect" id="Node000003" href="$cursor_8c.html#ab346189d7aeb1bbd182952fa838ae45c" title=" " alt="" coords="241,56,338,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="141,125,220,92,235,86,237,91,222,97,143,130"/>
+<area shape="rect" id="Node000004" href="$cursor_8c.html#a98149df29b06207e2304795ea8e00d7e" title=" " alt="" coords="227,107,352,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="173,134,211,129,212,134,173,140"/>
+<area shape="rect" id="Node000005" href="$name_minigotchi_8c.html#a0dec9f5a113e9683d9882ee5f79c7701" title=" " alt="" coords="221,157,358,200"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="173,159,206,164,205,169,173,164"/>
+<area shape="rect" id="Node000006" href="$gui_drawer_8c.html#aeb0c1fe0e10a344dac885302cf50eee8" title=" " alt="" coords="229,224,350,251"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="134,169,222,210,236,216,234,221,220,214,132,174"/>
+<area shape="rect" id="Node000007" href="$gui_drawer_8c.html#a4c63acd65b3e03c46066da90b1bd0c99" title=" " alt="" coords="232,275,347,301"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="112,169,160,215,222,260,232,266,229,270,219,265,157,219,109,173"/>
+</map>

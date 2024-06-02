@@ -1,0 +1,18 @@
+<map id="C:/Users/anton/Documents/lcom/labs/proj/src/model/stateModels/mainRoom.h" name="C:/Users/anton/Documents/lcom/labs/proj/src/model/stateModels/mainRoom.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="265,5,443,64"/>
+<area shape="rect" id="Node000002" href="$main_room_controller_8h.html" title=" " alt="" coords="56,219,252,277"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="312,77,273,114,180,220,176,216,270,110,308,73"/>
+<area shape="rect" id="Node000004" href="$proj_8c.html" title=" " alt="" coords="226,333,405,376"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="331,79,318,113,309,175,307,237,315,333,310,333,302,237,303,174,313,111,326,77"/>
+<area shape="rect" id="Node000005" href="$main_room_8c.html" title=" " alt="" coords="533,112,711,171"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="443,68,550,109,548,114,441,72"/>
+<area shape="rect" id="Node000006" href="$main_room_viewer_8h.html" title=" " alt="" coords="328,112,508,171"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="382,76,403,110,398,113,377,79"/>
+<area shape="rect" id="Node000003" href="$main_room_controller_8c.html" title=" " alt="" coords="5,325,202,384"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="136,293,120,326,115,324,131,290"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="212,284,285,331,282,335,210,288"/>
+<area shape="poly" id="edge7_Node000006_Node000002" title=" " alt="" coords="332,179,227,221,226,216,330,174"/>
+<area shape="poly" id="edge8_Node000006_Node000004" title=" " alt="" coords="390,185,369,220,342,281,324,334,319,332,337,279,364,217,385,182"/>
+<area shape="rect" id="Node000007" href="$main_room_viewer_8c.html" title=" " alt="" coords="379,219,559,277"/>
+<area shape="poly" id="edge9_Node000006_Node000007" title=" " alt="" coords="441,184,457,217,453,219,436,186"/>
+</map>

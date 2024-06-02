@@ -1,0 +1,15 @@
+<map id="C:/Users/anton/Documents/lcom/labs/proj/src/model/button.c" name="C:/Users/anton/Documents/lcom/labs/proj/src/model/button.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,184,64"/>
+<area shape="rect" id="Node000002" href="$button_8h.html" title=" " alt="" coords="60,112,129,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,64,97,96,92,96,92,64"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="47,352,124,379"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="89,140,78,162,69,187,65,227,66,268,80,336,74,337,61,269,59,227,64,186,73,160,84,138"/>
+<area shape="rect" id="Node000004" href="$gui_drawer_8h.html" title=" " alt="" coords="79,187,219,213"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="106,138,133,172,128,176,102,141"/>
+<area shape="poly" id="edge7_Node000004_Node000003" title=" " alt="" coords="144,215,120,262,95,338,90,336,115,260,139,213"/>
+<area shape="rect" id="Node000005" href="$video_8h.html" title=" " alt="" coords="129,261,265,304"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="159,212,180,247,175,249,154,215"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="170,307,117,345,113,341,167,302"/>
+<area shape="rect" id="Node000006" href="$video__macros_8h.html" title=" " alt="" coords="148,352,260,379"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="202,304,204,336,199,337,196,305"/>
+</map>

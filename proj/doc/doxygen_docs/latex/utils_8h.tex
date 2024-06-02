@@ -1,0 +1,96 @@
+\doxysection{C\+:/\+Users/anton/\+Documents/lcom/labs/proj/src/device\+\_\+controllers/utils.h File Reference}
+\hypertarget{utils_8h}{}\label{utils_8h}\index{C:/Users/anton/Documents/lcom/labs/proj/src/device\_controllers/utils.h@{C:/Users/anton/Documents/lcom/labs/proj/src/device\_controllers/utils.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+Include dependency graph for utils.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{utils_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{utils_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{utils_8h_a31ab374573517f8a5ba31c52a49a8606}{util\+\_\+get\+\_\+\+LSB}} (uint16\+\_\+t val, uint8\+\_\+t \texorpdfstring{$\ast$}{*}lsb)
+\begin{DoxyCompactList}\small\item\em Returns the LSB of a 2 byte integer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{utils_8h_afc6ca7a9a39943ff1792d206da514a59}{util\+\_\+get\+\_\+\+MSB}} (uint16\+\_\+t val, uint8\+\_\+t \texorpdfstring{$\ast$}{*}msb)
+\begin{DoxyCompactList}\small\item\em Returns the MSB of a 2 byte integer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{utils_8h_aed675ba3d00212590f57d2c5f3fa5ead}{util\+\_\+sys\+\_\+inb}} (int port, uint8\+\_\+t \texorpdfstring{$\ast$}{*}read)
+\begin{DoxyCompactList}\small\item\em Invokes sys\+\_\+inb() system call but reads the value into a uint8\+\_\+t variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{utils_8h_a31ab374573517f8a5ba31c52a49a8606}\index{utils.h@{utils.h}!util\_get\_LSB@{util\_get\_LSB}}
+\index{util\_get\_LSB@{util\_get\_LSB}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{util\_get\_LSB()}{util\_get\_LSB()}}
+{\footnotesize\ttfamily \label{utils_8h_a31ab374573517f8a5ba31c52a49a8606} 
+int util\+\_\+get\+\_\+\+LSB (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{val}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{lsb}{}\end{DoxyParamCaption})}
+
+
+
+Returns the LSB of a 2 byte integer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & input 2 byte integer \\
+\hline
+{\em lsb} & address of memory location to be updated with val\textquotesingle{}s LSB \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+\Hypertarget{utils_8h_afc6ca7a9a39943ff1792d206da514a59}\index{utils.h@{utils.h}!util\_get\_MSB@{util\_get\_MSB}}
+\index{util\_get\_MSB@{util\_get\_MSB}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{util\_get\_MSB()}{util\_get\_MSB()}}
+{\footnotesize\ttfamily \label{utils_8h_afc6ca7a9a39943ff1792d206da514a59} 
+int util\+\_\+get\+\_\+\+MSB (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{val}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{msb}{}\end{DoxyParamCaption})}
+
+
+
+Returns the MSB of a 2 byte integer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & input 2 byte integer \\
+\hline
+{\em msb} & address of memory location to be updated with val\textquotesingle{}s MSB ? ... é como está online... \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+\Hypertarget{utils_8h_aed675ba3d00212590f57d2c5f3fa5ead}\index{utils.h@{utils.h}!util\_sys\_inb@{util\_sys\_inb}}
+\index{util\_sys\_inb@{util\_sys\_inb}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{util\_sys\_inb()}{util\_sys\_inb()}}
+{\footnotesize\ttfamily \label{utils_8h_aed675ba3d00212590f57d2c5f3fa5ead} 
+int util\+\_\+sys\+\_\+inb (\begin{DoxyParamCaption}\item[{int}]{port}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Invokes sys\+\_\+inb() system call but reads the value into a uint8\+\_\+t variable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & the input port that is to be read \\
+\hline
+{\em value} & address of 8-\/bit variable to be update with the value read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{utils_8h_aed675ba3d00212590f57d2c5f3fa5ead_icgraph}
+\end{center}
+\end{figure}

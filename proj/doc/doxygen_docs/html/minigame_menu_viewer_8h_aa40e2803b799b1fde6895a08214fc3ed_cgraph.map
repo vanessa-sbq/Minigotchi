@@ -1,0 +1,26 @@
+<map id="minigameMenuViewer_draw" name="minigameMenuViewer_draw">
+<area shape="rect" id="Node000001" title="Calls draw function of each element the minigame menu contains." alt="" coords="5,157,188,184"/>
+<area shape="rect" id="Node000002" href="$button_8c.html#a8cffe5189a594e49e7510d739e186fa0" title="Draws a button." alt="" coords="290,5,382,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,155,158,100,194,68,234,42,274,26,276,31,237,46,197,73,161,104,111,159"/>
+<area shape="rect" id="Node000005" href="$cursor_8c.html#a4acb89b058c3a72154e1b2650107a77f" title="Draws a cursor." alt="" coords="290,56,382,83"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="118,154,170,124,235,92,275,79,276,84,237,97,172,128,120,159"/>
+<area shape="rect" id="Node000006" href="$minigame_menu_8c.html#a93f85a92a65c75a0a3df3fc2d21597f0" title=" " alt="" coords="247,107,425,133"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="163,154,254,134,255,140,164,159"/>
+<area shape="rect" id="Node000007" href="$minigame_menu_8c.html#a19e793e1bf22cb7791770c5c0bf1e0eb" title=" " alt="" coords="236,157,436,184"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="188,168,220,168,220,173,188,173"/>
+<area shape="rect" id="Node000008" href="$video_8c.html#a3541d07f307db72cac3911f3f26573a4" title="Clears the screen on the current back buffer." alt="" coords="279,208,393,235"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="164,182,264,204,263,209,163,187"/>
+<area shape="rect" id="Node000009" href="$video_8c.html#abac76703d677ba820ea82a747748d743" title="Makes a BIOS call to set the new display start (Page flip)" alt="" coords="290,259,382,285"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="120,182,172,213,237,244,276,257,275,262,235,249,170,218,118,187"/>
+<area shape="rect" id="Node000010" href="$gui_drawer_8c.html#a24861d3e2d5bf9ae60eee311f072216c" title="Draws the backfround (wrapper function)" alt="" coords="249,309,423,336"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="111,183,161,238,197,269,237,295,250,301,247,306,234,300,194,273,158,241,107,186"/>
+<area shape="rect" id="Node000003" href="$gui_drawer_8c.html#a3fc1965bb7f45fd72fff8a402c507186" title="Function responsible for drawing the sprites on the screen." alt="" coords="529,31,611,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="382,21,513,35,513,41,381,26"/>
+<area shape="rect" id="Node000004" href="$video_8c.html#a6091a4bd04596e6e8e39b7dee1e1b118" title="Draws a pixel on the current back buffer." alt="" coords="735,31,812,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="611,41,719,41,719,47,611,47"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="381,62,513,47,513,53,382,67"/>
+<area shape="rect" id="Node000011" href="$video_8c.html#a243df2d473d9bc9b129bcc0088b855f2" title="Set the background with triple buffering." alt="" coords="484,309,655,336"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="423,320,468,320,468,325,423,325"/>
+<area shape="rect" id="Node000012" href="$video_8c.html#a89e702224919a5716dbe41c1862f931e" title="Gets VRAM size." alt="" coords="703,309,844,336"/>
+<area shape="poly" id="edge12_Node000011_Node000012" title=" " alt="" coords="656,320,688,320,688,325,656,325"/>
+</map>

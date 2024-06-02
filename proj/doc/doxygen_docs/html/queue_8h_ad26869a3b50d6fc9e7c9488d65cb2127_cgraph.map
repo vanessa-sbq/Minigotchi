@@ -1,0 +1,5 @@
+<map id="peek" name="peek">
+<area shape="rect" id="Node000001" title="Function to peek at the front element of the queue without removing it." alt="" coords="5,5,55,32"/>
+<area shape="rect" id="Node000002" href="$queue_8c.html#ae2701ab012e9ff60a04d6ffd07a42e1b" title="Function to check if the queue is empty." alt="" coords="103,5,172,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,16,87,16,87,21,55,21"/>
+</map>

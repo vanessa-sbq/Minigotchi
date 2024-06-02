@@ -1,0 +1,47 @@
+<map id="new_cursor" name="new_cursor">
+<area shape="rect" id="Node000001" title="Creates a new cursor &quot;object&quot; and returns a pointer to it." alt="" coords="872,197,959,224"/>
+<area shape="rect" id="Node000002" href="$main_menu_8c.html#a95d80f98f9b8ce2e3f27039b5704012c" title="Creates a new MainMenu &quot;object&quot; and returns a pointer to it." alt="" coords="687,17,799,44"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="900,184,870,127,848,96,822,69,786,47,788,42,825,65,852,93,874,124,905,182"/>
+<area shape="rect" id="Node000005" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Project main function that starts the game." alt="" coords="5,197,114,224"/>
+<area shape="poly" id="edge25_Node000001_Node000005" title=" " alt="" coords="893,187,862,155,843,141,823,129,768,111,722,109,674,112,614,113,485,102,383,91,334,90,283,94,227,107,163,129,135,143,111,162,74,199,70,195,107,158,133,139,161,124,226,102,283,89,334,84,383,85,485,97,614,108,674,107,722,103,769,106,825,124,846,136,866,151,897,183"/>
+<area shape="rect" id="Node000006" href="$main_room_8c.html#ade78c0beb24832f2324ff1ce1e7748e6" title="Creates a new MainRoom &quot;object&quot; and returns a pointer to it." alt="" coords="686,139,800,165"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="859,194,783,168,785,163,860,189"/>
+<area shape="rect" id="Node000009" href="$minigame_menu_8c.html#a57c731105e4d26421741335f2e9ab2d4" title="Creates a new MinigameMenu &quot;object&quot; and returns a pointer to it." alt="" coords="673,197,813,224"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="856,213,813,213,813,208,856,208"/>
+<area shape="rect" id="Node000012" href="$name_minigotchi_8c.html#ac55ffa48e02d8dc73242f6e92e12fdd4" title="Creates a new NameMinigotchi &quot;object&quot; and returns a pointer to it." alt="" coords="672,253,814,280"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="858,232,787,255,785,250,857,227"/>
+<area shape="rect" id="Node000015" href="$rock_paper_scissors_8c.html#ae8af223aef0dbcc00fb65b3367fd1bde" title="Creates a new RockPaperScissors &quot;object&quot; and returns a pointer to it." alt="" coords="662,316,824,343"/>
+<area shape="poly" id="edge17_Node000001_Node000015" title=" " alt="" coords="893,237,862,266,825,294,781,318,778,313,822,290,858,262,889,233"/>
+<area shape="rect" id="Node000018" href="$tic_tac_toe_8c.html#a6f384617833ad3a6adb8678ddf2d3bca" title="Creates a new TicTacToe &quot;object&quot; and returns a pointer to it." alt="" coords="689,391,797,417"/>
+<area shape="poly" id="edge21_Node000001_Node000018" title=" " alt="" coords="904,239,872,296,851,328,826,357,801,377,775,392,772,388,798,372,822,353,846,324,868,293,899,237"/>
+<area shape="rect" id="Node000003" href="$main_menu_controller_8c.html#a5a1c7010a735ca03bc3f03a64155323d" title="Load the main menu (first time)" alt="" coords="453,5,589,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="672,32,590,31,590,25,672,27"/>
+<area shape="rect" id="Node000004" href="$main_menu_controller_8c.html#af10a3dc70892e363d03903f7671c5895" title="Controller function that is called once every frame and updates / checks every action in the main men..." alt="" coords="187,17,355,44"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="438,31,356,32,356,27,438,25"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="193,52,163,69,130,100,103,136,69,198,64,196,99,133,126,96,160,65,190,48"/>
+<area shape="rect" id="Node000007" href="$main_room_controller_8c.html#a2ecc67af3b606dcd5918c3ba5d0b57b3" title="Load the main room (first time)" alt="" coords="452,123,590,165"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="671,152,591,149,591,144,671,147"/>
+<area shape="rect" id="Node000008" href="$main_room_controller_8c.html#ac448f52b9ec47f6aa868245cb08a5a19" title="Controller function that is called once every frame and updates / checks every action in the main roo..." alt="" coords="186,139,356,165"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="436,149,357,152,357,147,436,144"/>
+<area shape="poly" id="edge8_Node000008_Node000005" title=" " alt="" coords="206,173,111,199,110,194,205,167"/>
+<area shape="rect" id="Node000010" href="$minigame_menu_controller_8c.html#ae47d4dfb6175e3049d7bd32a640e3ab3" title="Load the minigame selection menu (first time)" alt="" coords="439,189,603,232"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="658,213,604,213,604,208,658,208"/>
+<area shape="rect" id="Node000011" href="$minigame_menu_controller_8c.html#add0cc9d8c1e1ca3cf9be2a7bbe12e4f5" title="Controller function that is called once every frame and updates / checks every action in the minigame..." alt="" coords="173,197,369,224"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="423,213,370,213,370,208,423,208"/>
+<area shape="poly" id="edge12_Node000011_Node000005" title=" " alt="" coords="157,213,114,213,114,208,157,208"/>
+<area shape="rect" id="Node000013" href="$name_minigotchi_controller_8c.html#a688c10b9d8fa03f8605f2cd5421cdcb6" title="Load the minigotchi naming screen (first time)" alt="" coords="438,256,605,299"/>
+<area shape="poly" id="edge14_Node000012_Node000013" title=" " alt="" coords="657,273,605,276,605,271,656,268"/>
+<area shape="rect" id="Node000014" href="$name_minigotchi_controller_8c.html#aa9284c2a1e15db8d817dafc4fb7f8bf9" title="Controller function that is called once every frame and updates / checks every action in the minigotc..." alt="" coords="171,253,371,280"/>
+<area shape="poly" id="edge15_Node000013_Node000014" title=" " alt="" coords="422,276,371,274,371,268,422,270"/>
+<area shape="poly" id="edge16_Node000014_Node000005" title=" " alt="" coords="202,251,112,227,113,222,203,246"/>
+<area shape="rect" id="Node000016" href="$rock_paper_scissors_controller_8c.html#a12d415dd659136d30385c13c4ec262a6" title="Load the Rock Paper Scissors minigame (first time)" alt="" coords="428,323,614,365"/>
+<area shape="poly" id="edge18_Node000015_Node000016" title=" " alt="" coords="647,338,615,340,615,335,646,333"/>
+<area shape="rect" id="Node000017" href="$rock_paper_scissors_controller_8c.html#a339536fe7855348648d6a841feb4c332" title="Controller function that is called once every frame and updates / checks every action in the Rock Pap..." alt="" coords="162,316,380,343"/>
+<area shape="poly" id="edge19_Node000016_Node000017" title=" " alt="" coords="412,340,380,338,381,333,413,335"/>
+<area shape="poly" id="edge20_Node000017_Node000005" title=" " alt="" coords="202,313,160,294,111,260,73,227,76,223,114,256,163,290,204,308"/>
+<area shape="rect" id="Node000019" href="$tic_tac_toe_controller_8c.html#a595888a1a207791f219fe698db9cff91" title="Load the Tic Tac Toe minigame (first time)" alt="" coords="455,389,587,432"/>
+<area shape="poly" id="edge22_Node000018_Node000019" title=" " alt="" coords="674,409,588,411,588,406,674,403"/>
+<area shape="rect" id="Node000020" href="$tic_tac_toe_controller_8c.html#aae4bafbe082fa7f4bad0e58d11e6d861" title="Controller function that is called once every frame and updates / checks every action in the Tic Tac ..." alt="" coords="189,391,353,417"/>
+<area shape="poly" id="edge23_Node000019_Node000020" title=" " alt="" coords="439,411,354,409,354,404,440,406"/>
+<area shape="poly" id="edge24_Node000020_Node000005" title=" " alt="" coords="210,387,184,373,160,357,127,324,100,287,65,226,70,223,105,284,131,320,163,353,187,369,213,382"/>
+</map>

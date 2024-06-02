@@ -1,0 +1,23 @@
+<map id="mainRoomController_feed_minigotchi" name="mainRoomController_feed_minigotchi">
+<area shape="rect" id="Node000001" title="Functions that handles the minigotchi feeding event, by removing the item from the hotbar and updatin..." alt="" coords="5,225,144,268"/>
+<area shape="rect" id="Node000002" href="$database_8c.html#aeb6729771f8fd9bd74972cfba795bf19" title=" " alt="" coords="203,5,364,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,224,93,185,116,136,148,85,168,62,190,42,196,37,200,42,193,46,172,66,152,88,121,138,98,187,85,226"/>
+<area shape="rect" id="Node000003" href="$database_8c.html#a9378e9d8d5fcd0c53ade29ecec8db06f" title=" " alt="" coords="211,56,356,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="84,224,125,159,155,123,190,93,199,87,201,92,193,97,158,127,129,162,89,226"/>
+<area shape="rect" id="Node000004" href="$database_8c.html#af480e71322439668f369caeeec1630da" title=" " alt="" coords="203,107,364,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="93,223,135,182,162,161,190,143,203,137,205,142,193,148,165,166,139,186,97,227"/>
+<area shape="rect" id="Node000005" href="$database_8c.html#ac831fb83ab85592f1f807b84ff826106" title=" " alt="" coords="211,157,356,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="121,222,191,193,213,186,214,191,193,199,123,227"/>
+<area shape="rect" id="Node000006" href="$hotbar_8c.html#a01102fa976f22815d30eeb919324eb04" title=" " alt="" coords="208,208,359,235"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="144,236,192,230,193,235,144,241"/>
+<area shape="rect" id="Node000007" href="$hotbar_8c.html#a0276e2a4737f43b589695a48a0166d9e" title=" " alt="" coords="192,259,375,285"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="144,252,177,256,176,262,144,258"/>
+<area shape="rect" id="Node000008" href="$hotbar_8c.html#aa1f2913112d1edf48732ef8e33567fea" title=" " alt="" coords="224,309,343,336"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="123,266,193,295,214,302,213,307,191,300,121,271"/>
+<area shape="rect" id="Node000009" href="$item_8c.html#a693a504ab67d8bc7d10c3029300b720d" title=" " alt="" coords="218,360,349,387"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="97,267,139,307,165,328,193,346,205,352,203,356,190,350,162,332,135,311,93,270"/>
+<area shape="rect" id="Node000010" href="$item_8c.html#abe12131db7008f97ef0371a9a296b762" title=" " alt="" coords="239,411,328,437"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="89,267,129,332,158,367,193,396,225,411,223,416,190,401,155,370,125,335,84,270"/>
+<area shape="rect" id="Node000011" href="$main_room_8c.html#ab664627df529f79406b7a1e33274b63b" title=" " alt="" coords="208,461,359,488"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="85,267,98,306,121,355,152,405,172,428,193,447,200,452,196,456,190,451,168,431,148,408,116,357,93,308,80,269"/>
+</map>

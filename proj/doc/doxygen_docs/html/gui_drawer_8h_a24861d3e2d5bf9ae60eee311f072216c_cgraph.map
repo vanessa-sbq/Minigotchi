@@ -1,0 +1,7 @@
+<map id="wrapper_draw_background" name="wrapper_draw_background">
+<area shape="rect" id="Node000001" title="Draws the backfround (wrapper function)" alt="" coords="5,5,180,32"/>
+<area shape="rect" id="Node000002" href="$video_8c.html#a243df2d473d9bc9b129bcc0088b855f2" title="Set the background with triple buffering." alt="" coords="228,5,399,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,16,212,16,212,21,180,21"/>
+<area shape="rect" id="Node000003" href="$video_8c.html#a89e702224919a5716dbe41c1862f931e" title="Gets VRAM size." alt="" coords="447,5,587,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="399,16,431,16,431,21,399,21"/>
+</map>

@@ -1,0 +1,246 @@
+\doxysection{C\+:/\+Users/anton/\+Documents/lcom/labs/proj/src/model/minigotchi.h File Reference}
+\hypertarget{minigotchi_8h}{}\label{minigotchi_8h}\index{C:/Users/anton/Documents/lcom/labs/proj/src/model/minigotchi.h@{C:/Users/anton/Documents/lcom/labs/proj/src/model/minigotchi.h}}
+{\ttfamily \#include "{}../viewer/gui\+Drawer.\+h"{}}\newline
+Include dependency graph for minigotchi.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{minigotchi_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{minigotchi_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_minigotchi}{Minigotchi}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_minigotchi}{Minigotchi}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{minigotchi_8h_a61779196dfb32c863201e8172da7a425}{new\+\_\+minigotchi}} (int x, int y, uint32\+\_\+t hunger, uint32\+\_\+t happiness, char \texorpdfstring{$\ast$}{*}name)
+\begin{DoxyCompactList}\small\item\em Creates a new minigotchi "{}object"{} and returns a pointer to it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{minigotchi_8h_afe1499272c08d222820a15e44ffa6c68}{kill\+\_\+minigotchi}} (\mbox{\hyperlink{struct_minigotchi}{Minigotchi}} \texorpdfstring{$\ast$}{*}minigotchi)
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_minigotchi}{Minigotchi} destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{minigotchi_8h_aa8dba5ef250a763d2269d95816a2c232}{draw\+\_\+minigotchi}} (\mbox{\hyperlink{struct_minigotchi}{Minigotchi}} \texorpdfstring{$\ast$}{*}minigotchi)
+\begin{DoxyCompactList}\small\item\em Draws a minigotchi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{minigotchi_8h_a2cf74af93faf8e97c15ce5b0b6031838}{minigotchi\+\_\+get\+\_\+sprite}} (\mbox{\hyperlink{struct_minigotchi}{Minigotchi}} \texorpdfstring{$\ast$}{*}minigotchi)
+\item 
+void \mbox{\hyperlink{minigotchi_8h_addadd90746333289c2d5ec9a7539dafc}{minigotchi\+\_\+set\+\_\+sprite}} (\mbox{\hyperlink{struct_minigotchi}{Minigotchi}} \texorpdfstring{$\ast$}{*}minigotchi, \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}sprite)
+\item 
+int \mbox{\hyperlink{minigotchi_8h_a75a5a7eea17296eb01ddcc129c20191a}{minigotchi\+\_\+get\+\_\+x}} (\mbox{\hyperlink{struct_minigotchi}{Minigotchi}} \texorpdfstring{$\ast$}{*}minigotchi)
+\item 
+int \mbox{\hyperlink{minigotchi_8h_a686f42db5384b58524c53b1265d31915}{minigotchi\+\_\+get\+\_\+y}} (\mbox{\hyperlink{struct_minigotchi}{Minigotchi}} \texorpdfstring{$\ast$}{*}minigotchi)
+\item 
+void \mbox{\hyperlink{minigotchi_8h_a1a0677e03c5481d3ef4a2fb31a19e903}{minigotchi\+\_\+set\+\_\+x}} (\mbox{\hyperlink{struct_minigotchi}{Minigotchi}} \texorpdfstring{$\ast$}{*}minigotchi, int x)
+\item 
+void \mbox{\hyperlink{minigotchi_8h_a53e0be1ba4b02fde53211a8418abc6b5}{minigotchi\+\_\+set\+\_\+y}} (\mbox{\hyperlink{struct_minigotchi}{Minigotchi}} \texorpdfstring{$\ast$}{*}minigotchi, int y)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{minigotchi_8h_aa93e7d999785eddc006db8e37ec7324b}{minigotchi\+\_\+get\+\_\+happiness}} (\mbox{\hyperlink{struct_minigotchi}{Minigotchi}} \texorpdfstring{$\ast$}{*}minigotchi)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{minigotchi_8h_ad0fbf1cb6769dec6d2dfa1224c44846e}{minigotchi\+\_\+get\+\_\+hunger}} (\mbox{\hyperlink{struct_minigotchi}{Minigotchi}} \texorpdfstring{$\ast$}{*}minigotchi)
+\item 
+void \mbox{\hyperlink{minigotchi_8h_a9f3bba0a1dee58db2ea7e3e6407af137}{minigotchi\+\_\+set\+\_\+happiness}} (\mbox{\hyperlink{struct_minigotchi}{Minigotchi}} \texorpdfstring{$\ast$}{*}minigotchi, uint32\+\_\+t value)
+\item 
+void \mbox{\hyperlink{minigotchi_8h_ad9fa3774a81a5d7d057edb8933706500}{minigotchi\+\_\+set\+\_\+hunger}} (\mbox{\hyperlink{struct_minigotchi}{Minigotchi}} \texorpdfstring{$\ast$}{*}minigotchi, uint32\+\_\+t value)
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{minigotchi_8h_a06044098a54ac1f62d2efa6c20992680}{minigotchi\+\_\+get\+\_\+name}} (\mbox{\hyperlink{struct_minigotchi}{Minigotchi}} \texorpdfstring{$\ast$}{*}minigotchi)
+\item 
+void \mbox{\hyperlink{minigotchi_8h_af07dd01fe9e75ac8d5a6f2efaf9779dd}{minigotchi\+\_\+set\+\_\+name}} (\mbox{\hyperlink{struct_minigotchi}{Minigotchi}} \texorpdfstring{$\ast$}{*}minigotchi, char \texorpdfstring{$\ast$}{*}name)
+\item 
+bool \mbox{\hyperlink{minigotchi_8h_a85601cc17416cd055e6d232e2d67eaa6}{minigotchi\+\_\+get\+\_\+cuddles}} (\mbox{\hyperlink{struct_minigotchi}{Minigotchi}} \texorpdfstring{$\ast$}{*}minigotchi)
+\item 
+void \mbox{\hyperlink{minigotchi_8h_aa8284a8cda46025c6258904335b1a931}{minigotchi\+\_\+set\+\_\+cuddles}} (\mbox{\hyperlink{struct_minigotchi}{Minigotchi}} \texorpdfstring{$\ast$}{*}minigotchi, bool cuddles)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{minigotchi_8h_aa8dba5ef250a763d2269d95816a2c232}\index{minigotchi.h@{minigotchi.h}!draw\_minigotchi@{draw\_minigotchi}}
+\index{draw\_minigotchi@{draw\_minigotchi}!minigotchi.h@{minigotchi.h}}
+\doxysubsubsection{\texorpdfstring{draw\_minigotchi()}{draw\_minigotchi()}}
+{\footnotesize\ttfamily \label{minigotchi_8h_aa8dba5ef250a763d2269d95816a2c232} 
+void draw\+\_\+minigotchi (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_minigotchi}{Minigotchi}} \texorpdfstring{$\ast$}{*}}]{minigotchi}{}\end{DoxyParamCaption})}
+
+
+
+Draws a minigotchi. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{minigotchi_8h_aa8dba5ef250a763d2269d95816a2c232_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{minigotchi_8h_aa8dba5ef250a763d2269d95816a2c232_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{minigotchi_8h_afe1499272c08d222820a15e44ffa6c68}\index{minigotchi.h@{minigotchi.h}!kill\_minigotchi@{kill\_minigotchi}}
+\index{kill\_minigotchi@{kill\_minigotchi}!minigotchi.h@{minigotchi.h}}
+\doxysubsubsection{\texorpdfstring{kill\_minigotchi()}{kill\_minigotchi()}}
+{\footnotesize\ttfamily \label{minigotchi_8h_afe1499272c08d222820a15e44ffa6c68} 
+void kill\+\_\+minigotchi (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_minigotchi}{Minigotchi}} \texorpdfstring{$\ast$}{*}}]{minigotchi}{}\end{DoxyParamCaption})}
+
+
+
+\doxylink{struct_minigotchi}{Minigotchi} destructor. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{minigotchi_8h_afe1499272c08d222820a15e44ffa6c68_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{minigotchi_8h_a85601cc17416cd055e6d232e2d67eaa6}\index{minigotchi.h@{minigotchi.h}!minigotchi\_get\_cuddles@{minigotchi\_get\_cuddles}}
+\index{minigotchi\_get\_cuddles@{minigotchi\_get\_cuddles}!minigotchi.h@{minigotchi.h}}
+\doxysubsubsection{\texorpdfstring{minigotchi\_get\_cuddles()}{minigotchi\_get\_cuddles()}}
+{\footnotesize\ttfamily \label{minigotchi_8h_a85601cc17416cd055e6d232e2d67eaa6} 
+bool minigotchi\+\_\+get\+\_\+cuddles (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_minigotchi}{Minigotchi}} \texorpdfstring{$\ast$}{*}}]{minigotchi}{}\end{DoxyParamCaption})}
+
+\Hypertarget{minigotchi_8h_aa93e7d999785eddc006db8e37ec7324b}\index{minigotchi.h@{minigotchi.h}!minigotchi\_get\_happiness@{minigotchi\_get\_happiness}}
+\index{minigotchi\_get\_happiness@{minigotchi\_get\_happiness}!minigotchi.h@{minigotchi.h}}
+\doxysubsubsection{\texorpdfstring{minigotchi\_get\_happiness()}{minigotchi\_get\_happiness()}}
+{\footnotesize\ttfamily \label{minigotchi_8h_aa93e7d999785eddc006db8e37ec7324b} 
+uint32\+\_\+t minigotchi\+\_\+get\+\_\+happiness (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_minigotchi}{Minigotchi}} \texorpdfstring{$\ast$}{*}}]{minigotchi}{}\end{DoxyParamCaption})}
+
+\Hypertarget{minigotchi_8h_ad0fbf1cb6769dec6d2dfa1224c44846e}\index{minigotchi.h@{minigotchi.h}!minigotchi\_get\_hunger@{minigotchi\_get\_hunger}}
+\index{minigotchi\_get\_hunger@{minigotchi\_get\_hunger}!minigotchi.h@{minigotchi.h}}
+\doxysubsubsection{\texorpdfstring{minigotchi\_get\_hunger()}{minigotchi\_get\_hunger()}}
+{\footnotesize\ttfamily \label{minigotchi_8h_ad0fbf1cb6769dec6d2dfa1224c44846e} 
+uint32\+\_\+t minigotchi\+\_\+get\+\_\+hunger (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_minigotchi}{Minigotchi}} \texorpdfstring{$\ast$}{*}}]{minigotchi}{}\end{DoxyParamCaption})}
+
+\Hypertarget{minigotchi_8h_a06044098a54ac1f62d2efa6c20992680}\index{minigotchi.h@{minigotchi.h}!minigotchi\_get\_name@{minigotchi\_get\_name}}
+\index{minigotchi\_get\_name@{minigotchi\_get\_name}!minigotchi.h@{minigotchi.h}}
+\doxysubsubsection{\texorpdfstring{minigotchi\_get\_name()}{minigotchi\_get\_name()}}
+{\footnotesize\ttfamily \label{minigotchi_8h_a06044098a54ac1f62d2efa6c20992680} 
+char \texorpdfstring{$\ast$}{*} minigotchi\+\_\+get\+\_\+name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_minigotchi}{Minigotchi}} \texorpdfstring{$\ast$}{*}}]{minigotchi}{}\end{DoxyParamCaption})}
+
+\Hypertarget{minigotchi_8h_a2cf74af93faf8e97c15ce5b0b6031838}\index{minigotchi.h@{minigotchi.h}!minigotchi\_get\_sprite@{minigotchi\_get\_sprite}}
+\index{minigotchi\_get\_sprite@{minigotchi\_get\_sprite}!minigotchi.h@{minigotchi.h}}
+\doxysubsubsection{\texorpdfstring{minigotchi\_get\_sprite()}{minigotchi\_get\_sprite()}}
+{\footnotesize\ttfamily \label{minigotchi_8h_a2cf74af93faf8e97c15ce5b0b6031838} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} minigotchi\+\_\+get\+\_\+sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_minigotchi}{Minigotchi}} \texorpdfstring{$\ast$}{*}}]{minigotchi}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{minigotchi_8h_a2cf74af93faf8e97c15ce5b0b6031838_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{minigotchi_8h_a75a5a7eea17296eb01ddcc129c20191a}\index{minigotchi.h@{minigotchi.h}!minigotchi\_get\_x@{minigotchi\_get\_x}}
+\index{minigotchi\_get\_x@{minigotchi\_get\_x}!minigotchi.h@{minigotchi.h}}
+\doxysubsubsection{\texorpdfstring{minigotchi\_get\_x()}{minigotchi\_get\_x()}}
+{\footnotesize\ttfamily \label{minigotchi_8h_a75a5a7eea17296eb01ddcc129c20191a} 
+int minigotchi\+\_\+get\+\_\+x (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_minigotchi}{Minigotchi}} \texorpdfstring{$\ast$}{*}}]{minigotchi}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{minigotchi_8h_a75a5a7eea17296eb01ddcc129c20191a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{minigotchi_8h_a686f42db5384b58524c53b1265d31915}\index{minigotchi.h@{minigotchi.h}!minigotchi\_get\_y@{minigotchi\_get\_y}}
+\index{minigotchi\_get\_y@{minigotchi\_get\_y}!minigotchi.h@{minigotchi.h}}
+\doxysubsubsection{\texorpdfstring{minigotchi\_get\_y()}{minigotchi\_get\_y()}}
+{\footnotesize\ttfamily \label{minigotchi_8h_a686f42db5384b58524c53b1265d31915} 
+int minigotchi\+\_\+get\+\_\+y (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_minigotchi}{Minigotchi}} \texorpdfstring{$\ast$}{*}}]{minigotchi}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{minigotchi_8h_a686f42db5384b58524c53b1265d31915_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{minigotchi_8h_aa8284a8cda46025c6258904335b1a931}\index{minigotchi.h@{minigotchi.h}!minigotchi\_set\_cuddles@{minigotchi\_set\_cuddles}}
+\index{minigotchi\_set\_cuddles@{minigotchi\_set\_cuddles}!minigotchi.h@{minigotchi.h}}
+\doxysubsubsection{\texorpdfstring{minigotchi\_set\_cuddles()}{minigotchi\_set\_cuddles()}}
+{\footnotesize\ttfamily \label{minigotchi_8h_aa8284a8cda46025c6258904335b1a931} 
+void minigotchi\+\_\+set\+\_\+cuddles (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_minigotchi}{Minigotchi}} \texorpdfstring{$\ast$}{*}}]{minigotchi}{, }\item[{bool}]{cuddles}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{minigotchi_8h_aa8284a8cda46025c6258904335b1a931_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{minigotchi_8h_a9f3bba0a1dee58db2ea7e3e6407af137}\index{minigotchi.h@{minigotchi.h}!minigotchi\_set\_happiness@{minigotchi\_set\_happiness}}
+\index{minigotchi\_set\_happiness@{minigotchi\_set\_happiness}!minigotchi.h@{minigotchi.h}}
+\doxysubsubsection{\texorpdfstring{minigotchi\_set\_happiness()}{minigotchi\_set\_happiness()}}
+{\footnotesize\ttfamily \label{minigotchi_8h_a9f3bba0a1dee58db2ea7e3e6407af137} 
+void minigotchi\+\_\+set\+\_\+happiness (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_minigotchi}{Minigotchi}} \texorpdfstring{$\ast$}{*}}]{minigotchi}{, }\item[{uint32\+\_\+t}]{value}{}\end{DoxyParamCaption})}
+
+\Hypertarget{minigotchi_8h_ad9fa3774a81a5d7d057edb8933706500}\index{minigotchi.h@{minigotchi.h}!minigotchi\_set\_hunger@{minigotchi\_set\_hunger}}
+\index{minigotchi\_set\_hunger@{minigotchi\_set\_hunger}!minigotchi.h@{minigotchi.h}}
+\doxysubsubsection{\texorpdfstring{minigotchi\_set\_hunger()}{minigotchi\_set\_hunger()}}
+{\footnotesize\ttfamily \label{minigotchi_8h_ad9fa3774a81a5d7d057edb8933706500} 
+void minigotchi\+\_\+set\+\_\+hunger (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_minigotchi}{Minigotchi}} \texorpdfstring{$\ast$}{*}}]{minigotchi}{, }\item[{uint32\+\_\+t}]{value}{}\end{DoxyParamCaption})}
+
+\Hypertarget{minigotchi_8h_af07dd01fe9e75ac8d5a6f2efaf9779dd}\index{minigotchi.h@{minigotchi.h}!minigotchi\_set\_name@{minigotchi\_set\_name}}
+\index{minigotchi\_set\_name@{minigotchi\_set\_name}!minigotchi.h@{minigotchi.h}}
+\doxysubsubsection{\texorpdfstring{minigotchi\_set\_name()}{minigotchi\_set\_name()}}
+{\footnotesize\ttfamily \label{minigotchi_8h_af07dd01fe9e75ac8d5a6f2efaf9779dd} 
+void minigotchi\+\_\+set\+\_\+name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_minigotchi}{Minigotchi}} \texorpdfstring{$\ast$}{*}}]{minigotchi}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{name}{}\end{DoxyParamCaption})}
+
+\Hypertarget{minigotchi_8h_addadd90746333289c2d5ec9a7539dafc}\index{minigotchi.h@{minigotchi.h}!minigotchi\_set\_sprite@{minigotchi\_set\_sprite}}
+\index{minigotchi\_set\_sprite@{minigotchi\_set\_sprite}!minigotchi.h@{minigotchi.h}}
+\doxysubsubsection{\texorpdfstring{minigotchi\_set\_sprite()}{minigotchi\_set\_sprite()}}
+{\footnotesize\ttfamily \label{minigotchi_8h_addadd90746333289c2d5ec9a7539dafc} 
+void minigotchi\+\_\+set\+\_\+sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_minigotchi}{Minigotchi}} \texorpdfstring{$\ast$}{*}}]{minigotchi}{, }\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}}]{sprite}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{minigotchi_8h_addadd90746333289c2d5ec9a7539dafc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{minigotchi_8h_a1a0677e03c5481d3ef4a2fb31a19e903}\index{minigotchi.h@{minigotchi.h}!minigotchi\_set\_x@{minigotchi\_set\_x}}
+\index{minigotchi\_set\_x@{minigotchi\_set\_x}!minigotchi.h@{minigotchi.h}}
+\doxysubsubsection{\texorpdfstring{minigotchi\_set\_x()}{minigotchi\_set\_x()}}
+{\footnotesize\ttfamily \label{minigotchi_8h_a1a0677e03c5481d3ef4a2fb31a19e903} 
+void minigotchi\+\_\+set\+\_\+x (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_minigotchi}{Minigotchi}} \texorpdfstring{$\ast$}{*}}]{minigotchi}{, }\item[{int}]{x}{}\end{DoxyParamCaption})}
+
+\Hypertarget{minigotchi_8h_a53e0be1ba4b02fde53211a8418abc6b5}\index{minigotchi.h@{minigotchi.h}!minigotchi\_set\_y@{minigotchi\_set\_y}}
+\index{minigotchi\_set\_y@{minigotchi\_set\_y}!minigotchi.h@{minigotchi.h}}
+\doxysubsubsection{\texorpdfstring{minigotchi\_set\_y()}{minigotchi\_set\_y()}}
+{\footnotesize\ttfamily \label{minigotchi_8h_a53e0be1ba4b02fde53211a8418abc6b5} 
+void minigotchi\+\_\+set\+\_\+y (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_minigotchi}{Minigotchi}} \texorpdfstring{$\ast$}{*}}]{minigotchi}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+\Hypertarget{minigotchi_8h_a61779196dfb32c863201e8172da7a425}\index{minigotchi.h@{minigotchi.h}!new\_minigotchi@{new\_minigotchi}}
+\index{new\_minigotchi@{new\_minigotchi}!minigotchi.h@{minigotchi.h}}
+\doxysubsubsection{\texorpdfstring{new\_minigotchi()}{new\_minigotchi()}}
+{\footnotesize\ttfamily \label{minigotchi_8h_a61779196dfb32c863201e8172da7a425} 
+\mbox{\hyperlink{struct_minigotchi}{Minigotchi}} \texorpdfstring{$\ast$}{*} new\+\_\+minigotchi (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{uint32\+\_\+t}]{hunger}{, }\item[{uint32\+\_\+t}]{happiness}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new minigotchi "{}object"{} and returns a pointer to it. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{minigotchi_8h_a61779196dfb32c863201e8172da7a425_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{minigotchi_8h_a61779196dfb32c863201e8172da7a425_icgraph}
+\end{center}
+\end{figure}

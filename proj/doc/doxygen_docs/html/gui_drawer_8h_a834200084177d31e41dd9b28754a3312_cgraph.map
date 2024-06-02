@@ -1,0 +1,7 @@
+<map id="setup_sprites" name="setup_sprites">
+<area shape="rect" id="Node000001" title="Sets up all the main sprites." alt="" coords="5,31,105,57"/>
+<area shape="rect" id="Node000002" href="$gui_drawer_8c.html#acb93792ebc27a32413e0b31624c6d9b1" title="Creates a sprite from a XPM." alt="" coords="159,5,287,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,34,143,28,144,33,105,39"/>
+<area shape="rect" id="Node000003" href="$video_8c.html#a89e702224919a5716dbe41c1862f931e" title="Gets VRAM size." alt="" coords="153,56,293,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="105,49,138,54,137,59,105,54"/>
+</map>

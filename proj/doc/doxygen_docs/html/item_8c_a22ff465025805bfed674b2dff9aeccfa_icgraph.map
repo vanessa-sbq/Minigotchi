@@ -1,0 +1,9 @@
+<map id="draw_item" name="draw_item">
+<area shape="rect" id="Node000001" title="Draws an item." alt="" coords="500,5,581,32"/>
+<area shape="rect" id="Node000002" href="$hotbar_8c.html#a5918cc623692c4eee77035428bc992f5" title="Draws a hotbar." alt="" coords="366,5,452,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="485,21,453,21,453,16,485,16"/>
+<area shape="rect" id="Node000003" href="$main_room_viewer_8c.html#ab712f0c477c358dac8015032c3aa3b72" title="Calls draw function of each element the main room contains." alt="" coords="162,5,318,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="350,21,319,21,319,16,350,16"/>
+<area shape="rect" id="Node000004" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Project main function that starts the game." alt="" coords="5,5,114,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="146,21,114,21,114,16,146,16"/>
+</map>

@@ -1,0 +1,171 @@
+\doxysection{C\+:/\+Users/anton/\+Documents/lcom/labs/proj/src/model/bar.h File Reference}
+\hypertarget{bar_8h}{}\label{bar_8h}\index{C:/Users/anton/Documents/lcom/labs/proj/src/model/bar.h@{C:/Users/anton/Documents/lcom/labs/proj/src/model/bar.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include "{}../viewer/gui\+Drawer.\+h"{}}\newline
+Include dependency graph for bar.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{bar_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bar_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_bar}{Bar}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_bar}{Bar}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{bar_8h_a0ee9fd5d157ba01a58297fbad1f89959}{new\+\_\+bar}} (int x, int y, int level, int bar\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Creates a new bar "{}object"{} and returns a pointer to it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bar_8h_a288f2ed8f0188f88b77e09ce8182f85f}{bar\+\_\+delete}} (\mbox{\hyperlink{struct_bar}{Bar}} \texorpdfstring{$\ast$}{*}bar)
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_bar}{Bar} destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bar_8h_ae54f9e3ff41dfab947e1060f0e081a80}{draw\+\_\+bar}} (\mbox{\hyperlink{struct_bar}{Bar}} \texorpdfstring{$\ast$}{*}bar)
+\begin{DoxyCompactList}\small\item\em Draws a bar. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{bar_8h_a9b89f4613e8a01b49da4e7b65befa482}{bar\+\_\+get\+\_\+sprite}} (\mbox{\hyperlink{struct_bar}{Bar}} \texorpdfstring{$\ast$}{*}bar)
+\item 
+int \mbox{\hyperlink{bar_8h_a7ccacde9371b8860a6dba3d98570d4c3}{bar\+\_\+get\+\_\+level}} (\mbox{\hyperlink{struct_bar}{Bar}} \texorpdfstring{$\ast$}{*}bar)
+\item 
+int \mbox{\hyperlink{bar_8h_aca80f2bbd2c725264903db6ae96c7e86}{bar\+\_\+get\+\_\+x}} (\mbox{\hyperlink{struct_bar}{Bar}} \texorpdfstring{$\ast$}{*}bar)
+\item 
+int \mbox{\hyperlink{bar_8h_a5a4785c2da66f2f69d772f637ef5358d}{bar\+\_\+get\+\_\+y}} (\mbox{\hyperlink{struct_bar}{Bar}} \texorpdfstring{$\ast$}{*}bar)
+\item 
+void \mbox{\hyperlink{bar_8h_a2a7052e13b2e463553f9f5e8fd88f3e3}{bar\+\_\+set\+\_\+sprite}} (\mbox{\hyperlink{struct_bar}{Bar}} \texorpdfstring{$\ast$}{*}bar, \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}sprite)
+\item 
+void \mbox{\hyperlink{bar_8h_a1da1eae7a62b7cfb9649a81c86bb31be}{bar\+\_\+set\+\_\+level}} (\mbox{\hyperlink{struct_bar}{Bar}} \texorpdfstring{$\ast$}{*}bar, int level)
+\item 
+void \mbox{\hyperlink{bar_8h_a68672129c8d99eb5440673bfb18969f5}{bar\+\_\+set\+\_\+x}} (\mbox{\hyperlink{struct_bar}{Bar}} \texorpdfstring{$\ast$}{*}bar, int x)
+\item 
+void \mbox{\hyperlink{bar_8h_ae9928589a375623deb1ab12c5b197b77}{bar\+\_\+set\+\_\+y}} (\mbox{\hyperlink{struct_bar}{Bar}} \texorpdfstring{$\ast$}{*}bar, int y)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{bar_8h_a288f2ed8f0188f88b77e09ce8182f85f}\index{bar.h@{bar.h}!bar\_delete@{bar\_delete}}
+\index{bar\_delete@{bar\_delete}!bar.h@{bar.h}}
+\doxysubsubsection{\texorpdfstring{bar\_delete()}{bar\_delete()}}
+{\footnotesize\ttfamily \label{bar_8h_a288f2ed8f0188f88b77e09ce8182f85f} 
+void bar\+\_\+delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_bar}{Bar}} \texorpdfstring{$\ast$}{*}}]{bar}{}\end{DoxyParamCaption})}
+
+
+
+\doxylink{struct_bar}{Bar} destructor. 
+
+\Hypertarget{bar_8h_a7ccacde9371b8860a6dba3d98570d4c3}\index{bar.h@{bar.h}!bar\_get\_level@{bar\_get\_level}}
+\index{bar\_get\_level@{bar\_get\_level}!bar.h@{bar.h}}
+\doxysubsubsection{\texorpdfstring{bar\_get\_level()}{bar\_get\_level()}}
+{\footnotesize\ttfamily \label{bar_8h_a7ccacde9371b8860a6dba3d98570d4c3} 
+int bar\+\_\+get\+\_\+level (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_bar}{Bar}} \texorpdfstring{$\ast$}{*}}]{bar}{}\end{DoxyParamCaption})}
+
+\Hypertarget{bar_8h_a9b89f4613e8a01b49da4e7b65befa482}\index{bar.h@{bar.h}!bar\_get\_sprite@{bar\_get\_sprite}}
+\index{bar\_get\_sprite@{bar\_get\_sprite}!bar.h@{bar.h}}
+\doxysubsubsection{\texorpdfstring{bar\_get\_sprite()}{bar\_get\_sprite()}}
+{\footnotesize\ttfamily \label{bar_8h_a9b89f4613e8a01b49da4e7b65befa482} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} bar\+\_\+get\+\_\+sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_bar}{Bar}} \texorpdfstring{$\ast$}{*}}]{bar}{}\end{DoxyParamCaption})}
+
+\Hypertarget{bar_8h_aca80f2bbd2c725264903db6ae96c7e86}\index{bar.h@{bar.h}!bar\_get\_x@{bar\_get\_x}}
+\index{bar\_get\_x@{bar\_get\_x}!bar.h@{bar.h}}
+\doxysubsubsection{\texorpdfstring{bar\_get\_x()}{bar\_get\_x()}}
+{\footnotesize\ttfamily \label{bar_8h_aca80f2bbd2c725264903db6ae96c7e86} 
+int bar\+\_\+get\+\_\+x (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_bar}{Bar}} \texorpdfstring{$\ast$}{*}}]{bar}{}\end{DoxyParamCaption})}
+
+\Hypertarget{bar_8h_a5a4785c2da66f2f69d772f637ef5358d}\index{bar.h@{bar.h}!bar\_get\_y@{bar\_get\_y}}
+\index{bar\_get\_y@{bar\_get\_y}!bar.h@{bar.h}}
+\doxysubsubsection{\texorpdfstring{bar\_get\_y()}{bar\_get\_y()}}
+{\footnotesize\ttfamily \label{bar_8h_a5a4785c2da66f2f69d772f637ef5358d} 
+int bar\+\_\+get\+\_\+y (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_bar}{Bar}} \texorpdfstring{$\ast$}{*}}]{bar}{}\end{DoxyParamCaption})}
+
+\Hypertarget{bar_8h_a1da1eae7a62b7cfb9649a81c86bb31be}\index{bar.h@{bar.h}!bar\_set\_level@{bar\_set\_level}}
+\index{bar\_set\_level@{bar\_set\_level}!bar.h@{bar.h}}
+\doxysubsubsection{\texorpdfstring{bar\_set\_level()}{bar\_set\_level()}}
+{\footnotesize\ttfamily \label{bar_8h_a1da1eae7a62b7cfb9649a81c86bb31be} 
+void bar\+\_\+set\+\_\+level (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_bar}{Bar}} \texorpdfstring{$\ast$}{*}}]{bar}{, }\item[{int}]{level}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bar_8h_a1da1eae7a62b7cfb9649a81c86bb31be_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bar_8h_a2a7052e13b2e463553f9f5e8fd88f3e3}\index{bar.h@{bar.h}!bar\_set\_sprite@{bar\_set\_sprite}}
+\index{bar\_set\_sprite@{bar\_set\_sprite}!bar.h@{bar.h}}
+\doxysubsubsection{\texorpdfstring{bar\_set\_sprite()}{bar\_set\_sprite()}}
+{\footnotesize\ttfamily \label{bar_8h_a2a7052e13b2e463553f9f5e8fd88f3e3} 
+void bar\+\_\+set\+\_\+sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_bar}{Bar}} \texorpdfstring{$\ast$}{*}}]{bar}{, }\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}}]{sprite}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bar_8h_a2a7052e13b2e463553f9f5e8fd88f3e3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bar_8h_a68672129c8d99eb5440673bfb18969f5}\index{bar.h@{bar.h}!bar\_set\_x@{bar\_set\_x}}
+\index{bar\_set\_x@{bar\_set\_x}!bar.h@{bar.h}}
+\doxysubsubsection{\texorpdfstring{bar\_set\_x()}{bar\_set\_x()}}
+{\footnotesize\ttfamily \label{bar_8h_a68672129c8d99eb5440673bfb18969f5} 
+void bar\+\_\+set\+\_\+x (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_bar}{Bar}} \texorpdfstring{$\ast$}{*}}]{bar}{, }\item[{int}]{x}{}\end{DoxyParamCaption})}
+
+\Hypertarget{bar_8h_ae9928589a375623deb1ab12c5b197b77}\index{bar.h@{bar.h}!bar\_set\_y@{bar\_set\_y}}
+\index{bar\_set\_y@{bar\_set\_y}!bar.h@{bar.h}}
+\doxysubsubsection{\texorpdfstring{bar\_set\_y()}{bar\_set\_y()}}
+{\footnotesize\ttfamily \label{bar_8h_ae9928589a375623deb1ab12c5b197b77} 
+void bar\+\_\+set\+\_\+y (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_bar}{Bar}} \texorpdfstring{$\ast$}{*}}]{bar}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+\Hypertarget{bar_8h_ae54f9e3ff41dfab947e1060f0e081a80}\index{bar.h@{bar.h}!draw\_bar@{draw\_bar}}
+\index{draw\_bar@{draw\_bar}!bar.h@{bar.h}}
+\doxysubsubsection{\texorpdfstring{draw\_bar()}{draw\_bar()}}
+{\footnotesize\ttfamily \label{bar_8h_ae54f9e3ff41dfab947e1060f0e081a80} 
+void draw\+\_\+bar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_bar}{Bar}} \texorpdfstring{$\ast$}{*}}]{bar}{}\end{DoxyParamCaption})}
+
+
+
+Draws a bar. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{bar_8h_ae54f9e3ff41dfab947e1060f0e081a80_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bar_8h_ae54f9e3ff41dfab947e1060f0e081a80_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bar_8h_a0ee9fd5d157ba01a58297fbad1f89959}\index{bar.h@{bar.h}!new\_bar@{new\_bar}}
+\index{new\_bar@{new\_bar}!bar.h@{bar.h}}
+\doxysubsubsection{\texorpdfstring{new\_bar()}{new\_bar()}}
+{\footnotesize\ttfamily \label{bar_8h_a0ee9fd5d157ba01a58297fbad1f89959} 
+\mbox{\hyperlink{struct_bar}{Bar}} \texorpdfstring{$\ast$}{*} new\+\_\+bar (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{level}{, }\item[{int}]{bar\+\_\+type}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new bar "{}object"{} and returns a pointer to it. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bar_8h_a0ee9fd5d157ba01a58297fbad1f89959_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bar_8h_a0ee9fd5d157ba01a58297fbad1f89959_icgraph}
+\end{center}
+\end{figure}

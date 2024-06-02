@@ -1,0 +1,45 @@
+<map id="nameMinigotchiController_load_nameMinigotchi" name="nameMinigotchiController_load_nameMinigotchi">
+<area shape="rect" id="Node000001" title="Load the minigotchi naming screen (first time)" alt="" coords="5,395,173,437"/>
+<area shape="rect" id="Node000002" href="$name_minigotchi_viewer_8c.html#a4657f90fc8345bfc1787fdf84868c110" title=" " alt="" coords="221,331,372,373"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,392,210,376,211,381,161,397"/>
+<area shape="rect" id="Node000004" href="$name_minigotchi_8c.html#ac55ffa48e02d8dc73242f6e92e12fdd4" title="Creates a new NameMinigotchi &quot;object&quot; and returns a pointer to it." alt="" coords="225,403,368,429"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="173,413,209,413,209,419,173,419"/>
+<area shape="rect" id="Node000021" href="$gui_drawer_8c.html#afec62e1339a5415e0e26f1a3a426dda3" title="Sets up the letter sprites that make up the font." alt="" coords="236,464,357,491"/>
+<area shape="poly" id="edge20_Node000001_Node000021" title=" " alt="" coords="164,435,234,456,233,461,163,441"/>
+<area shape="rect" id="Node000003" href="$vector_8c.html#a235297bbf887555f05872f20b768b4b7" title=" " alt="" coords="445,333,524,360"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="372,347,429,346,429,351,373,353"/>
+<area shape="rect" id="Node000005" href="$button_8c.html#abd639885574eb18a376b13dc75f4123e" title="Creates a new button &quot;object&quot; and returns a pointer to it." alt="" coords="441,384,528,411"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="367,406,425,400,426,406,368,412"/>
+<area shape="rect" id="Node000019" href="$cursor_8c.html#a4cc403b0eefc445792f54d05e76d6f02" title="Creates a new cursor &quot;object&quot; and returns a pointer to it." alt="" coords="441,435,528,461"/>
+<area shape="poly" id="edge18_Node000004_Node000019" title=" " alt="" coords="368,425,426,435,425,441,367,431"/>
+<area shape="rect" id="Node000006" href="$gui_drawer_8c.html#abe19e91476f63ac9e618f47092dd15d0" title="Get the button sprite from an index." alt="" coords="596,372,743,415"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="528,394,581,393,581,398,528,399"/>
+<area shape="rect" id="Node000007" href="$gui_drawer_8c.html#acacf8cc3c80419dd04f364c0e2b92785" title=" " alt="" coords="794,5,985,48"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="670,371,678,310,697,227,712,181,732,137,758,95,789,58,791,56,795,60,793,62,762,98,737,139,717,183,702,228,683,311,675,372"/>
+<area shape="rect" id="Node000008" href="$gui_drawer_8c.html#a2ed2f5ecc38862ba578d84587934e781" title=" " alt="" coords="795,72,984,115"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="672,371,684,321,705,255,740,186,762,153,789,125,792,122,796,126,793,129,766,157,744,188,710,257,689,322,677,372"/>
+<area shape="rect" id="Node000009" href="$gui_drawer_8c.html#a2565c8857d19e2c807791510d945f2f5" title=" " alt="" coords="818,139,961,181"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="676,371,691,333,715,284,747,235,789,191,803,182,806,186,792,195,752,238,719,287,696,335,680,373"/>
+<area shape="rect" id="Node000010" href="$gui_drawer_8c.html#a71536932ff4e8b22f58b76e7b8a54db3" title=" " alt="" coords="822,205,957,248"/>
+<area shape="poly" id="edge9_Node000006_Node000010" title=" " alt="" coords="683,370,726,315,756,284,789,258,806,248,809,253,792,262,759,288,730,318,687,373"/>
+<area shape="rect" id="Node000011" href="$gui_drawer_8c.html#a96bfeea6db497a209432e2975c9b5a9d" title=" " alt="" coords="791,272,988,315"/>
+<area shape="poly" id="edge10_Node000006_Node000011" title=" " alt="" coords="705,369,790,324,803,318,806,323,792,329,707,374"/>
+<area shape="rect" id="Node000012" href="$gui_drawer_8c.html#a5a7b61ff4d0d6f1b815bc5420fd2b8bd" title=" " alt="" coords="818,339,961,381"/>
+<area shape="poly" id="edge11_Node000006_Node000012" title=" " alt="" coords="743,380,803,370,803,376,744,385"/>
+<area shape="rect" id="Node000013" href="$gui_drawer_8c.html#a64b3e77e046a0e0122df2b0ec4d5d04c" title=" " alt="" coords="824,405,955,448"/>
+<area shape="poly" id="edge12_Node000006_Node000013" title=" " alt="" coords="744,402,809,412,808,417,743,407"/>
+<area shape="rect" id="Node000014" href="$gui_drawer_8c.html#a2beefa168c683c4411aa36515e184d26" title=" " alt="" coords="822,472,957,515"/>
+<area shape="poly" id="edge13_Node000006_Node000014" title=" " alt="" coords="722,413,744,424,768,442,792,458,808,465,806,470,789,462,765,446,741,429,720,418"/>
+<area shape="rect" id="Node000015" href="$gui_drawer_8c.html#a930ac7485a0948e0d77ecfde963ee589" title=" " alt="" coords="804,539,975,581"/>
+<area shape="poly" id="edge14_Node000006_Node000015" title=" " alt="" coords="730,413,745,425,762,451,769,477,775,501,793,525,796,528,793,532,789,528,770,503,763,478,757,453,741,428,727,417"/>
+<area shape="rect" id="Node000016" href="$gui_drawer_8c.html#ae50f96294387b017a799f9105bcc4134" title=" " alt="" coords="810,605,969,648"/>
+<area shape="poly" id="edge15_Node000006_Node000016" title=" " alt="" coords="732,413,745,425,759,447,766,469,768,511,770,551,778,571,793,592,799,597,795,601,789,595,773,574,765,553,763,511,761,470,755,450,741,428,728,417"/>
+<area shape="rect" id="Node000017" href="$gui_drawer_8c.html#a0c4a49f9b2916a971f1998a53aef8374" title=" " alt="" coords="821,672,958,715"/>
+<area shape="poly" id="edge16_Node000006_Node000017" title=" " alt="" coords="732,413,745,425,763,456,771,487,771,516,768,545,765,573,766,601,774,629,793,658,809,672,806,676,789,662,769,632,760,602,759,573,762,544,766,516,765,487,758,458,741,428,729,417"/>
+<area shape="rect" id="Node000018" href="$gui_drawer_8c.html#a719c69c695d890889060ec955a8040de" title=" " alt="" coords="807,739,972,781"/>
+<area shape="poly" id="edge17_Node000006_Node000018" title=" " alt="" coords="733,413,745,425,767,465,775,504,773,542,767,579,761,615,761,651,769,688,793,725,797,729,793,733,789,728,765,690,755,652,756,615,762,578,768,541,770,505,762,467,741,428,729,417"/>
+<area shape="rect" id="Node000020" href="$gui_drawer_8c.html#ae94978bb53705702e1da21044df5f9c9" title=" " alt="" coords="609,439,730,465"/>
+<area shape="poly" id="edge19_Node000019_Node000020" title=" " alt="" coords="528,446,593,448,593,453,528,452"/>
+<area shape="rect" id="Node000022" href="$gui_drawer_8c.html#acb93792ebc27a32413e0b31624c6d9b1" title="Creates a sprite from a XPM." alt="" coords="420,485,548,512"/>
+<area shape="poly" id="edge21_Node000021_Node000022" title=" " alt="" coords="358,482,405,487,404,492,357,487"/>
+</map>

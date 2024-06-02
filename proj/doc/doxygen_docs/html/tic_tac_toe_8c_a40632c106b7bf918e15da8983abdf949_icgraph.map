@@ -1,0 +1,5 @@
+<map id="ticTacToe_set_reward" name="ticTacToe_set_reward">
+<area shape="rect" id="Node000001" title=" " alt="" coords="187,13,334,40"/>
+<area shape="rect" id="Node000002" href="$tic_tac_toe_controller_8c.html#ad6884fb36768128cf09872d0b7b21adf" title="Function that randomizes the reward (after each game)" alt="" coords="5,5,139,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,29,139,29,139,24,171,24"/>
+</map>

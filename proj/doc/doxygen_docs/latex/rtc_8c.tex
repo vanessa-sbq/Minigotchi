@@ -1,0 +1,497 @@
+\doxysection{C\+:/\+Users/anton/\+Documents/lcom/labs/proj/src/device\+\_\+controllers/rtc/rtc.c File Reference}
+\hypertarget{rtc_8c}{}\label{rtc_8c}\index{C:/Users/anton/Documents/lcom/labs/proj/src/device\_controllers/rtc/rtc.c@{C:/Users/anton/Documents/lcom/labs/proj/src/device\_controllers/rtc/rtc.c}}
+{\ttfamily \#include "{}rtc.\+h"{}}\newline
+{\ttfamily \#include "{}rtc\+\_\+macros.\+h"{}}\newline
+Include dependency graph for rtc.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{rtc_8c_a75dad42881d64cf07cf1bdc2979a7056}{rtc\+\_\+ih}} ()
+\begin{DoxyCompactList}\small\item\em RTC interrupt handler. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rtc_8c_a786074b13763034d3d6504d649934895}{bcd\+\_\+to\+\_\+decimal}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}number)
+\begin{DoxyCompactList}\small\item\em Converts a BCD number to decimal. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rtc_8c_a3273d254ec150f735e331579985a2ca4}{binary\+\_\+to\+\_\+bcd}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}number)
+\begin{DoxyCompactList}\small\item\em Converts a decimal number to BCD. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rtc_8c_a2eed5b31d7b3ec74011fd419ed1eeeae}{rtc\+\_\+subscribe\+\_\+int}} (uint32\+\_\+t \texorpdfstring{$\ast$}{*}bit\+\_\+no)
+\begin{DoxyCompactList}\small\item\em Subscribes RTC interrupts. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rtc_8c_a9e9489590b532ec5ce8442e9f08aeb8e}{enable\+\_\+aie\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em Enable Alarm Interrupts, by writing corresponding bytes to register B of the RTC. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rtc_8c_ab8f17bf5280c908c8b199a90fefcc758}{rtc\+\_\+unsubscribe\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes RTC interrupts. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rtc_8c_ab1c125e48fce243cb2623dee66cc86d2}{disable\+\_\+pie\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em Disable Periodic Interrupts, by writing corresponding bytes to register B of the RTC. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rtc_8c_ae2f00f1f513100583d6882676298e419}{disable\+\_\+aie\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em Disable Alarm Interrupts, by writing corresponding bytes to register B of the RTC. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rtc_8c_a0d26c165d332a4e7f1ff83c90987ff4a}{disable\+\_\+uie\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em Disable Update Interrupts, by writing corresponding bytes to register B of the RTC. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rtc_8c_a7d6996cfdf143b032ddbc2df7cc27498}{rtc\+\_\+read\+\_\+register}} (uint8\+\_\+t reg, uint8\+\_\+t \texorpdfstring{$\ast$}{*}byte)
+\begin{DoxyCompactList}\small\item\em Read a byte from an RTC register. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_r_t_c___config}{RTC\+\_\+\+Config}} \mbox{\hyperlink{rtc_8c_a66e555139e798e92cfbcd11222bee82a}{rtc\+\_\+get\+\_\+config}} ()
+\item 
+bool \mbox{\hyperlink{rtc_8c_a7f5b00a2f809e42f08f037ffa9347444}{rtc\+\_\+is\+\_\+updating}} ()
+\begin{DoxyCompactList}\small\item\em Check RTC\textquotesingle{}s UIP flag to avoid race conditions. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rtc_8c_a068edeb333e4db214207cf7476b5b314}{rtc\+\_\+write\+\_\+to\+\_\+port}} (uint8\+\_\+t port, uint8\+\_\+t reg)
+\begin{DoxyCompactList}\small\item\em Write a byte to an RTC port. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rtc_8c_a080bec5cedba0f262f9f7b94eb06632d}{rtc\+\_\+write\+\_\+reg}} (uint8\+\_\+t reg, uint8\+\_\+t byte)
+\begin{DoxyCompactList}\small\item\em Write a byte to an RTC register. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rtc_8c_ae237e10e14be278cf4b39ae49354e55a}{rtc\+\_\+clear\+\_\+flags}} ()
+\begin{DoxyCompactList}\small\item\em Clear rtc interrupts. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rtc_8c_a1f69bf2f4ea8a754cc5cfd6d6b730899}{rtc\+\_\+set\+\_\+alarm}} (uint8\+\_\+t sec, uint8\+\_\+t min, uint8\+\_\+t hour)
+\item 
+bool \mbox{\hyperlink{rtc_8c_adbe8811d52144fd5004186cf5abf6b4b}{rtc\+\_\+get\+\_\+interrupt\+\_\+was\+\_\+alarm}} ()
+\item 
+bool \mbox{\hyperlink{rtc_8c_a5e21e71fa590f4eb04bf164fd4d6f799}{rtc\+\_\+get\+\_\+interrupt\+\_\+was\+\_\+periodic}} ()
+\item 
+bool \mbox{\hyperlink{rtc_8c_a34a219933e4ca6e9ed6b3b68cb403ebd}{rtc\+\_\+get\+\_\+interrupt\+\_\+was\+\_\+update}} ()
+\item 
+void \mbox{\hyperlink{rtc_8c_acf4af146a12914483083729f2e06c796}{rtc\+\_\+set\+\_\+interrupt\+\_\+alarm\+\_\+processed}} ()
+\item 
+void \mbox{\hyperlink{rtc_8c_a3b58c42083db0a598e61fed3c8b08eb7}{rtc\+\_\+set\+\_\+interrupt\+\_\+periodic\+\_\+processed}} ()
+\item 
+void \mbox{\hyperlink{rtc_8c_aa4f563587bbee9b934a3427cb979f57a}{rtc\+\_\+set\+\_\+interrupt\+\_\+update\+\_\+processed}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{rtc_8c_a6c52a1d32571a429369253ce7c3a3d7a}{rtc\+\_\+hook\+\_\+id}} = 8
+\item 
+static bool \mbox{\hyperlink{rtc_8c_a6ed189977d4e690ef08ecb3adc5065d2}{\+\_\+alarm}} = false
+\item 
+static bool \mbox{\hyperlink{rtc_8c_acb6e12c0da90334f97d397a6dc336a36}{\+\_\+periodic}} = false
+\item 
+static bool \mbox{\hyperlink{rtc_8c_af64f238760f49267f2ae24b908bb5fb1}{\+\_\+update}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{rtc_8c_a786074b13763034d3d6504d649934895}\index{rtc.c@{rtc.c}!bcd\_to\_decimal@{bcd\_to\_decimal}}
+\index{bcd\_to\_decimal@{bcd\_to\_decimal}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{bcd\_to\_decimal()}{bcd\_to\_decimal()}}
+{\footnotesize\ttfamily \label{rtc_8c_a786074b13763034d3d6504d649934895} 
+int bcd\+\_\+to\+\_\+decimal (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{number}{}\end{DoxyParamCaption})}
+
+
+
+Converts a BCD number to decimal. 
+
+For example, 0010 (= 2) 0011 (= 3) in BCD is 23 in decimal \Hypertarget{rtc_8c_a3273d254ec150f735e331579985a2ca4}\index{rtc.c@{rtc.c}!binary\_to\_bcd@{binary\_to\_bcd}}
+\index{binary\_to\_bcd@{binary\_to\_bcd}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{binary\_to\_bcd()}{binary\_to\_bcd()}}
+{\footnotesize\ttfamily \label{rtc_8c_a3273d254ec150f735e331579985a2ca4} 
+int binary\+\_\+to\+\_\+bcd (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{number}{}\end{DoxyParamCaption})}
+
+
+
+Converts a decimal number to BCD. 
+
+For example, 23 in decimal is 0010 (= 2) 0011 (= 3) in BCD \Hypertarget{rtc_8c_ae2f00f1f513100583d6882676298e419}\index{rtc.c@{rtc.c}!disable\_aie\_int@{disable\_aie\_int}}
+\index{disable\_aie\_int@{disable\_aie\_int}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{disable\_aie\_int()}{disable\_aie\_int()}}
+{\footnotesize\ttfamily \label{rtc_8c_ae2f00f1f513100583d6882676298e419} 
+int disable\+\_\+aie\+\_\+int (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Disable Alarm Interrupts, by writing corresponding bytes to register B of the RTC. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc_8c_ae2f00f1f513100583d6882676298e419_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{rtc_8c_ae2f00f1f513100583d6882676298e419_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rtc_8c_ab1c125e48fce243cb2623dee66cc86d2}\index{rtc.c@{rtc.c}!disable\_pie\_int@{disable\_pie\_int}}
+\index{disable\_pie\_int@{disable\_pie\_int}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{disable\_pie\_int()}{disable\_pie\_int()}}
+{\footnotesize\ttfamily \label{rtc_8c_ab1c125e48fce243cb2623dee66cc86d2} 
+int disable\+\_\+pie\+\_\+int (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Disable Periodic Interrupts, by writing corresponding bytes to register B of the RTC. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc_8c_ab1c125e48fce243cb2623dee66cc86d2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{rtc_8c_ab1c125e48fce243cb2623dee66cc86d2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rtc_8c_a0d26c165d332a4e7f1ff83c90987ff4a}\index{rtc.c@{rtc.c}!disable\_uie\_int@{disable\_uie\_int}}
+\index{disable\_uie\_int@{disable\_uie\_int}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{disable\_uie\_int()}{disable\_uie\_int()}}
+{\footnotesize\ttfamily \label{rtc_8c_a0d26c165d332a4e7f1ff83c90987ff4a} 
+int disable\+\_\+uie\+\_\+int (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Disable Update Interrupts, by writing corresponding bytes to register B of the RTC. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc_8c_a0d26c165d332a4e7f1ff83c90987ff4a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{rtc_8c_a0d26c165d332a4e7f1ff83c90987ff4a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rtc_8c_a9e9489590b532ec5ce8442e9f08aeb8e}\index{rtc.c@{rtc.c}!enable\_aie\_int@{enable\_aie\_int}}
+\index{enable\_aie\_int@{enable\_aie\_int}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{enable\_aie\_int()}{enable\_aie\_int()}}
+{\footnotesize\ttfamily \label{rtc_8c_a9e9489590b532ec5ce8442e9f08aeb8e} 
+int enable\+\_\+aie\+\_\+int (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Enable Alarm Interrupts, by writing corresponding bytes to register B of the RTC. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc_8c_a9e9489590b532ec5ce8442e9f08aeb8e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{rtc_8c_a9e9489590b532ec5ce8442e9f08aeb8e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rtc_8c_ae237e10e14be278cf4b39ae49354e55a}\index{rtc.c@{rtc.c}!rtc\_clear\_flags@{rtc\_clear\_flags}}
+\index{rtc\_clear\_flags@{rtc\_clear\_flags}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_clear\_flags()}{rtc\_clear\_flags()}}
+{\footnotesize\ttfamily \label{rtc_8c_ae237e10e14be278cf4b39ae49354e55a} 
+int rtc\+\_\+clear\+\_\+flags (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Clear rtc interrupts. 
+
+Clears register C of rtc. Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc_8c_ae237e10e14be278cf4b39ae49354e55a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc_8c_ae237e10e14be278cf4b39ae49354e55a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rtc_8c_a66e555139e798e92cfbcd11222bee82a}\index{rtc.c@{rtc.c}!rtc\_get\_config@{rtc\_get\_config}}
+\index{rtc\_get\_config@{rtc\_get\_config}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_get\_config()}{rtc\_get\_config()}}
+{\footnotesize\ttfamily \label{rtc_8c_a66e555139e798e92cfbcd11222bee82a} 
+\mbox{\hyperlink{struct_r_t_c___config}{RTC\+\_\+\+Config}} rtc\+\_\+get\+\_\+config (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc_8c_a66e555139e798e92cfbcd11222bee82a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{rtc_8c_a66e555139e798e92cfbcd11222bee82a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rtc_8c_adbe8811d52144fd5004186cf5abf6b4b}\index{rtc.c@{rtc.c}!rtc\_get\_interrupt\_was\_alarm@{rtc\_get\_interrupt\_was\_alarm}}
+\index{rtc\_get\_interrupt\_was\_alarm@{rtc\_get\_interrupt\_was\_alarm}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_get\_interrupt\_was\_alarm()}{rtc\_get\_interrupt\_was\_alarm()}}
+{\footnotesize\ttfamily \label{rtc_8c_adbe8811d52144fd5004186cf5abf6b4b} 
+bool rtc\+\_\+get\+\_\+interrupt\+\_\+was\+\_\+alarm (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{rtc_8c_adbe8811d52144fd5004186cf5abf6b4b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rtc_8c_a5e21e71fa590f4eb04bf164fd4d6f799}\index{rtc.c@{rtc.c}!rtc\_get\_interrupt\_was\_periodic@{rtc\_get\_interrupt\_was\_periodic}}
+\index{rtc\_get\_interrupt\_was\_periodic@{rtc\_get\_interrupt\_was\_periodic}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_get\_interrupt\_was\_periodic()}{rtc\_get\_interrupt\_was\_periodic()}}
+{\footnotesize\ttfamily \label{rtc_8c_a5e21e71fa590f4eb04bf164fd4d6f799} 
+bool rtc\+\_\+get\+\_\+interrupt\+\_\+was\+\_\+periodic (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{rtc_8c_a5e21e71fa590f4eb04bf164fd4d6f799_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rtc_8c_a34a219933e4ca6e9ed6b3b68cb403ebd}\index{rtc.c@{rtc.c}!rtc\_get\_interrupt\_was\_update@{rtc\_get\_interrupt\_was\_update}}
+\index{rtc\_get\_interrupt\_was\_update@{rtc\_get\_interrupt\_was\_update}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_get\_interrupt\_was\_update()}{rtc\_get\_interrupt\_was\_update()}}
+{\footnotesize\ttfamily \label{rtc_8c_a34a219933e4ca6e9ed6b3b68cb403ebd} 
+bool rtc\+\_\+get\+\_\+interrupt\+\_\+was\+\_\+update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{rtc_8c_a34a219933e4ca6e9ed6b3b68cb403ebd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rtc_8c_a75dad42881d64cf07cf1bdc2979a7056}\index{rtc.c@{rtc.c}!rtc\_ih@{rtc\_ih}}
+\index{rtc\_ih@{rtc\_ih}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_ih()}{rtc\_ih()}}
+{\footnotesize\ttfamily \label{rtc_8c_a75dad42881d64cf07cf1bdc2979a7056} 
+void rtc\+\_\+ih (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+RTC interrupt handler. 
+
+On interrupt, check the type of interrupt (Alarm, Update or Periodic) and act accordingly Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc_8c_a75dad42881d64cf07cf1bdc2979a7056_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{rtc_8c_a75dad42881d64cf07cf1bdc2979a7056_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rtc_8c_a7f5b00a2f809e42f08f037ffa9347444}\index{rtc.c@{rtc.c}!rtc\_is\_updating@{rtc\_is\_updating}}
+\index{rtc\_is\_updating@{rtc\_is\_updating}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_is\_updating()}{rtc\_is\_updating()}}
+{\footnotesize\ttfamily \label{rtc_8c_a7f5b00a2f809e42f08f037ffa9347444} 
+bool rtc\+\_\+is\+\_\+updating (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Check RTC\textquotesingle{}s UIP flag to avoid race conditions. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc_8c_a7f5b00a2f809e42f08f037ffa9347444_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rtc_8c_a7d6996cfdf143b032ddbc2df7cc27498}\index{rtc.c@{rtc.c}!rtc\_read\_register@{rtc\_read\_register}}
+\index{rtc\_read\_register@{rtc\_read\_register}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_read\_register()}{rtc\_read\_register()}}
+{\footnotesize\ttfamily \label{rtc_8c_a7d6996cfdf143b032ddbc2df7cc27498} 
+int rtc\+\_\+read\+\_\+register (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{reg}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{byte}{}\end{DoxyParamCaption})}
+
+
+
+Read a byte from an RTC register. 
+
+This function first specifies the address of the RTC register to be accessed and then the port from which it reads the data Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{rtc_8c_a7d6996cfdf143b032ddbc2df7cc27498_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc_8c_a7d6996cfdf143b032ddbc2df7cc27498_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rtc_8c_a1f69bf2f4ea8a754cc5cfd6d6b730899}\index{rtc.c@{rtc.c}!rtc\_set\_alarm@{rtc\_set\_alarm}}
+\index{rtc\_set\_alarm@{rtc\_set\_alarm}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_set\_alarm()}{rtc\_set\_alarm()}}
+{\footnotesize\ttfamily \label{rtc_8c_a1f69bf2f4ea8a754cc5cfd6d6b730899} 
+int rtc\+\_\+set\+\_\+alarm (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{sec}{, }\item[{uint8\+\_\+t}]{min}{, }\item[{uint8\+\_\+t}]{hour}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc_8c_a1f69bf2f4ea8a754cc5cfd6d6b730899_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{rtc_8c_a1f69bf2f4ea8a754cc5cfd6d6b730899_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rtc_8c_acf4af146a12914483083729f2e06c796}\index{rtc.c@{rtc.c}!rtc\_set\_interrupt\_alarm\_processed@{rtc\_set\_interrupt\_alarm\_processed}}
+\index{rtc\_set\_interrupt\_alarm\_processed@{rtc\_set\_interrupt\_alarm\_processed}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_set\_interrupt\_alarm\_processed()}{rtc\_set\_interrupt\_alarm\_processed()}}
+{\footnotesize\ttfamily \label{rtc_8c_acf4af146a12914483083729f2e06c796} 
+void rtc\+\_\+set\+\_\+interrupt\+\_\+alarm\+\_\+processed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{rtc_8c_acf4af146a12914483083729f2e06c796_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rtc_8c_a3b58c42083db0a598e61fed3c8b08eb7}\index{rtc.c@{rtc.c}!rtc\_set\_interrupt\_periodic\_processed@{rtc\_set\_interrupt\_periodic\_processed}}
+\index{rtc\_set\_interrupt\_periodic\_processed@{rtc\_set\_interrupt\_periodic\_processed}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_set\_interrupt\_periodic\_processed()}{rtc\_set\_interrupt\_periodic\_processed()}}
+{\footnotesize\ttfamily \label{rtc_8c_a3b58c42083db0a598e61fed3c8b08eb7} 
+void rtc\+\_\+set\+\_\+interrupt\+\_\+periodic\+\_\+processed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=323pt]{rtc_8c_a3b58c42083db0a598e61fed3c8b08eb7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rtc_8c_aa4f563587bbee9b934a3427cb979f57a}\index{rtc.c@{rtc.c}!rtc\_set\_interrupt\_update\_processed@{rtc\_set\_interrupt\_update\_processed}}
+\index{rtc\_set\_interrupt\_update\_processed@{rtc\_set\_interrupt\_update\_processed}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_set\_interrupt\_update\_processed()}{rtc\_set\_interrupt\_update\_processed()}}
+{\footnotesize\ttfamily \label{rtc_8c_aa4f563587bbee9b934a3427cb979f57a} 
+void rtc\+\_\+set\+\_\+interrupt\+\_\+update\+\_\+processed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{rtc_8c_aa4f563587bbee9b934a3427cb979f57a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rtc_8c_a2eed5b31d7b3ec74011fd419ed1eeeae}\index{rtc.c@{rtc.c}!rtc\_subscribe\_int@{rtc\_subscribe\_int}}
+\index{rtc\_subscribe\_int@{rtc\_subscribe\_int}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_subscribe\_int()}{rtc\_subscribe\_int()}}
+{\footnotesize\ttfamily \label{rtc_8c_a2eed5b31d7b3ec74011fd419ed1eeeae} 
+int rtc\+\_\+subscribe\+\_\+int (\begin{DoxyParamCaption}\item[{uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{bit\+\_\+no}{}\end{DoxyParamCaption})}
+
+
+
+Subscribes RTC interrupts. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{rtc_8c_a2eed5b31d7b3ec74011fd419ed1eeeae_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rtc_8c_ab8f17bf5280c908c8b199a90fefcc758}\index{rtc.c@{rtc.c}!rtc\_unsubscribe\_int@{rtc\_unsubscribe\_int}}
+\index{rtc\_unsubscribe\_int@{rtc\_unsubscribe\_int}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_unsubscribe\_int()}{rtc\_unsubscribe\_int()}}
+{\footnotesize\ttfamily \label{rtc_8c_ab8f17bf5280c908c8b199a90fefcc758} 
+int rtc\+\_\+unsubscribe\+\_\+int (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Unsubscribes RTC interrupts. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{rtc_8c_ab8f17bf5280c908c8b199a90fefcc758_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rtc_8c_a080bec5cedba0f262f9f7b94eb06632d}\index{rtc.c@{rtc.c}!rtc\_write\_reg@{rtc\_write\_reg}}
+\index{rtc\_write\_reg@{rtc\_write\_reg}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_write\_reg()}{rtc\_write\_reg()}}
+{\footnotesize\ttfamily \label{rtc_8c_a080bec5cedba0f262f9f7b94eb06632d} 
+int rtc\+\_\+write\+\_\+reg (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{reg}{, }\item[{uint8\+\_\+t}]{byte}{}\end{DoxyParamCaption})}
+
+
+
+Write a byte to an RTC register. 
+
+This function first specifies the address of the RTC register to be accessed and then the port to which it transfers the data Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{rtc_8c_a080bec5cedba0f262f9f7b94eb06632d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc_8c_a080bec5cedba0f262f9f7b94eb06632d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rtc_8c_a068edeb333e4db214207cf7476b5b314}\index{rtc.c@{rtc.c}!rtc\_write\_to\_port@{rtc\_write\_to\_port}}
+\index{rtc\_write\_to\_port@{rtc\_write\_to\_port}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_write\_to\_port()}{rtc\_write\_to\_port()}}
+{\footnotesize\ttfamily \label{rtc_8c_a068edeb333e4db214207cf7476b5b314} 
+int rtc\+\_\+write\+\_\+to\+\_\+port (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port}{, }\item[{uint8\+\_\+t}]{reg}{}\end{DoxyParamCaption})}
+
+
+
+Write a byte to an RTC port. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc_8c_a068edeb333e4db214207cf7476b5b314_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{rtc_8c_a6ed189977d4e690ef08ecb3adc5065d2}\index{rtc.c@{rtc.c}!\_alarm@{\_alarm}}
+\index{\_alarm@{\_alarm}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{\_alarm}{\_alarm}}
+{\footnotesize\ttfamily \label{rtc_8c_a6ed189977d4e690ef08ecb3adc5065d2} 
+bool \+\_\+alarm = false\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{rtc_8c_acb6e12c0da90334f97d397a6dc336a36}\index{rtc.c@{rtc.c}!\_periodic@{\_periodic}}
+\index{\_periodic@{\_periodic}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{\_periodic}{\_periodic}}
+{\footnotesize\ttfamily \label{rtc_8c_acb6e12c0da90334f97d397a6dc336a36} 
+bool \+\_\+periodic = false\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{rtc_8c_af64f238760f49267f2ae24b908bb5fb1}\index{rtc.c@{rtc.c}!\_update@{\_update}}
+\index{\_update@{\_update}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{\_update}{\_update}}
+{\footnotesize\ttfamily \label{rtc_8c_af64f238760f49267f2ae24b908bb5fb1} 
+bool \+\_\+update = false\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{rtc_8c_a6c52a1d32571a429369253ce7c3a3d7a}\index{rtc.c@{rtc.c}!rtc\_hook\_id@{rtc\_hook\_id}}
+\index{rtc\_hook\_id@{rtc\_hook\_id}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_hook\_id}{rtc\_hook\_id}}
+{\footnotesize\ttfamily \label{rtc_8c_a6c52a1d32571a429369253ce7c3a3d7a} 
+int rtc\+\_\+hook\+\_\+id = 8\hspace{0.3cm}{\ttfamily [static]}}
+

@@ -1,0 +1,40 @@
+\doxysection{main\+Room.\+h}
+\hypertarget{main_room_8h_source}{}\label{main_room_8h_source}\index{C:/Users/anton/Documents/lcom/labs/proj/src/model/stateModels/mainRoom.h@{C:/Users/anton/Documents/lcom/labs/proj/src/model/stateModels/mainRoom.h}}
+\mbox{\hyperlink{main_room_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_LCOM\_MAINROOM\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_LCOM\_MAINROOM\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gui_drawer_8h}{../../viewer/guiDrawer.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{button_8h}{../button.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{bar_8h}{../bar.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{cursor_8h}{../cursor.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{minigotchi_8h}{../minigotchi.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hotbar_8h}{../hotbar.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{struct_button}{Button}}\ *\mbox{\hyperlink{struct_main_room_a309050e88477dce7adcabe93080d5795}{miniGamesButton}};}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{struct_button}{Button}}\ *\mbox{\hyperlink{struct_main_room_a7f87a86620645e99f8996c1996d626da}{quitButton}};}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{struct_bar}{Bar}}*\ \mbox{\hyperlink{struct_main_room_a96ee27813380a03bd36790b065a0a350}{happinessBar}};}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{struct_bar}{Bar}}*\ \mbox{\hyperlink{struct_main_room_a009764b7679c66589b584f1e73c64607}{hungerBar}};}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{struct_minigotchi}{Minigotchi}}*\ \mbox{\hyperlink{struct_main_room_a290008ff4d8fc50c31de6fb630062739}{minigotchi}};}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{struct_cursor}{Cursor}}\ *\mbox{\hyperlink{struct_main_room_adf23eb843c2336674493a8704955ccf4}{cursor}};}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{struct_hotbar}{Hotbar}}\ *\mbox{\hyperlink{struct_main_room_a057d17a4de7f074f2e18220246b9e125}{hotbar}};}
+\DoxyCodeLine{00020\ \}\ \mbox{\hyperlink{struct_main_room}{MainRoom}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \mbox{\hyperlink{struct_main_room}{MainRoom}}\ *\mbox{\hyperlink{main_room_8h_ade78c0beb24832f2324ff1ce1e7748e6}{new\_mainRoom}}();\ \textcolor{comment}{//\ "{}Constructor"{}}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_room_8h_aca351aa0d373e25029a996f01cf5b327}{delete\_mainRoom}}(\mbox{\hyperlink{struct_main_room}{MainRoom}}\ *\mbox{\hyperlink{main_room_controller_8c_ae54a9d3b04b91328440afb537dc858e1}{mainRoom}});}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \mbox{\hyperlink{struct_minigotchi}{Minigotchi}}*\ \mbox{\hyperlink{main_room_8h_a2c8b3f1f567dfdc242412448c917f5d0}{mainRoom\_get\_minigotchi}}(\mbox{\hyperlink{struct_main_room}{MainRoom}}\ *\mbox{\hyperlink{main_room_controller_8c_ae54a9d3b04b91328440afb537dc858e1}{mainRoom}});}
+\DoxyCodeLine{00027\ \mbox{\hyperlink{struct_button}{Button}}*\ \mbox{\hyperlink{main_room_8h_a96c1ef037f07d949237569ae83fead27}{mainRoom\_get\_miniGamesButton}}(\mbox{\hyperlink{struct_main_room}{MainRoom}}\ *\mbox{\hyperlink{main_room_controller_8c_ae54a9d3b04b91328440afb537dc858e1}{mainRoom}});}
+\DoxyCodeLine{00028\ \mbox{\hyperlink{struct_button}{Button}}*\ \mbox{\hyperlink{main_room_8h_a2b94e433b58292bd6ff4127f926d1f43}{mainRoom\_get\_quitButton}}(\mbox{\hyperlink{struct_main_room}{MainRoom}}\ *\mbox{\hyperlink{main_room_controller_8c_ae54a9d3b04b91328440afb537dc858e1}{mainRoom}});}
+\DoxyCodeLine{00029\ \mbox{\hyperlink{struct_bar}{Bar}}*\ \mbox{\hyperlink{main_room_8h_a81dda08e092ecb8a3d17d436c1204c8f}{mainRoom\_get\_happinessBar}}(\mbox{\hyperlink{struct_main_room}{MainRoom}}\ *\mbox{\hyperlink{main_room_controller_8c_ae54a9d3b04b91328440afb537dc858e1}{mainRoom}});}
+\DoxyCodeLine{00030\ \mbox{\hyperlink{struct_bar}{Bar}}*\ \mbox{\hyperlink{main_room_8h_a4480c0a5c23bb99b7193f4c46ab113ac}{mainRoom\_get\_hungerBar}}(\mbox{\hyperlink{struct_main_room}{MainRoom}}\ *\mbox{\hyperlink{main_room_controller_8c_ae54a9d3b04b91328440afb537dc858e1}{mainRoom}});}
+\DoxyCodeLine{00031\ \mbox{\hyperlink{struct_cursor}{Cursor}}*\ \mbox{\hyperlink{main_room_8h_a5aa946915ef77d6214838089062cbdd4}{mainRoom\_get\_cursor}}(\mbox{\hyperlink{struct_main_room}{MainRoom}}\ *\mbox{\hyperlink{main_room_controller_8c_ae54a9d3b04b91328440afb537dc858e1}{mainRoom}});}
+\DoxyCodeLine{00032\ \mbox{\hyperlink{struct_hotbar}{Hotbar}}*\ \mbox{\hyperlink{main_room_8h_ab664627df529f79406b7a1e33274b63b}{mainRoom\_get\_hotbar}}(\mbox{\hyperlink{struct_main_room}{MainRoom}}\ *\mbox{\hyperlink{main_room_controller_8c_ae54a9d3b04b91328440afb537dc858e1}{mainRoom}});}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_MAINROOM\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

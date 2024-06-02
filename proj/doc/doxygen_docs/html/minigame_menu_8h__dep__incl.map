@@ -1,0 +1,18 @@
+<map id="C:/Users/anton/Documents/lcom/labs/proj/src/model/stateModels/minigameMenu.h" name="C:/Users/anton/Documents/lcom/labs/proj/src/model/stateModels/minigameMenu.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="285,5,484,64"/>
+<area shape="rect" id="Node000002" href="$minigame_menu_controller_8h.html" title=" " alt="" coords="56,219,278,277"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="340,76,298,114,195,220,191,216,295,110,337,72"/>
+<area shape="rect" id="Node000004" href="$proj_8c.html" title=" " alt="" coords="251,333,430,376"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="358,78,343,113,333,174,331,236,340,333,334,333,326,236,327,174,338,111,353,76"/>
+<area shape="rect" id="Node000005" href="$minigame_menu_8c.html" title=" " alt="" coords="582,112,782,171"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="481,67,601,109,599,114,479,72"/>
+<area shape="rect" id="Node000006" href="$minigame_menu_viewer_8h.html" title=" " alt="" coords="352,112,558,171"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="415,76,438,110,434,113,410,79"/>
+<area shape="rect" id="Node000003" href="$minigame_menu_controller_8c.html" title=" " alt="" coords="5,325,228,384"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="149,293,133,326,128,324,144,290"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="229,283,308,331,305,335,226,288"/>
+<area shape="poly" id="edge7_Node000006_Node000002" title=" " alt="" coords="363,179,247,221,245,216,361,174"/>
+<area shape="poly" id="edge8_Node000006_Node000004" title=" " alt="" coords="419,184,393,220,366,281,348,334,343,332,361,279,389,217,415,181"/>
+<area shape="rect" id="Node000007" href="$minigame_menu_viewer_8c.html" title=" " alt="" coords="403,219,609,277"/>
+<area shape="poly" id="edge9_Node000006_Node000007" title=" " alt="" coords="478,184,494,217,490,219,473,186"/>
+</map>

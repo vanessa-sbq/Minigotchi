@@ -1,0 +1,34 @@
+\doxysection{tic\+Tac\+Toe\+Controller.\+h}
+\hypertarget{tic_tac_toe_controller_8h_source}{}\label{tic_tac_toe_controller_8h_source}\index{C:/Users/anton/Documents/lcom/labs/proj/src/controller/minigames/ticTacToeController.h@{C:/Users/anton/Documents/lcom/labs/proj/src/controller/minigames/ticTacToeController.h}}
+\mbox{\hyperlink{tic_tac_toe_controller_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <lcom/lcf.h>}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{tic_tac_toe_8h}{../../model/stateModels/ticTacToe.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{button_8h}{../../model/button.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{cursor_8h}{../../model/cursor.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{database_8h}{../../player\_data/database.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{tic_tac_toe_viewer_8h}{../../viewer/minigames/ticTacToeViewer.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gui_drawer_8h}{../../viewer/guiDrawer.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{uart_8h}{../../device\_controllers/uart/uart.h}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{\mbox{\hyperlink{tic_tac_toe_controller_8h_afa83207d2aca4d67c269bf26944b96c3aebe2331fe947d83fd5f0db8b52ad0c5a}{QUIT\_TTT}},\ \mbox{\hyperlink{tic_tac_toe_controller_8h_afa83207d2aca4d67c269bf26944b96c3a7b6c7de8a1c3189343e44f848212af1e}{HOST\_TTT}},\ \mbox{\hyperlink{tic_tac_toe_controller_8h_afa83207d2aca4d67c269bf26944b96c3af9382cd374dff0928845a60fd109b612}{GUEST\_TTT}},\ \mbox{\hyperlink{tic_tac_toe_controller_8h_afa83207d2aca4d67c269bf26944b96c3a3eded9e49439179806ef98aec18eef90}{NOP\_TTT}}\}\ \mbox{\hyperlink{tic_tac_toe_controller_8h_afa83207d2aca4d67c269bf26944b96c3}{collision\_type\_ttt\_t}};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{tic_tac_toe_controller_8h_a4fa6d1a1a1f70bfdadccafbada27caee}{ttt\_set\_canClick}}();}
+\DoxyCodeLine{00017\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{tic_tac_toe_controller_8h_a595888a1a207791f219fe698db9cff91}{ticTacToeController\_load\_tictactoe}}();}
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{tic_tac_toe_controller_8h_ad3dacdd99744c3de3ce8fc3a326bca14}{ticTacToeController\_checkCollisionWithSprites}}(\mbox{\hyperlink{struct_sprite}{Sprite}}*\ sprite,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00019\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{tic_tac_toe_controller_8h_a82d75fd8d234e1f0f92d15aedd0b63de}{ticTacToe\_checkCollision}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height);}
+\DoxyCodeLine{00020\ \mbox{\hyperlink{tic_tac_toe_controller_8h_afa83207d2aca4d67c269bf26944b96c3}{collision\_type\_ttt\_t}}\ \mbox{\hyperlink{tic_tac_toe_controller_8h_ad5dbb038eb1fbff395afafb7868bc222}{ticTacToeController\_getButtonEvent}}();}
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{tic_tac_toe_controller_8h_a971e88e21a133ff1b8a277995dd20e63}{ticTacToeController\_setButtonEvent}}(\mbox{\hyperlink{tic_tac_toe_controller_8h_afa83207d2aca4d67c269bf26944b96c3}{collision\_type\_ttt\_t}}\ ct);}
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{tic_tac_toe_controller_8h_a9793010a311b496aad06bf08c0cf1aee}{checkIfPlayerWon}}(uint8\_t\ curI,\ uint8\_t\ curPath[9],\ \textcolor{keywordtype}{bool}\ plays[9]);}
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{tic_tac_toe_controller_8h_aae4bafbe082fa7f4bad0e58d11e6d861}{ticTacToeController\_step}}();}
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{tic_tac_toe_controller_8h_ad103a00e8879f4493e35cd14585ac7e2}{ticTacToeController\_delete\_tictactoe}}();}
+\DoxyCodeLine{00025\ \mbox{\hyperlink{struct_cursor}{Cursor}}*\ \mbox{\hyperlink{tic_tac_toe_controller_8h_a82f23dc02a713fee1b3b939f996eb1de}{getTicTacToeCursor}}();}
+\DoxyCodeLine{00026\ \mbox{\hyperlink{struct_tic_tac_toe}{TicTacToe}}*\ \mbox{\hyperlink{tic_tac_toe_controller_8h_af37eea06bbbe9121af25ed79710c16b6}{ticTacToeController\_get\_saved\_ttt}}();}
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{tic_tac_toe_controller_8h_a7ed45363eb773c0c6f124c24311a5fc3}{setTicTacToeCursor}}(\mbox{\hyperlink{struct_cursor}{Cursor}}*\ cursor);}
+\DoxyCodeLine{00028\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{tic_tac_toe_controller_8h_ad6884fb36768128cf09872d0b7b21adf}{ticTacToeController\_randomize\_reward}}();}
+
+\end{DoxyCode}

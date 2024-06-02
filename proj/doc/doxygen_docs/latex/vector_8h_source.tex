@@ -1,0 +1,29 @@
+\doxysection{vector.\+h}
+\hypertarget{vector_8h_source}{}\label{vector_8h_source}\index{C:/Users/anton/Documents/lcom/labs/proj/src/utilities/vector.h@{C:/Users/anton/Documents/lcom/labs/proj/src/utilities/vector.h}}
+\mbox{\hyperlink{vector_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_VECTOR\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_VECTOR\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <lcom/lcf.h>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gui_drawer_8h}{../viewer/guiDrawer.h}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00012\ \ \ \ \ uint8\_t\ *\mbox{\hyperlink{struct_vector_a4e3d6e75df9c9506171d3b7c4ef17f62}{data}};}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{struct_vector_ae4665570b1b91f783645fa0e2eb884af}{size}};}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{struct_vector_ad2b86d50e94fbaae2cc65a320b092b0a}{capacity}};}
+\DoxyCodeLine{00015\ \}\ \mbox{\hyperlink{struct_vector}{Vector}};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \mbox{\hyperlink{struct_vector}{Vector}}*\ \mbox{\hyperlink{vector_8h_a235297bbf887555f05872f20b768b4b7}{init\_vector}}(\textcolor{keywordtype}{size\_t}\ initial\_capacity);}
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vector_8h_a964501cdcea3b8689cbe9a60f6a81f2a}{resize\_vector}}(\mbox{\hyperlink{struct_vector}{Vector}}\ *vec,\ \textcolor{keywordtype}{size\_t}\ new\_capacity);}
+\DoxyCodeLine{00019\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vector_8h_a8135f31d24e776f34c1e8bddbc645a55}{push\_back}}(\mbox{\hyperlink{struct_vector}{Vector}}\ *vec,\ uint8\_t\ unsignedInt);}
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vector_8h_a6b949779efddb9f30b603f42e3e40a13}{remove\_at}}(\mbox{\hyperlink{struct_vector}{Vector}}\ *vec,\ \textcolor{keywordtype}{size\_t}\ index);}
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vector_8h_a198417967ef24ada410abbb475e6966d}{free\_vector}}(\mbox{\hyperlink{struct_vector}{Vector}}\ *vec);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_VECTOR\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

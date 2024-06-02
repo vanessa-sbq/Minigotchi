@@ -1,0 +1,10 @@
+<map id="item_get_sprite" name="item_get_sprite">
+<area shape="rect" id="Node000001" title=" " alt="" coords="414,31,524,57"/>
+<area shape="rect" id="Node000002" href="$rock_paper_scissors_viewer_8c.html#a769d9078f52fcb28fa5c8d2831f44f04" title="Calls draw function of each element the rock paper scissors game contains (also draws the GUI element..." alt="" coords="162,5,366,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="398,38,366,34,367,29,399,33"/>
+<area shape="rect" id="Node000004" href="$tic_tac_toe_viewer_8c.html#a39c6c3190f03216408e3ec97bb7aac9e" title="Calls draw function of each element the tic tac toe game contains (also draws the GUI elements when t..." alt="" coords="189,56,339,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="399,55,340,63,339,57,398,50"/>
+<area shape="rect" id="Node000003" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Project main function that starts the game." alt="" coords="5,31,114,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="146,36,114,40,114,35,146,31"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="174,61,114,53,114,48,174,56"/>
+</map>

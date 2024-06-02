@@ -1,0 +1,341 @@
+\doxysection{C\+:/\+Users/anton/\+Documents/lcom/labs/proj/src/device\+\_\+controllers/video/video.h File Reference}
+\hypertarget{video_8h}{}\label{video_8h}\index{C:/Users/anton/Documents/lcom/labs/proj/src/device\_controllers/video/video.h@{C:/Users/anton/Documents/lcom/labs/proj/src/device\_controllers/video/video.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include "{}video\+\_\+macros.\+h"{}}\newline
+Include dependency graph for video.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{video_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{video_8h_a741edf15c21c673a80ef46db1917ff6e}{return\+To\+Text\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em Function that helps go back to text mode. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{video_8h_aaa26640c58ac8b7da5e14369cab5503e}{video\+\_\+get\+\_\+mode\+\_\+information}} (uint16\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em Function that gets information about a video mode. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{video_8h_a95a6d633a13204fee55ef1cb200e58c7}{video\+\_\+map\+\_\+vram}} ()
+\begin{DoxyCompactList}\small\item\em Function that maps the video ram. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{video_8h_a42df932df087398f7fa0c70637f62182}{video\+\_\+set\+\_\+graphics\+\_\+mode}} (uint16\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em Function that sets the desired video mode. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{video_8h_a677a708ee22e814bfb0768b9b4af721a}{video\+\_\+get\+\_\+phys\+\_\+addr}} ()
+\begin{DoxyCompactList}\small\item\em Gets VRAM\textquotesingle{}s physical base address. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{video_8h_a89e702224919a5716dbe41c1862f931e}{video\+\_\+get\+\_\+vram\+\_\+size}} ()
+\begin{DoxyCompactList}\small\item\em Gets VRAM size. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{video_8h_aed5b07d4a09b1fa1fd530659686e15d0}{get\+Bytes\+Per\+Pixel}} ()
+\begin{DoxyCompactList}\small\item\em Get the number of bytes in a pixel. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{video_8h_a0cd850092b7489d611b2096cbaa13cee}{get\+XResolution}} ()
+\begin{DoxyCompactList}\small\item\em Get VRAM\textquotesingle{}s X Resolution. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{video_8h_af1e5967f33e339c4c49724da43d418ec}{get\+Buffer\+From\+Sprite}} (uint16\+\_\+t height, uint16\+\_\+t width, uint16\+\_\+t x, uint16\+\_\+t y, uint32\+\_\+t \texorpdfstring{$\ast$}{*}colors, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}background\+\_\+buffer)
+\begin{DoxyCompactList}\small\item\em Get a buffer from a sprite. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{video_8h_a243df2d473d9bc9b129bcc0088b855f2}{set\+Background\+From\+Buffer}} (char \texorpdfstring{$\ast$}{*}background\+\_\+buffer)
+\begin{DoxyCompactList}\small\item\em Set the background with triple buffering. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{video_8h_a6091a4bd04596e6e8e39b7dee1e1b118}{draw\+Pixel}} (uint16\+\_\+t x, uint16\+\_\+t y, uint32\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Draws a pixel on the current back buffer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{video_8h_ad1e918536050f04ef373759148d5a1af}{vg\+\_\+draw\+\_\+pixmap}} (uint16\+\_\+t x, uint16\+\_\+t y, uint8\+\_\+t \texorpdfstring{$\ast$}{*}map, xpm\+\_\+image\+\_\+t pixmap\+\_\+and\+\_\+metadata)
+\begin{DoxyCompactList}\small\item\em Draws a pixmap on the current back buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{video_8h_a3541d07f307db72cac3911f3f26573a4}{vg\+\_\+clear\+\_\+screen}} ()
+\begin{DoxyCompactList}\small\item\em Clears the screen on the current back buffer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{video_8h_abac76703d677ba820ea82a747748d743}{vg\+\_\+page\+\_\+flip}} ()
+\begin{DoxyCompactList}\small\item\em Makes a BIOS call to set the new display start (Page flip) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{video_8h_a6091a4bd04596e6e8e39b7dee1e1b118}\index{video.h@{video.h}!drawPixel@{drawPixel}}
+\index{drawPixel@{drawPixel}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{drawPixel()}{drawPixel()}}
+{\footnotesize\ttfamily \label{video_8h_a6091a4bd04596e6e8e39b7dee1e1b118} 
+int draw\+Pixel (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x}{, }\item[{uint16\+\_\+t}]{y}{, }\item[{uint32\+\_\+t}]{color}{}\end{DoxyParamCaption})}
+
+
+
+Draws a pixel on the current back buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x-\/coordinate of the pixel \\
+\hline
+{\em y} & y-\/coordinate of the pixel \\
+\hline
+{\em color} & Color of the pixel \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video_8h_a6091a4bd04596e6e8e39b7dee1e1b118_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{video_8h_af1e5967f33e339c4c49724da43d418ec}\index{video.h@{video.h}!getBufferFromSprite@{getBufferFromSprite}}
+\index{getBufferFromSprite@{getBufferFromSprite}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{getBufferFromSprite()}{getBufferFromSprite()}}
+{\footnotesize\ttfamily \label{video_8h_af1e5967f33e339c4c49724da43d418ec} 
+void get\+Buffer\+From\+Sprite (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{height}{, }\item[{uint16\+\_\+t}]{width}{, }\item[{uint16\+\_\+t}]{x}{, }\item[{uint16\+\_\+t}]{y}{, }\item[{uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{colors}{, }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{background\+\_\+buffer}{}\end{DoxyParamCaption})}
+
+
+
+Get a buffer from a sprite. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{video_8h_af1e5967f33e339c4c49724da43d418ec_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video_8h_af1e5967f33e339c4c49724da43d418ec_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{video_8h_aed5b07d4a09b1fa1fd530659686e15d0}\index{video.h@{video.h}!getBytesPerPixel@{getBytesPerPixel}}
+\index{getBytesPerPixel@{getBytesPerPixel}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{getBytesPerPixel()}{getBytesPerPixel()}}
+{\footnotesize\ttfamily \label{video_8h_aed5b07d4a09b1fa1fd530659686e15d0} 
+unsigned get\+Bytes\+Per\+Pixel (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the number of bytes in a pixel. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video_8h_aed5b07d4a09b1fa1fd530659686e15d0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{video_8h_a0cd850092b7489d611b2096cbaa13cee}\index{video.h@{video.h}!getXResolution@{getXResolution}}
+\index{getXResolution@{getXResolution}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{getXResolution()}{getXResolution()}}
+{\footnotesize\ttfamily \label{video_8h_a0cd850092b7489d611b2096cbaa13cee} 
+uint16\+\_\+t get\+XResolution (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get VRAM\textquotesingle{}s X Resolution. 
+
+\Hypertarget{video_8h_a741edf15c21c673a80ef46db1917ff6e}\index{video.h@{video.h}!returnToTextMode@{returnToTextMode}}
+\index{returnToTextMode@{returnToTextMode}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{returnToTextMode()}{returnToTextMode()}}
+{\footnotesize\ttfamily \label{video_8h_a741edf15c21c673a80ef46db1917ff6e} 
+void return\+To\+Text\+Mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Function that helps go back to text mode. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video_8h_a741edf15c21c673a80ef46db1917ff6e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{video_8h_a243df2d473d9bc9b129bcc0088b855f2}\index{video.h@{video.h}!setBackgroundFromBuffer@{setBackgroundFromBuffer}}
+\index{setBackgroundFromBuffer@{setBackgroundFromBuffer}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{setBackgroundFromBuffer()}{setBackgroundFromBuffer()}}
+{\footnotesize\ttfamily \label{video_8h_a243df2d473d9bc9b129bcc0088b855f2} 
+int set\+Background\+From\+Buffer (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{background\+\_\+buffer}{}\end{DoxyParamCaption})}
+
+
+
+Set the background with triple buffering. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video_8h_a243df2d473d9bc9b129bcc0088b855f2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video_8h_a243df2d473d9bc9b129bcc0088b855f2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{video_8h_a3541d07f307db72cac3911f3f26573a4}\index{video.h@{video.h}!vg\_clear\_screen@{vg\_clear\_screen}}
+\index{vg\_clear\_screen@{vg\_clear\_screen}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{vg\_clear\_screen()}{vg\_clear\_screen()}}
+{\footnotesize\ttfamily \label{video_8h_a3541d07f307db72cac3911f3f26573a4} 
+void vg\+\_\+clear\+\_\+screen (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Clears the screen on the current back buffer. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video_8h_a3541d07f307db72cac3911f3f26573a4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{video_8h_ad1e918536050f04ef373759148d5a1af}\index{video.h@{video.h}!vg\_draw\_pixmap@{vg\_draw\_pixmap}}
+\index{vg\_draw\_pixmap@{vg\_draw\_pixmap}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{vg\_draw\_pixmap()}{vg\_draw\_pixmap()}}
+{\footnotesize\ttfamily \label{video_8h_ad1e918536050f04ef373759148d5a1af} 
+int vg\+\_\+draw\+\_\+pixmap (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x}{, }\item[{uint16\+\_\+t}]{y}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{map}{, }\item[{xpm\+\_\+image\+\_\+t}]{pixmap\+\_\+and\+\_\+metadata}{}\end{DoxyParamCaption})}
+
+
+
+Draws a pixmap on the current back buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x-\/coordinate of the starting pixel \\
+\hline
+{\em y} & y-\/coordinate of the starting pixel \\
+\hline
+{\em map} & Pixmap \\
+\hline
+{\em pixmap\+\_\+and\+\_\+metadata} & Pixmap\textquotesingle{}s metadata \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{video_8h_ad1e918536050f04ef373759148d5a1af_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{video_8h_abac76703d677ba820ea82a747748d743}\index{video.h@{video.h}!vg\_page\_flip@{vg\_page\_flip}}
+\index{vg\_page\_flip@{vg\_page\_flip}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{vg\_page\_flip()}{vg\_page\_flip()}}
+{\footnotesize\ttfamily \label{video_8h_abac76703d677ba820ea82a747748d743} 
+int vg\+\_\+page\+\_\+flip (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Makes a BIOS call to set the new display start (Page flip) 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video_8h_abac76703d677ba820ea82a747748d743_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{video_8h_aaa26640c58ac8b7da5e14369cab5503e}\index{video.h@{video.h}!video\_get\_mode\_information@{video\_get\_mode\_information}}
+\index{video\_get\_mode\_information@{video\_get\_mode\_information}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{video\_get\_mode\_information()}{video\_get\_mode\_information()}}
+{\footnotesize\ttfamily \label{video_8h_aaa26640c58ac8b7da5e14369cab5503e} 
+int video\+\_\+get\+\_\+mode\+\_\+information (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode}{}\end{DoxyParamCaption})}
+
+
+
+Function that gets information about a video mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & video mode whose information we want to get \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{video_8h_aaa26640c58ac8b7da5e14369cab5503e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{video_8h_aaa26640c58ac8b7da5e14369cab5503e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{video_8h_a677a708ee22e814bfb0768b9b4af721a}\index{video.h@{video.h}!video\_get\_phys\_addr@{video\_get\_phys\_addr}}
+\index{video\_get\_phys\_addr@{video\_get\_phys\_addr}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{video\_get\_phys\_addr()}{video\_get\_phys\_addr()}}
+{\footnotesize\ttfamily \label{video_8h_a677a708ee22e814bfb0768b9b4af721a} 
+unsigned int video\+\_\+get\+\_\+phys\+\_\+addr (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets VRAM\textquotesingle{}s physical base address. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video_8h_a677a708ee22e814bfb0768b9b4af721a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{video_8h_a89e702224919a5716dbe41c1862f931e}\index{video.h@{video.h}!video\_get\_vram\_size@{video\_get\_vram\_size}}
+\index{video\_get\_vram\_size@{video\_get\_vram\_size}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{video\_get\_vram\_size()}{video\_get\_vram\_size()}}
+{\footnotesize\ttfamily \label{video_8h_a89e702224919a5716dbe41c1862f931e} 
+unsigned int video\+\_\+get\+\_\+vram\+\_\+size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets VRAM size. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video_8h_a89e702224919a5716dbe41c1862f931e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{video_8h_a95a6d633a13204fee55ef1cb200e58c7}\index{video.h@{video.h}!video\_map\_vram@{video\_map\_vram}}
+\index{video\_map\_vram@{video\_map\_vram}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{video\_map\_vram()}{video\_map\_vram()}}
+{\footnotesize\ttfamily \label{video_8h_a95a6d633a13204fee55ef1cb200e58c7} 
+int video\+\_\+map\+\_\+vram (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Function that maps the video ram. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{video_8h_a95a6d633a13204fee55ef1cb200e58c7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{video_8h_a95a6d633a13204fee55ef1cb200e58c7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{video_8h_a42df932df087398f7fa0c70637f62182}\index{video.h@{video.h}!video\_set\_graphics\_mode@{video\_set\_graphics\_mode}}
+\index{video\_set\_graphics\_mode@{video\_set\_graphics\_mode}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{video\_set\_graphics\_mode()}{video\_set\_graphics\_mode()}}
+{\footnotesize\ttfamily \label{video_8h_a42df932df087398f7fa0c70637f62182} 
+int video\+\_\+set\+\_\+graphics\+\_\+mode (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode}{}\end{DoxyParamCaption})}
+
+
+
+Function that sets the desired video mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & video mode to be set \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{video_8h_a42df932df087398f7fa0c70637f62182_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,7 @@
+<map id="rtc_set_alarm" name="rtc_set_alarm">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,106,32"/>
+<area shape="rect" id="Node000002" href="$rtc_8c.html#a080bec5cedba0f262f9f7b94eb06632d" title="Write a byte to an RTC register." alt="" coords="154,5,249,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="106,16,138,16,138,21,106,21"/>
+<area shape="rect" id="Node000003" href="$rtc_8c.html#a068edeb333e4db214207cf7476b5b314" title="Write a byte to an RTC port." alt="" coords="297,5,414,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="249,16,281,16,281,21,249,21"/>
+</map>

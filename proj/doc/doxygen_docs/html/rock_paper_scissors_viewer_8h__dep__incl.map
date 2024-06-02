@@ -1,0 +1,12 @@
+<map id="C:/Users/anton/Documents/lcom/labs/proj/src/viewer/minigames/rockPaperScissorsViewer.h" name="C:/Users/anton/Documents/lcom/labs/proj/src/viewer/minigames/rockPaperScissorsViewer.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="261,5,514,64"/>
+<area shape="rect" id="Node000002" href="$rock_paper_scissors_controller_8h.html" title=" " alt="" coords="81,112,350,171"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="329,75,264,114,261,109,326,70"/>
+<area shape="rect" id="Node000004" href="$proj_8c.html" title=" " alt="" coords="298,227,477,269"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="390,79,390,226,385,226,385,79"/>
+<area shape="rect" id="Node000005" href="$rock_paper_scissors_viewer_8c.html" title=" " alt="" coords="425,112,678,171"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="447,70,508,109,505,114,444,75"/>
+<area shape="rect" id="Node000003" href="$rock_paper_scissors_controller_8c.html" title=" " alt="" coords="5,219,274,277"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="188,185,162,220,158,217,184,182"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="277,177,355,224,352,228,274,181"/>
+</map>

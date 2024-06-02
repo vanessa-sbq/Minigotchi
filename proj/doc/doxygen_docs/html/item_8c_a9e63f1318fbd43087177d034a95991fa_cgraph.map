@@ -1,0 +1,5 @@
+<map id="new_item" name="new_item">
+<area shape="rect" id="Node000001" title="Creates a new item &quot;object&quot; and returns a pointer to it." alt="" coords="5,13,82,40"/>
+<area shape="rect" id="Node000002" href="$gui_drawer_8c.html#a05800c123125bd7b453bfb960405431b" title="Get an item sprite from an id." alt="" coords="130,5,265,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,24,114,24,114,29,82,29"/>
+</map>

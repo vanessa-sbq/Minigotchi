@@ -1,0 +1,54 @@
+\doxysection{tic\+Tac\+Toe.\+h}
+\hypertarget{tic_tac_toe_8h_source}{}\label{tic_tac_toe_8h_source}\index{C:/Users/anton/Documents/lcom/labs/proj/src/model/stateModels/ticTacToe.h@{C:/Users/anton/Documents/lcom/labs/proj/src/model/stateModels/ticTacToe.h}}
+\mbox{\hyperlink{tic_tac_toe_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_TICTACTOE\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_TICTACTOE\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gui_drawer_8h}{../../viewer/guiDrawer.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{button_8h}{../button.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{cursor_8h}{../cursor.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{item_8h}{../item.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{\mbox{\hyperlink{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1a0b3a03e7964a8078131d910c14865204}{TX\_RX\_DECISION\_TTT}},\ \mbox{\hyperlink{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1a76a366842faad4eb2d15f9c1e550afaf}{CURRENT\_PLAYER\_TURN\_TTT}},\ \mbox{\hyperlink{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1ae3bb5c66585a632ecd17340ab3ca9c8e}{OTHER\_PLAYER\_TURN\_TTT}},\ \mbox{\hyperlink{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1ad1de667de334d8fcce98ba58c4bb8254}{CPLAYER\_WON}},\ \mbox{\hyperlink{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1af207c8325ee4998cd86b3605927cf4c0}{CPLAYER\_LOST}},\ \mbox{\hyperlink{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1adeb6b42b014bf100dbd5c309de15d57a}{EXIT\_TTT}},\ \mbox{\hyperlink{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1a499c7f3ab2cfc1f8c72951f722cb3e2f}{WAIT\_ACK}},\ \mbox{\hyperlink{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1a1a935a4d8fbadd121e7ce6747d9b528f}{TIE\_TTT}},\ \mbox{\hyperlink{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1aca7dc1e7c345f6490890cafae4be2c27}{SERIAL\_WAIT\_HOST\_TTT}},\ \mbox{\hyperlink{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1accdfff25be307aa7ea5459befcf05082}{SERIAL\_WAIT\_GUEST\_TTT}},\ \mbox{\hyperlink{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1aaf9916567d0454b0e0c5edf749ee0140}{WAIT\_FOR\_GUEST\_SYNC\_TTT}}\}\ \mbox{\hyperlink{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1}{state\_ttt\_t}};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{struct_button}{Button}}\ *\mbox{\hyperlink{struct_tic_tac_toe_ad2377935af7a2a942ddf9a30f1c15c78}{guestButton}};}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{struct_button}{Button}}\ *\mbox{\hyperlink{struct_tic_tac_toe_a8c14a5e263fedc998ff9cbb1a9e613a3}{hostButton}};}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{struct_button}{Button}}\ *\mbox{\hyperlink{struct_tic_tac_toe_a5527e0158867ef96b21105e577a57076}{quitButton}};}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{struct_cursor}{Cursor}}\ *\mbox{\hyperlink{struct_tic_tac_toe_afa25b9b6f879a6552e1e01f9dd820c39}{cursor}};}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1}{state\_ttt\_t}}\ \mbox{\hyperlink{struct_tic_tac_toe_a3650fa143bff38749e01394cd64ec146}{ticTacToeState}};}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{struct_item}{Item}}*\ \mbox{\hyperlink{struct_tic_tac_toe_a5d06bb434d3fa5abcfe1b7915dd2a5ab}{reward}};}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{bool}\ otherPlayersMoves[9];}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{bool}\ currentPlayersMoves[9];}
+\DoxyCodeLine{00021\ \}\ \mbox{\hyperlink{struct_tic_tac_toe}{TicTacToe}};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \mbox{\hyperlink{struct_tic_tac_toe}{TicTacToe}}\ *\mbox{\hyperlink{tic_tac_toe_8h_a6f384617833ad3a6adb8678ddf2d3bca}{new\_ticTacToe}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{tic_tac_toe_8h_aa4cd18bf36a2c6d20c3253406eae5b56}{reset\_ticTacToe}}();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{tic_tac_toe_8h_a252f198c1443d67ea24fb5d64dc3e944}{delete\_ticTacToe}}(\mbox{\hyperlink{struct_tic_tac_toe}{TicTacToe}}\ *\mbox{\hyperlink{tic_tac_toe_controller_8c_a35701b132e42c2efe5aebe9017b28723}{ttt}});}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \mbox{\hyperlink{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1}{state\_ttt\_t}}\ \mbox{\hyperlink{tic_tac_toe_8h_aa0dc06e711584464bd11bd1090d5110b}{ticTacToe\_get\_state}}(\mbox{\hyperlink{struct_tic_tac_toe}{TicTacToe}}*\ \mbox{\hyperlink{tic_tac_toe_controller_8c_a35701b132e42c2efe5aebe9017b28723}{ttt}});}
+\DoxyCodeLine{00030\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{tic_tac_toe_8h_a94f1070d3b1a40283dccad237663c249}{ticTacToe\_set\_state}}(\mbox{\hyperlink{struct_tic_tac_toe}{TicTacToe}}*\ \mbox{\hyperlink{tic_tac_toe_controller_8c_a35701b132e42c2efe5aebe9017b28723}{ttt}},\ \mbox{\hyperlink{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1}{state\_ttt\_t}}\ st);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \mbox{\hyperlink{struct_item}{Item}}*\ \mbox{\hyperlink{tic_tac_toe_8h_aef4d6d852fca413e75a8605bc6ede1a1}{ticTacToe\_get\_reward}}(\mbox{\hyperlink{struct_tic_tac_toe}{TicTacToe}}*\ \mbox{\hyperlink{tic_tac_toe_controller_8c_a35701b132e42c2efe5aebe9017b28723}{ttt}});}
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{tic_tac_toe_8h_a40632c106b7bf918e15da8983abdf949}{ticTacToe\_set\_reward}}(\mbox{\hyperlink{struct_tic_tac_toe}{TicTacToe}}*\ \mbox{\hyperlink{tic_tac_toe_controller_8c_a35701b132e42c2efe5aebe9017b28723}{ttt}},\ \mbox{\hyperlink{struct_item}{Item}}*\ item);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{bool}*\ \mbox{\hyperlink{tic_tac_toe_8h_ab5abeaddbea086d622333c02c991c76a}{ticTacToe\_get\_otherPlayersMoves}}(\mbox{\hyperlink{struct_tic_tac_toe}{TicTacToe}}*\ \mbox{\hyperlink{tic_tac_toe_controller_8c_a35701b132e42c2efe5aebe9017b28723}{ttt}});}
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{bool}*\ \mbox{\hyperlink{tic_tac_toe_8h_a131ce727217fc3b92e22de565500403b}{ticTacToe\_get\_currentPlayersMoves}}(\mbox{\hyperlink{struct_tic_tac_toe}{TicTacToe}}*\ \mbox{\hyperlink{tic_tac_toe_controller_8c_a35701b132e42c2efe5aebe9017b28723}{ttt}});}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{tic_tac_toe_8h_a34b13c8230813c6b0e2c884ff9cfba53}{ticTacToe\_set\_otherPlayersMoves}}(\mbox{\hyperlink{struct_tic_tac_toe}{TicTacToe}}*\ \mbox{\hyperlink{tic_tac_toe_controller_8c_a35701b132e42c2efe5aebe9017b28723}{ttt}},\ uint8\_t\ pos);}
+\DoxyCodeLine{00039\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{tic_tac_toe_8h_a4711f9ecef4cb505fb653f612853846e}{ticTacToe\_set\_currentPlayersMoves}}(\mbox{\hyperlink{struct_tic_tac_toe}{TicTacToe}}*\ \mbox{\hyperlink{tic_tac_toe_controller_8c_a35701b132e42c2efe5aebe9017b28723}{ttt}},\ uint8\_t\ pos);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{tic_tac_toe_8h_a3aeaa4003aed5df41d309d6ebce57174}{undoChangeInCurrentPlayer}}(\mbox{\hyperlink{struct_tic_tac_toe}{TicTacToe}}*\ \mbox{\hyperlink{tic_tac_toe_controller_8c_a35701b132e42c2efe5aebe9017b28723}{ttt}},\ uint8\_t\ pos);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \mbox{\hyperlink{struct_button}{Button}}*\ \mbox{\hyperlink{tic_tac_toe_8h_aa86a41078cf91bbdaaf9f76789e915e2}{ticTacToe\_get\_quitButton}}(\mbox{\hyperlink{struct_tic_tac_toe}{TicTacToe}}\ *\mbox{\hyperlink{tic_tac_toe_controller_8c_a35701b132e42c2efe5aebe9017b28723}{ttt}});}
+\DoxyCodeLine{00044\ \mbox{\hyperlink{struct_button}{Button}}*\ \mbox{\hyperlink{tic_tac_toe_8h_ae3ee743768fbd2f34b9b30ae9d34c63a}{ticTacToe\_get\_guestButton}}(\mbox{\hyperlink{struct_tic_tac_toe}{TicTacToe}}\ *\mbox{\hyperlink{tic_tac_toe_controller_8c_a35701b132e42c2efe5aebe9017b28723}{ttt}});}
+\DoxyCodeLine{00045\ \mbox{\hyperlink{struct_button}{Button}}*\ \mbox{\hyperlink{tic_tac_toe_8h_aa26aea868ef04b4f2317fb7f4c7c57be}{ticTacToe\_get\_hostButton}}(\mbox{\hyperlink{struct_tic_tac_toe}{TicTacToe}}\ *\mbox{\hyperlink{tic_tac_toe_controller_8c_a35701b132e42c2efe5aebe9017b28723}{ttt}});}
+\DoxyCodeLine{00046\ \mbox{\hyperlink{struct_cursor}{Cursor}}*\ \mbox{\hyperlink{tic_tac_toe_8h_a44a855ce1786fdf10f9a4f1ca0d56384}{ticTacToe\_get\_cursor}}(\mbox{\hyperlink{struct_tic_tac_toe}{TicTacToe}}\ *\mbox{\hyperlink{tic_tac_toe_controller_8c_a35701b132e42c2efe5aebe9017b28723}{ttt}});}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_TICTACTOE\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

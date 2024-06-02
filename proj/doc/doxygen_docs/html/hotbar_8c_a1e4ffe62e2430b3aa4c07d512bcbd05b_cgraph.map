@@ -1,0 +1,9 @@
+<map id="draw_slider" name="draw_slider">
+<area shape="rect" id="Node000001" title="Draws a hotbar slider." alt="" coords="5,35,92,61"/>
+<area shape="rect" id="Node000002" href="$gui_drawer_8c.html#a3fc1965bb7f45fd72fff8a402c507186" title="Function responsible for drawing the sprites on the screen." alt="" coords="172,5,254,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,38,156,26,157,31,93,43"/>
+<area shape="rect" id="Node000004" href="$gui_drawer_8c.html#a6135553cb136bd9f357a0f1780c75053" title=" " alt="" coords="140,56,286,99"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="93,53,125,59,124,64,92,58"/>
+<area shape="rect" id="Node000003" href="$video_8c.html#a6091a4bd04596e6e8e39b7dee1e1b118" title="Draws a pixel on the current back buffer." alt="" coords="334,5,411,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="255,16,318,16,318,21,255,21"/>
+</map>

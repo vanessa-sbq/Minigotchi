@@ -1,0 +1,11 @@
+<map id="createNode" name="createNode">
+<area shape="rect" id="Node000001" title="Function to create a new node." alt="" coords="648,5,735,32"/>
+<area shape="rect" id="Node000002" href="$queue_8c.html#a115956bfb814a496d0453460311b7cb6" title="Function to add an element to the queue (enqueue)" alt="" coords="529,5,600,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="632,21,600,21,600,16,632,16"/>
+<area shape="rect" id="Node000003" href="$uart_8c.html#ae27582d958bf4e0e44143ea38606320c" title="Functions for RX Side." alt="" coords="365,5,481,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="514,21,482,21,482,16,514,16"/>
+<area shape="rect" id="Node000004" href="$uart_8c.html#a393e1cc1f292a7c6ebdc31c0faf08000" title="UART interrupt handler." alt="" coords="162,5,317,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="349,21,317,21,317,16,349,16"/>
+<area shape="rect" id="Node000005" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Project main function that starts the game." alt="" coords="5,5,114,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="146,21,114,21,114,16,146,16"/>
+</map>

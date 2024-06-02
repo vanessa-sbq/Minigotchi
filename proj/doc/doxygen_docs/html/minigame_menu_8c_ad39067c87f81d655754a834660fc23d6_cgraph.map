@@ -1,0 +1,7 @@
+<map id="delete_minigameMenu" name="delete_minigameMenu">
+<area shape="rect" id="Node000001" title="MinigameMenu destructor." alt="" coords="5,31,157,57"/>
+<area shape="rect" id="Node000002" href="$button_8c.html#a0e0fe01cc691c356d04430d1c200a8da" title="Button destructor." alt="" coords="205,5,304,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,30,189,25,190,31,158,36"/>
+<area shape="rect" id="Node000003" href="$cursor_8c.html#a109f86406f7b7adc03d9f0f8fc057629" title="Destroys cursor." alt="" coords="205,56,304,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="158,52,190,57,189,63,157,58"/>
+</map>

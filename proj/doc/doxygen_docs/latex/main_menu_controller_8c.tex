@@ -1,0 +1,180 @@
+\doxysection{C\+:/\+Users/anton/\+Documents/lcom/labs/proj/src/controller/menus/main\+Menu\+Controller.c File Reference}
+\hypertarget{main_menu_controller_8c}{}\label{main_menu_controller_8c}\index{C:/Users/anton/Documents/lcom/labs/proj/src/controller/menus/mainMenuController.c@{C:/Users/anton/Documents/lcom/labs/proj/src/controller/menus/mainMenuController.c}}
+{\ttfamily \#include "{}main\+Menu\+Controller.\+h"{}}\newline
+Include dependency graph for main\+Menu\+Controller.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_menu_controller_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_menu_controller_8c_a5a1c7010a735ca03bc3f03a64155323d}{main\+Menu\+Controller\+\_\+load\+\_\+main\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Load the main menu (first time) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{main_menu_controller_8h_a09e75d7e17aa0fd73648231363dcc13a}{collision\+\_\+type\+\_\+t}} \mbox{\hyperlink{main_menu_controller_8c_a77b949dc6c1993f239190cbb43d16f18}{main\+Menu\+Controller\+\_\+check\+Collision}} (\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*}button)
+\begin{DoxyCompactList}\small\item\em Function that checks button collisions with the cursor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{main_menu_controller_8h_a09e75d7e17aa0fd73648231363dcc13a}{collision\+\_\+type\+\_\+t}} \mbox{\hyperlink{main_menu_controller_8c_a58ebc2317aaa245b46389cf4058d9099}{main\+Menu\+Controller\+\_\+get\+Button\+Event}} ()
+\item 
+void \mbox{\hyperlink{main_menu_controller_8c_af10a3dc70892e363d03903f7671c5895}{main\+Menu\+Controller\+\_\+step}} ()
+\begin{DoxyCompactList}\small\item\em Controller function that is called once every frame and updates / checks every action in the main menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_menu_controller_8c_a4241ce43ec69356fd35b1876df4478db}{main\+Menu\+Controller\+\_\+delete\+\_\+main\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Calls the main menu destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{main_menu_controller_8c_a69b373de522b441ae81895051e001907}{get\+Main\+Menu\+Cursor}} ()
+\item 
+void \mbox{\hyperlink{main_menu_controller_8c_a5a9346395a3a73bcdf6e33cf8ec0e537}{set\+Main\+Menu\+Cursor}} (\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*}cursor)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_main_menu}{Main\+Menu}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{main_menu_controller_8c_ac0ff2b134366d6c3cca25504da7dd522}{main\+Menu}} = NULL
+\item 
+static \mbox{\hyperlink{main_menu_controller_8h_a09e75d7e17aa0fd73648231363dcc13a}{collision\+\_\+type\+\_\+t}} \mbox{\hyperlink{main_menu_controller_8c_a63870216e2290ddfb3b8fe13ada33a4f}{current\+Button\+Event}} = \mbox{\hyperlink{main_menu_controller_8h_a09e75d7e17aa0fd73648231363dcc13aa13d000b4d7dc70d90239b7430d1eb6b2}{START}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_menu_controller_8c_a69b373de522b441ae81895051e001907}\index{mainMenuController.c@{mainMenuController.c}!getMainMenuCursor@{getMainMenuCursor}}
+\index{getMainMenuCursor@{getMainMenuCursor}!mainMenuController.c@{mainMenuController.c}}
+\doxysubsubsection{\texorpdfstring{getMainMenuCursor()}{getMainMenuCursor()}}
+{\footnotesize\ttfamily \label{main_menu_controller_8c_a69b373de522b441ae81895051e001907} 
+\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*} get\+Main\+Menu\+Cursor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{main_menu_controller_8c_a77b949dc6c1993f239190cbb43d16f18}\index{mainMenuController.c@{mainMenuController.c}!mainMenuController\_checkCollision@{mainMenuController\_checkCollision}}
+\index{mainMenuController\_checkCollision@{mainMenuController\_checkCollision}!mainMenuController.c@{mainMenuController.c}}
+\doxysubsubsection{\texorpdfstring{mainMenuController\_checkCollision()}{mainMenuController\_checkCollision()}}
+{\footnotesize\ttfamily \label{main_menu_controller_8c_a77b949dc6c1993f239190cbb43d16f18} 
+\mbox{\hyperlink{main_menu_controller_8h_a09e75d7e17aa0fd73648231363dcc13a}{collision\+\_\+type\+\_\+t}} main\+Menu\+Controller\+\_\+check\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*}}]{button}{}\end{DoxyParamCaption})}
+
+
+
+Function that checks button collisions with the cursor. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{main_menu_controller_8c_a77b949dc6c1993f239190cbb43d16f18_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_menu_controller_8c_a77b949dc6c1993f239190cbb43d16f18_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_menu_controller_8c_a4241ce43ec69356fd35b1876df4478db}\index{mainMenuController.c@{mainMenuController.c}!mainMenuController\_delete\_mainMenu@{mainMenuController\_delete\_mainMenu}}
+\index{mainMenuController\_delete\_mainMenu@{mainMenuController\_delete\_mainMenu}!mainMenuController.c@{mainMenuController.c}}
+\doxysubsubsection{\texorpdfstring{mainMenuController\_delete\_mainMenu()}{mainMenuController\_delete\_mainMenu()}}
+{\footnotesize\ttfamily \label{main_menu_controller_8c_a4241ce43ec69356fd35b1876df4478db} 
+void main\+Menu\+Controller\+\_\+delete\+\_\+main\+Menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Calls the main menu destructor. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_menu_controller_8c_a4241ce43ec69356fd35b1876df4478db_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{main_menu_controller_8c_a4241ce43ec69356fd35b1876df4478db_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_menu_controller_8c_a58ebc2317aaa245b46389cf4058d9099}\index{mainMenuController.c@{mainMenuController.c}!mainMenuController\_getButtonEvent@{mainMenuController\_getButtonEvent}}
+\index{mainMenuController\_getButtonEvent@{mainMenuController\_getButtonEvent}!mainMenuController.c@{mainMenuController.c}}
+\doxysubsubsection{\texorpdfstring{mainMenuController\_getButtonEvent()}{mainMenuController\_getButtonEvent()}}
+{\footnotesize\ttfamily \label{main_menu_controller_8c_a58ebc2317aaa245b46389cf4058d9099} 
+\mbox{\hyperlink{main_menu_controller_8h_a09e75d7e17aa0fd73648231363dcc13a}{collision\+\_\+type\+\_\+t}} main\+Menu\+Controller\+\_\+get\+Button\+Event (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{main_menu_controller_8c_a58ebc2317aaa245b46389cf4058d9099_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_menu_controller_8c_a5a1c7010a735ca03bc3f03a64155323d}\index{mainMenuController.c@{mainMenuController.c}!mainMenuController\_load\_mainMenu@{mainMenuController\_load\_mainMenu}}
+\index{mainMenuController\_load\_mainMenu@{mainMenuController\_load\_mainMenu}!mainMenuController.c@{mainMenuController.c}}
+\doxysubsubsection{\texorpdfstring{mainMenuController\_load\_mainMenu()}{mainMenuController\_load\_mainMenu()}}
+{\footnotesize\ttfamily \label{main_menu_controller_8c_a5a1c7010a735ca03bc3f03a64155323d} 
+void main\+Menu\+Controller\+\_\+load\+\_\+main\+Menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Load the main menu (first time) 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_menu_controller_8c_a5a1c7010a735ca03bc3f03a64155323d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_menu_controller_8c_a5a1c7010a735ca03bc3f03a64155323d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_menu_controller_8c_af10a3dc70892e363d03903f7671c5895}\index{mainMenuController.c@{mainMenuController.c}!mainMenuController\_step@{mainMenuController\_step}}
+\index{mainMenuController\_step@{mainMenuController\_step}!mainMenuController.c@{mainMenuController.c}}
+\doxysubsubsection{\texorpdfstring{mainMenuController\_step()}{mainMenuController\_step()}}
+{\footnotesize\ttfamily \label{main_menu_controller_8c_af10a3dc70892e363d03903f7671c5895} 
+void main\+Menu\+Controller\+\_\+step (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Controller function that is called once every frame and updates / checks every action in the main menu. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_menu_controller_8c_af10a3dc70892e363d03903f7671c5895_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{main_menu_controller_8c_af10a3dc70892e363d03903f7671c5895_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_menu_controller_8c_a5a9346395a3a73bcdf6e33cf8ec0e537}\index{mainMenuController.c@{mainMenuController.c}!setMainMenuCursor@{setMainMenuCursor}}
+\index{setMainMenuCursor@{setMainMenuCursor}!mainMenuController.c@{mainMenuController.c}}
+\doxysubsubsection{\texorpdfstring{setMainMenuCursor()}{setMainMenuCursor()}}
+{\footnotesize\ttfamily \label{main_menu_controller_8c_a5a9346395a3a73bcdf6e33cf8ec0e537} 
+void set\+Main\+Menu\+Cursor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*}}]{cursor}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{main_menu_controller_8c_a5a9346395a3a73bcdf6e33cf8ec0e537_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{main_menu_controller_8c_a63870216e2290ddfb3b8fe13ada33a4f}\index{mainMenuController.c@{mainMenuController.c}!currentButtonEvent@{currentButtonEvent}}
+\index{currentButtonEvent@{currentButtonEvent}!mainMenuController.c@{mainMenuController.c}}
+\doxysubsubsection{\texorpdfstring{currentButtonEvent}{currentButtonEvent}}
+{\footnotesize\ttfamily \label{main_menu_controller_8c_a63870216e2290ddfb3b8fe13ada33a4f} 
+\mbox{\hyperlink{main_menu_controller_8h_a09e75d7e17aa0fd73648231363dcc13a}{collision\+\_\+type\+\_\+t}} current\+Button\+Event = \mbox{\hyperlink{main_menu_controller_8h_a09e75d7e17aa0fd73648231363dcc13aa13d000b4d7dc70d90239b7430d1eb6b2}{START}}\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{main_menu_controller_8c_ac0ff2b134366d6c3cca25504da7dd522}\index{mainMenuController.c@{mainMenuController.c}!mainMenu@{mainMenu}}
+\index{mainMenu@{mainMenu}!mainMenuController.c@{mainMenuController.c}}
+\doxysubsubsection{\texorpdfstring{mainMenu}{mainMenu}}
+{\footnotesize\ttfamily \label{main_menu_controller_8c_ac0ff2b134366d6c3cca25504da7dd522} 
+\mbox{\hyperlink{struct_main_menu}{Main\+Menu}}\texorpdfstring{$\ast$}{*} main\+Menu = NULL\hspace{0.3cm}{\ttfamily [static]}}
+

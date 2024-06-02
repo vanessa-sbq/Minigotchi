@@ -1,0 +1,54 @@
+<map id="drawPixel" name="drawPixel">
+<area shape="rect" id="Node000001" title="Draws a pixel on the current back buffer." alt="" coords="880,245,957,271"/>
+<area shape="rect" id="Node000002" href="$gui_drawer_8c.html#a3fc1965bb7f45fd72fff8a402c507186" title="Function responsible for drawing the sprites on the screen." alt="" coords="733,219,815,246"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="864,251,815,243,816,237,865,246"/>
+<area shape="rect" id="Node000017" href="$video_8c.html#ad1e918536050f04ef373759148d5a1af" title="Draws a pixmap on the current back buffer." alt="" coords="716,270,832,297"/>
+<area shape="poly" id="edge35_Node000001_Node000017" title=" " alt="" coords="865,270,833,276,832,271,864,265"/>
+<area shape="rect" id="Node000003" href="$bar_8c.html#ae54f9e3ff41dfab947e1060f0e081a80" title="Draws a bar." alt="" coords="574,42,647,69"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="757,207,721,145,695,112,666,83,646,71,649,66,669,79,699,109,725,143,762,204"/>
+<area shape="rect" id="Node000004" href="$main_room_viewer_8c.html#ab712f0c477c358dac8015032c3aa3b72" title="Calls draw function of each element the main room contains." alt="" coords="186,143,342,170"/>
+<area shape="poly" id="edge31_Node000002_Node000004" title=" " alt="" coords="765,205,754,164,735,115,706,69,688,49,666,32,641,20,614,12,586,8,558,9,501,20,446,40,393,67,347,96,282,145,279,141,344,92,391,63,443,35,500,15,558,4,587,3,615,7,643,15,669,28,691,45,711,65,740,113,759,162,770,204"/>
+<area shape="rect" id="Node000006" href="$button_8c.html#a8cffe5189a594e49e7510d739e186fa0" title="Draws a button." alt="" coords="414,245,505,271"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="717,240,506,257,506,252,717,235"/>
+<area shape="rect" id="Node000009" href="$name_minigotchi_viewer_8c.html#a0577521b7d2cb7f06f7fdf1a3706b529" title="Calls draw function of each element the nameMinigotchi contains." alt="" coords="171,295,357,322"/>
+<area shape="poly" id="edge32_Node000002_Node000009" title=" " alt="" coords="727,255,717,260,693,277,669,292,601,321,545,336,487,341,414,337,332,325,333,320,414,331,487,335,544,331,599,316,666,288,691,273,714,256,724,251"/>
+<area shape="rect" id="Node000010" href="$rock_paper_scissors_viewer_8c.html#a769d9078f52fcb28fa5c8d2831f44f04" title="Calls draw function of each element the rock paper scissors game contains (also draws the GUI element..." alt="" coords="162,346,366,373"/>
+<area shape="poly" id="edge33_Node000002_Node000010" title=" " alt="" coords="722,257,718,260,702,280,696,301,688,322,669,340,627,361,583,375,537,383,491,388,403,386,329,376,330,371,403,380,491,382,536,378,582,370,626,356,666,336,684,319,691,300,698,278,714,256,718,252"/>
+<area shape="rect" id="Node000011" href="$tic_tac_toe_viewer_8c.html#a39c6c3190f03216408e3ec97bb7aac9e" title="Calls draw function of each element the tic tac toe game contains (also draws the GUI elements when t..." alt="" coords="189,397,339,423"/>
+<area shape="poly" id="edge34_Node000002_Node000011" title=" " alt="" coords="722,256,718,260,706,276,700,292,697,324,692,356,684,371,669,386,628,410,584,426,537,436,489,441,398,438,323,427,323,421,398,433,489,436,536,431,582,421,626,405,666,381,680,368,687,354,692,323,695,290,701,273,714,256,718,252"/>
+<area shape="rect" id="Node000012" href="$cursor_8c.html#a4acb89b058c3a72154e1b2650107a77f" title="Draws a cursor." alt="" coords="414,295,505,322"/>
+<area shape="poly" id="edge17_Node000002_Node000012" title=" " alt="" coords="718,249,507,300,505,295,717,244"/>
+<area shape="rect" id="Node000013" href="$item_8c.html#a22ff465025805bfed674b2dff9aeccfa" title="Draws an item." alt="" coords="570,93,651,119"/>
+<area shape="poly" id="edge24_Node000002_Node000013" title=" " alt="" coords="749,210,712,172,666,134,646,122,648,118,669,129,716,168,753,206"/>
+<area shape="rect" id="Node000015" href="$minigotchi_8c.html#aa8dba5ef250a763d2269d95816a2c232" title="Draws a minigotchi." alt="" coords="553,143,668,170"/>
+<area shape="poly" id="edge27_Node000002_Node000015" title=" " alt="" coords="728,215,640,173,642,168,730,210"/>
+<area shape="rect" id="Node000016" href="$hotbar_8c.html#a1e4ffe62e2430b3aa4c07d512bcbd05b" title="Draws a hotbar slider." alt="" coords="417,194,503,221"/>
+<area shape="poly" id="edge29_Node000002_Node000016" title=" " alt="" coords="717,231,503,214,504,208,718,226"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="559,60,490,67,415,83,344,113,288,145,285,141,341,109,413,78,489,62,558,55"/>
+<area shape="rect" id="Node000005" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Project main function that starts the game." alt="" coords="5,270,114,297"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="175,179,163,184,135,204,109,228,73,271,69,268,105,224,131,200,160,180,172,174"/>
+<area shape="poly" id="edge8_Node000006_Node000004" title=" " alt="" coords="417,238,412,235,398,221,389,208,379,196,365,184,340,173,342,168,367,180,383,192,393,205,402,217,416,231,420,234"/>
+<area shape="rect" id="Node000007" href="$main_menu_viewer_8c.html#a2b7112c73de682798b0f73c76bd4c622" title="Calls draw function of each element the MainMenu contains." alt="" coords="187,194,341,221"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="398,244,365,235,321,224,322,219,367,230,400,239"/>
+<area shape="rect" id="Node000008" href="$minigame_menu_viewer_8c.html#aa40e2803b799b1fde6895a08214fc3ed" title="Calls draw function of each element the minigame menu contains." alt="" coords="173,245,355,271"/>
+<area shape="poly" id="edge9_Node000006_Node000008" title=" " alt="" coords="398,261,355,261,355,255,398,255"/>
+<area shape="poly" id="edge11_Node000006_Node000009" title=" " alt="" coords="400,277,367,286,322,297,321,292,365,281,398,272"/>
+<area shape="poly" id="edge13_Node000006_Node000010" title=" " alt="" coords="420,282,416,285,402,299,393,312,383,324,367,336,342,348,340,343,365,332,379,320,389,309,398,296,412,281,417,278"/>
+<area shape="poly" id="edge15_Node000006_Node000011" title=" " alt="" coords="418,283,416,285,400,311,394,337,387,362,368,387,341,402,338,397,364,383,383,360,389,335,395,309,412,282,415,279"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="185,228,163,235,86,272,83,267,161,230,183,223"/>
+<area shape="poly" id="edge10_Node000008_Node000005" title=" " alt="" coords="158,274,114,279,114,274,157,269"/>
+<area shape="poly" id="edge12_Node000009_Node000005" title=" " alt="" coords="155,298,114,293,114,287,156,293"/>
+<area shape="poly" id="edge14_Node000010_Node000005" title=" " alt="" coords="183,344,161,337,83,300,86,295,163,332,185,339"/>
+<area shape="poly" id="edge16_Node000011_Node000005" title=" " alt="" coords="173,393,160,387,131,367,105,343,69,299,73,296,109,339,135,363,163,382,175,389"/>
+<area shape="poly" id="edge19_Node000012_Node000004" title=" " alt="" coords="415,288,412,285,395,258,389,232,383,207,364,184,341,171,344,166,368,180,387,205,394,230,400,256,416,282,418,284"/>
+<area shape="poly" id="edge18_Node000012_Node000007" title=" " alt="" coords="417,289,412,285,398,271,389,258,379,247,365,235,340,224,342,219,367,230,383,243,393,255,402,268,416,281,420,285"/>
+<area shape="poly" id="edge20_Node000012_Node000008" title=" " alt="" coords="398,295,365,286,321,275,322,270,367,281,400,290"/>
+<area shape="poly" id="edge21_Node000012_Node000009" title=" " alt="" coords="399,311,357,311,357,306,399,306"/>
+<area shape="poly" id="edge22_Node000012_Node000010" title=" " alt="" coords="400,328,367,337,322,348,321,343,365,332,398,323"/>
+<area shape="poly" id="edge23_Node000012_Node000011" title=" " alt="" coords="436,335,405,363,367,387,338,399,336,394,365,382,402,358,433,331"/>
+<area shape="rect" id="Node000014" href="$hotbar_8c.html#a5918cc623692c4eee77035428bc992f5" title="Draws a hotbar." alt="" coords="417,93,503,119"/>
+<area shape="poly" id="edge25_Node000013_Node000014" title=" " alt="" coords="555,109,503,109,503,103,555,103"/>
+<area shape="poly" id="edge26_Node000014_Node000004" title=" " alt="" coords="402,124,319,145,318,140,400,119"/>
+<area shape="poly" id="edge28_Node000015_Node000004" title=" " alt="" coords="538,159,342,159,342,154,538,154"/>
+<area shape="poly" id="edge30_Node000016_Node000004" title=" " alt="" coords="401,194,365,185,321,173,322,168,367,180,402,189"/>
+</map>

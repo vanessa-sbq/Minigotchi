@@ -1,0 +1,27 @@
+\doxysection{kbc.\+h}
+\hypertarget{kbc_8h_source}{}\label{kbc_8h_source}\index{C:/Users/anton/Documents/lcom/labs/proj/src/device\_controllers/kbc/kbc.h@{C:/Users/anton/Documents/lcom/labs/proj/src/device\_controllers/kbc/kbc.h}}
+\mbox{\hyperlink{kbc_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_\_KBC\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_\_KBC\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{utils_8h}{../utils.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{i8042_8h}{i8042.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <lcom/lcf.h>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ Keyboard\ IRQ\ Subscriptions}}
+\DoxyCodeLine{00010\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{kbc_8h_a0613a257bf094b3ff742b53a50a86cb3}{subscribe\_interrupts\_kbd}}(uint8\_t*\ bit\_no);}
+\DoxyCodeLine{00011\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{kbc_8h_a82633dfeed2a6811281e3a06bb18a8ff}{unsubscribe\_interrupts\_kbd}}();}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ Enable\ Keyboard\ Interrupts}}
+\DoxyCodeLine{00014\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{kbc_8h_aec3b951828f35c691abedab58fabe04c}{kbc\_enable\_interrupts}}();}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ Functions\ to\ read\ and\ write\ to\ kbc}}
+\DoxyCodeLine{00017\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{kbc_8h_ab0a11123d74fe0bb6c988af90c5bc4e4}{readFromStatusKBC}}(uint8\_t*\ status);}
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{kbc_8h_af7e649ff24e7c919ec309ba5642ae8ff}{readFromOutputBuffer}}(uint8\_t*\ \textcolor{keywordtype}{byte});}
+\DoxyCodeLine{00019\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{kbc_8h_a859302565828ca9225032dc1f5e6de37}{writeToKBCPort}}(uint8\_t\ port,\ uint8\_t\ data);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_KBC\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,13 @@
+<map id="delete_cursor" name="delete_cursor">
+<area shape="rect" id="Node000001" title="Destroys cursor." alt="" coords="461,76,560,103"/>
+<area shape="rect" id="Node000002" href="$minigame_menu_8c.html#ad39067c87f81d655754a834660fc23d6" title="MinigameMenu destructor." alt="" coords="251,21,402,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="448,74,373,51,375,46,449,68"/>
+<area shape="rect" id="Node000004" href="$rock_paper_scissors_8c.html#aef9c692954d21b48a2114b6a93698c21" title="RockPaperScissors destructor." alt="" coords="240,76,413,103"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="445,92,414,92,414,87,445,87"/>
+<area shape="rect" id="Node000006" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Project main function that starts the game." alt="" coords="272,127,381,153"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="447,109,378,129,377,123,446,104"/>
+<area shape="rect" id="Node000003" href="$minigame_menu_controller_8c.html#a70f3184491ea404d46501ad044b4009e" title="Calls the MinigameMenu destructor." alt="" coords="16,5,181,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="235,34,181,32,181,27,235,29"/>
+<area shape="rect" id="Node000005" href="$rock_paper_scissors_controller_8c.html#a1d660a1aff7e1a3120e21fbab2e0ccac" title="Calls the Rock Paper Scissors destructor." alt="" coords="5,72,192,115"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="224,94,192,94,192,89,224,88"/>
+</map>

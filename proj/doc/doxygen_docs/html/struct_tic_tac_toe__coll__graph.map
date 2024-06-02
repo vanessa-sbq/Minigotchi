@@ -1,0 +1,13 @@
+<map id="TicTacToe" name="TicTacToe">
+<area shape="rect" id="Node000001" title=" " alt="" coords="92,219,173,245"/>
+<area shape="rect" id="Node000002" href="$struct_button.html" title=" " alt="" coords="5,96,65,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="36,138,39,166,51,193,70,209,93,220,91,224,67,214,47,196,34,168,31,138"/>
+<area shape="rect" id="Node000003" href="$struct_sprite.html" title=" " alt="" coords="98,5,153,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="101,44,86,58,48,98,44,94,82,54,97,40"/>
+<area shape="rect" id="Node000004" href="$struct_cursor.html" title=" " alt="" coords="96,96,155,123"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="128,48,128,95,123,95,123,48"/>
+<area shape="rect" id="Node000005" href="$struct_item.html" title=" " alt="" coords="180,96,226,123"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="155,41,169,54,198,94,193,97,165,58,151,44"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="130,138,134,218,129,218,125,138"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="200,139,191,167,176,196,153,220,149,216,172,193,186,165,195,137"/>
+</map>

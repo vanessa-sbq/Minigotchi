@@ -1,0 +1,109 @@
+\doxysection{C\+:/\+Users/anton/\+Documents/lcom/labs/proj/src/viewer/minigames/tic\+Tac\+Toe\+Viewer.c File Reference}
+\hypertarget{tic_tac_toe_viewer_8c}{}\label{tic_tac_toe_viewer_8c}\index{C:/Users/anton/Documents/lcom/labs/proj/src/viewer/minigames/ticTacToeViewer.c@{C:/Users/anton/Documents/lcom/labs/proj/src/viewer/minigames/ticTacToeViewer.c}}
+{\ttfamily \#include "{}tic\+Tac\+Toe\+Viewer.\+h"{}}\newline
+Include dependency graph for tic\+Tac\+Toe\+Viewer.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tic_tac_toe_viewer_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{tic_tac_toe_viewer_8c_a9f0241fc0a98f2ca98d58cfabb597f48}{tic\+Tac\+Toe\+Viewer\+\_\+set\+Tic\+Tac\+Toe}} (\mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{tic_tac_toe_controller_8c_a35701b132e42c2efe5aebe9017b28723}{ttt}})
+\item 
+void \mbox{\hyperlink{tic_tac_toe_viewer_8c_a99d655aaca156302c16b59870408246d}{tic\+Tac\+Toe\+May\+Be\+Reset\+Now}} ()
+\item 
+\mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{tic_tac_toe_viewer_8c_a57e6a01f566588c262db84fa646965d4}{tic\+Tac\+Toe\+Viewer\+\_\+get\+\_\+saved\+\_\+ttt}} ()
+\item 
+void \mbox{\hyperlink{tic_tac_toe_viewer_8c_a39c6c3190f03216408e3ec97bb7aac9e}{tic\+Tac\+Toe\+Viewer\+\_\+draw}} ()
+\begin{DoxyCompactList}\small\item\em Calls draw function of each element the tic tac toe game contains (also draws the GUI elements when the game terminates) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{tic_tac_toe_viewer_8c_a101217f4a6b5095a8000539e608baae2}{\+\_\+ttt}}
+\item 
+static bool \mbox{\hyperlink{tic_tac_toe_viewer_8c_a4cfa6b01d3db9b2b9a1f25a2a1d22b02}{to\+Be\+Reset}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{tic_tac_toe_viewer_8c_a99d655aaca156302c16b59870408246d}\index{ticTacToeViewer.c@{ticTacToeViewer.c}!ticTacToeMayBeResetNow@{ticTacToeMayBeResetNow}}
+\index{ticTacToeMayBeResetNow@{ticTacToeMayBeResetNow}!ticTacToeViewer.c@{ticTacToeViewer.c}}
+\doxysubsubsection{\texorpdfstring{ticTacToeMayBeResetNow()}{ticTacToeMayBeResetNow()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_viewer_8c_a99d655aaca156302c16b59870408246d} 
+void tic\+Tac\+Toe\+May\+Be\+Reset\+Now (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tic_tac_toe_viewer_8c_a99d655aaca156302c16b59870408246d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{tic_tac_toe_viewer_8c_a39c6c3190f03216408e3ec97bb7aac9e}\index{ticTacToeViewer.c@{ticTacToeViewer.c}!ticTacToeViewer\_draw@{ticTacToeViewer\_draw}}
+\index{ticTacToeViewer\_draw@{ticTacToeViewer\_draw}!ticTacToeViewer.c@{ticTacToeViewer.c}}
+\doxysubsubsection{\texorpdfstring{ticTacToeViewer\_draw()}{ticTacToeViewer\_draw()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_viewer_8c_a39c6c3190f03216408e3ec97bb7aac9e} 
+void tic\+Tac\+Toe\+Viewer\+\_\+draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Calls draw function of each element the tic tac toe game contains (also draws the GUI elements when the game terminates) 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tic_tac_toe_viewer_8c_a39c6c3190f03216408e3ec97bb7aac9e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{tic_tac_toe_viewer_8c_a39c6c3190f03216408e3ec97bb7aac9e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{tic_tac_toe_viewer_8c_a57e6a01f566588c262db84fa646965d4}\index{ticTacToeViewer.c@{ticTacToeViewer.c}!ticTacToeViewer\_get\_saved\_ttt@{ticTacToeViewer\_get\_saved\_ttt}}
+\index{ticTacToeViewer\_get\_saved\_ttt@{ticTacToeViewer\_get\_saved\_ttt}!ticTacToeViewer.c@{ticTacToeViewer.c}}
+\doxysubsubsection{\texorpdfstring{ticTacToeViewer\_get\_saved\_ttt()}{ticTacToeViewer\_get\_saved\_ttt()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_viewer_8c_a57e6a01f566588c262db84fa646965d4} 
+\mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}} \texorpdfstring{$\ast$}{*} tic\+Tac\+Toe\+Viewer\+\_\+get\+\_\+saved\+\_\+ttt (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{tic_tac_toe_viewer_8c_a57e6a01f566588c262db84fa646965d4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{tic_tac_toe_viewer_8c_a9f0241fc0a98f2ca98d58cfabb597f48}\index{ticTacToeViewer.c@{ticTacToeViewer.c}!ticTacToeViewer\_setTicTacToe@{ticTacToeViewer\_setTicTacToe}}
+\index{ticTacToeViewer\_setTicTacToe@{ticTacToeViewer\_setTicTacToe}!ticTacToeViewer.c@{ticTacToeViewer.c}}
+\doxysubsubsection{\texorpdfstring{ticTacToeViewer\_setTicTacToe()}{ticTacToeViewer\_setTicTacToe()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_viewer_8c_a9f0241fc0a98f2ca98d58cfabb597f48} 
+void tic\+Tac\+Toe\+Viewer\+\_\+set\+Tic\+Tac\+Toe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}} \texorpdfstring{$\ast$}{*}}]{ttt}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tic_tac_toe_viewer_8c_a9f0241fc0a98f2ca98d58cfabb597f48_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{tic_tac_toe_viewer_8c_a101217f4a6b5095a8000539e608baae2}\index{ticTacToeViewer.c@{ticTacToeViewer.c}!\_ttt@{\_ttt}}
+\index{\_ttt@{\_ttt}!ticTacToeViewer.c@{ticTacToeViewer.c}}
+\doxysubsubsection{\texorpdfstring{\_ttt}{\_ttt}}
+{\footnotesize\ttfamily \label{tic_tac_toe_viewer_8c_a101217f4a6b5095a8000539e608baae2} 
+\mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}}\texorpdfstring{$\ast$}{*} \+\_\+ttt\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{tic_tac_toe_viewer_8c_a4cfa6b01d3db9b2b9a1f25a2a1d22b02}\index{ticTacToeViewer.c@{ticTacToeViewer.c}!toBeReset@{toBeReset}}
+\index{toBeReset@{toBeReset}!ticTacToeViewer.c@{ticTacToeViewer.c}}
+\doxysubsubsection{\texorpdfstring{toBeReset}{toBeReset}}
+{\footnotesize\ttfamily \label{tic_tac_toe_viewer_8c_a4cfa6b01d3db9b2b9a1f25a2a1d22b02} 
+bool to\+Be\+Reset = false\hspace{0.3cm}{\ttfamily [static]}}
+

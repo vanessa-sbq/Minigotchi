@@ -1,0 +1,41 @@
+\doxysection{cursor.\+h}
+\hypertarget{cursor_8h_source}{}\label{cursor_8h_source}\index{C:/Users/anton/Documents/lcom/labs/proj/src/model/cursor.h@{C:/Users/anton/Documents/lcom/labs/proj/src/model/cursor.h}}
+\mbox{\hyperlink{cursor_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_LCOM\_CURSOR\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_LCOM\_CURSOR\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gui_drawer_8h}{../viewer/guiDrawer.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00007\ \ \ \ \ \mbox{\hyperlink{struct_sprite}{Sprite}}\ *\mbox{\hyperlink{struct_cursor_a9af89b0c6226cc9bdeee09a54845cb31}{sprite}};}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_cursor_a15fe4819896d4960f8d33398905a61d5}{x}};\ }
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_cursor_a536df6c93667db288cd5ed0326215fec}{y}};}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_cursor_a1407011f040e3c87e9a975e348309c42}{isClicked}};}
+\DoxyCodeLine{00011\ \}\ \mbox{\hyperlink{struct_cursor}{Cursor}};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ "{}Constructor"{}}}
+\DoxyCodeLine{00014\ \mbox{\hyperlink{struct_cursor}{Cursor}}\ *\mbox{\hyperlink{cursor_8h_a4cc403b0eefc445792f54d05e76d6f02}{new\_cursor}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ "{}Destructor"{}}}
+\DoxyCodeLine{00017\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{cursor_8h_a109f86406f7b7adc03d9f0f8fc057629}{delete\_cursor}}(\mbox{\hyperlink{struct_cursor}{Cursor}}\ *cursor);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{cursor_8h_a4acb89b058c3a72154e1b2650107a77f}{draw\_cursor}}(\mbox{\hyperlink{struct_cursor}{Cursor}}\ *cursor);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{cursor_8h_a56c247acdeadfc45d614b71e15ed57d2}{set\_buttonClicked}}(\textcolor{keywordtype}{bool}\ isPressed,\ \mbox{\hyperlink{struct_cursor}{Cursor}}*\ cursor);}
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{cursor_8h_a98149df29b06207e2304795ea8e00d7e}{get\_buttonClicked}}(\mbox{\hyperlink{struct_cursor}{Cursor}}*\ cursor);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ Getters\ and\ setters}}
+\DoxyCodeLine{00025\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{cursor_8h_ade1397613b64a382a641d098ca489c4b}{cursor\_get\_sprite}}(\mbox{\hyperlink{struct_cursor}{Cursor}}\ *cursos);}
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cursor_8h_a95277b3c428a0b3c1b79cfcb49628397}{cursor\_get\_x}}(\mbox{\hyperlink{struct_cursor}{Cursor}}\ *cursor);}
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{cursor_8h_ab346189d7aeb1bbd182952fa838ae45c}{cursor\_get\_y}}(\mbox{\hyperlink{struct_cursor}{Cursor}}\ *cursor);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{cursor_8h_a57cf5c9a83024dcc204c2fbdd14f715f}{cursor\_set\_x}}(\mbox{\hyperlink{struct_cursor}{Cursor}}\ *cursor,\ \textcolor{keywordtype}{int}\ x);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{cursor_8h_adc5342700a0d7a15fcbc2916f4edfcff}{cursor\_set\_y}}(\mbox{\hyperlink{struct_cursor}{Cursor}}\ *cursor,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{cursor_8h_a9611b7aa9210df345498a90dc7465af1}{cursor\_isClicked}}(\mbox{\hyperlink{struct_cursor}{Cursor}}\ *cursor);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_CURSOR\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

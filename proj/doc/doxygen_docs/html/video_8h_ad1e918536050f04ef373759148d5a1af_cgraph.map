@@ -1,0 +1,5 @@
+<map id="vg_draw_pixmap" name="vg_draw_pixmap">
+<area shape="rect" id="Node000001" title="Draws a pixmap on the current back buffer." alt="" coords="5,5,122,32"/>
+<area shape="rect" id="Node000002" href="$video_8c.html#a6091a4bd04596e6e8e39b7dee1e1b118" title="Draws a pixel on the current back buffer." alt="" coords="170,5,247,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,16,154,16,154,21,122,21"/>
+</map>

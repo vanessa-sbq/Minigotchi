@@ -1,0 +1,7 @@
+<map id="video_map_vram" name="video_map_vram">
+<area shape="rect" id="Node000001" title="Function that maps the video ram." alt="" coords="5,31,122,57"/>
+<area shape="rect" id="Node000002" href="$video_8c.html#a677a708ee22e814bfb0768b9b4af721a" title="Gets VRAM&#39;s physical base address." alt="" coords="170,5,312,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,33,154,28,155,34,122,38"/>
+<area shape="rect" id="Node000003" href="$video_8c.html#a89e702224919a5716dbe41c1862f931e" title="Gets VRAM size." alt="" coords="171,56,311,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="122,50,156,55,155,60,122,55"/>
+</map>

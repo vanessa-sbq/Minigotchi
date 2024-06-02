@@ -1,0 +1,21 @@
+<map id="C:/Users/anton/Documents/lcom/labs/proj/src/device_controllers/kbc/i8042.h" name="C:/Users/anton/Documents/lcom/labs/proj/src/device_controllers/kbc/i8042.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="243,5,421,64"/>
+<area shape="rect" id="Node000002" href="$kbc_8h.html" title=" " alt="" coords="243,112,421,171"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="335,80,335,112,329,112,329,80"/>
+<area shape="rect" id="Node000004" href="$keyboard_8h.html" title=" " alt="" coords="5,219,187,277"/>
+<area shape="poly" id="edge10_Node000001_Node000004" title=" " alt="" coords="281,75,232,114,173,169,124,220,120,216,170,166,229,110,278,71"/>
+<area shape="rect" id="Node000007" href="$mouse_8h.html" title=" " alt="" coords="464,219,643,277"/>
+<area shape="poly" id="edge11_Node000001_Node000007" title=" " alt="" coords="388,71,435,110,489,165,533,217,529,220,485,169,432,114,385,76"/>
+<area shape="rect" id="Node000003" href="$kbc_8c.html" title=" " alt="" coords="211,219,389,277"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="321,186,311,219,306,217,316,185"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="255,180,162,221,160,216,252,175"/>
+<area shape="rect" id="Node000006" href="$proj_8c.html" title=" " alt="" coords="299,333,477,376"/>
+<area shape="poly" id="edge9_Node000002_Node000006" title=" " alt="" coords="380,181,394,198,404,218,411,249,410,280,398,334,393,332,405,280,405,249,399,220,389,201,376,184"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="407,175,494,216,491,221,405,180"/>
+<area shape="rect" id="Node000005" href="$keyboard_8c.html" title=" " alt="" coords="5,325,187,384"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="99,293,99,325,93,325,93,293"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="191,280,331,330,329,335,189,285"/>
+<area shape="poly" id="edge8_Node000007_Node000006" title=" " alt="" coords="497,288,422,335,419,331,494,284"/>
+<area shape="rect" id="Node000008" href="$mouse_8c.html" title=" " alt="" coords="502,325,680,384"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="571,291,583,324,578,326,566,293"/>
+</map>

@@ -1,0 +1,14 @@
+<map id="serial_interrupt_handler" name="serial_interrupt_handler">
+<area shape="rect" id="Node000001" title="UART interrupt handler." alt="" coords="5,56,161,83"/>
+<area shape="rect" id="Node000002" href="$uart_8c.html#a736829bb72a57c1efe8cf06a6374432a" title="Clear UART interrupts." alt="" coords="209,5,357,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,53,212,34,213,39,139,58"/>
+<area shape="rect" id="Node000003" href="$uart_8c.html#ae27582d958bf4e0e44143ea38606320c" title="Functions for RX Side." alt="" coords="225,56,341,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="161,67,209,67,209,72,161,72"/>
+<area shape="rect" id="Node000006" href="$utils_8c.html#a2b56f50ba159e9d5115ed1a75eff15d9" title="Invokes sys_inb() system call but reads the value into a uint8_t variable." alt="" coords="405,107,495,133"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="147,81,209,92,390,113,389,118,208,97,146,86"/>
+<area shape="rect" id="Node000004" href="$queue_8c.html#a115956bfb814a496d0453460311b7cb6" title="Function to add an element to the queue (enqueue)" alt="" coords="415,56,485,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="341,67,399,67,399,72,341,72"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="330,81,391,100,390,105,329,86"/>
+<area shape="rect" id="Node000005" href="$queue_8c.html#ab7e4c3517ea6f4e94a5491fe7df13861" title="Function to create a new node." alt="" coords="543,56,631,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="486,67,528,67,528,72,486,72"/>
+</map>

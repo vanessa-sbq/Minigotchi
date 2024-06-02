@@ -1,0 +1,18 @@
+<map id="C:/Users/anton/Documents/lcom/labs/proj/src/model/stateModels/ticTacToe.h" name="C:/Users/anton/Documents/lcom/labs/proj/src/model/stateModels/ticTacToe.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="286,5,464,64"/>
+<area shape="rect" id="Node000002" href="$tic_tac_toe_controller_8h.html" title=" " alt="" coords="56,219,270,277"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="331,76,290,114,190,220,186,216,287,110,328,72"/>
+<area shape="rect" id="Node000004" href="$proj_8c.html" title=" " alt="" coords="243,333,422,376"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="349,78,335,113,325,174,323,236,332,333,326,333,318,236,320,174,330,111,344,76"/>
+<area shape="rect" id="Node000005" href="$tic_tac_toe_8c.html" title=" " alt="" coords="566,112,744,171"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="467,67,579,109,578,114,465,72"/>
+<area shape="rect" id="Node000006" href="$tic_tac_toe_viewer_8h.html" title=" " alt="" coords="344,112,542,171"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="404,76,427,110,422,113,400,78"/>
+<area shape="rect" id="Node000003" href="$tic_tac_toe_controller_8c.html" title=" " alt="" coords="5,325,220,384"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="145,293,129,326,124,324,140,290"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="224,284,301,331,298,335,221,288"/>
+<area shape="poly" id="edge7_Node000006_Node000002" title=" " alt="" coords="353,179,241,221,239,216,351,174"/>
+<area shape="poly" id="edge8_Node000006_Node000004" title=" " alt="" coords="410,185,385,220,358,281,341,334,336,332,353,279,381,217,405,182"/>
+<area shape="rect" id="Node000007" href="$tic_tac_toe_viewer_8c.html" title=" " alt="" coords="395,219,593,277"/>
+<area shape="poly" id="edge9_Node000006_Node000007" title=" " alt="" coords="466,184,482,217,478,219,461,186"/>
+</map>

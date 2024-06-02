@@ -1,0 +1,32 @@
+\doxysection{main\+Menu.\+h}
+\hypertarget{main_menu_8h_source}{}\label{main_menu_8h_source}\index{C:/Users/anton/Documents/lcom/labs/proj/src/model/stateModels/mainMenu.h@{C:/Users/anton/Documents/lcom/labs/proj/src/model/stateModels/mainMenu.h}}
+\mbox{\hyperlink{main_menu_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_LCOM\_MAINMENU\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_LCOM\_MAINMENU\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gui_drawer_8h}{../../viewer/guiDrawer.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{button_8h}{../button.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{cursor_8h}{../cursor.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{struct_button}{Button}}\ *\mbox{\hyperlink{struct_main_menu_a7ced749fca20b16706c70d631f9fd3a0}{startNewButton}};}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{struct_button}{Button}}\ *\mbox{\hyperlink{struct_main_menu_af4ad76c3b8582e1d7dc872ee46eab552}{quitButton}};}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{struct_cursor}{Cursor}}\ *\mbox{\hyperlink{struct_main_menu_a1a222e49027270ae1a6cf4d67cb85491}{cursor}};}
+\DoxyCodeLine{00013\ \}\ \mbox{\hyperlink{struct_main_menu}{MainMenu}};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ "{}Constructor"{}}}
+\DoxyCodeLine{00016\ \mbox{\hyperlink{struct_main_menu}{MainMenu}}\ *\mbox{\hyperlink{main_menu_8h_a95d80f98f9b8ce2e3f27039b5704012c}{new\_mainMenu}}();\ }
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ "{}Destructor"{}}}
+\DoxyCodeLine{00019\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_menu_8h_a3b8cfcadd81541b192677d72872724cd}{delete\_mainMenu}}(\mbox{\hyperlink{struct_main_menu}{MainMenu}}\ *\mbox{\hyperlink{main_menu_controller_8c_ac0ff2b134366d6c3cca25504da7dd522}{mainMenu}});\ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ Getters\ and\ setters}}
+\DoxyCodeLine{00022\ \mbox{\hyperlink{struct_button}{Button}}*\ \mbox{\hyperlink{main_menu_8h_a687f11ebb6855f1941b8a570a915d242}{mainMenu\_get\_startNewButton}}(\mbox{\hyperlink{struct_main_menu}{MainMenu}}\ *\mbox{\hyperlink{main_menu_controller_8c_ac0ff2b134366d6c3cca25504da7dd522}{mainMenu}});}
+\DoxyCodeLine{00023\ \mbox{\hyperlink{struct_button}{Button}}*\ \mbox{\hyperlink{main_menu_8h_a123e888101f6598dd22f33b028f2690d}{mainMenu\_get\_quitButton}}(\mbox{\hyperlink{struct_main_menu}{MainMenu}}\ *\mbox{\hyperlink{main_menu_controller_8c_ac0ff2b134366d6c3cca25504da7dd522}{mainMenu}});}
+\DoxyCodeLine{00024\ \mbox{\hyperlink{struct_cursor}{Cursor}}*\ \mbox{\hyperlink{main_menu_8h_a9d19b1af356f3057f3de8f297fc40af7}{mainMenu\_get\_cursor}}(\mbox{\hyperlink{struct_main_menu}{MainMenu}}\ *\mbox{\hyperlink{main_menu_controller_8c_ac0ff2b134366d6c3cca25504da7dd522}{mainMenu}});}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_MAINMENU\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

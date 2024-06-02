@@ -1,0 +1,5 @@
+<map id="nameMinigotchiController_delete_nameMinigotchi" name="nameMinigotchiController_delete_nameMinigotchi">
+<area shape="rect" id="Node000001" title="Calls the minigotchi naming screen." alt="" coords="5,5,173,48"/>
+<area shape="rect" id="Node000002" href="$name_minigotchi_8c.html#aae0e34057ce56aadc4f08fa829b697a4" title="NameMinigotchi destructor." alt="" coords="221,13,375,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,24,205,24,205,29,173,29"/>
+</map>

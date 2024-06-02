@@ -1,0 +1,8 @@
+<map id="dequeue" name="dequeue">
+<area shape="rect" id="Node000001" title="Function to remove an element from the queue (dequeue)" alt="" coords="374,5,444,32"/>
+<area shape="rect" id="Node000002" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Project main function that starts the game." alt="" coords="5,5,114,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="359,21,114,21,114,16,359,16"/>
+<area shape="rect" id="Node000003" href="$tic_tac_toe_controller_8c.html#aae4bafbe082fa7f4bad0e58d11e6d861" title="Controller function that is called once every frame and updates / checks every action in the Tic Tac ..." alt="" coords="162,31,326,57"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="359,29,327,34,326,29,358,24"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="146,33,114,29,114,23,146,28"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="guiDrawer_get_ttt_x" name="guiDrawer_get_ttt_x">
+<area shape="rect" id="Node000001" title=" " alt="" coords="360,5,496,32"/>
+<area shape="rect" id="Node000002" href="$tic_tac_toe_viewer_8c.html#a39c6c3190f03216408e3ec97bb7aac9e" title="Calls draw function of each element the tic tac toe game contains (also draws the GUI elements when t..." alt="" coords="162,5,312,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="345,21,312,21,312,16,345,16"/>
+<area shape="rect" id="Node000003" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Project main function that starts the game." alt="" coords="5,5,114,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="146,21,114,21,114,16,146,16"/>
+</map>

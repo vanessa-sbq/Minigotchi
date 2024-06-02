@@ -1,0 +1,13 @@
+<map id="kbc_enable_interrupts" name="kbc_enable_interrupts">
+<area shape="rect" id="Node000001" title="Enables Keyboard interrupts." alt="" coords="5,31,154,57"/>
+<area shape="rect" id="Node000002" href="$kbc_8c.html#af7e649ff24e7c919ec309ba5642ae8ff" title="Reads KBC output buffer." alt="" coords="202,56,350,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,51,186,55,186,60,154,56"/>
+<area shape="rect" id="Node000005" href="$kbc_8c.html#a859302565828ca9225032dc1f5e6de37" title="Writes to a KBC port." alt="" coords="219,5,333,32"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="154,32,203,25,204,31,154,37"/>
+<area shape="rect" id="Node000003" href="$kbc_8c.html#ab0a11123d74fe0bb6c988af90c5bc4e4" title="Reads KBC status." alt="" coords="398,5,539,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="329,53,400,34,401,39,330,58"/>
+<area shape="rect" id="Node000004" href="$utils_8c.html#a2b56f50ba159e9d5115ed1a75eff15d9" title="Invokes sys_inb() system call but reads the value into a uint8_t variable." alt="" coords="587,31,678,57"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="350,61,572,46,572,51,351,67"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="540,27,572,32,572,37,539,32"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="333,16,382,16,382,21,333,21"/>
+</map>

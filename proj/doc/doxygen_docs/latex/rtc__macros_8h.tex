@@ -1,0 +1,255 @@
+\doxysection{C\+:/\+Users/anton/\+Documents/lcom/labs/proj/src/device\+\_\+controllers/rtc/rtc\+\_\+macros.h File Reference}
+\hypertarget{rtc__macros_8h}{}\label{rtc__macros_8h}\index{C:/Users/anton/Documents/lcom/labs/proj/src/device\_controllers/rtc/rtc\_macros.h@{C:/Users/anton/Documents/lcom/labs/proj/src/device\_controllers/rtc/rtc\_macros.h}}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc__macros_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(n)~(1 $<$$<$ (n))
+\item 
+\#define \mbox{\hyperlink{rtc__macros_8h_a4e22feb6ffbc1cda32fadff5c740dc51}{RTC\+\_\+\+IRQ}}~8
+\item 
+\#define \mbox{\hyperlink{rtc__macros_8h_a710b98232df2c563009e6f8a6cd18220}{RTC\+\_\+\+ADDR\+\_\+\+REG}}~0x70
+\item 
+\#define \mbox{\hyperlink{rtc__macros_8h_a2f258a00c59c3f347c8d2d4a75471ce0}{RTC\+\_\+\+DATA\+\_\+\+REG}}~0x71
+\item 
+\#define \mbox{\hyperlink{rtc__macros_8h_a48fcf4f2eeef6769d588168d4ac2ab0e}{SECONDS}}~0
+\item 
+\#define \mbox{\hyperlink{rtc__macros_8h_a248d246840eb7f829899d5388832222b}{RTC\+\_\+\+ALARM\+\_\+\+SECONDS}}~1
+\item 
+\#define \mbox{\hyperlink{rtc__macros_8h_a84be9dcfa5a172ee83121620d15c8e29}{MINUTES}}~2
+\item 
+\#define \mbox{\hyperlink{rtc__macros_8h_ad6f4e696324be56f61558149f333690e}{RTC\+\_\+\+ALARM\+\_\+\+MINUTES}}~3
+\item 
+\#define \mbox{\hyperlink{rtc__macros_8h_a212d0f839f6f7ca43ccde311f93d5892}{HOURS}}~4
+\item 
+\#define \mbox{\hyperlink{rtc__macros_8h_ab2f0be80ca596603a93d288fcccfbd4e}{RTC\+\_\+\+ALARM\+\_\+\+HOURS}}~5
+\item 
+\#define \mbox{\hyperlink{rtc__macros_8h_a948810336971427a90fe29802fc23b65}{WEEK\+\_\+\+DAY}}~6
+\item 
+\#define \mbox{\hyperlink{rtc__macros_8h_aa1157d0c02abf399d5d5788a7a63cb6b}{MONTH\+\_\+\+DAY}}~7
+\item 
+\#define \mbox{\hyperlink{rtc__macros_8h_a3729d06495d9713592f79f3122c9e677}{MONTH}}~8
+\item 
+\#define \mbox{\hyperlink{rtc__macros_8h_a5871356500f559add06ea81d60331b1b}{YEAR}}~9
+\item 
+\#define \mbox{\hyperlink{rtc__macros_8h_ae5ffad506b363f28bed1bb5e5926bd2d}{RTC\+\_\+\+REG\+\_\+A}}~10
+\item 
+\#define \mbox{\hyperlink{rtc__macros_8h_a03954a63ead3f02b7790ce79e9877eea}{RTC\+\_\+\+REG\+\_\+B}}~11
+\item 
+\#define \mbox{\hyperlink{rtc__macros_8h_a1bd6f771dc313129723812fe7ac52d9e}{RTC\+\_\+\+REG\+\_\+C}}~12
+\item 
+\#define \mbox{\hyperlink{rtc__macros_8h_a959b265ca39e8bbaf4a79a8197b59db9}{RTC\+\_\+\+DC}}~0x\+C0
+\item 
+\#define \mbox{\hyperlink{rtc__macros_8h_a2ebe3d816d8b2e9f1be075554e4135b3}{RTC\+\_\+\+UIP}}~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(7)
+\item 
+\#define \mbox{\hyperlink{rtc__macros_8h_a722a880e324ceace4b3bd27d2a540404}{RTC\+\_\+\+RS0}}~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(0)
+\item 
+\#define \mbox{\hyperlink{rtc__macros_8h_af2b4f805675fd966c3c4173780b7b15b}{RTC\+\_\+\+RS1}}~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(1)
+\item 
+\#define \mbox{\hyperlink{rtc__macros_8h_a54d2328341e35419ce7111c8cf3b9d57}{RTC\+\_\+\+RS2}}~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(2)
+\item 
+\#define \mbox{\hyperlink{rtc__macros_8h_a151a2d40d9019b24ebc14861bbd67551}{RTC\+\_\+\+RS3}}~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(3)
+\item 
+\#define \mbox{\hyperlink{rtc__macros_8h_a06d206b47a307e00e32e0a159af2b3ae}{RTC\+\_\+\+RS\+\_\+\+CLEAR}}~0xf0
+\item 
+\#define \mbox{\hyperlink{rtc__macros_8h_a8aa3ee782d809767b9e03c49c7756083}{RTC\+\_\+\+PIE}}~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(6)
+\item 
+\#define \mbox{\hyperlink{rtc__macros_8h_a6a293d49e03a7f92a09cbb02fb49a08e}{RTC\+\_\+\+AIE}}~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(5)
+\item 
+\#define \mbox{\hyperlink{rtc__macros_8h_a3fa059415b73592c094cd9a3f79e6795}{RTC\+\_\+\+UIE}}~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(4)
+\item 
+\#define \mbox{\hyperlink{rtc__macros_8h_a9d9fa73fa39aa2500273df240594afe6}{RTC\+\_\+\+PF}}~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(6)
+\item 
+\#define \mbox{\hyperlink{rtc__macros_8h_a0ed62fab6c50790f2c4b71849f2000b2}{RTC\+\_\+\+AF}}~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(5)
+\item 
+\#define \mbox{\hyperlink{rtc__macros_8h_a7c63615d9172c9065f5b9d1875ef6d04}{RTC\+\_\+\+UF}}~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(4)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}\index{rtc\_macros.h@{rtc\_macros.h}!BIT@{BIT}}
+\index{BIT@{BIT}!rtc\_macros.h@{rtc\_macros.h}}
+\doxysubsubsection{\texorpdfstring{BIT}{BIT}}
+{\footnotesize\ttfamily \label{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c} 
+\#define BIT(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})~(1 $<$$<$ (n))}
+
+\Hypertarget{rtc__macros_8h_a212d0f839f6f7ca43ccde311f93d5892}\index{rtc\_macros.h@{rtc\_macros.h}!HOURS@{HOURS}}
+\index{HOURS@{HOURS}!rtc\_macros.h@{rtc\_macros.h}}
+\doxysubsubsection{\texorpdfstring{HOURS}{HOURS}}
+{\footnotesize\ttfamily \label{rtc__macros_8h_a212d0f839f6f7ca43ccde311f93d5892} 
+\#define HOURS~4}
+
+\Hypertarget{rtc__macros_8h_a84be9dcfa5a172ee83121620d15c8e29}\index{rtc\_macros.h@{rtc\_macros.h}!MINUTES@{MINUTES}}
+\index{MINUTES@{MINUTES}!rtc\_macros.h@{rtc\_macros.h}}
+\doxysubsubsection{\texorpdfstring{MINUTES}{MINUTES}}
+{\footnotesize\ttfamily \label{rtc__macros_8h_a84be9dcfa5a172ee83121620d15c8e29} 
+\#define MINUTES~2}
+
+\Hypertarget{rtc__macros_8h_a3729d06495d9713592f79f3122c9e677}\index{rtc\_macros.h@{rtc\_macros.h}!MONTH@{MONTH}}
+\index{MONTH@{MONTH}!rtc\_macros.h@{rtc\_macros.h}}
+\doxysubsubsection{\texorpdfstring{MONTH}{MONTH}}
+{\footnotesize\ttfamily \label{rtc__macros_8h_a3729d06495d9713592f79f3122c9e677} 
+\#define MONTH~8}
+
+\Hypertarget{rtc__macros_8h_aa1157d0c02abf399d5d5788a7a63cb6b}\index{rtc\_macros.h@{rtc\_macros.h}!MONTH\_DAY@{MONTH\_DAY}}
+\index{MONTH\_DAY@{MONTH\_DAY}!rtc\_macros.h@{rtc\_macros.h}}
+\doxysubsubsection{\texorpdfstring{MONTH\_DAY}{MONTH\_DAY}}
+{\footnotesize\ttfamily \label{rtc__macros_8h_aa1157d0c02abf399d5d5788a7a63cb6b} 
+\#define MONTH\+\_\+\+DAY~7}
+
+\Hypertarget{rtc__macros_8h_a710b98232df2c563009e6f8a6cd18220}\index{rtc\_macros.h@{rtc\_macros.h}!RTC\_ADDR\_REG@{RTC\_ADDR\_REG}}
+\index{RTC\_ADDR\_REG@{RTC\_ADDR\_REG}!rtc\_macros.h@{rtc\_macros.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_ADDR\_REG}{RTC\_ADDR\_REG}}
+{\footnotesize\ttfamily \label{rtc__macros_8h_a710b98232df2c563009e6f8a6cd18220} 
+\#define RTC\+\_\+\+ADDR\+\_\+\+REG~0x70}
+
+\Hypertarget{rtc__macros_8h_a0ed62fab6c50790f2c4b71849f2000b2}\index{rtc\_macros.h@{rtc\_macros.h}!RTC\_AF@{RTC\_AF}}
+\index{RTC\_AF@{RTC\_AF}!rtc\_macros.h@{rtc\_macros.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_AF}{RTC\_AF}}
+{\footnotesize\ttfamily \label{rtc__macros_8h_a0ed62fab6c50790f2c4b71849f2000b2} 
+\#define RTC\+\_\+\+AF~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(5)}
+
+\Hypertarget{rtc__macros_8h_a6a293d49e03a7f92a09cbb02fb49a08e}\index{rtc\_macros.h@{rtc\_macros.h}!RTC\_AIE@{RTC\_AIE}}
+\index{RTC\_AIE@{RTC\_AIE}!rtc\_macros.h@{rtc\_macros.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_AIE}{RTC\_AIE}}
+{\footnotesize\ttfamily \label{rtc__macros_8h_a6a293d49e03a7f92a09cbb02fb49a08e} 
+\#define RTC\+\_\+\+AIE~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(5)}
+
+\Hypertarget{rtc__macros_8h_ab2f0be80ca596603a93d288fcccfbd4e}\index{rtc\_macros.h@{rtc\_macros.h}!RTC\_ALARM\_HOURS@{RTC\_ALARM\_HOURS}}
+\index{RTC\_ALARM\_HOURS@{RTC\_ALARM\_HOURS}!rtc\_macros.h@{rtc\_macros.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_ALARM\_HOURS}{RTC\_ALARM\_HOURS}}
+{\footnotesize\ttfamily \label{rtc__macros_8h_ab2f0be80ca596603a93d288fcccfbd4e} 
+\#define RTC\+\_\+\+ALARM\+\_\+\+HOURS~5}
+
+\Hypertarget{rtc__macros_8h_ad6f4e696324be56f61558149f333690e}\index{rtc\_macros.h@{rtc\_macros.h}!RTC\_ALARM\_MINUTES@{RTC\_ALARM\_MINUTES}}
+\index{RTC\_ALARM\_MINUTES@{RTC\_ALARM\_MINUTES}!rtc\_macros.h@{rtc\_macros.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_ALARM\_MINUTES}{RTC\_ALARM\_MINUTES}}
+{\footnotesize\ttfamily \label{rtc__macros_8h_ad6f4e696324be56f61558149f333690e} 
+\#define RTC\+\_\+\+ALARM\+\_\+\+MINUTES~3}
+
+\Hypertarget{rtc__macros_8h_a248d246840eb7f829899d5388832222b}\index{rtc\_macros.h@{rtc\_macros.h}!RTC\_ALARM\_SECONDS@{RTC\_ALARM\_SECONDS}}
+\index{RTC\_ALARM\_SECONDS@{RTC\_ALARM\_SECONDS}!rtc\_macros.h@{rtc\_macros.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_ALARM\_SECONDS}{RTC\_ALARM\_SECONDS}}
+{\footnotesize\ttfamily \label{rtc__macros_8h_a248d246840eb7f829899d5388832222b} 
+\#define RTC\+\_\+\+ALARM\+\_\+\+SECONDS~1}
+
+\Hypertarget{rtc__macros_8h_a2f258a00c59c3f347c8d2d4a75471ce0}\index{rtc\_macros.h@{rtc\_macros.h}!RTC\_DATA\_REG@{RTC\_DATA\_REG}}
+\index{RTC\_DATA\_REG@{RTC\_DATA\_REG}!rtc\_macros.h@{rtc\_macros.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_DATA\_REG}{RTC\_DATA\_REG}}
+{\footnotesize\ttfamily \label{rtc__macros_8h_a2f258a00c59c3f347c8d2d4a75471ce0} 
+\#define RTC\+\_\+\+DATA\+\_\+\+REG~0x71}
+
+\Hypertarget{rtc__macros_8h_a959b265ca39e8bbaf4a79a8197b59db9}\index{rtc\_macros.h@{rtc\_macros.h}!RTC\_DC@{RTC\_DC}}
+\index{RTC\_DC@{RTC\_DC}!rtc\_macros.h@{rtc\_macros.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_DC}{RTC\_DC}}
+{\footnotesize\ttfamily \label{rtc__macros_8h_a959b265ca39e8bbaf4a79a8197b59db9} 
+\#define RTC\+\_\+\+DC~0x\+C0}
+
+\Hypertarget{rtc__macros_8h_a4e22feb6ffbc1cda32fadff5c740dc51}\index{rtc\_macros.h@{rtc\_macros.h}!RTC\_IRQ@{RTC\_IRQ}}
+\index{RTC\_IRQ@{RTC\_IRQ}!rtc\_macros.h@{rtc\_macros.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_IRQ}{RTC\_IRQ}}
+{\footnotesize\ttfamily \label{rtc__macros_8h_a4e22feb6ffbc1cda32fadff5c740dc51} 
+\#define RTC\+\_\+\+IRQ~8}
+
+\Hypertarget{rtc__macros_8h_a9d9fa73fa39aa2500273df240594afe6}\index{rtc\_macros.h@{rtc\_macros.h}!RTC\_PF@{RTC\_PF}}
+\index{RTC\_PF@{RTC\_PF}!rtc\_macros.h@{rtc\_macros.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_PF}{RTC\_PF}}
+{\footnotesize\ttfamily \label{rtc__macros_8h_a9d9fa73fa39aa2500273df240594afe6} 
+\#define RTC\+\_\+\+PF~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(6)}
+
+\Hypertarget{rtc__macros_8h_a8aa3ee782d809767b9e03c49c7756083}\index{rtc\_macros.h@{rtc\_macros.h}!RTC\_PIE@{RTC\_PIE}}
+\index{RTC\_PIE@{RTC\_PIE}!rtc\_macros.h@{rtc\_macros.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_PIE}{RTC\_PIE}}
+{\footnotesize\ttfamily \label{rtc__macros_8h_a8aa3ee782d809767b9e03c49c7756083} 
+\#define RTC\+\_\+\+PIE~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(6)}
+
+\Hypertarget{rtc__macros_8h_ae5ffad506b363f28bed1bb5e5926bd2d}\index{rtc\_macros.h@{rtc\_macros.h}!RTC\_REG\_A@{RTC\_REG\_A}}
+\index{RTC\_REG\_A@{RTC\_REG\_A}!rtc\_macros.h@{rtc\_macros.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_REG\_A}{RTC\_REG\_A}}
+{\footnotesize\ttfamily \label{rtc__macros_8h_ae5ffad506b363f28bed1bb5e5926bd2d} 
+\#define RTC\+\_\+\+REG\+\_\+A~10}
+
+\Hypertarget{rtc__macros_8h_a03954a63ead3f02b7790ce79e9877eea}\index{rtc\_macros.h@{rtc\_macros.h}!RTC\_REG\_B@{RTC\_REG\_B}}
+\index{RTC\_REG\_B@{RTC\_REG\_B}!rtc\_macros.h@{rtc\_macros.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_REG\_B}{RTC\_REG\_B}}
+{\footnotesize\ttfamily \label{rtc__macros_8h_a03954a63ead3f02b7790ce79e9877eea} 
+\#define RTC\+\_\+\+REG\+\_\+B~11}
+
+\Hypertarget{rtc__macros_8h_a1bd6f771dc313129723812fe7ac52d9e}\index{rtc\_macros.h@{rtc\_macros.h}!RTC\_REG\_C@{RTC\_REG\_C}}
+\index{RTC\_REG\_C@{RTC\_REG\_C}!rtc\_macros.h@{rtc\_macros.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_REG\_C}{RTC\_REG\_C}}
+{\footnotesize\ttfamily \label{rtc__macros_8h_a1bd6f771dc313129723812fe7ac52d9e} 
+\#define RTC\+\_\+\+REG\+\_\+C~12}
+
+\Hypertarget{rtc__macros_8h_a722a880e324ceace4b3bd27d2a540404}\index{rtc\_macros.h@{rtc\_macros.h}!RTC\_RS0@{RTC\_RS0}}
+\index{RTC\_RS0@{RTC\_RS0}!rtc\_macros.h@{rtc\_macros.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_RS0}{RTC\_RS0}}
+{\footnotesize\ttfamily \label{rtc__macros_8h_a722a880e324ceace4b3bd27d2a540404} 
+\#define RTC\+\_\+\+RS0~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(0)}
+
+\Hypertarget{rtc__macros_8h_af2b4f805675fd966c3c4173780b7b15b}\index{rtc\_macros.h@{rtc\_macros.h}!RTC\_RS1@{RTC\_RS1}}
+\index{RTC\_RS1@{RTC\_RS1}!rtc\_macros.h@{rtc\_macros.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_RS1}{RTC\_RS1}}
+{\footnotesize\ttfamily \label{rtc__macros_8h_af2b4f805675fd966c3c4173780b7b15b} 
+\#define RTC\+\_\+\+RS1~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(1)}
+
+\Hypertarget{rtc__macros_8h_a54d2328341e35419ce7111c8cf3b9d57}\index{rtc\_macros.h@{rtc\_macros.h}!RTC\_RS2@{RTC\_RS2}}
+\index{RTC\_RS2@{RTC\_RS2}!rtc\_macros.h@{rtc\_macros.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_RS2}{RTC\_RS2}}
+{\footnotesize\ttfamily \label{rtc__macros_8h_a54d2328341e35419ce7111c8cf3b9d57} 
+\#define RTC\+\_\+\+RS2~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(2)}
+
+\Hypertarget{rtc__macros_8h_a151a2d40d9019b24ebc14861bbd67551}\index{rtc\_macros.h@{rtc\_macros.h}!RTC\_RS3@{RTC\_RS3}}
+\index{RTC\_RS3@{RTC\_RS3}!rtc\_macros.h@{rtc\_macros.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_RS3}{RTC\_RS3}}
+{\footnotesize\ttfamily \label{rtc__macros_8h_a151a2d40d9019b24ebc14861bbd67551} 
+\#define RTC\+\_\+\+RS3~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(3)}
+
+\Hypertarget{rtc__macros_8h_a06d206b47a307e00e32e0a159af2b3ae}\index{rtc\_macros.h@{rtc\_macros.h}!RTC\_RS\_CLEAR@{RTC\_RS\_CLEAR}}
+\index{RTC\_RS\_CLEAR@{RTC\_RS\_CLEAR}!rtc\_macros.h@{rtc\_macros.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_RS\_CLEAR}{RTC\_RS\_CLEAR}}
+{\footnotesize\ttfamily \label{rtc__macros_8h_a06d206b47a307e00e32e0a159af2b3ae} 
+\#define RTC\+\_\+\+RS\+\_\+\+CLEAR~0xf0}
+
+\Hypertarget{rtc__macros_8h_a7c63615d9172c9065f5b9d1875ef6d04}\index{rtc\_macros.h@{rtc\_macros.h}!RTC\_UF@{RTC\_UF}}
+\index{RTC\_UF@{RTC\_UF}!rtc\_macros.h@{rtc\_macros.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_UF}{RTC\_UF}}
+{\footnotesize\ttfamily \label{rtc__macros_8h_a7c63615d9172c9065f5b9d1875ef6d04} 
+\#define RTC\+\_\+\+UF~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(4)}
+
+\Hypertarget{rtc__macros_8h_a3fa059415b73592c094cd9a3f79e6795}\index{rtc\_macros.h@{rtc\_macros.h}!RTC\_UIE@{RTC\_UIE}}
+\index{RTC\_UIE@{RTC\_UIE}!rtc\_macros.h@{rtc\_macros.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_UIE}{RTC\_UIE}}
+{\footnotesize\ttfamily \label{rtc__macros_8h_a3fa059415b73592c094cd9a3f79e6795} 
+\#define RTC\+\_\+\+UIE~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(4)}
+
+\Hypertarget{rtc__macros_8h_a2ebe3d816d8b2e9f1be075554e4135b3}\index{rtc\_macros.h@{rtc\_macros.h}!RTC\_UIP@{RTC\_UIP}}
+\index{RTC\_UIP@{RTC\_UIP}!rtc\_macros.h@{rtc\_macros.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_UIP}{RTC\_UIP}}
+{\footnotesize\ttfamily \label{rtc__macros_8h_a2ebe3d816d8b2e9f1be075554e4135b3} 
+\#define RTC\+\_\+\+UIP~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(7)}
+
+\Hypertarget{rtc__macros_8h_a48fcf4f2eeef6769d588168d4ac2ab0e}\index{rtc\_macros.h@{rtc\_macros.h}!SECONDS@{SECONDS}}
+\index{SECONDS@{SECONDS}!rtc\_macros.h@{rtc\_macros.h}}
+\doxysubsubsection{\texorpdfstring{SECONDS}{SECONDS}}
+{\footnotesize\ttfamily \label{rtc__macros_8h_a48fcf4f2eeef6769d588168d4ac2ab0e} 
+\#define SECONDS~0}
+
+\Hypertarget{rtc__macros_8h_a948810336971427a90fe29802fc23b65}\index{rtc\_macros.h@{rtc\_macros.h}!WEEK\_DAY@{WEEK\_DAY}}
+\index{WEEK\_DAY@{WEEK\_DAY}!rtc\_macros.h@{rtc\_macros.h}}
+\doxysubsubsection{\texorpdfstring{WEEK\_DAY}{WEEK\_DAY}}
+{\footnotesize\ttfamily \label{rtc__macros_8h_a948810336971427a90fe29802fc23b65} 
+\#define WEEK\+\_\+\+DAY~6}
+
+\Hypertarget{rtc__macros_8h_a5871356500f559add06ea81d60331b1b}\index{rtc\_macros.h@{rtc\_macros.h}!YEAR@{YEAR}}
+\index{YEAR@{YEAR}!rtc\_macros.h@{rtc\_macros.h}}
+\doxysubsubsection{\texorpdfstring{YEAR}{YEAR}}
+{\footnotesize\ttfamily \label{rtc__macros_8h_a5871356500f559add06ea81d60331b1b} 
+\#define YEAR~9}
+

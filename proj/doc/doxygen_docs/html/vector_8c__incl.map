@@ -1,0 +1,20 @@
+<map id="C:/Users/anton/Documents/lcom/labs/proj/src/utilities/vector.c" name="C:/Users/anton/Documents/lcom/labs/proj/src/utilities/vector.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,184,64"/>
+<area shape="rect" id="Node000002" href="$vector_8h.html" title=" " alt="" coords="104,112,170,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,63,127,97,122,99,106,65"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="22,187,82,213"/>
+<area shape="poly" id="edge10_Node000001_Node000003" title=" " alt="" coords="90,65,62,172,56,171,84,64"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="124,141,80,179,76,175,121,137"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="106,187,169,213"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="140,139,140,171,135,171,135,139"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="212,352,289,379"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="150,137,183,185,220,266,245,336,240,338,215,268,179,188,145,140"/>
+<area shape="rect" id="Node000006" href="$gui_drawer_8h.html" title=" " alt="" coords="244,187,385,213"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="169,137,271,178,269,183,167,142"/>
+<area shape="poly" id="edge9_Node000006_Node000005" title=" " alt="" coords="309,215,285,262,260,338,255,336,280,260,305,213"/>
+<area shape="rect" id="Node000007" href="$video_8h.html" title=" " alt="" coords="294,261,431,304"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="324,212,345,247,340,249,320,215"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="335,307,282,345,279,341,332,302"/>
+<area shape="rect" id="Node000008" href="$video__macros_8h.html" title=" " alt="" coords="314,352,425,379"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="367,304,370,336,364,337,362,305"/>
+</map>

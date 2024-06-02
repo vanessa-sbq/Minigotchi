@@ -1,0 +1,40 @@
+<map id="sprite_get_width" name="sprite_get_width">
+<area shape="rect" id="Node000001" title=" " alt="" coords="662,247,778,273"/>
+<area shape="rect" id="Node000002" href="$main_menu_controller_8c.html#a77b949dc6c1993f239190cbb43d16f18" title="Function that checks button collisions with the cursor." alt="" coords="453,5,589,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="709,233,696,194,676,149,648,102,613,62,589,47,591,42,616,58,653,99,680,146,701,192,714,231"/>
+<area shape="rect" id="Node000005" href="$main_room_controller_8c.html#ae54f2ae36bbe4d617ba02bea18557a57" title="Function that checks sprite collisions with the cursor." alt="" coords="452,72,590,115"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="702,235,665,181,641,153,613,129,590,116,592,111,616,124,644,149,669,178,706,232"/>
+<area shape="rect" id="Node000007" href="$minigame_menu_controller_8c.html#a0f6ed9fd5eafe1b80407bbe7e1486024" title="Function that checks sprite collisions with the cursor." alt="" coords="439,139,603,181"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="686,240,613,196,587,184,590,179,616,191,689,235"/>
+<area shape="rect" id="Node000009" href="$name_minigotchi_controller_8c.html#af61a868f7f09f575ec80e9dc41a0086d" title="Function that checks sprite collisions with the cursor." alt="" coords="438,205,605,248"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="647,250,605,243,606,238,647,245"/>
+<area shape="rect" id="Node000011" href="$rock_paper_scissors_controller_8c.html#af80e78ecc72e64503d10fa09577b87ab" title="Function that checks sprite collisions with the cursor." alt="" coords="428,272,614,315"/>
+<area shape="poly" id="edge13_Node000001_Node000011" title=" " alt="" coords="647,275,615,280,615,275,647,270"/>
+<area shape="rect" id="Node000013" href="$rock_paper_scissors_viewer_8c.html#a769d9078f52fcb28fa5c8d2831f44f04" title="Calls draw function of each element the rock paper scissors game contains (also draws the GUI element..." alt="" coords="169,325,373,352"/>
+<area shape="poly" id="edge16_Node000001_Node000013" title=" " alt="" coords="693,286,657,310,615,329,554,344,491,351,429,353,373,352,373,346,429,348,490,346,553,338,613,324,655,305,690,281"/>
+<area shape="rect" id="Node000014" href="$tic_tac_toe_controller_8c.html#ad3dacdd99744c3de3ce8fc3a326bca14" title="Function that checks sprite collisions with the cursor." alt="" coords="431,389,611,432"/>
+<area shape="poly" id="edge18_Node000001_Node000014" title=" " alt="" coords="701,288,664,330,616,373,584,391,581,387,613,368,660,327,697,284"/>
+<area shape="rect" id="Node000016" href="$tic_tac_toe_viewer_8c.html#a39c6c3190f03216408e3ec97bb7aac9e" title="Calls draw function of each element the tic tac toe game contains (also draws the GUI elements when t..." alt="" coords="446,456,596,483"/>
+<area shape="poly" id="edge21_Node000001_Node000016" title=" " alt="" coords="713,289,699,325,679,367,652,410,616,446,596,458,594,453,613,442,647,407,675,365,695,323,708,287"/>
+<area shape="rect" id="Node000003" href="$main_menu_controller_8c.html#af10a3dc70892e363d03903f7671c5895" title="Controller function that is called once every frame and updates / checks every action in the main men..." alt="" coords="187,28,355,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="438,34,356,39,355,34,438,29"/>
+<area shape="rect" id="Node000004" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Project main function that starts the game." alt="" coords="5,247,114,273"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="197,63,163,83,127,124,99,170,79,214,67,247,62,245,74,212,94,168,123,121,160,79,194,59"/>
+<area shape="rect" id="Node000006" href="$main_room_controller_8c.html#ac448f52b9ec47f6aa868245cb08a5a19" title="Controller function that is called once every frame and updates / checks every action in the main roo..." alt="" coords="186,93,356,120"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="436,100,357,105,356,99,436,95"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="201,128,163,148,134,172,108,199,72,248,67,245,104,196,130,168,160,143,199,123"/>
+<area shape="rect" id="Node000008" href="$minigame_menu_controller_8c.html#add0cc9d8c1e1ca3cf9be2a7bbe12e4f5" title="Controller function that is called once every frame and updates / checks every action in the minigame..." alt="" coords="173,157,369,184"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="423,167,370,169,369,164,423,161"/>
+<area shape="poly" id="edge9_Node000008_Node000004" title=" " alt="" coords="206,192,163,208,85,249,82,244,161,203,204,187"/>
+<area shape="rect" id="Node000010" href="$name_minigotchi_controller_8c.html#aa9284c2a1e15db8d817dafc4fb7f8bf9" title="Controller function that is called once every frame and updates / checks every action in the minigotc..." alt="" coords="171,217,371,244"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="422,231,371,232,371,226,422,226"/>
+<area shape="poly" id="edge12_Node000010_Node000004" title=" " alt="" coords="156,249,114,255,114,250,155,244"/>
+<area shape="rect" id="Node000012" href="$rock_paper_scissors_controller_8c.html#a339536fe7855348648d6a841feb4c332" title="Controller function that is called once every frame and updates / checks every action in the Rock Pap..." alt="" coords="162,272,380,299"/>
+<area shape="poly" id="edge14_Node000011_Node000012" title=" " alt="" coords="413,293,380,291,380,286,413,287"/>
+<area shape="poly" id="edge15_Node000012_Node000004" title=" " alt="" coords="146,273,114,269,114,264,147,268"/>
+<area shape="poly" id="edge17_Node000013_Node000004" title=" " alt="" coords="191,323,161,313,84,276,86,272,163,308,193,318"/>
+<area shape="rect" id="Node000015" href="$tic_tac_toe_controller_8c.html#aae4bafbe082fa7f4bad0e58d11e6d861" title="Controller function that is called once every frame and updates / checks every action in the Tic Tac ..." alt="" coords="189,381,353,408"/>
+<area shape="poly" id="edge19_Node000014_Node000015" title=" " alt="" coords="415,407,353,403,354,397,416,401"/>
+<area shape="poly" id="edge20_Node000015_Node000004" title=" " alt="" coords="185,378,160,366,131,345,105,320,68,275,72,272,109,316,134,341,163,362,187,373"/>
+<area shape="poly" id="edge22_Node000016_Node000004" title=" " alt="" coords="430,480,367,479,297,471,226,454,192,440,160,422,140,407,122,388,94,347,74,306,62,274,67,273,79,304,99,344,127,385,144,403,163,418,194,435,227,449,298,466,367,474,430,474"/>
+</map>

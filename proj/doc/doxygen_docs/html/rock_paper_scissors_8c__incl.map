@@ -1,0 +1,24 @@
+<map id="C:/Users/anton/Documents/lcom/labs/proj/src/model/stateModels/rockPaperScissors.c" name="C:/Users/anton/Documents/lcom/labs/proj/src/model/stateModels/rockPaperScissors.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,227,64"/>
+<area shape="rect" id="Node000002" href="$rock_paper_scissors_8h.html" title=" " alt="" coords="45,112,187,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,64,119,96,113,96,113,64"/>
+<area shape="rect" id="Node000003" href="$gui_drawer_8h.html" title=" " alt="" coords="53,261,206,288"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="81,142,53,155,28,171,14,191,13,201,17,212,39,236,68,253,65,257,36,240,12,215,8,202,9,189,24,167,50,150,79,137"/>
+<area shape="rect" id="Node000007" href="$button_8h.html" title=" " alt="" coords="224,187,304,213"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="143,137,226,177,223,182,141,142"/>
+<area shape="rect" id="Node000008" href="$cursor_8h.html" title=" " alt="" coords="27,187,107,213"/>
+<area shape="poly" id="edge10_Node000002_Node000008" title=" " alt="" coords="110,141,86,175,82,172,105,138"/>
+<area shape="rect" id="Node000009" href="$item_8h.html" title=" " alt="" coords="131,187,200,213"/>
+<area shape="poly" id="edge12_Node000002_Node000009" title=" " alt="" coords="127,138,150,172,146,175,122,141"/>
+<area shape="rect" id="Node000004" href="$video_8h.html" title=" " alt="" coords="40,336,176,379"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="129,289,120,322,115,321,123,288"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="181,427,259,453"/>
+<area shape="poly" id="edge6_Node000003_Node000005" title=" " alt="" coords="147,286,169,307,190,335,208,374,218,411,213,413,203,376,186,337,165,311,143,290"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="138,377,192,415,189,420,135,381"/>
+<area shape="rect" id="Node000006" href="$video__macros_8h.html" title=" " alt="" coords="46,427,157,453"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="109,379,106,411,101,411,104,379"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="242,216,168,256,165,251,239,212"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="264,214,228,412,222,411,259,213"/>
+<area shape="poly" id="edge11_Node000008_Node000003" title=" " alt="" coords="80,212,111,248,107,251,76,216"/>
+<area shape="poly" id="edge13_Node000009_Node000003" title=" " alt="" coords="161,215,145,248,140,246,157,213"/>
+</map>

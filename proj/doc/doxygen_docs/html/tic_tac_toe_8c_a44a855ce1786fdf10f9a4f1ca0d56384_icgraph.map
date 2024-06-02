@@ -1,0 +1,15 @@
+<map id="ticTacToe_get_cursor" name="ticTacToe_get_cursor">
+<area shape="rect" id="Node000001" title=" " alt="" coords="819,97,964,124"/>
+<area shape="rect" id="Node000002" href="$tic_tac_toe_controller_8c.html#a82d75fd8d234e1f0f92d15aedd0b63de" title="Function that checks collisions with the cursor." alt="" coords="602,72,771,99"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="803,102,771,98,772,93,803,97"/>
+<area shape="rect" id="Node000006" href="$tic_tac_toe_viewer_8c.html#a39c6c3190f03216408e3ec97bb7aac9e" title="Calls draw function of each element the tic tac toe game contains (also draws the GUI elements when t..." alt="" coords="389,123,539,149"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="804,118,540,134,540,129,803,113"/>
+<area shape="rect" id="Node000003" href="$tic_tac_toe_controller_8c.html#ad3dacdd99744c3de3ce8fc3a326bca14" title="Function that checks sprite collisions with the cursor." alt="" coords="374,5,554,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="618,70,547,51,548,46,620,65"/>
+<area shape="rect" id="Node000004" href="$tic_tac_toe_controller_8c.html#aae4bafbe082fa7f4bad0e58d11e6d861" title="Controller function that is called once every frame and updates / checks every action in the Tic Tac ..." alt="" coords="162,72,326,99"/>
+<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="587,88,327,88,327,83,587,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="368,55,297,74,296,69,367,50"/>
+<area shape="rect" id="Node000005" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Project main function that starts the game." alt="" coords="5,97,114,124"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="146,101,114,106,114,101,146,96"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="374,133,114,117,114,111,374,128"/>
+</map>

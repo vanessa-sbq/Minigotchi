@@ -1,0 +1,332 @@
+\doxysection{C\+:/\+Users/anton/\+Documents/lcom/labs/proj/src/player\+\_\+data/database.c File Reference}
+\hypertarget{database_8c}{}\label{database_8c}\index{C:/Users/anton/Documents/lcom/labs/proj/src/player\_data/database.c@{C:/Users/anton/Documents/lcom/labs/proj/src/player\_data/database.c}}
+{\ttfamily \#include "{}database.\+h"{}}\newline
+Include dependency graph for database.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{database_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_database}{Database}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{database_8c_a6485ea5a811185f7f84ec62efa72f45e}{get\+Database}} ()
+\item 
+void \mbox{\hyperlink{database_8c_a5ff42ebfdfc8c32675358c3be04bca01}{set\+Database}} (\mbox{\hyperlink{struct_database}{Database}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_room_controller_8c_a46412799b92880e8b22508d832becca0}{database}})
+\item 
+\mbox{\hyperlink{struct_database}{Database}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{database_8c_ac4227a4f10cf05cbaab4a47911d5de92}{new\+\_\+database}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new database "{}object"{} and returns a pointer to it. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{database_8c_a36c67190cba777bc01fa5b52bf8235c1}{database\+\_\+load\+\_\+from\+\_\+file}} (\mbox{\hyperlink{struct_database}{Database}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_room_controller_8c_a46412799b92880e8b22508d832becca0}{database}})
+\begin{DoxyCompactList}\small\item\em Loads the player data from the save file specified in file\+Path. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{database_8c_a1e5d9bbc60f09f3e323fa87f38d5ad31}{database\+\_\+save\+\_\+to\+\_\+file}} (\mbox{\hyperlink{struct_database}{Database}} \texorpdfstring{$\ast$}{*}db)
+\begin{DoxyCompactList}\small\item\em Write the player data to the file to resume from where he started, the next time he opens the game. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{database_8c_a018987c27a3a712e205096869c3569bb}{database\+\_\+check\+\_\+file\+\_\+exists}} ()
+\begin{DoxyCompactList}\small\item\em Check if the player data file already exists. Creates the save file in case it doesn\textquotesingle{}t exist. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{database_8c_a03e07297c05a6475319536d56132ae41}{database\+\_\+delete\+\_\+file}} ()
+\begin{DoxyCompactList}\small\item\em Deletes the player save state (in case new game creation is cancelled) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{database_8c_a9378e9d8d5fcd0c53ade29ecec8db06f}{database\+\_\+get\+\_\+hunger}} (\mbox{\hyperlink{struct_database}{Database}} \texorpdfstring{$\ast$}{*}db)
+\item 
+int \mbox{\hyperlink{database_8c_a09983526f6dc57991363f117c33bda9e}{database\+\_\+get\+\_\+happiness}} (\mbox{\hyperlink{struct_database}{Database}} \texorpdfstring{$\ast$}{*}db)
+\item 
+int \mbox{\hyperlink{database_8c_a73878bb15e064d1b827cb93344251425}{database\+\_\+get\+\_\+coins}} (\mbox{\hyperlink{struct_database}{Database}} \texorpdfstring{$\ast$}{*}db)
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{database_8c_ac8bdf3a9b02dfcef1dbb12ff1d3b8fdc}{database\+\_\+get\+\_\+minigotchi\+Name}} (\mbox{\hyperlink{struct_database}{Database}} \texorpdfstring{$\ast$}{*}db)
+\item 
+int \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{database_8c_aeb6729771f8fd9bd74972cfba795bf19}{database\+\_\+get\+\_\+food\+Array}} (\mbox{\hyperlink{struct_database}{Database}} \texorpdfstring{$\ast$}{*}db)
+\item 
+void \mbox{\hyperlink{database_8c_af480e71322439668f369caeeec1630da}{database\+\_\+set\+\_\+food\+Array}} (\mbox{\hyperlink{struct_database}{Database}} \texorpdfstring{$\ast$}{*}db, int \texorpdfstring{$\ast$}{*}food\+\_\+array)
+\item 
+void \mbox{\hyperlink{database_8c_ac831fb83ab85592f1f807b84ff826106}{database\+\_\+set\+\_\+hunger}} (\mbox{\hyperlink{struct_database}{Database}} \texorpdfstring{$\ast$}{*}db, int value)
+\item 
+void \mbox{\hyperlink{database_8c_ab0d9c4029a699bf1fbcd5b19481de249}{database\+\_\+set\+\_\+happiness}} (\mbox{\hyperlink{struct_database}{Database}} \texorpdfstring{$\ast$}{*}db, int value)
+\item 
+void \mbox{\hyperlink{database_8c_a7db9fff328c043df965b1822fafe2974}{database\+\_\+set\+\_\+coins}} (\mbox{\hyperlink{struct_database}{Database}} \texorpdfstring{$\ast$}{*}db, int value)
+\item 
+void \mbox{\hyperlink{database_8c_a2ad82ff57e073548dc2f20f2b4750dfc}{database\+\_\+set\+\_\+minigotchi\+Name}} (\mbox{\hyperlink{struct_database}{Database}} \texorpdfstring{$\ast$}{*}db, char \texorpdfstring{$\ast$}{*}value)
+\item 
+void \mbox{\hyperlink{database_8c_aea37077832daba63c2360fe6732d0af2}{database\+\_\+add\+\_\+food\+\_\+to\+\_\+array}} (\mbox{\hyperlink{struct_database}{Database}} \texorpdfstring{$\ast$}{*}db, int food\+\_\+item)
+\begin{DoxyCompactList}\small\item\em Searches for an empty slot on the hotbar and in case the hotbar is full doesn\textquotesingle{}t add it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{database_8c_a47db48370a4060e89aea7976d4ae7907}{file\+Path}} = "{}/usr/save.\+txt"{}
+\item 
+static \mbox{\hyperlink{struct_database}{Database}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{database_8c_a2389d8a3d8e17db0f48ed9ab3194a2f6}{\+\_\+database}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{database_8c_aea37077832daba63c2360fe6732d0af2}\index{database.c@{database.c}!database\_add\_food\_to\_array@{database\_add\_food\_to\_array}}
+\index{database\_add\_food\_to\_array@{database\_add\_food\_to\_array}!database.c@{database.c}}
+\doxysubsubsection{\texorpdfstring{database\_add\_food\_to\_array()}{database\_add\_food\_to\_array()}}
+{\footnotesize\ttfamily \label{database_8c_aea37077832daba63c2360fe6732d0af2} 
+void database\+\_\+add\+\_\+food\+\_\+to\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_database}{Database}} \texorpdfstring{$\ast$}{*}}]{db}{, }\item[{int}]{food\+\_\+item}{}\end{DoxyParamCaption})}
+
+
+
+Searches for an empty slot on the hotbar and in case the hotbar is full doesn\textquotesingle{}t add it. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{database_8c_aea37077832daba63c2360fe6732d0af2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{database_8c_a018987c27a3a712e205096869c3569bb}\index{database.c@{database.c}!database\_check\_file\_exists@{database\_check\_file\_exists}}
+\index{database\_check\_file\_exists@{database\_check\_file\_exists}!database.c@{database.c}}
+\doxysubsubsection{\texorpdfstring{database\_check\_file\_exists()}{database\_check\_file\_exists()}}
+{\footnotesize\ttfamily \label{database_8c_a018987c27a3a712e205096869c3569bb} 
+bool database\+\_\+check\+\_\+file\+\_\+exists (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Check if the player data file already exists. Creates the save file in case it doesn\textquotesingle{}t exist. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{database_8c_a018987c27a3a712e205096869c3569bb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{database_8c_a03e07297c05a6475319536d56132ae41}\index{database.c@{database.c}!database\_delete\_file@{database\_delete\_file}}
+\index{database\_delete\_file@{database\_delete\_file}!database.c@{database.c}}
+\doxysubsubsection{\texorpdfstring{database\_delete\_file()}{database\_delete\_file()}}
+{\footnotesize\ttfamily \label{database_8c_a03e07297c05a6475319536d56132ae41} 
+int database\+\_\+delete\+\_\+file (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Deletes the player save state (in case new game creation is cancelled) 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{database_8c_a03e07297c05a6475319536d56132ae41_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{database_8c_a73878bb15e064d1b827cb93344251425}\index{database.c@{database.c}!database\_get\_coins@{database\_get\_coins}}
+\index{database\_get\_coins@{database\_get\_coins}!database.c@{database.c}}
+\doxysubsubsection{\texorpdfstring{database\_get\_coins()}{database\_get\_coins()}}
+{\footnotesize\ttfamily \label{database_8c_a73878bb15e064d1b827cb93344251425} 
+int database\+\_\+get\+\_\+coins (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_database}{Database}} \texorpdfstring{$\ast$}{*}}]{db}{}\end{DoxyParamCaption})}
+
+\Hypertarget{database_8c_aeb6729771f8fd9bd74972cfba795bf19}\index{database.c@{database.c}!database\_get\_foodArray@{database\_get\_foodArray}}
+\index{database\_get\_foodArray@{database\_get\_foodArray}!database.c@{database.c}}
+\doxysubsubsection{\texorpdfstring{database\_get\_foodArray()}{database\_get\_foodArray()}}
+{\footnotesize\ttfamily \label{database_8c_aeb6729771f8fd9bd74972cfba795bf19} 
+int \texorpdfstring{$\ast$}{*} database\+\_\+get\+\_\+food\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_database}{Database}} \texorpdfstring{$\ast$}{*}}]{db}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{database_8c_aeb6729771f8fd9bd74972cfba795bf19_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{database_8c_a09983526f6dc57991363f117c33bda9e}\index{database.c@{database.c}!database\_get\_happiness@{database\_get\_happiness}}
+\index{database\_get\_happiness@{database\_get\_happiness}!database.c@{database.c}}
+\doxysubsubsection{\texorpdfstring{database\_get\_happiness()}{database\_get\_happiness()}}
+{\footnotesize\ttfamily \label{database_8c_a09983526f6dc57991363f117c33bda9e} 
+int database\+\_\+get\+\_\+happiness (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_database}{Database}} \texorpdfstring{$\ast$}{*}}]{db}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{database_8c_a09983526f6dc57991363f117c33bda9e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{database_8c_a9378e9d8d5fcd0c53ade29ecec8db06f}\index{database.c@{database.c}!database\_get\_hunger@{database\_get\_hunger}}
+\index{database\_get\_hunger@{database\_get\_hunger}!database.c@{database.c}}
+\doxysubsubsection{\texorpdfstring{database\_get\_hunger()}{database\_get\_hunger()}}
+{\footnotesize\ttfamily \label{database_8c_a9378e9d8d5fcd0c53ade29ecec8db06f} 
+int database\+\_\+get\+\_\+hunger (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_database}{Database}} \texorpdfstring{$\ast$}{*}}]{db}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{database_8c_a9378e9d8d5fcd0c53ade29ecec8db06f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{database_8c_ac8bdf3a9b02dfcef1dbb12ff1d3b8fdc}\index{database.c@{database.c}!database\_get\_minigotchiName@{database\_get\_minigotchiName}}
+\index{database\_get\_minigotchiName@{database\_get\_minigotchiName}!database.c@{database.c}}
+\doxysubsubsection{\texorpdfstring{database\_get\_minigotchiName()}{database\_get\_minigotchiName()}}
+{\footnotesize\ttfamily \label{database_8c_ac8bdf3a9b02dfcef1dbb12ff1d3b8fdc} 
+char \texorpdfstring{$\ast$}{*} database\+\_\+get\+\_\+minigotchi\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_database}{Database}} \texorpdfstring{$\ast$}{*}}]{db}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{database_8c_ac8bdf3a9b02dfcef1dbb12ff1d3b8fdc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{database_8c_a36c67190cba777bc01fa5b52bf8235c1}\index{database.c@{database.c}!database\_load\_from\_file@{database\_load\_from\_file}}
+\index{database\_load\_from\_file@{database\_load\_from\_file}!database.c@{database.c}}
+\doxysubsubsection{\texorpdfstring{database\_load\_from\_file()}{database\_load\_from\_file()}}
+{\footnotesize\ttfamily \label{database_8c_a36c67190cba777bc01fa5b52bf8235c1} 
+int database\+\_\+load\+\_\+from\+\_\+file (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_database}{Database}} \texorpdfstring{$\ast$}{*}}]{database}{}\end{DoxyParamCaption})}
+
+
+
+Loads the player data from the save file specified in file\+Path. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{database_8c_a36c67190cba777bc01fa5b52bf8235c1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{database_8c_a36c67190cba777bc01fa5b52bf8235c1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{database_8c_a1e5d9bbc60f09f3e323fa87f38d5ad31}\index{database.c@{database.c}!database\_save\_to\_file@{database\_save\_to\_file}}
+\index{database\_save\_to\_file@{database\_save\_to\_file}!database.c@{database.c}}
+\doxysubsubsection{\texorpdfstring{database\_save\_to\_file()}{database\_save\_to\_file()}}
+{\footnotesize\ttfamily \label{database_8c_a1e5d9bbc60f09f3e323fa87f38d5ad31} 
+int database\+\_\+save\+\_\+to\+\_\+file (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_database}{Database}} \texorpdfstring{$\ast$}{*}}]{db}{}\end{DoxyParamCaption})}
+
+
+
+Write the player data to the file to resume from where he started, the next time he opens the game. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{database_8c_a1e5d9bbc60f09f3e323fa87f38d5ad31_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{database_8c_a7db9fff328c043df965b1822fafe2974}\index{database.c@{database.c}!database\_set\_coins@{database\_set\_coins}}
+\index{database\_set\_coins@{database\_set\_coins}!database.c@{database.c}}
+\doxysubsubsection{\texorpdfstring{database\_set\_coins()}{database\_set\_coins()}}
+{\footnotesize\ttfamily \label{database_8c_a7db9fff328c043df965b1822fafe2974} 
+void database\+\_\+set\+\_\+coins (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_database}{Database}} \texorpdfstring{$\ast$}{*}}]{db}{, }\item[{int}]{value}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{database_8c_a7db9fff328c043df965b1822fafe2974_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{database_8c_af480e71322439668f369caeeec1630da}\index{database.c@{database.c}!database\_set\_foodArray@{database\_set\_foodArray}}
+\index{database\_set\_foodArray@{database\_set\_foodArray}!database.c@{database.c}}
+\doxysubsubsection{\texorpdfstring{database\_set\_foodArray()}{database\_set\_foodArray()}}
+{\footnotesize\ttfamily \label{database_8c_af480e71322439668f369caeeec1630da} 
+void database\+\_\+set\+\_\+food\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_database}{Database}} \texorpdfstring{$\ast$}{*}}]{db}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{food\+\_\+array}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{database_8c_af480e71322439668f369caeeec1630da_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{database_8c_ab0d9c4029a699bf1fbcd5b19481de249}\index{database.c@{database.c}!database\_set\_happiness@{database\_set\_happiness}}
+\index{database\_set\_happiness@{database\_set\_happiness}!database.c@{database.c}}
+\doxysubsubsection{\texorpdfstring{database\_set\_happiness()}{database\_set\_happiness()}}
+{\footnotesize\ttfamily \label{database_8c_ab0d9c4029a699bf1fbcd5b19481de249} 
+void database\+\_\+set\+\_\+happiness (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_database}{Database}} \texorpdfstring{$\ast$}{*}}]{db}{, }\item[{int}]{value}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{database_8c_ab0d9c4029a699bf1fbcd5b19481de249_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{database_8c_ac831fb83ab85592f1f807b84ff826106}\index{database.c@{database.c}!database\_set\_hunger@{database\_set\_hunger}}
+\index{database\_set\_hunger@{database\_set\_hunger}!database.c@{database.c}}
+\doxysubsubsection{\texorpdfstring{database\_set\_hunger()}{database\_set\_hunger()}}
+{\footnotesize\ttfamily \label{database_8c_ac831fb83ab85592f1f807b84ff826106} 
+void database\+\_\+set\+\_\+hunger (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_database}{Database}} \texorpdfstring{$\ast$}{*}}]{db}{, }\item[{int}]{value}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{database_8c_ac831fb83ab85592f1f807b84ff826106_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{database_8c_a2ad82ff57e073548dc2f20f2b4750dfc}\index{database.c@{database.c}!database\_set\_minigotchiName@{database\_set\_minigotchiName}}
+\index{database\_set\_minigotchiName@{database\_set\_minigotchiName}!database.c@{database.c}}
+\doxysubsubsection{\texorpdfstring{database\_set\_minigotchiName()}{database\_set\_minigotchiName()}}
+{\footnotesize\ttfamily \label{database_8c_a2ad82ff57e073548dc2f20f2b4750dfc} 
+void database\+\_\+set\+\_\+minigotchi\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_database}{Database}} \texorpdfstring{$\ast$}{*}}]{db}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{value}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{database_8c_a2ad82ff57e073548dc2f20f2b4750dfc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{database_8c_a6485ea5a811185f7f84ec62efa72f45e}\index{database.c@{database.c}!getDatabase@{getDatabase}}
+\index{getDatabase@{getDatabase}!database.c@{database.c}}
+\doxysubsubsection{\texorpdfstring{getDatabase()}{getDatabase()}}
+{\footnotesize\ttfamily \label{database_8c_a6485ea5a811185f7f84ec62efa72f45e} 
+\mbox{\hyperlink{struct_database}{Database}} \texorpdfstring{$\ast$}{*} get\+Database (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{database_8c_a6485ea5a811185f7f84ec62efa72f45e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{database_8c_ac4227a4f10cf05cbaab4a47911d5de92}\index{database.c@{database.c}!new\_database@{new\_database}}
+\index{new\_database@{new\_database}!database.c@{database.c}}
+\doxysubsubsection{\texorpdfstring{new\_database()}{new\_database()}}
+{\footnotesize\ttfamily \label{database_8c_ac4227a4f10cf05cbaab4a47911d5de92} 
+\mbox{\hyperlink{struct_database}{Database}} \texorpdfstring{$\ast$}{*} new\+\_\+database (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new database "{}object"{} and returns a pointer to it. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{database_8c_ac4227a4f10cf05cbaab4a47911d5de92_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{database_8c_a5ff42ebfdfc8c32675358c3be04bca01}\index{database.c@{database.c}!setDatabase@{setDatabase}}
+\index{setDatabase@{setDatabase}!database.c@{database.c}}
+\doxysubsubsection{\texorpdfstring{setDatabase()}{setDatabase()}}
+{\footnotesize\ttfamily \label{database_8c_a5ff42ebfdfc8c32675358c3be04bca01} 
+void set\+Database (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_database}{Database}} \texorpdfstring{$\ast$}{*}}]{database}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{database_8c_a5ff42ebfdfc8c32675358c3be04bca01_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{database_8c_a2389d8a3d8e17db0f48ed9ab3194a2f6}\index{database.c@{database.c}!\_database@{\_database}}
+\index{\_database@{\_database}!database.c@{database.c}}
+\doxysubsubsection{\texorpdfstring{\_database}{\_database}}
+{\footnotesize\ttfamily \label{database_8c_a2389d8a3d8e17db0f48ed9ab3194a2f6} 
+\mbox{\hyperlink{struct_database}{Database}}\texorpdfstring{$\ast$}{*} \+\_\+database\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{database_8c_a47db48370a4060e89aea7976d4ae7907}\index{database.c@{database.c}!filePath@{filePath}}
+\index{filePath@{filePath}!database.c@{database.c}}
+\doxysubsubsection{\texorpdfstring{filePath}{filePath}}
+{\footnotesize\ttfamily \label{database_8c_a47db48370a4060e89aea7976d4ae7907} 
+const char\texorpdfstring{$\ast$}{*} file\+Path = "{}/usr/save.\+txt"{}}
+

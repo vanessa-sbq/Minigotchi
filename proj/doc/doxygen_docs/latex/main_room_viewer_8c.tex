@@ -1,0 +1,132 @@
+\doxysection{C\+:/\+Users/anton/\+Documents/lcom/labs/proj/src/viewer/menus/main\+Room\+Viewer.c File Reference}
+\hypertarget{main_room_viewer_8c}{}\label{main_room_viewer_8c}\index{C:/Users/anton/Documents/lcom/labs/proj/src/viewer/menus/mainRoomViewer.c@{C:/Users/anton/Documents/lcom/labs/proj/src/viewer/menus/mainRoomViewer.c}}
+{\ttfamily \#include "{}main\+Room\+Viewer.\+h"{}}\newline
+Include dependency graph for main\+Room\+Viewer.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_room_viewer_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_room_viewer_8c_a4f21e1c87fd5a20e4c2399fe7a38be58}{set\+RTCWindow}} (\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}window)
+\item 
+void \mbox{\hyperlink{main_room_viewer_8c_ad43383d3680e772b331de5b39852f401}{main\+Room\+Viewer\+\_\+set\+Main\+Room}} (\mbox{\hyperlink{struct_main_room}{Main\+Room}} \texorpdfstring{$\ast$}{*}mr)
+\item 
+\mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{main_room_viewer_8c_aea817d878bd6e07396463adaf5768762}{get\+Sprite\+Vector}} ()
+\item 
+void \mbox{\hyperlink{main_room_viewer_8c_a3bf7663a7ca941f4db23ed4e74fe7953}{set\+Sprite\+Vector}} (\mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*}vec)
+\item 
+void \mbox{\hyperlink{main_room_viewer_8c_ab712f0c477c358dac8015032c3aa3b72}{main\+Room\+Viewer\+\_\+draw}} ()
+\begin{DoxyCompactList}\small\item\em Calls draw function of each element the main room contains. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_main_room}{Main\+Room}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{main_room_viewer_8c_ae54a9d3b04b91328440afb537dc858e1}{main\+Room}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{main_room_viewer_8c_abe6b2e91abf95a06a16b7c372335081c}{current\+Window}}
+\item 
+static \mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{main_room_viewer_8c_a5b9463b8cab1d217ae7565143c1562ea}{\+\_\+sprite\+Vector}} = NULL
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_room_viewer_8c_aea817d878bd6e07396463adaf5768762}\index{mainRoomViewer.c@{mainRoomViewer.c}!getSpriteVector@{getSpriteVector}}
+\index{getSpriteVector@{getSpriteVector}!mainRoomViewer.c@{mainRoomViewer.c}}
+\doxysubsubsection{\texorpdfstring{getSpriteVector()}{getSpriteVector()}}
+{\footnotesize\ttfamily \label{main_room_viewer_8c_aea817d878bd6e07396463adaf5768762} 
+\mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*} get\+Sprite\+Vector (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_room_viewer_8c_aea817d878bd6e07396463adaf5768762_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_room_viewer_8c_ab712f0c477c358dac8015032c3aa3b72}\index{mainRoomViewer.c@{mainRoomViewer.c}!mainRoomViewer\_draw@{mainRoomViewer\_draw}}
+\index{mainRoomViewer\_draw@{mainRoomViewer\_draw}!mainRoomViewer.c@{mainRoomViewer.c}}
+\doxysubsubsection{\texorpdfstring{mainRoomViewer\_draw()}{mainRoomViewer\_draw()}}
+{\footnotesize\ttfamily \label{main_room_viewer_8c_ab712f0c477c358dac8015032c3aa3b72} 
+void main\+Room\+Viewer\+\_\+draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Calls draw function of each element the main room contains. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_room_viewer_8c_ab712f0c477c358dac8015032c3aa3b72_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{main_room_viewer_8c_ab712f0c477c358dac8015032c3aa3b72_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_room_viewer_8c_ad43383d3680e772b331de5b39852f401}\index{mainRoomViewer.c@{mainRoomViewer.c}!mainRoomViewer\_setMainRoom@{mainRoomViewer\_setMainRoom}}
+\index{mainRoomViewer\_setMainRoom@{mainRoomViewer\_setMainRoom}!mainRoomViewer.c@{mainRoomViewer.c}}
+\doxysubsubsection{\texorpdfstring{mainRoomViewer\_setMainRoom()}{mainRoomViewer\_setMainRoom()}}
+{\footnotesize\ttfamily \label{main_room_viewer_8c_ad43383d3680e772b331de5b39852f401} 
+void main\+Room\+Viewer\+\_\+set\+Main\+Room (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_main_room}{Main\+Room}} \texorpdfstring{$\ast$}{*}}]{mr}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_room_viewer_8c_ad43383d3680e772b331de5b39852f401_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_room_viewer_8c_a4f21e1c87fd5a20e4c2399fe7a38be58}\index{mainRoomViewer.c@{mainRoomViewer.c}!setRTCWindow@{setRTCWindow}}
+\index{setRTCWindow@{setRTCWindow}!mainRoomViewer.c@{mainRoomViewer.c}}
+\doxysubsubsection{\texorpdfstring{setRTCWindow()}{setRTCWindow()}}
+{\footnotesize\ttfamily \label{main_room_viewer_8c_a4f21e1c87fd5a20e4c2399fe7a38be58} 
+void set\+RTCWindow (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}}]{window}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{main_room_viewer_8c_a4f21e1c87fd5a20e4c2399fe7a38be58_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_room_viewer_8c_a3bf7663a7ca941f4db23ed4e74fe7953}\index{mainRoomViewer.c@{mainRoomViewer.c}!setSpriteVector@{setSpriteVector}}
+\index{setSpriteVector@{setSpriteVector}!mainRoomViewer.c@{mainRoomViewer.c}}
+\doxysubsubsection{\texorpdfstring{setSpriteVector()}{setSpriteVector()}}
+{\footnotesize\ttfamily \label{main_room_viewer_8c_a3bf7663a7ca941f4db23ed4e74fe7953} 
+void set\+Sprite\+Vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*}}]{vec}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_room_viewer_8c_a3bf7663a7ca941f4db23ed4e74fe7953_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{main_room_viewer_8c_a5b9463b8cab1d217ae7565143c1562ea}\index{mainRoomViewer.c@{mainRoomViewer.c}!\_spriteVector@{\_spriteVector}}
+\index{\_spriteVector@{\_spriteVector}!mainRoomViewer.c@{mainRoomViewer.c}}
+\doxysubsubsection{\texorpdfstring{\_spriteVector}{\_spriteVector}}
+{\footnotesize\ttfamily \label{main_room_viewer_8c_a5b9463b8cab1d217ae7565143c1562ea} 
+\mbox{\hyperlink{struct_vector}{Vector}}\texorpdfstring{$\ast$}{*} \+\_\+sprite\+Vector = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{main_room_viewer_8c_abe6b2e91abf95a06a16b7c372335081c}\index{mainRoomViewer.c@{mainRoomViewer.c}!currentWindow@{currentWindow}}
+\index{currentWindow@{currentWindow}!mainRoomViewer.c@{mainRoomViewer.c}}
+\doxysubsubsection{\texorpdfstring{currentWindow}{currentWindow}}
+{\footnotesize\ttfamily \label{main_room_viewer_8c_abe6b2e91abf95a06a16b7c372335081c} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} current\+Window\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{main_room_viewer_8c_ae54a9d3b04b91328440afb537dc858e1}\index{mainRoomViewer.c@{mainRoomViewer.c}!mainRoom@{mainRoom}}
+\index{mainRoom@{mainRoom}!mainRoomViewer.c@{mainRoomViewer.c}}
+\doxysubsubsection{\texorpdfstring{mainRoom}{mainRoom}}
+{\footnotesize\ttfamily \label{main_room_viewer_8c_ae54a9d3b04b91328440afb537dc858e1} 
+\mbox{\hyperlink{struct_main_room}{Main\+Room}}\texorpdfstring{$\ast$}{*} main\+Room\hspace{0.3cm}{\ttfamily [static]}}
+

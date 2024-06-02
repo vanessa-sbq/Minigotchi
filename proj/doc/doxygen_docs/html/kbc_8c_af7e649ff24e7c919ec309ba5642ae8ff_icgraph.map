@@ -1,0 +1,12 @@
+<map id="readFromOutputBuffer" name="readFromOutputBuffer">
+<area shape="rect" id="Node000001" title="Reads KBC output buffer." alt="" coords="358,56,506,83"/>
+<area shape="rect" id="Node000002" href="$kbc_8c.html#aec3b951828f35c691abedab58fabe04c" title="Enables Keyboard interrupts." alt="" coords="162,5,310,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="362,54,290,35,291,30,363,49"/>
+<area shape="rect" id="Node000003" href="$keyboard_8c.html#ab9e6ed7960d60aa4834f2038247d4536" title="Keyboard interrupt handler, reads the scancode from the output buffer upon an interrupt." alt="" coords="206,56,266,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="342,72,266,72,266,67,342,67"/>
+<area shape="rect" id="Node000005" href="$mouse_8c.html#a834b6d7efe311484d6da234db333cb97" title="Mouse interrupt handler, reads the output buffer upon an interrupt." alt="" coords="197,107,275,133"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="364,90,276,113,274,108,362,85"/>
+<area shape="rect" id="Node000004" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Project main function that starts the game." alt="" coords="5,81,114,108"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="191,78,115,90,114,84,190,73"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="182,115,114,105,115,100,182,110"/>
+</map>

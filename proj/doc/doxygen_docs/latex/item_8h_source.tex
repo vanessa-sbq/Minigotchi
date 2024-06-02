@@ -1,0 +1,42 @@
+\doxysection{item.\+h}
+\hypertarget{item_8h_source}{}\label{item_8h_source}\index{C:/Users/anton/Documents/lcom/labs/proj/src/model/item.h@{C:/Users/anton/Documents/lcom/labs/proj/src/model/item.h}}
+\mbox{\hyperlink{item_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_ITEM\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_ITEM\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gui_drawer_8h}{../viewer/guiDrawer.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ NUM\_ITEMS\ 4}}
+\DoxyCodeLine{00007\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{\mbox{\hyperlink{item_8h_a5f77d21c62ddd9f9d57b884a6a4bd2b8a2ae962c70a1cf5e24679c33523e44ec6}{EMPTY\_ITEM}},\ \mbox{\hyperlink{item_8h_a5f77d21c62ddd9f9d57b884a6a4bd2b8adfb0867c3e2d1ac58389aea3b70af5b7}{BANANA}},\ \mbox{\hyperlink{item_8h_a5f77d21c62ddd9f9d57b884a6a4bd2b8a5484ec37ffd1fcffb7aba549a4839910}{APPLE}},\ \mbox{\hyperlink{item_8h_a5f77d21c62ddd9f9d57b884a6a4bd2b8abf9a8773f7a18577508f3dc1ccfb18f5}{CHOCOLATE}}\}\ \mbox{\hyperlink{item_8h_a5f77d21c62ddd9f9d57b884a6a4bd2b8}{item\_t}};}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{struct_sprite}{Sprite}}\ *\mbox{\hyperlink{struct_item_a295cf5009b7a5f5831814d4d15da262d}{sprite}};}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_item_a0c74bdd2f6e56b602f3929270a244dd6}{x}};}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_item_a29e6ce22ef8b569cfd61686203d4ad2a}{y}};}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{item_8h_a5f77d21c62ddd9f9d57b884a6a4bd2b8}{item\_t}}\ \mbox{\hyperlink{struct_item_a6234a17c1ab198cf785a35672efe2d5c}{id}};}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_item_a6df2a739d3cfdf0231a00092f975c25b}{quantity}};}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_item_a5121f5dc5de492ea510b26479c4df6e5}{feed\_level}};}
+\DoxyCodeLine{00016\ \}\ \mbox{\hyperlink{struct_item}{Item}};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \mbox{\hyperlink{struct_item}{Item}}\ *\mbox{\hyperlink{item_8h_a6ffaa34e9cc0198b58add8cb0f7db973}{new\_item}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \mbox{\hyperlink{item_8h_a5f77d21c62ddd9f9d57b884a6a4bd2b8}{item\_t}}\ type,\ \textcolor{keywordtype}{int}\ quantity,\ \textcolor{keywordtype}{int}\ feed\_level);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{item_8h_a22ff465025805bfed674b2dff9aeccfa}{draw\_item}}(\mbox{\hyperlink{struct_item}{Item}}*\ item);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ Getters}}
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{item_8h_a5f1b58e279c64a79d7393c5194f1b6d8}{item\_get\_x}}(\mbox{\hyperlink{struct_item}{Item}}\ *item);}
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{item_8h_ad24db1551e3d5ba423b4adf6df831d99}{item\_get\_y}}(\mbox{\hyperlink{struct_item}{Item}}\ *item);}
+\DoxyCodeLine{00025\ \mbox{\hyperlink{item_8h_a5f77d21c62ddd9f9d57b884a6a4bd2b8}{item\_t}}\ \mbox{\hyperlink{item_8h_abe12131db7008f97ef0371a9a296b762}{item\_get\_id}}(\mbox{\hyperlink{struct_item}{Item}}\ *item);}
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{item_8h_a8ae4e6c3051ad1ef0b74afe2435fb2b6}{item\_get\_quantity}}(\mbox{\hyperlink{struct_item}{Item}}\ *item);}
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{item_8h_a693a504ab67d8bc7d10c3029300b720d}{item\_get\_feedLevel}}(\mbox{\hyperlink{struct_item}{Item}}\ *item);}
+\DoxyCodeLine{00028\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{item_8h_ad68b9e8e5f529c4e8b1e4aca3caedb6d}{item\_get\_sprite}}(\mbox{\hyperlink{struct_item}{Item}}\ *item);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{comment}{//\ Setters}}
+\DoxyCodeLine{00031\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{item_8h_a85648e33914192045db41f7bb0b21026}{item\_set\_x}}(\mbox{\hyperlink{struct_item}{Item}}\ *item,\ \textcolor{keywordtype}{int}\ x);}
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{item_8h_a0b01ac8a7304549fe62d324a7e9668bb}{item\_set\_y}}(\mbox{\hyperlink{struct_item}{Item}}\ *item,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{item_8h_a2ac1588a241bf899fe738b489e31690c}{item\_set\_id}}(\mbox{\hyperlink{struct_item}{Item}}\ *item,\ \mbox{\hyperlink{item_8h_a5f77d21c62ddd9f9d57b884a6a4bd2b8}{item\_t}}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00034\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{item_8h_a1b8858990399252c11765fc2f1dfcd99}{item\_set\_quantity}}(\mbox{\hyperlink{struct_item}{Item}}\ *item,\ \textcolor{keywordtype}{int}\ quantity);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_ITEM\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

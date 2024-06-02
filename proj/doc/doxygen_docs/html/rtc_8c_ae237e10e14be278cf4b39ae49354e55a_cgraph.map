@@ -1,0 +1,7 @@
+<map id="rtc_clear_flags" name="rtc_clear_flags">
+<area shape="rect" id="Node000001" title="Clear rtc interrupts." alt="" coords="5,5,111,32"/>
+<area shape="rect" id="Node000002" href="$rtc_8c.html#a080bec5cedba0f262f9f7b94eb06632d" title="Write a byte to an RTC register." alt="" coords="159,5,254,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,16,143,16,143,21,111,21"/>
+<area shape="rect" id="Node000003" href="$rtc_8c.html#a068edeb333e4db214207cf7476b5b314" title="Write a byte to an RTC port." alt="" coords="302,5,419,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="254,16,286,16,286,21,254,21"/>
+</map>

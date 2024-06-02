@@ -1,0 +1,29 @@
+<map id="new_button" name="new_button">
+<area shape="rect" id="Node000001" title="Creates a new button &quot;object&quot; and returns a pointer to it." alt="" coords="5,380,93,407"/>
+<area shape="rect" id="Node000002" href="$gui_drawer_8c.html#abe19e91476f63ac9e618f47092dd15d0" title="Get the button sprite from an index." alt="" coords="141,372,287,415"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,391,125,391,125,396,93,396"/>
+<area shape="rect" id="Node000003" href="$gui_drawer_8c.html#acacf8cc3c80419dd04f364c0e2b92785" title=" " alt="" coords="339,5,529,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="214,371,222,310,241,227,256,181,277,137,302,95,333,58,336,56,339,60,337,62,306,98,281,139,261,183,246,228,227,311,219,372"/>
+<area shape="rect" id="Node000004" href="$gui_drawer_8c.html#a2ed2f5ecc38862ba578d84587934e781" title=" " alt="" coords="340,72,528,115"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="216,371,228,321,250,255,284,186,307,153,333,125,336,122,340,126,337,129,311,157,289,188,255,257,233,322,221,372"/>
+<area shape="rect" id="Node000005" href="$gui_drawer_8c.html#a2565c8857d19e2c807791510d945f2f5" title=" " alt="" coords="363,139,505,181"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="220,371,235,333,259,284,292,235,333,191,347,182,350,186,337,195,296,238,264,287,240,335,225,373"/>
+<area shape="rect" id="Node000006" href="$gui_drawer_8c.html#a71536932ff4e8b22f58b76e7b8a54db3" title=" " alt="" coords="366,205,501,248"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="227,370,270,315,300,284,334,258,351,248,353,253,336,262,304,288,274,318,231,373"/>
+<area shape="rect" id="Node000007" href="$gui_drawer_8c.html#a96bfeea6db497a209432e2975c9b5a9d" title=" " alt="" coords="335,272,532,315"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="249,369,334,324,348,318,350,323,336,329,252,374"/>
+<area shape="rect" id="Node000008" href="$gui_drawer_8c.html#a5a7b61ff4d0d6f1b815bc5420fd2b8bd" title=" " alt="" coords="363,339,505,381"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="287,380,347,370,348,376,288,385"/>
+<area shape="rect" id="Node000009" href="$gui_drawer_8c.html#a64b3e77e046a0e0122df2b0ec4d5d04c" title=" " alt="" coords="368,405,499,448"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="288,402,353,412,352,417,287,407"/>
+<area shape="rect" id="Node000010" href="$gui_drawer_8c.html#a2beefa168c683c4411aa36515e184d26" title=" " alt="" coords="366,472,501,515"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="252,413,336,458,353,464,351,469,334,462,249,418"/>
+<area shape="rect" id="Node000011" href="$gui_drawer_8c.html#a930ac7485a0948e0d77ecfde963ee589" title=" " alt="" coords="348,539,519,581"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="231,413,274,469,304,499,337,524,344,529,341,534,333,529,300,502,270,472,227,417"/>
+<area shape="rect" id="Node000012" href="$gui_drawer_8c.html#ae50f96294387b017a799f9105bcc4134" title=" " alt="" coords="354,605,513,648"/>
+<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="225,414,240,452,264,500,296,549,337,591,343,596,340,600,333,595,292,552,259,502,235,454,220,416"/>
+<area shape="rect" id="Node000013" href="$gui_drawer_8c.html#a0c4a49f9b2916a971f1998a53aef8374" title=" " alt="" coords="366,672,502,715"/>
+<area shape="poly" id="edge12_Node000002_Node000013" title=" " alt="" coords="221,414,233,464,255,530,289,598,311,630,337,658,353,670,350,674,333,662,307,633,284,601,250,532,228,466,216,416"/>
+<area shape="rect" id="Node000014" href="$gui_drawer_8c.html#a719c69c695d890889060ec955a8040de" title=" " alt="" coords="351,739,516,781"/>
+<area shape="poly" id="edge13_Node000002_Node000014" title=" " alt="" coords="219,415,227,475,246,559,261,603,281,647,306,688,337,725,340,728,336,731,333,729,302,692,277,650,256,605,241,560,222,476,214,415"/>
+</map>

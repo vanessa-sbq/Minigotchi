@@ -1,0 +1,14 @@
+<map id="C:/Users/anton/Documents/lcom/labs/proj/src/model/item.c" name="C:/Users/anton/Documents/lcom/labs/proj/src/model/item.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,213,48"/>
+<area shape="rect" id="Node000002" href="$item_8h.html" title=" " alt="" coords="80,96,138,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,49,112,80,106,80,106,49"/>
+<area shape="rect" id="Node000003" href="$gui_drawer_8h.html" title=" " alt="" coords="39,171,179,197"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="112,123,112,155,106,155,106,123"/>
+<area shape="rect" id="Node000004" href="$video_8h.html" title=" " alt="" coords="94,245,231,288"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="120,196,143,231,138,234,115,199"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="18,336,96,363"/>
+<area shape="poly" id="edge6_Node000003_Node000005" title=" " alt="" coords="105,199,85,246,65,322,60,320,80,244,100,197"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="137,291,87,328,84,324,134,286"/>
+<area shape="rect" id="Node000006" href="$video__macros_8h.html" title=" " alt="" coords="120,336,231,363"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="168,288,174,320,168,321,163,289"/>
+</map>

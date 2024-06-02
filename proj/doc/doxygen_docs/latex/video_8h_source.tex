@@ -1,0 +1,31 @@
+\doxysection{video.\+h}
+\hypertarget{video_8h_source}{}\label{video_8h_source}\index{C:/Users/anton/Documents/lcom/labs/proj/src/device\_controllers/video/video.h@{C:/Users/anton/Documents/lcom/labs/proj/src/device\_controllers/video/video.h}}
+\mbox{\hyperlink{video_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <lcom/lcf.h>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{video__macros_8h}{video\_macros.h}}"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#ifndef\ \_\_VIDEO\_H}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#define\ \_\_VIDEO\_H}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{video_8h_a741edf15c21c673a80ef46db1917ff6e}{returnToTextMode}}();}
+\DoxyCodeLine{00008\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{video_8h_aaa26640c58ac8b7da5e14369cab5503e}{video\_get\_mode\_information}}(uint16\_t\ mode);}
+\DoxyCodeLine{00009\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{video_8h_a95a6d633a13204fee55ef1cb200e58c7}{video\_map\_vram}}();}
+\DoxyCodeLine{00010\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{video_8h_a42df932df087398f7fa0c70637f62182}{video\_set\_graphics\_mode}}(uint16\_t\ mode);}
+\DoxyCodeLine{00011\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{video_8h_a677a708ee22e814bfb0768b9b4af721a}{video\_get\_phys\_addr}}();}
+\DoxyCodeLine{00012\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{video_8h_a89e702224919a5716dbe41c1862f931e}{video\_get\_vram\_size}}();}
+\DoxyCodeLine{00013\ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{video_8h_aed5b07d4a09b1fa1fd530659686e15d0}{getBytesPerPixel}}();}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ uint16\_t\ \mbox{\hyperlink{video_8h_a0cd850092b7489d611b2096cbaa13cee}{getXResolution}}();}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{video_8h_af1e5967f33e339c4c49724da43d418ec}{getBufferFromSprite}}(uint16\_t\ height,\ uint16\_t\ width,\ uint16\_t\ x,\ uint16\_t\ y,\ uint32\_t\ *colors,\ \textcolor{keywordtype}{char}**\ background\_buffer);}
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{video_8h_a243df2d473d9bc9b129bcc0088b855f2}{setBackgroundFromBuffer}}(\textcolor{keywordtype}{char}*\ background\_buffer);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{video_8h_a6091a4bd04596e6e8e39b7dee1e1b118}{drawPixel}}(uint16\_t\ x,\ uint16\_t\ y,\ uint32\_t\ color);}
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{video_8h_ad1e918536050f04ef373759148d5a1af}{vg\_draw\_pixmap}}(uint16\_t\ x,\ uint16\_t\ y,\ uint8\_t*\ map,\ xpm\_image\_t\ pixmap\_and\_metadata);}
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{video_8h_a3541d07f307db72cac3911f3f26573a4}{vg\_clear\_screen}}();}
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{video_8h_abac76703d677ba820ea82a747748d743}{vg\_page\_flip}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_VIDEO\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,9 @@
+<map id="rockPaperScissorsController_randomize_reward" name="rockPaperScissorsController_randomize_reward">
+<area shape="rect" id="Node000001" title="Function that randomizes the reward (after each game)" alt="" coords="5,35,192,77"/>
+<area shape="rect" id="Node000002" href="$item_8c.html#a9e63f1318fbd43087177d034a95991fa" title="Creates a new item &quot;object&quot; and returns a pointer to it." alt="" coords="280,13,356,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,41,264,31,264,36,192,46"/>
+<area shape="rect" id="Node000004" href="$rock_paper_scissors_8c.html#a93161e865485e818eb327f4ffbe55d4f" title=" " alt="" coords="240,64,396,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="192,66,225,70,224,75,191,71"/>
+<area shape="rect" id="Node000003" href="$gui_drawer_8c.html#a05800c123125bd7b453bfb960405431b" title="Get an item sprite from an id." alt="" coords="444,5,579,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="356,24,429,24,429,29,356,29"/>
+</map>

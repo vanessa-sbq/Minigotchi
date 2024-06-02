@@ -1,0 +1,193 @@
+\doxysection{C\+:/\+Users/anton/\+Documents/lcom/labs/proj/src/device\+\_\+controllers/uart/queue.h File Reference}
+\hypertarget{queue_8h}{}\label{queue_8h}\index{C:/Users/anton/Documents/lcom/labs/proj/src/device\_controllers/uart/queue.h@{C:/Users/anton/Documents/lcom/labs/proj/src/device\_controllers/uart/queue.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for queue.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{queue_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{queue_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_node}{Node}}
+\item 
+struct \mbox{\hyperlink{struct_queue}{Queue}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct Node \mbox{\hyperlink{queue_8h_a3b09f37e675bcd48a01bf22155996872}{Node}}
+\item 
+typedef struct Queue \mbox{\hyperlink{queue_8h_ad4f29a362a072ba563b41ae8e935c6fc}{Queue}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{queue_8h_ab7e4c3517ea6f4e94a5491fe7df13861}{create\+Node}} (char data)
+\begin{DoxyCompactList}\small\item\em Function to create a new node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{queue_8h_a839b722b6c4924b41f3afa1bfaa525ef}{create\+Queue}} ()
+\begin{DoxyCompactList}\small\item\em Function to initialize the queue. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{queue_8h_ae2701ab012e9ff60a04d6ffd07a42e1b}{is\+Empty}} (\mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*}queue)
+\begin{DoxyCompactList}\small\item\em Function to check if the queue is empty. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{queue_8h_af8c41fbb7cee8b13f78dc20bb35a24ba}{get\+Size}} (\mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*}queue)
+\begin{DoxyCompactList}\small\item\em Function to get the size of the queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{queue_8h_a115956bfb814a496d0453460311b7cb6}{enqueue}} (\mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*}queue, char data)
+\begin{DoxyCompactList}\small\item\em Function to add an element to the queue (enqueue) \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{queue_8h_ae2cdc3b8e3f832af625f22b889a7e850}{dequeue}} (\mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*}queue)
+\begin{DoxyCompactList}\small\item\em Function to remove an element from the queue (dequeue) \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{queue_8h_ad26869a3b50d6fc9e7c9488d65cb2127}{peek}} (\mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*}queue)
+\begin{DoxyCompactList}\small\item\em Function to peek at the front element of the queue without removing it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{queue_8h_a3b09f37e675bcd48a01bf22155996872}\index{queue.h@{queue.h}!Node@{Node}}
+\index{Node@{Node}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{Node}{Node}}
+{\footnotesize\ttfamily \label{queue_8h_a3b09f37e675bcd48a01bf22155996872} 
+typedef struct Node Node}
+
+\Hypertarget{queue_8h_ad4f29a362a072ba563b41ae8e935c6fc}\index{queue.h@{queue.h}!Queue@{Queue}}
+\index{Queue@{Queue}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{Queue}{Queue}}
+{\footnotesize\ttfamily \label{queue_8h_ad4f29a362a072ba563b41ae8e935c6fc} 
+typedef struct Queue Queue}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{queue_8h_ab7e4c3517ea6f4e94a5491fe7df13861}\index{queue.h@{queue.h}!createNode@{createNode}}
+\index{createNode@{createNode}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{createNode()}{createNode()}}
+{\footnotesize\ttfamily \label{queue_8h_ab7e4c3517ea6f4e94a5491fe7df13861} 
+\mbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*} create\+Node (\begin{DoxyParamCaption}\item[{char}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Function to create a new node. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{queue_8h_ab7e4c3517ea6f4e94a5491fe7df13861_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{queue_8h_a839b722b6c4924b41f3afa1bfaa525ef}\index{queue.h@{queue.h}!createQueue@{createQueue}}
+\index{createQueue@{createQueue}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{createQueue()}{createQueue()}}
+{\footnotesize\ttfamily \label{queue_8h_a839b722b6c4924b41f3afa1bfaa525ef} 
+\mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*} create\+Queue (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Function to initialize the queue. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{queue_8h_a839b722b6c4924b41f3afa1bfaa525ef_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{queue_8h_ae2cdc3b8e3f832af625f22b889a7e850}\index{queue.h@{queue.h}!dequeue@{dequeue}}
+\index{dequeue@{dequeue}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{dequeue()}{dequeue()}}
+{\footnotesize\ttfamily \label{queue_8h_ae2cdc3b8e3f832af625f22b889a7e850} 
+char dequeue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*}}]{queue}{}\end{DoxyParamCaption})}
+
+
+
+Function to remove an element from the queue (dequeue) 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{queue_8h_ae2cdc3b8e3f832af625f22b889a7e850_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{queue_8h_ae2cdc3b8e3f832af625f22b889a7e850_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{queue_8h_a115956bfb814a496d0453460311b7cb6}\index{queue.h@{queue.h}!enqueue@{enqueue}}
+\index{enqueue@{enqueue}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{enqueue()}{enqueue()}}
+{\footnotesize\ttfamily \label{queue_8h_a115956bfb814a496d0453460311b7cb6} 
+void enqueue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*}}]{queue}{, }\item[{char}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Function to add an element to the queue (enqueue) 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{queue_8h_a115956bfb814a496d0453460311b7cb6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{queue_8h_a115956bfb814a496d0453460311b7cb6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{queue_8h_af8c41fbb7cee8b13f78dc20bb35a24ba}\index{queue.h@{queue.h}!getSize@{getSize}}
+\index{getSize@{getSize}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily \label{queue_8h_af8c41fbb7cee8b13f78dc20bb35a24ba} 
+int get\+Size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*}}]{queue}{}\end{DoxyParamCaption})}
+
+
+
+Function to get the size of the queue. 
+
+\Hypertarget{queue_8h_ae2701ab012e9ff60a04d6ffd07a42e1b}\index{queue.h@{queue.h}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily \label{queue_8h_ae2701ab012e9ff60a04d6ffd07a42e1b} 
+int is\+Empty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*}}]{queue}{}\end{DoxyParamCaption})}
+
+
+
+Function to check if the queue is empty. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{queue_8h_ae2701ab012e9ff60a04d6ffd07a42e1b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{queue_8h_ad26869a3b50d6fc9e7c9488d65cb2127}\index{queue.h@{queue.h}!peek@{peek}}
+\index{peek@{peek}!queue.h@{queue.h}}
+\doxysubsubsection{\texorpdfstring{peek()}{peek()}}
+{\footnotesize\ttfamily \label{queue_8h_ad26869a3b50d6fc9e7c9488d65cb2127} 
+char peek (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*}}]{queue}{}\end{DoxyParamCaption})}
+
+
+
+Function to peek at the front element of the queue without removing it. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{queue_8h_ad26869a3b50d6fc9e7c9488d65cb2127_cgraph}
+\end{center}
+\end{figure}

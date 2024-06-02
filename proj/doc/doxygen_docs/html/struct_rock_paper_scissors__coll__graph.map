@@ -1,0 +1,13 @@
+<map id="RockPaperScissors" name="RockPaperScissors">
+<area shape="rect" id="Node000001" title=" " alt="" coords="66,235,202,261"/>
+<area shape="rect" id="Node000002" href="$struct_button.html" title=" " alt="" coords="5,96,65,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="31,138,29,174,33,193,41,209,54,222,71,232,68,236,51,226,37,212,28,194,24,175,26,138"/>
+<area shape="rect" id="Node000003" href="$struct_sprite.html" title=" " alt="" coords="102,5,157,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="105,44,90,58,49,97,46,93,87,54,102,40"/>
+<area shape="rect" id="Node000004" href="$struct_item.html" title=" " alt="" coords="107,96,153,123"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="132,48,132,95,127,95,127,48"/>
+<area shape="rect" id="Node000005" href="$struct_cursor.html" title=" " alt="" coords="177,96,237,123"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="159,41,173,54,202,94,197,97,169,58,155,44"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="133,138,136,234,131,234,128,138"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="206,138,197,175,180,212,156,236,152,232,175,209,192,173,201,137"/>
+</map>

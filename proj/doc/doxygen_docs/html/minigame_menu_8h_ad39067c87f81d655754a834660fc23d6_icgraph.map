@@ -1,0 +1,5 @@
+<map id="delete_minigameMenu" name="delete_minigameMenu">
+<area shape="rect" id="Node000001" title="MinigameMenu destructor." alt="" coords="218,13,369,40"/>
+<area shape="rect" id="Node000002" href="$minigame_menu_controller_8c.html#a70f3184491ea404d46501ad044b4009e" title="Calls the MinigameMenu destructor." alt="" coords="5,5,170,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="202,29,170,29,170,24,202,24"/>
+</map>

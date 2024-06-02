@@ -1,0 +1,10 @@
+<map id="get_text_sprite_from_index" name="get_text_sprite_from_index">
+<area shape="rect" id="Node000001" title="Get a text sprite from an index." alt="" coords="395,23,534,65"/>
+<area shape="rect" id="Node000002" href="$main_room_viewer_8c.html#ab712f0c477c358dac8015032c3aa3b72" title="Calls draw function of each element the main room contains." alt="" coords="176,5,333,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="379,36,333,31,333,25,380,31"/>
+<area shape="rect" id="Node000004" href="$name_minigotchi_viewer_8c.html#a0577521b7d2cb7f06f7fdf1a3706b529" title="Calls draw function of each element the nameMinigotchi contains." alt="" coords="162,56,347,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="380,57,348,61,347,55,379,52"/>
+<area shape="rect" id="Node000003" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Project main function that starts the game." alt="" coords="5,31,114,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="161,33,115,40,114,34,160,28"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="146,58,114,54,114,48,147,53"/>
+</map>

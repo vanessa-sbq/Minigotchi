@@ -1,0 +1,9 @@
+<map id="rtc_is_updating" name="rtc_is_updating">
+<area shape="rect" id="Node000001" title="Check RTC&#39;s UIP flag to avoid race conditions." alt="" coords="5,31,115,57"/>
+<area shape="rect" id="Node000002" href="$rtc_8c.html#a7d6996cfdf143b032ddbc2df7cc27498" title="Read a byte from an RTC register." alt="" coords="163,31,281,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,41,147,41,147,47,115,47"/>
+<area shape="rect" id="Node000003" href="$rtc_8c.html#a068edeb333e4db214207cf7476b5b314" title="Write a byte to an RTC port." alt="" coords="329,5,446,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="281,32,313,27,314,33,282,38"/>
+<area shape="rect" id="Node000004" href="$utils_8c.html#a2b56f50ba159e9d5115ed1a75eff15d9" title="Invokes sys_inb() system call but reads the value into a uint8_t variable." alt="" coords="343,56,433,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="282,50,328,58,327,63,281,56"/>
+</map>

@@ -1,0 +1,321 @@
+\doxysection{C\+:/\+Users/anton/\+Documents/lcom/labs/proj/src/model/state\+Models/rock\+Paper\+Scissors.h File Reference}
+\hypertarget{rock_paper_scissors_8h}{}\label{rock_paper_scissors_8h}\index{C:/Users/anton/Documents/lcom/labs/proj/src/model/stateModels/rockPaperScissors.h@{C:/Users/anton/Documents/lcom/labs/proj/src/model/stateModels/rockPaperScissors.h}}
+{\ttfamily \#include "{}../../viewer/gui\+Drawer.\+h"{}}\newline
+{\ttfamily \#include "{}../button.\+h"{}}\newline
+{\ttfamily \#include "{}../cursor.\+h"{}}\newline
+{\ttfamily \#include "{}../item.\+h"{}}\newline
+Include dependency graph for rock\+Paper\+Scissors.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{rock_paper_scissors_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rock_paper_scissors_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_rock_paper_scissors}{Rock\+Paper\+Scissors}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55}{collision\+\_\+type\+\_\+rps\+\_\+t}} \{ \newline
+\mbox{\hyperlink{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55af28c20a5f09354f7ca94e9596b63ae95}{RPS\+\_\+\+ROCK}}
+, \mbox{\hyperlink{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55a4dfa38451e67dc129df445b532e6278e}{RPS\+\_\+\+PAPER}}
+, \mbox{\hyperlink{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55a8f15c1d11a298107115cbf72650adff1}{RPS\+\_\+\+SCISSORS}}
+, \mbox{\hyperlink{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55a066b3fbb0cf7d48bb667d003cfa8bce7}{NOP\+\_\+\+RPS}}
+, \newline
+\mbox{\hyperlink{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55a7fd4a930a40426e6a84da773993121e1}{QUIT\+\_\+\+RPS}}
+ \}
+\item 
+enum \mbox{\hyperlink{rock_paper_scissors_8h_af4dec518cea1a857d488d60864d435a8}{rps\+\_\+state\+\_\+t}} \{ \mbox{\hyperlink{rock_paper_scissors_8h_af4dec518cea1a857d488d60864d435a8ae4d0d5de3e9bfa75348ea38ca15b3826}{RPS\+\_\+\+PLAYING}}
+, \mbox{\hyperlink{rock_paper_scissors_8h_af4dec518cea1a857d488d60864d435a8ae71e00fa65e6f8fc0284cd537348556f}{RPS\+\_\+\+WIN}}
+, \mbox{\hyperlink{rock_paper_scissors_8h_af4dec518cea1a857d488d60864d435a8a15ad047f8d2ffb451e6a97ade95c9bed}{RPS\+\_\+\+TIE}}
+, \mbox{\hyperlink{rock_paper_scissors_8h_af4dec518cea1a857d488d60864d435a8ab00c7158d0446be85c567571b7160cc9}{RPS\+\_\+\+LOSE}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_rock_paper_scissors}{Rock\+Paper\+Scissors}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{rock_paper_scissors_8h_ae8af223aef0dbcc00fb65b3367fd1bde}{new\+\_\+rock\+Paper\+Scissors}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new \doxylink{struct_rock_paper_scissors}{Rock\+Paper\+Scissors} "{}object"{} and returns a pointer to it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rock_paper_scissors_8h_aef9c692954d21b48a2114b6a93698c21}{delete\+\_\+rock\+Paper\+Scissors}} (\mbox{\hyperlink{struct_rock_paper_scissors}{Rock\+Paper\+Scissors}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{rock_paper_scissors_controller_8c_a24c3ef8ee9e6d099254705de55af4cf3}{rock\+Paper\+Scissors}})
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_rock_paper_scissors}{Rock\+Paper\+Scissors} destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{rock_paper_scissors_8h_ae6c2d4873910e8567a7125d8860ef001}{rock\+Paper\+Scissors\+\_\+get\+\_\+rock\+Button}} (\mbox{\hyperlink{struct_rock_paper_scissors}{Rock\+Paper\+Scissors}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{rock_paper_scissors_controller_8c_a24c3ef8ee9e6d099254705de55af4cf3}{rock\+Paper\+Scissors}})
+\item 
+\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{rock_paper_scissors_8h_a10022e85f855aff396340c6d9f4a7acd}{rock\+Paper\+Scissors\+\_\+get\+\_\+paper\+Button}} (\mbox{\hyperlink{struct_rock_paper_scissors}{Rock\+Paper\+Scissors}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{rock_paper_scissors_controller_8c_a24c3ef8ee9e6d099254705de55af4cf3}{rock\+Paper\+Scissors}})
+\item 
+\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{rock_paper_scissors_8h_aa61b2ee0ae8a1c04c5c1de887033dfd1}{rock\+Paper\+Scissors\+\_\+get\+\_\+scissors\+Button}} (\mbox{\hyperlink{struct_rock_paper_scissors}{Rock\+Paper\+Scissors}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{rock_paper_scissors_controller_8c_a24c3ef8ee9e6d099254705de55af4cf3}{rock\+Paper\+Scissors}})
+\item 
+\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{rock_paper_scissors_8h_abc04bcf42cfb3dfe97c615adf14fda74}{rock\+Paper\+Scissors\+\_\+get\+\_\+quit\+Button}} (\mbox{\hyperlink{struct_rock_paper_scissors}{Rock\+Paper\+Scissors}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{rock_paper_scissors_controller_8c_a24c3ef8ee9e6d099254705de55af4cf3}{rock\+Paper\+Scissors}})
+\item 
+\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{rock_paper_scissors_8h_abfdd59148ad2d1907ba56a12a9baf5e5}{rock\+Paper\+Scissors\+\_\+get\+\_\+cursor}} (\mbox{\hyperlink{struct_rock_paper_scissors}{Rock\+Paper\+Scissors}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{rock_paper_scissors_controller_8c_a24c3ef8ee9e6d099254705de55af4cf3}{rock\+Paper\+Scissors}})
+\item 
+\mbox{\hyperlink{rock_paper_scissors_8h_af4dec518cea1a857d488d60864d435a8}{rps\+\_\+state\+\_\+t}} \mbox{\hyperlink{rock_paper_scissors_8h_a7af556d2fa4fd243c297a9a5a0028850}{rock\+Paper\+Scissors\+\_\+get\+\_\+rps\+State}} (\mbox{\hyperlink{struct_rock_paper_scissors}{Rock\+Paper\+Scissors}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{rock_paper_scissors_controller_8c_a24c3ef8ee9e6d099254705de55af4cf3}{rock\+Paper\+Scissors}})
+\item 
+\mbox{\hyperlink{struct_item}{Item}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{rock_paper_scissors_8h_ad44d8ec945fef78581b1a40583eb6dbb}{rock\+Paper\+Scissors\+\_\+get\+\_\+reward}} (\mbox{\hyperlink{struct_rock_paper_scissors}{Rock\+Paper\+Scissors}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{rock_paper_scissors_controller_8c_a24c3ef8ee9e6d099254705de55af4cf3}{rock\+Paper\+Scissors}})
+\item 
+\mbox{\hyperlink{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55}{collision\+\_\+type\+\_\+rps\+\_\+t}} \mbox{\hyperlink{rock_paper_scissors_8h_a534c05b09a49f0107b90d510b9b993a8}{rock\+Paper\+Scissors\+\_\+get\+\_\+bot\+Choice}} (\mbox{\hyperlink{struct_rock_paper_scissors}{Rock\+Paper\+Scissors}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{rock_paper_scissors_controller_8c_a24c3ef8ee9e6d099254705de55af4cf3}{rock\+Paper\+Scissors}})
+\item 
+void \mbox{\hyperlink{rock_paper_scissors_8h_a8c03d4ffd119e5936fd032b861743f93}{rock\+Paper\+Scissors\+\_\+set\+\_\+rps\+State}} (\mbox{\hyperlink{struct_rock_paper_scissors}{Rock\+Paper\+Scissors}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{rock_paper_scissors_controller_8c_a24c3ef8ee9e6d099254705de55af4cf3}{rock\+Paper\+Scissors}}, \mbox{\hyperlink{rock_paper_scissors_8h_af4dec518cea1a857d488d60864d435a8}{rps\+\_\+state\+\_\+t}} rps\+State)
+\item 
+void \mbox{\hyperlink{rock_paper_scissors_8h_a93161e865485e818eb327f4ffbe55d4f}{rock\+Paper\+Scissors\+\_\+set\+\_\+reward}} (\mbox{\hyperlink{struct_rock_paper_scissors}{Rock\+Paper\+Scissors}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{rock_paper_scissors_controller_8c_a24c3ef8ee9e6d099254705de55af4cf3}{rock\+Paper\+Scissors}}, \mbox{\hyperlink{struct_item}{Item}} \texorpdfstring{$\ast$}{*}reward)
+\item 
+void \mbox{\hyperlink{rock_paper_scissors_8h_a1f13cbc23ab2d990164d65a0f773c050}{rock\+Paper\+Scissors\+\_\+set\+\_\+bot\+Choice}} (\mbox{\hyperlink{struct_rock_paper_scissors}{Rock\+Paper\+Scissors}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{rock_paper_scissors_controller_8c_a24c3ef8ee9e6d099254705de55af4cf3}{rock\+Paper\+Scissors}}, \mbox{\hyperlink{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55}{collision\+\_\+type\+\_\+rps\+\_\+t}} bot\+\_\+choice)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55}\index{rockPaperScissors.h@{rockPaperScissors.h}!collision\_type\_rps\_t@{collision\_type\_rps\_t}}
+\index{collision\_type\_rps\_t@{collision\_type\_rps\_t}!rockPaperScissors.h@{rockPaperScissors.h}}
+\doxysubsubsection{\texorpdfstring{collision\_type\_rps\_t}{collision\_type\_rps\_t}}
+{\footnotesize\ttfamily \label{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55} 
+enum \mbox{\hyperlink{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55}{collision\+\_\+type\+\_\+rps\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RPS\_ROCK@{RPS\_ROCK}!rockPaperScissors.h@{rockPaperScissors.h}}\index{rockPaperScissors.h@{rockPaperScissors.h}!RPS\_ROCK@{RPS\_ROCK}}}\Hypertarget{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55af28c20a5f09354f7ca94e9596b63ae95}\label{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55} 
+RPS\+\_\+\+ROCK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RPS\_PAPER@{RPS\_PAPER}!rockPaperScissors.h@{rockPaperScissors.h}}\index{rockPaperScissors.h@{rockPaperScissors.h}!RPS\_PAPER@{RPS\_PAPER}}}\Hypertarget{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55a4dfa38451e67dc129df445b532e6278e}\label{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55} 
+RPS\+\_\+\+PAPER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RPS\_SCISSORS@{RPS\_SCISSORS}!rockPaperScissors.h@{rockPaperScissors.h}}\index{rockPaperScissors.h@{rockPaperScissors.h}!RPS\_SCISSORS@{RPS\_SCISSORS}}}\Hypertarget{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55a8f15c1d11a298107115cbf72650adff1}\label{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55} 
+RPS\+\_\+\+SCISSORS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NOP\_RPS@{NOP\_RPS}!rockPaperScissors.h@{rockPaperScissors.h}}\index{rockPaperScissors.h@{rockPaperScissors.h}!NOP\_RPS@{NOP\_RPS}}}\Hypertarget{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55a066b3fbb0cf7d48bb667d003cfa8bce7}\label{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55} 
+NOP\+\_\+\+RPS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QUIT\_RPS@{QUIT\_RPS}!rockPaperScissors.h@{rockPaperScissors.h}}\index{rockPaperScissors.h@{rockPaperScissors.h}!QUIT\_RPS@{QUIT\_RPS}}}\Hypertarget{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55a7fd4a930a40426e6a84da773993121e1}\label{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55} 
+QUIT\+\_\+\+RPS&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{rock_paper_scissors_8h_af4dec518cea1a857d488d60864d435a8}\index{rockPaperScissors.h@{rockPaperScissors.h}!rps\_state\_t@{rps\_state\_t}}
+\index{rps\_state\_t@{rps\_state\_t}!rockPaperScissors.h@{rockPaperScissors.h}}
+\doxysubsubsection{\texorpdfstring{rps\_state\_t}{rps\_state\_t}}
+{\footnotesize\ttfamily \label{rock_paper_scissors_8h_af4dec518cea1a857d488d60864d435a8} 
+enum \mbox{\hyperlink{rock_paper_scissors_8h_af4dec518cea1a857d488d60864d435a8}{rps\+\_\+state\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RPS\_PLAYING@{RPS\_PLAYING}!rockPaperScissors.h@{rockPaperScissors.h}}\index{rockPaperScissors.h@{rockPaperScissors.h}!RPS\_PLAYING@{RPS\_PLAYING}}}\Hypertarget{rock_paper_scissors_8h_af4dec518cea1a857d488d60864d435a8ae4d0d5de3e9bfa75348ea38ca15b3826}\label{rock_paper_scissors_8h_af4dec518cea1a857d488d60864d435a8} 
+RPS\+\_\+\+PLAYING&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RPS\_WIN@{RPS\_WIN}!rockPaperScissors.h@{rockPaperScissors.h}}\index{rockPaperScissors.h@{rockPaperScissors.h}!RPS\_WIN@{RPS\_WIN}}}\Hypertarget{rock_paper_scissors_8h_af4dec518cea1a857d488d60864d435a8ae71e00fa65e6f8fc0284cd537348556f}\label{rock_paper_scissors_8h_af4dec518cea1a857d488d60864d435a8} 
+RPS\+\_\+\+WIN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RPS\_TIE@{RPS\_TIE}!rockPaperScissors.h@{rockPaperScissors.h}}\index{rockPaperScissors.h@{rockPaperScissors.h}!RPS\_TIE@{RPS\_TIE}}}\Hypertarget{rock_paper_scissors_8h_af4dec518cea1a857d488d60864d435a8a15ad047f8d2ffb451e6a97ade95c9bed}\label{rock_paper_scissors_8h_af4dec518cea1a857d488d60864d435a8} 
+RPS\+\_\+\+TIE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RPS\_LOSE@{RPS\_LOSE}!rockPaperScissors.h@{rockPaperScissors.h}}\index{rockPaperScissors.h@{rockPaperScissors.h}!RPS\_LOSE@{RPS\_LOSE}}}\Hypertarget{rock_paper_scissors_8h_af4dec518cea1a857d488d60864d435a8ab00c7158d0446be85c567571b7160cc9}\label{rock_paper_scissors_8h_af4dec518cea1a857d488d60864d435a8} 
+RPS\+\_\+\+LOSE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{rock_paper_scissors_8h_aef9c692954d21b48a2114b6a93698c21}\index{rockPaperScissors.h@{rockPaperScissors.h}!delete\_rockPaperScissors@{delete\_rockPaperScissors}}
+\index{delete\_rockPaperScissors@{delete\_rockPaperScissors}!rockPaperScissors.h@{rockPaperScissors.h}}
+\doxysubsubsection{\texorpdfstring{delete\_rockPaperScissors()}{delete\_rockPaperScissors()}}
+{\footnotesize\ttfamily \label{rock_paper_scissors_8h_aef9c692954d21b48a2114b6a93698c21} 
+void delete\+\_\+rock\+Paper\+Scissors (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_rock_paper_scissors}{Rock\+Paper\+Scissors}} \texorpdfstring{$\ast$}{*}}]{rock\+Paper\+Scissors}{}\end{DoxyParamCaption})}
+
+
+
+\doxylink{struct_rock_paper_scissors}{Rock\+Paper\+Scissors} destructor. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{rock_paper_scissors_8h_aef9c692954d21b48a2114b6a93698c21_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rock_paper_scissors_8h_aef9c692954d21b48a2114b6a93698c21_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rock_paper_scissors_8h_ae8af223aef0dbcc00fb65b3367fd1bde}\index{rockPaperScissors.h@{rockPaperScissors.h}!new\_rockPaperScissors@{new\_rockPaperScissors}}
+\index{new\_rockPaperScissors@{new\_rockPaperScissors}!rockPaperScissors.h@{rockPaperScissors.h}}
+\doxysubsubsection{\texorpdfstring{new\_rockPaperScissors()}{new\_rockPaperScissors()}}
+{\footnotesize\ttfamily \label{rock_paper_scissors_8h_ae8af223aef0dbcc00fb65b3367fd1bde} 
+\mbox{\hyperlink{struct_rock_paper_scissors}{Rock\+Paper\+Scissors}} \texorpdfstring{$\ast$}{*} new\+\_\+rock\+Paper\+Scissors (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new \doxylink{struct_rock_paper_scissors}{Rock\+Paper\+Scissors} "{}object"{} and returns a pointer to it. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rock_paper_scissors_8h_ae8af223aef0dbcc00fb65b3367fd1bde_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rock_paper_scissors_8h_ae8af223aef0dbcc00fb65b3367fd1bde_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rock_paper_scissors_8h_a534c05b09a49f0107b90d510b9b993a8}\index{rockPaperScissors.h@{rockPaperScissors.h}!rockPaperScissors\_get\_botChoice@{rockPaperScissors\_get\_botChoice}}
+\index{rockPaperScissors\_get\_botChoice@{rockPaperScissors\_get\_botChoice}!rockPaperScissors.h@{rockPaperScissors.h}}
+\doxysubsubsection{\texorpdfstring{rockPaperScissors\_get\_botChoice()}{rockPaperScissors\_get\_botChoice()}}
+{\footnotesize\ttfamily \label{rock_paper_scissors_8h_a534c05b09a49f0107b90d510b9b993a8} 
+\mbox{\hyperlink{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55}{collision\+\_\+type\+\_\+rps\+\_\+t}} rock\+Paper\+Scissors\+\_\+get\+\_\+bot\+Choice (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_rock_paper_scissors}{Rock\+Paper\+Scissors}} \texorpdfstring{$\ast$}{*}}]{rock\+Paper\+Scissors}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rock_paper_scissors_8h_a534c05b09a49f0107b90d510b9b993a8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rock_paper_scissors_8h_abfdd59148ad2d1907ba56a12a9baf5e5}\index{rockPaperScissors.h@{rockPaperScissors.h}!rockPaperScissors\_get\_cursor@{rockPaperScissors\_get\_cursor}}
+\index{rockPaperScissors\_get\_cursor@{rockPaperScissors\_get\_cursor}!rockPaperScissors.h@{rockPaperScissors.h}}
+\doxysubsubsection{\texorpdfstring{rockPaperScissors\_get\_cursor()}{rockPaperScissors\_get\_cursor()}}
+{\footnotesize\ttfamily \label{rock_paper_scissors_8h_abfdd59148ad2d1907ba56a12a9baf5e5} 
+\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*} rock\+Paper\+Scissors\+\_\+get\+\_\+cursor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_rock_paper_scissors}{Rock\+Paper\+Scissors}} \texorpdfstring{$\ast$}{*}}]{rock\+Paper\+Scissors}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rock_paper_scissors_8h_abfdd59148ad2d1907ba56a12a9baf5e5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rock_paper_scissors_8h_a10022e85f855aff396340c6d9f4a7acd}\index{rockPaperScissors.h@{rockPaperScissors.h}!rockPaperScissors\_get\_paperButton@{rockPaperScissors\_get\_paperButton}}
+\index{rockPaperScissors\_get\_paperButton@{rockPaperScissors\_get\_paperButton}!rockPaperScissors.h@{rockPaperScissors.h}}
+\doxysubsubsection{\texorpdfstring{rockPaperScissors\_get\_paperButton()}{rockPaperScissors\_get\_paperButton()}}
+{\footnotesize\ttfamily \label{rock_paper_scissors_8h_a10022e85f855aff396340c6d9f4a7acd} 
+\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*} rock\+Paper\+Scissors\+\_\+get\+\_\+paper\+Button (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_rock_paper_scissors}{Rock\+Paper\+Scissors}} \texorpdfstring{$\ast$}{*}}]{rock\+Paper\+Scissors}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rock_paper_scissors_8h_a10022e85f855aff396340c6d9f4a7acd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rock_paper_scissors_8h_abc04bcf42cfb3dfe97c615adf14fda74}\index{rockPaperScissors.h@{rockPaperScissors.h}!rockPaperScissors\_get\_quitButton@{rockPaperScissors\_get\_quitButton}}
+\index{rockPaperScissors\_get\_quitButton@{rockPaperScissors\_get\_quitButton}!rockPaperScissors.h@{rockPaperScissors.h}}
+\doxysubsubsection{\texorpdfstring{rockPaperScissors\_get\_quitButton()}{rockPaperScissors\_get\_quitButton()}}
+{\footnotesize\ttfamily \label{rock_paper_scissors_8h_abc04bcf42cfb3dfe97c615adf14fda74} 
+\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*} rock\+Paper\+Scissors\+\_\+get\+\_\+quit\+Button (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_rock_paper_scissors}{Rock\+Paper\+Scissors}} \texorpdfstring{$\ast$}{*}}]{rock\+Paper\+Scissors}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rock_paper_scissors_8h_abc04bcf42cfb3dfe97c615adf14fda74_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rock_paper_scissors_8h_ad44d8ec945fef78581b1a40583eb6dbb}\index{rockPaperScissors.h@{rockPaperScissors.h}!rockPaperScissors\_get\_reward@{rockPaperScissors\_get\_reward}}
+\index{rockPaperScissors\_get\_reward@{rockPaperScissors\_get\_reward}!rockPaperScissors.h@{rockPaperScissors.h}}
+\doxysubsubsection{\texorpdfstring{rockPaperScissors\_get\_reward()}{rockPaperScissors\_get\_reward()}}
+{\footnotesize\ttfamily \label{rock_paper_scissors_8h_ad44d8ec945fef78581b1a40583eb6dbb} 
+\mbox{\hyperlink{struct_item}{Item}} \texorpdfstring{$\ast$}{*} rock\+Paper\+Scissors\+\_\+get\+\_\+reward (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_rock_paper_scissors}{Rock\+Paper\+Scissors}} \texorpdfstring{$\ast$}{*}}]{rock\+Paper\+Scissors}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rock_paper_scissors_8h_ad44d8ec945fef78581b1a40583eb6dbb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rock_paper_scissors_8h_ae6c2d4873910e8567a7125d8860ef001}\index{rockPaperScissors.h@{rockPaperScissors.h}!rockPaperScissors\_get\_rockButton@{rockPaperScissors\_get\_rockButton}}
+\index{rockPaperScissors\_get\_rockButton@{rockPaperScissors\_get\_rockButton}!rockPaperScissors.h@{rockPaperScissors.h}}
+\doxysubsubsection{\texorpdfstring{rockPaperScissors\_get\_rockButton()}{rockPaperScissors\_get\_rockButton()}}
+{\footnotesize\ttfamily \label{rock_paper_scissors_8h_ae6c2d4873910e8567a7125d8860ef001} 
+\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*} rock\+Paper\+Scissors\+\_\+get\+\_\+rock\+Button (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_rock_paper_scissors}{Rock\+Paper\+Scissors}} \texorpdfstring{$\ast$}{*}}]{rock\+Paper\+Scissors}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rock_paper_scissors_8h_ae6c2d4873910e8567a7125d8860ef001_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rock_paper_scissors_8h_a7af556d2fa4fd243c297a9a5a0028850}\index{rockPaperScissors.h@{rockPaperScissors.h}!rockPaperScissors\_get\_rpsState@{rockPaperScissors\_get\_rpsState}}
+\index{rockPaperScissors\_get\_rpsState@{rockPaperScissors\_get\_rpsState}!rockPaperScissors.h@{rockPaperScissors.h}}
+\doxysubsubsection{\texorpdfstring{rockPaperScissors\_get\_rpsState()}{rockPaperScissors\_get\_rpsState()}}
+{\footnotesize\ttfamily \label{rock_paper_scissors_8h_a7af556d2fa4fd243c297a9a5a0028850} 
+\mbox{\hyperlink{rock_paper_scissors_8h_af4dec518cea1a857d488d60864d435a8}{rps\+\_\+state\+\_\+t}} rock\+Paper\+Scissors\+\_\+get\+\_\+rps\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_rock_paper_scissors}{Rock\+Paper\+Scissors}} \texorpdfstring{$\ast$}{*}}]{rock\+Paper\+Scissors}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rock_paper_scissors_8h_a7af556d2fa4fd243c297a9a5a0028850_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rock_paper_scissors_8h_aa61b2ee0ae8a1c04c5c1de887033dfd1}\index{rockPaperScissors.h@{rockPaperScissors.h}!rockPaperScissors\_get\_scissorsButton@{rockPaperScissors\_get\_scissorsButton}}
+\index{rockPaperScissors\_get\_scissorsButton@{rockPaperScissors\_get\_scissorsButton}!rockPaperScissors.h@{rockPaperScissors.h}}
+\doxysubsubsection{\texorpdfstring{rockPaperScissors\_get\_scissorsButton()}{rockPaperScissors\_get\_scissorsButton()}}
+{\footnotesize\ttfamily \label{rock_paper_scissors_8h_aa61b2ee0ae8a1c04c5c1de887033dfd1} 
+\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*} rock\+Paper\+Scissors\+\_\+get\+\_\+scissors\+Button (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_rock_paper_scissors}{Rock\+Paper\+Scissors}} \texorpdfstring{$\ast$}{*}}]{rock\+Paper\+Scissors}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rock_paper_scissors_8h_aa61b2ee0ae8a1c04c5c1de887033dfd1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rock_paper_scissors_8h_a1f13cbc23ab2d990164d65a0f773c050}\index{rockPaperScissors.h@{rockPaperScissors.h}!rockPaperScissors\_set\_botChoice@{rockPaperScissors\_set\_botChoice}}
+\index{rockPaperScissors\_set\_botChoice@{rockPaperScissors\_set\_botChoice}!rockPaperScissors.h@{rockPaperScissors.h}}
+\doxysubsubsection{\texorpdfstring{rockPaperScissors\_set\_botChoice()}{rockPaperScissors\_set\_botChoice()}}
+{\footnotesize\ttfamily \label{rock_paper_scissors_8h_a1f13cbc23ab2d990164d65a0f773c050} 
+void rock\+Paper\+Scissors\+\_\+set\+\_\+bot\+Choice (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_rock_paper_scissors}{Rock\+Paper\+Scissors}} \texorpdfstring{$\ast$}{*}}]{rock\+Paper\+Scissors}{, }\item[{\mbox{\hyperlink{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55}{collision\+\_\+type\+\_\+rps\+\_\+t}}}]{bot\+\_\+choice}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rock_paper_scissors_8h_a1f13cbc23ab2d990164d65a0f773c050_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rock_paper_scissors_8h_a93161e865485e818eb327f4ffbe55d4f}\index{rockPaperScissors.h@{rockPaperScissors.h}!rockPaperScissors\_set\_reward@{rockPaperScissors\_set\_reward}}
+\index{rockPaperScissors\_set\_reward@{rockPaperScissors\_set\_reward}!rockPaperScissors.h@{rockPaperScissors.h}}
+\doxysubsubsection{\texorpdfstring{rockPaperScissors\_set\_reward()}{rockPaperScissors\_set\_reward()}}
+{\footnotesize\ttfamily \label{rock_paper_scissors_8h_a93161e865485e818eb327f4ffbe55d4f} 
+void rock\+Paper\+Scissors\+\_\+set\+\_\+reward (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_rock_paper_scissors}{Rock\+Paper\+Scissors}} \texorpdfstring{$\ast$}{*}}]{rock\+Paper\+Scissors}{, }\item[{\mbox{\hyperlink{struct_item}{Item}} \texorpdfstring{$\ast$}{*}}]{reward}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rock_paper_scissors_8h_a93161e865485e818eb327f4ffbe55d4f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rock_paper_scissors_8h_a8c03d4ffd119e5936fd032b861743f93}\index{rockPaperScissors.h@{rockPaperScissors.h}!rockPaperScissors\_set\_rpsState@{rockPaperScissors\_set\_rpsState}}
+\index{rockPaperScissors\_set\_rpsState@{rockPaperScissors\_set\_rpsState}!rockPaperScissors.h@{rockPaperScissors.h}}
+\doxysubsubsection{\texorpdfstring{rockPaperScissors\_set\_rpsState()}{rockPaperScissors\_set\_rpsState()}}
+{\footnotesize\ttfamily \label{rock_paper_scissors_8h_a8c03d4ffd119e5936fd032b861743f93} 
+void rock\+Paper\+Scissors\+\_\+set\+\_\+rps\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_rock_paper_scissors}{Rock\+Paper\+Scissors}} \texorpdfstring{$\ast$}{*}}]{rock\+Paper\+Scissors}{, }\item[{\mbox{\hyperlink{rock_paper_scissors_8h_af4dec518cea1a857d488d60864d435a8}{rps\+\_\+state\+\_\+t}}}]{rps\+State}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rock_paper_scissors_8h_a8c03d4ffd119e5936fd032b861743f93_icgraph}
+\end{center}
+\end{figure}

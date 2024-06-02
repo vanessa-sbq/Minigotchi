@@ -1,0 +1,231 @@
+\doxysection{C\+:/\+Users/anton/\+Documents/lcom/labs/proj/src/controller/menus/name\+Minigotchi\+Controller.h File Reference}
+\hypertarget{name_minigotchi_controller_8h}{}\label{name_minigotchi_controller_8h}\index{C:/Users/anton/Documents/lcom/labs/proj/src/controller/menus/nameMinigotchiController.h@{C:/Users/anton/Documents/lcom/labs/proj/src/controller/menus/nameMinigotchiController.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include "{}../../model/state\+Models/name\+Minigotchi.\+h"{}}\newline
+{\ttfamily \#include "{}../../model/button.\+h"{}}\newline
+{\ttfamily \#include "{}../../model/cursor.\+h"{}}\newline
+{\ttfamily \#include "{}../../viewer/menus/name\+Minigotchi\+Viewer.\+h"{}}\newline
+{\ttfamily \#include "{}../../device\+\_\+controllers/kbc/keyboard\+Mappings.\+h"{}}\newline
+Include dependency graph for name\+Minigotchi\+Controller.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{name_minigotchi_controller_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{name_minigotchi_controller_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{name_minigotchi_controller_8h_a4cec76110b42ee32c49d41a42d1132e3}{collision\+\_\+type\+\_\+name\+Minigotchi\+\_\+t}} \{ \mbox{\hyperlink{name_minigotchi_controller_8h_a4cec76110b42ee32c49d41a42d1132e3aff87dbc7cee3bc52b3322d55ef79a3dc}{CONTINUE\+\_\+\+NAMEMINIGOTCHI}}
+, \mbox{\hyperlink{name_minigotchi_controller_8h_a4cec76110b42ee32c49d41a42d1132e3a677191aaaea6c6f9d2816031cece4de1}{QUIT\+\_\+\+NAMEMINIGOTCHI}}
+, \mbox{\hyperlink{name_minigotchi_controller_8h_a4cec76110b42ee32c49d41a42d1132e3a2df5e17f30e7b97e168266d93df75d15}{NOP\+\_\+\+NAMEMINIGOTCHI}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{name_minigotchi_controller_8h_a688c10b9d8fa03f8605f2cd5421cdcb6}{name\+Minigotchi\+Controller\+\_\+load\+\_\+name\+Minigotchi}} ()
+\begin{DoxyCompactList}\small\item\em Load the minigotchi naming screen (first time) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{name_minigotchi_controller_8h_af61a868f7f09f575ec80e9dc41a0086d}{name\+Minigotchi\+Controller\+\_\+check\+Collision}} (\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}sprite, int x, int y)
+\begin{DoxyCompactList}\small\item\em Function that checks sprite collisions with the cursor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{name_minigotchi_controller_8h_a4cec76110b42ee32c49d41a42d1132e3}{collision\+\_\+type\+\_\+name\+Minigotchi\+\_\+t}} \mbox{\hyperlink{name_minigotchi_controller_8h_a27d180cf155d41edd22a3dc0e0d11d78}{name\+Minigotchi\+Controller\+\_\+get\+Button\+Event}} ()
+\item 
+void \mbox{\hyperlink{name_minigotchi_controller_8h_ab7426dd209b1c14c708043d15da0102d}{name\+Minigotchi\+Controller\+\_\+set\+Button\+Event}} (\mbox{\hyperlink{name_minigotchi_controller_8h_a4cec76110b42ee32c49d41a42d1132e3}{collision\+\_\+type\+\_\+name\+Minigotchi\+\_\+t}} ct)
+\item 
+void \mbox{\hyperlink{name_minigotchi_controller_8h_af7d3eea8f776ecb6568fb6b92b5ccc91}{name\+Minigotchi\+\_\+set\+Key\+Released}} ()
+\item 
+void \mbox{\hyperlink{name_minigotchi_controller_8h_aa9284c2a1e15db8d817dafc4fb7f8bf9}{name\+Minigotchi\+Controller\+\_\+step}} (uint8\+\_\+t key\+Press)
+\begin{DoxyCompactList}\small\item\em Controller function that is called once every frame and updates / checks every action in the minigotchi naming screen. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{name_minigotchi_controller_8h_a201c8581195151cfd050909b35ab5a4c}{get\+Name\+Minigotchi\+Cursor}} ()
+\item 
+void \mbox{\hyperlink{name_minigotchi_controller_8h_ab00e1f7b6067825c6717ade642ef8be4}{set\+Name\+Minigotchi\+Cursor}} (\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*}cursor)
+\item 
+void \mbox{\hyperlink{name_minigotchi_controller_8h_a45bde122a3494e5af18c0662e46d1ba4}{name\+Minigotchi\+Controller\+\_\+delete\+\_\+name\+Minigotchi}} ()
+\begin{DoxyCompactList}\small\item\em Calls the minigotchi naming screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{name_minigotchi_controller_8h_a4cec76110b42ee32c49d41a42d1132e3}\index{nameMinigotchiController.h@{nameMinigotchiController.h}!collision\_type\_nameMinigotchi\_t@{collision\_type\_nameMinigotchi\_t}}
+\index{collision\_type\_nameMinigotchi\_t@{collision\_type\_nameMinigotchi\_t}!nameMinigotchiController.h@{nameMinigotchiController.h}}
+\doxysubsubsection{\texorpdfstring{collision\_type\_nameMinigotchi\_t}{collision\_type\_nameMinigotchi\_t}}
+{\footnotesize\ttfamily \label{name_minigotchi_controller_8h_a4cec76110b42ee32c49d41a42d1132e3} 
+enum \mbox{\hyperlink{name_minigotchi_controller_8h_a4cec76110b42ee32c49d41a42d1132e3}{collision\+\_\+type\+\_\+name\+Minigotchi\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CONTINUE\_NAMEMINIGOTCHI@{CONTINUE\_NAMEMINIGOTCHI}!nameMinigotchiController.h@{nameMinigotchiController.h}}\index{nameMinigotchiController.h@{nameMinigotchiController.h}!CONTINUE\_NAMEMINIGOTCHI@{CONTINUE\_NAMEMINIGOTCHI}}}\Hypertarget{name_minigotchi_controller_8h_a4cec76110b42ee32c49d41a42d1132e3aff87dbc7cee3bc52b3322d55ef79a3dc}\label{name_minigotchi_controller_8h_a4cec76110b42ee32c49d41a42d1132e3} 
+CONTINUE\+\_\+\+NAMEMINIGOTCHI&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QUIT\_NAMEMINIGOTCHI@{QUIT\_NAMEMINIGOTCHI}!nameMinigotchiController.h@{nameMinigotchiController.h}}\index{nameMinigotchiController.h@{nameMinigotchiController.h}!QUIT\_NAMEMINIGOTCHI@{QUIT\_NAMEMINIGOTCHI}}}\Hypertarget{name_minigotchi_controller_8h_a4cec76110b42ee32c49d41a42d1132e3a677191aaaea6c6f9d2816031cece4de1}\label{name_minigotchi_controller_8h_a4cec76110b42ee32c49d41a42d1132e3} 
+QUIT\+\_\+\+NAMEMINIGOTCHI&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NOP\_NAMEMINIGOTCHI@{NOP\_NAMEMINIGOTCHI}!nameMinigotchiController.h@{nameMinigotchiController.h}}\index{nameMinigotchiController.h@{nameMinigotchiController.h}!NOP\_NAMEMINIGOTCHI@{NOP\_NAMEMINIGOTCHI}}}\Hypertarget{name_minigotchi_controller_8h_a4cec76110b42ee32c49d41a42d1132e3a2df5e17f30e7b97e168266d93df75d15}\label{name_minigotchi_controller_8h_a4cec76110b42ee32c49d41a42d1132e3} 
+NOP\+\_\+\+NAMEMINIGOTCHI&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{name_minigotchi_controller_8h_a201c8581195151cfd050909b35ab5a4c}\index{nameMinigotchiController.h@{nameMinigotchiController.h}!getNameMinigotchiCursor@{getNameMinigotchiCursor}}
+\index{getNameMinigotchiCursor@{getNameMinigotchiCursor}!nameMinigotchiController.h@{nameMinigotchiController.h}}
+\doxysubsubsection{\texorpdfstring{getNameMinigotchiCursor()}{getNameMinigotchiCursor()}}
+{\footnotesize\ttfamily \label{name_minigotchi_controller_8h_a201c8581195151cfd050909b35ab5a4c} 
+\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*} get\+Name\+Minigotchi\+Cursor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{name_minigotchi_controller_8h_af7d3eea8f776ecb6568fb6b92b5ccc91}\index{nameMinigotchiController.h@{nameMinigotchiController.h}!nameMinigotchi\_setKeyReleased@{nameMinigotchi\_setKeyReleased}}
+\index{nameMinigotchi\_setKeyReleased@{nameMinigotchi\_setKeyReleased}!nameMinigotchiController.h@{nameMinigotchiController.h}}
+\doxysubsubsection{\texorpdfstring{nameMinigotchi\_setKeyReleased()}{nameMinigotchi\_setKeyReleased()}}
+{\footnotesize\ttfamily \label{name_minigotchi_controller_8h_af7d3eea8f776ecb6568fb6b92b5ccc91} 
+void name\+Minigotchi\+\_\+set\+Key\+Released (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{name_minigotchi_controller_8h_af7d3eea8f776ecb6568fb6b92b5ccc91_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{name_minigotchi_controller_8h_af61a868f7f09f575ec80e9dc41a0086d}\index{nameMinigotchiController.h@{nameMinigotchiController.h}!nameMinigotchiController\_checkCollision@{nameMinigotchiController\_checkCollision}}
+\index{nameMinigotchiController\_checkCollision@{nameMinigotchiController\_checkCollision}!nameMinigotchiController.h@{nameMinigotchiController.h}}
+\doxysubsubsection{\texorpdfstring{nameMinigotchiController\_checkCollision()}{nameMinigotchiController\_checkCollision()}}
+{\footnotesize\ttfamily \label{name_minigotchi_controller_8h_af61a868f7f09f575ec80e9dc41a0086d} 
+bool name\+Minigotchi\+Controller\+\_\+check\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}}]{sprite}{, }\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Function that checks sprite collisions with the cursor. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{name_minigotchi_controller_8h_af61a868f7f09f575ec80e9dc41a0086d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{name_minigotchi_controller_8h_af61a868f7f09f575ec80e9dc41a0086d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{name_minigotchi_controller_8h_a45bde122a3494e5af18c0662e46d1ba4}\index{nameMinigotchiController.h@{nameMinigotchiController.h}!nameMinigotchiController\_delete\_nameMinigotchi@{nameMinigotchiController\_delete\_nameMinigotchi}}
+\index{nameMinigotchiController\_delete\_nameMinigotchi@{nameMinigotchiController\_delete\_nameMinigotchi}!nameMinigotchiController.h@{nameMinigotchiController.h}}
+\doxysubsubsection{\texorpdfstring{nameMinigotchiController\_delete\_nameMinigotchi()}{nameMinigotchiController\_delete\_nameMinigotchi()}}
+{\footnotesize\ttfamily \label{name_minigotchi_controller_8h_a45bde122a3494e5af18c0662e46d1ba4} 
+void name\+Minigotchi\+Controller\+\_\+delete\+\_\+name\+Minigotchi (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Calls the minigotchi naming screen. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{name_minigotchi_controller_8h_a45bde122a3494e5af18c0662e46d1ba4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=323pt]{name_minigotchi_controller_8h_a45bde122a3494e5af18c0662e46d1ba4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{name_minigotchi_controller_8h_a27d180cf155d41edd22a3dc0e0d11d78}\index{nameMinigotchiController.h@{nameMinigotchiController.h}!nameMinigotchiController\_getButtonEvent@{nameMinigotchiController\_getButtonEvent}}
+\index{nameMinigotchiController\_getButtonEvent@{nameMinigotchiController\_getButtonEvent}!nameMinigotchiController.h@{nameMinigotchiController.h}}
+\doxysubsubsection{\texorpdfstring{nameMinigotchiController\_getButtonEvent()}{nameMinigotchiController\_getButtonEvent()}}
+{\footnotesize\ttfamily \label{name_minigotchi_controller_8h_a27d180cf155d41edd22a3dc0e0d11d78} 
+\mbox{\hyperlink{name_minigotchi_controller_8h_a4cec76110b42ee32c49d41a42d1132e3}{collision\+\_\+type\+\_\+name\+Minigotchi\+\_\+t}} name\+Minigotchi\+Controller\+\_\+get\+Button\+Event (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=323pt]{name_minigotchi_controller_8h_a27d180cf155d41edd22a3dc0e0d11d78_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{name_minigotchi_controller_8h_a688c10b9d8fa03f8605f2cd5421cdcb6}\index{nameMinigotchiController.h@{nameMinigotchiController.h}!nameMinigotchiController\_load\_nameMinigotchi@{nameMinigotchiController\_load\_nameMinigotchi}}
+\index{nameMinigotchiController\_load\_nameMinigotchi@{nameMinigotchiController\_load\_nameMinigotchi}!nameMinigotchiController.h@{nameMinigotchiController.h}}
+\doxysubsubsection{\texorpdfstring{nameMinigotchiController\_load\_nameMinigotchi()}{nameMinigotchiController\_load\_nameMinigotchi()}}
+{\footnotesize\ttfamily \label{name_minigotchi_controller_8h_a688c10b9d8fa03f8605f2cd5421cdcb6} 
+void name\+Minigotchi\+Controller\+\_\+load\+\_\+name\+Minigotchi (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Load the minigotchi naming screen (first time) 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{name_minigotchi_controller_8h_a688c10b9d8fa03f8605f2cd5421cdcb6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{name_minigotchi_controller_8h_a688c10b9d8fa03f8605f2cd5421cdcb6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{name_minigotchi_controller_8h_ab7426dd209b1c14c708043d15da0102d}\index{nameMinigotchiController.h@{nameMinigotchiController.h}!nameMinigotchiController\_setButtonEvent@{nameMinigotchiController\_setButtonEvent}}
+\index{nameMinigotchiController\_setButtonEvent@{nameMinigotchiController\_setButtonEvent}!nameMinigotchiController.h@{nameMinigotchiController.h}}
+\doxysubsubsection{\texorpdfstring{nameMinigotchiController\_setButtonEvent()}{nameMinigotchiController\_setButtonEvent()}}
+{\footnotesize\ttfamily \label{name_minigotchi_controller_8h_ab7426dd209b1c14c708043d15da0102d} 
+void name\+Minigotchi\+Controller\+\_\+set\+Button\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{name_minigotchi_controller_8h_a4cec76110b42ee32c49d41a42d1132e3}{collision\+\_\+type\+\_\+name\+Minigotchi\+\_\+t}}}]{ct}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=323pt]{name_minigotchi_controller_8h_ab7426dd209b1c14c708043d15da0102d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{name_minigotchi_controller_8h_aa9284c2a1e15db8d817dafc4fb7f8bf9}\index{nameMinigotchiController.h@{nameMinigotchiController.h}!nameMinigotchiController\_step@{nameMinigotchiController\_step}}
+\index{nameMinigotchiController\_step@{nameMinigotchiController\_step}!nameMinigotchiController.h@{nameMinigotchiController.h}}
+\doxysubsubsection{\texorpdfstring{nameMinigotchiController\_step()}{nameMinigotchiController\_step()}}
+{\footnotesize\ttfamily \label{name_minigotchi_controller_8h_aa9284c2a1e15db8d817dafc4fb7f8bf9} 
+void name\+Minigotchi\+Controller\+\_\+step (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{key\+Press}{}\end{DoxyParamCaption})}
+
+
+
+Controller function that is called once every frame and updates / checks every action in the minigotchi naming screen. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{name_minigotchi_controller_8h_aa9284c2a1e15db8d817dafc4fb7f8bf9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{name_minigotchi_controller_8h_aa9284c2a1e15db8d817dafc4fb7f8bf9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{name_minigotchi_controller_8h_ab00e1f7b6067825c6717ade642ef8be4}\index{nameMinigotchiController.h@{nameMinigotchiController.h}!setNameMinigotchiCursor@{setNameMinigotchiCursor}}
+\index{setNameMinigotchiCursor@{setNameMinigotchiCursor}!nameMinigotchiController.h@{nameMinigotchiController.h}}
+\doxysubsubsection{\texorpdfstring{setNameMinigotchiCursor()}{setNameMinigotchiCursor()}}
+{\footnotesize\ttfamily \label{name_minigotchi_controller_8h_ab00e1f7b6067825c6717ade642ef8be4} 
+void set\+Name\+Minigotchi\+Cursor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*}}]{cursor}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{name_minigotchi_controller_8h_ab00e1f7b6067825c6717ade642ef8be4_icgraph}
+\end{center}
+\end{figure}

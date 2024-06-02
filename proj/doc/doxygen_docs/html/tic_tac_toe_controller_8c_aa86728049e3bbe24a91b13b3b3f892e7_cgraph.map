@@ -1,0 +1,21 @@
+<map id="currentPlayerSetPosition" name="currentPlayerSetPosition">
+<area shape="rect" id="Node000001" title="Sets the board position of the current player." alt="" coords="5,148,171,175"/>
+<area shape="rect" id="Node000002" href="$uart_8c.html#a1569a1b9d1a28cfb75fee4216bc70224" title="Functions for TX Side." alt="" coords="256,5,375,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,146,147,95,180,66,217,42,240,32,242,37,220,46,183,70,150,99,103,149"/>
+<area shape="rect" id="Node000004" href="$gui_drawer_8c.html#a7592194eb7112ccb6d48a0bbe2271055" title="Switches the background from an index (We are using buffers to make the game faster)" alt="" coords="252,56,379,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="111,145,159,119,218,92,238,85,240,90,220,97,162,124,114,150"/>
+<area shape="rect" id="Node000007" href="$tic_tac_toe_8c.html#a131ce727217fc3b92e22de565500403b" title=" " alt="" coords="219,107,412,149"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="171,147,203,142,203,147,171,152"/>
+<area shape="rect" id="Node000008" href="$tic_tac_toe_8c.html#ab5abeaddbea086d622333c02c991c76a" title=" " alt="" coords="224,173,407,216"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="171,171,209,176,208,182,171,176"/>
+<area shape="rect" id="Node000009" href="$tic_tac_toe_8c.html#a4711f9ecef4cb505fb653f612853846e" title=" " alt="" coords="219,240,412,283"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="115,173,220,226,234,232,232,236,218,230,112,178"/>
+<area shape="rect" id="Node000010" href="$tic_tac_toe_8c.html#a94f1070d3b1a40283dccad237663c249" title=" " alt="" coords="246,307,385,333"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="101,173,147,231,181,264,220,292,232,299,230,303,217,297,178,268,144,235,97,177"/>
+<area shape="rect" id="Node000003" href="$utils_8c.html#a2b56f50ba159e9d5115ed1a75eff15d9" title="Invokes sys_inb() system call but reads the value into a uint8_t variable." alt="" coords="483,5,573,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="375,16,468,16,468,21,375,21"/>
+<area shape="rect" id="Node000005" href="$video_8c.html#af1e5967f33e339c4c49724da43d418ec" title="Get a buffer from a sprite." alt="" coords="460,56,596,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="379,67,445,67,445,72,379,72"/>
+<area shape="rect" id="Node000006" href="$video_8c.html#aed5b07d4a09b1fa1fd530659686e15d0" title="Get the number of bytes in a pixel." alt="" coords="644,56,767,83"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="597,67,629,67,629,72,597,72"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="rockPaperScissors_get_botChoice" name="rockPaperScissors_get_botChoice">
+<area shape="rect" id="Node000001" title=" " alt="" coords="414,5,570,48"/>
+<area shape="rect" id="Node000002" href="$rock_paper_scissors_viewer_8c.html#a769d9078f52fcb28fa5c8d2831f44f04" title="Calls draw function of each element the rock paper scissors game contains (also draws the GUI element..." alt="" coords="162,13,366,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="399,29,367,29,367,24,399,24"/>
+<area shape="rect" id="Node000003" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Project main function that starts the game." alt="" coords="5,13,114,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="146,29,114,29,114,24,146,24"/>
+</map>

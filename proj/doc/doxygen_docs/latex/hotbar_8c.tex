@@ -1,0 +1,211 @@
+\doxysection{C\+:/\+Users/anton/\+Documents/lcom/labs/proj/src/model/hotbar.c File Reference}
+\hypertarget{hotbar_8c}{}\label{hotbar_8c}\index{C:/Users/anton/Documents/lcom/labs/proj/src/model/hotbar.c@{C:/Users/anton/Documents/lcom/labs/proj/src/model/hotbar.c}}
+{\ttfamily \#include "{}hotbar.\+h"{}}\newline
+Include dependency graph for hotbar.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{hotbar_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{hotbar_8c_af2f2d414d5b31cd1c60a888f7e7495db}{HOTBAR\+\_\+\+START\+\_\+\+SLOT\+\_\+X}}~228
+\item 
+\#define \mbox{\hyperlink{hotbar_8c_a4f7309b7283c64f906825af822c667f0}{HOTBAR\+\_\+\+SLOT\+\_\+\+WIDTH}}~80
+\item 
+\#define \mbox{\hyperlink{hotbar_8c_ab50964587a8b49cd4de5f28c7058af3d}{HOTBAR\+\_\+\+START\+\_\+\+SLOT\+\_\+Y}}~765
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_hotbar}{Hotbar}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{hotbar_8c_abf5f346ae287c1ea507041ac7f6a5937}{new\+\_\+hotbar}} (uint16\+\_\+t x, uint16\+\_\+t y, uint8\+\_\+t highlighted)
+\begin{DoxyCompactList}\small\item\em Creates a new hotbar "{}object"{} and returns a pointer to it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{hotbar_8c_a5918cc623692c4eee77035428bc992f5}{draw\+Hotbar}} (\mbox{\hyperlink{struct_hotbar}{Hotbar}} \texorpdfstring{$\ast$}{*}hotbar)
+\begin{DoxyCompactList}\small\item\em Draws a hotbar. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{hotbar_8c_a1e4ffe62e2430b3aa4c07d512bcbd05b}{draw\+\_\+slider}} (\mbox{\hyperlink{struct_hotbar}{Hotbar}} \texorpdfstring{$\ast$}{*}hotbar)
+\begin{DoxyCompactList}\small\item\em Draws a hotbar slider. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{hotbar_8c_a31f7409d6d138ad993ad4ea7c439c347}{hotbar\+\_\+update\+\_\+items}} (\mbox{\hyperlink{struct_hotbar}{Hotbar}} \texorpdfstring{$\ast$}{*}hotbar, int \texorpdfstring{$\ast$}{*}item\+\_\+array)
+\begin{DoxyCompactList}\small\item\em Updates the items in a hotbar. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{hotbar_8c_a01102fa976f22815d30eeb919324eb04}{hotbar\+\_\+get\+\_\+highlighted}} (\mbox{\hyperlink{struct_hotbar}{Hotbar}} \texorpdfstring{$\ast$}{*}hotbar)
+\item 
+\mbox{\hyperlink{struct_item}{Item}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{hotbar_8c_a0276e2a4737f43b589695a48a0166d9e}{hotbar\+\_\+get\+\_\+highlighted\+\_\+item}} (\mbox{\hyperlink{struct_hotbar}{Hotbar}} \texorpdfstring{$\ast$}{*}hotbar)
+\item 
+bool \mbox{\hyperlink{hotbar_8c_aa1f2913112d1edf48732ef8e33567fea}{hotbar\+\_\+is\+\_\+hidden}} (\mbox{\hyperlink{struct_hotbar}{Hotbar}} \texorpdfstring{$\ast$}{*}hotbar)
+\item 
+void \mbox{\hyperlink{hotbar_8c_a02ccec23f9cd35024a194296329061ce}{hotbar\+\_\+set\+\_\+highlighted}} (\mbox{\hyperlink{struct_hotbar}{Hotbar}} \texorpdfstring{$\ast$}{*}hotbar, uint8\+\_\+t highlighted)
+\item 
+void \mbox{\hyperlink{hotbar_8c_af4e4fcda351123e7a2662717d9c97633}{hotbar\+\_\+set\+\_\+items}} (\mbox{\hyperlink{struct_hotbar}{Hotbar}} \texorpdfstring{$\ast$}{*}hotbar, \mbox{\hyperlink{struct_item}{Item}} \texorpdfstring{$\ast$}{*}item\+\_\+array)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{hotbar_8c_a4f7309b7283c64f906825af822c667f0}\index{hotbar.c@{hotbar.c}!HOTBAR\_SLOT\_WIDTH@{HOTBAR\_SLOT\_WIDTH}}
+\index{HOTBAR\_SLOT\_WIDTH@{HOTBAR\_SLOT\_WIDTH}!hotbar.c@{hotbar.c}}
+\doxysubsubsection{\texorpdfstring{HOTBAR\_SLOT\_WIDTH}{HOTBAR\_SLOT\_WIDTH}}
+{\footnotesize\ttfamily \label{hotbar_8c_a4f7309b7283c64f906825af822c667f0} 
+\#define HOTBAR\+\_\+\+SLOT\+\_\+\+WIDTH~80}
+
+\Hypertarget{hotbar_8c_af2f2d414d5b31cd1c60a888f7e7495db}\index{hotbar.c@{hotbar.c}!HOTBAR\_START\_SLOT\_X@{HOTBAR\_START\_SLOT\_X}}
+\index{HOTBAR\_START\_SLOT\_X@{HOTBAR\_START\_SLOT\_X}!hotbar.c@{hotbar.c}}
+\doxysubsubsection{\texorpdfstring{HOTBAR\_START\_SLOT\_X}{HOTBAR\_START\_SLOT\_X}}
+{\footnotesize\ttfamily \label{hotbar_8c_af2f2d414d5b31cd1c60a888f7e7495db} 
+\#define HOTBAR\+\_\+\+START\+\_\+\+SLOT\+\_\+X~228}
+
+\Hypertarget{hotbar_8c_ab50964587a8b49cd4de5f28c7058af3d}\index{hotbar.c@{hotbar.c}!HOTBAR\_START\_SLOT\_Y@{HOTBAR\_START\_SLOT\_Y}}
+\index{HOTBAR\_START\_SLOT\_Y@{HOTBAR\_START\_SLOT\_Y}!hotbar.c@{hotbar.c}}
+\doxysubsubsection{\texorpdfstring{HOTBAR\_START\_SLOT\_Y}{HOTBAR\_START\_SLOT\_Y}}
+{\footnotesize\ttfamily \label{hotbar_8c_ab50964587a8b49cd4de5f28c7058af3d} 
+\#define HOTBAR\+\_\+\+START\+\_\+\+SLOT\+\_\+Y~765}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{hotbar_8c_a1e4ffe62e2430b3aa4c07d512bcbd05b}\index{hotbar.c@{hotbar.c}!draw\_slider@{draw\_slider}}
+\index{draw\_slider@{draw\_slider}!hotbar.c@{hotbar.c}}
+\doxysubsubsection{\texorpdfstring{draw\_slider()}{draw\_slider()}}
+{\footnotesize\ttfamily \label{hotbar_8c_a1e4ffe62e2430b3aa4c07d512bcbd05b} 
+void draw\+\_\+slider (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_hotbar}{Hotbar}} \texorpdfstring{$\ast$}{*}}]{hotbar}{}\end{DoxyParamCaption})}
+
+
+
+Draws a hotbar slider. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{hotbar_8c_a1e4ffe62e2430b3aa4c07d512bcbd05b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{hotbar_8c_a1e4ffe62e2430b3aa4c07d512bcbd05b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{hotbar_8c_a5918cc623692c4eee77035428bc992f5}\index{hotbar.c@{hotbar.c}!drawHotbar@{drawHotbar}}
+\index{drawHotbar@{drawHotbar}!hotbar.c@{hotbar.c}}
+\doxysubsubsection{\texorpdfstring{drawHotbar()}{drawHotbar()}}
+{\footnotesize\ttfamily \label{hotbar_8c_a5918cc623692c4eee77035428bc992f5} 
+void draw\+Hotbar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_hotbar}{Hotbar}} \texorpdfstring{$\ast$}{*}}]{hotbar}{}\end{DoxyParamCaption})}
+
+
+
+Draws a hotbar. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{hotbar_8c_a5918cc623692c4eee77035428bc992f5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{hotbar_8c_a5918cc623692c4eee77035428bc992f5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{hotbar_8c_a01102fa976f22815d30eeb919324eb04}\index{hotbar.c@{hotbar.c}!hotbar\_get\_highlighted@{hotbar\_get\_highlighted}}
+\index{hotbar\_get\_highlighted@{hotbar\_get\_highlighted}!hotbar.c@{hotbar.c}}
+\doxysubsubsection{\texorpdfstring{hotbar\_get\_highlighted()}{hotbar\_get\_highlighted()}}
+{\footnotesize\ttfamily \label{hotbar_8c_a01102fa976f22815d30eeb919324eb04} 
+uint8\+\_\+t hotbar\+\_\+get\+\_\+highlighted (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_hotbar}{Hotbar}} \texorpdfstring{$\ast$}{*}}]{hotbar}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{hotbar_8c_a01102fa976f22815d30eeb919324eb04_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{hotbar_8c_a0276e2a4737f43b589695a48a0166d9e}\index{hotbar.c@{hotbar.c}!hotbar\_get\_highlighted\_item@{hotbar\_get\_highlighted\_item}}
+\index{hotbar\_get\_highlighted\_item@{hotbar\_get\_highlighted\_item}!hotbar.c@{hotbar.c}}
+\doxysubsubsection{\texorpdfstring{hotbar\_get\_highlighted\_item()}{hotbar\_get\_highlighted\_item()}}
+{\footnotesize\ttfamily \label{hotbar_8c_a0276e2a4737f43b589695a48a0166d9e} 
+\mbox{\hyperlink{struct_item}{Item}} \texorpdfstring{$\ast$}{*} hotbar\+\_\+get\+\_\+highlighted\+\_\+item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_hotbar}{Hotbar}} \texorpdfstring{$\ast$}{*}}]{hotbar}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{hotbar_8c_a0276e2a4737f43b589695a48a0166d9e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{hotbar_8c_aa1f2913112d1edf48732ef8e33567fea}\index{hotbar.c@{hotbar.c}!hotbar\_is\_hidden@{hotbar\_is\_hidden}}
+\index{hotbar\_is\_hidden@{hotbar\_is\_hidden}!hotbar.c@{hotbar.c}}
+\doxysubsubsection{\texorpdfstring{hotbar\_is\_hidden()}{hotbar\_is\_hidden()}}
+{\footnotesize\ttfamily \label{hotbar_8c_aa1f2913112d1edf48732ef8e33567fea} 
+bool hotbar\+\_\+is\+\_\+hidden (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_hotbar}{Hotbar}} \texorpdfstring{$\ast$}{*}}]{hotbar}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{hotbar_8c_aa1f2913112d1edf48732ef8e33567fea_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{hotbar_8c_a02ccec23f9cd35024a194296329061ce}\index{hotbar.c@{hotbar.c}!hotbar\_set\_highlighted@{hotbar\_set\_highlighted}}
+\index{hotbar\_set\_highlighted@{hotbar\_set\_highlighted}!hotbar.c@{hotbar.c}}
+\doxysubsubsection{\texorpdfstring{hotbar\_set\_highlighted()}{hotbar\_set\_highlighted()}}
+{\footnotesize\ttfamily \label{hotbar_8c_a02ccec23f9cd35024a194296329061ce} 
+void hotbar\+\_\+set\+\_\+highlighted (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_hotbar}{Hotbar}} \texorpdfstring{$\ast$}{*}}]{hotbar}{, }\item[{uint8\+\_\+t}]{highlighted}{}\end{DoxyParamCaption})}
+
+\Hypertarget{hotbar_8c_af4e4fcda351123e7a2662717d9c97633}\index{hotbar.c@{hotbar.c}!hotbar\_set\_items@{hotbar\_set\_items}}
+\index{hotbar\_set\_items@{hotbar\_set\_items}!hotbar.c@{hotbar.c}}
+\doxysubsubsection{\texorpdfstring{hotbar\_set\_items()}{hotbar\_set\_items()}}
+{\footnotesize\ttfamily \label{hotbar_8c_af4e4fcda351123e7a2662717d9c97633} 
+void hotbar\+\_\+set\+\_\+items (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_hotbar}{Hotbar}} \texorpdfstring{$\ast$}{*}}]{hotbar}{, }\item[{\mbox{\hyperlink{struct_item}{Item}} \texorpdfstring{$\ast$}{*}}]{item\+\_\+array}{}\end{DoxyParamCaption})}
+
+\Hypertarget{hotbar_8c_a31f7409d6d138ad993ad4ea7c439c347}\index{hotbar.c@{hotbar.c}!hotbar\_update\_items@{hotbar\_update\_items}}
+\index{hotbar\_update\_items@{hotbar\_update\_items}!hotbar.c@{hotbar.c}}
+\doxysubsubsection{\texorpdfstring{hotbar\_update\_items()}{hotbar\_update\_items()}}
+{\footnotesize\ttfamily \label{hotbar_8c_a31f7409d6d138ad993ad4ea7c439c347} 
+void hotbar\+\_\+update\+\_\+items (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_hotbar}{Hotbar}} \texorpdfstring{$\ast$}{*}}]{hotbar}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{item\+\_\+array}{}\end{DoxyParamCaption})}
+
+
+
+Updates the items in a hotbar. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{hotbar_8c_a31f7409d6d138ad993ad4ea7c439c347_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{hotbar_8c_a31f7409d6d138ad993ad4ea7c439c347_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{hotbar_8c_abf5f346ae287c1ea507041ac7f6a5937}\index{hotbar.c@{hotbar.c}!new\_hotbar@{new\_hotbar}}
+\index{new\_hotbar@{new\_hotbar}!hotbar.c@{hotbar.c}}
+\doxysubsubsection{\texorpdfstring{new\_hotbar()}{new\_hotbar()}}
+{\footnotesize\ttfamily \label{hotbar_8c_abf5f346ae287c1ea507041ac7f6a5937} 
+\mbox{\hyperlink{struct_hotbar}{Hotbar}} \texorpdfstring{$\ast$}{*} new\+\_\+hotbar (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x}{, }\item[{uint16\+\_\+t}]{y}{, }\item[{uint8\+\_\+t}]{highlighted}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new hotbar "{}object"{} and returns a pointer to it. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{hotbar_8c_abf5f346ae287c1ea507041ac7f6a5937_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{hotbar_8c_abf5f346ae287c1ea507041ac7f6a5937_icgraph}
+\end{center}
+\end{figure}

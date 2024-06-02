@@ -1,0 +1,7 @@
+<map id="draw_button" name="draw_button">
+<area shape="rect" id="Node000001" title="Draws a button." alt="" coords="5,5,97,32"/>
+<area shape="rect" id="Node000002" href="$gui_drawer_8c.html#a3fc1965bb7f45fd72fff8a402c507186" title="Function responsible for drawing the sprites on the screen." alt="" coords="145,5,227,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,16,129,16,129,21,97,21"/>
+<area shape="rect" id="Node000003" href="$video_8c.html#a6091a4bd04596e6e8e39b7dee1e1b118" title="Draws a pixel on the current back buffer." alt="" coords="275,5,352,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="227,16,259,16,259,21,227,21"/>
+</map>

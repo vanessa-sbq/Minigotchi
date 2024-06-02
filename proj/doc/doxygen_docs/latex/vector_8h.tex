@@ -1,0 +1,127 @@
+\doxysection{C\+:/\+Users/anton/\+Documents/lcom/labs/proj/src/utilities/vector.h File Reference}
+\hypertarget{vector_8h}{}\label{vector_8h}\index{C:/Users/anton/Documents/lcom/labs/proj/src/utilities/vector.h@{C:/Users/anton/Documents/lcom/labs/proj/src/utilities/vector.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include "{}../viewer/gui\+Drawer.\+h"{}}\newline
+Include dependency graph for vector.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vector_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vector_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_vector}{Vector}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{vector_8h_a235297bbf887555f05872f20b768b4b7}{init\+\_\+vector}} (size\+\_\+t initial\+\_\+capacity)
+\item 
+void \mbox{\hyperlink{vector_8h_a964501cdcea3b8689cbe9a60f6a81f2a}{resize\+\_\+vector}} (\mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*}vec, size\+\_\+t new\+\_\+capacity)
+\item 
+void \mbox{\hyperlink{vector_8h_a8135f31d24e776f34c1e8bddbc645a55}{push\+\_\+back}} (\mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*}vec, uint8\+\_\+t unsigned\+Int)
+\item 
+void \mbox{\hyperlink{vector_8h_a6b949779efddb9f30b603f42e3e40a13}{remove\+\_\+at}} (\mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*}vec, size\+\_\+t index)
+\item 
+void \mbox{\hyperlink{vector_8h_a198417967ef24ada410abbb475e6966d}{free\+\_\+vector}} (\mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*}vec)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{vector_8h_a198417967ef24ada410abbb475e6966d}\index{vector.h@{vector.h}!free\_vector@{free\_vector}}
+\index{free\_vector@{free\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{free\_vector()}{free\_vector()}}
+{\footnotesize\ttfamily \label{vector_8h_a198417967ef24ada410abbb475e6966d} 
+void free\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*}}]{vec}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vector_8h_a198417967ef24ada410abbb475e6966d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vector_8h_a235297bbf887555f05872f20b768b4b7}\index{vector.h@{vector.h}!init\_vector@{init\_vector}}
+\index{init\_vector@{init\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{init\_vector()}{init\_vector()}}
+{\footnotesize\ttfamily \label{vector_8h_a235297bbf887555f05872f20b768b4b7} 
+\mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*} init\+\_\+vector (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{initial\+\_\+capacity}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vector_8h_a235297bbf887555f05872f20b768b4b7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vector_8h_a8135f31d24e776f34c1e8bddbc645a55}\index{vector.h@{vector.h}!push\_back@{push\_back}}
+\index{push\_back@{push\_back}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{push\_back()}{push\_back()}}
+{\footnotesize\ttfamily \label{vector_8h_a8135f31d24e776f34c1e8bddbc645a55} 
+void push\+\_\+back (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*}}]{vec}{, }\item[{uint8\+\_\+t}]{unsigned\+Int}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vector_8h_a8135f31d24e776f34c1e8bddbc645a55_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vector_8h_a8135f31d24e776f34c1e8bddbc645a55_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vector_8h_a6b949779efddb9f30b603f42e3e40a13}\index{vector.h@{vector.h}!remove\_at@{remove\_at}}
+\index{remove\_at@{remove\_at}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{remove\_at()}{remove\_at()}}
+{\footnotesize\ttfamily \label{vector_8h_a6b949779efddb9f30b603f42e3e40a13} 
+void remove\+\_\+at (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*}}]{vec}{, }\item[{size\+\_\+t}]{index}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{vector_8h_a6b949779efddb9f30b603f42e3e40a13_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vector_8h_a6b949779efddb9f30b603f42e3e40a13_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vector_8h_a964501cdcea3b8689cbe9a60f6a81f2a}\index{vector.h@{vector.h}!resize\_vector@{resize\_vector}}
+\index{resize\_vector@{resize\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{resize\_vector()}{resize\_vector()}}
+{\footnotesize\ttfamily \label{vector_8h_a964501cdcea3b8689cbe9a60f6a81f2a} 
+void resize\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*}}]{vec}{, }\item[{size\+\_\+t}]{new\+\_\+capacity}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{vector_8h_a964501cdcea3b8689cbe9a60f6a81f2a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vector_8h_a964501cdcea3b8689cbe9a60f6a81f2a_icgraph}
+\end{center}
+\end{figure}

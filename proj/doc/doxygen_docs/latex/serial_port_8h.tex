@@ -1,0 +1,287 @@
+\doxysection{C\+:/\+Users/anton/\+Documents/lcom/labs/proj/src/device\+\_\+controllers/uart/serial\+Port.h File Reference}
+\hypertarget{serial_port_8h}{}\label{serial_port_8h}\index{C:/Users/anton/Documents/lcom/labs/proj/src/device\_controllers/uart/serialPort.h@{C:/Users/anton/Documents/lcom/labs/proj/src/device\_controllers/uart/serialPort.h}}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{serial_port_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{serial_port_8h_ac08f8f916661bb5fc606373bea93d274}{SERIAL\+\_\+\+PORT}}~0x3\+F8
+\item 
+\#define \mbox{\hyperlink{serial_port_8h_a79f99a14b7f87839645eddb22eb70c31}{SERIAL\+\_\+\+IRQ\+\_\+1}}~4
+\item 
+\#define \mbox{\hyperlink{serial_port_8h_a6f133f77a2d70df9bc976a076b045a46}{RECEIVE\+\_\+\+BUFFER}}~0x00
+\item 
+\#define \mbox{\hyperlink{serial_port_8h_a5da87995b99c1404f41162b00f1677ca}{TRANSMIT\+\_\+\+HOLD}}~0x00
+\item 
+\#define \mbox{\hyperlink{serial_port_8h_acf43057fc38f77d20456c074909ba772}{INTERRUPT\+\_\+\+ENABLE}}~0x01
+\item 
+\#define \mbox{\hyperlink{serial_port_8h_acaccd2a518171153768710c6b8ff0232}{INTERRUPT\+\_\+\+ID}}~0x02
+\item 
+\#define \mbox{\hyperlink{serial_port_8h_a6d79b1594c06723e6f19e7f9f3249a5e}{FIFO\+\_\+\+CONTROL}}~0x02
+\item 
+\#define \mbox{\hyperlink{serial_port_8h_ab3314d02e499e5a5e3188ce7fe741abc}{LINE\+\_\+\+CONTROL}}~0x03
+\item 
+\#define \mbox{\hyperlink{serial_port_8h_a449a6abb227c6ee0a5ca562550dc5651}{MODEM\+\_\+\+CONTROL}}~0x04
+\item 
+\#define \mbox{\hyperlink{serial_port_8h_a57842fefd7fa676c36779e4f43ac6cc0}{LINE\+\_\+\+STATUS}}~0x05
+\item 
+\#define \mbox{\hyperlink{serial_port_8h_a6513628ede18301c0857892dab0ee4a9}{MODEM\+\_\+\+STATUS}}~0x06
+\item 
+\#define \mbox{\hyperlink{serial_port_8h_aa214bb53cfaaf6b164ece6df54f30347}{SCRATCH\+\_\+\+REG}}~0x07
+\item 
+\#define \mbox{\hyperlink{serial_port_8h_a3c0cbd54ba8b26f009b38ab1fac3c384}{DIV\+\_\+\+LATCH\+\_\+\+LSB}}~\mbox{\hyperlink{serial_port_8h_ac08f8f916661bb5fc606373bea93d274}{SERIAL\+\_\+\+PORT}} 0x00
+\item 
+\#define \mbox{\hyperlink{serial_port_8h_a8a49b1370ed62456c149745442f0b40f}{DIV\+\_\+\+LATCH\+\_\+\+MSB}}~\mbox{\hyperlink{serial_port_8h_ac08f8f916661bb5fc606373bea93d274}{SERIAL\+\_\+\+PORT}} 0x01
+\item 
+\#define \mbox{\hyperlink{serial_port_8h_ae6e9a941061832e3150804bf169a2e97}{LSR\+\_\+\+DATA\+\_\+\+READY}}~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(0)
+\item 
+\#define \mbox{\hyperlink{serial_port_8h_a1a2e230078e0423a6f7681d30d8e3798}{LSR\+\_\+\+OVERRUN\+\_\+\+ERROR}}~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(1)
+\item 
+\#define \mbox{\hyperlink{serial_port_8h_a33db06ef4a01ba3df88ea1ff7255032d}{LSR\+\_\+\+PARITY\+\_\+\+ERROR}}~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(2)
+\item 
+\#define \mbox{\hyperlink{serial_port_8h_a3b8c453276843a913d454684a4069a58}{LSR\+\_\+\+FRAMING\+\_\+\+ERROR}}~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(3)
+\item 
+\#define \mbox{\hyperlink{serial_port_8h_a7627097cd345712b52b14a51fbb9356a}{LSR\+\_\+\+BREAK\+\_\+\+INTERRUPT}}~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(4)
+\item 
+\#define \mbox{\hyperlink{serial_port_8h_a764c6e57c1e4f6b57460b5574969ca81}{LSR\+\_\+\+THR\+\_\+\+EMPTY}}~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(5)
+\item 
+\#define \mbox{\hyperlink{serial_port_8h_ad8281a193d2b26d4c72a14c2747c37fe}{LSR\+\_\+\+TSR\+\_\+\+EMPTY}}~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(6)
+\item 
+\#define \mbox{\hyperlink{serial_port_8h_a6b748eb460e40c2a551437646e7bb1e4}{LSR\+\_\+\+FIFO\+\_\+\+ERROR}}~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(7)
+\item 
+\#define \mbox{\hyperlink{serial_port_8h_a6c5d701a357a0d8f3133872957347029}{IER\+\_\+\+DATA\+\_\+\+AVAIL\+\_\+\+INT}}~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(0)
+\item 
+\#define \mbox{\hyperlink{serial_port_8h_aaa31e89ca5dcdf5a8c9b0c32fde127f3}{IER\+\_\+\+THR\+\_\+\+EMPTY\+\_\+\+INT}}~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(1)
+\item 
+\#define \mbox{\hyperlink{serial_port_8h_affdc585f4be3071b5326bf12e3d9bf6d}{IER\+\_\+\+LINE\+\_\+\+STATUS\+\_\+\+INT}}~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(2)
+\item 
+\#define \mbox{\hyperlink{serial_port_8h_ac1d90a69045d416f6766ca7884532bc1}{IER\+\_\+\+MODEM\+\_\+\+STATUS\+\_\+\+INT}}~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(3)
+\item 
+\#define \mbox{\hyperlink{serial_port_8h_ae132b46ac79958f14db5863835a55e12}{IIR\+\_\+\+NO\+\_\+\+INTERRUPT}}~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(0)
+\item 
+\#define \mbox{\hyperlink{serial_port_8h_a3863d2905f490ad200fb0501b12be92f}{IIR\+\_\+\+INTERRUPT\+\_\+\+ID}}~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(1) \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(2) \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(3)
+\item 
+\#define \mbox{\hyperlink{serial_port_8h_af42cc32f7004f125ceeca29f0b5fc261}{IIR\+\_\+\+LINE\+\_\+\+STATUS}}~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(1) \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(2)
+\item 
+\#define \mbox{\hyperlink{serial_port_8h_a422b12d240e1fda2db0bae3511ca3e51}{IIR\+\_\+\+DATA\+\_\+\+AVAILABLE}}~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(2)
+\item 
+\#define \mbox{\hyperlink{serial_port_8h_a5ab0dd570adb416ffc4465c9a936bb09}{IIR\+\_\+\+CHAR\+\_\+\+TIMEOUT}}~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(3) \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(2)
+\item 
+\#define \mbox{\hyperlink{serial_port_8h_aa16869b019be11852be6c175a29f64ce}{IIR\+\_\+\+THR\+\_\+\+EMPTY}}~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(1)
+\item 
+\#define \mbox{\hyperlink{serial_port_8h_a48782779e251356a09f0124979329aa2}{IIR\+\_\+\+MODEM\+\_\+\+STATUS}}~0x00
+\item 
+\#define \mbox{\hyperlink{serial_port_8h_a0fb29593ea0594efb9d5d4fe1934ced4}{FCR\+\_\+\+CLEAR}}~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(0) \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(1) \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(2)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{serial_port_8h_a3c0cbd54ba8b26f009b38ab1fac3c384}\index{serialPort.h@{serialPort.h}!DIV\_LATCH\_LSB@{DIV\_LATCH\_LSB}}
+\index{DIV\_LATCH\_LSB@{DIV\_LATCH\_LSB}!serialPort.h@{serialPort.h}}
+\doxysubsubsection{\texorpdfstring{DIV\_LATCH\_LSB}{DIV\_LATCH\_LSB}}
+{\footnotesize\ttfamily \label{serial_port_8h_a3c0cbd54ba8b26f009b38ab1fac3c384} 
+\#define DIV\+\_\+\+LATCH\+\_\+\+LSB~\mbox{\hyperlink{serial_port_8h_ac08f8f916661bb5fc606373bea93d274}{SERIAL\+\_\+\+PORT}} 0x00}
+
+\Hypertarget{serial_port_8h_a8a49b1370ed62456c149745442f0b40f}\index{serialPort.h@{serialPort.h}!DIV\_LATCH\_MSB@{DIV\_LATCH\_MSB}}
+\index{DIV\_LATCH\_MSB@{DIV\_LATCH\_MSB}!serialPort.h@{serialPort.h}}
+\doxysubsubsection{\texorpdfstring{DIV\_LATCH\_MSB}{DIV\_LATCH\_MSB}}
+{\footnotesize\ttfamily \label{serial_port_8h_a8a49b1370ed62456c149745442f0b40f} 
+\#define DIV\+\_\+\+LATCH\+\_\+\+MSB~\mbox{\hyperlink{serial_port_8h_ac08f8f916661bb5fc606373bea93d274}{SERIAL\+\_\+\+PORT}} 0x01}
+
+\Hypertarget{serial_port_8h_a0fb29593ea0594efb9d5d4fe1934ced4}\index{serialPort.h@{serialPort.h}!FCR\_CLEAR@{FCR\_CLEAR}}
+\index{FCR\_CLEAR@{FCR\_CLEAR}!serialPort.h@{serialPort.h}}
+\doxysubsubsection{\texorpdfstring{FCR\_CLEAR}{FCR\_CLEAR}}
+{\footnotesize\ttfamily \label{serial_port_8h_a0fb29593ea0594efb9d5d4fe1934ced4} 
+\#define FCR\+\_\+\+CLEAR~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(0) \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(1) \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(2)}
+
+\Hypertarget{serial_port_8h_a6d79b1594c06723e6f19e7f9f3249a5e}\index{serialPort.h@{serialPort.h}!FIFO\_CONTROL@{FIFO\_CONTROL}}
+\index{FIFO\_CONTROL@{FIFO\_CONTROL}!serialPort.h@{serialPort.h}}
+\doxysubsubsection{\texorpdfstring{FIFO\_CONTROL}{FIFO\_CONTROL}}
+{\footnotesize\ttfamily \label{serial_port_8h_a6d79b1594c06723e6f19e7f9f3249a5e} 
+\#define FIFO\+\_\+\+CONTROL~0x02}
+
+\Hypertarget{serial_port_8h_a6c5d701a357a0d8f3133872957347029}\index{serialPort.h@{serialPort.h}!IER\_DATA\_AVAIL\_INT@{IER\_DATA\_AVAIL\_INT}}
+\index{IER\_DATA\_AVAIL\_INT@{IER\_DATA\_AVAIL\_INT}!serialPort.h@{serialPort.h}}
+\doxysubsubsection{\texorpdfstring{IER\_DATA\_AVAIL\_INT}{IER\_DATA\_AVAIL\_INT}}
+{\footnotesize\ttfamily \label{serial_port_8h_a6c5d701a357a0d8f3133872957347029} 
+\#define IER\+\_\+\+DATA\+\_\+\+AVAIL\+\_\+\+INT~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(0)}
+
+\Hypertarget{serial_port_8h_affdc585f4be3071b5326bf12e3d9bf6d}\index{serialPort.h@{serialPort.h}!IER\_LINE\_STATUS\_INT@{IER\_LINE\_STATUS\_INT}}
+\index{IER\_LINE\_STATUS\_INT@{IER\_LINE\_STATUS\_INT}!serialPort.h@{serialPort.h}}
+\doxysubsubsection{\texorpdfstring{IER\_LINE\_STATUS\_INT}{IER\_LINE\_STATUS\_INT}}
+{\footnotesize\ttfamily \label{serial_port_8h_affdc585f4be3071b5326bf12e3d9bf6d} 
+\#define IER\+\_\+\+LINE\+\_\+\+STATUS\+\_\+\+INT~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(2)}
+
+\Hypertarget{serial_port_8h_ac1d90a69045d416f6766ca7884532bc1}\index{serialPort.h@{serialPort.h}!IER\_MODEM\_STATUS\_INT@{IER\_MODEM\_STATUS\_INT}}
+\index{IER\_MODEM\_STATUS\_INT@{IER\_MODEM\_STATUS\_INT}!serialPort.h@{serialPort.h}}
+\doxysubsubsection{\texorpdfstring{IER\_MODEM\_STATUS\_INT}{IER\_MODEM\_STATUS\_INT}}
+{\footnotesize\ttfamily \label{serial_port_8h_ac1d90a69045d416f6766ca7884532bc1} 
+\#define IER\+\_\+\+MODEM\+\_\+\+STATUS\+\_\+\+INT~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(3)}
+
+\Hypertarget{serial_port_8h_aaa31e89ca5dcdf5a8c9b0c32fde127f3}\index{serialPort.h@{serialPort.h}!IER\_THR\_EMPTY\_INT@{IER\_THR\_EMPTY\_INT}}
+\index{IER\_THR\_EMPTY\_INT@{IER\_THR\_EMPTY\_INT}!serialPort.h@{serialPort.h}}
+\doxysubsubsection{\texorpdfstring{IER\_THR\_EMPTY\_INT}{IER\_THR\_EMPTY\_INT}}
+{\footnotesize\ttfamily \label{serial_port_8h_aaa31e89ca5dcdf5a8c9b0c32fde127f3} 
+\#define IER\+\_\+\+THR\+\_\+\+EMPTY\+\_\+\+INT~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(1)}
+
+\Hypertarget{serial_port_8h_a5ab0dd570adb416ffc4465c9a936bb09}\index{serialPort.h@{serialPort.h}!IIR\_CHAR\_TIMEOUT@{IIR\_CHAR\_TIMEOUT}}
+\index{IIR\_CHAR\_TIMEOUT@{IIR\_CHAR\_TIMEOUT}!serialPort.h@{serialPort.h}}
+\doxysubsubsection{\texorpdfstring{IIR\_CHAR\_TIMEOUT}{IIR\_CHAR\_TIMEOUT}}
+{\footnotesize\ttfamily \label{serial_port_8h_a5ab0dd570adb416ffc4465c9a936bb09} 
+\#define IIR\+\_\+\+CHAR\+\_\+\+TIMEOUT~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(3) \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(2)}
+
+\Hypertarget{serial_port_8h_a422b12d240e1fda2db0bae3511ca3e51}\index{serialPort.h@{serialPort.h}!IIR\_DATA\_AVAILABLE@{IIR\_DATA\_AVAILABLE}}
+\index{IIR\_DATA\_AVAILABLE@{IIR\_DATA\_AVAILABLE}!serialPort.h@{serialPort.h}}
+\doxysubsubsection{\texorpdfstring{IIR\_DATA\_AVAILABLE}{IIR\_DATA\_AVAILABLE}}
+{\footnotesize\ttfamily \label{serial_port_8h_a422b12d240e1fda2db0bae3511ca3e51} 
+\#define IIR\+\_\+\+DATA\+\_\+\+AVAILABLE~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(2)}
+
+\Hypertarget{serial_port_8h_a3863d2905f490ad200fb0501b12be92f}\index{serialPort.h@{serialPort.h}!IIR\_INTERRUPT\_ID@{IIR\_INTERRUPT\_ID}}
+\index{IIR\_INTERRUPT\_ID@{IIR\_INTERRUPT\_ID}!serialPort.h@{serialPort.h}}
+\doxysubsubsection{\texorpdfstring{IIR\_INTERRUPT\_ID}{IIR\_INTERRUPT\_ID}}
+{\footnotesize\ttfamily \label{serial_port_8h_a3863d2905f490ad200fb0501b12be92f} 
+\#define IIR\+\_\+\+INTERRUPT\+\_\+\+ID~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(1) \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(2) \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(3)}
+
+\Hypertarget{serial_port_8h_af42cc32f7004f125ceeca29f0b5fc261}\index{serialPort.h@{serialPort.h}!IIR\_LINE\_STATUS@{IIR\_LINE\_STATUS}}
+\index{IIR\_LINE\_STATUS@{IIR\_LINE\_STATUS}!serialPort.h@{serialPort.h}}
+\doxysubsubsection{\texorpdfstring{IIR\_LINE\_STATUS}{IIR\_LINE\_STATUS}}
+{\footnotesize\ttfamily \label{serial_port_8h_af42cc32f7004f125ceeca29f0b5fc261} 
+\#define IIR\+\_\+\+LINE\+\_\+\+STATUS~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(1) \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(2)}
+
+\Hypertarget{serial_port_8h_a48782779e251356a09f0124979329aa2}\index{serialPort.h@{serialPort.h}!IIR\_MODEM\_STATUS@{IIR\_MODEM\_STATUS}}
+\index{IIR\_MODEM\_STATUS@{IIR\_MODEM\_STATUS}!serialPort.h@{serialPort.h}}
+\doxysubsubsection{\texorpdfstring{IIR\_MODEM\_STATUS}{IIR\_MODEM\_STATUS}}
+{\footnotesize\ttfamily \label{serial_port_8h_a48782779e251356a09f0124979329aa2} 
+\#define IIR\+\_\+\+MODEM\+\_\+\+STATUS~0x00}
+
+\Hypertarget{serial_port_8h_ae132b46ac79958f14db5863835a55e12}\index{serialPort.h@{serialPort.h}!IIR\_NO\_INTERRUPT@{IIR\_NO\_INTERRUPT}}
+\index{IIR\_NO\_INTERRUPT@{IIR\_NO\_INTERRUPT}!serialPort.h@{serialPort.h}}
+\doxysubsubsection{\texorpdfstring{IIR\_NO\_INTERRUPT}{IIR\_NO\_INTERRUPT}}
+{\footnotesize\ttfamily \label{serial_port_8h_ae132b46ac79958f14db5863835a55e12} 
+\#define IIR\+\_\+\+NO\+\_\+\+INTERRUPT~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(0)}
+
+\Hypertarget{serial_port_8h_aa16869b019be11852be6c175a29f64ce}\index{serialPort.h@{serialPort.h}!IIR\_THR\_EMPTY@{IIR\_THR\_EMPTY}}
+\index{IIR\_THR\_EMPTY@{IIR\_THR\_EMPTY}!serialPort.h@{serialPort.h}}
+\doxysubsubsection{\texorpdfstring{IIR\_THR\_EMPTY}{IIR\_THR\_EMPTY}}
+{\footnotesize\ttfamily \label{serial_port_8h_aa16869b019be11852be6c175a29f64ce} 
+\#define IIR\+\_\+\+THR\+\_\+\+EMPTY~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(1)}
+
+\Hypertarget{serial_port_8h_acf43057fc38f77d20456c074909ba772}\index{serialPort.h@{serialPort.h}!INTERRUPT\_ENABLE@{INTERRUPT\_ENABLE}}
+\index{INTERRUPT\_ENABLE@{INTERRUPT\_ENABLE}!serialPort.h@{serialPort.h}}
+\doxysubsubsection{\texorpdfstring{INTERRUPT\_ENABLE}{INTERRUPT\_ENABLE}}
+{\footnotesize\ttfamily \label{serial_port_8h_acf43057fc38f77d20456c074909ba772} 
+\#define INTERRUPT\+\_\+\+ENABLE~0x01}
+
+\Hypertarget{serial_port_8h_acaccd2a518171153768710c6b8ff0232}\index{serialPort.h@{serialPort.h}!INTERRUPT\_ID@{INTERRUPT\_ID}}
+\index{INTERRUPT\_ID@{INTERRUPT\_ID}!serialPort.h@{serialPort.h}}
+\doxysubsubsection{\texorpdfstring{INTERRUPT\_ID}{INTERRUPT\_ID}}
+{\footnotesize\ttfamily \label{serial_port_8h_acaccd2a518171153768710c6b8ff0232} 
+\#define INTERRUPT\+\_\+\+ID~0x02}
+
+\Hypertarget{serial_port_8h_ab3314d02e499e5a5e3188ce7fe741abc}\index{serialPort.h@{serialPort.h}!LINE\_CONTROL@{LINE\_CONTROL}}
+\index{LINE\_CONTROL@{LINE\_CONTROL}!serialPort.h@{serialPort.h}}
+\doxysubsubsection{\texorpdfstring{LINE\_CONTROL}{LINE\_CONTROL}}
+{\footnotesize\ttfamily \label{serial_port_8h_ab3314d02e499e5a5e3188ce7fe741abc} 
+\#define LINE\+\_\+\+CONTROL~0x03}
+
+\Hypertarget{serial_port_8h_a57842fefd7fa676c36779e4f43ac6cc0}\index{serialPort.h@{serialPort.h}!LINE\_STATUS@{LINE\_STATUS}}
+\index{LINE\_STATUS@{LINE\_STATUS}!serialPort.h@{serialPort.h}}
+\doxysubsubsection{\texorpdfstring{LINE\_STATUS}{LINE\_STATUS}}
+{\footnotesize\ttfamily \label{serial_port_8h_a57842fefd7fa676c36779e4f43ac6cc0} 
+\#define LINE\+\_\+\+STATUS~0x05}
+
+\Hypertarget{serial_port_8h_a7627097cd345712b52b14a51fbb9356a}\index{serialPort.h@{serialPort.h}!LSR\_BREAK\_INTERRUPT@{LSR\_BREAK\_INTERRUPT}}
+\index{LSR\_BREAK\_INTERRUPT@{LSR\_BREAK\_INTERRUPT}!serialPort.h@{serialPort.h}}
+\doxysubsubsection{\texorpdfstring{LSR\_BREAK\_INTERRUPT}{LSR\_BREAK\_INTERRUPT}}
+{\footnotesize\ttfamily \label{serial_port_8h_a7627097cd345712b52b14a51fbb9356a} 
+\#define LSR\+\_\+\+BREAK\+\_\+\+INTERRUPT~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(4)}
+
+\Hypertarget{serial_port_8h_ae6e9a941061832e3150804bf169a2e97}\index{serialPort.h@{serialPort.h}!LSR\_DATA\_READY@{LSR\_DATA\_READY}}
+\index{LSR\_DATA\_READY@{LSR\_DATA\_READY}!serialPort.h@{serialPort.h}}
+\doxysubsubsection{\texorpdfstring{LSR\_DATA\_READY}{LSR\_DATA\_READY}}
+{\footnotesize\ttfamily \label{serial_port_8h_ae6e9a941061832e3150804bf169a2e97} 
+\#define LSR\+\_\+\+DATA\+\_\+\+READY~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(0)}
+
+\Hypertarget{serial_port_8h_a6b748eb460e40c2a551437646e7bb1e4}\index{serialPort.h@{serialPort.h}!LSR\_FIFO\_ERROR@{LSR\_FIFO\_ERROR}}
+\index{LSR\_FIFO\_ERROR@{LSR\_FIFO\_ERROR}!serialPort.h@{serialPort.h}}
+\doxysubsubsection{\texorpdfstring{LSR\_FIFO\_ERROR}{LSR\_FIFO\_ERROR}}
+{\footnotesize\ttfamily \label{serial_port_8h_a6b748eb460e40c2a551437646e7bb1e4} 
+\#define LSR\+\_\+\+FIFO\+\_\+\+ERROR~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(7)}
+
+\Hypertarget{serial_port_8h_a3b8c453276843a913d454684a4069a58}\index{serialPort.h@{serialPort.h}!LSR\_FRAMING\_ERROR@{LSR\_FRAMING\_ERROR}}
+\index{LSR\_FRAMING\_ERROR@{LSR\_FRAMING\_ERROR}!serialPort.h@{serialPort.h}}
+\doxysubsubsection{\texorpdfstring{LSR\_FRAMING\_ERROR}{LSR\_FRAMING\_ERROR}}
+{\footnotesize\ttfamily \label{serial_port_8h_a3b8c453276843a913d454684a4069a58} 
+\#define LSR\+\_\+\+FRAMING\+\_\+\+ERROR~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(3)}
+
+\Hypertarget{serial_port_8h_a1a2e230078e0423a6f7681d30d8e3798}\index{serialPort.h@{serialPort.h}!LSR\_OVERRUN\_ERROR@{LSR\_OVERRUN\_ERROR}}
+\index{LSR\_OVERRUN\_ERROR@{LSR\_OVERRUN\_ERROR}!serialPort.h@{serialPort.h}}
+\doxysubsubsection{\texorpdfstring{LSR\_OVERRUN\_ERROR}{LSR\_OVERRUN\_ERROR}}
+{\footnotesize\ttfamily \label{serial_port_8h_a1a2e230078e0423a6f7681d30d8e3798} 
+\#define LSR\+\_\+\+OVERRUN\+\_\+\+ERROR~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(1)}
+
+\Hypertarget{serial_port_8h_a33db06ef4a01ba3df88ea1ff7255032d}\index{serialPort.h@{serialPort.h}!LSR\_PARITY\_ERROR@{LSR\_PARITY\_ERROR}}
+\index{LSR\_PARITY\_ERROR@{LSR\_PARITY\_ERROR}!serialPort.h@{serialPort.h}}
+\doxysubsubsection{\texorpdfstring{LSR\_PARITY\_ERROR}{LSR\_PARITY\_ERROR}}
+{\footnotesize\ttfamily \label{serial_port_8h_a33db06ef4a01ba3df88ea1ff7255032d} 
+\#define LSR\+\_\+\+PARITY\+\_\+\+ERROR~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(2)}
+
+\Hypertarget{serial_port_8h_a764c6e57c1e4f6b57460b5574969ca81}\index{serialPort.h@{serialPort.h}!LSR\_THR\_EMPTY@{LSR\_THR\_EMPTY}}
+\index{LSR\_THR\_EMPTY@{LSR\_THR\_EMPTY}!serialPort.h@{serialPort.h}}
+\doxysubsubsection{\texorpdfstring{LSR\_THR\_EMPTY}{LSR\_THR\_EMPTY}}
+{\footnotesize\ttfamily \label{serial_port_8h_a764c6e57c1e4f6b57460b5574969ca81} 
+\#define LSR\+\_\+\+THR\+\_\+\+EMPTY~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(5)}
+
+\Hypertarget{serial_port_8h_ad8281a193d2b26d4c72a14c2747c37fe}\index{serialPort.h@{serialPort.h}!LSR\_TSR\_EMPTY@{LSR\_TSR\_EMPTY}}
+\index{LSR\_TSR\_EMPTY@{LSR\_TSR\_EMPTY}!serialPort.h@{serialPort.h}}
+\doxysubsubsection{\texorpdfstring{LSR\_TSR\_EMPTY}{LSR\_TSR\_EMPTY}}
+{\footnotesize\ttfamily \label{serial_port_8h_ad8281a193d2b26d4c72a14c2747c37fe} 
+\#define LSR\+\_\+\+TSR\+\_\+\+EMPTY~\mbox{\hyperlink{rtc__macros_8h_a3a8ea58898cb58fc96013383d39f482c}{BIT}}(6)}
+
+\Hypertarget{serial_port_8h_a449a6abb227c6ee0a5ca562550dc5651}\index{serialPort.h@{serialPort.h}!MODEM\_CONTROL@{MODEM\_CONTROL}}
+\index{MODEM\_CONTROL@{MODEM\_CONTROL}!serialPort.h@{serialPort.h}}
+\doxysubsubsection{\texorpdfstring{MODEM\_CONTROL}{MODEM\_CONTROL}}
+{\footnotesize\ttfamily \label{serial_port_8h_a449a6abb227c6ee0a5ca562550dc5651} 
+\#define MODEM\+\_\+\+CONTROL~0x04}
+
+\Hypertarget{serial_port_8h_a6513628ede18301c0857892dab0ee4a9}\index{serialPort.h@{serialPort.h}!MODEM\_STATUS@{MODEM\_STATUS}}
+\index{MODEM\_STATUS@{MODEM\_STATUS}!serialPort.h@{serialPort.h}}
+\doxysubsubsection{\texorpdfstring{MODEM\_STATUS}{MODEM\_STATUS}}
+{\footnotesize\ttfamily \label{serial_port_8h_a6513628ede18301c0857892dab0ee4a9} 
+\#define MODEM\+\_\+\+STATUS~0x06}
+
+\Hypertarget{serial_port_8h_a6f133f77a2d70df9bc976a076b045a46}\index{serialPort.h@{serialPort.h}!RECEIVE\_BUFFER@{RECEIVE\_BUFFER}}
+\index{RECEIVE\_BUFFER@{RECEIVE\_BUFFER}!serialPort.h@{serialPort.h}}
+\doxysubsubsection{\texorpdfstring{RECEIVE\_BUFFER}{RECEIVE\_BUFFER}}
+{\footnotesize\ttfamily \label{serial_port_8h_a6f133f77a2d70df9bc976a076b045a46} 
+\#define RECEIVE\+\_\+\+BUFFER~0x00}
+
+\Hypertarget{serial_port_8h_aa214bb53cfaaf6b164ece6df54f30347}\index{serialPort.h@{serialPort.h}!SCRATCH\_REG@{SCRATCH\_REG}}
+\index{SCRATCH\_REG@{SCRATCH\_REG}!serialPort.h@{serialPort.h}}
+\doxysubsubsection{\texorpdfstring{SCRATCH\_REG}{SCRATCH\_REG}}
+{\footnotesize\ttfamily \label{serial_port_8h_aa214bb53cfaaf6b164ece6df54f30347} 
+\#define SCRATCH\+\_\+\+REG~0x07}
+
+\Hypertarget{serial_port_8h_a79f99a14b7f87839645eddb22eb70c31}\index{serialPort.h@{serialPort.h}!SERIAL\_IRQ\_1@{SERIAL\_IRQ\_1}}
+\index{SERIAL\_IRQ\_1@{SERIAL\_IRQ\_1}!serialPort.h@{serialPort.h}}
+\doxysubsubsection{\texorpdfstring{SERIAL\_IRQ\_1}{SERIAL\_IRQ\_1}}
+{\footnotesize\ttfamily \label{serial_port_8h_a79f99a14b7f87839645eddb22eb70c31} 
+\#define SERIAL\+\_\+\+IRQ\+\_\+1~4}
+
+\Hypertarget{serial_port_8h_ac08f8f916661bb5fc606373bea93d274}\index{serialPort.h@{serialPort.h}!SERIAL\_PORT@{SERIAL\_PORT}}
+\index{SERIAL\_PORT@{SERIAL\_PORT}!serialPort.h@{serialPort.h}}
+\doxysubsubsection{\texorpdfstring{SERIAL\_PORT}{SERIAL\_PORT}}
+{\footnotesize\ttfamily \label{serial_port_8h_ac08f8f916661bb5fc606373bea93d274} 
+\#define SERIAL\+\_\+\+PORT~0x3\+F8}
+
+\Hypertarget{serial_port_8h_a5da87995b99c1404f41162b00f1677ca}\index{serialPort.h@{serialPort.h}!TRANSMIT\_HOLD@{TRANSMIT\_HOLD}}
+\index{TRANSMIT\_HOLD@{TRANSMIT\_HOLD}!serialPort.h@{serialPort.h}}
+\doxysubsubsection{\texorpdfstring{TRANSMIT\_HOLD}{TRANSMIT\_HOLD}}
+{\footnotesize\ttfamily \label{serial_port_8h_a5da87995b99c1404f41162b00f1677ca} 
+\#define TRANSMIT\+\_\+\+HOLD~0x00}
+

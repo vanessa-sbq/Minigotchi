@@ -1,0 +1,9 @@
+<map id="writeToKBCPort" name="writeToKBCPort">
+<area shape="rect" id="Node000001" title="Writes to a KBC port." alt="" coords="358,31,471,57"/>
+<area shape="rect" id="Node000002" href="$kbc_8c.html#aec3b951828f35c691abedab58fabe04c" title="Enables Keyboard interrupts." alt="" coords="162,5,310,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="342,36,310,32,311,27,343,31"/>
+<area shape="rect" id="Node000003" href="$mouse_8c.html#af9f7f4471fecdd3c44c1fe593a005ae1" title="Sends a command to the mouse." alt="" coords="163,56,309,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="343,57,309,62,308,56,342,52"/>
+<area shape="rect" id="Node000004" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Project main function that starts the game." alt="" coords="5,56,114,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="148,72,114,72,114,67,148,67"/>
+</map>

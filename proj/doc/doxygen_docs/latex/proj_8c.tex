@@ -1,0 +1,246 @@
+\doxysection{C\+:/\+Users/anton/\+Documents/lcom/labs/proj/src/proj.c File Reference}
+\hypertarget{proj_8c}{}\label{proj_8c}\index{C:/Users/anton/Documents/lcom/labs/proj/src/proj.c@{C:/Users/anton/Documents/lcom/labs/proj/src/proj.c}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/proj.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include "{}player\+\_\+data/database.\+h"{}}\newline
+{\ttfamily \#include "{}device\+\_\+controllers/video/video.\+h"{}}\newline
+{\ttfamily \#include "{}device\+\_\+controllers/kbc/keyboard.\+h"{}}\newline
+{\ttfamily \#include "{}device\+\_\+controllers/kbc/kbc.\+h"{}}\newline
+{\ttfamily \#include "{}device\+\_\+controllers/kbc/mouse.\+h"{}}\newline
+{\ttfamily \#include "{}device\+\_\+controllers/timer/timer.\+h"{}}\newline
+{\ttfamily \#include "{}device\+\_\+controllers/rtc/rtc.\+h"{}}\newline
+{\ttfamily \#include "{}device\+\_\+controllers/uart/uart.\+h"{}}\newline
+{\ttfamily \#include "{}model/cursor.\+h"{}}\newline
+{\ttfamily \#include "{}model/button.\+h"{}}\newline
+{\ttfamily \#include "{}model/bar.\+h"{}}\newline
+{\ttfamily \#include "{}model/state\+Models/main\+Menu.\+h"{}}\newline
+{\ttfamily \#include "{}model/state\+Models/main\+Room.\+h"{}}\newline
+{\ttfamily \#include "{}model/state\+Models/minigame\+Menu.\+h"{}}\newline
+{\ttfamily \#include "{}model/state\+Models/name\+Minigotchi.\+h"{}}\newline
+{\ttfamily \#include "{}model/state\+Models/tictactoe.\+h"{}}\newline
+{\ttfamily \#include "{}model/state\+Models/rock\+Paper\+Scissors.\+h"{}}\newline
+{\ttfamily \#include "{}viewer/gui\+Drawer.\+h"{}}\newline
+{\ttfamily \#include "{}viewer/menus/main\+Menu\+Viewer.\+h"{}}\newline
+{\ttfamily \#include "{}viewer/menus/main\+Room\+Viewer.\+h"{}}\newline
+{\ttfamily \#include "{}viewer/menus/minigame\+Menu\+Viewer.\+h"{}}\newline
+{\ttfamily \#include "{}viewer/menus/name\+Minigotchi\+Viewer.\+h"{}}\newline
+{\ttfamily \#include "{}viewer/minigames/tic\+Tac\+Toe\+Viewer.\+h"{}}\newline
+{\ttfamily \#include "{}viewer/minigames/rock\+Paper\+Scissors\+Viewer.\+h"{}}\newline
+{\ttfamily \#include "{}controller/menus/main\+Menu\+Controller.\+h"{}}\newline
+{\ttfamily \#include "{}controller/menus/main\+Room\+Controller.\+h"{}}\newline
+{\ttfamily \#include "{}controller/menus/minigame\+Menu\+Controller.\+h"{}}\newline
+{\ttfamily \#include "{}controller/menus/name\+Minigotchi\+Controller.\+h"{}}\newline
+{\ttfamily \#include "{}controller/minigames/tic\+Tac\+Toe\+Controller.\+h"{}}\newline
+{\ttfamily \#include "{}controller/minigames/rock\+Paper\+Scissors\+Controller.\+h"{}}\newline
+Include dependency graph for proj.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{proj_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{proj_8c_ac92ca5ab87034a348decad7ee8d4bd1b}{FPS}}~60
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{proj_8c_aa0aafed44fec19806d8f9ad834be1248}{state\+\_\+t}} \{ \newline
+\mbox{\hyperlink{proj_8c_aa0aafed44fec19806d8f9ad834be1248ac22743f1fc74de09544ecc9bab74a17b}{MAIN\+\_\+\+MENU}}
+, \mbox{\hyperlink{proj_8c_aa0aafed44fec19806d8f9ad834be1248ad5abdfaa3d57ea46c92962971fca3406}{MAIN\+\_\+\+ROOM}}
+, \mbox{\hyperlink{proj_8c_aa0aafed44fec19806d8f9ad834be1248afc0578f9ca42e8db7edbbe96958cad94}{NAME\+\_\+\+MINIGOTCHI}}
+, \mbox{\hyperlink{proj_8c_aa0aafed44fec19806d8f9ad834be1248a975b67253e8c19d5162d97ab4758b060}{MINIGAMES\+\_\+\+WINDOW}}
+, \newline
+\mbox{\hyperlink{proj_8c_aa0aafed44fec19806d8f9ad834be1248a2aabdb9ce335a5972b2d22cf72e6e998}{MINIGAME\+\_\+1}}
+, \mbox{\hyperlink{proj_8c_aa0aafed44fec19806d8f9ad834be1248a74bd219ddacc9c607fd337c2526097ff}{MINIGAME\+\_\+2}}
+, \mbox{\hyperlink{proj_8c_aa0aafed44fec19806d8f9ad834be1248a7a10b5d68d31711288e1fe0fa17dbf4f}{EXIT}}
+ \}
+\item 
+enum \mbox{\hyperlink{proj_8c_ade2e611664e39114e441f124e862d546}{time\+Of\+Day\+\_\+t}} \{ \mbox{\hyperlink{proj_8c_ade2e611664e39114e441f124e862d546a8e85ce474d6e6c5ef5b03a415dee454a}{DAY}}
+, \mbox{\hyperlink{proj_8c_ade2e611664e39114e441f124e862d546a2a7076e31981f86a8b577646e6c46f15}{EVENING}}
+, \mbox{\hyperlink{proj_8c_ade2e611664e39114e441f124e862d546a285422c5a00f46be59fd905a9e255139}{NIGHT}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{proj_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Main function that will start the LCF. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{proj_8c_a7c6a79bd3eaa21719916cd44fae296fb}{proj\+\_\+set\+\_\+state}} (\mbox{\hyperlink{proj_8c_aa0aafed44fec19806d8f9ad834be1248}{state\+\_\+t}} state)
+\begin{DoxyCompactList}\small\item\em Setter for game state. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{proj_8c_a253545166e1f2900cf5174dccee70840}{twos\+Complement\+To\+Binary}} (int16\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Convert 2\textquotesingle{}s complement to binary. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{proj_8c_a6220844f439d657a6438a13c2cd893c6}{twos\+Complement\+To\+Signed\+Int}} (unsigned char value)
+\begin{DoxyCompactList}\small\item\em Convert 2\textquotesingle{}s complement to signed int (so that we change the cursor position) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{proj_8c_af244d65e69677cf312af1950452ec256}{proj\+\_\+main\+\_\+loop}} (int argc, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv)
+\begin{DoxyCompactList}\small\item\em Project main function that starts the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_database}{Database}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{proj_8c_a46412799b92880e8b22508d832becca0}{database}}
+\item 
+static \mbox{\hyperlink{proj_8c_aa0aafed44fec19806d8f9ad834be1248}{state\+\_\+t}} \mbox{\hyperlink{proj_8c_a149e8169bce6a971544cbb7c1b6eebd9}{game\+\_\+state}} = \mbox{\hyperlink{proj_8c_aa0aafed44fec19806d8f9ad834be1248ac22743f1fc74de09544ecc9bab74a17b}{MAIN\+\_\+\+MENU}}
+\item 
+static bool \mbox{\hyperlink{proj_8c_a5eca5f05180ee0099d28face1f6bba41}{new\+Game}} = false
+\item 
+static \mbox{\hyperlink{proj_8c_ade2e611664e39114e441f124e862d546}{time\+Of\+Day\+\_\+t}} \mbox{\hyperlink{proj_8c_aa7ce6bd4e8dde1c07854c573cd5326e1}{date\+Time}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{proj_8c_ac92ca5ab87034a348decad7ee8d4bd1b}\index{proj.c@{proj.c}!FPS@{FPS}}
+\index{FPS@{FPS}!proj.c@{proj.c}}
+\doxysubsubsection{\texorpdfstring{FPS}{FPS}}
+{\footnotesize\ttfamily \label{proj_8c_ac92ca5ab87034a348decad7ee8d4bd1b} 
+\#define FPS~60}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{proj_8c_aa0aafed44fec19806d8f9ad834be1248}\index{proj.c@{proj.c}!state\_t@{state\_t}}
+\index{state\_t@{state\_t}!proj.c@{proj.c}}
+\doxysubsubsection{\texorpdfstring{state\_t}{state\_t}}
+{\footnotesize\ttfamily \label{proj_8c_aa0aafed44fec19806d8f9ad834be1248} 
+enum \mbox{\hyperlink{proj_8c_aa0aafed44fec19806d8f9ad834be1248}{state\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAIN\_MENU@{MAIN\_MENU}!proj.c@{proj.c}}\index{proj.c@{proj.c}!MAIN\_MENU@{MAIN\_MENU}}}\Hypertarget{proj_8c_aa0aafed44fec19806d8f9ad834be1248ac22743f1fc74de09544ecc9bab74a17b}\label{proj_8c_aa0aafed44fec19806d8f9ad834be1248} 
+MAIN\+\_\+\+MENU&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAIN\_ROOM@{MAIN\_ROOM}!proj.c@{proj.c}}\index{proj.c@{proj.c}!MAIN\_ROOM@{MAIN\_ROOM}}}\Hypertarget{proj_8c_aa0aafed44fec19806d8f9ad834be1248ad5abdfaa3d57ea46c92962971fca3406}\label{proj_8c_aa0aafed44fec19806d8f9ad834be1248} 
+MAIN\+\_\+\+ROOM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NAME\_MINIGOTCHI@{NAME\_MINIGOTCHI}!proj.c@{proj.c}}\index{proj.c@{proj.c}!NAME\_MINIGOTCHI@{NAME\_MINIGOTCHI}}}\Hypertarget{proj_8c_aa0aafed44fec19806d8f9ad834be1248afc0578f9ca42e8db7edbbe96958cad94}\label{proj_8c_aa0aafed44fec19806d8f9ad834be1248} 
+NAME\+\_\+\+MINIGOTCHI&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MINIGAMES\_WINDOW@{MINIGAMES\_WINDOW}!proj.c@{proj.c}}\index{proj.c@{proj.c}!MINIGAMES\_WINDOW@{MINIGAMES\_WINDOW}}}\Hypertarget{proj_8c_aa0aafed44fec19806d8f9ad834be1248a975b67253e8c19d5162d97ab4758b060}\label{proj_8c_aa0aafed44fec19806d8f9ad834be1248} 
+MINIGAMES\+\_\+\+WINDOW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MINIGAME\_1@{MINIGAME\_1}!proj.c@{proj.c}}\index{proj.c@{proj.c}!MINIGAME\_1@{MINIGAME\_1}}}\Hypertarget{proj_8c_aa0aafed44fec19806d8f9ad834be1248a2aabdb9ce335a5972b2d22cf72e6e998}\label{proj_8c_aa0aafed44fec19806d8f9ad834be1248} 
+MINIGAME\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MINIGAME\_2@{MINIGAME\_2}!proj.c@{proj.c}}\index{proj.c@{proj.c}!MINIGAME\_2@{MINIGAME\_2}}}\Hypertarget{proj_8c_aa0aafed44fec19806d8f9ad834be1248a74bd219ddacc9c607fd337c2526097ff}\label{proj_8c_aa0aafed44fec19806d8f9ad834be1248} 
+MINIGAME\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EXIT@{EXIT}!proj.c@{proj.c}}\index{proj.c@{proj.c}!EXIT@{EXIT}}}\Hypertarget{proj_8c_aa0aafed44fec19806d8f9ad834be1248a7a10b5d68d31711288e1fe0fa17dbf4f}\label{proj_8c_aa0aafed44fec19806d8f9ad834be1248} 
+EXIT&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{proj_8c_ade2e611664e39114e441f124e862d546}\index{proj.c@{proj.c}!timeOfDay\_t@{timeOfDay\_t}}
+\index{timeOfDay\_t@{timeOfDay\_t}!proj.c@{proj.c}}
+\doxysubsubsection{\texorpdfstring{timeOfDay\_t}{timeOfDay\_t}}
+{\footnotesize\ttfamily \label{proj_8c_ade2e611664e39114e441f124e862d546} 
+enum \mbox{\hyperlink{proj_8c_ade2e611664e39114e441f124e862d546}{time\+Of\+Day\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DAY@{DAY}!proj.c@{proj.c}}\index{proj.c@{proj.c}!DAY@{DAY}}}\Hypertarget{proj_8c_ade2e611664e39114e441f124e862d546a8e85ce474d6e6c5ef5b03a415dee454a}\label{proj_8c_ade2e611664e39114e441f124e862d546} 
+DAY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EVENING@{EVENING}!proj.c@{proj.c}}\index{proj.c@{proj.c}!EVENING@{EVENING}}}\Hypertarget{proj_8c_ade2e611664e39114e441f124e862d546a2a7076e31981f86a8b577646e6c46f15}\label{proj_8c_ade2e611664e39114e441f124e862d546} 
+EVENING&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NIGHT@{NIGHT}!proj.c@{proj.c}}\index{proj.c@{proj.c}!NIGHT@{NIGHT}}}\Hypertarget{proj_8c_ade2e611664e39114e441f124e862d546a285422c5a00f46be59fd905a9e255139}\label{proj_8c_ade2e611664e39114e441f124e862d546} 
+NIGHT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{proj_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{proj.c@{proj.c}!main@{main}}
+\index{main@{main}!proj.c@{proj.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{proj_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Main function that will start the LCF. 
+
+\Hypertarget{proj_8c_af244d65e69677cf312af1950452ec256}\index{proj.c@{proj.c}!proj\_main\_loop@{proj\_main\_loop}}
+\index{proj\_main\_loop@{proj\_main\_loop}!proj.c@{proj.c}}
+\doxysubsubsection{\texorpdfstring{proj\_main\_loop()}{proj\_main\_loop()}}
+{\footnotesize\ttfamily \label{proj_8c_af244d65e69677cf312af1950452ec256} 
+int proj\+\_\+main\+\_\+loop (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argv}{}\end{DoxyParamCaption})}
+
+
+
+Project main function that starts the game. 
+
+This function includes the game loop (as a state machine) and handles all the device controller interrupts \Hypertarget{proj_8c_a7c6a79bd3eaa21719916cd44fae296fb}\index{proj.c@{proj.c}!proj\_set\_state@{proj\_set\_state}}
+\index{proj\_set\_state@{proj\_set\_state}!proj.c@{proj.c}}
+\doxysubsubsection{\texorpdfstring{proj\_set\_state()}{proj\_set\_state()}}
+{\footnotesize\ttfamily \label{proj_8c_a7c6a79bd3eaa21719916cd44fae296fb} 
+void proj\+\_\+set\+\_\+state (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{proj_8c_aa0aafed44fec19806d8f9ad834be1248}{state\+\_\+t}}}]{state}{}\end{DoxyParamCaption})}
+
+
+
+Setter for game state. 
+
+\Hypertarget{proj_8c_a253545166e1f2900cf5174dccee70840}\index{proj.c@{proj.c}!twosComplementToBinary@{twosComplementToBinary}}
+\index{twosComplementToBinary@{twosComplementToBinary}!proj.c@{proj.c}}
+\doxysubsubsection{\texorpdfstring{twosComplementToBinary()}{twosComplementToBinary()}}
+{\footnotesize\ttfamily \label{proj_8c_a253545166e1f2900cf5174dccee70840} 
+int16\+\_\+t twos\+Complement\+To\+Binary (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Convert 2\textquotesingle{}s complement to binary. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{proj_8c_a253545166e1f2900cf5174dccee70840_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{proj_8c_a6220844f439d657a6438a13c2cd893c6}\index{proj.c@{proj.c}!twosComplementToSignedInt@{twosComplementToSignedInt}}
+\index{twosComplementToSignedInt@{twosComplementToSignedInt}!proj.c@{proj.c}}
+\doxysubsubsection{\texorpdfstring{twosComplementToSignedInt()}{twosComplementToSignedInt()}}
+{\footnotesize\ttfamily \label{proj_8c_a6220844f439d657a6438a13c2cd893c6} 
+int twos\+Complement\+To\+Signed\+Int (\begin{DoxyParamCaption}\item[{unsigned char}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Convert 2\textquotesingle{}s complement to signed int (so that we change the cursor position) 
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{proj_8c_a46412799b92880e8b22508d832becca0}\index{proj.c@{proj.c}!database@{database}}
+\index{database@{database}!proj.c@{proj.c}}
+\doxysubsubsection{\texorpdfstring{database}{database}}
+{\footnotesize\ttfamily \label{proj_8c_a46412799b92880e8b22508d832becca0} 
+\mbox{\hyperlink{struct_database}{Database}}\texorpdfstring{$\ast$}{*} database\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{proj_8c_aa7ce6bd4e8dde1c07854c573cd5326e1}\index{proj.c@{proj.c}!dateTime@{dateTime}}
+\index{dateTime@{dateTime}!proj.c@{proj.c}}
+\doxysubsubsection{\texorpdfstring{dateTime}{dateTime}}
+{\footnotesize\ttfamily \label{proj_8c_aa7ce6bd4e8dde1c07854c573cd5326e1} 
+\mbox{\hyperlink{proj_8c_ade2e611664e39114e441f124e862d546}{time\+Of\+Day\+\_\+t}} date\+Time\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{proj_8c_a149e8169bce6a971544cbb7c1b6eebd9}\index{proj.c@{proj.c}!game\_state@{game\_state}}
+\index{game\_state@{game\_state}!proj.c@{proj.c}}
+\doxysubsubsection{\texorpdfstring{game\_state}{game\_state}}
+{\footnotesize\ttfamily \label{proj_8c_a149e8169bce6a971544cbb7c1b6eebd9} 
+\mbox{\hyperlink{proj_8c_aa0aafed44fec19806d8f9ad834be1248}{state\+\_\+t}} game\+\_\+state = \mbox{\hyperlink{proj_8c_aa0aafed44fec19806d8f9ad834be1248ac22743f1fc74de09544ecc9bab74a17b}{MAIN\+\_\+\+MENU}}\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{proj_8c_a5eca5f05180ee0099d28face1f6bba41}\index{proj.c@{proj.c}!newGame@{newGame}}
+\index{newGame@{newGame}!proj.c@{proj.c}}
+\doxysubsubsection{\texorpdfstring{newGame}{newGame}}
+{\footnotesize\ttfamily \label{proj_8c_a5eca5f05180ee0099d28face1f6bba41} 
+bool new\+Game = false\hspace{0.3cm}{\ttfamily [static]}}
+

@@ -1,0 +1,9 @@
+<map id="new_hotbar" name="new_hotbar">
+<area shape="rect" id="Node000001" title="Creates a new hotbar &quot;object&quot; and returns a pointer to it." alt="" coords="5,43,93,69"/>
+<area shape="rect" id="Node000002" href="$gui_drawer_8c.html#ad586ed11d3d42784c6234891f4632e2f" title=" " alt="" coords="141,5,287,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,46,125,40,126,45,93,51"/>
+<area shape="rect" id="Node000003" href="$item_8c.html#a9e63f1318fbd43087177d034a95991fa" title="Creates a new item &quot;object&quot; and returns a pointer to it." alt="" coords="176,72,252,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="93,61,161,73,160,79,92,66"/>
+<area shape="rect" id="Node000004" href="$gui_drawer_8c.html#a05800c123125bd7b453bfb960405431b" title="Get an item sprite from an id." alt="" coords="335,64,470,107"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="252,83,319,83,319,88,252,88"/>
+</map>

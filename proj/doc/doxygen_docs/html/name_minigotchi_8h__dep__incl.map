@@ -1,0 +1,18 @@
+<map id="C:/Users/anton/Documents/lcom/labs/proj/src/model/stateModels/nameMinigotchi.h" name="C:/Users/anton/Documents/lcom/labs/proj/src/model/stateModels/nameMinigotchi.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="288,5,490,64"/>
+<area shape="rect" id="Node000002" href="$name_minigotchi_controller_8h.html" title=" " alt="" coords="55,219,280,277"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="344,76,301,114,196,220,192,216,298,110,340,72"/>
+<area shape="rect" id="Node000004" href="$proj_8c.html" title=" " alt="" coords="254,333,433,376"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="362,78,347,113,337,174,335,236,343,333,337,333,329,236,331,174,342,111,357,76"/>
+<area shape="rect" id="Node000005" href="$name_minigotchi_8c.html" title=" " alt="" coords="589,112,791,171"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="486,67,608,109,607,114,485,72"/>
+<area shape="rect" id="Node000006" href="$name_minigotchi_viewer_8h.html" title=" " alt="" coords="356,112,565,171"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="419,76,443,110,439,113,415,79"/>
+<area shape="rect" id="Node000003" href="$name_minigotchi_controller_8c.html" title=" " alt="" coords="5,325,231,384"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="150,293,134,326,129,324,145,290"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="230,283,310,331,307,335,227,288"/>
+<area shape="poly" id="edge7_Node000006_Node000002" title=" " alt="" coords="367,179,249,221,247,216,365,174"/>
+<area shape="poly" id="edge8_Node000006_Node000004" title=" " alt="" coords="424,184,398,220,369,281,351,334,346,332,364,279,393,217,420,181"/>
+<area shape="rect" id="Node000007" href="$name_minigotchi_viewer_8c.html" title=" " alt="" coords="407,219,616,277"/>
+<area shape="poly" id="edge9_Node000006_Node000007" title=" " alt="" coords="484,184,500,217,495,219,479,186"/>
+</map>

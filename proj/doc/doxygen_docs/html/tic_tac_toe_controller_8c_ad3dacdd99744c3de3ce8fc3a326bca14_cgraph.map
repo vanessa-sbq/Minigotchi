@@ -1,0 +1,17 @@
+<map id="ticTacToeController_checkCollisionWithSprites" name="ticTacToeController_checkCollisionWithSprites">
+<area shape="rect" id="Node000001" title="Function that checks sprite collisions with the cursor." alt="" coords="5,48,186,91"/>
+<area shape="rect" id="Node000002" href="$gui_drawer_8c.html#aeb0c1fe0e10a344dac885302cf50eee8" title=" " alt="" coords="258,5,378,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,46,242,33,243,38,187,51"/>
+<area shape="rect" id="Node000003" href="$gui_drawer_8c.html#a4c63acd65b3e03c46066da90b1bd0c99" title=" " alt="" coords="260,56,376,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="186,67,245,67,245,72,186,72"/>
+<area shape="rect" id="Node000004" href="$tic_tac_toe_controller_8c.html#a82d75fd8d234e1f0f92d15aedd0b63de" title="Function that checks collisions with the cursor." alt="" coords="234,107,402,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="187,87,242,100,241,105,186,93"/>
+<area shape="rect" id="Node000005" href="$cursor_8c.html#a95277b3c428a0b3c1b79cfcb49628397" title=" " alt="" coords="475,31,571,57"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="369,104,401,92,449,67,464,61,466,66,451,72,403,97,371,109"/>
+<area shape="rect" id="Node000006" href="$cursor_8c.html#ab346189d7aeb1bbd182952fa838ae45c" title=" " alt="" coords="475,81,571,108"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="402,107,459,100,459,105,403,112"/>
+<area shape="rect" id="Node000007" href="$cursor_8c.html#a98149df29b06207e2304795ea8e00d7e" title=" " alt="" coords="460,132,585,159"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="403,128,445,133,444,138,402,133"/>
+<area shape="rect" id="Node000008" href="$tic_tac_toe_8c.html#a44a855ce1786fdf10f9a4f1ca0d56384" title=" " alt="" coords="450,183,595,209"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="355,131,451,168,468,174,466,179,449,173,353,136"/>
+</map>

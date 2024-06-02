@@ -1,0 +1,14 @@
+<map id="C:/Users/anton/Documents/lcom/labs/proj/src/device_controllers/uart/serialPort.h" name="C:/Users/anton/Documents/lcom/labs/proj/src/device_controllers/uart/serialPort.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="240,5,425,64"/>
+<area shape="rect" id="Node000002" href="$uart_8h.html" title=" " alt="" coords="243,112,422,171"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="335,80,335,112,330,112,330,80"/>
+<area shape="rect" id="Node000003" href="$tic_tac_toe_controller_8h.html" title=" " alt="" coords="81,219,296,277"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="282,182,229,220,226,216,279,178"/>
+<area shape="rect" id="Node000005" href="$proj_8c.html" title=" " alt="" coords="243,333,422,376"/>
+<area shape="poly" id="edge6_Node000002_Node000005" title=" " alt="" coords="335,186,335,333,330,333,330,186"/>
+<area shape="rect" id="Node000006" href="$uart_8c.html" title=" " alt="" coords="370,219,548,277"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="381,179,426,216,423,220,377,183"/>
+<area shape="rect" id="Node000004" href="$tic_tac_toe_controller_8c.html" title=" " alt="" coords="5,325,220,384"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="161,292,135,327,131,323,157,288"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="242,284,306,331,303,335,239,289"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="mainRoom_get_hotbar" name="mainRoom_get_hotbar">
+<area shape="rect" id="Node000001" title=" " alt="" coords="380,72,531,99"/>
+<area shape="rect" id="Node000002" href="$main_room_controller_8c.html#ab2e5737dd6e01a3d02730e1ff9b30cd1" title="Functions that handles the minigotchi feeding event, by removing the item from the hotbar and updatin..." alt="" coords="178,5,316,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="390,70,316,49,317,44,392,65"/>
+<area shape="rect" id="Node000004" href="$main_room_controller_8c.html#ac448f52b9ec47f6aa868245cb08a5a19" title="Controller function that is called once every frame and updates / checks every action in the main roo..." alt="" coords="162,72,332,99"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="365,88,333,88,333,83,365,83"/>
+<area shape="rect" id="Node000005" href="$main_room_viewer_8c.html#ab712f0c477c358dac8015032c3aa3b72" title="Calls draw function of each element the main room contains." alt="" coords="169,123,325,149"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="383,105,305,125,304,119,382,100"/>
+<area shape="rect" id="Node000003" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Project main function that starts the game." alt="" coords="5,72,114,99"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="164,55,106,74,104,69,162,50"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="146,88,114,88,114,83,146,83"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="179,121,111,102,112,97,181,116"/>
+</map>

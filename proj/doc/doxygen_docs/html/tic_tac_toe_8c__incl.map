@@ -1,0 +1,24 @@
+<map id="C:/Users/anton/Documents/lcom/labs/proj/src/model/stateModels/ticTacToe.c" name="C:/Users/anton/Documents/lcom/labs/proj/src/model/stateModels/ticTacToe.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="22,5,201,64"/>
+<area shape="rect" id="Node000002" href="$tic_tac_toe_8h.html" title=" " alt="" coords="67,112,156,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,64,114,96,109,96,109,64"/>
+<area shape="rect" id="Node000003" href="$gui_drawer_8h.html" title=" " alt="" coords="49,261,201,288"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="77,142,48,155,24,171,9,191,8,201,13,212,35,236,63,253,61,257,31,240,8,215,3,202,4,189,20,167,46,150,74,137"/>
+<area shape="rect" id="Node000007" href="$button_8h.html" title=" " alt="" coords="219,187,300,213"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="139,137,221,177,219,182,136,142"/>
+<area shape="rect" id="Node000008" href="$cursor_8h.html" title=" " alt="" coords="22,187,102,213"/>
+<area shape="poly" id="edge10_Node000002_Node000008" title=" " alt="" coords="105,141,82,175,77,172,101,138"/>
+<area shape="rect" id="Node000009" href="$item_8h.html" title=" " alt="" coords="126,187,196,213"/>
+<area shape="poly" id="edge12_Node000002_Node000009" title=" " alt="" coords="122,138,146,172,142,175,118,141"/>
+<area shape="rect" id="Node000004" href="$video_8h.html" title=" " alt="" coords="35,336,172,379"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="124,289,115,322,110,321,119,288"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="177,427,254,453"/>
+<area shape="poly" id="edge6_Node000003_Node000005" title=" " alt="" coords="142,286,165,307,186,335,203,374,213,411,208,413,198,376,181,337,161,311,139,290"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="134,377,187,415,184,420,131,381"/>
+<area shape="rect" id="Node000006" href="$video__macros_8h.html" title=" " alt="" coords="41,427,153,453"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="105,379,102,411,97,411,99,379"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="237,216,163,256,161,251,235,212"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="260,214,223,412,218,411,255,213"/>
+<area shape="poly" id="edge11_Node000008_Node000003" title=" " alt="" coords="75,212,106,248,102,251,71,216"/>
+<area shape="poly" id="edge13_Node000009_Node000003" title=" " alt="" coords="157,215,140,248,136,246,152,213"/>
+</map>

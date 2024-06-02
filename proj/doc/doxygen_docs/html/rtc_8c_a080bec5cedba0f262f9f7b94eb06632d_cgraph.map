@@ -1,0 +1,5 @@
+<map id="rtc_write_reg" name="rtc_write_reg">
+<area shape="rect" id="Node000001" title="Write a byte to an RTC register." alt="" coords="5,5,101,32"/>
+<area shape="rect" id="Node000002" href="$rtc_8c.html#a068edeb333e4db214207cf7476b5b314" title="Write a byte to an RTC port." alt="" coords="149,5,266,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,16,133,16,133,21,101,21"/>
+</map>

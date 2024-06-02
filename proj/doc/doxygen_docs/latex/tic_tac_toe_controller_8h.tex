@@ -1,0 +1,307 @@
+\doxysection{C\+:/\+Users/anton/\+Documents/lcom/labs/proj/src/controller/minigames/tic\+Tac\+Toe\+Controller.h File Reference}
+\hypertarget{tic_tac_toe_controller_8h}{}\label{tic_tac_toe_controller_8h}\index{C:/Users/anton/Documents/lcom/labs/proj/src/controller/minigames/ticTacToeController.h@{C:/Users/anton/Documents/lcom/labs/proj/src/controller/minigames/ticTacToeController.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include "{}../../model/state\+Models/tic\+Tac\+Toe.\+h"{}}\newline
+{\ttfamily \#include "{}../../model/button.\+h"{}}\newline
+{\ttfamily \#include "{}../../model/cursor.\+h"{}}\newline
+{\ttfamily \#include "{}../../player\+\_\+data/database.\+h"{}}\newline
+{\ttfamily \#include "{}../../viewer/minigames/tic\+Tac\+Toe\+Viewer.\+h"{}}\newline
+{\ttfamily \#include "{}../../viewer/gui\+Drawer.\+h"{}}\newline
+{\ttfamily \#include "{}../../device\+\_\+controllers/uart/uart.\+h"{}}\newline
+Include dependency graph for tic\+Tac\+Toe\+Controller.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tic_tac_toe_controller_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tic_tac_toe_controller_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{tic_tac_toe_controller_8h_afa83207d2aca4d67c269bf26944b96c3}{collision\+\_\+type\+\_\+ttt\+\_\+t}} \{ \mbox{\hyperlink{tic_tac_toe_controller_8h_afa83207d2aca4d67c269bf26944b96c3aebe2331fe947d83fd5f0db8b52ad0c5a}{QUIT\+\_\+\+TTT}}
+, \mbox{\hyperlink{tic_tac_toe_controller_8h_afa83207d2aca4d67c269bf26944b96c3a7b6c7de8a1c3189343e44f848212af1e}{HOST\+\_\+\+TTT}}
+, \mbox{\hyperlink{tic_tac_toe_controller_8h_afa83207d2aca4d67c269bf26944b96c3af9382cd374dff0928845a60fd109b612}{GUEST\+\_\+\+TTT}}
+, \mbox{\hyperlink{tic_tac_toe_controller_8h_afa83207d2aca4d67c269bf26944b96c3a3eded9e49439179806ef98aec18eef90}{NOP\+\_\+\+TTT}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{tic_tac_toe_controller_8h_a4fa6d1a1a1f70bfdadccafbada27caee}{ttt\+\_\+set\+\_\+can\+Click}} ()
+\begin{DoxyCompactList}\small\item\em Flag to fix button overlapping (When a button before is clicked) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tic_tac_toe_controller_8h_a595888a1a207791f219fe698db9cff91}{tic\+Tac\+Toe\+Controller\+\_\+load\+\_\+tictactoe}} ()
+\begin{DoxyCompactList}\small\item\em Load the Tic Tac Toe minigame (first time) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{tic_tac_toe_controller_8h_ad3dacdd99744c3de3ce8fc3a326bca14}{tic\+Tac\+Toe\+Controller\+\_\+check\+Collision\+With\+Sprites}} (\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}sprite, int x, int y)
+\begin{DoxyCompactList}\small\item\em Function that checks sprite collisions with the cursor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{tic_tac_toe_controller_8h_a82d75fd8d234e1f0f92d15aedd0b63de}{tic\+Tac\+Toe\+\_\+check\+Collision}} (int x, int y, int width, int height)
+\begin{DoxyCompactList}\small\item\em Function that checks collisions with the cursor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{tic_tac_toe_controller_8h_afa83207d2aca4d67c269bf26944b96c3}{collision\+\_\+type\+\_\+ttt\+\_\+t}} \mbox{\hyperlink{tic_tac_toe_controller_8h_ad5dbb038eb1fbff395afafb7868bc222}{tic\+Tac\+Toe\+Controller\+\_\+get\+Button\+Event}} ()
+\item 
+void \mbox{\hyperlink{tic_tac_toe_controller_8h_a971e88e21a133ff1b8a277995dd20e63}{tic\+Tac\+Toe\+Controller\+\_\+set\+Button\+Event}} (\mbox{\hyperlink{tic_tac_toe_controller_8h_afa83207d2aca4d67c269bf26944b96c3}{collision\+\_\+type\+\_\+ttt\+\_\+t}} ct)
+\item 
+void \mbox{\hyperlink{tic_tac_toe_controller_8h_a9793010a311b496aad06bf08c0cf1aee}{check\+If\+Player\+Won}} (uint8\+\_\+t curI, uint8\+\_\+t cur\+Path\mbox{[}9\mbox{]}, bool plays\mbox{[}9\mbox{]})
+\item 
+void \mbox{\hyperlink{tic_tac_toe_controller_8h_aae4bafbe082fa7f4bad0e58d11e6d861}{tic\+Tac\+Toe\+Controller\+\_\+step}} ()
+\begin{DoxyCompactList}\small\item\em Controller function that is called once every frame and updates / checks every action in the Tic Tac Toe minigame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tic_tac_toe_controller_8h_ad103a00e8879f4493e35cd14585ac7e2}{tic\+Tac\+Toe\+Controller\+\_\+delete\+\_\+tictactoe}} ()
+\begin{DoxyCompactList}\small\item\em Function that calls the Tic Tac Toe destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{tic_tac_toe_controller_8h_a82f23dc02a713fee1b3b939f996eb1de}{get\+Tic\+Tac\+Toe\+Cursor}} ()
+\item 
+\mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{tic_tac_toe_controller_8h_af37eea06bbbe9121af25ed79710c16b6}{tic\+Tac\+Toe\+Controller\+\_\+get\+\_\+saved\+\_\+ttt}} ()
+\begin{DoxyCompactList}\small\item\em Restore a saved Tic Tac Toe game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tic_tac_toe_controller_8h_a7ed45363eb773c0c6f124c24311a5fc3}{set\+Tic\+Tac\+Toe\+Cursor}} (\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*}cursor)
+\item 
+void \mbox{\hyperlink{tic_tac_toe_controller_8h_ad6884fb36768128cf09872d0b7b21adf}{tic\+Tac\+Toe\+Controller\+\_\+randomize\+\_\+reward}} ()
+\begin{DoxyCompactList}\small\item\em Function that randomizes the reward (after each game) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{tic_tac_toe_controller_8h_afa83207d2aca4d67c269bf26944b96c3}\index{ticTacToeController.h@{ticTacToeController.h}!collision\_type\_ttt\_t@{collision\_type\_ttt\_t}}
+\index{collision\_type\_ttt\_t@{collision\_type\_ttt\_t}!ticTacToeController.h@{ticTacToeController.h}}
+\doxysubsubsection{\texorpdfstring{collision\_type\_ttt\_t}{collision\_type\_ttt\_t}}
+{\footnotesize\ttfamily \label{tic_tac_toe_controller_8h_afa83207d2aca4d67c269bf26944b96c3} 
+enum \mbox{\hyperlink{tic_tac_toe_controller_8h_afa83207d2aca4d67c269bf26944b96c3}{collision\+\_\+type\+\_\+ttt\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QUIT\_TTT@{QUIT\_TTT}!ticTacToeController.h@{ticTacToeController.h}}\index{ticTacToeController.h@{ticTacToeController.h}!QUIT\_TTT@{QUIT\_TTT}}}\Hypertarget{tic_tac_toe_controller_8h_afa83207d2aca4d67c269bf26944b96c3aebe2331fe947d83fd5f0db8b52ad0c5a}\label{tic_tac_toe_controller_8h_afa83207d2aca4d67c269bf26944b96c3} 
+QUIT\+\_\+\+TTT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HOST\_TTT@{HOST\_TTT}!ticTacToeController.h@{ticTacToeController.h}}\index{ticTacToeController.h@{ticTacToeController.h}!HOST\_TTT@{HOST\_TTT}}}\Hypertarget{tic_tac_toe_controller_8h_afa83207d2aca4d67c269bf26944b96c3a7b6c7de8a1c3189343e44f848212af1e}\label{tic_tac_toe_controller_8h_afa83207d2aca4d67c269bf26944b96c3} 
+HOST\+\_\+\+TTT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GUEST\_TTT@{GUEST\_TTT}!ticTacToeController.h@{ticTacToeController.h}}\index{ticTacToeController.h@{ticTacToeController.h}!GUEST\_TTT@{GUEST\_TTT}}}\Hypertarget{tic_tac_toe_controller_8h_afa83207d2aca4d67c269bf26944b96c3af9382cd374dff0928845a60fd109b612}\label{tic_tac_toe_controller_8h_afa83207d2aca4d67c269bf26944b96c3} 
+GUEST\+\_\+\+TTT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NOP\_TTT@{NOP\_TTT}!ticTacToeController.h@{ticTacToeController.h}}\index{ticTacToeController.h@{ticTacToeController.h}!NOP\_TTT@{NOP\_TTT}}}\Hypertarget{tic_tac_toe_controller_8h_afa83207d2aca4d67c269bf26944b96c3a3eded9e49439179806ef98aec18eef90}\label{tic_tac_toe_controller_8h_afa83207d2aca4d67c269bf26944b96c3} 
+NOP\+\_\+\+TTT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{tic_tac_toe_controller_8h_a9793010a311b496aad06bf08c0cf1aee}\index{ticTacToeController.h@{ticTacToeController.h}!checkIfPlayerWon@{checkIfPlayerWon}}
+\index{checkIfPlayerWon@{checkIfPlayerWon}!ticTacToeController.h@{ticTacToeController.h}}
+\doxysubsubsection{\texorpdfstring{checkIfPlayerWon()}{checkIfPlayerWon()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_controller_8h_a9793010a311b496aad06bf08c0cf1aee} 
+void check\+If\+Player\+Won (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{curI}{, }\item[{uint8\+\_\+t}]{cur\+Path}{\mbox{[}9\mbox{]}, }\item[{bool}]{plays}{\mbox{[}9\mbox{]}}\end{DoxyParamCaption})}
+
+\Hypertarget{tic_tac_toe_controller_8h_a82f23dc02a713fee1b3b939f996eb1de}\index{ticTacToeController.h@{ticTacToeController.h}!getTicTacToeCursor@{getTicTacToeCursor}}
+\index{getTicTacToeCursor@{getTicTacToeCursor}!ticTacToeController.h@{ticTacToeController.h}}
+\doxysubsubsection{\texorpdfstring{getTicTacToeCursor()}{getTicTacToeCursor()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_controller_8h_a82f23dc02a713fee1b3b939f996eb1de} 
+\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*} get\+Tic\+Tac\+Toe\+Cursor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{tic_tac_toe_controller_8h_a7ed45363eb773c0c6f124c24311a5fc3}\index{ticTacToeController.h@{ticTacToeController.h}!setTicTacToeCursor@{setTicTacToeCursor}}
+\index{setTicTacToeCursor@{setTicTacToeCursor}!ticTacToeController.h@{ticTacToeController.h}}
+\doxysubsubsection{\texorpdfstring{setTicTacToeCursor()}{setTicTacToeCursor()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_controller_8h_a7ed45363eb773c0c6f124c24311a5fc3} 
+void set\+Tic\+Tac\+Toe\+Cursor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*}}]{cursor}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{tic_tac_toe_controller_8h_a7ed45363eb773c0c6f124c24311a5fc3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{tic_tac_toe_controller_8h_a82d75fd8d234e1f0f92d15aedd0b63de}\index{ticTacToeController.h@{ticTacToeController.h}!ticTacToe\_checkCollision@{ticTacToe\_checkCollision}}
+\index{ticTacToe\_checkCollision@{ticTacToe\_checkCollision}!ticTacToeController.h@{ticTacToeController.h}}
+\doxysubsubsection{\texorpdfstring{ticTacToe\_checkCollision()}{ticTacToe\_checkCollision()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_controller_8h_a82d75fd8d234e1f0f92d15aedd0b63de} 
+bool tic\+Tac\+Toe\+\_\+check\+Collision (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{width}{, }\item[{int}]{height}{}\end{DoxyParamCaption})}
+
+
+
+Function that checks collisions with the cursor. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tic_tac_toe_controller_8h_a82d75fd8d234e1f0f92d15aedd0b63de_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tic_tac_toe_controller_8h_a82d75fd8d234e1f0f92d15aedd0b63de_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{tic_tac_toe_controller_8h_ad3dacdd99744c3de3ce8fc3a326bca14}\index{ticTacToeController.h@{ticTacToeController.h}!ticTacToeController\_checkCollisionWithSprites@{ticTacToeController\_checkCollisionWithSprites}}
+\index{ticTacToeController\_checkCollisionWithSprites@{ticTacToeController\_checkCollisionWithSprites}!ticTacToeController.h@{ticTacToeController.h}}
+\doxysubsubsection{\texorpdfstring{ticTacToeController\_checkCollisionWithSprites()}{ticTacToeController\_checkCollisionWithSprites()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_controller_8h_ad3dacdd99744c3de3ce8fc3a326bca14} 
+bool tic\+Tac\+Toe\+Controller\+\_\+check\+Collision\+With\+Sprites (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}}]{sprite}{, }\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Function that checks sprite collisions with the cursor. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tic_tac_toe_controller_8h_ad3dacdd99744c3de3ce8fc3a326bca14_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tic_tac_toe_controller_8h_ad3dacdd99744c3de3ce8fc3a326bca14_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{tic_tac_toe_controller_8h_ad103a00e8879f4493e35cd14585ac7e2}\index{ticTacToeController.h@{ticTacToeController.h}!ticTacToeController\_delete\_tictactoe@{ticTacToeController\_delete\_tictactoe}}
+\index{ticTacToeController\_delete\_tictactoe@{ticTacToeController\_delete\_tictactoe}!ticTacToeController.h@{ticTacToeController.h}}
+\doxysubsubsection{\texorpdfstring{ticTacToeController\_delete\_tictactoe()}{ticTacToeController\_delete\_tictactoe()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_controller_8h_ad103a00e8879f4493e35cd14585ac7e2} 
+void tic\+Tac\+Toe\+Controller\+\_\+delete\+\_\+tictactoe (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Function that calls the Tic Tac Toe destructor. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tic_tac_toe_controller_8h_ad103a00e8879f4493e35cd14585ac7e2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{tic_tac_toe_controller_8h_af37eea06bbbe9121af25ed79710c16b6}\index{ticTacToeController.h@{ticTacToeController.h}!ticTacToeController\_get\_saved\_ttt@{ticTacToeController\_get\_saved\_ttt}}
+\index{ticTacToeController\_get\_saved\_ttt@{ticTacToeController\_get\_saved\_ttt}!ticTacToeController.h@{ticTacToeController.h}}
+\doxysubsubsection{\texorpdfstring{ticTacToeController\_get\_saved\_ttt()}{ticTacToeController\_get\_saved\_ttt()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_controller_8h_af37eea06bbbe9121af25ed79710c16b6} 
+\mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}} \texorpdfstring{$\ast$}{*} tic\+Tac\+Toe\+Controller\+\_\+get\+\_\+saved\+\_\+ttt (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Restore a saved Tic Tac Toe game. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{tic_tac_toe_controller_8h_af37eea06bbbe9121af25ed79710c16b6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{tic_tac_toe_controller_8h_ad5dbb038eb1fbff395afafb7868bc222}\index{ticTacToeController.h@{ticTacToeController.h}!ticTacToeController\_getButtonEvent@{ticTacToeController\_getButtonEvent}}
+\index{ticTacToeController\_getButtonEvent@{ticTacToeController\_getButtonEvent}!ticTacToeController.h@{ticTacToeController.h}}
+\doxysubsubsection{\texorpdfstring{ticTacToeController\_getButtonEvent()}{ticTacToeController\_getButtonEvent()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_controller_8h_ad5dbb038eb1fbff395afafb7868bc222} 
+\mbox{\hyperlink{tic_tac_toe_controller_8h_afa83207d2aca4d67c269bf26944b96c3}{collision\+\_\+type\+\_\+ttt\+\_\+t}} tic\+Tac\+Toe\+Controller\+\_\+get\+Button\+Event (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{tic_tac_toe_controller_8h_ad5dbb038eb1fbff395afafb7868bc222_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{tic_tac_toe_controller_8h_a595888a1a207791f219fe698db9cff91}\index{ticTacToeController.h@{ticTacToeController.h}!ticTacToeController\_load\_tictactoe@{ticTacToeController\_load\_tictactoe}}
+\index{ticTacToeController\_load\_tictactoe@{ticTacToeController\_load\_tictactoe}!ticTacToeController.h@{ticTacToeController.h}}
+\doxysubsubsection{\texorpdfstring{ticTacToeController\_load\_tictactoe()}{ticTacToeController\_load\_tictactoe()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_controller_8h_a595888a1a207791f219fe698db9cff91} 
+void tic\+Tac\+Toe\+Controller\+\_\+load\+\_\+tictactoe (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Load the Tic Tac Toe minigame (first time) 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tic_tac_toe_controller_8h_a595888a1a207791f219fe698db9cff91_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tic_tac_toe_controller_8h_a595888a1a207791f219fe698db9cff91_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{tic_tac_toe_controller_8h_ad6884fb36768128cf09872d0b7b21adf}\index{ticTacToeController.h@{ticTacToeController.h}!ticTacToeController\_randomize\_reward@{ticTacToeController\_randomize\_reward}}
+\index{ticTacToeController\_randomize\_reward@{ticTacToeController\_randomize\_reward}!ticTacToeController.h@{ticTacToeController.h}}
+\doxysubsubsection{\texorpdfstring{ticTacToeController\_randomize\_reward()}{ticTacToeController\_randomize\_reward()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_controller_8h_ad6884fb36768128cf09872d0b7b21adf} 
+void tic\+Tac\+Toe\+Controller\+\_\+randomize\+\_\+reward (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Function that randomizes the reward (after each game) 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tic_tac_toe_controller_8h_ad6884fb36768128cf09872d0b7b21adf_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{tic_tac_toe_controller_8h_a971e88e21a133ff1b8a277995dd20e63}\index{ticTacToeController.h@{ticTacToeController.h}!ticTacToeController\_setButtonEvent@{ticTacToeController\_setButtonEvent}}
+\index{ticTacToeController\_setButtonEvent@{ticTacToeController\_setButtonEvent}!ticTacToeController.h@{ticTacToeController.h}}
+\doxysubsubsection{\texorpdfstring{ticTacToeController\_setButtonEvent()}{ticTacToeController\_setButtonEvent()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_controller_8h_a971e88e21a133ff1b8a277995dd20e63} 
+void tic\+Tac\+Toe\+Controller\+\_\+set\+Button\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{tic_tac_toe_controller_8h_afa83207d2aca4d67c269bf26944b96c3}{collision\+\_\+type\+\_\+ttt\+\_\+t}}}]{ct}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{tic_tac_toe_controller_8h_a971e88e21a133ff1b8a277995dd20e63_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{tic_tac_toe_controller_8h_aae4bafbe082fa7f4bad0e58d11e6d861}\index{ticTacToeController.h@{ticTacToeController.h}!ticTacToeController\_step@{ticTacToeController\_step}}
+\index{ticTacToeController\_step@{ticTacToeController\_step}!ticTacToeController.h@{ticTacToeController.h}}
+\doxysubsubsection{\texorpdfstring{ticTacToeController\_step()}{ticTacToeController\_step()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_controller_8h_aae4bafbe082fa7f4bad0e58d11e6d861} 
+void tic\+Tac\+Toe\+Controller\+\_\+step (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Controller function that is called once every frame and updates / checks every action in the Tic Tac Toe minigame. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tic_tac_toe_controller_8h_aae4bafbe082fa7f4bad0e58d11e6d861_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{tic_tac_toe_controller_8h_aae4bafbe082fa7f4bad0e58d11e6d861_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{tic_tac_toe_controller_8h_a4fa6d1a1a1f70bfdadccafbada27caee}\index{ticTacToeController.h@{ticTacToeController.h}!ttt\_set\_canClick@{ttt\_set\_canClick}}
+\index{ttt\_set\_canClick@{ttt\_set\_canClick}!ticTacToeController.h@{ticTacToeController.h}}
+\doxysubsubsection{\texorpdfstring{ttt\_set\_canClick()}{ttt\_set\_canClick()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_controller_8h_a4fa6d1a1a1f70bfdadccafbada27caee} 
+void ttt\+\_\+set\+\_\+can\+Click (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Flag to fix button overlapping (When a button before is clicked) 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{tic_tac_toe_controller_8h_a4fa6d1a1a1f70bfdadccafbada27caee_icgraph}
+\end{center}
+\end{figure}

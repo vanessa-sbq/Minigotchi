@@ -1,0 +1,188 @@
+\doxysection{C\+:/\+Users/anton/\+Documents/lcom/labs/proj/src/controller/menus/minigame\+Menu\+Controller.c File Reference}
+\hypertarget{minigame_menu_controller_8c}{}\label{minigame_menu_controller_8c}\index{C:/Users/anton/Documents/lcom/labs/proj/src/controller/menus/minigameMenuController.c@{C:/Users/anton/Documents/lcom/labs/proj/src/controller/menus/minigameMenuController.c}}
+{\ttfamily \#include "{}minigame\+Menu\+Controller.\+h"{}}\newline
+Include dependency graph for minigame\+Menu\+Controller.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{minigame_menu_controller_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{minigame_menu_controller_8c_ae47d4dfb6175e3049d7bd32a640e3ab3}{minigame\+Menu\+Controller\+\_\+load\+\_\+minigame\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Load the minigame selection menu (first time) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{minigame_menu_controller_8c_a0f6ed9fd5eafe1b80407bbe7e1486024}{minigame\+Menu\+Controller\+\_\+check\+Collision}} (\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}sprite, int x, int y)
+\begin{DoxyCompactList}\small\item\em Function that checks sprite collisions with the cursor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{minigame_menu_controller_8h_a193e19cdd378ce7cc63b7606d7737ac9}{collision\+\_\+type\+\_\+minigame\+Menu\+\_\+t}} \mbox{\hyperlink{minigame_menu_controller_8c_af92fad45b018586b1a4f9bfc1c8cbe55}{minigame\+Menu\+Controller\+\_\+get\+Button\+Event}} ()
+\item 
+void \mbox{\hyperlink{minigame_menu_controller_8c_aebea9daa4438188b8fb1291592d05d14}{minigame\+Menu\+Controller\+\_\+set\+Button\+Event}} (\mbox{\hyperlink{minigame_menu_controller_8h_a193e19cdd378ce7cc63b7606d7737ac9}{collision\+\_\+type\+\_\+minigame\+Menu\+\_\+t}} ct)
+\item 
+void \mbox{\hyperlink{minigame_menu_controller_8c_add0cc9d8c1e1ca3cf9be2a7bbe12e4f5}{minigame\+Menu\+Controller\+\_\+step}} ()
+\begin{DoxyCompactList}\small\item\em Controller function that is called once every frame and updates / checks every action in the minigame selection menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{minigame_menu_controller_8c_a70f3184491ea404d46501ad044b4009e}{minigame\+Menu\+Controller\+\_\+delete\+\_\+minigame\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Calls the \doxylink{struct_minigame_menu}{Minigame\+Menu} destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{minigame_menu_controller_8c_a07ade14d3c42fb2ce953b6298edba94f}{get\+Minigame\+Menu\+Cursor}} ()
+\item 
+void \mbox{\hyperlink{minigame_menu_controller_8c_a89377921fe82127d9f6e5eb8dc49f566}{set\+Minigame\+Menu\+Cursor}} (\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*}cursor)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_minigame_menu}{Minigame\+Menu}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{minigame_menu_controller_8c_a57b81612f09e3236076b029b654aa671}{minigame\+Menu}} = NULL
+\item 
+static \mbox{\hyperlink{minigame_menu_controller_8h_a193e19cdd378ce7cc63b7606d7737ac9}{collision\+\_\+type\+\_\+minigame\+Menu\+\_\+t}} \mbox{\hyperlink{minigame_menu_controller_8c_a31f5b09675141d5a9524e84f7c263358}{current\+Button\+Event}} = \mbox{\hyperlink{minigame_menu_controller_8h_a193e19cdd378ce7cc63b7606d7737ac9a6888602b61c9db9485fc5312b6b29f6b}{NOP\+\_\+\+MINIGAMEMENU}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{minigame_menu_controller_8c_a07ade14d3c42fb2ce953b6298edba94f}\index{minigameMenuController.c@{minigameMenuController.c}!getMinigameMenuCursor@{getMinigameMenuCursor}}
+\index{getMinigameMenuCursor@{getMinigameMenuCursor}!minigameMenuController.c@{minigameMenuController.c}}
+\doxysubsubsection{\texorpdfstring{getMinigameMenuCursor()}{getMinigameMenuCursor()}}
+{\footnotesize\ttfamily \label{minigame_menu_controller_8c_a07ade14d3c42fb2ce953b6298edba94f} 
+\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*} get\+Minigame\+Menu\+Cursor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{minigame_menu_controller_8c_a0f6ed9fd5eafe1b80407bbe7e1486024}\index{minigameMenuController.c@{minigameMenuController.c}!minigameMenuController\_checkCollision@{minigameMenuController\_checkCollision}}
+\index{minigameMenuController\_checkCollision@{minigameMenuController\_checkCollision}!minigameMenuController.c@{minigameMenuController.c}}
+\doxysubsubsection{\texorpdfstring{minigameMenuController\_checkCollision()}{minigameMenuController\_checkCollision()}}
+{\footnotesize\ttfamily \label{minigame_menu_controller_8c_a0f6ed9fd5eafe1b80407bbe7e1486024} 
+bool minigame\+Menu\+Controller\+\_\+check\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}}]{sprite}{, }\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Function that checks sprite collisions with the cursor. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{minigame_menu_controller_8c_a0f6ed9fd5eafe1b80407bbe7e1486024_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{minigame_menu_controller_8c_a0f6ed9fd5eafe1b80407bbe7e1486024_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{minigame_menu_controller_8c_a70f3184491ea404d46501ad044b4009e}\index{minigameMenuController.c@{minigameMenuController.c}!minigameMenuController\_delete\_minigameMenu@{minigameMenuController\_delete\_minigameMenu}}
+\index{minigameMenuController\_delete\_minigameMenu@{minigameMenuController\_delete\_minigameMenu}!minigameMenuController.c@{minigameMenuController.c}}
+\doxysubsubsection{\texorpdfstring{minigameMenuController\_delete\_minigameMenu()}{minigameMenuController\_delete\_minigameMenu()}}
+{\footnotesize\ttfamily \label{minigame_menu_controller_8c_a70f3184491ea404d46501ad044b4009e} 
+void minigame\+Menu\+Controller\+\_\+delete\+\_\+minigame\+Menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Calls the \doxylink{struct_minigame_menu}{Minigame\+Menu} destructor. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{minigame_menu_controller_8c_a70f3184491ea404d46501ad044b4009e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{minigame_menu_controller_8c_af92fad45b018586b1a4f9bfc1c8cbe55}\index{minigameMenuController.c@{minigameMenuController.c}!minigameMenuController\_getButtonEvent@{minigameMenuController\_getButtonEvent}}
+\index{minigameMenuController\_getButtonEvent@{minigameMenuController\_getButtonEvent}!minigameMenuController.c@{minigameMenuController.c}}
+\doxysubsubsection{\texorpdfstring{minigameMenuController\_getButtonEvent()}{minigameMenuController\_getButtonEvent()}}
+{\footnotesize\ttfamily \label{minigame_menu_controller_8c_af92fad45b018586b1a4f9bfc1c8cbe55} 
+\mbox{\hyperlink{minigame_menu_controller_8h_a193e19cdd378ce7cc63b7606d7737ac9}{collision\+\_\+type\+\_\+minigame\+Menu\+\_\+t}} minigame\+Menu\+Controller\+\_\+get\+Button\+Event (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{minigame_menu_controller_8c_af92fad45b018586b1a4f9bfc1c8cbe55_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{minigame_menu_controller_8c_ae47d4dfb6175e3049d7bd32a640e3ab3}\index{minigameMenuController.c@{minigameMenuController.c}!minigameMenuController\_load\_minigameMenu@{minigameMenuController\_load\_minigameMenu}}
+\index{minigameMenuController\_load\_minigameMenu@{minigameMenuController\_load\_minigameMenu}!minigameMenuController.c@{minigameMenuController.c}}
+\doxysubsubsection{\texorpdfstring{minigameMenuController\_load\_minigameMenu()}{minigameMenuController\_load\_minigameMenu()}}
+{\footnotesize\ttfamily \label{minigame_menu_controller_8c_ae47d4dfb6175e3049d7bd32a640e3ab3} 
+void minigame\+Menu\+Controller\+\_\+load\+\_\+minigame\+Menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Load the minigame selection menu (first time) 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{minigame_menu_controller_8c_ae47d4dfb6175e3049d7bd32a640e3ab3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{minigame_menu_controller_8c_ae47d4dfb6175e3049d7bd32a640e3ab3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{minigame_menu_controller_8c_aebea9daa4438188b8fb1291592d05d14}\index{minigameMenuController.c@{minigameMenuController.c}!minigameMenuController\_setButtonEvent@{minigameMenuController\_setButtonEvent}}
+\index{minigameMenuController\_setButtonEvent@{minigameMenuController\_setButtonEvent}!minigameMenuController.c@{minigameMenuController.c}}
+\doxysubsubsection{\texorpdfstring{minigameMenuController\_setButtonEvent()}{minigameMenuController\_setButtonEvent()}}
+{\footnotesize\ttfamily \label{minigame_menu_controller_8c_aebea9daa4438188b8fb1291592d05d14} 
+void minigame\+Menu\+Controller\+\_\+set\+Button\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{minigame_menu_controller_8h_a193e19cdd378ce7cc63b7606d7737ac9}{collision\+\_\+type\+\_\+minigame\+Menu\+\_\+t}}}]{ct}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{minigame_menu_controller_8c_aebea9daa4438188b8fb1291592d05d14_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{minigame_menu_controller_8c_add0cc9d8c1e1ca3cf9be2a7bbe12e4f5}\index{minigameMenuController.c@{minigameMenuController.c}!minigameMenuController\_step@{minigameMenuController\_step}}
+\index{minigameMenuController\_step@{minigameMenuController\_step}!minigameMenuController.c@{minigameMenuController.c}}
+\doxysubsubsection{\texorpdfstring{minigameMenuController\_step()}{minigameMenuController\_step()}}
+{\footnotesize\ttfamily \label{minigame_menu_controller_8c_add0cc9d8c1e1ca3cf9be2a7bbe12e4f5} 
+void minigame\+Menu\+Controller\+\_\+step (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Controller function that is called once every frame and updates / checks every action in the minigame selection menu. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{minigame_menu_controller_8c_add0cc9d8c1e1ca3cf9be2a7bbe12e4f5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{minigame_menu_controller_8c_add0cc9d8c1e1ca3cf9be2a7bbe12e4f5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{minigame_menu_controller_8c_a89377921fe82127d9f6e5eb8dc49f566}\index{minigameMenuController.c@{minigameMenuController.c}!setMinigameMenuCursor@{setMinigameMenuCursor}}
+\index{setMinigameMenuCursor@{setMinigameMenuCursor}!minigameMenuController.c@{minigameMenuController.c}}
+\doxysubsubsection{\texorpdfstring{setMinigameMenuCursor()}{setMinigameMenuCursor()}}
+{\footnotesize\ttfamily \label{minigame_menu_controller_8c_a89377921fe82127d9f6e5eb8dc49f566} 
+void set\+Minigame\+Menu\+Cursor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*}}]{cursor}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{minigame_menu_controller_8c_a89377921fe82127d9f6e5eb8dc49f566_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{minigame_menu_controller_8c_a31f5b09675141d5a9524e84f7c263358}\index{minigameMenuController.c@{minigameMenuController.c}!currentButtonEvent@{currentButtonEvent}}
+\index{currentButtonEvent@{currentButtonEvent}!minigameMenuController.c@{minigameMenuController.c}}
+\doxysubsubsection{\texorpdfstring{currentButtonEvent}{currentButtonEvent}}
+{\footnotesize\ttfamily \label{minigame_menu_controller_8c_a31f5b09675141d5a9524e84f7c263358} 
+\mbox{\hyperlink{minigame_menu_controller_8h_a193e19cdd378ce7cc63b7606d7737ac9}{collision\+\_\+type\+\_\+minigame\+Menu\+\_\+t}} current\+Button\+Event = \mbox{\hyperlink{minigame_menu_controller_8h_a193e19cdd378ce7cc63b7606d7737ac9a6888602b61c9db9485fc5312b6b29f6b}{NOP\+\_\+\+MINIGAMEMENU}}\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{minigame_menu_controller_8c_a57b81612f09e3236076b029b654aa671}\index{minigameMenuController.c@{minigameMenuController.c}!minigameMenu@{minigameMenu}}
+\index{minigameMenu@{minigameMenu}!minigameMenuController.c@{minigameMenuController.c}}
+\doxysubsubsection{\texorpdfstring{minigameMenu}{minigameMenu}}
+{\footnotesize\ttfamily \label{minigame_menu_controller_8c_a57b81612f09e3236076b029b654aa671} 
+\mbox{\hyperlink{struct_minigame_menu}{Minigame\+Menu}}\texorpdfstring{$\ast$}{*} minigame\+Menu = NULL\hspace{0.3cm}{\ttfamily [static]}}
+

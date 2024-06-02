@@ -1,0 +1,8 @@
+<map id="serial_get_receive_queue" name="serial_get_receive_queue">
+<area shape="rect" id="Node000001" title="Get RX queue." alt="" coords="374,5,498,48"/>
+<area shape="rect" id="Node000002" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Project main function that starts the game." alt="" coords="5,13,114,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="359,29,114,29,114,24,359,24"/>
+<area shape="rect" id="Node000003" href="$tic_tac_toe_controller_8c.html#aae4bafbe082fa7f4bad0e58d11e6d861" title="Controller function that is called once every frame and updates / checks every action in the Tic Tac ..." alt="" coords="162,39,326,65"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="359,39,327,44,326,38,358,34"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="146,41,114,37,114,31,146,36"/>
+</map>

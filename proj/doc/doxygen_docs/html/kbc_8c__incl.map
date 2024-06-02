@@ -1,0 +1,12 @@
+<map id="C:/Users/anton/Documents/lcom/labs/proj/src/device_controllers/kbc/kbc.c" name="C:/Users/anton/Documents/lcom/labs/proj/src/device_controllers/kbc/kbc.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="22,5,201,64"/>
+<area shape="rect" id="Node000002" href="$kbc_8h.html" title=" " alt="" coords="85,112,138,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,64,114,96,109,96,109,64"/>
+<area shape="rect" id="Node000003" href="$utils_8h.html" title=" " alt="" coords="5,187,74,213"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="101,141,64,177,61,174,97,137"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="37,261,114,288"/>
+<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="111,140,85,247,80,246,106,139"/>
+<area shape="rect" id="Node000005" href="$i8042_8h.html" title=" " alt="" coords="149,187,213,213"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="125,137,160,173,156,177,122,141"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="48,213,65,246,60,248,43,215"/>
+</map>

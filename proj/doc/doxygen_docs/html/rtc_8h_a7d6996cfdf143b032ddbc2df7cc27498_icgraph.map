@@ -1,0 +1,24 @@
+<map id="rtc_read_register" name="rtc_read_register">
+<area shape="rect" id="Node000001" title="Read a byte from an RTC register." alt="" coords="319,157,437,184"/>
+<area shape="rect" id="Node000002" href="$rtc_8c.html#ae2f00f1f513100583d6882676298e419" title="Disable Alarm Interrupts, by writing corresponding bytes to register B of the RTC." alt="" coords="163,5,270,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="358,146,320,96,296,70,269,46,251,35,254,30,273,42,300,66,324,93,362,143"/>
+<area shape="rect" id="Node000004" href="$rtc_8c.html#ab1c125e48fce243cb2623dee66cc86d2" title="Disable Periodic Interrupts, by writing corresponding bytes to register B of the RTC." alt="" coords="163,56,270,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="346,150,270,97,248,86,250,81,272,92,349,145"/>
+<area shape="rect" id="Node000005" href="$rtc_8c.html#a0d26c165d332a4e7f1ff83c90987ff4a" title="Disable Update Interrupts, by writing corresponding bytes to register B of the RTC." alt="" coords="163,107,270,133"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="318,155,261,136,262,131,320,150"/>
+<area shape="rect" id="Node000006" href="$rtc_8c.html#a9e9489590b532ec5ce8442e9f08aeb8e" title="Enable Alarm Interrupts, by writing corresponding bytes to register B of the RTC." alt="" coords="164,157,269,184"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="303,173,269,173,269,168,303,168"/>
+<area shape="rect" id="Node000007" href="$rtc_8c.html#a66e555139e798e92cfbcd11222bee82a" title=" " alt="" coords="165,208,268,235"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="320,192,262,210,261,205,318,187"/>
+<area shape="rect" id="Node000008" href="$rtc_8c.html#a75dad42881d64cf07cf1bdc2979a7056" title="RTC interrupt handler." alt="" coords="190,259,243,285"/>
+<area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="349,196,272,249,245,263,242,258,270,244,346,192"/>
+<area shape="rect" id="Node000009" href="$rtc_8c.html#a7f5b00a2f809e42f08f037ffa9347444" title="Check RTC&#39;s UIP flag to avoid race conditions." alt="" coords="162,309,271,336"/>
+<area shape="poly" id="edge13_Node000001_Node000009" title=" " alt="" coords="362,199,324,249,300,275,273,299,254,311,251,307,269,295,296,272,320,245,358,196"/>
+<area shape="rect" id="Node000003" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Project main function that starts the game." alt="" coords="5,132,114,159"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="170,42,163,46,111,91,74,133,70,130,108,88,160,42,167,38"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="173,92,163,97,89,134,87,129,160,92,171,87"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="148,134,115,139,114,134,147,128"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="148,162,114,157,114,151,149,157"/>
+<area shape="poly" id="edge10_Node000007_Node000003" title=" " alt="" coords="171,203,160,198,87,162,89,157,163,194,173,199"/>
+<area shape="poly" id="edge12_Node000008_Node000003" title=" " alt="" coords="174,257,160,249,108,203,70,161,74,158,111,199,163,245,177,253"/>
+</map>

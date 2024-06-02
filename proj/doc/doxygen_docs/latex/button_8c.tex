@@ -1,0 +1,162 @@
+\doxysection{C\+:/\+Users/anton/\+Documents/lcom/labs/proj/src/model/button.c File Reference}
+\hypertarget{button_8c}{}\label{button_8c}\index{C:/Users/anton/Documents/lcom/labs/proj/src/model/button.c@{C:/Users/anton/Documents/lcom/labs/proj/src/model/button.c}}
+{\ttfamily \#include "{}button.\+h"{}}\newline
+Include dependency graph for button.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=275pt]{button_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{button_8c_abd639885574eb18a376b13dc75f4123e}{new\+\_\+button}} (int x, int y, int text\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Creates a new button "{}object"{} and returns a pointer to it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{button_8c_a0e0fe01cc691c356d04430d1c200a8da}{button\+\_\+delete}} (\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*}button)
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_button}{Button} destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{button_8c_a8cffe5189a594e49e7510d739e186fa0}{draw\+\_\+button}} (\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*}button)
+\begin{DoxyCompactList}\small\item\em Draws a button. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{button_8c_a4f6cf2cfef2e91116f3df51b08e57c73}{button\+\_\+get\+\_\+sprite}} (\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*}button)
+\item 
+int \mbox{\hyperlink{button_8c_a6ae257ae83c7a1754a18a846a9deaee1}{button\+\_\+get\+\_\+x}} (\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*}button)
+\item 
+int \mbox{\hyperlink{button_8c_ac221382d87e9aabccc07ecd8549f62b2}{button\+\_\+get\+\_\+y}} (\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*}button)
+\item 
+bool \mbox{\hyperlink{button_8c_ae82196003d36a119f29f22ea9879d8fb}{button\+\_\+get\+\_\+activated}} (\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*}button)
+\item 
+void \mbox{\hyperlink{button_8c_adf4f3bb8d3b2d1f9aa3089f5a426818d}{button\+\_\+set\+\_\+activated}} (\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*}button, bool activated)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{button_8c_a0e0fe01cc691c356d04430d1c200a8da}\index{button.c@{button.c}!button\_delete@{button\_delete}}
+\index{button\_delete@{button\_delete}!button.c@{button.c}}
+\doxysubsubsection{\texorpdfstring{button\_delete()}{button\_delete()}}
+{\footnotesize\ttfamily \label{button_8c_a0e0fe01cc691c356d04430d1c200a8da} 
+void button\+\_\+delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*}}]{button}{}\end{DoxyParamCaption})}
+
+
+
+\doxylink{struct_button}{Button} destructor. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{button_8c_a0e0fe01cc691c356d04430d1c200a8da_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{button_8c_ae82196003d36a119f29f22ea9879d8fb}\index{button.c@{button.c}!button\_get\_activated@{button\_get\_activated}}
+\index{button\_get\_activated@{button\_get\_activated}!button.c@{button.c}}
+\doxysubsubsection{\texorpdfstring{button\_get\_activated()}{button\_get\_activated()}}
+{\footnotesize\ttfamily \label{button_8c_ae82196003d36a119f29f22ea9879d8fb} 
+bool button\+\_\+get\+\_\+activated (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*}}]{button}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{button_8c_ae82196003d36a119f29f22ea9879d8fb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{button_8c_a4f6cf2cfef2e91116f3df51b08e57c73}\index{button.c@{button.c}!button\_get\_sprite@{button\_get\_sprite}}
+\index{button\_get\_sprite@{button\_get\_sprite}!button.c@{button.c}}
+\doxysubsubsection{\texorpdfstring{button\_get\_sprite()}{button\_get\_sprite()}}
+{\footnotesize\ttfamily \label{button_8c_a4f6cf2cfef2e91116f3df51b08e57c73} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} button\+\_\+get\+\_\+sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*}}]{button}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{button_8c_a4f6cf2cfef2e91116f3df51b08e57c73_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{button_8c_a6ae257ae83c7a1754a18a846a9deaee1}\index{button.c@{button.c}!button\_get\_x@{button\_get\_x}}
+\index{button\_get\_x@{button\_get\_x}!button.c@{button.c}}
+\doxysubsubsection{\texorpdfstring{button\_get\_x()}{button\_get\_x()}}
+{\footnotesize\ttfamily \label{button_8c_a6ae257ae83c7a1754a18a846a9deaee1} 
+int button\+\_\+get\+\_\+x (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*}}]{button}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{button_8c_a6ae257ae83c7a1754a18a846a9deaee1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{button_8c_ac221382d87e9aabccc07ecd8549f62b2}\index{button.c@{button.c}!button\_get\_y@{button\_get\_y}}
+\index{button\_get\_y@{button\_get\_y}!button.c@{button.c}}
+\doxysubsubsection{\texorpdfstring{button\_get\_y()}{button\_get\_y()}}
+{\footnotesize\ttfamily \label{button_8c_ac221382d87e9aabccc07ecd8549f62b2} 
+int button\+\_\+get\+\_\+y (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*}}]{button}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{button_8c_ac221382d87e9aabccc07ecd8549f62b2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{button_8c_adf4f3bb8d3b2d1f9aa3089f5a426818d}\index{button.c@{button.c}!button\_set\_activated@{button\_set\_activated}}
+\index{button\_set\_activated@{button\_set\_activated}!button.c@{button.c}}
+\doxysubsubsection{\texorpdfstring{button\_set\_activated()}{button\_set\_activated()}}
+{\footnotesize\ttfamily \label{button_8c_adf4f3bb8d3b2d1f9aa3089f5a426818d} 
+void button\+\_\+set\+\_\+activated (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*}}]{button}{, }\item[{bool}]{activated}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{button_8c_adf4f3bb8d3b2d1f9aa3089f5a426818d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{button_8c_a8cffe5189a594e49e7510d739e186fa0}\index{button.c@{button.c}!draw\_button@{draw\_button}}
+\index{draw\_button@{draw\_button}!button.c@{button.c}}
+\doxysubsubsection{\texorpdfstring{draw\_button()}{draw\_button()}}
+{\footnotesize\ttfamily \label{button_8c_a8cffe5189a594e49e7510d739e186fa0} 
+void draw\+\_\+button (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*}}]{button}{}\end{DoxyParamCaption})}
+
+
+
+Draws a button. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{button_8c_a8cffe5189a594e49e7510d739e186fa0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{button_8c_a8cffe5189a594e49e7510d739e186fa0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{button_8c_abd639885574eb18a376b13dc75f4123e}\index{button.c@{button.c}!new\_button@{new\_button}}
+\index{new\_button@{new\_button}!button.c@{button.c}}
+\doxysubsubsection{\texorpdfstring{new\_button()}{new\_button()}}
+{\footnotesize\ttfamily \label{button_8c_abd639885574eb18a376b13dc75f4123e} 
+\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*} new\+\_\+button (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{text\+\_\+index}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new button "{}object"{} and returns a pointer to it. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{button_8c_abd639885574eb18a376b13dc75f4123e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{button_8c_abd639885574eb18a376b13dc75f4123e_icgraph}
+\end{center}
+\end{figure}

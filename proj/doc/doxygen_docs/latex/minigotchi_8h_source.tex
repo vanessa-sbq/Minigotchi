@@ -1,0 +1,50 @@
+\doxysection{minigotchi.\+h}
+\hypertarget{minigotchi_8h_source}{}\label{minigotchi_8h_source}\index{C:/Users/anton/Documents/lcom/labs/proj/src/model/minigotchi.h@{C:/Users/anton/Documents/lcom/labs/proj/src/model/minigotchi.h}}
+\mbox{\hyperlink{minigotchi_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_MINIGOTCHI\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_MINIGOTCHI\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gui_drawer_8h}{../viewer/guiDrawer.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00007\ \ \ \ \ \mbox{\hyperlink{struct_sprite}{Sprite}}\ *\mbox{\hyperlink{struct_minigotchi_ad4279d9fd58dd91bd4c91acb99a3c030}{sprite}};}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_minigotchi_a05c3d3ea45955c58478bc4822f43e51a}{x}};\ }
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_minigotchi_a4e4670a3720743f504c9ef645dbc0fe0}{y}};}
+\DoxyCodeLine{00010\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{struct_minigotchi_ae82cb9779947d689d4189fb36bba4654}{happiness}};}
+\DoxyCodeLine{00011\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{struct_minigotchi_abec3a21cadaf63529094c5316ac4ae7a}{hunger}};}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_minigotchi_aed0e22a58617d6505889b566e8edc878}{isRxCuddles}};}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{struct_minigotchi_a1431968a6f5c06ea8385a35d05680474}{name}};}
+\DoxyCodeLine{00014\ \}\ \mbox{\hyperlink{struct_minigotchi}{Minigotchi}};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \mbox{\hyperlink{struct_minigotchi}{Minigotchi}}\ *\mbox{\hyperlink{minigotchi_8h_a61779196dfb32c863201e8172da7a425}{new\_minigotchi}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ uint32\_t\ hunger,\ uint32\_t\ happiness,\ \textcolor{keywordtype}{char}*\ name);}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{minigotchi_8h_afe1499272c08d222820a15e44ffa6c68}{kill\_minigotchi}}(\mbox{\hyperlink{struct_minigotchi}{Minigotchi}}\ *minigotchi);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{minigotchi_8h_aa8dba5ef250a763d2269d95816a2c232}{draw\_minigotchi}}(\mbox{\hyperlink{struct_minigotchi}{Minigotchi}}\ *minigotchi);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ Getters\ and\ setters}}
+\DoxyCodeLine{00023\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{minigotchi_8h_a2cf74af93faf8e97c15ce5b0b6031838}{minigotchi\_get\_sprite}}(\mbox{\hyperlink{struct_minigotchi}{Minigotchi}}\ *minigotchi);}
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{minigotchi_8h_addadd90746333289c2d5ec9a7539dafc}{minigotchi\_set\_sprite}}(\mbox{\hyperlink{struct_minigotchi}{Minigotchi}}\ *minigotchi,\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ sprite);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{minigotchi_8h_a75a5a7eea17296eb01ddcc129c20191a}{minigotchi\_get\_x}}(\mbox{\hyperlink{struct_minigotchi}{Minigotchi}}\ *minigotchi);}
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{minigotchi_8h_a686f42db5384b58524c53b1265d31915}{minigotchi\_get\_y}}(\mbox{\hyperlink{struct_minigotchi}{Minigotchi}}\ *minigotchi);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{minigotchi_8h_a1a0677e03c5481d3ef4a2fb31a19e903}{minigotchi\_set\_x}}(\mbox{\hyperlink{struct_minigotchi}{Minigotchi}}\ *minigotchi,\ \textcolor{keywordtype}{int}\ x);}
+\DoxyCodeLine{00030\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{minigotchi_8h_a53e0be1ba4b02fde53211a8418abc6b5}{minigotchi\_set\_y}}(\mbox{\hyperlink{struct_minigotchi}{Minigotchi}}\ *minigotchi,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ uint32\_t\ \mbox{\hyperlink{minigotchi_8h_aa93e7d999785eddc006db8e37ec7324b}{minigotchi\_get\_happiness}}(\mbox{\hyperlink{struct_minigotchi}{Minigotchi}}\ *minigotchi);}
+\DoxyCodeLine{00033\ uint32\_t\ \mbox{\hyperlink{minigotchi_8h_ad0fbf1cb6769dec6d2dfa1224c44846e}{minigotchi\_get\_hunger}}(\mbox{\hyperlink{struct_minigotchi}{Minigotchi}}\ *minigotchi);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{minigotchi_8h_a9f3bba0a1dee58db2ea7e3e6407af137}{minigotchi\_set\_happiness}}(\mbox{\hyperlink{struct_minigotchi}{Minigotchi}}\ *minigotchi,\ uint32\_t\ value);}
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{minigotchi_8h_ad9fa3774a81a5d7d057edb8933706500}{minigotchi\_set\_hunger}}(\mbox{\hyperlink{struct_minigotchi}{Minigotchi}}\ *minigotchi,\ uint32\_t\ value);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{minigotchi_8h_a06044098a54ac1f62d2efa6c20992680}{minigotchi\_get\_name}}(\mbox{\hyperlink{struct_minigotchi}{Minigotchi}}\ *minigotchi);}
+\DoxyCodeLine{00039\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{minigotchi_8h_af07dd01fe9e75ac8d5a6f2efaf9779dd}{minigotchi\_set\_name}}(\mbox{\hyperlink{struct_minigotchi}{Minigotchi}}\ *minigotchi,\ \textcolor{keywordtype}{char}*\ name);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{minigotchi_8h_a85601cc17416cd055e6d232e2d67eaa6}{minigotchi\_get\_cuddles}}(\mbox{\hyperlink{struct_minigotchi}{Minigotchi}}\ *minigotchi);}
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{minigotchi_8h_aa8284a8cda46025c6258904335b1a931}{minigotchi\_set\_cuddles}}(\mbox{\hyperlink{struct_minigotchi}{Minigotchi}}\ *minigotchi,\ \textcolor{keywordtype}{bool}\ cuddles);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_MINIGOTCHI\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,63 @@
+<map id="util_sys_inb" name="util_sys_inb">
+<area shape="rect" id="Node000001" title="Invokes sys_inb() system call but reads the value into a uint8_t variable." alt="" coords="777,416,867,443"/>
+<area shape="rect" id="Node000002" href="$kbc_8c.html#af7e649ff24e7c919ec309ba5642ae8ff" title="Reads KBC output buffer." alt="" coords="383,107,531,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="818,401,814,346,802,276,790,240,774,205,753,174,727,147,706,133,682,122,631,110,579,106,531,109,531,104,579,101,632,104,684,117,708,128,730,143,757,171,779,203,795,238,807,274,820,345,823,401"/>
+<area shape="rect" id="Node000007" href="$kbc_8c.html#ab0a11123d74fe0bb6c988af90c5bc4e4" title="Reads KBC status." alt="" coords="587,157,729,184"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="804,403,770,340,726,267,668,186,672,183,731,264,775,337,809,401"/>
+<area shape="rect" id="Node000009" href="$mouse_8c.html#af9f7f4471fecdd3c44c1fe593a005ae1" title="Sends a command to the mouse." alt="" coords="171,157,317,184"/>
+<area shape="poly" id="edge27_Node000001_Node000009" title=" " alt="" coords="780,411,587,314,458,254,325,198,293,187,294,182,327,194,460,249,589,309,782,406"/>
+<area shape="rect" id="Node000010" href="$rtc_8c.html#a7d6996cfdf143b032ddbc2df7cc27498" title="Read a byte from an RTC register." alt="" coords="398,385,516,412"/>
+<area shape="poly" id="edge13_Node000001_Node000010" title=" " alt="" coords="761,427,516,406,516,401,761,422"/>
+<area shape="rect" id="Node000018" href="$uart_8c.html#a459999cfa35c788b64284953a93c4b57" title="This function initializes the Serial Port." alt="" coords="620,451,696,477"/>
+<area shape="poly" id="edge28_Node000001_Node000018" title=" " alt="" coords="762,445,697,459,696,453,761,439"/>
+<area shape="rect" id="Node000019" href="$uart_8c.html#a393e1cc1f292a7c6ebdc31c0faf08000" title="UART interrupt handler." alt="" coords="379,613,534,640"/>
+<area shape="poly" id="edge30_Node000001_Node000019" title=" " alt="" coords="789,454,730,492,637,548,540,597,498,615,495,610,538,592,634,543,727,487,787,449"/>
+<area shape="rect" id="Node000020" href="$uart_8c.html#ae27582d958bf4e0e44143ea38606320c" title="Functions for RX Side." alt="" coords="600,608,716,635"/>
+<area shape="poly" id="edge32_Node000001_Node000020" title=" " alt="" coords="809,458,776,513,731,572,707,593,684,610,681,605,704,589,727,569,772,510,805,455"/>
+<area shape="rect" id="Node000021" href="$uart_8c.html#a1569a1b9d1a28cfb75fee4216bc70224" title="Functions for TX Side." alt="" coords="598,664,718,691"/>
+<area shape="poly" id="edge34_Node000001_Node000021" title=" " alt="" coords="818,458,808,499,791,550,766,602,731,649,706,666,703,661,727,645,761,599,786,548,803,498,813,457"/>
+<area shape="rect" id="Node000003" href="$kbc_8c.html#aec3b951828f35c691abedab58fabe04c" title="Enables Keyboard interrupts." alt="" coords="170,107,318,133"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="367,123,319,123,319,117,367,117"/>
+<area shape="rect" id="Node000004" href="$keyboard_8c.html#ab9e6ed7960d60aa4834f2038247d4536" title="Keyboard interrupt handler, reads the scancode from the output buffer upon an interrupt." alt="" coords="214,5,274,32"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="421,100,376,73,325,46,273,28,275,23,327,42,379,68,424,96"/>
+<area shape="rect" id="Node000006" href="$mouse_8c.html#a834b6d7efe311484d6da234db333cb97" title="Mouse interrupt handler, reads the output buffer upon an interrupt." alt="" coords="205,56,283,83"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="382,105,282,81,284,76,383,100"/>
+<area shape="rect" id="Node000005" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Project main function that starts the game." alt="" coords="5,335,114,361"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="200,27,180,34,163,46,135,80,113,119,95,161,83,204,68,281,64,334,59,334,63,280,77,202,90,159,108,117,131,77,160,42,178,30,198,22"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="191,81,163,97,139,124,118,156,89,225,72,289,65,335,60,334,67,288,84,223,113,154,134,121,160,93,189,76"/>
+<area shape="poly" id="edge8_Node000007_Node000002" title=" " alt="" coords="586,155,512,137,513,131,588,150"/>
+<area shape="rect" id="Node000008" href="$kbc_8c.html#a859302565828ca9225032dc1f5e6de37" title="Writes to a KBC port." alt="" coords="400,157,513,184"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="572,173,513,173,513,168,572,168"/>
+<area shape="poly" id="edge10_Node000008_Node000003" title=" " alt="" coords="384,156,302,137,304,131,385,151"/>
+<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="384,173,317,173,317,168,384,168"/>
+<area shape="poly" id="edge12_Node000009_Node000005" title=" " alt="" coords="170,193,163,198,129,231,102,270,68,336,64,333,97,267,125,228,160,194,167,189"/>
+<area shape="rect" id="Node000011" href="$rtc_8c.html#ae2f00f1f513100583d6882676298e419" title="Disable Alarm Interrupts, by writing corresponding bytes to register B of the RTC." alt="" coords="190,208,298,235"/>
+<area shape="poly" id="edge14_Node000010_Node000011" title=" " alt="" coords="432,375,324,249,297,236,299,231,328,245,436,371"/>
+<area shape="rect" id="Node000012" href="$rtc_8c.html#ab1c125e48fce243cb2623dee66cc86d2" title="Disable Periodic Interrupts, by writing corresponding bytes to register B of the RTC." alt="" coords="190,259,298,285"/>
+<area shape="poly" id="edge16_Node000010_Node000012" title=" " alt="" coords="429,376,382,337,325,300,297,288,299,283,327,295,385,333,432,372"/>
+<area shape="rect" id="Node000013" href="$rtc_8c.html#a0d26c165d332a4e7f1ff83c90987ff4a" title="Disable Update Interrupts, by writing corresponding bytes to register B of the RTC." alt="" coords="190,309,298,336"/>
+<area shape="poly" id="edge18_Node000010_Node000013" title=" " alt="" coords="407,382,325,351,291,339,292,334,327,345,409,377"/>
+<area shape="rect" id="Node000014" href="$rtc_8c.html#a9e9489590b532ec5ce8442e9f08aeb8e" title="Enable Alarm Interrupts, by writing corresponding bytes to register B of the RTC." alt="" coords="192,360,296,387"/>
+<area shape="poly" id="edge20_Node000010_Node000014" title=" " alt="" coords="382,393,296,382,297,377,383,387"/>
+<area shape="rect" id="Node000015" href="$rtc_8c.html#a66e555139e798e92cfbcd11222bee82a" title=" " alt="" coords="193,411,295,437"/>
+<area shape="poly" id="edge22_Node000010_Node000015" title=" " alt="" coords="383,410,296,421,295,415,382,405"/>
+<area shape="rect" id="Node000016" href="$rtc_8c.html#a75dad42881d64cf07cf1bdc2979a7056" title="RTC interrupt handler." alt="" coords="217,461,271,488"/>
+<area shape="poly" id="edge24_Node000010_Node000016" title=" " alt="" coords="409,421,327,452,272,470,270,464,325,447,407,416"/>
+<area shape="rect" id="Node000017" href="$rtc_8c.html#a7f5b00a2f809e42f08f037ffa9347444" title="Check RTC&#39;s UIP flag to avoid race conditions." alt="" coords="189,512,299,539"/>
+<area shape="poly" id="edge26_Node000010_Node000017" title=" " alt="" coords="432,425,385,464,327,502,300,514,298,509,325,498,382,460,429,421"/>
+<area shape="poly" id="edge15_Node000011_Node000005" title=" " alt="" coords="177,242,163,249,135,269,110,293,73,336,69,332,106,289,132,265,160,244,174,237"/>
+<area shape="poly" id="edge17_Node000012_Node000005" title=" " alt="" coords="180,293,163,300,87,337,84,332,161,295,179,288"/>
+<area shape="poly" id="edge19_Node000013_Node000005" title=" " alt="" coords="175,335,114,343,114,338,175,329"/>
+<area shape="poly" id="edge21_Node000014_Node000005" title=" " alt="" coords="176,367,114,358,114,353,177,362"/>
+<area shape="poly" id="edge23_Node000015_Node000005" title=" " alt="" coords="179,408,161,401,84,364,87,359,163,396,180,403"/>
+<area shape="poly" id="edge25_Node000016_Node000005" title=" " alt="" coords="201,469,160,452,132,431,106,407,69,364,73,360,110,403,135,427,163,447,203,464"/>
+<area shape="poly" id="edge29_Node000018_Node000005" title=" " alt="" coords="623,488,536,532,479,555,417,574,351,587,285,589,221,579,190,568,160,553,136,534,115,510,86,455,68,402,60,362,65,361,74,400,91,453,120,507,139,530,163,548,192,563,222,574,285,584,350,581,415,569,477,550,533,527,620,483"/>
+<area shape="poly" id="edge31_Node000019_Node000005" title=" " alt="" coords="364,642,314,643,260,637,208,623,160,597,133,571,111,541,94,507,81,473,65,408,59,362,64,361,70,407,86,471,99,505,116,538,137,568,163,593,210,618,261,632,314,638,364,637"/>
+<area shape="poly" id="edge33_Node000020_Node000019" title=" " alt="" coords="584,626,535,627,535,622,584,621"/>
+<area shape="rect" id="Node000022" href="$tic_tac_toe_controller_8c.html#aa86728049e3bbe24a91b13b3b3f892e7" title="Sets the board position of the current player." alt="" coords="374,664,539,691"/>
+<area shape="poly" id="edge35_Node000021_Node000022" title=" " alt="" coords="583,680,540,680,540,675,583,675"/>
+<area shape="rect" id="Node000023" href="$tic_tac_toe_controller_8c.html#aae4bafbe082fa7f4bad0e58d11e6d861" title="Controller function that is called once every frame and updates / checks every action in the Tic Tac ..." alt="" coords="162,664,326,691"/>
+<area shape="poly" id="edge38_Node000021_Node000023" title=" " alt="" coords="590,697,540,705,457,711,374,705,303,694,304,689,374,700,457,706,539,700,589,692"/>
+<area shape="poly" id="edge36_Node000022_Node000023" title=" " alt="" coords="358,680,326,680,326,675,358,675"/>
+<area shape="poly" id="edge37_Node000023_Node000005" title=" " alt="" coords="173,658,160,647,132,612,110,573,93,532,80,490,65,414,59,362,64,362,70,413,85,489,98,530,115,571,137,609,164,643,177,654"/>
+</map>

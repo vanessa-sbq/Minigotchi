@@ -1,0 +1,17 @@
+<map id="C:/Users/anton/Documents/lcom/labs/proj/src/utilities/vector.h" name="C:/Users/anton/Documents/lcom/labs/proj/src/utilities/vector.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="66,5,245,64"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,112,66,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,66,66,105,63,100,115,62"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="89,112,153,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="147,65,134,98,129,96,142,63"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="196,277,273,304"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="167,64,229,262,223,264,162,65"/>
+<area shape="rect" id="Node000005" href="$gui_drawer_8h.html" title=" " alt="" coords="228,112,368,139"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="203,62,267,101,264,106,200,67"/>
+<area shape="poly" id="edge8_Node000005_Node000004" title=" " alt="" coords="293,140,269,188,244,263,239,261,264,186,288,138"/>
+<area shape="rect" id="Node000006" href="$video_8h.html" title=" " alt="" coords="278,187,414,229"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="308,138,329,172,324,175,303,141"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="319,232,266,270,262,266,316,228"/>
+<area shape="rect" id="Node000007" href="$video__macros_8h.html" title=" " alt="" coords="297,277,409,304"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="351,230,353,262,348,262,345,230"/>
+</map>

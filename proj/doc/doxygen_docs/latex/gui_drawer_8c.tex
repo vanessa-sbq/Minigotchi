@@ -1,0 +1,1707 @@
+\doxysection{C\+:/\+Users/anton/\+Documents/lcom/labs/proj/src/viewer/gui\+Drawer.c File Reference}
+\hypertarget{gui_drawer_8c}{}\label{gui_drawer_8c}\index{C:/Users/anton/Documents/lcom/labs/proj/src/viewer/guiDrawer.c@{C:/Users/anton/Documents/lcom/labs/proj/src/viewer/guiDrawer.c}}
+{\ttfamily \#include "{}gui\+Drawer.\+h"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/bonecos\+\_\+lcom.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/braco\+\_\+direito.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/braco\+\_\+esquerdo.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/\+Untitled.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/start\+\_\+button.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/quit\+\_\+button.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/bricks.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/bg\+\_\+mainroom.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/minigotchi\+\_\+normal.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/minigotchi\+\_\+happy.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/hotbar.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/hotbar\+\_\+select.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/feather.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/name\+Minigotchi\+\_\+bg.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/minigames\+\_\+icon.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/day\+\_\+window.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/evening\+\_\+window.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/night\+\_\+window.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/rps\+\_\+background.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/rock.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/paper.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/scissors.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/rps\+\_\+win.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/rps\+\_\+tie.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/rps\+\_\+lose.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/bot\+\_\+chose.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/exit\+Game\+\_\+mini.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/bg\+\_\+mainroom\+\_\+hotbar.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/main\+\_\+menu\+\_\+bg.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/minigames\+\_\+menu\+\_\+bg.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/tic\+\_\+tac\+\_\+toe\+\_\+button.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/rps\+\_\+button.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/exit\+\_\+icon\+\_\+small.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+items/apple.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+items/banana.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+items/chocolate.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+items/empty.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+fonts/\+A.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+fonts/\+B.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+fonts/\+C.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+fonts/\+D.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+fonts/\+E.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+fonts/\+F.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+fonts/\+G.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+fonts/\+H.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+fonts/\+I.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+fonts/\+J.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+fonts/\+K.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+fonts/\+L.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+fonts/\+M.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+fonts/\+N.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+fonts/\+O.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+fonts/\+P.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+fonts/\+Q.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+fonts/\+R.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+fonts/\+S.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+fonts/\+T.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+fonts/\+U.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+fonts/\+V.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+fonts/\+W.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+fonts/\+X.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+fonts/\+Y.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+fonts/\+Z.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+happiness\+\_\+levels/happiness\+\_\+bar\+\_\+\+L0.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+happiness\+\_\+levels/happiness\+\_\+bar\+\_\+\+L1.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+happiness\+\_\+levels/happiness\+\_\+bar\+\_\+\+L2.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+happiness\+\_\+levels/happiness\+\_\+bar\+\_\+\+L3.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+happiness\+\_\+levels/happiness\+\_\+bar\+\_\+\+L4.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+happiness\+\_\+levels/happiness\+\_\+bar\+\_\+\+L5.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+happiness\+\_\+levels/happiness\+\_\+bar\+\_\+\+L6.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+happiness\+\_\+levels/happiness\+\_\+bar\+\_\+\+L7.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+happiness\+\_\+levels/happiness\+\_\+bar\+\_\+\+L8.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+happiness\+\_\+levels/happiness\+\_\+bar\+\_\+\+L9.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+happiness\+\_\+levels/happiness\+\_\+bar\+\_\+\+L10.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+happiness\+\_\+levels/happiness\+\_\+bar\+\_\+max.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+hunger\+\_\+levels/hunger\+\_\+bar\+\_\+\+L0.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+hunger\+\_\+levels/hunger\+\_\+bar\+\_\+\+L1.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+hunger\+\_\+levels/hunger\+\_\+bar\+\_\+\+L2.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+hunger\+\_\+levels/hunger\+\_\+bar\+\_\+\+L3.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+hunger\+\_\+levels/hunger\+\_\+bar\+\_\+\+L4.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+hunger\+\_\+levels/hunger\+\_\+bar\+\_\+\+L5.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+hunger\+\_\+levels/hunger\+\_\+bar\+\_\+\+L6.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+hunger\+\_\+levels/hunger\+\_\+bar\+\_\+\+L7.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+hunger\+\_\+levels/hunger\+\_\+bar\+\_\+\+L8.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+hunger\+\_\+levels/hunger\+\_\+bar\+\_\+\+L9.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+hunger\+\_\+levels/hunger\+\_\+bar\+\_\+\+L10.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpm\+\_\+hunger\+\_\+levels/hunger\+\_\+bar\+\_\+max.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/guest\+\_\+button.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/host\+\_\+button.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/tictactoe\+\_\+field.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/tictactoe\+\_\+wait.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/tictactoe\+\_\+menu\+\_\+bg.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/tictactoe\+\_\+o.\+xpm"{}}\newline
+{\ttfamily \#include "{}../sprites/xpms/tictactoe\+\_\+x.\+xpm"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_ae94978bb53705702e1da21044df5f9c9}{get\+\_\+cursor\+\_\+sprite}} ()
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_abe19e91476f63ac9e618f47092dd15d0}{gui\+Drawer\+\_\+get\+\_\+button\+\_\+sprite}} (int text\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Get the button sprite from an index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a0c4a49f9b2916a971f1998a53aef8374}{gui\+Drawer\+\_\+get\+\_\+start\+\_\+button\+\_\+sprite}} ()
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a64b3e77e046a0e0122df2b0ec4d5d04c}{gui\+Drawer\+\_\+get\+\_\+quit\+\_\+button\+\_\+sprite}} ()
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_ac373cd78214aec6ee8f6c384a30a31de}{gui\+Drawer\+\_\+get\+\_\+minigotchi\+\_\+sprite}} ()
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_aad601cd211ca0464f3387be62caf3001}{gui\+Drawer\+\_\+get\+\_\+minigotchi\+\_\+cuddle\+\_\+sprite}} ()
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_ace6f4f2f14abaa08fa9eb03fe51778a1}{gui\+Drawer\+\_\+get\+\_\+minigotchi\+\_\+normal\+\_\+sprite}} ()
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_ad586ed11d3d42784c6234891f4632e2f}{gui\+Drawer\+\_\+get\+\_\+hotbar\+\_\+sprite}} ()
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a6135553cb136bd9f357a0f1780c75053}{gui\+Drawer\+\_\+get\+\_\+hotbar\+\_\+select\+\_\+sprite}} ()
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a96bfeea6db497a209432e2975c9b5a9d}{gui\+Drawer\+\_\+get\+\_\+minigames\+Icon\+\_\+sprite}} ()
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_aab079e52fbe7f45b0f7d6c876b975bcf}{gui\+Drawer\+\_\+get\+\_\+apple\+\_\+sprite}} ()
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a2beefa168c683c4411aa36515e184d26}{gui\+Drawer\+\_\+get\+\_\+rock\+\_\+sprite}} ()
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a5a7b61ff4d0d6f1b815bc5420fd2b8bd}{gui\+Drawer\+\_\+get\+\_\+paper\+\_\+sprite}} ()
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_ae50f96294387b017a799f9105bcc4134}{gui\+Drawer\+\_\+get\+\_\+scissors\+\_\+sprite}} ()
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a9a42e3169b1ed9edce57c654a90b72d8}{gui\+Drawer\+\_\+get\+\_\+rps\+Win\+\_\+sprite}} ()
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a6d96da5ee69bb7384231edea5638a85d}{gui\+Drawer\+\_\+get\+\_\+rps\+Tie\+\_\+sprite}} ()
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_aa041e05b112df2340b722f49f481031e}{gui\+Drawer\+\_\+get\+\_\+rps\+Lose\+\_\+sprite}} ()
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_af4407c19bcf8487cd7c87de619379c7a}{gui\+Drawer\+\_\+get\+\_\+bot\+Chose\+\_\+sprite}} ()
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_acacf8cc3c80419dd04f364c0e2b92785}{gui\+Drawer\+\_\+get\+\_\+exit\+Game\+Icon\+\_\+sprite}} ()
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a719c69c695d890889060ec955a8040de}{gui\+Drawer\+\_\+get\+\_\+ttt\+\_\+button\+\_\+sprite}} ()
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a930ac7485a0948e0d77ecfde963ee589}{gui\+Drawer\+\_\+get\+\_\+rps\+\_\+button\+\_\+sprite}} ()
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a2ed2f5ecc38862ba578d84587934e781}{gui\+Drawer\+\_\+get\+\_\+exit\+Icon\+Small\+\_\+button\+\_\+sprite}} ()
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a05800c123125bd7b453bfb960405431b}{gui\+Drawer\+\_\+get\+\_\+item\+\_\+sprite}} (int id)
+\begin{DoxyCompactList}\small\item\em Get an item sprite from an id. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_af5e13d9c956dd76ce26c6dac6068be5b}{gui\+Drawer\+\_\+get\+\_\+day\+\_\+window}} ()
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_abec931f42a76707edd2b438e31116dfc}{gui\+Drawer\+\_\+get\+\_\+evening\+\_\+window}} ()
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a9260e1a63ff276d6aa374fc3056395f5}{gui\+Drawer\+\_\+get\+\_\+night\+\_\+window}} ()
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a2565c8857d19e2c807791510d945f2f5}{gui\+Drawer\+\_\+get\+\_\+guest\+\_\+button\+\_\+sprite}} ()
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a71536932ff4e8b22f58b76e7b8a54db3}{gui\+Drawer\+\_\+get\+\_\+host\+\_\+button\+\_\+sprite}} ()
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_ab5a453eaf98d38de1d61c1f342ab60e9}{gui\+Drawer\+\_\+get\+\_\+ttt\+\_\+field}} ()
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_ab89da73766e8307c1d6fdfd384c1c1a3}{gui\+Drawer\+\_\+get\+\_\+ttt\+\_\+wait}} ()
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_aa7f31d5652876ae995250dee9b2a017a}{gui\+Drawer\+\_\+get\+\_\+ttt\+\_\+o}} ()
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a1fe80b911f2992528727f80a8574824b}{gui\+Drawer\+\_\+get\+\_\+ttt\+\_\+x}} ()
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_ae9acd0b7c376bc23775829cb580810e1}{gui\+Drawer\+\_\+get\+\_\+bar\+\_\+sprite}} (int bar\+\_\+type, int level)
+\begin{DoxyCompactList}\small\item\em Get a bar sprite from an index and level. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a70603a5f7d69b625a1602bdce32cd7df}{gui\+Drawer\+\_\+get\+\_\+background\+Buffer}} ()
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_acb93792ebc27a32413e0b31624c6d9b1}{create\+\_\+sprite\+\_\+xpm}} (xpm\+\_\+map\+\_\+t sprite)
+\begin{DoxyCompactList}\small\item\em Creates a sprite from a XPM. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_ae87e906f79815d3d6eef042e98b68ea1}{get\+\_\+text\+\_\+sprite\+\_\+from\+\_\+index}} (uint8\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Get a text sprite from an index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_ada3a8eb361ce7e3fddbbceff58425efd}{gui\+Drawer\+\_\+get\+\_\+happiness\+\_\+level\+\_\+sprite\+\_\+from\+\_\+index}} (uint8\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Get a happiness bar sprite from an index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_af01037e6016234adfc9be7f3082bcf5d}{gui\+Drawer\+\_\+get\+\_\+hunger\+\_\+level\+\_\+sprite\+\_\+from\+\_\+index}} (uint8\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Get a hunger bar sprite from an index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{gui_drawer_8c_ab36a54932debf96ff4d24f689bcc4472}{setup\+\_\+ttt\+\_\+sprites}} ()
+\begin{DoxyCompactList}\small\item\em Sets up the sprites used in the Tic Tac Toe minigame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{gui_drawer_8c_a9da3ff4ec69279dd0b670291ae02d0b0}{cleanup\+\_\+ttt\+\_\+sprites}} ()
+\begin{DoxyCompactList}\small\item\em Frees the sprites used in the Tic Tac Toe minigame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{gui_drawer_8c_afec62e1339a5415e0e26f1a3a426dda3}{setup\+\_\+text\+\_\+sprite}} ()
+\begin{DoxyCompactList}\small\item\em Sets up the letter sprites that make up the font. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{gui_drawer_8c_a9a9776a57d5e9f94450acf2cccd51333}{setup\+\_\+happiness\+\_\+sprites}} ()
+\begin{DoxyCompactList}\small\item\em Sets up the happiness bar sprites. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{gui_drawer_8c_aa18c3a26c9d1e2245d5264d7d457de6f}{setup\+\_\+hunger\+\_\+sprites}} ()
+\begin{DoxyCompactList}\small\item\em Sets up the hunger bar sprites. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{gui_drawer_8c_ac2b44e431af5a4ef336dc098f3efa808}{cleanup\+\_\+text\+\_\+sprite}} ()
+\begin{DoxyCompactList}\small\item\em Frees the letter sprites that make up the font. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{gui_drawer_8c_af45b904254dba9e233457a88da1371f4}{cleanup\+\_\+happiness\+\_\+sprites}} ()
+\begin{DoxyCompactList}\small\item\em Frees the happiness bar sprites. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{gui_drawer_8c_a9c1185b085db12be6ab57076bb41a7b5}{cleanup\+\_\+hunger\+\_\+sprites}} ()
+\begin{DoxyCompactList}\small\item\em Frees the hunger bar sprites. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{gui_drawer_8c_a834200084177d31e41dd9b28754a3312}{setup\+\_\+sprites}} ()
+\begin{DoxyCompactList}\small\item\em Sets up all the main sprites. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{gui_drawer_8c_a7592194eb7112ccb6d48a0bbe2271055}{switch\+Background}} (uint8\+\_\+t bg)
+\begin{DoxyCompactList}\small\item\em Switches the background from an index (We are using buffers to make the game faster) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{gui_drawer_8c_a3fc1965bb7f45fd72fff8a402c507186}{draw\+Sprite}} (\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}sprite, int x, int y)
+\begin{DoxyCompactList}\small\item\em Function responsible for drawing the sprites on the screen. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{gui_drawer_8c_a4c63acd65b3e03c46066da90b1bd0c99}{sprite\+\_\+get\+\_\+width}} (\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}sprite)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{gui_drawer_8c_aeb0c1fe0e10a344dac885302cf50eee8}{sprite\+\_\+get\+\_\+height}} (\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}sprite)
+\item 
+void \mbox{\hyperlink{gui_drawer_8c_a24861d3e2d5bf9ae60eee311f072216c}{wrapper\+\_\+draw\+\_\+background}} (uint8\+\_\+t buffer\+Index)
+\begin{DoxyCompactList}\small\item\em Draws the backfround (wrapper function) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a9a8676e014f9ec6cd2ddaa18abcc0c95}{\+\_\+bg\+\_\+mainmenu\+\_\+sprite}} = NULL
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_af7ec572cee1069e78ce03beb5595ca9b}{\+\_\+bg\+\_\+mainroom\+\_\+sprite}} = NULL
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a9fe4f27364192258cf8ba17469f69099}{\+\_\+bg\+\_\+mainroom\+\_\+hotbar\+\_\+sprite}} = NULL
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a7321bfea254226cf9b2d78fb04a0d53c}{\+\_\+bg\+\_\+minigames\+\_\+sprite}} = NULL
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a032894ce185e8e97fb0cce27f76229ef}{\+\_\+bg\+\_\+name\+Minigotchi\+\_\+sprite}} = NULL
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a24debff21dc10e87c6d1e2fb77d071e2}{\+\_\+bg\+\_\+rps\+\_\+sprite}} = NULL
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a49fb5b80f53526ee1e46b3b8feb8b944}{\+\_\+cursor\+\_\+sprite}} = NULL
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a8490531ff986dbf8ed6c97fa999485c2}{\+\_\+start\+\_\+button\+\_\+sprite}} = NULL
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a75bcff758c598f2397c182a142ad404e}{\+\_\+quit\+\_\+button\+\_\+sprite}} = NULL
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a5f1a978945128014a631fe7e853d27dc}{\+\_\+minigotchi\+\_\+sprite}} = NULL
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a51ed0fe537e63ca0b8d65dfdd56dddbf}{\+\_\+minigotchi\+\_\+happy\+\_\+sprite}} = NULL
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_addbe8d97c6a51a2c34abcc03a6055e7c}{\+\_\+minigames\+\_\+icon\+\_\+sprite}} = NULL
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a4ca1e35a3baf339b4201096ecd5ba8dd}{\+\_\+day\+\_\+window}} = NULL
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_ab4b5e4c52d0952ef090b7aafdce6f0be}{\+\_\+evening\+\_\+window}} = NULL
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a4c60e017d0dbfa82b3e7bb915de29801}{\+\_\+night\+\_\+window}} = NULL
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a8db034aa783667f258cd06795eaa74d3}{\+\_\+rock\+\_\+sprite}} = NULL
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a2742bdf5498008babbed7540f6ba6316}{\+\_\+paper\+\_\+sprite}} = NULL
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a99acd5755160cf9af0fa41180f1a0d25}{\+\_\+scissors\+\_\+sprite}} = NULL
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_af2e4ecbc13543ae995253214aac22e1c}{\+\_\+rps\+\_\+win\+\_\+sprite}} = NULL
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a9ea0478c1e894881593855bbb5de8966}{\+\_\+rps\+\_\+tie\+\_\+sprite}} = NULL
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a193a0b4f1d1ee454b02f9543ad9bae27}{\+\_\+rps\+\_\+lose\+\_\+sprite}} = NULL
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_ac4317a2bc336454958eb926517507db2}{\+\_\+bot\+\_\+chose\+\_\+sprite}} = NULL
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_aa161217e7ddd59ce39dc3a8f65f8b175}{\+\_\+exit\+\_\+game\+\_\+mini\+\_\+sprite}} = NULL
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a30b398346482be3e3d1977f58daa4a64}{\+\_\+rps\+\_\+button\+\_\+sprite}} = NULL
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a13d185e8b57dccb034021099ff8af1f3}{\+\_\+exit\+\_\+game\+\_\+small\+\_\+sprite}} = NULL
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a915f4a0789283d1e30def62cec0d549b}{\+\_\+empty\+\_\+sprite}} = NULL
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a1b8238f5ab8bd621984e87a4f625da85}{\+\_\+apple\+\_\+sprite}} = NULL
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_ae39ca84f8c8f625484bc8e29ed886db0}{\+\_\+banana\+\_\+sprite}} = NULL
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_aee20e9f308cfbcb44ac68722fbad8678}{\+\_\+chocolate\+\_\+sprite}} = NULL
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a9f6be37f16870c7e364b8960239a4c91}{\+\_\+hotbar\+\_\+sprite}} = NULL
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_abd990be54b786ebbdad0de1018e2dec9}{\+\_\+hotbar\+\_\+select\+\_\+sprite}} = NULL
+\item 
+static char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a7f0b006bdaec2b769e89b6925535868a}{\+\_\+background\+Buffer}}
+\item 
+static char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a391e3d2855c53281424b6c36011f9dbd}{\+\_\+background\+Buffer\+Alternative}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a278e1371171f22ee34656211fd23b4b4}{\+\_\+\+A\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a34426f205505ef365ae21d3c14e7e4bd}{\+\_\+\+B\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a4b1f742e2ac4a2ecfe763474ed7f7f73}{\+\_\+\+C\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a78a0b77b0f19d0702fcc1133f058b8bd}{\+\_\+\+D\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_ab3ab6da39f6187e93a600846d985a2f2}{\+\_\+\+E\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a2b93dc007dab8091557f806816247b8e}{\+\_\+\+F\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_acac6d15f35b1d664bbbdb6e2e1c13065}{\+\_\+\+G\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a1718aa74bc9083db7873c39a5f9a7e8b}{\+\_\+\+H\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_ab6fd5422e997a6d5878ceccf68aa77ee}{\+\_\+\+I\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_ae86b4cd1c6cdf7aa7b4b5d04e1b062f0}{\+\_\+\+J\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_adb53b928d5bab5ac9b38c865b4c4ecc0}{\+\_\+\+K\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a209a0a71acec53e58a923c10d0a54645}{\+\_\+\+L\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_aa6633b4c84b49ca61aa3e188eba934e9}{\+\_\+\+M\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_ae4a2de5fd4c101095d2e1ce5d256c103}{\+\_\+\+N\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a071be4ddf3feae4282128ce77da9a11f}{\+\_\+\+O\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a5ef9b1aeb42d23319bab85d65a6cd458}{\+\_\+\+P\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a957cf8f99d69402f7204924b85681844}{\+\_\+\+Q\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a5bf6667fd3b9aa0c90575e8b8ce3166a}{\+\_\+\+R\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_ad37ca8cb6fae56518337895a1b6ae955}{\+\_\+\+S\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a88e40fb80e4abf582b539324852957c0}{\+\_\+\+T\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_ad49272f9117142ac0959d23960e0e8c1}{\+\_\+\+U\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a0791f7b05e10f04434a9cb9b53779b08}{\+\_\+\+V\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a397535d38930176fa9c70c1563722e18}{\+\_\+\+W\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_ab0e6f8286197ca44e3b67eacaa7964ae}{\+\_\+\+X\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_ab49cbd3d8a3c937afc144e5d343dea49}{\+\_\+\+Y\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a8ac11e31ce354f6546d9e4351fa33b69}{\+\_\+\+Z\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a2fdf2756323c88221426c0ec5ea0f706}{\+\_\+happiness\+\_\+\+L0\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a2df2889b35c9976e7dedb52439018967}{\+\_\+happiness\+\_\+\+L1\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_ab5fed4aa6c990fac9699cff06ea9fd81}{\+\_\+happiness\+\_\+\+L2\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a890c7d9189c25fad3dca5bb0d308a222}{\+\_\+happiness\+\_\+\+L3\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_aa107225b8054db5acc832a73ef720c26}{\+\_\+happiness\+\_\+\+L4\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a065677812994c0bb883131a5376dbc54}{\+\_\+happiness\+\_\+\+L5\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a850b6d603d9ab47e0345987f202ae06f}{\+\_\+happiness\+\_\+\+L6\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_afa2308d8b6a237afc50ffac0b616294c}{\+\_\+happiness\+\_\+\+L7\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_ab5d53fc6df4a225d900015492aef5f33}{\+\_\+happiness\+\_\+\+L8\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a2d23c7e4cf0b5d253da3c10dd9863147}{\+\_\+happiness\+\_\+\+L9\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a0c52f08833b49a642f9b12753f80f62f}{\+\_\+happiness\+\_\+\+L10\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a11804c17fa0f9aec5fdf296b040d52ee}{\+\_\+happiness\+\_\+max\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a80cd2ded47cf63bf8639890274fd6d16}{\+\_\+hunger\+\_\+\+L0\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a30860801a7652af9980c4fb36ba3ba01}{\+\_\+hunger\+\_\+\+L1\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_ab89811817f266090b0ebe0bd96552aaf}{\+\_\+hunger\+\_\+\+L2\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_af921f756aadc633818f3ffd9ba233786}{\+\_\+hunger\+\_\+\+L3\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a9749e86b32ef97b2cc507b46fb7bed26}{\+\_\+hunger\+\_\+\+L4\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a0249973bee5d41e3bb0acbf15b791704}{\+\_\+hunger\+\_\+\+L5\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a63cbefc4b08edf42bc05593809be5cee}{\+\_\+hunger\+\_\+\+L6\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_ab36fc567f7a159cc2606c8b889fa42ac}{\+\_\+hunger\+\_\+\+L7\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a6c131fee12b5b21e8aad58b6b74f2e28}{\+\_\+hunger\+\_\+\+L8\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a8ebdb025d3e0347eebb5aec9a20e7a93}{\+\_\+hunger\+\_\+\+L9\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a1cd68fa8df04cab3a32900988a52a485}{\+\_\+hunger\+\_\+\+L10\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a80e0bd4a494075337142e2071c73b9b1}{\+\_\+hunger\+\_\+max\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_ae690dda0e26d9566bc618a2f7d0214b5}{\+\_\+ttt\+\_\+button\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a3a1022c5e2f5236e075ccb883ab0b0e1}{\+\_\+ttt\+\_\+field}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_aef15225f2f60f55339aaac86dd669a39}{\+\_\+ttt\+\_\+wait}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_af80c9cfc0781a53f7ad5d914d0ec4d0b}{\+\_\+ttt\+\_\+menu\+\_\+bg}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a5a274d146351ddd85ec26c057192f739}{\+\_\+guest\+\_\+button\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a87a2b9e6611e8539bc4486167e3e92a5}{\+\_\+host\+\_\+button\+\_\+sprite}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a450257d1c9e0b6f48111b34830efcc0a}{\+\_\+ttt\+\_\+o}}
+\item 
+static \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_drawer_8c_a20f02e08dfa7db13a0007f473b6172c9}{\+\_\+ttt\+\_\+x}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{gui_drawer_8c_af45b904254dba9e233457a88da1371f4}\index{guiDrawer.c@{guiDrawer.c}!cleanup\_happiness\_sprites@{cleanup\_happiness\_sprites}}
+\index{cleanup\_happiness\_sprites@{cleanup\_happiness\_sprites}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{cleanup\_happiness\_sprites()}{cleanup\_happiness\_sprites()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_af45b904254dba9e233457a88da1371f4} 
+void cleanup\+\_\+happiness\+\_\+sprites (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Frees the happiness bar sprites. 
+
+\Hypertarget{gui_drawer_8c_a9c1185b085db12be6ab57076bb41a7b5}\index{guiDrawer.c@{guiDrawer.c}!cleanup\_hunger\_sprites@{cleanup\_hunger\_sprites}}
+\index{cleanup\_hunger\_sprites@{cleanup\_hunger\_sprites}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{cleanup\_hunger\_sprites()}{cleanup\_hunger\_sprites()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a9c1185b085db12be6ab57076bb41a7b5} 
+void cleanup\+\_\+hunger\+\_\+sprites (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Frees the hunger bar sprites. 
+
+\Hypertarget{gui_drawer_8c_ac2b44e431af5a4ef336dc098f3efa808}\index{guiDrawer.c@{guiDrawer.c}!cleanup\_text\_sprite@{cleanup\_text\_sprite}}
+\index{cleanup\_text\_sprite@{cleanup\_text\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{cleanup\_text\_sprite()}{cleanup\_text\_sprite()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_ac2b44e431af5a4ef336dc098f3efa808} 
+void cleanup\+\_\+text\+\_\+sprite (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Frees the letter sprites that make up the font. 
+
+\Hypertarget{gui_drawer_8c_a9da3ff4ec69279dd0b670291ae02d0b0}\index{guiDrawer.c@{guiDrawer.c}!cleanup\_ttt\_sprites@{cleanup\_ttt\_sprites}}
+\index{cleanup\_ttt\_sprites@{cleanup\_ttt\_sprites}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{cleanup\_ttt\_sprites()}{cleanup\_ttt\_sprites()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a9da3ff4ec69279dd0b670291ae02d0b0} 
+void cleanup\+\_\+ttt\+\_\+sprites (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Frees the sprites used in the Tic Tac Toe minigame. 
+
+\Hypertarget{gui_drawer_8c_acb93792ebc27a32413e0b31624c6d9b1}\index{guiDrawer.c@{guiDrawer.c}!create\_sprite\_xpm@{create\_sprite\_xpm}}
+\index{create\_sprite\_xpm@{create\_sprite\_xpm}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{create\_sprite\_xpm()}{create\_sprite\_xpm()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_acb93792ebc27a32413e0b31624c6d9b1} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} create\+\_\+sprite\+\_\+xpm (\begin{DoxyParamCaption}\item[{xpm\+\_\+map\+\_\+t}]{sprite}{}\end{DoxyParamCaption})}
+
+
+
+Creates a sprite from a XPM. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_acb93792ebc27a32413e0b31624c6d9b1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_a3fc1965bb7f45fd72fff8a402c507186}\index{guiDrawer.c@{guiDrawer.c}!drawSprite@{drawSprite}}
+\index{drawSprite@{drawSprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{drawSprite()}{drawSprite()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a3fc1965bb7f45fd72fff8a402c507186} 
+int draw\+Sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}}]{sprite}{, }\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Function responsible for drawing the sprites on the screen. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{gui_drawer_8c_a3fc1965bb7f45fd72fff8a402c507186_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_a3fc1965bb7f45fd72fff8a402c507186_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_ae94978bb53705702e1da21044df5f9c9}\index{guiDrawer.c@{guiDrawer.c}!get\_cursor\_sprite@{get\_cursor\_sprite}}
+\index{get\_cursor\_sprite@{get\_cursor\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{get\_cursor\_sprite()}{get\_cursor\_sprite()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_ae94978bb53705702e1da21044df5f9c9} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} get\+\_\+cursor\+\_\+sprite (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_ae94978bb53705702e1da21044df5f9c9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_ae87e906f79815d3d6eef042e98b68ea1}\index{guiDrawer.c@{guiDrawer.c}!get\_text\_sprite\_from\_index@{get\_text\_sprite\_from\_index}}
+\index{get\_text\_sprite\_from\_index@{get\_text\_sprite\_from\_index}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{get\_text\_sprite\_from\_index()}{get\_text\_sprite\_from\_index()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_ae87e906f79815d3d6eef042e98b68ea1} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} get\+\_\+text\+\_\+sprite\+\_\+from\+\_\+index (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{index}{}\end{DoxyParamCaption})}
+
+
+
+Get a text sprite from an index. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_ae87e906f79815d3d6eef042e98b68ea1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_aab079e52fbe7f45b0f7d6c876b975bcf}\index{guiDrawer.c@{guiDrawer.c}!guiDrawer\_get\_apple\_sprite@{guiDrawer\_get\_apple\_sprite}}
+\index{guiDrawer\_get\_apple\_sprite@{guiDrawer\_get\_apple\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{guiDrawer\_get\_apple\_sprite()}{guiDrawer\_get\_apple\_sprite()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_aab079e52fbe7f45b0f7d6c876b975bcf} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} gui\+Drawer\+\_\+get\+\_\+apple\+\_\+sprite (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{gui_drawer_8c_a70603a5f7d69b625a1602bdce32cd7df}\index{guiDrawer.c@{guiDrawer.c}!guiDrawer\_get\_backgroundBuffer@{guiDrawer\_get\_backgroundBuffer}}
+\index{guiDrawer\_get\_backgroundBuffer@{guiDrawer\_get\_backgroundBuffer}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{guiDrawer\_get\_backgroundBuffer()}{guiDrawer\_get\_backgroundBuffer()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a70603a5f7d69b625a1602bdce32cd7df} 
+char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} gui\+Drawer\+\_\+get\+\_\+background\+Buffer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{gui_drawer_8c_ae9acd0b7c376bc23775829cb580810e1}\index{guiDrawer.c@{guiDrawer.c}!guiDrawer\_get\_bar\_sprite@{guiDrawer\_get\_bar\_sprite}}
+\index{guiDrawer\_get\_bar\_sprite@{guiDrawer\_get\_bar\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{guiDrawer\_get\_bar\_sprite()}{guiDrawer\_get\_bar\_sprite()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_ae9acd0b7c376bc23775829cb580810e1} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} gui\+Drawer\+\_\+get\+\_\+bar\+\_\+sprite (\begin{DoxyParamCaption}\item[{int}]{bar\+\_\+type}{, }\item[{int}]{level}{}\end{DoxyParamCaption})}
+
+
+
+Get a bar sprite from an index and level. 
+
+This function gets the correct sprite based on a level which belongs to a certain range for which there is a sprite Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_ae9acd0b7c376bc23775829cb580810e1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_ae9acd0b7c376bc23775829cb580810e1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_af4407c19bcf8487cd7c87de619379c7a}\index{guiDrawer.c@{guiDrawer.c}!guiDrawer\_get\_botChose\_sprite@{guiDrawer\_get\_botChose\_sprite}}
+\index{guiDrawer\_get\_botChose\_sprite@{guiDrawer\_get\_botChose\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{guiDrawer\_get\_botChose\_sprite()}{guiDrawer\_get\_botChose\_sprite()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_af4407c19bcf8487cd7c87de619379c7a} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} gui\+Drawer\+\_\+get\+\_\+bot\+Chose\+\_\+sprite (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_af4407c19bcf8487cd7c87de619379c7a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_abe19e91476f63ac9e618f47092dd15d0}\index{guiDrawer.c@{guiDrawer.c}!guiDrawer\_get\_button\_sprite@{guiDrawer\_get\_button\_sprite}}
+\index{guiDrawer\_get\_button\_sprite@{guiDrawer\_get\_button\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{guiDrawer\_get\_button\_sprite()}{guiDrawer\_get\_button\_sprite()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_abe19e91476f63ac9e618f47092dd15d0} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} gui\+Drawer\+\_\+get\+\_\+button\+\_\+sprite (\begin{DoxyParamCaption}\item[{int}]{text\+\_\+index}{}\end{DoxyParamCaption})}
+
+
+
+Get the button sprite from an index. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{gui_drawer_8c_abe19e91476f63ac9e618f47092dd15d0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_abe19e91476f63ac9e618f47092dd15d0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_af5e13d9c956dd76ce26c6dac6068be5b}\index{guiDrawer.c@{guiDrawer.c}!guiDrawer\_get\_day\_window@{guiDrawer\_get\_day\_window}}
+\index{guiDrawer\_get\_day\_window@{guiDrawer\_get\_day\_window}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{guiDrawer\_get\_day\_window()}{guiDrawer\_get\_day\_window()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_af5e13d9c956dd76ce26c6dac6068be5b} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} gui\+Drawer\+\_\+get\+\_\+day\+\_\+window (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{gui_drawer_8c_af5e13d9c956dd76ce26c6dac6068be5b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_abec931f42a76707edd2b438e31116dfc}\index{guiDrawer.c@{guiDrawer.c}!guiDrawer\_get\_evening\_window@{guiDrawer\_get\_evening\_window}}
+\index{guiDrawer\_get\_evening\_window@{guiDrawer\_get\_evening\_window}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{guiDrawer\_get\_evening\_window()}{guiDrawer\_get\_evening\_window()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_abec931f42a76707edd2b438e31116dfc} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} gui\+Drawer\+\_\+get\+\_\+evening\+\_\+window (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{gui_drawer_8c_abec931f42a76707edd2b438e31116dfc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_acacf8cc3c80419dd04f364c0e2b92785}\index{guiDrawer.c@{guiDrawer.c}!guiDrawer\_get\_exitGameIcon\_sprite@{guiDrawer\_get\_exitGameIcon\_sprite}}
+\index{guiDrawer\_get\_exitGameIcon\_sprite@{guiDrawer\_get\_exitGameIcon\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{guiDrawer\_get\_exitGameIcon\_sprite()}{guiDrawer\_get\_exitGameIcon\_sprite()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_acacf8cc3c80419dd04f364c0e2b92785} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} gui\+Drawer\+\_\+get\+\_\+exit\+Game\+Icon\+\_\+sprite (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_acacf8cc3c80419dd04f364c0e2b92785_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_a2ed2f5ecc38862ba578d84587934e781}\index{guiDrawer.c@{guiDrawer.c}!guiDrawer\_get\_exitIconSmall\_button\_sprite@{guiDrawer\_get\_exitIconSmall\_button\_sprite}}
+\index{guiDrawer\_get\_exitIconSmall\_button\_sprite@{guiDrawer\_get\_exitIconSmall\_button\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{guiDrawer\_get\_exitIconSmall\_button\_sprite()}{guiDrawer\_get\_exitIconSmall\_button\_sprite()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a2ed2f5ecc38862ba578d84587934e781} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} gui\+Drawer\+\_\+get\+\_\+exit\+Icon\+Small\+\_\+button\+\_\+sprite (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_a2ed2f5ecc38862ba578d84587934e781_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_a2565c8857d19e2c807791510d945f2f5}\index{guiDrawer.c@{guiDrawer.c}!guiDrawer\_get\_guest\_button\_sprite@{guiDrawer\_get\_guest\_button\_sprite}}
+\index{guiDrawer\_get\_guest\_button\_sprite@{guiDrawer\_get\_guest\_button\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{guiDrawer\_get\_guest\_button\_sprite()}{guiDrawer\_get\_guest\_button\_sprite()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a2565c8857d19e2c807791510d945f2f5} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} gui\+Drawer\+\_\+get\+\_\+guest\+\_\+button\+\_\+sprite (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_a2565c8857d19e2c807791510d945f2f5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_ada3a8eb361ce7e3fddbbceff58425efd}\index{guiDrawer.c@{guiDrawer.c}!guiDrawer\_get\_happiness\_level\_sprite\_from\_index@{guiDrawer\_get\_happiness\_level\_sprite\_from\_index}}
+\index{guiDrawer\_get\_happiness\_level\_sprite\_from\_index@{guiDrawer\_get\_happiness\_level\_sprite\_from\_index}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{guiDrawer\_get\_happiness\_level\_sprite\_from\_index()}{guiDrawer\_get\_happiness\_level\_sprite\_from\_index()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_ada3a8eb361ce7e3fddbbceff58425efd} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} gui\+Drawer\+\_\+get\+\_\+happiness\+\_\+level\+\_\+sprite\+\_\+from\+\_\+index (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{index}{}\end{DoxyParamCaption})}
+
+
+
+Get a happiness bar sprite from an index. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_ada3a8eb361ce7e3fddbbceff58425efd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_a71536932ff4e8b22f58b76e7b8a54db3}\index{guiDrawer.c@{guiDrawer.c}!guiDrawer\_get\_host\_button\_sprite@{guiDrawer\_get\_host\_button\_sprite}}
+\index{guiDrawer\_get\_host\_button\_sprite@{guiDrawer\_get\_host\_button\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{guiDrawer\_get\_host\_button\_sprite()}{guiDrawer\_get\_host\_button\_sprite()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a71536932ff4e8b22f58b76e7b8a54db3} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} gui\+Drawer\+\_\+get\+\_\+host\+\_\+button\+\_\+sprite (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_a71536932ff4e8b22f58b76e7b8a54db3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_a6135553cb136bd9f357a0f1780c75053}\index{guiDrawer.c@{guiDrawer.c}!guiDrawer\_get\_hotbar\_select\_sprite@{guiDrawer\_get\_hotbar\_select\_sprite}}
+\index{guiDrawer\_get\_hotbar\_select\_sprite@{guiDrawer\_get\_hotbar\_select\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{guiDrawer\_get\_hotbar\_select\_sprite()}{guiDrawer\_get\_hotbar\_select\_sprite()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a6135553cb136bd9f357a0f1780c75053} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} gui\+Drawer\+\_\+get\+\_\+hotbar\+\_\+select\+\_\+sprite (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_a6135553cb136bd9f357a0f1780c75053_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_ad586ed11d3d42784c6234891f4632e2f}\index{guiDrawer.c@{guiDrawer.c}!guiDrawer\_get\_hotbar\_sprite@{guiDrawer\_get\_hotbar\_sprite}}
+\index{guiDrawer\_get\_hotbar\_sprite@{guiDrawer\_get\_hotbar\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{guiDrawer\_get\_hotbar\_sprite()}{guiDrawer\_get\_hotbar\_sprite()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_ad586ed11d3d42784c6234891f4632e2f} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} gui\+Drawer\+\_\+get\+\_\+hotbar\+\_\+sprite (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_ad586ed11d3d42784c6234891f4632e2f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_af01037e6016234adfc9be7f3082bcf5d}\index{guiDrawer.c@{guiDrawer.c}!guiDrawer\_get\_hunger\_level\_sprite\_from\_index@{guiDrawer\_get\_hunger\_level\_sprite\_from\_index}}
+\index{guiDrawer\_get\_hunger\_level\_sprite\_from\_index@{guiDrawer\_get\_hunger\_level\_sprite\_from\_index}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{guiDrawer\_get\_hunger\_level\_sprite\_from\_index()}{guiDrawer\_get\_hunger\_level\_sprite\_from\_index()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_af01037e6016234adfc9be7f3082bcf5d} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} gui\+Drawer\+\_\+get\+\_\+hunger\+\_\+level\+\_\+sprite\+\_\+from\+\_\+index (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{index}{}\end{DoxyParamCaption})}
+
+
+
+Get a hunger bar sprite from an index. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_af01037e6016234adfc9be7f3082bcf5d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_a05800c123125bd7b453bfb960405431b}\index{guiDrawer.c@{guiDrawer.c}!guiDrawer\_get\_item\_sprite@{guiDrawer\_get\_item\_sprite}}
+\index{guiDrawer\_get\_item\_sprite@{guiDrawer\_get\_item\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{guiDrawer\_get\_item\_sprite()}{guiDrawer\_get\_item\_sprite()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a05800c123125bd7b453bfb960405431b} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} gui\+Drawer\+\_\+get\+\_\+item\+\_\+sprite (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Get an item sprite from an id. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_a05800c123125bd7b453bfb960405431b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_a96bfeea6db497a209432e2975c9b5a9d}\index{guiDrawer.c@{guiDrawer.c}!guiDrawer\_get\_minigamesIcon\_sprite@{guiDrawer\_get\_minigamesIcon\_sprite}}
+\index{guiDrawer\_get\_minigamesIcon\_sprite@{guiDrawer\_get\_minigamesIcon\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{guiDrawer\_get\_minigamesIcon\_sprite()}{guiDrawer\_get\_minigamesIcon\_sprite()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a96bfeea6db497a209432e2975c9b5a9d} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} gui\+Drawer\+\_\+get\+\_\+minigames\+Icon\+\_\+sprite (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_a96bfeea6db497a209432e2975c9b5a9d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_aad601cd211ca0464f3387be62caf3001}\index{guiDrawer.c@{guiDrawer.c}!guiDrawer\_get\_minigotchi\_cuddle\_sprite@{guiDrawer\_get\_minigotchi\_cuddle\_sprite}}
+\index{guiDrawer\_get\_minigotchi\_cuddle\_sprite@{guiDrawer\_get\_minigotchi\_cuddle\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{guiDrawer\_get\_minigotchi\_cuddle\_sprite()}{guiDrawer\_get\_minigotchi\_cuddle\_sprite()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_aad601cd211ca0464f3387be62caf3001} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} gui\+Drawer\+\_\+get\+\_\+minigotchi\+\_\+cuddle\+\_\+sprite (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_aad601cd211ca0464f3387be62caf3001_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_ace6f4f2f14abaa08fa9eb03fe51778a1}\index{guiDrawer.c@{guiDrawer.c}!guiDrawer\_get\_minigotchi\_normal\_sprite@{guiDrawer\_get\_minigotchi\_normal\_sprite}}
+\index{guiDrawer\_get\_minigotchi\_normal\_sprite@{guiDrawer\_get\_minigotchi\_normal\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{guiDrawer\_get\_minigotchi\_normal\_sprite()}{guiDrawer\_get\_minigotchi\_normal\_sprite()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_ace6f4f2f14abaa08fa9eb03fe51778a1} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} gui\+Drawer\+\_\+get\+\_\+minigotchi\+\_\+normal\+\_\+sprite (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_ace6f4f2f14abaa08fa9eb03fe51778a1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_ac373cd78214aec6ee8f6c384a30a31de}\index{guiDrawer.c@{guiDrawer.c}!guiDrawer\_get\_minigotchi\_sprite@{guiDrawer\_get\_minigotchi\_sprite}}
+\index{guiDrawer\_get\_minigotchi\_sprite@{guiDrawer\_get\_minigotchi\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{guiDrawer\_get\_minigotchi\_sprite()}{guiDrawer\_get\_minigotchi\_sprite()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_ac373cd78214aec6ee8f6c384a30a31de} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} gui\+Drawer\+\_\+get\+\_\+minigotchi\+\_\+sprite (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_ac373cd78214aec6ee8f6c384a30a31de_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_a9260e1a63ff276d6aa374fc3056395f5}\index{guiDrawer.c@{guiDrawer.c}!guiDrawer\_get\_night\_window@{guiDrawer\_get\_night\_window}}
+\index{guiDrawer\_get\_night\_window@{guiDrawer\_get\_night\_window}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{guiDrawer\_get\_night\_window()}{guiDrawer\_get\_night\_window()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a9260e1a63ff276d6aa374fc3056395f5} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} gui\+Drawer\+\_\+get\+\_\+night\+\_\+window (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{gui_drawer_8c_a9260e1a63ff276d6aa374fc3056395f5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_a5a7b61ff4d0d6f1b815bc5420fd2b8bd}\index{guiDrawer.c@{guiDrawer.c}!guiDrawer\_get\_paper\_sprite@{guiDrawer\_get\_paper\_sprite}}
+\index{guiDrawer\_get\_paper\_sprite@{guiDrawer\_get\_paper\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{guiDrawer\_get\_paper\_sprite()}{guiDrawer\_get\_paper\_sprite()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a5a7b61ff4d0d6f1b815bc5420fd2b8bd} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} gui\+Drawer\+\_\+get\+\_\+paper\+\_\+sprite (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_a5a7b61ff4d0d6f1b815bc5420fd2b8bd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_a64b3e77e046a0e0122df2b0ec4d5d04c}\index{guiDrawer.c@{guiDrawer.c}!guiDrawer\_get\_quit\_button\_sprite@{guiDrawer\_get\_quit\_button\_sprite}}
+\index{guiDrawer\_get\_quit\_button\_sprite@{guiDrawer\_get\_quit\_button\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{guiDrawer\_get\_quit\_button\_sprite()}{guiDrawer\_get\_quit\_button\_sprite()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a64b3e77e046a0e0122df2b0ec4d5d04c} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} gui\+Drawer\+\_\+get\+\_\+quit\+\_\+button\+\_\+sprite (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_a64b3e77e046a0e0122df2b0ec4d5d04c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_a2beefa168c683c4411aa36515e184d26}\index{guiDrawer.c@{guiDrawer.c}!guiDrawer\_get\_rock\_sprite@{guiDrawer\_get\_rock\_sprite}}
+\index{guiDrawer\_get\_rock\_sprite@{guiDrawer\_get\_rock\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{guiDrawer\_get\_rock\_sprite()}{guiDrawer\_get\_rock\_sprite()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a2beefa168c683c4411aa36515e184d26} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} gui\+Drawer\+\_\+get\+\_\+rock\+\_\+sprite (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_a2beefa168c683c4411aa36515e184d26_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_a930ac7485a0948e0d77ecfde963ee589}\index{guiDrawer.c@{guiDrawer.c}!guiDrawer\_get\_rps\_button\_sprite@{guiDrawer\_get\_rps\_button\_sprite}}
+\index{guiDrawer\_get\_rps\_button\_sprite@{guiDrawer\_get\_rps\_button\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{guiDrawer\_get\_rps\_button\_sprite()}{guiDrawer\_get\_rps\_button\_sprite()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a930ac7485a0948e0d77ecfde963ee589} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} gui\+Drawer\+\_\+get\+\_\+rps\+\_\+button\+\_\+sprite (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_a930ac7485a0948e0d77ecfde963ee589_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_aa041e05b112df2340b722f49f481031e}\index{guiDrawer.c@{guiDrawer.c}!guiDrawer\_get\_rpsLose\_sprite@{guiDrawer\_get\_rpsLose\_sprite}}
+\index{guiDrawer\_get\_rpsLose\_sprite@{guiDrawer\_get\_rpsLose\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{guiDrawer\_get\_rpsLose\_sprite()}{guiDrawer\_get\_rpsLose\_sprite()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_aa041e05b112df2340b722f49f481031e} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} gui\+Drawer\+\_\+get\+\_\+rps\+Lose\+\_\+sprite (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_aa041e05b112df2340b722f49f481031e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_a6d96da5ee69bb7384231edea5638a85d}\index{guiDrawer.c@{guiDrawer.c}!guiDrawer\_get\_rpsTie\_sprite@{guiDrawer\_get\_rpsTie\_sprite}}
+\index{guiDrawer\_get\_rpsTie\_sprite@{guiDrawer\_get\_rpsTie\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{guiDrawer\_get\_rpsTie\_sprite()}{guiDrawer\_get\_rpsTie\_sprite()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a6d96da5ee69bb7384231edea5638a85d} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} gui\+Drawer\+\_\+get\+\_\+rps\+Tie\+\_\+sprite (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_a6d96da5ee69bb7384231edea5638a85d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_a9a42e3169b1ed9edce57c654a90b72d8}\index{guiDrawer.c@{guiDrawer.c}!guiDrawer\_get\_rpsWin\_sprite@{guiDrawer\_get\_rpsWin\_sprite}}
+\index{guiDrawer\_get\_rpsWin\_sprite@{guiDrawer\_get\_rpsWin\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{guiDrawer\_get\_rpsWin\_sprite()}{guiDrawer\_get\_rpsWin\_sprite()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a9a42e3169b1ed9edce57c654a90b72d8} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} gui\+Drawer\+\_\+get\+\_\+rps\+Win\+\_\+sprite (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_a9a42e3169b1ed9edce57c654a90b72d8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_ae50f96294387b017a799f9105bcc4134}\index{guiDrawer.c@{guiDrawer.c}!guiDrawer\_get\_scissors\_sprite@{guiDrawer\_get\_scissors\_sprite}}
+\index{guiDrawer\_get\_scissors\_sprite@{guiDrawer\_get\_scissors\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{guiDrawer\_get\_scissors\_sprite()}{guiDrawer\_get\_scissors\_sprite()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_ae50f96294387b017a799f9105bcc4134} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} gui\+Drawer\+\_\+get\+\_\+scissors\+\_\+sprite (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_ae50f96294387b017a799f9105bcc4134_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_a0c4a49f9b2916a971f1998a53aef8374}\index{guiDrawer.c@{guiDrawer.c}!guiDrawer\_get\_start\_button\_sprite@{guiDrawer\_get\_start\_button\_sprite}}
+\index{guiDrawer\_get\_start\_button\_sprite@{guiDrawer\_get\_start\_button\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{guiDrawer\_get\_start\_button\_sprite()}{guiDrawer\_get\_start\_button\_sprite()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a0c4a49f9b2916a971f1998a53aef8374} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} gui\+Drawer\+\_\+get\+\_\+start\+\_\+button\+\_\+sprite (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_a0c4a49f9b2916a971f1998a53aef8374_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_a719c69c695d890889060ec955a8040de}\index{guiDrawer.c@{guiDrawer.c}!guiDrawer\_get\_ttt\_button\_sprite@{guiDrawer\_get\_ttt\_button\_sprite}}
+\index{guiDrawer\_get\_ttt\_button\_sprite@{guiDrawer\_get\_ttt\_button\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{guiDrawer\_get\_ttt\_button\_sprite()}{guiDrawer\_get\_ttt\_button\_sprite()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a719c69c695d890889060ec955a8040de} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} gui\+Drawer\+\_\+get\+\_\+ttt\+\_\+button\+\_\+sprite (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_a719c69c695d890889060ec955a8040de_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_ab5a453eaf98d38de1d61c1f342ab60e9}\index{guiDrawer.c@{guiDrawer.c}!guiDrawer\_get\_ttt\_field@{guiDrawer\_get\_ttt\_field}}
+\index{guiDrawer\_get\_ttt\_field@{guiDrawer\_get\_ttt\_field}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{guiDrawer\_get\_ttt\_field()}{guiDrawer\_get\_ttt\_field()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_ab5a453eaf98d38de1d61c1f342ab60e9} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} gui\+Drawer\+\_\+get\+\_\+ttt\+\_\+field (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{gui_drawer_8c_aa7f31d5652876ae995250dee9b2a017a}\index{guiDrawer.c@{guiDrawer.c}!guiDrawer\_get\_ttt\_o@{guiDrawer\_get\_ttt\_o}}
+\index{guiDrawer\_get\_ttt\_o@{guiDrawer\_get\_ttt\_o}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{guiDrawer\_get\_ttt\_o()}{guiDrawer\_get\_ttt\_o()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_aa7f31d5652876ae995250dee9b2a017a} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} gui\+Drawer\+\_\+get\+\_\+ttt\+\_\+o (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_aa7f31d5652876ae995250dee9b2a017a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_ab89da73766e8307c1d6fdfd384c1c1a3}\index{guiDrawer.c@{guiDrawer.c}!guiDrawer\_get\_ttt\_wait@{guiDrawer\_get\_ttt\_wait}}
+\index{guiDrawer\_get\_ttt\_wait@{guiDrawer\_get\_ttt\_wait}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{guiDrawer\_get\_ttt\_wait()}{guiDrawer\_get\_ttt\_wait()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_ab89da73766e8307c1d6fdfd384c1c1a3} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} gui\+Drawer\+\_\+get\+\_\+ttt\+\_\+wait (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{gui_drawer_8c_a1fe80b911f2992528727f80a8574824b}\index{guiDrawer.c@{guiDrawer.c}!guiDrawer\_get\_ttt\_x@{guiDrawer\_get\_ttt\_x}}
+\index{guiDrawer\_get\_ttt\_x@{guiDrawer\_get\_ttt\_x}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{guiDrawer\_get\_ttt\_x()}{guiDrawer\_get\_ttt\_x()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a1fe80b911f2992528727f80a8574824b} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} gui\+Drawer\+\_\+get\+\_\+ttt\+\_\+x (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_a1fe80b911f2992528727f80a8574824b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_a9a9776a57d5e9f94450acf2cccd51333}\index{guiDrawer.c@{guiDrawer.c}!setup\_happiness\_sprites@{setup\_happiness\_sprites}}
+\index{setup\_happiness\_sprites@{setup\_happiness\_sprites}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{setup\_happiness\_sprites()}{setup\_happiness\_sprites()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a9a9776a57d5e9f94450acf2cccd51333} 
+void setup\+\_\+happiness\+\_\+sprites (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Sets up the happiness bar sprites. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{gui_drawer_8c_a9a9776a57d5e9f94450acf2cccd51333_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_a9a9776a57d5e9f94450acf2cccd51333_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_aa18c3a26c9d1e2245d5264d7d457de6f}\index{guiDrawer.c@{guiDrawer.c}!setup\_hunger\_sprites@{setup\_hunger\_sprites}}
+\index{setup\_hunger\_sprites@{setup\_hunger\_sprites}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{setup\_hunger\_sprites()}{setup\_hunger\_sprites()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_aa18c3a26c9d1e2245d5264d7d457de6f} 
+void setup\+\_\+hunger\+\_\+sprites (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Sets up the hunger bar sprites. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{gui_drawer_8c_aa18c3a26c9d1e2245d5264d7d457de6f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_aa18c3a26c9d1e2245d5264d7d457de6f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_a834200084177d31e41dd9b28754a3312}\index{guiDrawer.c@{guiDrawer.c}!setup\_sprites@{setup\_sprites}}
+\index{setup\_sprites@{setup\_sprites}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{setup\_sprites()}{setup\_sprites()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a834200084177d31e41dd9b28754a3312} 
+void setup\+\_\+sprites (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Sets up all the main sprites. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{gui_drawer_8c_a834200084177d31e41dd9b28754a3312_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{gui_drawer_8c_a834200084177d31e41dd9b28754a3312_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_afec62e1339a5415e0e26f1a3a426dda3}\index{guiDrawer.c@{guiDrawer.c}!setup\_text\_sprite@{setup\_text\_sprite}}
+\index{setup\_text\_sprite@{setup\_text\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{setup\_text\_sprite()}{setup\_text\_sprite()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_afec62e1339a5415e0e26f1a3a426dda3} 
+void setup\+\_\+text\+\_\+sprite (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Sets up the letter sprites that make up the font. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{gui_drawer_8c_afec62e1339a5415e0e26f1a3a426dda3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_afec62e1339a5415e0e26f1a3a426dda3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_ab36a54932debf96ff4d24f689bcc4472}\index{guiDrawer.c@{guiDrawer.c}!setup\_ttt\_sprites@{setup\_ttt\_sprites}}
+\index{setup\_ttt\_sprites@{setup\_ttt\_sprites}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{setup\_ttt\_sprites()}{setup\_ttt\_sprites()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_ab36a54932debf96ff4d24f689bcc4472} 
+void setup\+\_\+ttt\+\_\+sprites (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Sets up the sprites used in the Tic Tac Toe minigame. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{gui_drawer_8c_ab36a54932debf96ff4d24f689bcc4472_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{gui_drawer_8c_ab36a54932debf96ff4d24f689bcc4472_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_aeb0c1fe0e10a344dac885302cf50eee8}\index{guiDrawer.c@{guiDrawer.c}!sprite\_get\_height@{sprite\_get\_height}}
+\index{sprite\_get\_height@{sprite\_get\_height}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{sprite\_get\_height()}{sprite\_get\_height()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_aeb0c1fe0e10a344dac885302cf50eee8} 
+uint16\+\_\+t sprite\+\_\+get\+\_\+height (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}}]{sprite}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_aeb0c1fe0e10a344dac885302cf50eee8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_a4c63acd65b3e03c46066da90b1bd0c99}\index{guiDrawer.c@{guiDrawer.c}!sprite\_get\_width@{sprite\_get\_width}}
+\index{sprite\_get\_width@{sprite\_get\_width}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{sprite\_get\_width()}{sprite\_get\_width()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a4c63acd65b3e03c46066da90b1bd0c99} 
+uint16\+\_\+t sprite\+\_\+get\+\_\+width (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}}]{sprite}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_a4c63acd65b3e03c46066da90b1bd0c99_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_a7592194eb7112ccb6d48a0bbe2271055}\index{guiDrawer.c@{guiDrawer.c}!switchBackground@{switchBackground}}
+\index{switchBackground@{switchBackground}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{switchBackground()}{switchBackground()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a7592194eb7112ccb6d48a0bbe2271055} 
+void switch\+Background (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{bg}{}\end{DoxyParamCaption})}
+
+
+
+Switches the background from an index (We are using buffers to make the game faster) 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_a7592194eb7112ccb6d48a0bbe2271055_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_a7592194eb7112ccb6d48a0bbe2271055_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_drawer_8c_a24861d3e2d5bf9ae60eee311f072216c}\index{guiDrawer.c@{guiDrawer.c}!wrapper\_draw\_background@{wrapper\_draw\_background}}
+\index{wrapper\_draw\_background@{wrapper\_draw\_background}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{wrapper\_draw\_background()}{wrapper\_draw\_background()}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a24861d3e2d5bf9ae60eee311f072216c} 
+void wrapper\+\_\+draw\+\_\+background (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{buffer\+Index}{}\end{DoxyParamCaption})}
+
+
+
+Draws the backfround (wrapper function) 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_a24861d3e2d5bf9ae60eee311f072216c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_drawer_8c_a24861d3e2d5bf9ae60eee311f072216c_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{gui_drawer_8c_a278e1371171f22ee34656211fd23b4b4}\index{guiDrawer.c@{guiDrawer.c}!\_A\_sprite@{\_A\_sprite}}
+\index{\_A\_sprite@{\_A\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_A\_sprite}{\_A\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a278e1371171f22ee34656211fd23b4b4} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+\+A\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a1b8238f5ab8bd621984e87a4f625da85}\index{guiDrawer.c@{guiDrawer.c}!\_apple\_sprite@{\_apple\_sprite}}
+\index{\_apple\_sprite@{\_apple\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_apple\_sprite}{\_apple\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a1b8238f5ab8bd621984e87a4f625da85} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+apple\+\_\+sprite = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a34426f205505ef365ae21d3c14e7e4bd}\index{guiDrawer.c@{guiDrawer.c}!\_B\_sprite@{\_B\_sprite}}
+\index{\_B\_sprite@{\_B\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_B\_sprite}{\_B\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a34426f205505ef365ae21d3c14e7e4bd} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+\+B\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a7f0b006bdaec2b769e89b6925535868a}\index{guiDrawer.c@{guiDrawer.c}!\_backgroundBuffer@{\_backgroundBuffer}}
+\index{\_backgroundBuffer@{\_backgroundBuffer}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_backgroundBuffer}{\_backgroundBuffer}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a7f0b006bdaec2b769e89b6925535868a} 
+char\texorpdfstring{$\ast$}{*} \+\_\+background\+Buffer\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a391e3d2855c53281424b6c36011f9dbd}\index{guiDrawer.c@{guiDrawer.c}!\_backgroundBufferAlternative@{\_backgroundBufferAlternative}}
+\index{\_backgroundBufferAlternative@{\_backgroundBufferAlternative}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_backgroundBufferAlternative}{\_backgroundBufferAlternative}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a391e3d2855c53281424b6c36011f9dbd} 
+char\texorpdfstring{$\ast$}{*} \+\_\+background\+Buffer\+Alternative\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_ae39ca84f8c8f625484bc8e29ed886db0}\index{guiDrawer.c@{guiDrawer.c}!\_banana\_sprite@{\_banana\_sprite}}
+\index{\_banana\_sprite@{\_banana\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_banana\_sprite}{\_banana\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_ae39ca84f8c8f625484bc8e29ed886db0} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+banana\+\_\+sprite = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a9a8676e014f9ec6cd2ddaa18abcc0c95}\index{guiDrawer.c@{guiDrawer.c}!\_bg\_mainmenu\_sprite@{\_bg\_mainmenu\_sprite}}
+\index{\_bg\_mainmenu\_sprite@{\_bg\_mainmenu\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_bg\_mainmenu\_sprite}{\_bg\_mainmenu\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a9a8676e014f9ec6cd2ddaa18abcc0c95} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+bg\+\_\+mainmenu\+\_\+sprite = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a9fe4f27364192258cf8ba17469f69099}\index{guiDrawer.c@{guiDrawer.c}!\_bg\_mainroom\_hotbar\_sprite@{\_bg\_mainroom\_hotbar\_sprite}}
+\index{\_bg\_mainroom\_hotbar\_sprite@{\_bg\_mainroom\_hotbar\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_bg\_mainroom\_hotbar\_sprite}{\_bg\_mainroom\_hotbar\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a9fe4f27364192258cf8ba17469f69099} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+bg\+\_\+mainroom\+\_\+hotbar\+\_\+sprite = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_af7ec572cee1069e78ce03beb5595ca9b}\index{guiDrawer.c@{guiDrawer.c}!\_bg\_mainroom\_sprite@{\_bg\_mainroom\_sprite}}
+\index{\_bg\_mainroom\_sprite@{\_bg\_mainroom\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_bg\_mainroom\_sprite}{\_bg\_mainroom\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_af7ec572cee1069e78ce03beb5595ca9b} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+bg\+\_\+mainroom\+\_\+sprite = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a7321bfea254226cf9b2d78fb04a0d53c}\index{guiDrawer.c@{guiDrawer.c}!\_bg\_minigames\_sprite@{\_bg\_minigames\_sprite}}
+\index{\_bg\_minigames\_sprite@{\_bg\_minigames\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_bg\_minigames\_sprite}{\_bg\_minigames\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a7321bfea254226cf9b2d78fb04a0d53c} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+bg\+\_\+minigames\+\_\+sprite = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a032894ce185e8e97fb0cce27f76229ef}\index{guiDrawer.c@{guiDrawer.c}!\_bg\_nameMinigotchi\_sprite@{\_bg\_nameMinigotchi\_sprite}}
+\index{\_bg\_nameMinigotchi\_sprite@{\_bg\_nameMinigotchi\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_bg\_nameMinigotchi\_sprite}{\_bg\_nameMinigotchi\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a032894ce185e8e97fb0cce27f76229ef} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+bg\+\_\+name\+Minigotchi\+\_\+sprite = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a24debff21dc10e87c6d1e2fb77d071e2}\index{guiDrawer.c@{guiDrawer.c}!\_bg\_rps\_sprite@{\_bg\_rps\_sprite}}
+\index{\_bg\_rps\_sprite@{\_bg\_rps\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_bg\_rps\_sprite}{\_bg\_rps\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a24debff21dc10e87c6d1e2fb77d071e2} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+bg\+\_\+rps\+\_\+sprite = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_ac4317a2bc336454958eb926517507db2}\index{guiDrawer.c@{guiDrawer.c}!\_bot\_chose\_sprite@{\_bot\_chose\_sprite}}
+\index{\_bot\_chose\_sprite@{\_bot\_chose\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_bot\_chose\_sprite}{\_bot\_chose\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_ac4317a2bc336454958eb926517507db2} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+bot\+\_\+chose\+\_\+sprite = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a4b1f742e2ac4a2ecfe763474ed7f7f73}\index{guiDrawer.c@{guiDrawer.c}!\_C\_sprite@{\_C\_sprite}}
+\index{\_C\_sprite@{\_C\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_C\_sprite}{\_C\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a4b1f742e2ac4a2ecfe763474ed7f7f73} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+\+C\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_aee20e9f308cfbcb44ac68722fbad8678}\index{guiDrawer.c@{guiDrawer.c}!\_chocolate\_sprite@{\_chocolate\_sprite}}
+\index{\_chocolate\_sprite@{\_chocolate\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_chocolate\_sprite}{\_chocolate\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_aee20e9f308cfbcb44ac68722fbad8678} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+chocolate\+\_\+sprite = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a49fb5b80f53526ee1e46b3b8feb8b944}\index{guiDrawer.c@{guiDrawer.c}!\_cursor\_sprite@{\_cursor\_sprite}}
+\index{\_cursor\_sprite@{\_cursor\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_cursor\_sprite}{\_cursor\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a49fb5b80f53526ee1e46b3b8feb8b944} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+cursor\+\_\+sprite = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a78a0b77b0f19d0702fcc1133f058b8bd}\index{guiDrawer.c@{guiDrawer.c}!\_D\_sprite@{\_D\_sprite}}
+\index{\_D\_sprite@{\_D\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_D\_sprite}{\_D\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a78a0b77b0f19d0702fcc1133f058b8bd} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+\+D\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a4ca1e35a3baf339b4201096ecd5ba8dd}\index{guiDrawer.c@{guiDrawer.c}!\_day\_window@{\_day\_window}}
+\index{\_day\_window@{\_day\_window}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_day\_window}{\_day\_window}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a4ca1e35a3baf339b4201096ecd5ba8dd} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+day\+\_\+window = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_ab3ab6da39f6187e93a600846d985a2f2}\index{guiDrawer.c@{guiDrawer.c}!\_E\_sprite@{\_E\_sprite}}
+\index{\_E\_sprite@{\_E\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_E\_sprite}{\_E\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_ab3ab6da39f6187e93a600846d985a2f2} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+\+E\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a915f4a0789283d1e30def62cec0d549b}\index{guiDrawer.c@{guiDrawer.c}!\_empty\_sprite@{\_empty\_sprite}}
+\index{\_empty\_sprite@{\_empty\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_empty\_sprite}{\_empty\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a915f4a0789283d1e30def62cec0d549b} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+empty\+\_\+sprite = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_ab4b5e4c52d0952ef090b7aafdce6f0be}\index{guiDrawer.c@{guiDrawer.c}!\_evening\_window@{\_evening\_window}}
+\index{\_evening\_window@{\_evening\_window}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_evening\_window}{\_evening\_window}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_ab4b5e4c52d0952ef090b7aafdce6f0be} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+evening\+\_\+window = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_aa161217e7ddd59ce39dc3a8f65f8b175}\index{guiDrawer.c@{guiDrawer.c}!\_exit\_game\_mini\_sprite@{\_exit\_game\_mini\_sprite}}
+\index{\_exit\_game\_mini\_sprite@{\_exit\_game\_mini\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_exit\_game\_mini\_sprite}{\_exit\_game\_mini\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_aa161217e7ddd59ce39dc3a8f65f8b175} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+exit\+\_\+game\+\_\+mini\+\_\+sprite = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a13d185e8b57dccb034021099ff8af1f3}\index{guiDrawer.c@{guiDrawer.c}!\_exit\_game\_small\_sprite@{\_exit\_game\_small\_sprite}}
+\index{\_exit\_game\_small\_sprite@{\_exit\_game\_small\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_exit\_game\_small\_sprite}{\_exit\_game\_small\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a13d185e8b57dccb034021099ff8af1f3} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+exit\+\_\+game\+\_\+small\+\_\+sprite = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a2b93dc007dab8091557f806816247b8e}\index{guiDrawer.c@{guiDrawer.c}!\_F\_sprite@{\_F\_sprite}}
+\index{\_F\_sprite@{\_F\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_F\_sprite}{\_F\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a2b93dc007dab8091557f806816247b8e} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+\+F\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_acac6d15f35b1d664bbbdb6e2e1c13065}\index{guiDrawer.c@{guiDrawer.c}!\_G\_sprite@{\_G\_sprite}}
+\index{\_G\_sprite@{\_G\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_G\_sprite}{\_G\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_acac6d15f35b1d664bbbdb6e2e1c13065} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+\+G\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a5a274d146351ddd85ec26c057192f739}\index{guiDrawer.c@{guiDrawer.c}!\_guest\_button\_sprite@{\_guest\_button\_sprite}}
+\index{\_guest\_button\_sprite@{\_guest\_button\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_guest\_button\_sprite}{\_guest\_button\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a5a274d146351ddd85ec26c057192f739} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+guest\+\_\+button\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a1718aa74bc9083db7873c39a5f9a7e8b}\index{guiDrawer.c@{guiDrawer.c}!\_H\_sprite@{\_H\_sprite}}
+\index{\_H\_sprite@{\_H\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_H\_sprite}{\_H\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a1718aa74bc9083db7873c39a5f9a7e8b} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+\+H\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a2fdf2756323c88221426c0ec5ea0f706}\index{guiDrawer.c@{guiDrawer.c}!\_happiness\_L0\_sprite@{\_happiness\_L0\_sprite}}
+\index{\_happiness\_L0\_sprite@{\_happiness\_L0\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_happiness\_L0\_sprite}{\_happiness\_L0\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a2fdf2756323c88221426c0ec5ea0f706} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+happiness\+\_\+\+L0\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a0c52f08833b49a642f9b12753f80f62f}\index{guiDrawer.c@{guiDrawer.c}!\_happiness\_L10\_sprite@{\_happiness\_L10\_sprite}}
+\index{\_happiness\_L10\_sprite@{\_happiness\_L10\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_happiness\_L10\_sprite}{\_happiness\_L10\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a0c52f08833b49a642f9b12753f80f62f} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+happiness\+\_\+\+L10\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a2df2889b35c9976e7dedb52439018967}\index{guiDrawer.c@{guiDrawer.c}!\_happiness\_L1\_sprite@{\_happiness\_L1\_sprite}}
+\index{\_happiness\_L1\_sprite@{\_happiness\_L1\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_happiness\_L1\_sprite}{\_happiness\_L1\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a2df2889b35c9976e7dedb52439018967} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+happiness\+\_\+\+L1\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_ab5fed4aa6c990fac9699cff06ea9fd81}\index{guiDrawer.c@{guiDrawer.c}!\_happiness\_L2\_sprite@{\_happiness\_L2\_sprite}}
+\index{\_happiness\_L2\_sprite@{\_happiness\_L2\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_happiness\_L2\_sprite}{\_happiness\_L2\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_ab5fed4aa6c990fac9699cff06ea9fd81} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+happiness\+\_\+\+L2\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a890c7d9189c25fad3dca5bb0d308a222}\index{guiDrawer.c@{guiDrawer.c}!\_happiness\_L3\_sprite@{\_happiness\_L3\_sprite}}
+\index{\_happiness\_L3\_sprite@{\_happiness\_L3\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_happiness\_L3\_sprite}{\_happiness\_L3\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a890c7d9189c25fad3dca5bb0d308a222} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+happiness\+\_\+\+L3\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_aa107225b8054db5acc832a73ef720c26}\index{guiDrawer.c@{guiDrawer.c}!\_happiness\_L4\_sprite@{\_happiness\_L4\_sprite}}
+\index{\_happiness\_L4\_sprite@{\_happiness\_L4\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_happiness\_L4\_sprite}{\_happiness\_L4\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_aa107225b8054db5acc832a73ef720c26} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+happiness\+\_\+\+L4\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a065677812994c0bb883131a5376dbc54}\index{guiDrawer.c@{guiDrawer.c}!\_happiness\_L5\_sprite@{\_happiness\_L5\_sprite}}
+\index{\_happiness\_L5\_sprite@{\_happiness\_L5\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_happiness\_L5\_sprite}{\_happiness\_L5\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a065677812994c0bb883131a5376dbc54} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+happiness\+\_\+\+L5\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a850b6d603d9ab47e0345987f202ae06f}\index{guiDrawer.c@{guiDrawer.c}!\_happiness\_L6\_sprite@{\_happiness\_L6\_sprite}}
+\index{\_happiness\_L6\_sprite@{\_happiness\_L6\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_happiness\_L6\_sprite}{\_happiness\_L6\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a850b6d603d9ab47e0345987f202ae06f} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+happiness\+\_\+\+L6\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_afa2308d8b6a237afc50ffac0b616294c}\index{guiDrawer.c@{guiDrawer.c}!\_happiness\_L7\_sprite@{\_happiness\_L7\_sprite}}
+\index{\_happiness\_L7\_sprite@{\_happiness\_L7\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_happiness\_L7\_sprite}{\_happiness\_L7\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_afa2308d8b6a237afc50ffac0b616294c} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+happiness\+\_\+\+L7\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_ab5d53fc6df4a225d900015492aef5f33}\index{guiDrawer.c@{guiDrawer.c}!\_happiness\_L8\_sprite@{\_happiness\_L8\_sprite}}
+\index{\_happiness\_L8\_sprite@{\_happiness\_L8\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_happiness\_L8\_sprite}{\_happiness\_L8\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_ab5d53fc6df4a225d900015492aef5f33} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+happiness\+\_\+\+L8\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a2d23c7e4cf0b5d253da3c10dd9863147}\index{guiDrawer.c@{guiDrawer.c}!\_happiness\_L9\_sprite@{\_happiness\_L9\_sprite}}
+\index{\_happiness\_L9\_sprite@{\_happiness\_L9\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_happiness\_L9\_sprite}{\_happiness\_L9\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a2d23c7e4cf0b5d253da3c10dd9863147} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+happiness\+\_\+\+L9\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a11804c17fa0f9aec5fdf296b040d52ee}\index{guiDrawer.c@{guiDrawer.c}!\_happiness\_max\_sprite@{\_happiness\_max\_sprite}}
+\index{\_happiness\_max\_sprite@{\_happiness\_max\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_happiness\_max\_sprite}{\_happiness\_max\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a11804c17fa0f9aec5fdf296b040d52ee} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+happiness\+\_\+max\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a87a2b9e6611e8539bc4486167e3e92a5}\index{guiDrawer.c@{guiDrawer.c}!\_host\_button\_sprite@{\_host\_button\_sprite}}
+\index{\_host\_button\_sprite@{\_host\_button\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_host\_button\_sprite}{\_host\_button\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a87a2b9e6611e8539bc4486167e3e92a5} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+host\+\_\+button\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_abd990be54b786ebbdad0de1018e2dec9}\index{guiDrawer.c@{guiDrawer.c}!\_hotbar\_select\_sprite@{\_hotbar\_select\_sprite}}
+\index{\_hotbar\_select\_sprite@{\_hotbar\_select\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_hotbar\_select\_sprite}{\_hotbar\_select\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_abd990be54b786ebbdad0de1018e2dec9} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+hotbar\+\_\+select\+\_\+sprite = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a9f6be37f16870c7e364b8960239a4c91}\index{guiDrawer.c@{guiDrawer.c}!\_hotbar\_sprite@{\_hotbar\_sprite}}
+\index{\_hotbar\_sprite@{\_hotbar\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_hotbar\_sprite}{\_hotbar\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a9f6be37f16870c7e364b8960239a4c91} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+hotbar\+\_\+sprite = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a80cd2ded47cf63bf8639890274fd6d16}\index{guiDrawer.c@{guiDrawer.c}!\_hunger\_L0\_sprite@{\_hunger\_L0\_sprite}}
+\index{\_hunger\_L0\_sprite@{\_hunger\_L0\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_hunger\_L0\_sprite}{\_hunger\_L0\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a80cd2ded47cf63bf8639890274fd6d16} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+hunger\+\_\+\+L0\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a1cd68fa8df04cab3a32900988a52a485}\index{guiDrawer.c@{guiDrawer.c}!\_hunger\_L10\_sprite@{\_hunger\_L10\_sprite}}
+\index{\_hunger\_L10\_sprite@{\_hunger\_L10\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_hunger\_L10\_sprite}{\_hunger\_L10\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a1cd68fa8df04cab3a32900988a52a485} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+hunger\+\_\+\+L10\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a30860801a7652af9980c4fb36ba3ba01}\index{guiDrawer.c@{guiDrawer.c}!\_hunger\_L1\_sprite@{\_hunger\_L1\_sprite}}
+\index{\_hunger\_L1\_sprite@{\_hunger\_L1\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_hunger\_L1\_sprite}{\_hunger\_L1\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a30860801a7652af9980c4fb36ba3ba01} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+hunger\+\_\+\+L1\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_ab89811817f266090b0ebe0bd96552aaf}\index{guiDrawer.c@{guiDrawer.c}!\_hunger\_L2\_sprite@{\_hunger\_L2\_sprite}}
+\index{\_hunger\_L2\_sprite@{\_hunger\_L2\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_hunger\_L2\_sprite}{\_hunger\_L2\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_ab89811817f266090b0ebe0bd96552aaf} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+hunger\+\_\+\+L2\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_af921f756aadc633818f3ffd9ba233786}\index{guiDrawer.c@{guiDrawer.c}!\_hunger\_L3\_sprite@{\_hunger\_L3\_sprite}}
+\index{\_hunger\_L3\_sprite@{\_hunger\_L3\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_hunger\_L3\_sprite}{\_hunger\_L3\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_af921f756aadc633818f3ffd9ba233786} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+hunger\+\_\+\+L3\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a9749e86b32ef97b2cc507b46fb7bed26}\index{guiDrawer.c@{guiDrawer.c}!\_hunger\_L4\_sprite@{\_hunger\_L4\_sprite}}
+\index{\_hunger\_L4\_sprite@{\_hunger\_L4\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_hunger\_L4\_sprite}{\_hunger\_L4\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a9749e86b32ef97b2cc507b46fb7bed26} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+hunger\+\_\+\+L4\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a0249973bee5d41e3bb0acbf15b791704}\index{guiDrawer.c@{guiDrawer.c}!\_hunger\_L5\_sprite@{\_hunger\_L5\_sprite}}
+\index{\_hunger\_L5\_sprite@{\_hunger\_L5\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_hunger\_L5\_sprite}{\_hunger\_L5\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a0249973bee5d41e3bb0acbf15b791704} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+hunger\+\_\+\+L5\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a63cbefc4b08edf42bc05593809be5cee}\index{guiDrawer.c@{guiDrawer.c}!\_hunger\_L6\_sprite@{\_hunger\_L6\_sprite}}
+\index{\_hunger\_L6\_sprite@{\_hunger\_L6\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_hunger\_L6\_sprite}{\_hunger\_L6\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a63cbefc4b08edf42bc05593809be5cee} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+hunger\+\_\+\+L6\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_ab36fc567f7a159cc2606c8b889fa42ac}\index{guiDrawer.c@{guiDrawer.c}!\_hunger\_L7\_sprite@{\_hunger\_L7\_sprite}}
+\index{\_hunger\_L7\_sprite@{\_hunger\_L7\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_hunger\_L7\_sprite}{\_hunger\_L7\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_ab36fc567f7a159cc2606c8b889fa42ac} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+hunger\+\_\+\+L7\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a6c131fee12b5b21e8aad58b6b74f2e28}\index{guiDrawer.c@{guiDrawer.c}!\_hunger\_L8\_sprite@{\_hunger\_L8\_sprite}}
+\index{\_hunger\_L8\_sprite@{\_hunger\_L8\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_hunger\_L8\_sprite}{\_hunger\_L8\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a6c131fee12b5b21e8aad58b6b74f2e28} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+hunger\+\_\+\+L8\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a8ebdb025d3e0347eebb5aec9a20e7a93}\index{guiDrawer.c@{guiDrawer.c}!\_hunger\_L9\_sprite@{\_hunger\_L9\_sprite}}
+\index{\_hunger\_L9\_sprite@{\_hunger\_L9\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_hunger\_L9\_sprite}{\_hunger\_L9\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a8ebdb025d3e0347eebb5aec9a20e7a93} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+hunger\+\_\+\+L9\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a80e0bd4a494075337142e2071c73b9b1}\index{guiDrawer.c@{guiDrawer.c}!\_hunger\_max\_sprite@{\_hunger\_max\_sprite}}
+\index{\_hunger\_max\_sprite@{\_hunger\_max\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_hunger\_max\_sprite}{\_hunger\_max\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a80e0bd4a494075337142e2071c73b9b1} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+hunger\+\_\+max\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_ab6fd5422e997a6d5878ceccf68aa77ee}\index{guiDrawer.c@{guiDrawer.c}!\_I\_sprite@{\_I\_sprite}}
+\index{\_I\_sprite@{\_I\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_I\_sprite}{\_I\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_ab6fd5422e997a6d5878ceccf68aa77ee} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+\+I\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_ae86b4cd1c6cdf7aa7b4b5d04e1b062f0}\index{guiDrawer.c@{guiDrawer.c}!\_J\_sprite@{\_J\_sprite}}
+\index{\_J\_sprite@{\_J\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_J\_sprite}{\_J\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_ae86b4cd1c6cdf7aa7b4b5d04e1b062f0} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+\+J\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_adb53b928d5bab5ac9b38c865b4c4ecc0}\index{guiDrawer.c@{guiDrawer.c}!\_K\_sprite@{\_K\_sprite}}
+\index{\_K\_sprite@{\_K\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_K\_sprite}{\_K\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_adb53b928d5bab5ac9b38c865b4c4ecc0} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+\+K\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a209a0a71acec53e58a923c10d0a54645}\index{guiDrawer.c@{guiDrawer.c}!\_L\_sprite@{\_L\_sprite}}
+\index{\_L\_sprite@{\_L\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_L\_sprite}{\_L\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a209a0a71acec53e58a923c10d0a54645} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+\+L\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_aa6633b4c84b49ca61aa3e188eba934e9}\index{guiDrawer.c@{guiDrawer.c}!\_M\_sprite@{\_M\_sprite}}
+\index{\_M\_sprite@{\_M\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_M\_sprite}{\_M\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_aa6633b4c84b49ca61aa3e188eba934e9} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+\+M\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_addbe8d97c6a51a2c34abcc03a6055e7c}\index{guiDrawer.c@{guiDrawer.c}!\_minigames\_icon\_sprite@{\_minigames\_icon\_sprite}}
+\index{\_minigames\_icon\_sprite@{\_minigames\_icon\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_minigames\_icon\_sprite}{\_minigames\_icon\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_addbe8d97c6a51a2c34abcc03a6055e7c} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+minigames\+\_\+icon\+\_\+sprite = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a51ed0fe537e63ca0b8d65dfdd56dddbf}\index{guiDrawer.c@{guiDrawer.c}!\_minigotchi\_happy\_sprite@{\_minigotchi\_happy\_sprite}}
+\index{\_minigotchi\_happy\_sprite@{\_minigotchi\_happy\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_minigotchi\_happy\_sprite}{\_minigotchi\_happy\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a51ed0fe537e63ca0b8d65dfdd56dddbf} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+minigotchi\+\_\+happy\+\_\+sprite = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a5f1a978945128014a631fe7e853d27dc}\index{guiDrawer.c@{guiDrawer.c}!\_minigotchi\_sprite@{\_minigotchi\_sprite}}
+\index{\_minigotchi\_sprite@{\_minigotchi\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_minigotchi\_sprite}{\_minigotchi\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a5f1a978945128014a631fe7e853d27dc} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+minigotchi\+\_\+sprite = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_ae4a2de5fd4c101095d2e1ce5d256c103}\index{guiDrawer.c@{guiDrawer.c}!\_N\_sprite@{\_N\_sprite}}
+\index{\_N\_sprite@{\_N\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_N\_sprite}{\_N\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_ae4a2de5fd4c101095d2e1ce5d256c103} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+\+N\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a4c60e017d0dbfa82b3e7bb915de29801}\index{guiDrawer.c@{guiDrawer.c}!\_night\_window@{\_night\_window}}
+\index{\_night\_window@{\_night\_window}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_night\_window}{\_night\_window}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a4c60e017d0dbfa82b3e7bb915de29801} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+night\+\_\+window = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a071be4ddf3feae4282128ce77da9a11f}\index{guiDrawer.c@{guiDrawer.c}!\_O\_sprite@{\_O\_sprite}}
+\index{\_O\_sprite@{\_O\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_O\_sprite}{\_O\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a071be4ddf3feae4282128ce77da9a11f} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+\+O\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a5ef9b1aeb42d23319bab85d65a6cd458}\index{guiDrawer.c@{guiDrawer.c}!\_P\_sprite@{\_P\_sprite}}
+\index{\_P\_sprite@{\_P\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_P\_sprite}{\_P\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a5ef9b1aeb42d23319bab85d65a6cd458} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+\+P\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a2742bdf5498008babbed7540f6ba6316}\index{guiDrawer.c@{guiDrawer.c}!\_paper\_sprite@{\_paper\_sprite}}
+\index{\_paper\_sprite@{\_paper\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_paper\_sprite}{\_paper\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a2742bdf5498008babbed7540f6ba6316} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+paper\+\_\+sprite = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a957cf8f99d69402f7204924b85681844}\index{guiDrawer.c@{guiDrawer.c}!\_Q\_sprite@{\_Q\_sprite}}
+\index{\_Q\_sprite@{\_Q\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_Q\_sprite}{\_Q\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a957cf8f99d69402f7204924b85681844} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+\+Q\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a75bcff758c598f2397c182a142ad404e}\index{guiDrawer.c@{guiDrawer.c}!\_quit\_button\_sprite@{\_quit\_button\_sprite}}
+\index{\_quit\_button\_sprite@{\_quit\_button\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_quit\_button\_sprite}{\_quit\_button\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a75bcff758c598f2397c182a142ad404e} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+quit\+\_\+button\+\_\+sprite = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a5bf6667fd3b9aa0c90575e8b8ce3166a}\index{guiDrawer.c@{guiDrawer.c}!\_R\_sprite@{\_R\_sprite}}
+\index{\_R\_sprite@{\_R\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_R\_sprite}{\_R\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a5bf6667fd3b9aa0c90575e8b8ce3166a} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+\+R\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a8db034aa783667f258cd06795eaa74d3}\index{guiDrawer.c@{guiDrawer.c}!\_rock\_sprite@{\_rock\_sprite}}
+\index{\_rock\_sprite@{\_rock\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_rock\_sprite}{\_rock\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a8db034aa783667f258cd06795eaa74d3} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+rock\+\_\+sprite = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a30b398346482be3e3d1977f58daa4a64}\index{guiDrawer.c@{guiDrawer.c}!\_rps\_button\_sprite@{\_rps\_button\_sprite}}
+\index{\_rps\_button\_sprite@{\_rps\_button\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_rps\_button\_sprite}{\_rps\_button\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a30b398346482be3e3d1977f58daa4a64} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+rps\+\_\+button\+\_\+sprite = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a193a0b4f1d1ee454b02f9543ad9bae27}\index{guiDrawer.c@{guiDrawer.c}!\_rps\_lose\_sprite@{\_rps\_lose\_sprite}}
+\index{\_rps\_lose\_sprite@{\_rps\_lose\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_rps\_lose\_sprite}{\_rps\_lose\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a193a0b4f1d1ee454b02f9543ad9bae27} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+rps\+\_\+lose\+\_\+sprite = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a9ea0478c1e894881593855bbb5de8966}\index{guiDrawer.c@{guiDrawer.c}!\_rps\_tie\_sprite@{\_rps\_tie\_sprite}}
+\index{\_rps\_tie\_sprite@{\_rps\_tie\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_rps\_tie\_sprite}{\_rps\_tie\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a9ea0478c1e894881593855bbb5de8966} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+rps\+\_\+tie\+\_\+sprite = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_af2e4ecbc13543ae995253214aac22e1c}\index{guiDrawer.c@{guiDrawer.c}!\_rps\_win\_sprite@{\_rps\_win\_sprite}}
+\index{\_rps\_win\_sprite@{\_rps\_win\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_rps\_win\_sprite}{\_rps\_win\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_af2e4ecbc13543ae995253214aac22e1c} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+rps\+\_\+win\+\_\+sprite = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_ad37ca8cb6fae56518337895a1b6ae955}\index{guiDrawer.c@{guiDrawer.c}!\_S\_sprite@{\_S\_sprite}}
+\index{\_S\_sprite@{\_S\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_S\_sprite}{\_S\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_ad37ca8cb6fae56518337895a1b6ae955} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+\+S\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a99acd5755160cf9af0fa41180f1a0d25}\index{guiDrawer.c@{guiDrawer.c}!\_scissors\_sprite@{\_scissors\_sprite}}
+\index{\_scissors\_sprite@{\_scissors\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_scissors\_sprite}{\_scissors\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a99acd5755160cf9af0fa41180f1a0d25} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+scissors\+\_\+sprite = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a8490531ff986dbf8ed6c97fa999485c2}\index{guiDrawer.c@{guiDrawer.c}!\_start\_button\_sprite@{\_start\_button\_sprite}}
+\index{\_start\_button\_sprite@{\_start\_button\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_start\_button\_sprite}{\_start\_button\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a8490531ff986dbf8ed6c97fa999485c2} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+start\+\_\+button\+\_\+sprite = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a88e40fb80e4abf582b539324852957c0}\index{guiDrawer.c@{guiDrawer.c}!\_T\_sprite@{\_T\_sprite}}
+\index{\_T\_sprite@{\_T\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_T\_sprite}{\_T\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a88e40fb80e4abf582b539324852957c0} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+\+T\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_ae690dda0e26d9566bc618a2f7d0214b5}\index{guiDrawer.c@{guiDrawer.c}!\_ttt\_button\_sprite@{\_ttt\_button\_sprite}}
+\index{\_ttt\_button\_sprite@{\_ttt\_button\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_ttt\_button\_sprite}{\_ttt\_button\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_ae690dda0e26d9566bc618a2f7d0214b5} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+ttt\+\_\+button\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a3a1022c5e2f5236e075ccb883ab0b0e1}\index{guiDrawer.c@{guiDrawer.c}!\_ttt\_field@{\_ttt\_field}}
+\index{\_ttt\_field@{\_ttt\_field}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_ttt\_field}{\_ttt\_field}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a3a1022c5e2f5236e075ccb883ab0b0e1} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+ttt\+\_\+field\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_af80c9cfc0781a53f7ad5d914d0ec4d0b}\index{guiDrawer.c@{guiDrawer.c}!\_ttt\_menu\_bg@{\_ttt\_menu\_bg}}
+\index{\_ttt\_menu\_bg@{\_ttt\_menu\_bg}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_ttt\_menu\_bg}{\_ttt\_menu\_bg}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_af80c9cfc0781a53f7ad5d914d0ec4d0b} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+ttt\+\_\+menu\+\_\+bg\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a450257d1c9e0b6f48111b34830efcc0a}\index{guiDrawer.c@{guiDrawer.c}!\_ttt\_o@{\_ttt\_o}}
+\index{\_ttt\_o@{\_ttt\_o}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_ttt\_o}{\_ttt\_o}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a450257d1c9e0b6f48111b34830efcc0a} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+ttt\+\_\+o\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_aef15225f2f60f55339aaac86dd669a39}\index{guiDrawer.c@{guiDrawer.c}!\_ttt\_wait@{\_ttt\_wait}}
+\index{\_ttt\_wait@{\_ttt\_wait}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_ttt\_wait}{\_ttt\_wait}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_aef15225f2f60f55339aaac86dd669a39} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+ttt\+\_\+wait\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a20f02e08dfa7db13a0007f473b6172c9}\index{guiDrawer.c@{guiDrawer.c}!\_ttt\_x@{\_ttt\_x}}
+\index{\_ttt\_x@{\_ttt\_x}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_ttt\_x}{\_ttt\_x}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a20f02e08dfa7db13a0007f473b6172c9} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+ttt\+\_\+x\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_ad49272f9117142ac0959d23960e0e8c1}\index{guiDrawer.c@{guiDrawer.c}!\_U\_sprite@{\_U\_sprite}}
+\index{\_U\_sprite@{\_U\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_U\_sprite}{\_U\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_ad49272f9117142ac0959d23960e0e8c1} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+\+U\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a0791f7b05e10f04434a9cb9b53779b08}\index{guiDrawer.c@{guiDrawer.c}!\_V\_sprite@{\_V\_sprite}}
+\index{\_V\_sprite@{\_V\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_V\_sprite}{\_V\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a0791f7b05e10f04434a9cb9b53779b08} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+\+V\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a397535d38930176fa9c70c1563722e18}\index{guiDrawer.c@{guiDrawer.c}!\_W\_sprite@{\_W\_sprite}}
+\index{\_W\_sprite@{\_W\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_W\_sprite}{\_W\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a397535d38930176fa9c70c1563722e18} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+\+W\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_ab0e6f8286197ca44e3b67eacaa7964ae}\index{guiDrawer.c@{guiDrawer.c}!\_X\_sprite@{\_X\_sprite}}
+\index{\_X\_sprite@{\_X\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_X\_sprite}{\_X\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_ab0e6f8286197ca44e3b67eacaa7964ae} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+\+X\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_ab49cbd3d8a3c937afc144e5d343dea49}\index{guiDrawer.c@{guiDrawer.c}!\_Y\_sprite@{\_Y\_sprite}}
+\index{\_Y\_sprite@{\_Y\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_Y\_sprite}{\_Y\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_ab49cbd3d8a3c937afc144e5d343dea49} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+\+Y\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{gui_drawer_8c_a8ac11e31ce354f6546d9e4351fa33b69}\index{guiDrawer.c@{guiDrawer.c}!\_Z\_sprite@{\_Z\_sprite}}
+\index{\_Z\_sprite@{\_Z\_sprite}!guiDrawer.c@{guiDrawer.c}}
+\doxysubsubsection{\texorpdfstring{\_Z\_sprite}{\_Z\_sprite}}
+{\footnotesize\ttfamily \label{gui_drawer_8c_a8ac11e31ce354f6546d9e4351fa33b69} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} \+\_\+\+Z\+\_\+sprite\hspace{0.3cm}{\ttfamily [static]}}
+

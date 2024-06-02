@@ -1,0 +1,9 @@
+<map id="guiDrawer_get_hotbar_select_sprite" name="guiDrawer_get_hotbar_select_sprite">
+<area shape="rect" id="Node000001" title=" " alt="" coords="500,5,647,48"/>
+<area shape="rect" id="Node000002" href="$hotbar_8c.html#a1e4ffe62e2430b3aa4c07d512bcbd05b" title="Draws a hotbar slider." alt="" coords="366,13,452,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="485,29,453,29,453,24,485,24"/>
+<area shape="rect" id="Node000003" href="$main_room_viewer_8c.html#ab712f0c477c358dac8015032c3aa3b72" title="Calls draw function of each element the main room contains." alt="" coords="162,13,318,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="350,29,319,29,319,24,350,24"/>
+<area shape="rect" id="Node000004" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Project main function that starts the game." alt="" coords="5,13,114,40"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="146,29,114,29,114,24,146,24"/>
+</map>

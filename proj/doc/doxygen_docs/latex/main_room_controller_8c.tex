@@ -1,0 +1,279 @@
+\doxysection{C\+:/\+Users/anton/\+Documents/lcom/labs/proj/src/controller/menus/main\+Room\+Controller.c File Reference}
+\hypertarget{main_room_controller_8c}{}\label{main_room_controller_8c}\index{C:/Users/anton/Documents/lcom/labs/proj/src/controller/menus/mainRoomController.c@{C:/Users/anton/Documents/lcom/labs/proj/src/controller/menus/mainRoomController.c}}
+{\ttfamily \#include "{}main\+Room\+Controller.\+h"{}}\newline
+Include dependency graph for main\+Room\+Controller.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_room_controller_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_room_controller_8c_a2ecc67af3b606dcd5918c3ba5d0b57b3}{main\+Room\+Controller\+\_\+load\+\_\+main\+Room}} ()
+\begin{DoxyCompactList}\small\item\em Load the main room (first time) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_room_controller_8c_afd7423fb78800c887f86af2ef5138b6a}{main\+Room\+Controller\+\_\+toggle\+Hotbar}} ()
+\begin{DoxyCompactList}\small\item\em Function that toggles the hotbar. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_room_controller_8c_a06538c8167870131cba792282c55d882}{main\+Room\+Controller\+\_\+\+Hotbar\+\_\+go\+Right}} ()
+\begin{DoxyCompactList}\small\item\em Function that enables going right on the hotbar. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_room_controller_8c_a4249e9928e3d4894b67b77845b95875a}{main\+Room\+Controller\+\_\+\+Hotbar\+\_\+go\+Left}} ()
+\begin{DoxyCompactList}\small\item\em Function that enables going left on the hotbar. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_room_controller_8c_ab2e5737dd6e01a3d02730e1ff9b30cd1}{main\+Room\+Controller\+\_\+feed\+\_\+minigotchi}} ()
+\begin{DoxyCompactList}\small\item\em Functions that handles the minigotchi feeding event, by removing the item from the hotbar and updating the minigotchi\textquotesingle{}s hunger. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{main_room_controller_8c_ae54f2ae36bbe4d617ba02bea18557a57}{main\+Room\+Controller\+\_\+check\+Collision}} (\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}sprite, int x, int y)
+\begin{DoxyCompactList}\small\item\em Function that checks sprite collisions with the cursor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{main_room_controller_8h_ab3191c9e3fff133c6b80f01dc42c3695}{collision\+\_\+type\+\_\+main\+Room\+\_\+t}} \mbox{\hyperlink{main_room_controller_8c_ab3080958dc761a3746521ba846074040}{main\+Room\+Controller\+\_\+get\+Button\+Event}} ()
+\item 
+void \mbox{\hyperlink{main_room_controller_8c_a9d203ceee07bb45b62ad5d90894798ed}{main\+Room\+Controller\+\_\+set\+Button\+Event}} (\mbox{\hyperlink{main_room_controller_8h_ab3191c9e3fff133c6b80f01dc42c3695}{collision\+\_\+type\+\_\+main\+Room\+\_\+t}} ct)
+\item 
+void \mbox{\hyperlink{main_room_controller_8c_ac448f52b9ec47f6aa868245cb08a5a19}{main\+Room\+Controller\+\_\+step}} ()
+\begin{DoxyCompactList}\small\item\em Controller function that is called once every frame and updates / checks every action in the main room. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_room_controller_8c_a5e34d6f1af17dbbe644331bc2b639f4c}{main\+Room\+Controller\+\_\+delete\+\_\+main\+Room}} ()
+\begin{DoxyCompactList}\small\item\em Calls the \doxylink{struct_main_room}{Main\+Room} destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{main_room_controller_8c_a51d5d5fa1d51a0da013deab464bc1314}{get\+Main\+Room\+Cursor}} ()
+\item 
+void \mbox{\hyperlink{main_room_controller_8c_aecd68c6845eeae3a67774bb320788322}{set\+Main\+Room\+Cursor}} (\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*}cursor)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_main_room}{Main\+Room}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{main_room_controller_8c_ae54a9d3b04b91328440afb537dc858e1}{main\+Room}} = NULL
+\item 
+static \mbox{\hyperlink{main_room_controller_8h_ab3191c9e3fff133c6b80f01dc42c3695}{collision\+\_\+type\+\_\+main\+Room\+\_\+t}} \mbox{\hyperlink{main_room_controller_8c_aaf0173d7a49d4160de11e1da264bcabb}{current\+Button\+Event}} = \mbox{\hyperlink{main_room_controller_8h_ab3191c9e3fff133c6b80f01dc42c3695aef5056dd874725548e4c664a97746da6}{NOP\+\_\+\+MAINROOM}}
+\item 
+static \mbox{\hyperlink{struct_database}{Database}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{main_room_controller_8c_a46412799b92880e8b22508d832becca0}{database}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_room_controller_8c_a51d5d5fa1d51a0da013deab464bc1314}\index{mainRoomController.c@{mainRoomController.c}!getMainRoomCursor@{getMainRoomCursor}}
+\index{getMainRoomCursor@{getMainRoomCursor}!mainRoomController.c@{mainRoomController.c}}
+\doxysubsubsection{\texorpdfstring{getMainRoomCursor()}{getMainRoomCursor()}}
+{\footnotesize\ttfamily \label{main_room_controller_8c_a51d5d5fa1d51a0da013deab464bc1314} 
+\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*} get\+Main\+Room\+Cursor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{main_room_controller_8c_ae54f2ae36bbe4d617ba02bea18557a57}\index{mainRoomController.c@{mainRoomController.c}!mainRoomController\_checkCollision@{mainRoomController\_checkCollision}}
+\index{mainRoomController\_checkCollision@{mainRoomController\_checkCollision}!mainRoomController.c@{mainRoomController.c}}
+\doxysubsubsection{\texorpdfstring{mainRoomController\_checkCollision()}{mainRoomController\_checkCollision()}}
+{\footnotesize\ttfamily \label{main_room_controller_8c_ae54f2ae36bbe4d617ba02bea18557a57} 
+bool main\+Room\+Controller\+\_\+check\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}}]{sprite}{, }\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Function that checks sprite collisions with the cursor. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{main_room_controller_8c_ae54f2ae36bbe4d617ba02bea18557a57_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_room_controller_8c_ae54f2ae36bbe4d617ba02bea18557a57_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_room_controller_8c_a5e34d6f1af17dbbe644331bc2b639f4c}\index{mainRoomController.c@{mainRoomController.c}!mainRoomController\_delete\_mainRoom@{mainRoomController\_delete\_mainRoom}}
+\index{mainRoomController\_delete\_mainRoom@{mainRoomController\_delete\_mainRoom}!mainRoomController.c@{mainRoomController.c}}
+\doxysubsubsection{\texorpdfstring{mainRoomController\_delete\_mainRoom()}{mainRoomController\_delete\_mainRoom()}}
+{\footnotesize\ttfamily \label{main_room_controller_8c_a5e34d6f1af17dbbe644331bc2b639f4c} 
+void main\+Room\+Controller\+\_\+delete\+\_\+main\+Room (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Calls the \doxylink{struct_main_room}{Main\+Room} destructor. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_room_controller_8c_a5e34d6f1af17dbbe644331bc2b639f4c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_room_controller_8c_ab2e5737dd6e01a3d02730e1ff9b30cd1}\index{mainRoomController.c@{mainRoomController.c}!mainRoomController\_feed\_minigotchi@{mainRoomController\_feed\_minigotchi}}
+\index{mainRoomController\_feed\_minigotchi@{mainRoomController\_feed\_minigotchi}!mainRoomController.c@{mainRoomController.c}}
+\doxysubsubsection{\texorpdfstring{mainRoomController\_feed\_minigotchi()}{mainRoomController\_feed\_minigotchi()}}
+{\footnotesize\ttfamily \label{main_room_controller_8c_ab2e5737dd6e01a3d02730e1ff9b30cd1} 
+void main\+Room\+Controller\+\_\+feed\+\_\+minigotchi (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Functions that handles the minigotchi feeding event, by removing the item from the hotbar and updating the minigotchi\textquotesingle{}s hunger. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_room_controller_8c_ab2e5737dd6e01a3d02730e1ff9b30cd1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{main_room_controller_8c_ab2e5737dd6e01a3d02730e1ff9b30cd1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_room_controller_8c_ab3080958dc761a3746521ba846074040}\index{mainRoomController.c@{mainRoomController.c}!mainRoomController\_getButtonEvent@{mainRoomController\_getButtonEvent}}
+\index{mainRoomController\_getButtonEvent@{mainRoomController\_getButtonEvent}!mainRoomController.c@{mainRoomController.c}}
+\doxysubsubsection{\texorpdfstring{mainRoomController\_getButtonEvent()}{mainRoomController\_getButtonEvent()}}
+{\footnotesize\ttfamily \label{main_room_controller_8c_ab3080958dc761a3746521ba846074040} 
+\mbox{\hyperlink{main_room_controller_8h_ab3191c9e3fff133c6b80f01dc42c3695}{collision\+\_\+type\+\_\+main\+Room\+\_\+t}} main\+Room\+Controller\+\_\+get\+Button\+Event (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{main_room_controller_8c_ab3080958dc761a3746521ba846074040_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_room_controller_8c_a4249e9928e3d4894b67b77845b95875a}\index{mainRoomController.c@{mainRoomController.c}!mainRoomController\_Hotbar\_goLeft@{mainRoomController\_Hotbar\_goLeft}}
+\index{mainRoomController\_Hotbar\_goLeft@{mainRoomController\_Hotbar\_goLeft}!mainRoomController.c@{mainRoomController.c}}
+\doxysubsubsection{\texorpdfstring{mainRoomController\_Hotbar\_goLeft()}{mainRoomController\_Hotbar\_goLeft()}}
+{\footnotesize\ttfamily \label{main_room_controller_8c_a4249e9928e3d4894b67b77845b95875a} 
+void main\+Room\+Controller\+\_\+\+Hotbar\+\_\+go\+Left (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Function that enables going left on the hotbar. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{main_room_controller_8c_a4249e9928e3d4894b67b77845b95875a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_room_controller_8c_a06538c8167870131cba792282c55d882}\index{mainRoomController.c@{mainRoomController.c}!mainRoomController\_Hotbar\_goRight@{mainRoomController\_Hotbar\_goRight}}
+\index{mainRoomController\_Hotbar\_goRight@{mainRoomController\_Hotbar\_goRight}!mainRoomController.c@{mainRoomController.c}}
+\doxysubsubsection{\texorpdfstring{mainRoomController\_Hotbar\_goRight()}{mainRoomController\_Hotbar\_goRight()}}
+{\footnotesize\ttfamily \label{main_room_controller_8c_a06538c8167870131cba792282c55d882} 
+void main\+Room\+Controller\+\_\+\+Hotbar\+\_\+go\+Right (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Function that enables going right on the hotbar. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{main_room_controller_8c_a06538c8167870131cba792282c55d882_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_room_controller_8c_a2ecc67af3b606dcd5918c3ba5d0b57b3}\index{mainRoomController.c@{mainRoomController.c}!mainRoomController\_load\_mainRoom@{mainRoomController\_load\_mainRoom}}
+\index{mainRoomController\_load\_mainRoom@{mainRoomController\_load\_mainRoom}!mainRoomController.c@{mainRoomController.c}}
+\doxysubsubsection{\texorpdfstring{mainRoomController\_load\_mainRoom()}{mainRoomController\_load\_mainRoom()}}
+{\footnotesize\ttfamily \label{main_room_controller_8c_a2ecc67af3b606dcd5918c3ba5d0b57b3} 
+void main\+Room\+Controller\+\_\+load\+\_\+main\+Room (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Load the main room (first time) 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_room_controller_8c_a2ecc67af3b606dcd5918c3ba5d0b57b3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_room_controller_8c_a2ecc67af3b606dcd5918c3ba5d0b57b3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_room_controller_8c_a9d203ceee07bb45b62ad5d90894798ed}\index{mainRoomController.c@{mainRoomController.c}!mainRoomController\_setButtonEvent@{mainRoomController\_setButtonEvent}}
+\index{mainRoomController\_setButtonEvent@{mainRoomController\_setButtonEvent}!mainRoomController.c@{mainRoomController.c}}
+\doxysubsubsection{\texorpdfstring{mainRoomController\_setButtonEvent()}{mainRoomController\_setButtonEvent()}}
+{\footnotesize\ttfamily \label{main_room_controller_8c_a9d203ceee07bb45b62ad5d90894798ed} 
+void main\+Room\+Controller\+\_\+set\+Button\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_room_controller_8h_ab3191c9e3fff133c6b80f01dc42c3695}{collision\+\_\+type\+\_\+main\+Room\+\_\+t}}}]{ct}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{main_room_controller_8c_a9d203ceee07bb45b62ad5d90894798ed_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_room_controller_8c_ac448f52b9ec47f6aa868245cb08a5a19}\index{mainRoomController.c@{mainRoomController.c}!mainRoomController\_step@{mainRoomController\_step}}
+\index{mainRoomController\_step@{mainRoomController\_step}!mainRoomController.c@{mainRoomController.c}}
+\doxysubsubsection{\texorpdfstring{mainRoomController\_step()}{mainRoomController\_step()}}
+{\footnotesize\ttfamily \label{main_room_controller_8c_ac448f52b9ec47f6aa868245cb08a5a19} 
+void main\+Room\+Controller\+\_\+step (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Controller function that is called once every frame and updates / checks every action in the main room. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_room_controller_8c_ac448f52b9ec47f6aa868245cb08a5a19_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{main_room_controller_8c_ac448f52b9ec47f6aa868245cb08a5a19_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_room_controller_8c_afd7423fb78800c887f86af2ef5138b6a}\index{mainRoomController.c@{mainRoomController.c}!mainRoomController\_toggleHotbar@{mainRoomController\_toggleHotbar}}
+\index{mainRoomController\_toggleHotbar@{mainRoomController\_toggleHotbar}!mainRoomController.c@{mainRoomController.c}}
+\doxysubsubsection{\texorpdfstring{mainRoomController\_toggleHotbar()}{mainRoomController\_toggleHotbar()}}
+{\footnotesize\ttfamily \label{main_room_controller_8c_afd7423fb78800c887f86af2ef5138b6a} 
+void main\+Room\+Controller\+\_\+toggle\+Hotbar (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Function that toggles the hotbar. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{main_room_controller_8c_afd7423fb78800c887f86af2ef5138b6a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_room_controller_8c_aecd68c6845eeae3a67774bb320788322}\index{mainRoomController.c@{mainRoomController.c}!setMainRoomCursor@{setMainRoomCursor}}
+\index{setMainRoomCursor@{setMainRoomCursor}!mainRoomController.c@{mainRoomController.c}}
+\doxysubsubsection{\texorpdfstring{setMainRoomCursor()}{setMainRoomCursor()}}
+{\footnotesize\ttfamily \label{main_room_controller_8c_aecd68c6845eeae3a67774bb320788322} 
+void set\+Main\+Room\+Cursor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*}}]{cursor}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{main_room_controller_8c_aecd68c6845eeae3a67774bb320788322_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{main_room_controller_8c_aaf0173d7a49d4160de11e1da264bcabb}\index{mainRoomController.c@{mainRoomController.c}!currentButtonEvent@{currentButtonEvent}}
+\index{currentButtonEvent@{currentButtonEvent}!mainRoomController.c@{mainRoomController.c}}
+\doxysubsubsection{\texorpdfstring{currentButtonEvent}{currentButtonEvent}}
+{\footnotesize\ttfamily \label{main_room_controller_8c_aaf0173d7a49d4160de11e1da264bcabb} 
+\mbox{\hyperlink{main_room_controller_8h_ab3191c9e3fff133c6b80f01dc42c3695}{collision\+\_\+type\+\_\+main\+Room\+\_\+t}} current\+Button\+Event = \mbox{\hyperlink{main_room_controller_8h_ab3191c9e3fff133c6b80f01dc42c3695aef5056dd874725548e4c664a97746da6}{NOP\+\_\+\+MAINROOM}}\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{main_room_controller_8c_a46412799b92880e8b22508d832becca0}\index{mainRoomController.c@{mainRoomController.c}!database@{database}}
+\index{database@{database}!mainRoomController.c@{mainRoomController.c}}
+\doxysubsubsection{\texorpdfstring{database}{database}}
+{\footnotesize\ttfamily \label{main_room_controller_8c_a46412799b92880e8b22508d832becca0} 
+\mbox{\hyperlink{struct_database}{Database}}\texorpdfstring{$\ast$}{*} database\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{main_room_controller_8c_ae54a9d3b04b91328440afb537dc858e1}\index{mainRoomController.c@{mainRoomController.c}!mainRoom@{mainRoom}}
+\index{mainRoom@{mainRoom}!mainRoomController.c@{mainRoomController.c}}
+\doxysubsubsection{\texorpdfstring{mainRoom}{mainRoom}}
+{\footnotesize\ttfamily \label{main_room_controller_8c_ae54a9d3b04b91328440afb537dc858e1} 
+\mbox{\hyperlink{struct_main_room}{Main\+Room}}\texorpdfstring{$\ast$}{*} main\+Room = NULL\hspace{0.3cm}{\ttfamily [static]}}
+

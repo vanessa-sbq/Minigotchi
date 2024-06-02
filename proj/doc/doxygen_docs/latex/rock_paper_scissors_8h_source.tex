@@ -1,0 +1,51 @@
+\doxysection{rock\+Paper\+Scissors.\+h}
+\hypertarget{rock_paper_scissors_8h_source}{}\label{rock_paper_scissors_8h_source}\index{C:/Users/anton/Documents/lcom/labs/proj/src/model/stateModels/rockPaperScissors.h@{C:/Users/anton/Documents/lcom/labs/proj/src/model/stateModels/rockPaperScissors.h}}
+\mbox{\hyperlink{rock_paper_scissors_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_LCOM\_ROCKPAPERSCISSORS\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_LCOM\_ROCKPAPERSCISSORS\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gui_drawer_8h}{../../viewer/guiDrawer.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{button_8h}{../button.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{cursor_8h}{../cursor.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{item_8h}{../item.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{\mbox{\hyperlink{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55af28c20a5f09354f7ca94e9596b63ae95}{RPS\_ROCK}},\ \mbox{\hyperlink{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55a4dfa38451e67dc129df445b532e6278e}{RPS\_PAPER}},\ \mbox{\hyperlink{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55a8f15c1d11a298107115cbf72650adff1}{RPS\_SCISSORS}},\ \mbox{\hyperlink{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55a066b3fbb0cf7d48bb667d003cfa8bce7}{NOP\_RPS}},\ \mbox{\hyperlink{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55a7fd4a930a40426e6a84da773993121e1}{QUIT\_RPS}}\}\ \mbox{\hyperlink{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55}{collision\_type\_rps\_t}};}
+\DoxyCodeLine{00011\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{\mbox{\hyperlink{rock_paper_scissors_8h_af4dec518cea1a857d488d60864d435a8ae4d0d5de3e9bfa75348ea38ca15b3826}{RPS\_PLAYING}},\ \mbox{\hyperlink{rock_paper_scissors_8h_af4dec518cea1a857d488d60864d435a8ae71e00fa65e6f8fc0284cd537348556f}{RPS\_WIN}},\ \mbox{\hyperlink{rock_paper_scissors_8h_af4dec518cea1a857d488d60864d435a8a15ad047f8d2ffb451e6a97ade95c9bed}{RPS\_TIE}},\ \mbox{\hyperlink{rock_paper_scissors_8h_af4dec518cea1a857d488d60864d435a8ab00c7158d0446be85c567571b7160cc9}{RPS\_LOSE}}\}\ \mbox{\hyperlink{rock_paper_scissors_8h_af4dec518cea1a857d488d60864d435a8}{rps\_state\_t}};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{struct_button}{Button}}\ *\mbox{\hyperlink{struct_rock_paper_scissors_a81ad4e231f31e0c59972a291aef3c95c}{rockButton}};}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{struct_button}{Button}}\ *\mbox{\hyperlink{struct_rock_paper_scissors_ae098d0ba9873f53b59061e24ee0fa8cb}{paperButton}};}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{struct_button}{Button}}\ *\mbox{\hyperlink{struct_rock_paper_scissors_abed29819f8e434b10c655368c2dcb75b}{scissorsButton}};}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{rock_paper_scissors_8h_af4dec518cea1a857d488d60864d435a8}{rps\_state\_t}}\ \mbox{\hyperlink{struct_rock_paper_scissors_a3381ce47dd9e0a11dff0808de7b4e06d}{rps\_state}};}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55}{collision\_type\_rps\_t}}\ \mbox{\hyperlink{struct_rock_paper_scissors_a91673986300f5a96db1ac6d55b7b91e2}{bot\_choice}};}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{struct_item}{Item}}*\ \mbox{\hyperlink{struct_rock_paper_scissors_a610dd7d3b093f4a52e0afb624b96c502}{reward}};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{struct_button}{Button}}\ *\mbox{\hyperlink{struct_rock_paper_scissors_a59332f6f8c4b267f3bdcb2b420f33609}{quitButton}};}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{struct_cursor}{Cursor}}\ *\mbox{\hyperlink{struct_rock_paper_scissors_ab066947e613fed5a1e77f7061292f4b5}{cursor}};}
+\DoxyCodeLine{00023\ \}\ \mbox{\hyperlink{struct_rock_paper_scissors}{RockPaperScissors}};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ "{}Constructor"{}}}
+\DoxyCodeLine{00026\ \mbox{\hyperlink{struct_rock_paper_scissors}{RockPaperScissors}}\ *\mbox{\hyperlink{rock_paper_scissors_8h_ae8af223aef0dbcc00fb65b3367fd1bde}{new\_rockPaperScissors}}();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{rock_paper_scissors_8h_aef9c692954d21b48a2114b6a93698c21}{delete\_rockPaperScissors}}(\mbox{\hyperlink{struct_rock_paper_scissors}{RockPaperScissors}}\ *\mbox{\hyperlink{rock_paper_scissors_controller_8c_a24c3ef8ee9e6d099254705de55af4cf3}{rockPaperScissors}});}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{comment}{//\ Getters}}
+\DoxyCodeLine{00031\ \mbox{\hyperlink{struct_button}{Button}}*\ \mbox{\hyperlink{rock_paper_scissors_8h_ae6c2d4873910e8567a7125d8860ef001}{rockPaperScissors\_get\_rockButton}}(\mbox{\hyperlink{struct_rock_paper_scissors}{RockPaperScissors}}\ *\mbox{\hyperlink{rock_paper_scissors_controller_8c_a24c3ef8ee9e6d099254705de55af4cf3}{rockPaperScissors}});}
+\DoxyCodeLine{00032\ \mbox{\hyperlink{struct_button}{Button}}*\ \mbox{\hyperlink{rock_paper_scissors_8h_a10022e85f855aff396340c6d9f4a7acd}{rockPaperScissors\_get\_paperButton}}(\mbox{\hyperlink{struct_rock_paper_scissors}{RockPaperScissors}}\ *\mbox{\hyperlink{rock_paper_scissors_controller_8c_a24c3ef8ee9e6d099254705de55af4cf3}{rockPaperScissors}});}
+\DoxyCodeLine{00033\ \mbox{\hyperlink{struct_button}{Button}}*\ \mbox{\hyperlink{rock_paper_scissors_8h_aa61b2ee0ae8a1c04c5c1de887033dfd1}{rockPaperScissors\_get\_scissorsButton}}(\mbox{\hyperlink{struct_rock_paper_scissors}{RockPaperScissors}}\ *\mbox{\hyperlink{rock_paper_scissors_controller_8c_a24c3ef8ee9e6d099254705de55af4cf3}{rockPaperScissors}});}
+\DoxyCodeLine{00034\ \mbox{\hyperlink{struct_button}{Button}}*\ \mbox{\hyperlink{rock_paper_scissors_8h_abc04bcf42cfb3dfe97c615adf14fda74}{rockPaperScissors\_get\_quitButton}}(\mbox{\hyperlink{struct_rock_paper_scissors}{RockPaperScissors}}\ *\mbox{\hyperlink{rock_paper_scissors_controller_8c_a24c3ef8ee9e6d099254705de55af4cf3}{rockPaperScissors}});}
+\DoxyCodeLine{00035\ \mbox{\hyperlink{struct_cursor}{Cursor}}*\ \mbox{\hyperlink{rock_paper_scissors_8h_abfdd59148ad2d1907ba56a12a9baf5e5}{rockPaperScissors\_get\_cursor}}(\mbox{\hyperlink{struct_rock_paper_scissors}{RockPaperScissors}}\ *\mbox{\hyperlink{rock_paper_scissors_controller_8c_a24c3ef8ee9e6d099254705de55af4cf3}{rockPaperScissors}});}
+\DoxyCodeLine{00036\ \mbox{\hyperlink{rock_paper_scissors_8h_af4dec518cea1a857d488d60864d435a8}{rps\_state\_t}}\ \mbox{\hyperlink{rock_paper_scissors_8h_a7af556d2fa4fd243c297a9a5a0028850}{rockPaperScissors\_get\_rpsState}}(\mbox{\hyperlink{struct_rock_paper_scissors}{RockPaperScissors}}\ *\mbox{\hyperlink{rock_paper_scissors_controller_8c_a24c3ef8ee9e6d099254705de55af4cf3}{rockPaperScissors}});}
+\DoxyCodeLine{00037\ \mbox{\hyperlink{struct_item}{Item}}*\ \mbox{\hyperlink{rock_paper_scissors_8h_ad44d8ec945fef78581b1a40583eb6dbb}{rockPaperScissors\_get\_reward}}(\mbox{\hyperlink{struct_rock_paper_scissors}{RockPaperScissors}}\ *\mbox{\hyperlink{rock_paper_scissors_controller_8c_a24c3ef8ee9e6d099254705de55af4cf3}{rockPaperScissors}});}
+\DoxyCodeLine{00038\ \mbox{\hyperlink{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55}{collision\_type\_rps\_t}}\ \mbox{\hyperlink{rock_paper_scissors_8h_a534c05b09a49f0107b90d510b9b993a8}{rockPaperScissors\_get\_botChoice}}(\mbox{\hyperlink{struct_rock_paper_scissors}{RockPaperScissors}}\ *\mbox{\hyperlink{rock_paper_scissors_controller_8c_a24c3ef8ee9e6d099254705de55af4cf3}{rockPaperScissors}});}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{comment}{//\ Setters}}
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{rock_paper_scissors_8h_a8c03d4ffd119e5936fd032b861743f93}{rockPaperScissors\_set\_rpsState}}(\mbox{\hyperlink{struct_rock_paper_scissors}{RockPaperScissors}}\ *\mbox{\hyperlink{rock_paper_scissors_controller_8c_a24c3ef8ee9e6d099254705de55af4cf3}{rockPaperScissors}},\ \mbox{\hyperlink{rock_paper_scissors_8h_af4dec518cea1a857d488d60864d435a8}{rps\_state\_t}}\ rpsState);}
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{rock_paper_scissors_8h_a93161e865485e818eb327f4ffbe55d4f}{rockPaperScissors\_set\_reward}}(\mbox{\hyperlink{struct_rock_paper_scissors}{RockPaperScissors}}\ *\mbox{\hyperlink{rock_paper_scissors_controller_8c_a24c3ef8ee9e6d099254705de55af4cf3}{rockPaperScissors}},\ \mbox{\hyperlink{struct_item}{Item}}*\ reward);}
+\DoxyCodeLine{00043\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{rock_paper_scissors_8h_a1f13cbc23ab2d990164d65a0f773c050}{rockPaperScissors\_set\_botChoice}}(\mbox{\hyperlink{struct_rock_paper_scissors}{RockPaperScissors}}\ *\mbox{\hyperlink{rock_paper_scissors_controller_8c_a24c3ef8ee9e6d099254705de55af4cf3}{rockPaperScissors}},\ \mbox{\hyperlink{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55}{collision\_type\_rps\_t}}\ bot\_choice);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_ROCKPAPERSCISSORS\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,80 @@
+\doxysection{C\+:/\+Users/anton/\+Documents/lcom/labs/proj/src/device\+\_\+controllers/kbc/keyboard.h File Reference}
+\hypertarget{keyboard_8h}{}\label{keyboard_8h}\index{C:/Users/anton/Documents/lcom/labs/proj/src/device\_controllers/kbc/keyboard.h@{C:/Users/anton/Documents/lcom/labs/proj/src/device\_controllers/kbc/keyboard.h}}
+{\ttfamily \#include "{}../utils.\+h"{}}\newline
+{\ttfamily \#include "{}kbc.\+h"{}}\newline
+{\ttfamily \#include "{}i8042.\+h"{}}\newline
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+Include dependency graph for keyboard.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{keyboard_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keyboard_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{keyboard_8h_a0613a257bf094b3ff742b53a50a86cb3}{subscribe\+\_\+interrupts\+\_\+kbd}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}bit\+\_\+no)
+\begin{DoxyCompactList}\small\item\em Subscribes and enables KBC interrupts. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{keyboard_8h_a82633dfeed2a6811281e3a06bb18a8ff}{unsubscribe\+\_\+interrupts\+\_\+kbd}} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes KBC interrupts. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{keyboard_8h_ab22df1f86944cf01c5c0aa4711924447}{get\+Scan\+Code}} ()
+\begin{DoxyCompactList}\small\item\em Getter for scancode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{keyboard_8h_ab22df1f86944cf01c5c0aa4711924447}\index{keyboard.h@{keyboard.h}!getScanCode@{getScanCode}}
+\index{getScanCode@{getScanCode}!keyboard.h@{keyboard.h}}
+\doxysubsubsection{\texorpdfstring{getScanCode()}{getScanCode()}}
+{\footnotesize\ttfamily \label{keyboard_8h_ab22df1f86944cf01c5c0aa4711924447} 
+uint8\+\_\+t get\+Scan\+Code (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Getter for scancode. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{keyboard_8h_ab22df1f86944cf01c5c0aa4711924447_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{keyboard_8h_a0613a257bf094b3ff742b53a50a86cb3}\index{keyboard.h@{keyboard.h}!subscribe\_interrupts\_kbd@{subscribe\_interrupts\_kbd}}
+\index{subscribe\_interrupts\_kbd@{subscribe\_interrupts\_kbd}!keyboard.h@{keyboard.h}}
+\doxysubsubsection{\texorpdfstring{subscribe\_interrupts\_kbd()}{subscribe\_interrupts\_kbd()}}
+{\footnotesize\ttfamily \label{keyboard_8h_a0613a257bf094b3ff742b53a50a86cb3} 
+int subscribe\+\_\+interrupts\+\_\+kbd (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{bit\+\_\+no}{}\end{DoxyParamCaption})}
+
+
+
+Subscribes and enables KBC interrupts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+\_\+no} & address of memory to be initialized with the bit number to be set in the mask returned upon an interrupt \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise. 
+\end{DoxyReturn}
+\Hypertarget{keyboard_8h_a82633dfeed2a6811281e3a06bb18a8ff}\index{keyboard.h@{keyboard.h}!unsubscribe\_interrupts\_kbd@{unsubscribe\_interrupts\_kbd}}
+\index{unsubscribe\_interrupts\_kbd@{unsubscribe\_interrupts\_kbd}!keyboard.h@{keyboard.h}}
+\doxysubsubsection{\texorpdfstring{unsubscribe\_interrupts\_kbd()}{unsubscribe\_interrupts\_kbd()}}
+{\footnotesize\ttfamily \label{keyboard_8h_a82633dfeed2a6811281e3a06bb18a8ff} 
+int unsubscribe\+\_\+interrupts\+\_\+kbd (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Unsubscribes KBC interrupts. 
+
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise. 
+\end{DoxyReturn}

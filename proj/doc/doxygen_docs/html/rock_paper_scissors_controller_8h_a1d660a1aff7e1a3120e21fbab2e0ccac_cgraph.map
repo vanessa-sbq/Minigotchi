@@ -1,0 +1,9 @@
+<map id="rockPaperScissorsController_delete_rockPaperScissors" name="rockPaperScissorsController_delete_rockPaperScissors">
+<area shape="rect" id="Node000001" title="Calls the Rock Paper Scissors destructor." alt="" coords="5,23,192,65"/>
+<area shape="rect" id="Node000002" href="$rock_paper_scissors_8c.html#aef9c692954d21b48a2114b6a93698c21" title="RockPaperScissors destructor." alt="" coords="240,31,413,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,41,224,41,224,47,192,47"/>
+<area shape="rect" id="Node000003" href="$button_8c.html#a0e0fe01cc691c356d04430d1c200a8da" title="Button destructor." alt="" coords="461,5,560,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="413,29,445,25,446,30,414,35"/>
+<area shape="rect" id="Node000004" href="$cursor_8c.html#a109f86406f7b7adc03d9f0f8fc057629" title="Destroys cursor." alt="" coords="461,56,560,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="414,53,446,58,445,63,413,59"/>
+</map>

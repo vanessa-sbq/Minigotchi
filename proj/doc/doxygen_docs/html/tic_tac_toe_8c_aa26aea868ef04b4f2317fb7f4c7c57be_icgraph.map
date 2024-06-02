@@ -1,0 +1,10 @@
+<map id="ticTacToe_get_hostButton" name="ticTacToe_get_hostButton">
+<area shape="rect" id="Node000001" title=" " alt="" coords="374,31,546,57"/>
+<area shape="rect" id="Node000002" href="$tic_tac_toe_controller_8c.html#aae4bafbe082fa7f4bad0e58d11e6d861" title="Controller function that is called once every frame and updates / checks every action in the Tic Tac ..." alt="" coords="162,5,326,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="358,35,326,31,327,26,359,29"/>
+<area shape="rect" id="Node000004" href="$tic_tac_toe_viewer_8c.html#a39c6c3190f03216408e3ec97bb7aac9e" title="Calls draw function of each element the tic tac toe game contains (also draws the GUI elements when t..." alt="" coords="169,56,319,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="359,58,320,63,319,58,359,53"/>
+<area shape="rect" id="Node000003" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Project main function that starts the game." alt="" coords="5,31,114,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="146,35,114,39,114,34,146,29"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="153,60,114,54,115,49,154,54"/>
+</map>

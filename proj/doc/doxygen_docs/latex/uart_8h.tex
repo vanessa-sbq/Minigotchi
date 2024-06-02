@@ -1,0 +1,224 @@
+\doxysection{C\+:/\+Users/anton/\+Documents/lcom/labs/proj/src/device\+\_\+controllers/uart/uart.h File Reference}
+\hypertarget{uart_8h}{}\label{uart_8h}\index{C:/Users/anton/Documents/lcom/labs/proj/src/device\_controllers/uart/uart.h@{C:/Users/anton/Documents/lcom/labs/proj/src/device\_controllers/uart/uart.h}}
+{\ttfamily \#include "{}serial\+Port.\+h"{}}\newline
+{\ttfamily \#include "{}queue.\+h"{}}\newline
+{\ttfamily \#include "{}../utils.\+h"{}}\newline
+Include dependency graph for uart.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=289pt]{uart_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{uart_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{uart_8h_ae27582d958bf4e0e44143ea38606320c}{serial\+\_\+read\+\_\+byte}} ()
+\begin{DoxyCompactList}\small\item\em Functions for RX Side. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{uart_8h_a1569a1b9d1a28cfb75fee4216bc70224}{serial\+\_\+send\+\_\+byte}} (uint8\+\_\+t byte)
+\begin{DoxyCompactList}\small\item\em Functions for TX Side. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{uart_8h_a967774712b7c6939a5f7adf49496aa08}{serial\+\_\+subscribe\+\_\+int}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}bit\+\_\+no)
+\begin{DoxyCompactList}\small\item\em Subscribes UART interrupts. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{uart_8h_a459999cfa35c788b64284953a93c4b57}{serial\+\_\+init}} ()
+\begin{DoxyCompactList}\small\item\em This function initializes the Serial Port. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{uart_8h_ae7f39492f4273a8a529a80a7eceae62d}{serial\+\_\+unsubscribe\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes UART interrupts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{uart_8h_a63f7905059dbe8f7d2cff04112b88316}{serial\+\_\+exit}} ()
+\begin{DoxyCompactList}\small\item\em Free RX queue. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{uart_8h_aa0dadc361bec02fe17fd27a71df2800a}{serial\+\_\+get\+\_\+receive\+\_\+queue}} ()
+\begin{DoxyCompactList}\small\item\em Get RX queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{uart_8h_a393e1cc1f292a7c6ebdc31c0faf08000}{serial\+\_\+interrupt\+\_\+handler}} ()
+\begin{DoxyCompactList}\small\item\em UART interrupt handler. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{uart_8h_a736829bb72a57c1efe8cf06a6374432a}{serial\+\_\+clear\+\_\+interrupts}} ()
+\begin{DoxyCompactList}\small\item\em Clear UART interrupts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{uart_8h_a736829bb72a57c1efe8cf06a6374432a}\index{uart.h@{uart.h}!serial\_clear\_interrupts@{serial\_clear\_interrupts}}
+\index{serial\_clear\_interrupts@{serial\_clear\_interrupts}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{serial\_clear\_interrupts()}{serial\_clear\_interrupts()}}
+{\footnotesize\ttfamily \label{uart_8h_a736829bb72a57c1efe8cf06a6374432a} 
+int serial\+\_\+clear\+\_\+interrupts (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Clear UART interrupts. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{uart_8h_a736829bb72a57c1efe8cf06a6374432a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{uart_8h_a63f7905059dbe8f7d2cff04112b88316}\index{uart.h@{uart.h}!serial\_exit@{serial\_exit}}
+\index{serial\_exit@{serial\_exit}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{serial\_exit()}{serial\_exit()}}
+{\footnotesize\ttfamily \label{uart_8h_a63f7905059dbe8f7d2cff04112b88316} 
+void serial\+\_\+exit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Free RX queue. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{uart_8h_a63f7905059dbe8f7d2cff04112b88316_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{uart_8h_aa0dadc361bec02fe17fd27a71df2800a}\index{uart.h@{uart.h}!serial\_get\_receive\_queue@{serial\_get\_receive\_queue}}
+\index{serial\_get\_receive\_queue@{serial\_get\_receive\_queue}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{serial\_get\_receive\_queue()}{serial\_get\_receive\_queue()}}
+{\footnotesize\ttfamily \label{uart_8h_aa0dadc361bec02fe17fd27a71df2800a} 
+\mbox{\hyperlink{struct_queue}{Queue}} \texorpdfstring{$\ast$}{*} serial\+\_\+get\+\_\+receive\+\_\+queue (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get RX queue. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{uart_8h_aa0dadc361bec02fe17fd27a71df2800a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{uart_8h_a459999cfa35c788b64284953a93c4b57}\index{uart.h@{uart.h}!serial\_init@{serial\_init}}
+\index{serial\_init@{serial\_init}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{serial\_init()}{serial\_init()}}
+{\footnotesize\ttfamily \label{uart_8h_a459999cfa35c788b64284953a93c4b57} 
+int serial\+\_\+init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+This function initializes the Serial Port. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{uart_8h_a459999cfa35c788b64284953a93c4b57_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{uart_8h_a459999cfa35c788b64284953a93c4b57_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{uart_8h_a393e1cc1f292a7c6ebdc31c0faf08000}\index{uart.h@{uart.h}!serial\_interrupt\_handler@{serial\_interrupt\_handler}}
+\index{serial\_interrupt\_handler@{serial\_interrupt\_handler}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{serial\_interrupt\_handler()}{serial\_interrupt\_handler()}}
+{\footnotesize\ttfamily \label{uart_8h_a393e1cc1f292a7c6ebdc31c0faf08000} 
+void serial\+\_\+interrupt\+\_\+handler (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+UART interrupt handler. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{uart_8h_a393e1cc1f292a7c6ebdc31c0faf08000_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{uart_8h_a393e1cc1f292a7c6ebdc31c0faf08000_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{uart_8h_ae27582d958bf4e0e44143ea38606320c}\index{uart.h@{uart.h}!serial\_read\_byte@{serial\_read\_byte}}
+\index{serial\_read\_byte@{serial\_read\_byte}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{serial\_read\_byte()}{serial\_read\_byte()}}
+{\footnotesize\ttfamily \label{uart_8h_ae27582d958bf4e0e44143ea38606320c} 
+int serial\+\_\+read\+\_\+byte (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Functions for RX Side. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{uart_8h_ae27582d958bf4e0e44143ea38606320c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{uart_8h_ae27582d958bf4e0e44143ea38606320c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{uart_8h_a1569a1b9d1a28cfb75fee4216bc70224}\index{uart.h@{uart.h}!serial\_send\_byte@{serial\_send\_byte}}
+\index{serial\_send\_byte@{serial\_send\_byte}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{serial\_send\_byte()}{serial\_send\_byte()}}
+{\footnotesize\ttfamily \label{uart_8h_a1569a1b9d1a28cfb75fee4216bc70224} 
+int serial\+\_\+send\+\_\+byte (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{byte}{}\end{DoxyParamCaption})}
+
+
+
+Functions for TX Side. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{uart_8h_a1569a1b9d1a28cfb75fee4216bc70224_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{uart_8h_a1569a1b9d1a28cfb75fee4216bc70224_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{uart_8h_a967774712b7c6939a5f7adf49496aa08}\index{uart.h@{uart.h}!serial\_subscribe\_int@{serial\_subscribe\_int}}
+\index{serial\_subscribe\_int@{serial\_subscribe\_int}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{serial\_subscribe\_int()}{serial\_subscribe\_int()}}
+{\footnotesize\ttfamily \label{uart_8h_a967774712b7c6939a5f7adf49496aa08} 
+int serial\+\_\+subscribe\+\_\+int (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{bit\+\_\+no}{}\end{DoxyParamCaption})}
+
+
+
+Subscribes UART interrupts. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{uart_8h_a967774712b7c6939a5f7adf49496aa08_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{uart_8h_ae7f39492f4273a8a529a80a7eceae62d}\index{uart.h@{uart.h}!serial\_unsubscribe\_int@{serial\_unsubscribe\_int}}
+\index{serial\_unsubscribe\_int@{serial\_unsubscribe\_int}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{serial\_unsubscribe\_int()}{serial\_unsubscribe\_int()}}
+{\footnotesize\ttfamily \label{uart_8h_ae7f39492f4273a8a529a80a7eceae62d} 
+int serial\+\_\+unsubscribe\+\_\+int (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Unsubscribes UART interrupts. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{uart_8h_ae7f39492f4273a8a529a80a7eceae62d_icgraph}
+\end{center}
+\end{figure}

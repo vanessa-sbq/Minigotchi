@@ -1,0 +1,293 @@
+\doxysection{C\+:/\+Users/anton/\+Documents/lcom/labs/proj/src/controller/minigames/rock\+Paper\+Scissors\+Controller.c File Reference}
+\hypertarget{rock_paper_scissors_controller_8c}{}\label{rock_paper_scissors_controller_8c}\index{C:/Users/anton/Documents/lcom/labs/proj/src/controller/minigames/rockPaperScissorsController.c@{C:/Users/anton/Documents/lcom/labs/proj/src/controller/minigames/rockPaperScissorsController.c}}
+{\ttfamily \#include "{}rock\+Paper\+Scissors\+Controller.\+h"{}}\newline
+Include dependency graph for rock\+Paper\+Scissors\+Controller.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rock_paper_scissors_controller_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{rock_paper_scissors_controller_8c_a001de34faf4c20a869eb12fb31c8569c}{rps\+\_\+set\+\_\+can\+Click}} ()
+\begin{DoxyCompactList}\small\item\em Flag to fix button overlapping (When a button before is clicked) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rock_paper_scissors_controller_8c_a12d415dd659136d30385c13c4ec262a6}{rock\+Paper\+Scissors\+Controller\+\_\+load\+\_\+rock\+Paper\+Scissors}} ()
+\begin{DoxyCompactList}\small\item\em Load the Rock Paper Scissors minigame (first time) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{rock_paper_scissors_controller_8c_af80e78ecc72e64503d10fa09577b87ab}{rock\+Paper\+Scissors\+Controller\+\_\+check\+Collision}} (\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}sprite, int x, int y)
+\begin{DoxyCompactList}\small\item\em Function that checks sprite collisions with the cursor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55}{collision\+\_\+type\+\_\+rps\+\_\+t}} \mbox{\hyperlink{rock_paper_scissors_controller_8c_a64f159fb3a36335b889affd3e7ff4a42}{rock\+Paper\+Scissors\+Controller\+\_\+get\+Button\+Event}} ()
+\item 
+void \mbox{\hyperlink{rock_paper_scissors_controller_8c_a2d8428ccbcb26ce1a634b0577726fab0}{rock\+Paper\+Scissors\+Controller\+\_\+set\+Button\+Event}} (\mbox{\hyperlink{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55}{collision\+\_\+type\+\_\+rps\+\_\+t}} ct)
+\item 
+void \mbox{\hyperlink{rock_paper_scissors_controller_8c_a339536fe7855348648d6a841feb4c332}{rock\+Paper\+Scissors\+Controller\+\_\+step}} ()
+\begin{DoxyCompactList}\small\item\em Controller function that is called once every frame and updates / checks every action in the Rock Paper Scissors minigame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rock_paper_scissors_controller_8c_ad7a6c6e1e23240bb7d1fa795e7b4bfe1}{rock\+Paper\+Scissors\+Controller\+\_\+process\+\_\+choice}} ()
+\begin{DoxyCompactList}\small\item\em Processes a player choice by letting the bot play. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rock_paper_scissors_controller_8c_aaae40f3e4b724e8a93f27e56d8293aa2}{rock\+Paper\+Scissors\+Controller\+\_\+randomize\+\_\+reward}} ()
+\begin{DoxyCompactList}\small\item\em Function that randomizes the reward (after each game) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rock_paper_scissors_controller_8c_aaa8352e07d79402c4a157d0255e152d6}{rock\+Paper\+Scissors\+Controller\+\_\+reset\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Function that resets the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rock_paper_scissors_controller_8c_a1d660a1aff7e1a3120e21fbab2e0ccac}{rock\+Paper\+Scissors\+Controller\+\_\+delete\+\_\+rock\+Paper\+Scissors}} ()
+\begin{DoxyCompactList}\small\item\em Calls the Rock Paper Scissors destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{rock_paper_scissors_controller_8c_af388bc189fb545bbf3ddc4887c1445d4}{get\+Rock\+Paper\+Scissors\+Cursor}} ()
+\item 
+void \mbox{\hyperlink{rock_paper_scissors_controller_8c_a0ebe8dfd8dbb2e9470428cf52479dfe8}{set\+Rock\+Paper\+Scissors\+Cursor}} (\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*}cursor)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_rock_paper_scissors}{Rock\+Paper\+Scissors}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{rock_paper_scissors_controller_8c_a24c3ef8ee9e6d099254705de55af4cf3}{rock\+Paper\+Scissors}} = NULL
+\item 
+static \mbox{\hyperlink{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55}{collision\+\_\+type\+\_\+rps\+\_\+t}} \mbox{\hyperlink{rock_paper_scissors_controller_8c_a326830139c7cf0b268304cfbc63fc039}{current\+Button\+Event}} = \mbox{\hyperlink{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55a066b3fbb0cf7d48bb667d003cfa8bce7}{NOP\+\_\+\+RPS}}
+\item 
+static bool \mbox{\hyperlink{rock_paper_scissors_controller_8c_a2ea0ca91c0ee7cd8b065827aac4e8f97}{can\+Click}} = true
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{rock_paper_scissors_controller_8c_af388bc189fb545bbf3ddc4887c1445d4}\index{rockPaperScissorsController.c@{rockPaperScissorsController.c}!getRockPaperScissorsCursor@{getRockPaperScissorsCursor}}
+\index{getRockPaperScissorsCursor@{getRockPaperScissorsCursor}!rockPaperScissorsController.c@{rockPaperScissorsController.c}}
+\doxysubsubsection{\texorpdfstring{getRockPaperScissorsCursor()}{getRockPaperScissorsCursor()}}
+{\footnotesize\ttfamily \label{rock_paper_scissors_controller_8c_af388bc189fb545bbf3ddc4887c1445d4} 
+\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*} get\+Rock\+Paper\+Scissors\+Cursor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rock_paper_scissors_controller_8c_af80e78ecc72e64503d10fa09577b87ab}\index{rockPaperScissorsController.c@{rockPaperScissorsController.c}!rockPaperScissorsController\_checkCollision@{rockPaperScissorsController\_checkCollision}}
+\index{rockPaperScissorsController\_checkCollision@{rockPaperScissorsController\_checkCollision}!rockPaperScissorsController.c@{rockPaperScissorsController.c}}
+\doxysubsubsection{\texorpdfstring{rockPaperScissorsController\_checkCollision()}{rockPaperScissorsController\_checkCollision()}}
+{\footnotesize\ttfamily \label{rock_paper_scissors_controller_8c_af80e78ecc72e64503d10fa09577b87ab} 
+bool rock\+Paper\+Scissors\+Controller\+\_\+check\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}}]{sprite}{, }\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Function that checks sprite collisions with the cursor. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rock_paper_scissors_controller_8c_af80e78ecc72e64503d10fa09577b87ab_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rock_paper_scissors_controller_8c_af80e78ecc72e64503d10fa09577b87ab_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rock_paper_scissors_controller_8c_a1d660a1aff7e1a3120e21fbab2e0ccac}\index{rockPaperScissorsController.c@{rockPaperScissorsController.c}!rockPaperScissorsController\_delete\_rockPaperScissors@{rockPaperScissorsController\_delete\_rockPaperScissors}}
+\index{rockPaperScissorsController\_delete\_rockPaperScissors@{rockPaperScissorsController\_delete\_rockPaperScissors}!rockPaperScissorsController.c@{rockPaperScissorsController.c}}
+\doxysubsubsection{\texorpdfstring{rockPaperScissorsController\_delete\_rockPaperScissors()}{rockPaperScissorsController\_delete\_rockPaperScissors()}}
+{\footnotesize\ttfamily \label{rock_paper_scissors_controller_8c_a1d660a1aff7e1a3120e21fbab2e0ccac} 
+void rock\+Paper\+Scissors\+Controller\+\_\+delete\+\_\+rock\+Paper\+Scissors (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Calls the Rock Paper Scissors destructor. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rock_paper_scissors_controller_8c_a1d660a1aff7e1a3120e21fbab2e0ccac_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rock_paper_scissors_controller_8c_a64f159fb3a36335b889affd3e7ff4a42}\index{rockPaperScissorsController.c@{rockPaperScissorsController.c}!rockPaperScissorsController\_getButtonEvent@{rockPaperScissorsController\_getButtonEvent}}
+\index{rockPaperScissorsController\_getButtonEvent@{rockPaperScissorsController\_getButtonEvent}!rockPaperScissorsController.c@{rockPaperScissorsController.c}}
+\doxysubsubsection{\texorpdfstring{rockPaperScissorsController\_getButtonEvent()}{rockPaperScissorsController\_getButtonEvent()}}
+{\footnotesize\ttfamily \label{rock_paper_scissors_controller_8c_a64f159fb3a36335b889affd3e7ff4a42} 
+\mbox{\hyperlink{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55}{collision\+\_\+type\+\_\+rps\+\_\+t}} rock\+Paper\+Scissors\+Controller\+\_\+get\+Button\+Event (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{rock_paper_scissors_controller_8c_a64f159fb3a36335b889affd3e7ff4a42_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rock_paper_scissors_controller_8c_a12d415dd659136d30385c13c4ec262a6}\index{rockPaperScissorsController.c@{rockPaperScissorsController.c}!rockPaperScissorsController\_load\_rockPaperScissors@{rockPaperScissorsController\_load\_rockPaperScissors}}
+\index{rockPaperScissorsController\_load\_rockPaperScissors@{rockPaperScissorsController\_load\_rockPaperScissors}!rockPaperScissorsController.c@{rockPaperScissorsController.c}}
+\doxysubsubsection{\texorpdfstring{rockPaperScissorsController\_load\_rockPaperScissors()}{rockPaperScissorsController\_load\_rockPaperScissors()}}
+{\footnotesize\ttfamily \label{rock_paper_scissors_controller_8c_a12d415dd659136d30385c13c4ec262a6} 
+void rock\+Paper\+Scissors\+Controller\+\_\+load\+\_\+rock\+Paper\+Scissors (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Load the Rock Paper Scissors minigame (first time) 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rock_paper_scissors_controller_8c_a12d415dd659136d30385c13c4ec262a6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rock_paper_scissors_controller_8c_a12d415dd659136d30385c13c4ec262a6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rock_paper_scissors_controller_8c_ad7a6c6e1e23240bb7d1fa795e7b4bfe1}\index{rockPaperScissorsController.c@{rockPaperScissorsController.c}!rockPaperScissorsController\_process\_choice@{rockPaperScissorsController\_process\_choice}}
+\index{rockPaperScissorsController\_process\_choice@{rockPaperScissorsController\_process\_choice}!rockPaperScissorsController.c@{rockPaperScissorsController.c}}
+\doxysubsubsection{\texorpdfstring{rockPaperScissorsController\_process\_choice()}{rockPaperScissorsController\_process\_choice()}}
+{\footnotesize\ttfamily \label{rock_paper_scissors_controller_8c_ad7a6c6e1e23240bb7d1fa795e7b4bfe1} 
+void rock\+Paper\+Scissors\+Controller\+\_\+process\+\_\+choice (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Processes a player choice by letting the bot play. 
+
+The bot chooses an option randomly and in case the player wins, he gets rewarded with an item Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rock_paper_scissors_controller_8c_ad7a6c6e1e23240bb7d1fa795e7b4bfe1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rock_paper_scissors_controller_8c_ad7a6c6e1e23240bb7d1fa795e7b4bfe1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rock_paper_scissors_controller_8c_aaae40f3e4b724e8a93f27e56d8293aa2}\index{rockPaperScissorsController.c@{rockPaperScissorsController.c}!rockPaperScissorsController\_randomize\_reward@{rockPaperScissorsController\_randomize\_reward}}
+\index{rockPaperScissorsController\_randomize\_reward@{rockPaperScissorsController\_randomize\_reward}!rockPaperScissorsController.c@{rockPaperScissorsController.c}}
+\doxysubsubsection{\texorpdfstring{rockPaperScissorsController\_randomize\_reward()}{rockPaperScissorsController\_randomize\_reward()}}
+{\footnotesize\ttfamily \label{rock_paper_scissors_controller_8c_aaae40f3e4b724e8a93f27e56d8293aa2} 
+void rock\+Paper\+Scissors\+Controller\+\_\+randomize\+\_\+reward (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Function that randomizes the reward (after each game) 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rock_paper_scissors_controller_8c_aaae40f3e4b724e8a93f27e56d8293aa2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rock_paper_scissors_controller_8c_aaae40f3e4b724e8a93f27e56d8293aa2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rock_paper_scissors_controller_8c_aaa8352e07d79402c4a157d0255e152d6}\index{rockPaperScissorsController.c@{rockPaperScissorsController.c}!rockPaperScissorsController\_resetGame@{rockPaperScissorsController\_resetGame}}
+\index{rockPaperScissorsController\_resetGame@{rockPaperScissorsController\_resetGame}!rockPaperScissorsController.c@{rockPaperScissorsController.c}}
+\doxysubsubsection{\texorpdfstring{rockPaperScissorsController\_resetGame()}{rockPaperScissorsController\_resetGame()}}
+{\footnotesize\ttfamily \label{rock_paper_scissors_controller_8c_aaa8352e07d79402c4a157d0255e152d6} 
+void rock\+Paper\+Scissors\+Controller\+\_\+reset\+Game (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Function that resets the game. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rock_paper_scissors_controller_8c_aaa8352e07d79402c4a157d0255e152d6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rock_paper_scissors_controller_8c_aaa8352e07d79402c4a157d0255e152d6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rock_paper_scissors_controller_8c_a2d8428ccbcb26ce1a634b0577726fab0}\index{rockPaperScissorsController.c@{rockPaperScissorsController.c}!rockPaperScissorsController\_setButtonEvent@{rockPaperScissorsController\_setButtonEvent}}
+\index{rockPaperScissorsController\_setButtonEvent@{rockPaperScissorsController\_setButtonEvent}!rockPaperScissorsController.c@{rockPaperScissorsController.c}}
+\doxysubsubsection{\texorpdfstring{rockPaperScissorsController\_setButtonEvent()}{rockPaperScissorsController\_setButtonEvent()}}
+{\footnotesize\ttfamily \label{rock_paper_scissors_controller_8c_a2d8428ccbcb26ce1a634b0577726fab0} 
+void rock\+Paper\+Scissors\+Controller\+\_\+set\+Button\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55}{collision\+\_\+type\+\_\+rps\+\_\+t}}}]{ct}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{rock_paper_scissors_controller_8c_a2d8428ccbcb26ce1a634b0577726fab0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rock_paper_scissors_controller_8c_a339536fe7855348648d6a841feb4c332}\index{rockPaperScissorsController.c@{rockPaperScissorsController.c}!rockPaperScissorsController\_step@{rockPaperScissorsController\_step}}
+\index{rockPaperScissorsController\_step@{rockPaperScissorsController\_step}!rockPaperScissorsController.c@{rockPaperScissorsController.c}}
+\doxysubsubsection{\texorpdfstring{rockPaperScissorsController\_step()}{rockPaperScissorsController\_step()}}
+{\footnotesize\ttfamily \label{rock_paper_scissors_controller_8c_a339536fe7855348648d6a841feb4c332} 
+void rock\+Paper\+Scissors\+Controller\+\_\+step (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Controller function that is called once every frame and updates / checks every action in the Rock Paper Scissors minigame. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rock_paper_scissors_controller_8c_a339536fe7855348648d6a841feb4c332_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rock_paper_scissors_controller_8c_a339536fe7855348648d6a841feb4c332_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rock_paper_scissors_controller_8c_a001de34faf4c20a869eb12fb31c8569c}\index{rockPaperScissorsController.c@{rockPaperScissorsController.c}!rps\_set\_canClick@{rps\_set\_canClick}}
+\index{rps\_set\_canClick@{rps\_set\_canClick}!rockPaperScissorsController.c@{rockPaperScissorsController.c}}
+\doxysubsubsection{\texorpdfstring{rps\_set\_canClick()}{rps\_set\_canClick()}}
+{\footnotesize\ttfamily \label{rock_paper_scissors_controller_8c_a001de34faf4c20a869eb12fb31c8569c} 
+void rps\+\_\+set\+\_\+can\+Click (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Flag to fix button overlapping (When a button before is clicked) 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{rock_paper_scissors_controller_8c_a001de34faf4c20a869eb12fb31c8569c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{rock_paper_scissors_controller_8c_a0ebe8dfd8dbb2e9470428cf52479dfe8}\index{rockPaperScissorsController.c@{rockPaperScissorsController.c}!setRockPaperScissorsCursor@{setRockPaperScissorsCursor}}
+\index{setRockPaperScissorsCursor@{setRockPaperScissorsCursor}!rockPaperScissorsController.c@{rockPaperScissorsController.c}}
+\doxysubsubsection{\texorpdfstring{setRockPaperScissorsCursor()}{setRockPaperScissorsCursor()}}
+{\footnotesize\ttfamily \label{rock_paper_scissors_controller_8c_a0ebe8dfd8dbb2e9470428cf52479dfe8} 
+void set\+Rock\+Paper\+Scissors\+Cursor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*}}]{cursor}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{rock_paper_scissors_controller_8c_a0ebe8dfd8dbb2e9470428cf52479dfe8_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{rock_paper_scissors_controller_8c_a2ea0ca91c0ee7cd8b065827aac4e8f97}\index{rockPaperScissorsController.c@{rockPaperScissorsController.c}!canClick@{canClick}}
+\index{canClick@{canClick}!rockPaperScissorsController.c@{rockPaperScissorsController.c}}
+\doxysubsubsection{\texorpdfstring{canClick}{canClick}}
+{\footnotesize\ttfamily \label{rock_paper_scissors_controller_8c_a2ea0ca91c0ee7cd8b065827aac4e8f97} 
+bool can\+Click = true\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{rock_paper_scissors_controller_8c_a326830139c7cf0b268304cfbc63fc039}\index{rockPaperScissorsController.c@{rockPaperScissorsController.c}!currentButtonEvent@{currentButtonEvent}}
+\index{currentButtonEvent@{currentButtonEvent}!rockPaperScissorsController.c@{rockPaperScissorsController.c}}
+\doxysubsubsection{\texorpdfstring{currentButtonEvent}{currentButtonEvent}}
+{\footnotesize\ttfamily \label{rock_paper_scissors_controller_8c_a326830139c7cf0b268304cfbc63fc039} 
+\mbox{\hyperlink{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55}{collision\+\_\+type\+\_\+rps\+\_\+t}} current\+Button\+Event = \mbox{\hyperlink{rock_paper_scissors_8h_a98ac62240297de92af10e728e2917f55a066b3fbb0cf7d48bb667d003cfa8bce7}{NOP\+\_\+\+RPS}}\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{rock_paper_scissors_controller_8c_a24c3ef8ee9e6d099254705de55af4cf3}\index{rockPaperScissorsController.c@{rockPaperScissorsController.c}!rockPaperScissors@{rockPaperScissors}}
+\index{rockPaperScissors@{rockPaperScissors}!rockPaperScissorsController.c@{rockPaperScissorsController.c}}
+\doxysubsubsection{\texorpdfstring{rockPaperScissors}{rockPaperScissors}}
+{\footnotesize\ttfamily \label{rock_paper_scissors_controller_8c_a24c3ef8ee9e6d099254705de55af4cf3} 
+\mbox{\hyperlink{struct_rock_paper_scissors}{Rock\+Paper\+Scissors}}\texorpdfstring{$\ast$}{*} rock\+Paper\+Scissors = NULL\hspace{0.3cm}{\ttfamily [static]}}
+

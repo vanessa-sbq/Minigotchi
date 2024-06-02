@@ -1,0 +1,81 @@
+\doxysection{i8042.\+h}
+\hypertarget{i8042_8h_source}{}\label{i8042_8h_source}\index{C:/Users/anton/Documents/lcom/labs/proj/src/device\_controllers/kbc/i8042.h@{C:/Users/anton/Documents/lcom/labs/proj/src/device\_controllers/kbc/i8042.h}}
+\mbox{\hyperlink{i8042_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_LCOM\_I8042\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_LCOM\_I8042\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{comment}{/*\ The\ IRQ\ which\ the\ kbc\ raises\ for\ keyboard\ interrupt.\ */}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#define\ KBD\_IRQ\ 1\ }\textcolor{comment}{/*\ Keyboard's\ IRQ\ line\ is\ 1\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ MOUSE\_IRQ\ 12\ }\textcolor{comment}{/*\ Mouse's\ IRQ\ line\ is\ 12\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{comment}{/*\ KBC\ Ports\ */}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ OUT\_BUF\_PORT\ 0x60}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ IN\_BUF\_PORT\ 0x60}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ STATUS\_REG\_PORT\ 0x64}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ CMDS\_PORT\ 0x64}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ ARGS\_PORT\ 0x60}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{comment}{/*\ Status\ bits\ */}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ PARITY\_STATUS\_BIT\ (0x01\ <<\ 7)}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ TIMEOUT\_STATUS\_BIT\ (0x01\ <<\ 6)}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ AUX\_STATUS\_BIT\ (0x01\ <<\ 5)}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ INH\_STATUS\_BIT\ (0x01\ <<\ 4)}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ A2\_STATUS\_BIT\ (0x01\ <<\ 3)}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ SYS\_STATUS\_BIT\ (0x01\ <<\ 2)}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ IBF\_STATUS\_BIT\ (0x01\ <<\ 1)}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ OBF\_STATUS\_BIT\ (0x01)}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{comment}{/*\ KBC\ Commands\ */}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ READ\_COMMAND\_BYTE\ 0x20}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ WRITE\_COMMAND\_BYTE\ 0x60}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{comment}{/*\ KBC\ time\ to\ wait\ between\ data\ */}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ DELAY\_US\ 20000}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{comment}{/*\ Status\ Register\ Bits\ */}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ PARITY\_BIT\ BIT(7)\ }\textcolor{comment}{//\ Error\ Checking}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ TIME\_OUT\_BIT\ BIT(6)\ }\textcolor{comment}{//\ Error\ Checking}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ AUX\_BIT\ BIT(5)\ }\textcolor{comment}{//\ Mouse\ data}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ INH\_BIT\ BIT(4)}\textcolor{comment}{//\ Bit\ is\ cleared\ if\ keyboard\ is\ inhibited}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ A2\_BIT\ BIT(3)}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ SYS\_BIT\ BIT(2)}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#define\ IBF\_BIT\ BIT(1)\ }\textcolor{comment}{//\ Bit\ is\ set\ if\ input\ buffer\ full.}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ OBF\_BIT\ 0x01\ }\textcolor{comment}{//\ Bit\ is\ set\ if\ output\ buffer\ full.}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{comment}{/*\ KBC\ "{}Command\ Byte"{}\ bits\ */}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#define\ MOUSE\_INTF\_DISABLED\ BIT(5)\ }\textcolor{comment}{//\ Bit\ is\ set\ if\ mouse\ is\ disabled.}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ KEYBOARD\_INTF\_DISABLED\ BIT(4)\ }\textcolor{comment}{//\ Bit\ is\ set\ if\ keyboard\ is\ disabled.}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#define\ MOUSE\_INTS\_ENABLED\ BIT(1)\ }\textcolor{comment}{//\ Bit\ is\ set\ if\ mouse\ interrups\ are\ enabled.}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#define\ KEYBOARD\_INTS\_ENABLED\ 0x01\ }\textcolor{comment}{//\ Bit\ is\ set\ if\ keyboard\ interrupts\ are\ enabled.}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{comment}{/*\ Ports\ */}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ OUT\_BUF\ 0x60\ }\textcolor{comment}{/*\ Output\ buffer\ port\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ IN\_BUF\ 0x60\ }\textcolor{comment}{/*\ Input\ buffer\ port\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ STATUS\_REG\_PORT\ 0x64\ }\textcolor{comment}{/*\ Status\ register\ port.\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ CMDS\_REG\_PORT\ 0x64\ }\textcolor{comment}{/*\ Register\ to\ send\ KBC\ commands\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ ARGS\_REG\_PORT\ 0x60\ }\textcolor{comment}{/*\ Register\ to\ send\ KBC\ command\ arguments.\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{comment}{/*\ Keyboard\ commands\ PC-\/AT\ |\ PS2\ */}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ KBC\_READ\_COMMAND\ 0x20\ \ }\textcolor{comment}{/*\ KBC\ read\ command\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ KBC\_WRITE\_COMMAND\ 0x60\ \ }\textcolor{comment}{/*\ KBC\ write\ command\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ KBC\_SELF\_TEST\_COMMAND\ 0xAA\ \ }\textcolor{comment}{/*\ KBC\ self\ test\ command\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ KBC\_KEYBOARD\_INTERFACE\_COMMAND\ 0xAB\ \ }\textcolor{comment}{/*\ KBC\ keyboard\ interface\ command\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ KBC\_DISABLE\_KBD\_COMMAND\ 0xAD\ \ }\textcolor{comment}{/*\ KBC\ disable\ keyboard\ command\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ KBC\_ENABLE\_KBD\_COMMAND\ 0xAE\ \ }\textcolor{comment}{/*\ KBC\ enable\ keyboard\ command\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{comment}{/*\ Mouse\ commands\ */}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ MOUSE\_WRITE\_COMMAND\ 0xD4\ }\textcolor{comment}{/*\ Allows\ the\ DD\ to\ issue\ commands\ directly\ to\ the\ mouse.\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ MOUSE\_ENABLE\_DATA\_REPORTING\ 0xF4\ }\textcolor{comment}{/*\ Enable\ mouse's\ stream.\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#define\ MOUSE\_DISABLE\_DATA\_REPORTING\ 0xF5\ }\textcolor{comment}{/*\ Disable\ mouse's\ data\ reporting.\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{comment}{/*\ Mouse\ responses\ */}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ ACK\ 0xFA\ }\textcolor{comment}{/*\ Everithing\ went\ right.\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#define\ NACK\ 0xFE\ }\textcolor{comment}{/*\ Invalid\ byte\ received\ must\ start\ over.\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ ERROR\ 0xFC\ }\textcolor{comment}{/*\ An\ error\ occoured.\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_LCOM\_I8042\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

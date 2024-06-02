@@ -1,0 +1,8 @@
+<map id="nameMinigotchiViewer_get_spriteVector" name="nameMinigotchiViewer_get_spriteVector">
+<area shape="rect" id="Node000001" title=" " alt="" coords="409,23,560,65"/>
+<area shape="rect" id="Node000002" href="$name_minigotchi_controller_8c.html#aa9284c2a1e15db8d817dafc4fb7f8bf9" title="Controller function that is called once every frame and updates / checks every action in the minigotc..." alt="" coords="162,5,361,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="393,36,361,33,362,27,394,31"/>
+<area shape="rect" id="Node000003" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Project main function that starts the game." alt="" coords="5,31,114,57"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="394,47,114,47,114,41,394,41"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="146,36,114,40,114,35,146,31"/>
+</map>

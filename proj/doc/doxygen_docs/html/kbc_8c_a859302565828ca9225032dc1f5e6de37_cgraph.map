@@ -1,0 +1,7 @@
+<map id="writeToKBCPort" name="writeToKBCPort">
+<area shape="rect" id="Node000001" title="Writes to a KBC port." alt="" coords="5,5,119,32"/>
+<area shape="rect" id="Node000002" href="$kbc_8c.html#ab0a11123d74fe0bb6c988af90c5bc4e4" title="Reads KBC status." alt="" coords="167,5,308,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,16,152,16,152,21,119,21"/>
+<area shape="rect" id="Node000003" href="$utils_8c.html#a2b56f50ba159e9d5115ed1a75eff15d9" title="Invokes sys_inb() system call but reads the value into a uint8_t variable." alt="" coords="356,5,446,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="308,16,340,16,340,21,308,21"/>
+</map>

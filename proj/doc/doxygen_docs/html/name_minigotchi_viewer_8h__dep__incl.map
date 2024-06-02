@@ -1,0 +1,12 @@
+<map id="C:/Users/anton/Documents/lcom/labs/proj/src/viewer/menus/nameMinigotchiViewer.h" name="C:/Users/anton/Documents/lcom/labs/proj/src/viewer/menus/nameMinigotchiViewer.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="239,5,448,64"/>
+<area shape="rect" id="Node000002" href="$name_minigotchi_controller_8h.html" title=" " alt="" coords="80,112,305,171"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="291,75,235,114,232,109,288,71"/>
+<area shape="rect" id="Node000004" href="$proj_8c.html" title=" " alt="" coords="254,227,433,269"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="346,79,346,226,341,226,341,79"/>
+<area shape="rect" id="Node000005" href="$name_minigotchi_viewer_8c.html" title=" " alt="" coords="381,112,591,171"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="396,71,449,109,445,114,393,75"/>
+<area shape="rect" id="Node000003" href="$name_minigotchi_controller_8c.html" title=" " alt="" coords="5,219,231,277"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="166,185,141,220,136,217,161,182"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="248,177,315,224,312,228,245,182"/>
+</map>

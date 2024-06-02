@@ -1,0 +1,7 @@
+<map id="reset_ticTacToe" name="reset_ticTacToe">
+<area shape="rect" id="Node000001" title="Resets the TicTacToe game." alt="" coords="5,13,119,40"/>
+<area shape="rect" id="Node000002" href="$item_8c.html#a9e63f1318fbd43087177d034a95991fa" title="Creates a new item &quot;object&quot; and returns a pointer to it." alt="" coords="167,13,243,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,24,151,24,151,29,119,29"/>
+<area shape="rect" id="Node000003" href="$gui_drawer_8c.html#a05800c123125bd7b453bfb960405431b" title="Get an item sprite from an id." alt="" coords="291,5,426,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="244,24,275,24,275,29,244,29"/>
+</map>

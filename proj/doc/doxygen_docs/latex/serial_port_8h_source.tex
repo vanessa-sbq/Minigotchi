@@ -1,0 +1,55 @@
+\doxysection{serial\+Port.\+h}
+\hypertarget{serial_port_8h_source}{}\label{serial_port_8h_source}\index{C:/Users/anton/Documents/lcom/labs/proj/src/device\_controllers/uart/serialPort.h@{C:/Users/anton/Documents/lcom/labs/proj/src/device\_controllers/uart/serialPort.h}}
+\mbox{\hyperlink{serial_port_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_SERIAL\_PORT\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_SERIAL\_PORT\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ SERIAL\_PORT\ 0x3F8}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#define\ SERIAL\_IRQ\_1\ 4\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//COM1\ IRQ\ line}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ RECEIVE\_BUFFER\ 0x00\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//RBR\ Receiver\ Buffer\ Register}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ TRANSMIT\_HOLD\ 0x00\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//THR\ Transmitter\ Holding\ Register}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ INTERRUPT\_ENABLE\ 0x01\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//IER\ Interrupt\ Enable\ Register}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ INTERRUPT\_ID\ 0x02\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//IIR\ Interrupt\ Identification\ Reg.}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ FIFO\_CONTROL\ 0x02\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//FCR\ FIFO\ Control\ Register}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ LINE\_CONTROL\ 0x03\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//LCR\ Line\ Control\ Register}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ MODEM\_CONTROL\ 0x04\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//MCR\ Modem\ Control\ Register}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ LINE\_STATUS\ 0x05\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//LSR\ Line\ Status\ Register\ }}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ MODEM\_STATUS\ 0x06\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//MSR\ Modem\ Status\ Register}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ SCRATCH\_REG\ 0x07\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//SR\ Scratchpad\ Register\ \ \ \ (Read/Write)}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{comment}{//*Addresses\ 0\ and\ 1\ are\ overloaded,\ accessing\ different\ registers\ if\ bit\ DLAB\ of\ the\ LCR\ register\ is\ set\ to\ 1:}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ DIV\_LATCH\_LSB\ SERIAL\_PORT\ 0x00\ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ DLL\ Divisor\ Latch\ LSB}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ DIV\_LATCH\_MSB\ SERIAL\_PORT\ 0x01\ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ DLM\ Divisor\ Latch\ MSB}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{comment}{//Line\ Status\ Register\ (LSR)(Read\ Only)}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ LSR\_DATA\_READY\ BIT(0)}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ LSR\_OVERRUN\_ERROR\ BIT(1)}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ LSR\_PARITY\_ERROR\ BIT(2)}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ LSR\_FRAMING\_ERROR\ BIT(3)}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ LSR\_BREAK\_INTERRUPT\ BIT(4)}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ LSR\_THR\_EMPTY\ BIT(5)}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ LSR\_TSR\_EMPTY\ BIT(6)}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ LSR\_FIFO\_ERROR\ BIT(7)}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ IER\_DATA\_AVAIL\_INT\ BIT(0)}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ IER\_THR\_EMPTY\_INT\ BIT(1)}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ IER\_LINE\_STATUS\_INT\ BIT(2)}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ IER\_MODEM\_STATUS\_INT\ BIT(3)}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#define\ IIR\_NO\_INTERRUPT\ BIT(0)}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ IIR\_INTERRUPT\_ID\ BIT(1)\ |\ BIT(2)\ |\ BIT(3)}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ IIR\_LINE\_STATUS\ BIT(1)\ |\ BIT(2)}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ IIR\_DATA\_AVAILABLE\ BIT(2)}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#define\ IIR\_CHAR\_TIMEOUT\ BIT(3)\ |\ BIT(2)}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ IIR\_THR\_EMPTY\ BIT(1)}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#define\ IIR\_MODEM\_STATUS\ 0x00}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ FCR\_CLEAR\ BIT(0)\ |\ BIT(1)\ |\ BIT(2)}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

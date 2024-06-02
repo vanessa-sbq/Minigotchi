@@ -1,0 +1,5 @@
+<map id="setup_text_sprite" name="setup_text_sprite">
+<area shape="rect" id="Node000001" title="Sets up the letter sprites that make up the font." alt="" coords="5,5,127,32"/>
+<area shape="rect" id="Node000002" href="$gui_drawer_8c.html#acb93792ebc27a32413e0b31624c6d9b1" title="Creates a sprite from a XPM." alt="" coords="175,5,303,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="127,16,159,16,159,21,127,21"/>
+</map>

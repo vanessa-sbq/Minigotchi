@@ -1,0 +1,34 @@
+\doxysection{button.\+h}
+\hypertarget{button_8h_source}{}\label{button_8h_source}\index{C:/Users/anton/Documents/lcom/labs/proj/src/model/button.h@{C:/Users/anton/Documents/lcom/labs/proj/src/model/button.h}}
+\mbox{\hyperlink{button_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_LCOM\_BUTTON\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_LCOM\_BUTTON\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <lcom/lcf.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gui_drawer_8h}{../viewer/guiDrawer.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{struct_sprite}{Sprite}}\ *\mbox{\hyperlink{struct_button_a51a8770221b4166852ebc54e8736c3f9}{sprite}};}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_button_a2ec3bc40025b64b44319e7464164d61f}{x}};}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_button_afff35ce0c47f662c3b096e5b644648a5}{y}};}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_button_a954d4d3e52a028ef2ad3cfcea5d9f167}{activated}};}
+\DoxyCodeLine{00013\ \}\ \mbox{\hyperlink{struct_button}{Button}};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \mbox{\hyperlink{struct_button}{Button}}\ *\mbox{\hyperlink{button_8h_abd639885574eb18a376b13dc75f4123e}{new\_button}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ text\_index);\ \textcolor{comment}{//\ "{}Constructor"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{button_8h_a0e0fe01cc691c356d04430d1c200a8da}{button\_delete}}(\mbox{\hyperlink{struct_button}{Button}}\ *button);\ \textcolor{comment}{//\ "{}Destructor"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{button_8h_a8cffe5189a594e49e7510d739e186fa0}{draw\_button}}(\mbox{\hyperlink{struct_button}{Button}}\ *button);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ Getters\ and\ setters}}
+\DoxyCodeLine{00022\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{button_8h_a4f6cf2cfef2e91116f3df51b08e57c73}{button\_get\_sprite}}(\mbox{\hyperlink{struct_button}{Button}}\ *button);}
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{button_8h_a6ae257ae83c7a1754a18a846a9deaee1}{button\_get\_x}}(\mbox{\hyperlink{struct_button}{Button}}\ *button);}
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{button_8h_ac221382d87e9aabccc07ecd8549f62b2}{button\_get\_y}}(\mbox{\hyperlink{struct_button}{Button}}\ *button);}
+\DoxyCodeLine{00025\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{button_8h_ae82196003d36a119f29f22ea9879d8fb}{button\_get\_activated}}(\mbox{\hyperlink{struct_button}{Button}}\ *button);}
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{button_8h_adf4f3bb8d3b2d1f9aa3089f5a426818d}{button\_set\_activated}}(\mbox{\hyperlink{struct_button}{Button}}\ *button,\ \textcolor{keywordtype}{bool}\ activated);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_BUTTON\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

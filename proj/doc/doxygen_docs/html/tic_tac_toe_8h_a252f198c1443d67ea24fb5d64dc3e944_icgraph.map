@@ -1,0 +1,5 @@
+<map id="delete_ticTacToe" name="delete_ticTacToe">
+<area shape="rect" id="Node000001" title="TicTacToe destructor." alt="" coords="186,13,305,40"/>
+<area shape="rect" id="Node000002" href="$tic_tac_toe_controller_8c.html#ad103a00e8879f4493e35cd14585ac7e2" title="Function that calls the Tic Tac Toe destructor." alt="" coords="5,5,138,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,29,138,29,138,24,170,24"/>
+</map>

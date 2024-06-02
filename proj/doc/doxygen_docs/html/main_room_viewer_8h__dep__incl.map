@@ -1,0 +1,12 @@
+<map id="C:/Users/anton/Documents/lcom/labs/proj/src/viewer/menus/mainRoomViewer.h" name="C:/Users/anton/Documents/lcom/labs/proj/src/viewer/menus/mainRoomViewer.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="225,5,406,64"/>
+<area shape="rect" id="Node000002" href="$main_room_controller_8h.html" title=" " alt="" coords="81,112,278,171"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="268,76,218,114,215,109,265,72"/>
+<area shape="rect" id="Node000004" href="$proj_8c.html" title=" " alt="" coords="226,227,405,269"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="318,79,318,226,313,226,313,79"/>
+<area shape="rect" id="Node000005" href="$main_room_viewer_8c.html" title=" " alt="" coords="353,112,534,171"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="364,72,410,110,407,114,361,76"/>
+<area shape="rect" id="Node000003" href="$main_room_controller_8c.html" title=" " alt="" coords="5,219,202,277"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="152,185,126,220,122,217,148,182"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="230,178,290,224,287,228,227,182"/>
+</map>

@@ -1,0 +1,41 @@
+\doxysection{hotbar.\+h}
+\hypertarget{hotbar_8h_source}{}\label{hotbar_8h_source}\index{C:/Users/anton/Documents/lcom/labs/proj/src/model/hotbar.h@{C:/Users/anton/Documents/lcom/labs/proj/src/model/hotbar.h}}
+\mbox{\hyperlink{hotbar_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_HOTBAR\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_HOTBAR\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gui_drawer_8h}{../viewer/guiDrawer.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{item_8h}{item.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ HIGHLIGHT\_HOTBAR\_CELL\_SIZE\ 80}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{struct_sprite}{Sprite}}\ *\mbox{\hyperlink{struct_hotbar_a17871e6f9f2b0e08be519ffa4387a147}{sprite}};}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{struct_item}{Item}}*\ item\_array[9];}
+\DoxyCodeLine{00013\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{struct_hotbar_a8e65d0527c3d93dfeb7e3886aa5d19b8}{highlighted}};}
+\DoxyCodeLine{00014\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{struct_hotbar_abe9f05357956671eda17df6bf8a2d92b}{x}};}
+\DoxyCodeLine{00015\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{struct_hotbar_ad3d7556bea76dda54513b20aca5357bd}{y}};}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_hotbar_a3eb88c21b9ef13694cc2c797ffa992c5}{hidden}};}
+\DoxyCodeLine{00017\ \}\ \mbox{\hyperlink{struct_hotbar}{Hotbar}};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \mbox{\hyperlink{struct_hotbar}{Hotbar}}\ *\mbox{\hyperlink{hotbar_8h_abf5f346ae287c1ea507041ac7f6a5937}{new\_hotbar}}(uint16\_t\ x,\ uint16\_t\ y,\ uint8\_t\ highlighted);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ uint8\_t\ \mbox{\hyperlink{hotbar_8h_a01102fa976f22815d30eeb919324eb04}{hotbar\_get\_highlighted}}(\mbox{\hyperlink{struct_hotbar}{Hotbar}}\ *hotbar);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \mbox{\hyperlink{struct_item}{Item}}*\ \mbox{\hyperlink{hotbar_8h_a0276e2a4737f43b589695a48a0166d9e}{hotbar\_get\_highlighted\_item}}(\mbox{\hyperlink{struct_hotbar}{Hotbar}}\ *hotbar);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{hotbar_8h_aa1f2913112d1edf48732ef8e33567fea}{hotbar\_is\_hidden}}(\mbox{\hyperlink{struct_hotbar}{Hotbar}}*\ hotbar);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{hotbar_8h_a5918cc623692c4eee77035428bc992f5}{drawHotbar}}(\mbox{\hyperlink{struct_hotbar}{Hotbar}}\ *hotbar);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{hotbar_8h_a1e4ffe62e2430b3aa4c07d512bcbd05b}{draw\_slider}}(\mbox{\hyperlink{struct_hotbar}{Hotbar}}\ *hotbar);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{hotbar_8h_a02ccec23f9cd35024a194296329061ce}{hotbar\_set\_highlighted}}(\mbox{\hyperlink{struct_hotbar}{Hotbar}}\ *hotbar,\ uint8\_t\ highlighted);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{hotbar_8h_a31f7409d6d138ad993ad4ea7c439c347}{hotbar\_update\_items}}(\mbox{\hyperlink{struct_hotbar}{Hotbar}}\ *hotbar,\ \textcolor{keywordtype}{int}*\ item\_array);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_HOTBAR\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

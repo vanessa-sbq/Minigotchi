@@ -1,0 +1,41 @@
+<map id="guiDrawer_get_item_sprite" name="guiDrawer_get_item_sprite">
+<area shape="rect" id="Node000001" title="Get an item sprite from an id." alt="" coords="1239,193,1375,235"/>
+<area shape="rect" id="Node000002" href="$item_8c.html#a9e63f1318fbd43087177d034a95991fa" title="Creates a new item &quot;object&quot; and returns a pointer to it." alt="" coords="1115,201,1191,227"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1224,217,1192,217,1192,211,1224,211"/>
+<area shape="rect" id="Node000003" href="$hotbar_8c.html#a31f7409d6d138ad993ad4ea7c439c347" title="Updates the items in a hotbar." alt="" coords="418,33,560,59"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1141,187,1131,158,1115,127,1093,97,1066,74,1000,43,930,22,858,11,785,8,715,10,651,17,547,35,546,29,650,12,715,5,785,3,858,6,931,17,1002,38,1068,69,1097,93,1119,124,1136,156,1146,185"/>
+<area shape="rect" id="Node000006" href="$hotbar_8c.html#abf5f346ae287c1ea507041ac7f6a5937" title="Creates a new hotbar &quot;object&quot; and returns a pointer to it." alt="" coords="930,83,1018,110"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="1132,190,1103,155,1066,124,1042,113,1017,106,1019,101,1044,108,1068,120,1107,151,1136,186"/>
+<area shape="rect" id="Node000009" href="$rock_paper_scissors_8c.html#ae8af223aef0dbcc00fb65b3367fd1bde" title="Creates a new RockPaperScissors &quot;object&quot; and returns a pointer to it." alt="" coords="893,201,1055,227"/>
+<area shape="poly" id="edge9_Node000002_Node000009" title=" " alt="" coords="1099,217,1055,217,1055,211,1099,211"/>
+<area shape="rect" id="Node000012" href="$tic_tac_toe_8c.html#a6f384617833ad3a6adb8678ddf2d3bca" title="Creates a new TicTacToe &quot;object&quot; and returns a pointer to it." alt="" coords="920,302,1028,329"/>
+<area shape="poly" id="edge13_Node000002_Node000012" title=" " alt="" coords="1132,241,1103,268,1068,292,1029,308,1027,303,1066,288,1100,264,1128,237"/>
+<area shape="rect" id="Node000015" href="$tic_tac_toe_8c.html#a03235c1a2fb69c15dd91ef91c69a42d9" title="Resets the TicTacToe game." alt="" coords="917,251,1031,278"/>
+<area shape="poly" id="edge17_Node000002_Node000015" title=" " alt="" coords="1101,232,1068,242,1027,253,1026,248,1066,237,1099,227"/>
+<area shape="rect" id="Node000016" href="$rock_paper_scissors_controller_8c.html#aaae40f3e4b724e8a93f27e56d8293aa2" title="Function that randomizes the reward (after each game)" alt="" coords="881,134,1067,177"/>
+<area shape="poly" id="edge18_Node000002_Node000016" title=" " alt="" coords="1099,199,1040,180,1042,175,1101,194"/>
+<area shape="rect" id="Node000018" href="$tic_tac_toe_controller_8c.html#ad6884fb36768128cf09872d0b7b21adf" title="Function that randomizes the reward (after each game)" alt="" coords="907,353,1041,395"/>
+<area shape="poly" id="edge21_Node000002_Node000018" title=" " alt="" coords="1142,243,1113,293,1093,320,1069,343,1042,358,1040,354,1065,339,1089,316,1109,290,1137,240"/>
+<area shape="rect" id="Node000004" href="$main_room_controller_8c.html#ac448f52b9ec47f6aa868245cb08a5a19" title="Controller function that is called once every frame and updates / checks every action in the main roo..." alt="" coords="162,91,332,118"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="414,66,381,74,303,93,302,88,379,69,412,61"/>
+<area shape="rect" id="Node000005" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Project main function that starts the game." alt="" coords="5,161,114,187"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="195,126,99,163,97,158,193,121"/>
+<area shape="rect" id="Node000007" href="$main_room_8c.html#ade78c0beb24832f2324ff1ce1e7748e6" title="Creates a new MainRoom &quot;object&quot; and returns a pointer to it." alt="" coords="683,83,796,110"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="915,99,797,99,797,94,915,94"/>
+<area shape="rect" id="Node000008" href="$main_room_controller_8c.html#a2ecc67af3b606dcd5918c3ba5d0b57b3" title="Load the main room (first time)" alt="" coords="420,83,558,126"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="668,102,559,105,559,100,667,96"/>
+<area shape="poly" id="edge8_Node000008_Node000004" title=" " alt="" coords="405,107,333,107,333,102,405,102"/>
+<area shape="rect" id="Node000010" href="$rock_paper_scissors_controller_8c.html#a12d415dd659136d30385c13c4ec262a6" title="Load the Rock Paper Scissors minigame (first time)" alt="" coords="646,201,833,243"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="878,220,833,221,833,216,878,215"/>
+<area shape="rect" id="Node000011" href="$rock_paper_scissors_controller_8c.html#a339536fe7855348648d6a841feb4c332" title="Controller function that is called once every frame and updates / checks every action in the Rock Pap..." alt="" coords="380,161,598,187"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="630,204,562,191,563,185,631,199"/>
+<area shape="poly" id="edge12_Node000011_Node000005" title=" " alt="" coords="364,177,114,177,114,171,364,171"/>
+<area shape="rect" id="Node000013" href="$tic_tac_toe_controller_8c.html#a595888a1a207791f219fe698db9cff91" title="Load the Tic Tac Toe minigame (first time)" alt="" coords="673,281,806,323"/>
+<area shape="poly" id="edge14_Node000012_Node000013" title=" " alt="" coords="905,314,806,308,806,303,905,309"/>
+<area shape="rect" id="Node000014" href="$tic_tac_toe_controller_8c.html#aae4bafbe082fa7f4bad0e58d11e6d861" title="Controller function that is called once every frame and updates / checks every action in the Tic Tac ..." alt="" coords="165,233,329,259"/>
+<area shape="poly" id="edge15_Node000013_Node000014" title=" " alt="" coords="658,295,329,258,330,253,658,290"/>
+<area shape="poly" id="edge16_Node000014_Node000005" title=" " alt="" coords="195,229,95,190,97,185,197,224"/>
+<area shape="rect" id="Node000017" href="$rock_paper_scissors_controller_8c.html#aaa8352e07d79402c4a157d0255e152d6" title="Function that resets the game." alt="" coords="646,134,833,177"/>
+<area shape="poly" id="edge19_Node000016_Node000017" title=" " alt="" coords="865,158,833,158,833,153,865,153"/>
+<area shape="poly" id="edge20_Node000017_Node000011" title=" " alt="" coords="631,166,599,168,598,163,631,161"/>
+</map>

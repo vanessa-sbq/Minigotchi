@@ -1,0 +1,12 @@
+<map id="C:/Users/anton/Documents/lcom/labs/proj/src/viewer/minigames/ticTacToeViewer.h" name="C:/Users/anton/Documents/lcom/labs/proj/src/viewer/minigames/ticTacToeViewer.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="233,5,432,64"/>
+<area shape="rect" id="Node000002" href="$tic_tac_toe_controller_8h.html" title=" " alt="" coords="81,112,296,171"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="282,75,229,114,226,109,279,71"/>
+<area shape="rect" id="Node000004" href="$proj_8c.html" title=" " alt="" coords="243,227,422,269"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="335,79,335,226,330,226,330,79"/>
+<area shape="rect" id="Node000005" href="$tic_tac_toe_viewer_8c.html" title=" " alt="" coords="369,112,568,171"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="383,72,433,109,430,114,380,76"/>
+<area shape="rect" id="Node000003" href="$tic_tac_toe_controller_8c.html" title=" " alt="" coords="5,219,220,277"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="161,185,135,220,131,217,157,182"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="242,178,306,224,303,228,239,182"/>
+</map>

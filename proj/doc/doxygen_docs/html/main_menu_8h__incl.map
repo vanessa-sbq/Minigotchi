@@ -1,0 +1,19 @@
+<map id="C:/Users/anton/Documents/lcom/labs/proj/src/model/stateModels/mainMenu.h" name="C:/Users/anton/Documents/lcom/labs/proj/src/model/stateModels/mainMenu.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="32,5,211,64"/>
+<area shape="rect" id="Node000002" href="$gui_drawer_8h.html" title=" " alt="" coords="40,187,192,213"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,66,83,88,72,113,69,125,72,138,81,157,94,174,90,177,77,160,67,140,64,125,67,111,79,86,94,63"/>
+<area shape="rect" id="Node000006" href="$button_8h.html" title=" " alt="" coords="185,112,266,139"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="157,62,201,100,198,104,153,66"/>
+<area shape="rect" id="Node000007" href="$cursor_8h.html" title=" " alt="" coords="81,112,162,139"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="124,64,124,96,119,96,119,64"/>
+<area shape="rect" id="Node000003" href="$video_8h.html" title=" " alt="" coords="5,261,142,304"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="112,215,94,249,89,246,107,213"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="147,352,224,379"/>
+<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="127,212,156,260,171,300,182,336,176,338,166,301,151,262,123,215"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="104,302,157,341,154,345,101,307"/>
+<area shape="rect" id="Node000005" href="$video__macros_8h.html" title=" " alt="" coords="11,352,123,379"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="74,305,72,337,66,336,69,304"/>
+<area shape="poly" id="edge8_Node000006_Node000002" title=" " alt="" coords="208,141,149,180,146,176,205,137"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="226,139,193,337,187,336,221,138"/>
+<area shape="poly" id="edge10_Node000007_Node000002" title=" " alt="" coords="123,139,121,171,116,171,118,139"/>
+</map>

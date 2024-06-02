@@ -1,0 +1,169 @@
+\doxysection{C\+:/\+Users/anton/\+Documents/lcom/labs/proj/src/model/item.c File Reference}
+\hypertarget{item_8c}{}\label{item_8c}\index{C:/Users/anton/Documents/lcom/labs/proj/src/model/item.c@{C:/Users/anton/Documents/lcom/labs/proj/src/model/item.c}}
+{\ttfamily \#include "{}item.\+h"{}}\newline
+Include dependency graph for item.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{item_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_item}{Item}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{item_8c_a9e63f1318fbd43087177d034a95991fa}{new\+\_\+item}} (int x, int y, \mbox{\hyperlink{item_8h_a5f77d21c62ddd9f9d57b884a6a4bd2b8}{item\+\_\+t}} id, int quantity, int feed\+\_\+level)
+\begin{DoxyCompactList}\small\item\em Creates a new item "{}object"{} and returns a pointer to it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{item_8c_a22ff465025805bfed674b2dff9aeccfa}{draw\+\_\+item}} (\mbox{\hyperlink{struct_item}{Item}} \texorpdfstring{$\ast$}{*}item)
+\begin{DoxyCompactList}\small\item\em Draws an item. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{item_8c_a5f1b58e279c64a79d7393c5194f1b6d8}{item\+\_\+get\+\_\+x}} (\mbox{\hyperlink{struct_item}{Item}} \texorpdfstring{$\ast$}{*}item)
+\item 
+int \mbox{\hyperlink{item_8c_ad24db1551e3d5ba423b4adf6df831d99}{item\+\_\+get\+\_\+y}} (\mbox{\hyperlink{struct_item}{Item}} \texorpdfstring{$\ast$}{*}item)
+\item 
+\mbox{\hyperlink{item_8h_a5f77d21c62ddd9f9d57b884a6a4bd2b8}{item\+\_\+t}} \mbox{\hyperlink{item_8c_abe12131db7008f97ef0371a9a296b762}{item\+\_\+get\+\_\+id}} (\mbox{\hyperlink{struct_item}{Item}} \texorpdfstring{$\ast$}{*}item)
+\item 
+int \mbox{\hyperlink{item_8c_a8ae4e6c3051ad1ef0b74afe2435fb2b6}{item\+\_\+get\+\_\+quantity}} (\mbox{\hyperlink{struct_item}{Item}} \texorpdfstring{$\ast$}{*}item)
+\item 
+int \mbox{\hyperlink{item_8c_a693a504ab67d8bc7d10c3029300b720d}{item\+\_\+get\+\_\+feed\+Level}} (\mbox{\hyperlink{struct_item}{Item}} \texorpdfstring{$\ast$}{*}item)
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{item_8c_ad68b9e8e5f529c4e8b1e4aca3caedb6d}{item\+\_\+get\+\_\+sprite}} (\mbox{\hyperlink{struct_item}{Item}} \texorpdfstring{$\ast$}{*}item)
+\item 
+void \mbox{\hyperlink{item_8c_a85648e33914192045db41f7bb0b21026}{item\+\_\+set\+\_\+x}} (\mbox{\hyperlink{struct_item}{Item}} \texorpdfstring{$\ast$}{*}item, int x)
+\item 
+void \mbox{\hyperlink{item_8c_a0b01ac8a7304549fe62d324a7e9668bb}{item\+\_\+set\+\_\+y}} (\mbox{\hyperlink{struct_item}{Item}} \texorpdfstring{$\ast$}{*}item, int y)
+\item 
+void \mbox{\hyperlink{item_8c_a548f6e0122a6438802d533ec4eb49f10}{item\+\_\+set\+\_\+type}} (\mbox{\hyperlink{struct_item}{Item}} \texorpdfstring{$\ast$}{*}item, \mbox{\hyperlink{item_8h_a5f77d21c62ddd9f9d57b884a6a4bd2b8}{item\+\_\+t}} id)
+\item 
+void \mbox{\hyperlink{item_8c_a1b8858990399252c11765fc2f1dfcd99}{item\+\_\+set\+\_\+quantity}} (\mbox{\hyperlink{struct_item}{Item}} \texorpdfstring{$\ast$}{*}item, int quantity)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{item_8c_a22ff465025805bfed674b2dff9aeccfa}\index{item.c@{item.c}!draw\_item@{draw\_item}}
+\index{draw\_item@{draw\_item}!item.c@{item.c}}
+\doxysubsubsection{\texorpdfstring{draw\_item()}{draw\_item()}}
+{\footnotesize\ttfamily \label{item_8c_a22ff465025805bfed674b2dff9aeccfa} 
+void draw\+\_\+item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_item}{Item}} \texorpdfstring{$\ast$}{*}}]{item}{}\end{DoxyParamCaption})}
+
+
+
+Draws an item. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{item_8c_a22ff465025805bfed674b2dff9aeccfa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{item_8c_a22ff465025805bfed674b2dff9aeccfa_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{item_8c_a693a504ab67d8bc7d10c3029300b720d}\index{item.c@{item.c}!item\_get\_feedLevel@{item\_get\_feedLevel}}
+\index{item\_get\_feedLevel@{item\_get\_feedLevel}!item.c@{item.c}}
+\doxysubsubsection{\texorpdfstring{item\_get\_feedLevel()}{item\_get\_feedLevel()}}
+{\footnotesize\ttfamily \label{item_8c_a693a504ab67d8bc7d10c3029300b720d} 
+int item\+\_\+get\+\_\+feed\+Level (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_item}{Item}} \texorpdfstring{$\ast$}{*}}]{item}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{item_8c_a693a504ab67d8bc7d10c3029300b720d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{item_8c_abe12131db7008f97ef0371a9a296b762}\index{item.c@{item.c}!item\_get\_id@{item\_get\_id}}
+\index{item\_get\_id@{item\_get\_id}!item.c@{item.c}}
+\doxysubsubsection{\texorpdfstring{item\_get\_id()}{item\_get\_id()}}
+{\footnotesize\ttfamily \label{item_8c_abe12131db7008f97ef0371a9a296b762} 
+\mbox{\hyperlink{item_8h_a5f77d21c62ddd9f9d57b884a6a4bd2b8}{item\+\_\+t}} item\+\_\+get\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_item}{Item}} \texorpdfstring{$\ast$}{*}}]{item}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{item_8c_abe12131db7008f97ef0371a9a296b762_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{item_8c_a8ae4e6c3051ad1ef0b74afe2435fb2b6}\index{item.c@{item.c}!item\_get\_quantity@{item\_get\_quantity}}
+\index{item\_get\_quantity@{item\_get\_quantity}!item.c@{item.c}}
+\doxysubsubsection{\texorpdfstring{item\_get\_quantity()}{item\_get\_quantity()}}
+{\footnotesize\ttfamily \label{item_8c_a8ae4e6c3051ad1ef0b74afe2435fb2b6} 
+int item\+\_\+get\+\_\+quantity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_item}{Item}} \texorpdfstring{$\ast$}{*}}]{item}{}\end{DoxyParamCaption})}
+
+\Hypertarget{item_8c_ad68b9e8e5f529c4e8b1e4aca3caedb6d}\index{item.c@{item.c}!item\_get\_sprite@{item\_get\_sprite}}
+\index{item\_get\_sprite@{item\_get\_sprite}!item.c@{item.c}}
+\doxysubsubsection{\texorpdfstring{item\_get\_sprite()}{item\_get\_sprite()}}
+{\footnotesize\ttfamily \label{item_8c_ad68b9e8e5f529c4e8b1e4aca3caedb6d} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} item\+\_\+get\+\_\+sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_item}{Item}} \texorpdfstring{$\ast$}{*}}]{item}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{item_8c_ad68b9e8e5f529c4e8b1e4aca3caedb6d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{item_8c_a5f1b58e279c64a79d7393c5194f1b6d8}\index{item.c@{item.c}!item\_get\_x@{item\_get\_x}}
+\index{item\_get\_x@{item\_get\_x}!item.c@{item.c}}
+\doxysubsubsection{\texorpdfstring{item\_get\_x()}{item\_get\_x()}}
+{\footnotesize\ttfamily \label{item_8c_a5f1b58e279c64a79d7393c5194f1b6d8} 
+int item\+\_\+get\+\_\+x (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_item}{Item}} \texorpdfstring{$\ast$}{*}}]{item}{}\end{DoxyParamCaption})}
+
+\Hypertarget{item_8c_ad24db1551e3d5ba423b4adf6df831d99}\index{item.c@{item.c}!item\_get\_y@{item\_get\_y}}
+\index{item\_get\_y@{item\_get\_y}!item.c@{item.c}}
+\doxysubsubsection{\texorpdfstring{item\_get\_y()}{item\_get\_y()}}
+{\footnotesize\ttfamily \label{item_8c_ad24db1551e3d5ba423b4adf6df831d99} 
+int item\+\_\+get\+\_\+y (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_item}{Item}} \texorpdfstring{$\ast$}{*}}]{item}{}\end{DoxyParamCaption})}
+
+\Hypertarget{item_8c_a1b8858990399252c11765fc2f1dfcd99}\index{item.c@{item.c}!item\_set\_quantity@{item\_set\_quantity}}
+\index{item\_set\_quantity@{item\_set\_quantity}!item.c@{item.c}}
+\doxysubsubsection{\texorpdfstring{item\_set\_quantity()}{item\_set\_quantity()}}
+{\footnotesize\ttfamily \label{item_8c_a1b8858990399252c11765fc2f1dfcd99} 
+void item\+\_\+set\+\_\+quantity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_item}{Item}} \texorpdfstring{$\ast$}{*}}]{item}{, }\item[{int}]{quantity}{}\end{DoxyParamCaption})}
+
+\Hypertarget{item_8c_a548f6e0122a6438802d533ec4eb49f10}\index{item.c@{item.c}!item\_set\_type@{item\_set\_type}}
+\index{item\_set\_type@{item\_set\_type}!item.c@{item.c}}
+\doxysubsubsection{\texorpdfstring{item\_set\_type()}{item\_set\_type()}}
+{\footnotesize\ttfamily \label{item_8c_a548f6e0122a6438802d533ec4eb49f10} 
+void item\+\_\+set\+\_\+type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_item}{Item}} \texorpdfstring{$\ast$}{*}}]{item}{, }\item[{\mbox{\hyperlink{item_8h_a5f77d21c62ddd9f9d57b884a6a4bd2b8}{item\+\_\+t}}}]{id}{}\end{DoxyParamCaption})}
+
+\Hypertarget{item_8c_a85648e33914192045db41f7bb0b21026}\index{item.c@{item.c}!item\_set\_x@{item\_set\_x}}
+\index{item\_set\_x@{item\_set\_x}!item.c@{item.c}}
+\doxysubsubsection{\texorpdfstring{item\_set\_x()}{item\_set\_x()}}
+{\footnotesize\ttfamily \label{item_8c_a85648e33914192045db41f7bb0b21026} 
+void item\+\_\+set\+\_\+x (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_item}{Item}} \texorpdfstring{$\ast$}{*}}]{item}{, }\item[{int}]{x}{}\end{DoxyParamCaption})}
+
+\Hypertarget{item_8c_a0b01ac8a7304549fe62d324a7e9668bb}\index{item.c@{item.c}!item\_set\_y@{item\_set\_y}}
+\index{item\_set\_y@{item\_set\_y}!item.c@{item.c}}
+\doxysubsubsection{\texorpdfstring{item\_set\_y()}{item\_set\_y()}}
+{\footnotesize\ttfamily \label{item_8c_a0b01ac8a7304549fe62d324a7e9668bb} 
+void item\+\_\+set\+\_\+y (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_item}{Item}} \texorpdfstring{$\ast$}{*}}]{item}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+\Hypertarget{item_8c_a9e63f1318fbd43087177d034a95991fa}\index{item.c@{item.c}!new\_item@{new\_item}}
+\index{new\_item@{new\_item}!item.c@{item.c}}
+\doxysubsubsection{\texorpdfstring{new\_item()}{new\_item()}}
+{\footnotesize\ttfamily \label{item_8c_a9e63f1318fbd43087177d034a95991fa} 
+\mbox{\hyperlink{struct_item}{Item}} \texorpdfstring{$\ast$}{*} new\+\_\+item (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{\mbox{\hyperlink{item_8h_a5f77d21c62ddd9f9d57b884a6a4bd2b8}{item\+\_\+t}}}]{id}{, }\item[{int}]{quantity}{, }\item[{int}]{feed\+\_\+level}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new item "{}object"{} and returns a pointer to it. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=275pt]{item_8c_a9e63f1318fbd43087177d034a95991fa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{item_8c_a9e63f1318fbd43087177d034a95991fa_icgraph}
+\end{center}
+\end{figure}

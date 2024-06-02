@@ -1,0 +1,22 @@
+<map id="wrapper_draw_background" name="wrapper_draw_background">
+<area shape="rect" id="Node000001" title="Draws the backfround (wrapper function)" alt="" coords="414,132,588,159"/>
+<area shape="rect" id="Node000002" href="$main_menu_viewer_8c.html#a2b7112c73de682798b0f73c76bd4c622" title="Calls draw function of each element the MainMenu contains." alt="" coords="187,5,341,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="473,123,425,84,365,46,335,35,337,30,367,42,428,79,476,119"/>
+<area shape="rect" id="Node000004" href="$main_room_viewer_8c.html#ab712f0c477c358dac8015032c3aa3b72" title="Calls draw function of each element the main room contains." alt="" coords="186,56,342,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="452,128,365,97,324,86,326,81,367,92,453,123"/>
+<area shape="rect" id="Node000005" href="$minigame_menu_viewer_8c.html#aa40e2803b799b1fde6895a08214fc3ed" title="Calls draw function of each element the minigame menu contains." alt="" coords="173,107,355,133"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="399,137,355,132,356,127,399,132"/>
+<area shape="rect" id="Node000006" href="$name_minigotchi_viewer_8c.html#a0577521b7d2cb7f06f7fdf1a3706b529" title="Calls draw function of each element the nameMinigotchi contains." alt="" coords="171,157,357,184"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="399,159,357,163,357,158,399,154"/>
+<area shape="rect" id="Node000007" href="$rock_paper_scissors_viewer_8c.html#a769d9078f52fcb28fa5c8d2831f44f04" title="Calls draw function of each element the rock paper scissors game contains (also draws the GUI element..." alt="" coords="162,208,366,235"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="453,167,367,199,326,210,324,205,365,193,452,162"/>
+<area shape="rect" id="Node000008" href="$tic_tac_toe_viewer_8c.html#a39c6c3190f03216408e3ec97bb7aac9e" title="Calls draw function of each element the tic tac toe game contains (also draws the GUI elements when t..." alt="" coords="189,259,339,285"/>
+<area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="476,171,428,211,367,249,337,261,335,256,365,244,425,207,473,167"/>
+<area shape="rect" id="Node000003" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Project main function that starts the game." alt="" coords="5,132,114,159"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="175,41,163,46,135,66,109,90,73,133,69,130,105,86,131,62,160,42,172,36"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="185,90,163,97,86,134,83,129,161,92,183,85"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="158,136,114,141,114,136,157,131"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="155,160,114,155,114,149,156,155"/>
+<area shape="poly" id="edge10_Node000007_Node000003" title=" " alt="" coords="183,206,161,198,83,162,86,157,163,194,185,201"/>
+<area shape="poly" id="edge12_Node000008_Node000003" title=" " alt="" coords="173,255,160,249,131,229,105,204,69,161,73,157,109,201,135,224,163,244,175,250"/>
+</map>

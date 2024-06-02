@@ -1,0 +1,7 @@
+<map id="switchBackground" name="switchBackground">
+<area shape="rect" id="Node000001" title="Switches the background from an index (We are using buffers to make the game faster)" alt="" coords="5,5,133,32"/>
+<area shape="rect" id="Node000002" href="$video_8c.html#af1e5967f33e339c4c49724da43d418ec" title="Get a buffer from a sprite." alt="" coords="181,5,317,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="133,16,165,16,165,21,133,21"/>
+<area shape="rect" id="Node000003" href="$video_8c.html#aed5b07d4a09b1fa1fd530659686e15d0" title="Get the number of bytes in a pixel." alt="" coords="365,5,487,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="317,16,350,16,350,21,317,21"/>
+</map>

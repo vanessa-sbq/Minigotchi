@@ -1,0 +1,7 @@
+<map id="guiDrawer_get_bar_sprite" name="guiDrawer_get_bar_sprite">
+<area shape="rect" id="Node000001" title="Get a bar sprite from an index and level." alt="" coords="5,47,173,73"/>
+<area shape="rect" id="Node000002" href="$gui_drawer_8c.html#ada3a8eb361ce7e3fddbbceff58425efd" title="Get a happiness bar sprite from an index." alt="" coords="221,5,390,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,44,205,39,206,45,173,50"/>
+<area shape="rect" id="Node000003" href="$gui_drawer_8c.html#af01037e6016234adfc9be7f3082bcf5d" title="Get a hunger bar sprite from an index." alt="" coords="224,72,387,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="173,70,209,76,208,81,173,76"/>
+</map>

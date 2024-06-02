@@ -1,0 +1,21 @@
+<map id="mainMenuController_checkCollision" name="mainMenuController_checkCollision">
+<area shape="rect" id="Node000001" title="Function that checks button collisions with the cursor." alt="" coords="5,200,142,243"/>
+<area shape="rect" id="Node000002" href="$button_8c.html#a4f6cf2cfef2e91116f3df51b08e57c73" title=" " alt="" coords="204,5,325,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,198,97,164,120,122,150,79,188,42,194,37,198,42,191,46,154,83,124,125,101,167,86,201"/>
+<area shape="rect" id="Node000003" href="$button_8c.html#a6ae257ae83c7a1754a18a846a9deaee1" title=" " alt="" coords="216,56,313,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="87,198,129,145,157,117,188,92,200,85,203,90,191,97,160,121,133,149,91,201"/>
+<area shape="rect" id="Node000004" href="$button_8c.html#ac221382d87e9aabccc07ecd8549f62b2" title=" " alt="" coords="216,107,313,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="102,197,142,170,188,143,202,137,204,142,191,148,145,174,105,202"/>
+<area shape="rect" id="Node000005" href="$cursor_8c.html#a95277b3c428a0b3c1b79cfcb49628397" title=" " alt="" coords="216,157,313,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="142,201,200,185,202,190,143,206"/>
+<area shape="rect" id="Node000006" href="$cursor_8c.html#ab346189d7aeb1bbd182952fa838ae45c" title=" " alt="" coords="216,208,313,235"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="142,219,200,219,200,224,142,224"/>
+<area shape="rect" id="Node000007" href="$cursor_8c.html#a98149df29b06207e2304795ea8e00d7e" title=" " alt="" coords="202,259,327,285"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="143,237,198,252,196,257,142,242"/>
+<area shape="rect" id="Node000008" href="$main_menu_8c.html#a9d19b1af356f3057f3de8f297fc40af7" title=" " alt="" coords="190,309,339,336"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="105,241,145,268,191,295,204,301,202,306,188,300,142,273,102,245"/>
+<area shape="rect" id="Node000009" href="$gui_drawer_8c.html#aeb0c1fe0e10a344dac885302cf50eee8" title=" " alt="" coords="204,360,325,387"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="91,242,133,294,160,322,191,346,199,351,197,355,188,350,157,326,129,297,87,245"/>
+<area shape="rect" id="Node000010" href="$gui_drawer_8c.html#a4c63acd65b3e03c46066da90b1bd0c99" title=" " alt="" coords="207,411,322,437"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="86,242,101,276,124,318,154,360,191,397,198,401,194,405,188,401,150,363,120,320,97,278,81,244"/>
+</map>

@@ -1,0 +1,367 @@
+\doxysection{C\+:/\+Users/anton/\+Documents/lcom/labs/proj/src/model/state\+Models/tic\+Tac\+Toe.h File Reference}
+\hypertarget{tic_tac_toe_8h}{}\label{tic_tac_toe_8h}\index{C:/Users/anton/Documents/lcom/labs/proj/src/model/stateModels/ticTacToe.h@{C:/Users/anton/Documents/lcom/labs/proj/src/model/stateModels/ticTacToe.h}}
+{\ttfamily \#include "{}../../viewer/gui\+Drawer.\+h"{}}\newline
+{\ttfamily \#include "{}../button.\+h"{}}\newline
+{\ttfamily \#include "{}../cursor.\+h"{}}\newline
+{\ttfamily \#include "{}../item.\+h"{}}\newline
+Include dependency graph for tic\+Tac\+Toe.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{tic_tac_toe_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tic_tac_toe_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1}{state\+\_\+ttt\+\_\+t}} \{ \newline
+\mbox{\hyperlink{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1a0b3a03e7964a8078131d910c14865204}{TX\+\_\+\+RX\+\_\+\+DECISION\+\_\+\+TTT}}
+, \mbox{\hyperlink{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1a76a366842faad4eb2d15f9c1e550afaf}{CURRENT\+\_\+\+PLAYER\+\_\+\+TURN\+\_\+\+TTT}}
+, \mbox{\hyperlink{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1ae3bb5c66585a632ecd17340ab3ca9c8e}{OTHER\+\_\+\+PLAYER\+\_\+\+TURN\+\_\+\+TTT}}
+, \mbox{\hyperlink{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1ad1de667de334d8fcce98ba58c4bb8254}{CPLAYER\+\_\+\+WON}}
+, \newline
+\mbox{\hyperlink{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1af207c8325ee4998cd86b3605927cf4c0}{CPLAYER\+\_\+\+LOST}}
+, \mbox{\hyperlink{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1adeb6b42b014bf100dbd5c309de15d57a}{EXIT\+\_\+\+TTT}}
+, \mbox{\hyperlink{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1a499c7f3ab2cfc1f8c72951f722cb3e2f}{WAIT\+\_\+\+ACK}}
+, \mbox{\hyperlink{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1a1a935a4d8fbadd121e7ce6747d9b528f}{TIE\+\_\+\+TTT}}
+, \newline
+\mbox{\hyperlink{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1aca7dc1e7c345f6490890cafae4be2c27}{SERIAL\+\_\+\+WAIT\+\_\+\+HOST\+\_\+\+TTT}}
+, \mbox{\hyperlink{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1accdfff25be307aa7ea5459befcf05082}{SERIAL\+\_\+\+WAIT\+\_\+\+GUEST\+\_\+\+TTT}}
+, \mbox{\hyperlink{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1aaf9916567d0454b0e0c5edf749ee0140}{WAIT\+\_\+\+FOR\+\_\+\+GUEST\+\_\+\+SYNC\+\_\+\+TTT}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{tic_tac_toe_8h_a6f384617833ad3a6adb8678ddf2d3bca}{new\+\_\+tic\+Tac\+Toe}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new \doxylink{struct_tic_tac_toe}{Tic\+Tac\+Toe} "{}object"{} and returns a pointer to it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tic_tac_toe_8h_aa4cd18bf36a2c6d20c3253406eae5b56}{reset\+\_\+tic\+Tac\+Toe}} ()
+\item 
+void \mbox{\hyperlink{tic_tac_toe_8h_a252f198c1443d67ea24fb5d64dc3e944}{delete\+\_\+tic\+Tac\+Toe}} (\mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{tic_tac_toe_controller_8c_a35701b132e42c2efe5aebe9017b28723}{ttt}})
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_tic_tac_toe}{Tic\+Tac\+Toe} destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1}{state\+\_\+ttt\+\_\+t}} \mbox{\hyperlink{tic_tac_toe_8h_aa0dc06e711584464bd11bd1090d5110b}{tic\+Tac\+Toe\+\_\+get\+\_\+state}} (\mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{tic_tac_toe_controller_8c_a35701b132e42c2efe5aebe9017b28723}{ttt}})
+\item 
+void \mbox{\hyperlink{tic_tac_toe_8h_a94f1070d3b1a40283dccad237663c249}{tic\+Tac\+Toe\+\_\+set\+\_\+state}} (\mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{tic_tac_toe_controller_8c_a35701b132e42c2efe5aebe9017b28723}{ttt}}, \mbox{\hyperlink{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1}{state\+\_\+ttt\+\_\+t}} st)
+\item 
+\mbox{\hyperlink{struct_item}{Item}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{tic_tac_toe_8h_aef4d6d852fca413e75a8605bc6ede1a1}{tic\+Tac\+Toe\+\_\+get\+\_\+reward}} (\mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{tic_tac_toe_controller_8c_a35701b132e42c2efe5aebe9017b28723}{ttt}})
+\item 
+void \mbox{\hyperlink{tic_tac_toe_8h_a40632c106b7bf918e15da8983abdf949}{tic\+Tac\+Toe\+\_\+set\+\_\+reward}} (\mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{tic_tac_toe_controller_8c_a35701b132e42c2efe5aebe9017b28723}{ttt}}, \mbox{\hyperlink{struct_item}{Item}} \texorpdfstring{$\ast$}{*}item)
+\item 
+bool \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{tic_tac_toe_8h_ab5abeaddbea086d622333c02c991c76a}{tic\+Tac\+Toe\+\_\+get\+\_\+other\+Players\+Moves}} (\mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{tic_tac_toe_controller_8c_a35701b132e42c2efe5aebe9017b28723}{ttt}})
+\item 
+bool \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{tic_tac_toe_8h_a131ce727217fc3b92e22de565500403b}{tic\+Tac\+Toe\+\_\+get\+\_\+current\+Players\+Moves}} (\mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{tic_tac_toe_controller_8c_a35701b132e42c2efe5aebe9017b28723}{ttt}})
+\item 
+bool \mbox{\hyperlink{tic_tac_toe_8h_a34b13c8230813c6b0e2c884ff9cfba53}{tic\+Tac\+Toe\+\_\+set\+\_\+other\+Players\+Moves}} (\mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{tic_tac_toe_controller_8c_a35701b132e42c2efe5aebe9017b28723}{ttt}}, uint8\+\_\+t pos)
+\item 
+bool \mbox{\hyperlink{tic_tac_toe_8h_a4711f9ecef4cb505fb653f612853846e}{tic\+Tac\+Toe\+\_\+set\+\_\+current\+Players\+Moves}} (\mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{tic_tac_toe_controller_8c_a35701b132e42c2efe5aebe9017b28723}{ttt}}, uint8\+\_\+t pos)
+\item 
+void \mbox{\hyperlink{tic_tac_toe_8h_a3aeaa4003aed5df41d309d6ebce57174}{undo\+Change\+In\+Current\+Player}} (\mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{tic_tac_toe_controller_8c_a35701b132e42c2efe5aebe9017b28723}{ttt}}, uint8\+\_\+t pos)
+\item 
+\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{tic_tac_toe_8h_aa86a41078cf91bbdaaf9f76789e915e2}{tic\+Tac\+Toe\+\_\+get\+\_\+quit\+Button}} (\mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{tic_tac_toe_controller_8c_a35701b132e42c2efe5aebe9017b28723}{ttt}})
+\item 
+\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{tic_tac_toe_8h_ae3ee743768fbd2f34b9b30ae9d34c63a}{tic\+Tac\+Toe\+\_\+get\+\_\+guest\+Button}} (\mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{tic_tac_toe_controller_8c_a35701b132e42c2efe5aebe9017b28723}{ttt}})
+\item 
+\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{tic_tac_toe_8h_aa26aea868ef04b4f2317fb7f4c7c57be}{tic\+Tac\+Toe\+\_\+get\+\_\+host\+Button}} (\mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{tic_tac_toe_controller_8c_a35701b132e42c2efe5aebe9017b28723}{ttt}})
+\item 
+\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{tic_tac_toe_8h_a44a855ce1786fdf10f9a4f1ca0d56384}{tic\+Tac\+Toe\+\_\+get\+\_\+cursor}} (\mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{tic_tac_toe_controller_8c_a35701b132e42c2efe5aebe9017b28723}{ttt}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1}\index{ticTacToe.h@{ticTacToe.h}!state\_ttt\_t@{state\_ttt\_t}}
+\index{state\_ttt\_t@{state\_ttt\_t}!ticTacToe.h@{ticTacToe.h}}
+\doxysubsubsection{\texorpdfstring{state\_ttt\_t}{state\_ttt\_t}}
+{\footnotesize\ttfamily \label{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1} 
+enum \mbox{\hyperlink{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1}{state\+\_\+ttt\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TX\_RX\_DECISION\_TTT@{TX\_RX\_DECISION\_TTT}!ticTacToe.h@{ticTacToe.h}}\index{ticTacToe.h@{ticTacToe.h}!TX\_RX\_DECISION\_TTT@{TX\_RX\_DECISION\_TTT}}}\Hypertarget{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1a0b3a03e7964a8078131d910c14865204}\label{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1} 
+TX\+\_\+\+RX\+\_\+\+DECISION\+\_\+\+TTT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CURRENT\_PLAYER\_TURN\_TTT@{CURRENT\_PLAYER\_TURN\_TTT}!ticTacToe.h@{ticTacToe.h}}\index{ticTacToe.h@{ticTacToe.h}!CURRENT\_PLAYER\_TURN\_TTT@{CURRENT\_PLAYER\_TURN\_TTT}}}\Hypertarget{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1a76a366842faad4eb2d15f9c1e550afaf}\label{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1} 
+CURRENT\+\_\+\+PLAYER\+\_\+\+TURN\+\_\+\+TTT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OTHER\_PLAYER\_TURN\_TTT@{OTHER\_PLAYER\_TURN\_TTT}!ticTacToe.h@{ticTacToe.h}}\index{ticTacToe.h@{ticTacToe.h}!OTHER\_PLAYER\_TURN\_TTT@{OTHER\_PLAYER\_TURN\_TTT}}}\Hypertarget{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1ae3bb5c66585a632ecd17340ab3ca9c8e}\label{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1} 
+OTHER\+\_\+\+PLAYER\+\_\+\+TURN\+\_\+\+TTT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CPLAYER\_WON@{CPLAYER\_WON}!ticTacToe.h@{ticTacToe.h}}\index{ticTacToe.h@{ticTacToe.h}!CPLAYER\_WON@{CPLAYER\_WON}}}\Hypertarget{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1ad1de667de334d8fcce98ba58c4bb8254}\label{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1} 
+CPLAYER\+\_\+\+WON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CPLAYER\_LOST@{CPLAYER\_LOST}!ticTacToe.h@{ticTacToe.h}}\index{ticTacToe.h@{ticTacToe.h}!CPLAYER\_LOST@{CPLAYER\_LOST}}}\Hypertarget{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1af207c8325ee4998cd86b3605927cf4c0}\label{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1} 
+CPLAYER\+\_\+\+LOST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EXIT\_TTT@{EXIT\_TTT}!ticTacToe.h@{ticTacToe.h}}\index{ticTacToe.h@{ticTacToe.h}!EXIT\_TTT@{EXIT\_TTT}}}\Hypertarget{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1adeb6b42b014bf100dbd5c309de15d57a}\label{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1} 
+EXIT\+\_\+\+TTT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WAIT\_ACK@{WAIT\_ACK}!ticTacToe.h@{ticTacToe.h}}\index{ticTacToe.h@{ticTacToe.h}!WAIT\_ACK@{WAIT\_ACK}}}\Hypertarget{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1a499c7f3ab2cfc1f8c72951f722cb3e2f}\label{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1} 
+WAIT\+\_\+\+ACK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TIE\_TTT@{TIE\_TTT}!ticTacToe.h@{ticTacToe.h}}\index{ticTacToe.h@{ticTacToe.h}!TIE\_TTT@{TIE\_TTT}}}\Hypertarget{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1a1a935a4d8fbadd121e7ce6747d9b528f}\label{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1} 
+TIE\+\_\+\+TTT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SERIAL\_WAIT\_HOST\_TTT@{SERIAL\_WAIT\_HOST\_TTT}!ticTacToe.h@{ticTacToe.h}}\index{ticTacToe.h@{ticTacToe.h}!SERIAL\_WAIT\_HOST\_TTT@{SERIAL\_WAIT\_HOST\_TTT}}}\Hypertarget{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1aca7dc1e7c345f6490890cafae4be2c27}\label{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1} 
+SERIAL\+\_\+\+WAIT\+\_\+\+HOST\+\_\+\+TTT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SERIAL\_WAIT\_GUEST\_TTT@{SERIAL\_WAIT\_GUEST\_TTT}!ticTacToe.h@{ticTacToe.h}}\index{ticTacToe.h@{ticTacToe.h}!SERIAL\_WAIT\_GUEST\_TTT@{SERIAL\_WAIT\_GUEST\_TTT}}}\Hypertarget{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1accdfff25be307aa7ea5459befcf05082}\label{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1} 
+SERIAL\+\_\+\+WAIT\+\_\+\+GUEST\+\_\+\+TTT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WAIT\_FOR\_GUEST\_SYNC\_TTT@{WAIT\_FOR\_GUEST\_SYNC\_TTT}!ticTacToe.h@{ticTacToe.h}}\index{ticTacToe.h@{ticTacToe.h}!WAIT\_FOR\_GUEST\_SYNC\_TTT@{WAIT\_FOR\_GUEST\_SYNC\_TTT}}}\Hypertarget{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1aaf9916567d0454b0e0c5edf749ee0140}\label{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1} 
+WAIT\+\_\+\+FOR\+\_\+\+GUEST\+\_\+\+SYNC\+\_\+\+TTT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{tic_tac_toe_8h_a252f198c1443d67ea24fb5d64dc3e944}\index{ticTacToe.h@{ticTacToe.h}!delete\_ticTacToe@{delete\_ticTacToe}}
+\index{delete\_ticTacToe@{delete\_ticTacToe}!ticTacToe.h@{ticTacToe.h}}
+\doxysubsubsection{\texorpdfstring{delete\_ticTacToe()}{delete\_ticTacToe()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_8h_a252f198c1443d67ea24fb5d64dc3e944} 
+void delete\+\_\+tic\+Tac\+Toe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}} \texorpdfstring{$\ast$}{*}}]{ttt}{}\end{DoxyParamCaption})}
+
+
+
+\doxylink{struct_tic_tac_toe}{Tic\+Tac\+Toe} destructor. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{tic_tac_toe_8h_a252f198c1443d67ea24fb5d64dc3e944_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{tic_tac_toe_8h_a252f198c1443d67ea24fb5d64dc3e944_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{tic_tac_toe_8h_a6f384617833ad3a6adb8678ddf2d3bca}\index{ticTacToe.h@{ticTacToe.h}!new\_ticTacToe@{new\_ticTacToe}}
+\index{new\_ticTacToe@{new\_ticTacToe}!ticTacToe.h@{ticTacToe.h}}
+\doxysubsubsection{\texorpdfstring{new\_ticTacToe()}{new\_ticTacToe()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_8h_a6f384617833ad3a6adb8678ddf2d3bca} 
+\mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}} \texorpdfstring{$\ast$}{*} new\+\_\+tic\+Tac\+Toe (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new \doxylink{struct_tic_tac_toe}{Tic\+Tac\+Toe} "{}object"{} and returns a pointer to it. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tic_tac_toe_8h_a6f384617833ad3a6adb8678ddf2d3bca_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tic_tac_toe_8h_a6f384617833ad3a6adb8678ddf2d3bca_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{tic_tac_toe_8h_aa4cd18bf36a2c6d20c3253406eae5b56}\index{ticTacToe.h@{ticTacToe.h}!reset\_ticTacToe@{reset\_ticTacToe}}
+\index{reset\_ticTacToe@{reset\_ticTacToe}!ticTacToe.h@{ticTacToe.h}}
+\doxysubsubsection{\texorpdfstring{reset\_ticTacToe()}{reset\_ticTacToe()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_8h_aa4cd18bf36a2c6d20c3253406eae5b56} 
+void reset\+\_\+tic\+Tac\+Toe (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{tic_tac_toe_8h_aa4cd18bf36a2c6d20c3253406eae5b56_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{tic_tac_toe_8h_a131ce727217fc3b92e22de565500403b}\index{ticTacToe.h@{ticTacToe.h}!ticTacToe\_get\_currentPlayersMoves@{ticTacToe\_get\_currentPlayersMoves}}
+\index{ticTacToe\_get\_currentPlayersMoves@{ticTacToe\_get\_currentPlayersMoves}!ticTacToe.h@{ticTacToe.h}}
+\doxysubsubsection{\texorpdfstring{ticTacToe\_get\_currentPlayersMoves()}{ticTacToe\_get\_currentPlayersMoves()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_8h_a131ce727217fc3b92e22de565500403b} 
+bool \texorpdfstring{$\ast$}{*} tic\+Tac\+Toe\+\_\+get\+\_\+current\+Players\+Moves (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}} \texorpdfstring{$\ast$}{*}}]{ttt}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tic_tac_toe_8h_a131ce727217fc3b92e22de565500403b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{tic_tac_toe_8h_a44a855ce1786fdf10f9a4f1ca0d56384}\index{ticTacToe.h@{ticTacToe.h}!ticTacToe\_get\_cursor@{ticTacToe\_get\_cursor}}
+\index{ticTacToe\_get\_cursor@{ticTacToe\_get\_cursor}!ticTacToe.h@{ticTacToe.h}}
+\doxysubsubsection{\texorpdfstring{ticTacToe\_get\_cursor()}{ticTacToe\_get\_cursor()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_8h_a44a855ce1786fdf10f9a4f1ca0d56384} 
+\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*} tic\+Tac\+Toe\+\_\+get\+\_\+cursor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}} \texorpdfstring{$\ast$}{*}}]{ttt}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tic_tac_toe_8h_a44a855ce1786fdf10f9a4f1ca0d56384_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{tic_tac_toe_8h_ae3ee743768fbd2f34b9b30ae9d34c63a}\index{ticTacToe.h@{ticTacToe.h}!ticTacToe\_get\_guestButton@{ticTacToe\_get\_guestButton}}
+\index{ticTacToe\_get\_guestButton@{ticTacToe\_get\_guestButton}!ticTacToe.h@{ticTacToe.h}}
+\doxysubsubsection{\texorpdfstring{ticTacToe\_get\_guestButton()}{ticTacToe\_get\_guestButton()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_8h_ae3ee743768fbd2f34b9b30ae9d34c63a} 
+\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*} tic\+Tac\+Toe\+\_\+get\+\_\+guest\+Button (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}} \texorpdfstring{$\ast$}{*}}]{ttt}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tic_tac_toe_8h_ae3ee743768fbd2f34b9b30ae9d34c63a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{tic_tac_toe_8h_aa26aea868ef04b4f2317fb7f4c7c57be}\index{ticTacToe.h@{ticTacToe.h}!ticTacToe\_get\_hostButton@{ticTacToe\_get\_hostButton}}
+\index{ticTacToe\_get\_hostButton@{ticTacToe\_get\_hostButton}!ticTacToe.h@{ticTacToe.h}}
+\doxysubsubsection{\texorpdfstring{ticTacToe\_get\_hostButton()}{ticTacToe\_get\_hostButton()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_8h_aa26aea868ef04b4f2317fb7f4c7c57be} 
+\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*} tic\+Tac\+Toe\+\_\+get\+\_\+host\+Button (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}} \texorpdfstring{$\ast$}{*}}]{ttt}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tic_tac_toe_8h_aa26aea868ef04b4f2317fb7f4c7c57be_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{tic_tac_toe_8h_ab5abeaddbea086d622333c02c991c76a}\index{ticTacToe.h@{ticTacToe.h}!ticTacToe\_get\_otherPlayersMoves@{ticTacToe\_get\_otherPlayersMoves}}
+\index{ticTacToe\_get\_otherPlayersMoves@{ticTacToe\_get\_otherPlayersMoves}!ticTacToe.h@{ticTacToe.h}}
+\doxysubsubsection{\texorpdfstring{ticTacToe\_get\_otherPlayersMoves()}{ticTacToe\_get\_otherPlayersMoves()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_8h_ab5abeaddbea086d622333c02c991c76a} 
+bool \texorpdfstring{$\ast$}{*} tic\+Tac\+Toe\+\_\+get\+\_\+other\+Players\+Moves (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}} \texorpdfstring{$\ast$}{*}}]{ttt}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tic_tac_toe_8h_ab5abeaddbea086d622333c02c991c76a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{tic_tac_toe_8h_aa86a41078cf91bbdaaf9f76789e915e2}\index{ticTacToe.h@{ticTacToe.h}!ticTacToe\_get\_quitButton@{ticTacToe\_get\_quitButton}}
+\index{ticTacToe\_get\_quitButton@{ticTacToe\_get\_quitButton}!ticTacToe.h@{ticTacToe.h}}
+\doxysubsubsection{\texorpdfstring{ticTacToe\_get\_quitButton()}{ticTacToe\_get\_quitButton()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_8h_aa86a41078cf91bbdaaf9f76789e915e2} 
+\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*} tic\+Tac\+Toe\+\_\+get\+\_\+quit\+Button (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}} \texorpdfstring{$\ast$}{*}}]{ttt}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tic_tac_toe_8h_aa86a41078cf91bbdaaf9f76789e915e2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{tic_tac_toe_8h_aef4d6d852fca413e75a8605bc6ede1a1}\index{ticTacToe.h@{ticTacToe.h}!ticTacToe\_get\_reward@{ticTacToe\_get\_reward}}
+\index{ticTacToe\_get\_reward@{ticTacToe\_get\_reward}!ticTacToe.h@{ticTacToe.h}}
+\doxysubsubsection{\texorpdfstring{ticTacToe\_get\_reward()}{ticTacToe\_get\_reward()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_8h_aef4d6d852fca413e75a8605bc6ede1a1} 
+\mbox{\hyperlink{struct_item}{Item}} \texorpdfstring{$\ast$}{*} tic\+Tac\+Toe\+\_\+get\+\_\+reward (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}} \texorpdfstring{$\ast$}{*}}]{ttt}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tic_tac_toe_8h_aef4d6d852fca413e75a8605bc6ede1a1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{tic_tac_toe_8h_aa0dc06e711584464bd11bd1090d5110b}\index{ticTacToe.h@{ticTacToe.h}!ticTacToe\_get\_state@{ticTacToe\_get\_state}}
+\index{ticTacToe\_get\_state@{ticTacToe\_get\_state}!ticTacToe.h@{ticTacToe.h}}
+\doxysubsubsection{\texorpdfstring{ticTacToe\_get\_state()}{ticTacToe\_get\_state()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_8h_aa0dc06e711584464bd11bd1090d5110b} 
+\mbox{\hyperlink{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1}{state\+\_\+ttt\+\_\+t}} tic\+Tac\+Toe\+\_\+get\+\_\+state (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}} \texorpdfstring{$\ast$}{*}}]{ttt}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tic_tac_toe_8h_aa0dc06e711584464bd11bd1090d5110b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{tic_tac_toe_8h_a4711f9ecef4cb505fb653f612853846e}\index{ticTacToe.h@{ticTacToe.h}!ticTacToe\_set\_currentPlayersMoves@{ticTacToe\_set\_currentPlayersMoves}}
+\index{ticTacToe\_set\_currentPlayersMoves@{ticTacToe\_set\_currentPlayersMoves}!ticTacToe.h@{ticTacToe.h}}
+\doxysubsubsection{\texorpdfstring{ticTacToe\_set\_currentPlayersMoves()}{ticTacToe\_set\_currentPlayersMoves()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_8h_a4711f9ecef4cb505fb653f612853846e} 
+bool tic\+Tac\+Toe\+\_\+set\+\_\+current\+Players\+Moves (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}} \texorpdfstring{$\ast$}{*}}]{ttt}{, }\item[{uint8\+\_\+t}]{pos}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tic_tac_toe_8h_a4711f9ecef4cb505fb653f612853846e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{tic_tac_toe_8h_a34b13c8230813c6b0e2c884ff9cfba53}\index{ticTacToe.h@{ticTacToe.h}!ticTacToe\_set\_otherPlayersMoves@{ticTacToe\_set\_otherPlayersMoves}}
+\index{ticTacToe\_set\_otherPlayersMoves@{ticTacToe\_set\_otherPlayersMoves}!ticTacToe.h@{ticTacToe.h}}
+\doxysubsubsection{\texorpdfstring{ticTacToe\_set\_otherPlayersMoves()}{ticTacToe\_set\_otherPlayersMoves()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_8h_a34b13c8230813c6b0e2c884ff9cfba53} 
+bool tic\+Tac\+Toe\+\_\+set\+\_\+other\+Players\+Moves (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}} \texorpdfstring{$\ast$}{*}}]{ttt}{, }\item[{uint8\+\_\+t}]{pos}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tic_tac_toe_8h_a34b13c8230813c6b0e2c884ff9cfba53_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{tic_tac_toe_8h_a40632c106b7bf918e15da8983abdf949}\index{ticTacToe.h@{ticTacToe.h}!ticTacToe\_set\_reward@{ticTacToe\_set\_reward}}
+\index{ticTacToe\_set\_reward@{ticTacToe\_set\_reward}!ticTacToe.h@{ticTacToe.h}}
+\doxysubsubsection{\texorpdfstring{ticTacToe\_set\_reward()}{ticTacToe\_set\_reward()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_8h_a40632c106b7bf918e15da8983abdf949} 
+void tic\+Tac\+Toe\+\_\+set\+\_\+reward (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}} \texorpdfstring{$\ast$}{*}}]{ttt}{, }\item[{\mbox{\hyperlink{struct_item}{Item}} \texorpdfstring{$\ast$}{*}}]{item}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{tic_tac_toe_8h_a40632c106b7bf918e15da8983abdf949_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{tic_tac_toe_8h_a94f1070d3b1a40283dccad237663c249}\index{ticTacToe.h@{ticTacToe.h}!ticTacToe\_set\_state@{ticTacToe\_set\_state}}
+\index{ticTacToe\_set\_state@{ticTacToe\_set\_state}!ticTacToe.h@{ticTacToe.h}}
+\doxysubsubsection{\texorpdfstring{ticTacToe\_set\_state()}{ticTacToe\_set\_state()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_8h_a94f1070d3b1a40283dccad237663c249} 
+void tic\+Tac\+Toe\+\_\+set\+\_\+state (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}} \texorpdfstring{$\ast$}{*}}]{ttt}{, }\item[{\mbox{\hyperlink{tic_tac_toe_8h_a5ba9310772a7c3a9d4840f76dd1087e1}{state\+\_\+ttt\+\_\+t}}}]{st}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tic_tac_toe_8h_a94f1070d3b1a40283dccad237663c249_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{tic_tac_toe_8h_a3aeaa4003aed5df41d309d6ebce57174}\index{ticTacToe.h@{ticTacToe.h}!undoChangeInCurrentPlayer@{undoChangeInCurrentPlayer}}
+\index{undoChangeInCurrentPlayer@{undoChangeInCurrentPlayer}!ticTacToe.h@{ticTacToe.h}}
+\doxysubsubsection{\texorpdfstring{undoChangeInCurrentPlayer()}{undoChangeInCurrentPlayer()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_8h_a3aeaa4003aed5df41d309d6ebce57174} 
+void undo\+Change\+In\+Current\+Player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_tic_tac_toe}{Tic\+Tac\+Toe}} \texorpdfstring{$\ast$}{*}}]{ttt}{, }\item[{uint8\+\_\+t}]{pos}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tic_tac_toe_8h_a3aeaa4003aed5df41d309d6ebce57174_icgraph}
+\end{center}
+\end{figure}

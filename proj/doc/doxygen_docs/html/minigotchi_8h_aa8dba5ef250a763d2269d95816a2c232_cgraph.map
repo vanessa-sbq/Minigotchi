@@ -1,0 +1,7 @@
+<map id="draw_minigotchi" name="draw_minigotchi">
+<area shape="rect" id="Node000001" title="Draws a minigotchi." alt="" coords="5,5,120,32"/>
+<area shape="rect" id="Node000002" href="$gui_drawer_8c.html#a3fc1965bb7f45fd72fff8a402c507186" title="Function responsible for drawing the sprites on the screen." alt="" coords="168,5,250,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,16,152,16,152,21,120,21"/>
+<area shape="rect" id="Node000003" href="$video_8c.html#a6091a4bd04596e6e8e39b7dee1e1b118" title="Draws a pixel on the current back buffer." alt="" coords="298,5,375,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="250,16,282,16,282,21,250,21"/>
+</map>

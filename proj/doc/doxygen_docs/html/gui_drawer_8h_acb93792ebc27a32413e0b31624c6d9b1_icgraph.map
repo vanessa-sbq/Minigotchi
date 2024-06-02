@@ -1,0 +1,28 @@
+<map id="create_sprite_xpm" name="create_sprite_xpm">
+<area shape="rect" id="Node000001" title="Creates a sprite from a XPM." alt="" coords="838,107,966,133"/>
+<area shape="rect" id="Node000002" href="$gui_drawer_8c.html#a9a9776a57d5e9f94450acf2cccd51333" title="Sets up the happiness bar sprites." alt="" coords="624,56,790,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="832,105,760,86,762,81,834,100"/>
+<area shape="rect" id="Node000006" href="$gui_drawer_8c.html#aa18c3a26c9d1e2245d5264d7d457de6f" title="Sets up the hunger bar sprites." alt="" coords="634,5,780,32"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="871,99,833,72,788,46,760,35,762,30,791,42,836,68,874,95"/>
+<area shape="rect" id="Node000007" href="$gui_drawer_8c.html#a834200084177d31e41dd9b28754a3312" title="Sets up all the main sprites." alt="" coords="212,157,311,184"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="834,140,790,148,655,162,520,170,312,174,312,169,520,165,654,157,789,143,833,135"/>
+<area shape="rect" id="Node000008" href="$gui_drawer_8c.html#afec62e1339a5415e0e26f1a3a426dda3" title="Sets up the letter sprites that make up the font." alt="" coords="646,107,768,133"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="822,123,768,123,768,117,822,117"/>
+<area shape="rect" id="Node000011" href="$gui_drawer_8c.html#ab36a54932debf96ff4d24f689bcc4472" title="Sets up the sprites used in the Tic Tac Toe minigame." alt="" coords="434,212,552,239"/>
+<area shape="poly" id="edge14_Node000001_Node000011" title=" " alt="" coords="875,145,837,173,791,196,729,213,665,223,553,230,552,224,664,218,727,208,789,191,834,168,872,141"/>
+<area shape="rect" id="Node000003" href="$main_room_controller_8c.html#a2ecc67af3b606dcd5918c3ba5d0b57b3" title="Load the main room (first time)" alt="" coords="424,28,562,71"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="609,63,562,58,562,53,609,58"/>
+<area shape="rect" id="Node000004" href="$main_room_controller_8c.html#ac448f52b9ec47f6aa868245cb08a5a19" title="Controller function that is called once every frame and updates / checks every action in the main roo..." alt="" coords="176,45,347,72"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="408,55,347,58,347,53,408,50"/>
+<area shape="rect" id="Node000005" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Project main function that starts the game." alt="" coords="5,132,114,159"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="203,80,163,96,86,134,84,129,161,91,201,75"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="619,34,563,42,562,37,619,29"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="196,165,114,155,115,149,197,160"/>
+<area shape="poly" id="edge10_Node000008_Node000003" title=" " alt="" coords="645,104,623,97,555,74,556,69,625,92,646,99"/>
+<area shape="rect" id="Node000009" href="$name_minigotchi_controller_8c.html#a688c10b9d8fa03f8605f2cd5421cdcb6" title="Load the minigotchi naming screen (first time)" alt="" coords="409,95,576,137"/>
+<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="631,121,577,120,577,115,631,116"/>
+<area shape="rect" id="Node000010" href="$name_minigotchi_controller_8c.html#aa9284c2a1e15db8d817dafc4fb7f8bf9" title="Controller function that is called once every frame and updates / checks every action in the minigotc..." alt="" coords="162,105,361,132"/>
+<area shape="poly" id="edge12_Node000009_Node000010" title=" " alt="" coords="393,120,361,120,361,115,393,114"/>
+<area shape="poly" id="edge13_Node000010_Node000005" title=" " alt="" coords="146,137,114,141,114,136,145,131"/>
+<area shape="poly" id="edge15_Node000011_Node000005" title=" " alt="" coords="418,229,296,223,228,214,161,199,117,181,81,161,84,157,120,177,162,193,229,208,297,218,418,224"/>
+</map>
