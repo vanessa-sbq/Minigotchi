@@ -35,7 +35,7 @@
 #include "viewer/menus/mainRoomViewer.h"
 #include "viewer/menus/minigameMenuViewer.h"
 #include "viewer/menus/nameMinigotchiViewer.h"
-#include "viewer/minigames/tictactoeViewer.h"
+#include "viewer/minigames/ticTacToeViewer.h"
 #include "viewer/minigames/rockPaperScissorsViewer.h"
 
 // Controllers
@@ -43,7 +43,7 @@
 #include "controller/menus/mainRoomController.h"
 #include "controller/menus/minigameMenuController.h"
 #include "controller/menus/nameMinigotchiController.h"
-#include "controller/minigames/tictactoeController.h"
+#include "controller/minigames/ticTacToeController.h"
 #include "controller/minigames/rockPaperScissorsController.h"
 
 
@@ -406,8 +406,11 @@ int (proj_main_loop)(int argc, char **argv) {
 					break;
 				case MINIGAME_2:
 					rockPaperScissorsController_step();
-					rockPaperScissorsViewer_draw();
-					setRockPaperScissorsCursor(cursor);
+					if (rockPaperScissorsController_getButtonEvent() != QUIT_RPS){
+						rockPaperScissorsViewer_draw();
+						setRockPaperScissorsCursor(cursor);
+					}
+					
 
 					if (rockPaperScissorsController_getButtonEvent() == QUIT_RPS){ // Open minigames
 						rockPaperScissorsController_setButtonEvent(NOP_RPS);

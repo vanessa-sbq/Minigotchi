@@ -14,8 +14,8 @@ void mainMenuViewer_draw(){
     vg_clear_screen();
     wrapper_draw_background(0);
 
-    draw_button(mainMenu->startNewButton);
-    draw_button(mainMenu->quitButton);
+    draw_button(mainMenu_get_startNewButton(mainMenu));
+    draw_button(mainMenu_get_quitButton(mainMenu));
     
     draw_cursor(mainMenu->cursor);
     vg_page_flip();

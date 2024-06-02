@@ -3,14 +3,10 @@
 #include "video_macros.h"
 
 static char *video_mem; // Process (virtual) address to which VRAM is mapped
-//static unsigned h_res; // Horizontal resolution in pixels
-//static unsigned v_res; // Vertical resolution in pixels
-//static unsigned bits_per_pixel; // Number of VRAM bits per pixel
 static vbe_mode_info_t vbe_mem_info;
 
 int video_get_mode_information(uint16_t mode){
-	// TODO: Should we implement this?
-	if (vbe_get_mode_info(mode, &vbe_mem_info) != 0){  // TODO: Retry a couple of times if it fails (See slide 28)
+	if (vbe_get_mode_info(mode, &vbe_mem_info) != 0){
 		printf("Error in vbe_get_mode_info()\n");  
 		if (vg_exit() != 0){
             printf("Erro in vg_exit()\n");
@@ -83,7 +79,7 @@ int drawPixel(uint16_t x, uint16_t y, uint32_t color){
 
 	color &= bytes_pp_mask;
 
-	if (x < 0 || y < 0 ||  x >= vbe_mem_info.XResolution ||  y >= vbe_mem_info.YResolution) return 0; //FIXME: Should just ignore?
+	if (x < 0 || y < 0 ||  x >= vbe_mem_info.XResolution ||  y >= vbe_mem_info.YResolution) return 0;
 
 	unsigned index = (vbe_mem_info.XResolution * y + x) * bytes_per_pixel; 
 

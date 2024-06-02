@@ -7,8 +7,8 @@ NameMinigotchi *new_nameMinigotchi() {
     NameMinigotchi *nameMinigotchi = malloc(sizeof(*nameMinigotchi));
     if (nameMinigotchi == NULL) return NULL;
 
-    nameMinigotchi->continueButton = new_button(448, 400, 0);
-    nameMinigotchi->quitButton = new_button(448, 600, 1);
+    nameMinigotchi->continueButton = new_button(401, 400, 0);
+    nameMinigotchi->quitButton = new_button(401, 600, 1);
     nameMinigotchi->cursor = new_cursor(400, 600);
     return nameMinigotchi;
 }

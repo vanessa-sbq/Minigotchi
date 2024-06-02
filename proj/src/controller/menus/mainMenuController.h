@@ -6,7 +6,7 @@
 
 #include "../../viewer/menus/mainMenuViewer.h"
 
-typedef enum {START, CONTINUE, QUIT, NOP} collision_type_t;
+typedef enum {START, QUIT, NOP} collision_type_t;
 
 void mainMenuController_load_mainMenu();
 

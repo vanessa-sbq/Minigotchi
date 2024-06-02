@@ -259,7 +259,7 @@ void getBufferFromSprite(uint16_t height, uint16_t width, uint16_t x, uint16_t y
 
             unsigned color = colors[j + i * width];
 
-            if (color == TRANSPARENT /* || (x >= vbe_mem_info.XResolution ||  y >= vbe_mem_info.YResolution) */){ 
+            if (color == TRANSPARENT){ 
                 continue;
             }
 

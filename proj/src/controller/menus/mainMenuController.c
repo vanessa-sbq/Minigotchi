@@ -22,9 +22,9 @@ collision_type_t mainMenuController_checkCollision(Button *button) {
     int cursorX = cursor_get_x(cursor);
     int cursorY = cursor_get_y(cursor);
     bool beingPressed = get_buttonClicked(cursor);
-
-    int button_width = sprite_get_width(button->sprite);
-    int button_height = sprite_get_height(button->sprite);
+    
+    int button_width = sprite_get_width(button_get_sprite(button));
+    int button_height = sprite_get_height(button_get_sprite(button));
 
     int left_upper_corner_x = button_get_x(button);
 

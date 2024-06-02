@@ -8,7 +8,6 @@
 
 typedef struct{
     Button *startNewButton;
-    Button *continueButton;
     Button *quitButton;
     Cursor *cursor;
 } MainMenu;
@@ -21,7 +20,6 @@ void delete_mainMenu(MainMenu *mainMenu);
 
 // Getters and setters
 Button* mainMenu_get_startNewButton(MainMenu *mainMenu);
-Button* mainMenu_get_continueButton(MainMenu *mainMenu);
 Button* mainMenu_get_quitButton(MainMenu *mainMenu);
 Cursor* mainMenu_get_cursor(MainMenu *mainMenu);
 
